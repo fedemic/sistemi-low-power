@@ -1,0 +1,1211 @@
+TimeQuest Timing Analyzer report for Artificial_Neuron
+Thu May 02 17:02:08 2019
+Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Slow Model Fmax Summary
+  7. Slow Model Setup Summary
+  8. Slow Model Hold Summary
+  9. Slow Model Recovery Summary
+ 10. Slow Model Removal Summary
+ 11. Slow Model Minimum Pulse Width Summary
+ 12. Slow Model Setup: 'CLK'
+ 13. Slow Model Hold: 'CLK'
+ 14. Slow Model Minimum Pulse Width: 'CLK'
+ 15. Setup Times
+ 16. Hold Times
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Fast Model Setup Summary
+ 20. Fast Model Hold Summary
+ 21. Fast Model Recovery Summary
+ 22. Fast Model Removal Summary
+ 23. Fast Model Minimum Pulse Width Summary
+ 24. Fast Model Setup: 'CLK'
+ 25. Fast Model Hold: 'CLK'
+ 26. Fast Model Minimum Pulse Width: 'CLK'
+ 27. Setup Times
+ 28. Hold Times
+ 29. Clock to Output Times
+ 30. Minimum Clock to Output Times
+ 31. Multicorner Timing Analysis Summary
+ 32. Setup Times
+ 33. Hold Times
+ 34. Clock to Output Times
+ 35. Minimum Clock to Output Times
+ 36. Setup Transfers
+ 37. Hold Transfers
+ 38. Report TCCS
+ 39. Report RSKM
+ 40. Unconstrained Paths
+ 41. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                    ;
++--------------------+-----------------------------------------------------------------+
+; Quartus II Version ; Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; Artificial_Neuron                                               ;
+; Device Family      ; Cyclone II                                                      ;
+; Device Name        ; EP2C35F672C6                                                    ;
+; Timing Models      ; Final                                                           ;
+; Delay Model        ; Combined                                                        ;
+; Rise/Fall Delays   ; Unavailable                                                     ;
++--------------------+-----------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------+
+; SDC File List                                             ;
++-----------------------+--------+--------------------------+
+; SDC File Path         ; Status ; Read at                  ;
++-----------------------+--------+--------------------------+
+; Artificial_Neuron.sdc ; OK     ; Thu May 02 17:02:07 2019 ;
++-----------------------+--------+--------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                         ;
++------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; CLK        ; Base ; 6.671  ; 149.9 MHz ; 0.000 ; 3.335 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK } ;
++------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 148.17 MHz ; 148.17 MHz      ; CLK        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CLK   ; -0.078 ; -0.078        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLK   ; 0.391 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+-------+------------------------+
+; Clock ; Slack ; End Point TNS          ;
++-------+-------+------------------------+
+; CLK   ; 1.208 ; 0.000                  ;
++-------+-------+------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLK'                                                                                                                                                                                                  ;
++--------+-----------------------------+-------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                   ; To Node                                                                                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------+-------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.078 ; P_S.SUB_Y_NUM4              ; Generic_Register:Reg_Y|Q[10]                                                                                ; CLK          ; CLK         ; 6.671        ; -0.001     ; 6.784      ;
+; 0.080  ; P_S.ADD_Y_NUM2              ; Generic_Register:Reg_Y|Q[10]                                                                                ; CLK          ; CLK         ; 6.671        ; -0.001     ; 6.626      ;
+; 0.125  ; P_S.SUB_Y_NUM4              ; Generic_Register:Reg_Y|Q[8]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 6.580      ;
+; 0.132  ; P_S.SUB_Y_NUM3              ; Generic_Register:Reg_Y|Q[10]                                                                                ; CLK          ; CLK         ; 6.671        ; -0.001     ; 6.574      ;
+; 0.283  ; P_S.ADD_Y_NUM2              ; Generic_Register:Reg_Y|Q[8]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 6.422      ;
+; 0.317  ; P_S.SUB_Y_NUM4              ; Generic_Register:Reg_Y|Q[9]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.001     ; 6.389      ;
+; 0.332  ; Generic_Register:Reg_B|Q[2] ; Generic_Register:Reg_Y|Q[10]                                                                                ; CLK          ; CLK         ; 6.671        ; -0.001     ; 6.374      ;
+; 0.334  ; Generic_Register:Reg_B|Q[3] ; Generic_Register:Reg_Y|Q[10]                                                                                ; CLK          ; CLK         ; 6.671        ; -0.001     ; 6.372      ;
+; 0.335  ; P_S.SUB_Y_NUM3              ; Generic_Register:Reg_Y|Q[8]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 6.370      ;
+; 0.411  ; P_S.SUB_Y_NUM4              ; Generic_Register:Reg_Y|Q[7]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 6.294      ;
+; 0.475  ; P_S.ADD_Y_NUM2              ; Generic_Register:Reg_Y|Q[9]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.001     ; 6.231      ;
+; 0.527  ; P_S.SUB_Y_NUM3              ; Generic_Register:Reg_Y|Q[9]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.001     ; 6.179      ;
+; 0.535  ; Generic_Register:Reg_B|Q[2] ; Generic_Register:Reg_Y|Q[8]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 6.170      ;
+; 0.537  ; Generic_Register:Reg_B|Q[3] ; Generic_Register:Reg_Y|Q[8]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 6.168      ;
+; 0.569  ; P_S.ADD_Y_NUM2              ; Generic_Register:Reg_Y|Q[7]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 6.136      ;
+; 0.581  ; Generic_Register:Reg_C|Q[0] ; Generic_Register:Reg_Y|Q[10]                                                                                ; CLK          ; CLK         ; 6.671        ; -0.001     ; 6.125      ;
+; 0.621  ; P_S.SUB_Y_NUM3              ; Generic_Register:Reg_Y|Q[7]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 6.084      ;
+; 0.727  ; Generic_Register:Reg_B|Q[2] ; Generic_Register:Reg_Y|Q[9]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.001     ; 5.979      ;
+; 0.729  ; Generic_Register:Reg_B|Q[3] ; Generic_Register:Reg_Y|Q[9]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.001     ; 5.977      ;
+; 0.784  ; Generic_Register:Reg_C|Q[0] ; Generic_Register:Reg_Y|Q[8]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 5.921      ;
+; 0.821  ; Generic_Register:Reg_B|Q[2] ; Generic_Register:Reg_Y|Q[7]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 5.884      ;
+; 0.823  ; Generic_Register:Reg_B|Q[3] ; Generic_Register:Reg_Y|Q[7]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 5.882      ;
+; 0.939  ; Generic_Register:Reg_C|Q[1] ; Generic_Register:Reg_Y|Q[10]                                                                                ; CLK          ; CLK         ; 6.671        ; 0.000      ; 5.768      ;
+; 0.976  ; Generic_Register:Reg_C|Q[0] ; Generic_Register:Reg_Y|Q[9]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.001     ; 5.730      ;
+; 1.070  ; Generic_Register:Reg_C|Q[0] ; Generic_Register:Reg_Y|Q[7]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 5.635      ;
+; 1.079  ; P_S.SUB_Y_NUM4              ; Generic_Register:Reg_Y|Q[6]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 5.626      ;
+; 1.140  ; Generic_Register:Reg_B|Q[0] ; Generic_Register:Reg_Y|Q[10]                                                                                ; CLK          ; CLK         ; 6.671        ; -0.007     ; 5.560      ;
+; 1.142  ; Generic_Register:Reg_C|Q[1] ; Generic_Register:Reg_Y|Q[8]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.001     ; 5.564      ;
+; 1.172  ; Generic_Register:Reg_B|Q[4] ; Generic_Register:Reg_Y|Q[10]                                                                                ; CLK          ; CLK         ; 6.671        ; -0.001     ; 5.534      ;
+; 1.197  ; Generic_Register:Reg_B|Q[5] ; Generic_Register:Reg_Y|Q[10]                                                                                ; CLK          ; CLK         ; 6.671        ; -0.001     ; 5.509      ;
+; 1.203  ; Generic_Register:Reg_A|Q[3] ; Generic_Register:Reg_Y|Q[10]                                                                                ; CLK          ; CLK         ; 6.671        ; -0.001     ; 5.503      ;
+; 1.215  ; Generic_Register:Reg_A|Q[1] ; Generic_Register:Reg_Y|Q[10]                                                                                ; CLK          ; CLK         ; 6.671        ; 0.000      ; 5.492      ;
+; 1.237  ; P_S.ADD_Y_NUM2              ; Generic_Register:Reg_Y|Q[6]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 5.468      ;
+; 1.270  ; Generic_Register:Reg_A|Q[5] ; Generic_Register:Reg_Y|Q[10]                                                                                ; CLK          ; CLK         ; 6.671        ; -0.001     ; 5.436      ;
+; 1.289  ; P_S.SUB_Y_NUM3              ; Generic_Register:Reg_Y|Q[6]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 5.416      ;
+; 1.311  ; Generic_Register:Reg_B|Q[6] ; Generic_Register:Reg_Y|Q[10]                                                                                ; CLK          ; CLK         ; 6.671        ; -0.001     ; 5.395      ;
+; 1.334  ; Generic_Register:Reg_C|Q[1] ; Generic_Register:Reg_Y|Q[9]                                                                                 ; CLK          ; CLK         ; 6.671        ; 0.000      ; 5.373      ;
+; 1.341  ; Generic_Register:Reg_A|Q[2] ; Generic_Register:Reg_Y|Q[10]                                                                                ; CLK          ; CLK         ; 6.671        ; 0.000      ; 5.366      ;
+; 1.343  ; Generic_Register:Reg_B|Q[0] ; Generic_Register:Reg_Y|Q[8]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.008     ; 5.356      ;
+; 1.366  ; Generic_Register:Reg_B|Q[7] ; Generic_Register:Reg_Y|Q[10]                                                                                ; CLK          ; CLK         ; 6.671        ; -0.002     ; 5.339      ;
+; 1.375  ; Generic_Register:Reg_B|Q[4] ; Generic_Register:Reg_Y|Q[8]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 5.330      ;
+; 1.379  ; Generic_Register:Reg_C|Q[3] ; Generic_Register:Reg_Y|Q[10]                                                                                ; CLK          ; CLK         ; 6.671        ; -0.001     ; 5.327      ;
+; 1.400  ; Generic_Register:Reg_B|Q[5] ; Generic_Register:Reg_Y|Q[8]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 5.305      ;
+; 1.406  ; Generic_Register:Reg_A|Q[3] ; Generic_Register:Reg_Y|Q[8]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 5.299      ;
+; 1.418  ; Generic_Register:Reg_A|Q[1] ; Generic_Register:Reg_Y|Q[8]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.001     ; 5.288      ;
+; 1.428  ; Generic_Register:Reg_C|Q[1] ; Generic_Register:Reg_Y|Q[7]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.001     ; 5.278      ;
+; 1.462  ; P_S.LD_MEM_B_00             ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg9 ; CLK          ; CLK         ; 6.671        ; 0.092      ; 5.266      ;
+; 1.473  ; Generic_Register:Reg_A|Q[5] ; Generic_Register:Reg_Y|Q[8]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 5.232      ;
+; 1.489  ; Generic_Register:Reg_B|Q[2] ; Generic_Register:Reg_Y|Q[6]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 5.216      ;
+; 1.491  ; Generic_Register:Reg_B|Q[3] ; Generic_Register:Reg_Y|Q[6]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 5.214      ;
+; 1.492  ; P_S.LD_MEM_B_01             ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg9 ; CLK          ; CLK         ; 6.671        ; 0.092      ; 5.236      ;
+; 1.514  ; Generic_Register:Reg_B|Q[6] ; Generic_Register:Reg_Y|Q[8]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 5.191      ;
+; 1.535  ; Generic_Register:Reg_B|Q[0] ; Generic_Register:Reg_Y|Q[9]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.007     ; 5.165      ;
+; 1.544  ; Generic_Register:Reg_A|Q[2] ; Generic_Register:Reg_Y|Q[8]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.001     ; 5.162      ;
+; 1.567  ; Generic_Register:Reg_B|Q[4] ; Generic_Register:Reg_Y|Q[9]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.001     ; 5.139      ;
+; 1.569  ; Generic_Register:Reg_B|Q[7] ; Generic_Register:Reg_Y|Q[8]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.003     ; 5.135      ;
+; 1.580  ; P_S.LD_MEM_B_10             ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg9 ; CLK          ; CLK         ; 6.671        ; 0.092      ; 5.148      ;
+; 1.582  ; Generic_Register:Reg_C|Q[3] ; Generic_Register:Reg_Y|Q[8]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 5.123      ;
+; 1.592  ; Generic_Register:Reg_B|Q[5] ; Generic_Register:Reg_Y|Q[9]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.001     ; 5.114      ;
+; 1.598  ; P_S.LD_MEM_B_00             ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg8 ; CLK          ; CLK         ; 6.671        ; 0.092      ; 5.130      ;
+; 1.598  ; Generic_Register:Reg_A|Q[3] ; Generic_Register:Reg_Y|Q[9]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.001     ; 5.108      ;
+; 1.610  ; Generic_Register:Reg_A|Q[1] ; Generic_Register:Reg_Y|Q[9]                                                                                 ; CLK          ; CLK         ; 6.671        ; 0.000      ; 5.097      ;
+; 1.615  ; Generic_Register:Reg_Y|Q[0] ; Generic_Register:Reg_Y|Q[10]                                                                                ; CLK          ; CLK         ; 6.671        ; 0.000      ; 5.092      ;
+; 1.628  ; P_S.LD_MEM_B_01             ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg8 ; CLK          ; CLK         ; 6.671        ; 0.092      ; 5.100      ;
+; 1.629  ; Generic_Register:Reg_B|Q[0] ; Generic_Register:Reg_Y|Q[7]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.008     ; 5.070      ;
+; 1.648  ; P_S.SUB_Y_NUM4              ; Generic_Register:Reg_Y|Q[5]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 5.057      ;
+; 1.661  ; Generic_Register:Reg_B|Q[4] ; Generic_Register:Reg_Y|Q[7]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 5.044      ;
+; 1.665  ; Generic_Register:Reg_A|Q[5] ; Generic_Register:Reg_Y|Q[9]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.001     ; 5.041      ;
+; 1.686  ; Generic_Register:Reg_B|Q[5] ; Generic_Register:Reg_Y|Q[7]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 5.019      ;
+; 1.692  ; Generic_Register:Reg_A|Q[3] ; Generic_Register:Reg_Y|Q[7]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 5.013      ;
+; 1.704  ; Generic_Register:Reg_A|Q[1] ; Generic_Register:Reg_Y|Q[7]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.001     ; 5.002      ;
+; 1.706  ; Generic_Register:Reg_B|Q[6] ; Generic_Register:Reg_Y|Q[9]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.001     ; 5.000      ;
+; 1.716  ; P_S.LD_MEM_B_10             ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg8 ; CLK          ; CLK         ; 6.671        ; 0.092      ; 5.012      ;
+; 1.724  ; P_S.LD_MEM_B_11             ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg9 ; CLK          ; CLK         ; 6.671        ; 0.092      ; 5.004      ;
+; 1.736  ; Generic_Register:Reg_A|Q[2] ; Generic_Register:Reg_Y|Q[9]                                                                                 ; CLK          ; CLK         ; 6.671        ; 0.000      ; 4.971      ;
+; 1.738  ; Generic_Register:Reg_C|Q[0] ; Generic_Register:Reg_Y|Q[6]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 4.967      ;
+; 1.748  ; P_S.LD_MEM_B_00             ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg9 ; CLK          ; CLK         ; 6.671        ; 0.099      ; 4.987      ;
+; 1.759  ; Generic_Register:Reg_A|Q[5] ; Generic_Register:Reg_Y|Q[7]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 4.946      ;
+; 1.761  ; Generic_Register:Reg_B|Q[7] ; Generic_Register:Reg_Y|Q[9]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 4.944      ;
+; 1.774  ; Generic_Register:Reg_C|Q[3] ; Generic_Register:Reg_Y|Q[9]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.001     ; 4.932      ;
+; 1.778  ; P_S.LD_MEM_B_01             ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg9 ; CLK          ; CLK         ; 6.671        ; 0.099      ; 4.957      ;
+; 1.783  ; P_S.LD_MEM_B_00             ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg4 ; CLK          ; CLK         ; 6.671        ; 0.099      ; 4.952      ;
+; 1.794  ; P_S.RESET                   ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg9 ; CLK          ; CLK         ; 6.671        ; 0.092      ; 4.934      ;
+; 1.800  ; Generic_Register:Reg_B|Q[6] ; Generic_Register:Reg_Y|Q[7]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 4.905      ;
+; 1.806  ; P_S.ADD_Y_NUM2              ; Generic_Register:Reg_Y|Q[5]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 4.899      ;
+; 1.813  ; P_S.LD_MEM_B_01             ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg4 ; CLK          ; CLK         ; 6.671        ; 0.099      ; 4.922      ;
+; 1.816  ; Generic_Register:Reg_A|Q[6] ; Generic_Register:Reg_Y|Q[10]                                                                                ; CLK          ; CLK         ; 6.671        ; -0.001     ; 4.890      ;
+; 1.818  ; Generic_Register:Reg_Y|Q[0] ; Generic_Register:Reg_Y|Q[8]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.001     ; 4.888      ;
+; 1.830  ; Generic_Register:Reg_A|Q[2] ; Generic_Register:Reg_Y|Q[7]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.001     ; 4.876      ;
+; 1.832  ; Generic_Register:Reg_A|Q[4] ; Generic_Register:Reg_Y|Q[10]                                                                                ; CLK          ; CLK         ; 6.671        ; -0.001     ; 4.874      ;
+; 1.855  ; Generic_Register:Reg_B|Q[7] ; Generic_Register:Reg_Y|Q[7]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.003     ; 4.849      ;
+; 1.857  ; P_S.WR_A                    ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg9 ; CLK          ; CLK         ; 6.671        ; 0.092      ; 4.871      ;
+; 1.858  ; P_S.SUB_Y_NUM3              ; Generic_Register:Reg_Y|Q[5]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 4.847      ;
+; 1.860  ; P_S.LD_MEM_B_11             ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg8 ; CLK          ; CLK         ; 6.671        ; 0.092      ; 4.868      ;
+; 1.863  ; P_S.LD_MEM_B_00             ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg7 ; CLK          ; CLK         ; 6.671        ; 0.092      ; 4.865      ;
+; 1.866  ; P_S.LD_MEM_B_10             ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg9 ; CLK          ; CLK         ; 6.671        ; 0.099      ; 4.869      ;
+; 1.868  ; Generic_Register:Reg_C|Q[3] ; Generic_Register:Reg_Y|Q[7]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 4.837      ;
+; 1.879  ; P_S.SUB_Y_NUM4              ; Generic_Register:Reg_Y|Q[4]                                                                                 ; CLK          ; CLK         ; 6.671        ; -0.002     ; 4.826      ;
+; 1.893  ; P_S.LD_MEM_B_01             ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg7 ; CLK          ; CLK         ; 6.671        ; 0.092      ; 4.835      ;
+; 1.901  ; P_S.LD_MEM_B_10             ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg4 ; CLK          ; CLK         ; 6.671        ; 0.099      ; 4.834      ;
++--------+-----------------------------+-------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLK'                                                                                                                                                                                                                                                                    ;
++-------+-----------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                                     ; To Node                                                                                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; Generic_Register:Reg_Out|Q[1]                                                                 ; Generic_Register:Reg_Out|Q[1]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; P_S.RESET                                                                                     ; P_S.RESET                                                                                                   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Generic_Register:Reg_Out|Q[0]                                                                 ; Generic_Register:Reg_Out|Q[0]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; P_S.DONE_STATE                                                                                ; P_S.DONE_STATE                                                                                              ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Generic_Register:Reg_Y|Q[10]                                                                  ; Generic_Register:Reg_Y|Q[10]                                                                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Generic_Register:Reg_Y|Q[9]                                                                   ; Generic_Register:Reg_Y|Q[9]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:8:Other_FF_Generation:Other_FF|Q ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:8:Other_FF_Generation:Other_FF|Q               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:7:Other_FF_Generation:Other_FF|Q ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:7:Other_FF_Generation:Other_FF|Q               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:5:Other_FF_Generation:Other_FF|Q ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:5:Other_FF_Generation:Other_FF|Q               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; P_S.WR_A                                                                                      ; P_S.WR_A                                                                                                    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Generic_Register:Reg_Out|Q[2]                                                                 ; Generic_Register:Reg_Out|Q[2]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Generic_Register:Reg_Out|Q[3]                                                                 ; Generic_Register:Reg_Out|Q[3]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Generic_Register:Reg_Out|Q[4]                                                                 ; Generic_Register:Reg_Out|Q[4]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Generic_Register:Reg_Out|Q[5]                                                                 ; Generic_Register:Reg_Out|Q[5]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Generic_Register:Reg_Out|Q[6]                                                                 ; Generic_Register:Reg_Out|Q[6]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Generic_Register:Reg_Out|Q[7]                                                                 ; Generic_Register:Reg_Out|Q[7]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Generic_Register:Reg_Out|Q[8]                                                                 ; Generic_Register:Reg_Out|Q[8]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Generic_Register:Reg_Out|Q[9]                                                                 ; Generic_Register:Reg_Out|Q[9]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Generic_Register:Reg_Out|Q[10]                                                                ; Generic_Register:Reg_Out|Q[10]                                                                              ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.517 ; Generic_Register:Reg_A|Q[0]                                                                   ; Generic_Register:Reg_B|Q[0]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.783      ;
+; 0.521 ; Generic_Register:Reg_A|Q[5]                                                                   ; Generic_Register:Reg_B|Q[5]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.787      ;
+; 0.521 ; Generic_Memory:Mem_A|memory_rtl_0_bypass[25]                                                  ; Generic_Memory:Mem_A|DATA_OUT[4]                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.787      ;
+; 0.531 ; Generic_Register:Reg_B|Q[6]                                                                   ; Generic_Register:Reg_C|Q[6]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.797      ;
+; 0.540 ; Generic_Register:Reg_Out|Q[4]                                                                 ; Generic_Register:Reg_Out|Q[5]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.806      ;
+; 0.541 ; Generic_Register:Reg_Out|Q[4]                                                                 ; Generic_Register:Reg_Out|Q[6]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.807      ;
+; 0.542 ; Generic_Register:Reg_Out|Q[0]                                                                 ; Generic_Register:Reg_Out|Q[1]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.808      ;
+; 0.545 ; Generic_Register:Reg_Out|Q[0]                                                                 ; Generic_Register:Reg_Out|Q[3]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.811      ;
+; 0.547 ; Generic_Register:Reg_Out|Q[0]                                                                 ; Generic_Register:Reg_Out|Q[2]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.813      ;
+; 0.562 ; Generic_Register:Reg_Out|Q[7]                                                                 ; Generic_Register:Reg_Out|Q[9]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.828      ;
+; 0.565 ; Generic_Register:Reg_Out|Q[7]                                                                 ; Generic_Register:Reg_Out|Q[8]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.831      ;
+; 0.649 ; Generic_Memory:Mem_A|memory_rtl_0_bypass[27]                                                  ; Generic_Memory:Mem_A|DATA_OUT[6]                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.915      ;
+; 0.651 ; Generic_Memory:Mem_A|memory_rtl_0_bypass[28]                                                  ; Generic_Memory:Mem_A|DATA_OUT[7]                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.917      ;
+; 0.656 ; Generic_Memory:Mem_A|memory_rtl_0_bypass[26]                                                  ; Generic_Memory:Mem_A|DATA_OUT[5]                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.922      ;
+; 0.660 ; Generic_Memory:Mem_A|memory_rtl_0_bypass[23]                                                  ; Generic_Memory:Mem_A|DATA_OUT[2]                                                                            ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.927      ;
+; 0.685 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:0:First_FF_Generation:First_FF|Q ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg0 ; CLK          ; CLK         ; 0.000        ; 0.064      ; 0.983      ;
+; 0.695 ; P_S.CHECK                                                                                     ; P_S.LD_MEM_B_11                                                                                             ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.961      ;
+; 0.695 ; P_S.CHECK                                                                                     ; P_S.LD_MEM_B_00                                                                                             ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.961      ;
+; 0.696 ; P_S.CHECK                                                                                     ; P_S.LD_MEM_B_01                                                                                             ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.962      ;
+; 0.696 ; Generic_Memory:Mem_A|DATA_OUT[0]                                                              ; Generic_Register:Reg_A|Q[0]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.963      ;
+; 0.698 ; P_S.CHECK                                                                                     ; P_S.LD_MEM_B_10                                                                                             ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.964      ;
+; 0.698 ; Generic_Memory:Mem_A|memory_rtl_0_bypass[22]                                                  ; Generic_Memory:Mem_A|DATA_OUT[1]                                                                            ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.965      ;
+; 0.791 ; Generic_Memory:Mem_A|memory_rtl_0_bypass[21]                                                  ; Generic_Memory:Mem_A|DATA_OUT[0]                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.057      ;
+; 0.801 ; Generic_Memory:Mem_A|memory_rtl_0_bypass[24]                                                  ; Generic_Memory:Mem_A|DATA_OUT[3]                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.067      ;
+; 0.806 ; Generic_Register:Reg_A|Q[6]                                                                   ; Generic_Register:Reg_B|Q[6]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.814 ; Generic_Register:Reg_B|Q[7]                                                                   ; Generic_Register:Reg_C|Q[7]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.080      ;
+; 0.815 ; Generic_Register:Reg_B|Q[5]                                                                   ; Generic_Register:Reg_C|Q[5]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.081      ;
+; 0.815 ; Generic_Register:Reg_Out|Q[1]                                                                 ; Generic_Register:Reg_Out|Q[2]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.081      ;
+; 0.823 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:7:Other_FF_Generation:Other_FF|Q ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:8:Other_FF_Generation:Other_FF|Q               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.089      ;
+; 0.827 ; P_S.ADD_Y_NUM1                                                                                ; P_S.SUB_Y_NUM4                                                                                              ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.093      ;
+; 0.835 ; Generic_Register:Reg_Out|Q[2]                                                                 ; Generic_Register:Reg_Out|Q[3]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.101      ;
+; 0.843 ; P_S.SUB_Y_NUM3                                                                                ; P_S.ADD_Y_NUM1                                                                                              ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.109      ;
+; 0.844 ; P_S.WR_A                                                                                      ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_we_reg       ; CLK          ; CLK         ; 0.000        ; 0.064      ; 1.142      ;
+; 0.846 ; Generic_Register:Reg_Out|Q[8]                                                                 ; Generic_Register:Reg_Out|Q[9]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.112      ;
+; 0.854 ; Generic_Register:Reg_Out|Q[5]                                                                 ; Generic_Register:Reg_Out|Q[6]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.120      ;
+; 0.861 ; P_S.DONE_STATE                                                                                ; P_S.RESET                                                                                                   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.127      ;
+; 0.872 ; P_S.RESET                                                                                     ; P_S.WR_A                                                                                                    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.138      ;
+; 0.877 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:4:Other_FF_Generation:Other_FF|Q ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:5:Other_FF_Generation:Other_FF|Q               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.143      ;
+; 0.913 ; Generic_Memory:Mem_A|DATA_OUT[5]                                                              ; Generic_Register:Reg_A|Q[5]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.003      ; 1.182      ;
+; 0.929 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:1:Other_FF_Generation:Other_FF|Q ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:1:Other_FF_Generation:Other_FF|Q               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.195      ;
+; 0.933 ; Generic_Memory:Mem_A|DATA_OUT[6]                                                              ; Generic_Register:Reg_A|Q[6]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.003      ; 1.202      ;
+; 0.935 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:4:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg4 ; CLK          ; CLK         ; 0.000        ; 0.064      ; 1.233      ;
+; 0.938 ; Generic_Register:Reg_A|Q[7]                                                                   ; Generic_Register:Reg_B|Q[7]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.205      ;
+; 0.939 ; P_S.RD_A                                                                                      ; Generic_Memory:Mem_A|DATA_OUT[7]                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.205      ;
+; 0.939 ; P_S.RD_A                                                                                      ; Generic_Memory:Mem_A|DATA_OUT[5]                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.205      ;
+; 0.939 ; P_S.RD_A                                                                                      ; Generic_Memory:Mem_A|DATA_OUT[6]                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.205      ;
+; 0.940 ; Generic_Register:Reg_A|Q[4]                                                                   ; Generic_Register:Reg_B|Q[4]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.206      ;
+; 0.951 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:9:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg9 ; CLK          ; CLK         ; 0.000        ; 0.064      ; 1.249      ;
+; 0.952 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:1:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg1 ; CLK          ; CLK         ; 0.000        ; 0.064      ; 1.250      ;
+; 0.957 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:6:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg6 ; CLK          ; CLK         ; 0.000        ; 0.064      ; 1.255      ;
+; 0.960 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:2:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg2 ; CLK          ; CLK         ; 0.000        ; 0.064      ; 1.258      ;
+; 0.967 ; Generic_Register:Reg_Out|Q[6]                                                                 ; Generic_Register:Reg_Out|Q[7]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.233      ;
+; 0.975 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:0:First_FF_Generation:First_FF|Q ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg0 ; CLK          ; CLK         ; 0.000        ; 0.071      ; 1.280      ;
+; 1.002 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:5:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|memory_rtl_0_bypass[11]                                                                ; CLK          ; CLK         ; 0.000        ; 0.009      ; 1.277      ;
+; 1.020 ; Generic_Register:Reg_Out|Q[1]                                                                 ; Generic_Register:Reg_Out|Q[3]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.286      ;
+; 1.055 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:8:Other_FF_Generation:Other_FF|Q ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:9:Other_FF_Generation:Other_FF|Q               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.321      ;
+; 1.055 ; Generic_Register:Reg_Y|Q[9]                                                                   ; Generic_Register:Reg_Y|Q[10]                                                                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.321      ;
+; 1.097 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:2:Other_FF_Generation:Other_FF|Q ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:5:Other_FF_Generation:Other_FF|Q               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.363      ;
+; 1.098 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:4:Other_FF_Generation:Other_FF|Q ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:4:Other_FF_Generation:Other_FF|Q               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.364      ;
+; 1.113 ; Generic_Memory:Mem_A|memory_rtl_0_bypass[0]                                                   ; Generic_Memory:Mem_A|DATA_OUT[3]                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.379      ;
+; 1.118 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:9:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|memory_rtl_0_bypass[19]                                                                ; CLK          ; CLK         ; 0.000        ; 0.009      ; 1.393      ;
+; 1.129 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:4:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|memory_rtl_0_bypass[9]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.009      ; 1.404      ;
+; 1.132 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:3:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|memory_rtl_0_bypass[7]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.009      ; 1.407      ;
+; 1.137 ; P_S.WR_A                                                                                      ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_we_reg       ; CLK          ; CLK         ; 0.000        ; 0.071      ; 1.442      ;
+; 1.138 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:6:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|memory_rtl_0_bypass[13]                                                                ; CLK          ; CLK         ; 0.000        ; 0.009      ; 1.413      ;
+; 1.147 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:2:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|memory_rtl_0_bypass[5]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.009      ; 1.422      ;
+; 1.165 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:8:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg8 ; CLK          ; CLK         ; 0.000        ; 0.092      ; 1.491      ;
+; 1.176 ; Generic_Register:Reg_A|Q[2]                                                                   ; Generic_Register:Reg_B|Q[2]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.443      ;
+; 1.177 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:7:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg7 ; CLK          ; CLK         ; 0.000        ; 0.092      ; 1.503      ;
+; 1.200 ; Generic_Register:Reg_Y|Q[4]                                                                   ; Generic_Register:Reg_Y|Q[4]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.466      ;
+; 1.201 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:3:Other_FF_Generation:Other_FF|Q ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:5:Other_FF_Generation:Other_FF|Q               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.467      ;
+; 1.202 ; P_S.SUB_Y_NUM4                                                                                ; P_S.CHECK                                                                                                   ; CLK          ; CLK         ; 0.000        ; -0.012     ; 1.456      ;
+; 1.204 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:1:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg1 ; CLK          ; CLK         ; 0.000        ; 0.071      ; 1.509      ;
+; 1.215 ; Generic_Register:Reg_Y|Q[7]                                                                   ; Generic_Register:Reg_Y|Q[7]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.481      ;
+; 1.216 ; Generic_Memory:Mem_A|DATA_OUT[3]                                                              ; Generic_Register:Reg_A|Q[3]                                                                                 ; CLK          ; CLK         ; 0.000        ; -0.004     ; 1.478      ;
+; 1.216 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:7:Other_FF_Generation:Other_FF|Q ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:9:Other_FF_Generation:Other_FF|Q               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.482      ;
+; 1.217 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:8:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg8 ; CLK          ; CLK         ; 0.000        ; 0.064      ; 1.515      ;
+; 1.221 ; Generic_Register:Reg_Out|Q[4]                                                                 ; Generic_Register:Reg_Out|Q[7]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.487      ;
+; 1.222 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:2:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg2 ; CLK          ; CLK         ; 0.000        ; 0.057      ; 1.513      ;
+; 1.229 ; P_S.RD_A                                                                                      ; P_S.LD_REG                                                                                                  ; CLK          ; CLK         ; 0.000        ; 0.008      ; 1.503      ;
+; 1.237 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:0:First_FF_Generation:First_FF|Q ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:1:Other_FF_Generation:Other_FF|Q               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.503      ;
++-------+-----------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLK'                                                                                                                                                       ;
++-------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                                      ;
++-------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------------------------------------+
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg4 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg5 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg6 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg7 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg8 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg9 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_datain_reg3  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_memory_reg0  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_we_reg       ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg1 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg2 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg3 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg4 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg5 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg6 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg7 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg8 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg9 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a1~porta_memory_reg0  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a2~porta_memory_reg0  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a3~porta_memory_reg0  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg0 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg1 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg2 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg3 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg4 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg5 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg6 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg7 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg8 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg9 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_datain_reg0  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_datain_reg1  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_datain_reg2  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_datain_reg3  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_memory_reg0  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_we_reg       ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg0 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg1 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg2 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg3 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg4 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg5 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg6 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg7 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg8 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg9 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a5~porta_memory_reg0  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a6~porta_memory_reg0  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a7~porta_memory_reg0  ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg4 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg5 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg6 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg7 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg8 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg9 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_datain_reg3  ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_memory_reg0  ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_we_reg       ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg1 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg2 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg3 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg4 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg5 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg6 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg7 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg8 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg9 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a1~porta_memory_reg0  ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a2~porta_memory_reg0  ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a3~porta_memory_reg0  ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg0 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg1 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg2 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg3 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg4 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg5 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg6 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg7 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg8 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg9 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_datain_reg0  ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_datain_reg1  ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_datain_reg2  ;
++-------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Setup Times                                                              ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; EXT_DATA[*]  ; CLK        ; 3.854 ; 3.854 ; Rise       ; CLK             ;
+;  EXT_DATA[0] ; CLK        ; 3.589 ; 3.589 ; Rise       ; CLK             ;
+;  EXT_DATA[1] ; CLK        ; 3.633 ; 3.633 ; Rise       ; CLK             ;
+;  EXT_DATA[2] ; CLK        ; 3.854 ; 3.854 ; Rise       ; CLK             ;
+;  EXT_DATA[3] ; CLK        ; 3.834 ; 3.834 ; Rise       ; CLK             ;
+;  EXT_DATA[4] ; CLK        ; 3.487 ; 3.487 ; Rise       ; CLK             ;
+;  EXT_DATA[5] ; CLK        ; 3.664 ; 3.664 ; Rise       ; CLK             ;
+;  EXT_DATA[6] ; CLK        ; 3.666 ; 3.666 ; Rise       ; CLK             ;
+;  EXT_DATA[7] ; CLK        ; 0.376 ; 0.376 ; Rise       ; CLK             ;
+; START        ; CLK        ; 0.372 ; 0.372 ; Rise       ; CLK             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Hold Times                                                                 ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; EXT_DATA[*]  ; CLK        ; 0.173  ; 0.173  ; Rise       ; CLK             ;
+;  EXT_DATA[0] ; CLK        ; -3.152 ; -3.152 ; Rise       ; CLK             ;
+;  EXT_DATA[1] ; CLK        ; -3.362 ; -3.362 ; Rise       ; CLK             ;
+;  EXT_DATA[2] ; CLK        ; -3.585 ; -3.585 ; Rise       ; CLK             ;
+;  EXT_DATA[3] ; CLK        ; -3.562 ; -3.562 ; Rise       ; CLK             ;
+;  EXT_DATA[4] ; CLK        ; -3.172 ; -3.172 ; Rise       ; CLK             ;
+;  EXT_DATA[5] ; CLK        ; -3.234 ; -3.234 ; Rise       ; CLK             ;
+;  EXT_DATA[6] ; CLK        ; -3.242 ; -3.242 ; Rise       ; CLK             ;
+;  EXT_DATA[7] ; CLK        ; 0.173  ; 0.173  ; Rise       ; CLK             ;
+; START        ; CLK        ; -0.140 ; -0.140 ; Rise       ; CLK             ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; DONE        ; CLK        ; 6.671 ; 6.671 ; Rise       ; CLK             ;
+; OUTPUT[*]   ; CLK        ; 7.017 ; 7.017 ; Rise       ; CLK             ;
+;  OUTPUT[0]  ; CLK        ; 6.414 ; 6.414 ; Rise       ; CLK             ;
+;  OUTPUT[1]  ; CLK        ; 6.433 ; 6.433 ; Rise       ; CLK             ;
+;  OUTPUT[2]  ; CLK        ; 6.641 ; 6.641 ; Rise       ; CLK             ;
+;  OUTPUT[3]  ; CLK        ; 6.977 ; 6.977 ; Rise       ; CLK             ;
+;  OUTPUT[4]  ; CLK        ; 6.430 ; 6.430 ; Rise       ; CLK             ;
+;  OUTPUT[5]  ; CLK        ; 6.682 ; 6.682 ; Rise       ; CLK             ;
+;  OUTPUT[6]  ; CLK        ; 6.647 ; 6.647 ; Rise       ; CLK             ;
+;  OUTPUT[7]  ; CLK        ; 6.636 ; 6.636 ; Rise       ; CLK             ;
+;  OUTPUT[8]  ; CLK        ; 7.017 ; 7.017 ; Rise       ; CLK             ;
+;  OUTPUT[9]  ; CLK        ; 6.691 ; 6.691 ; Rise       ; CLK             ;
+;  OUTPUT[10] ; CLK        ; 6.397 ; 6.397 ; Rise       ; CLK             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; DONE        ; CLK        ; 6.671 ; 6.671 ; Rise       ; CLK             ;
+; OUTPUT[*]   ; CLK        ; 6.397 ; 6.397 ; Rise       ; CLK             ;
+;  OUTPUT[0]  ; CLK        ; 6.414 ; 6.414 ; Rise       ; CLK             ;
+;  OUTPUT[1]  ; CLK        ; 6.433 ; 6.433 ; Rise       ; CLK             ;
+;  OUTPUT[2]  ; CLK        ; 6.641 ; 6.641 ; Rise       ; CLK             ;
+;  OUTPUT[3]  ; CLK        ; 6.977 ; 6.977 ; Rise       ; CLK             ;
+;  OUTPUT[4]  ; CLK        ; 6.430 ; 6.430 ; Rise       ; CLK             ;
+;  OUTPUT[5]  ; CLK        ; 6.682 ; 6.682 ; Rise       ; CLK             ;
+;  OUTPUT[6]  ; CLK        ; 6.647 ; 6.647 ; Rise       ; CLK             ;
+;  OUTPUT[7]  ; CLK        ; 6.636 ; 6.636 ; Rise       ; CLK             ;
+;  OUTPUT[8]  ; CLK        ; 7.017 ; 7.017 ; Rise       ; CLK             ;
+;  OUTPUT[9]  ; CLK        ; 6.691 ; 6.691 ; Rise       ; CLK             ;
+;  OUTPUT[10] ; CLK        ; 6.397 ; 6.397 ; Rise       ; CLK             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------+
+; Fast Model Setup Summary      ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLK   ; 3.788 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLK   ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+-------+------------------------+
+; Clock ; Slack ; End Point TNS          ;
++-------+-------+------------------------+
+; CLK   ; 1.208 ; 0.000                  ;
++-------+-------+------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLK'                                                                                                                                                                                                      ;
++-------+-------------------------------------------------------------------------------------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                                                   ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------------------------------------------------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; 3.788 ; P_S.SUB_Y_NUM4                                                                                              ; Generic_Register:Reg_Y|Q[10]     ; CLK          ; CLK         ; 6.671        ; -0.001     ; 2.914      ;
+; 3.829 ; P_S.ADD_Y_NUM2                                                                                              ; Generic_Register:Reg_Y|Q[10]     ; CLK          ; CLK         ; 6.671        ; -0.001     ; 2.873      ;
+; 3.863 ; P_S.SUB_Y_NUM4                                                                                              ; Generic_Register:Reg_Y|Q[8]      ; CLK          ; CLK         ; 6.671        ; -0.002     ; 2.838      ;
+; 3.879 ; P_S.SUB_Y_NUM3                                                                                              ; Generic_Register:Reg_Y|Q[10]     ; CLK          ; CLK         ; 6.671        ; -0.001     ; 2.823      ;
+; 3.904 ; P_S.ADD_Y_NUM2                                                                                              ; Generic_Register:Reg_Y|Q[8]      ; CLK          ; CLK         ; 6.671        ; -0.002     ; 2.797      ;
+; 3.952 ; P_S.SUB_Y_NUM4                                                                                              ; Generic_Register:Reg_Y|Q[9]      ; CLK          ; CLK         ; 6.671        ; -0.001     ; 2.750      ;
+; 3.954 ; P_S.SUB_Y_NUM3                                                                                              ; Generic_Register:Reg_Y|Q[8]      ; CLK          ; CLK         ; 6.671        ; -0.002     ; 2.747      ;
+; 3.969 ; Generic_Register:Reg_B|Q[3]                                                                                 ; Generic_Register:Reg_Y|Q[10]     ; CLK          ; CLK         ; 6.671        ; -0.001     ; 2.733      ;
+; 3.972 ; Generic_Register:Reg_B|Q[2]                                                                                 ; Generic_Register:Reg_Y|Q[10]     ; CLK          ; CLK         ; 6.671        ; -0.001     ; 2.730      ;
+; 3.976 ; P_S.SUB_Y_NUM4                                                                                              ; Generic_Register:Reg_Y|Q[7]      ; CLK          ; CLK         ; 6.671        ; -0.002     ; 2.725      ;
+; 3.993 ; P_S.ADD_Y_NUM2                                                                                              ; Generic_Register:Reg_Y|Q[9]      ; CLK          ; CLK         ; 6.671        ; -0.001     ; 2.709      ;
+; 4.017 ; P_S.ADD_Y_NUM2                                                                                              ; Generic_Register:Reg_Y|Q[7]      ; CLK          ; CLK         ; 6.671        ; -0.002     ; 2.684      ;
+; 4.021 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg0 ; Generic_Memory:Mem_A|DATA_OUT[4] ; CLK          ; CLK         ; 6.671        ; -0.058     ; 2.624      ;
+; 4.021 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg1 ; Generic_Memory:Mem_A|DATA_OUT[4] ; CLK          ; CLK         ; 6.671        ; -0.058     ; 2.624      ;
+; 4.021 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg2 ; Generic_Memory:Mem_A|DATA_OUT[4] ; CLK          ; CLK         ; 6.671        ; -0.058     ; 2.624      ;
+; 4.021 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg3 ; Generic_Memory:Mem_A|DATA_OUT[4] ; CLK          ; CLK         ; 6.671        ; -0.058     ; 2.624      ;
+; 4.021 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg4 ; Generic_Memory:Mem_A|DATA_OUT[4] ; CLK          ; CLK         ; 6.671        ; -0.058     ; 2.624      ;
+; 4.021 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg5 ; Generic_Memory:Mem_A|DATA_OUT[4] ; CLK          ; CLK         ; 6.671        ; -0.058     ; 2.624      ;
+; 4.021 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg6 ; Generic_Memory:Mem_A|DATA_OUT[4] ; CLK          ; CLK         ; 6.671        ; -0.058     ; 2.624      ;
+; 4.021 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg7 ; Generic_Memory:Mem_A|DATA_OUT[4] ; CLK          ; CLK         ; 6.671        ; -0.058     ; 2.624      ;
+; 4.021 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg8 ; Generic_Memory:Mem_A|DATA_OUT[4] ; CLK          ; CLK         ; 6.671        ; -0.058     ; 2.624      ;
+; 4.021 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg9 ; Generic_Memory:Mem_A|DATA_OUT[4] ; CLK          ; CLK         ; 6.671        ; -0.058     ; 2.624      ;
+; 4.043 ; P_S.SUB_Y_NUM3                                                                                              ; Generic_Register:Reg_Y|Q[9]      ; CLK          ; CLK         ; 6.671        ; -0.001     ; 2.659      ;
+; 4.044 ; Generic_Register:Reg_B|Q[3]                                                                                 ; Generic_Register:Reg_Y|Q[8]      ; CLK          ; CLK         ; 6.671        ; -0.002     ; 2.657      ;
+; 4.047 ; Generic_Register:Reg_B|Q[2]                                                                                 ; Generic_Register:Reg_Y|Q[8]      ; CLK          ; CLK         ; 6.671        ; -0.002     ; 2.654      ;
+; 4.067 ; P_S.SUB_Y_NUM3                                                                                              ; Generic_Register:Reg_Y|Q[7]      ; CLK          ; CLK         ; 6.671        ; -0.002     ; 2.634      ;
+; 4.068 ; Generic_Register:Reg_C|Q[0]                                                                                 ; Generic_Register:Reg_Y|Q[10]     ; CLK          ; CLK         ; 6.671        ; -0.001     ; 2.634      ;
+; 4.133 ; Generic_Register:Reg_B|Q[3]                                                                                 ; Generic_Register:Reg_Y|Q[9]      ; CLK          ; CLK         ; 6.671        ; -0.001     ; 2.569      ;
+; 4.136 ; Generic_Register:Reg_B|Q[2]                                                                                 ; Generic_Register:Reg_Y|Q[9]      ; CLK          ; CLK         ; 6.671        ; -0.001     ; 2.566      ;
+; 4.143 ; Generic_Register:Reg_C|Q[0]                                                                                 ; Generic_Register:Reg_Y|Q[8]      ; CLK          ; CLK         ; 6.671        ; -0.002     ; 2.558      ;
+; 4.144 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg0 ; Generic_Memory:Mem_A|DATA_OUT[1] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.494      ;
+; 4.144 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg1 ; Generic_Memory:Mem_A|DATA_OUT[1] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.494      ;
+; 4.144 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg2 ; Generic_Memory:Mem_A|DATA_OUT[1] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.494      ;
+; 4.144 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg3 ; Generic_Memory:Mem_A|DATA_OUT[1] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.494      ;
+; 4.144 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg4 ; Generic_Memory:Mem_A|DATA_OUT[1] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.494      ;
+; 4.144 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg5 ; Generic_Memory:Mem_A|DATA_OUT[1] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.494      ;
+; 4.144 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg6 ; Generic_Memory:Mem_A|DATA_OUT[1] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.494      ;
+; 4.144 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg7 ; Generic_Memory:Mem_A|DATA_OUT[1] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.494      ;
+; 4.144 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg8 ; Generic_Memory:Mem_A|DATA_OUT[1] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.494      ;
+; 4.144 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg9 ; Generic_Memory:Mem_A|DATA_OUT[1] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.494      ;
+; 4.145 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg0 ; Generic_Memory:Mem_A|DATA_OUT[2] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.493      ;
+; 4.145 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg1 ; Generic_Memory:Mem_A|DATA_OUT[2] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.493      ;
+; 4.145 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg2 ; Generic_Memory:Mem_A|DATA_OUT[2] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.493      ;
+; 4.145 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg3 ; Generic_Memory:Mem_A|DATA_OUT[2] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.493      ;
+; 4.145 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg4 ; Generic_Memory:Mem_A|DATA_OUT[2] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.493      ;
+; 4.145 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg5 ; Generic_Memory:Mem_A|DATA_OUT[2] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.493      ;
+; 4.145 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg6 ; Generic_Memory:Mem_A|DATA_OUT[2] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.493      ;
+; 4.145 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg7 ; Generic_Memory:Mem_A|DATA_OUT[2] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.493      ;
+; 4.145 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg8 ; Generic_Memory:Mem_A|DATA_OUT[2] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.493      ;
+; 4.145 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg9 ; Generic_Memory:Mem_A|DATA_OUT[2] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.493      ;
+; 4.157 ; Generic_Register:Reg_B|Q[3]                                                                                 ; Generic_Register:Reg_Y|Q[7]      ; CLK          ; CLK         ; 6.671        ; -0.002     ; 2.544      ;
+; 4.160 ; Generic_Register:Reg_B|Q[2]                                                                                 ; Generic_Register:Reg_Y|Q[7]      ; CLK          ; CLK         ; 6.671        ; -0.002     ; 2.541      ;
+; 4.179 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg0 ; Generic_Memory:Mem_A|DATA_OUT[7] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.459      ;
+; 4.179 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg1 ; Generic_Memory:Mem_A|DATA_OUT[7] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.459      ;
+; 4.179 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg2 ; Generic_Memory:Mem_A|DATA_OUT[7] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.459      ;
+; 4.179 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg3 ; Generic_Memory:Mem_A|DATA_OUT[7] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.459      ;
+; 4.179 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg4 ; Generic_Memory:Mem_A|DATA_OUT[7] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.459      ;
+; 4.179 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg5 ; Generic_Memory:Mem_A|DATA_OUT[7] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.459      ;
+; 4.179 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg6 ; Generic_Memory:Mem_A|DATA_OUT[7] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.459      ;
+; 4.179 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg7 ; Generic_Memory:Mem_A|DATA_OUT[7] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.459      ;
+; 4.179 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg8 ; Generic_Memory:Mem_A|DATA_OUT[7] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.459      ;
+; 4.179 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg9 ; Generic_Memory:Mem_A|DATA_OUT[7] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.459      ;
+; 4.180 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg0 ; Generic_Memory:Mem_A|DATA_OUT[0] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.458      ;
+; 4.180 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg1 ; Generic_Memory:Mem_A|DATA_OUT[0] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.458      ;
+; 4.180 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg2 ; Generic_Memory:Mem_A|DATA_OUT[0] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.458      ;
+; 4.180 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg3 ; Generic_Memory:Mem_A|DATA_OUT[0] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.458      ;
+; 4.180 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg4 ; Generic_Memory:Mem_A|DATA_OUT[0] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.458      ;
+; 4.180 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg5 ; Generic_Memory:Mem_A|DATA_OUT[0] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.458      ;
+; 4.180 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg6 ; Generic_Memory:Mem_A|DATA_OUT[0] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.458      ;
+; 4.180 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg7 ; Generic_Memory:Mem_A|DATA_OUT[0] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.458      ;
+; 4.180 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg8 ; Generic_Memory:Mem_A|DATA_OUT[0] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.458      ;
+; 4.180 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg9 ; Generic_Memory:Mem_A|DATA_OUT[0] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.458      ;
+; 4.181 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg0 ; Generic_Memory:Mem_A|DATA_OUT[5] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.457      ;
+; 4.181 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg0 ; Generic_Memory:Mem_A|DATA_OUT[6] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.457      ;
+; 4.181 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg1 ; Generic_Memory:Mem_A|DATA_OUT[5] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.457      ;
+; 4.181 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg2 ; Generic_Memory:Mem_A|DATA_OUT[5] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.457      ;
+; 4.181 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg3 ; Generic_Memory:Mem_A|DATA_OUT[5] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.457      ;
+; 4.181 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg4 ; Generic_Memory:Mem_A|DATA_OUT[5] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.457      ;
+; 4.181 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg5 ; Generic_Memory:Mem_A|DATA_OUT[5] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.457      ;
+; 4.181 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg6 ; Generic_Memory:Mem_A|DATA_OUT[5] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.457      ;
+; 4.181 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg7 ; Generic_Memory:Mem_A|DATA_OUT[5] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.457      ;
+; 4.181 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg8 ; Generic_Memory:Mem_A|DATA_OUT[5] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.457      ;
+; 4.181 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg9 ; Generic_Memory:Mem_A|DATA_OUT[5] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.457      ;
+; 4.181 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg1 ; Generic_Memory:Mem_A|DATA_OUT[6] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.457      ;
+; 4.181 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg2 ; Generic_Memory:Mem_A|DATA_OUT[6] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.457      ;
+; 4.181 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg3 ; Generic_Memory:Mem_A|DATA_OUT[6] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.457      ;
+; 4.181 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg4 ; Generic_Memory:Mem_A|DATA_OUT[6] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.457      ;
+; 4.181 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg5 ; Generic_Memory:Mem_A|DATA_OUT[6] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.457      ;
+; 4.181 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg6 ; Generic_Memory:Mem_A|DATA_OUT[6] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.457      ;
+; 4.181 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg7 ; Generic_Memory:Mem_A|DATA_OUT[6] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.457      ;
+; 4.181 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg8 ; Generic_Memory:Mem_A|DATA_OUT[6] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.457      ;
+; 4.181 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg9 ; Generic_Memory:Mem_A|DATA_OUT[6] ; CLK          ; CLK         ; 6.671        ; -0.065     ; 2.457      ;
+; 4.193 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg0 ; Generic_Memory:Mem_A|DATA_OUT[3] ; CLK          ; CLK         ; 6.671        ; -0.066     ; 2.444      ;
+; 4.193 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg1 ; Generic_Memory:Mem_A|DATA_OUT[3] ; CLK          ; CLK         ; 6.671        ; -0.066     ; 2.444      ;
+; 4.193 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg2 ; Generic_Memory:Mem_A|DATA_OUT[3] ; CLK          ; CLK         ; 6.671        ; -0.066     ; 2.444      ;
+; 4.193 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg3 ; Generic_Memory:Mem_A|DATA_OUT[3] ; CLK          ; CLK         ; 6.671        ; -0.066     ; 2.444      ;
+; 4.193 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg4 ; Generic_Memory:Mem_A|DATA_OUT[3] ; CLK          ; CLK         ; 6.671        ; -0.066     ; 2.444      ;
+; 4.193 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg5 ; Generic_Memory:Mem_A|DATA_OUT[3] ; CLK          ; CLK         ; 6.671        ; -0.066     ; 2.444      ;
+; 4.193 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg6 ; Generic_Memory:Mem_A|DATA_OUT[3] ; CLK          ; CLK         ; 6.671        ; -0.066     ; 2.444      ;
+; 4.193 ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg7 ; Generic_Memory:Mem_A|DATA_OUT[3] ; CLK          ; CLK         ; 6.671        ; -0.066     ; 2.444      ;
++-------+-------------------------------------------------------------------------------------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLK'                                                                                                                                                                                                                                                                    ;
++-------+-----------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                                     ; To Node                                                                                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; Generic_Register:Reg_Out|Q[1]                                                                 ; Generic_Register:Reg_Out|Q[1]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; P_S.RESET                                                                                     ; P_S.RESET                                                                                                   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Generic_Register:Reg_Out|Q[0]                                                                 ; Generic_Register:Reg_Out|Q[0]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; P_S.DONE_STATE                                                                                ; P_S.DONE_STATE                                                                                              ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Generic_Register:Reg_Y|Q[10]                                                                  ; Generic_Register:Reg_Y|Q[10]                                                                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Generic_Register:Reg_Y|Q[9]                                                                   ; Generic_Register:Reg_Y|Q[9]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:8:Other_FF_Generation:Other_FF|Q ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:8:Other_FF_Generation:Other_FF|Q               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:7:Other_FF_Generation:Other_FF|Q ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:7:Other_FF_Generation:Other_FF|Q               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:5:Other_FF_Generation:Other_FF|Q ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:5:Other_FF_Generation:Other_FF|Q               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; P_S.WR_A                                                                                      ; P_S.WR_A                                                                                                    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Generic_Register:Reg_Out|Q[2]                                                                 ; Generic_Register:Reg_Out|Q[2]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Generic_Register:Reg_Out|Q[3]                                                                 ; Generic_Register:Reg_Out|Q[3]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Generic_Register:Reg_Out|Q[4]                                                                 ; Generic_Register:Reg_Out|Q[4]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Generic_Register:Reg_Out|Q[5]                                                                 ; Generic_Register:Reg_Out|Q[5]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Generic_Register:Reg_Out|Q[6]                                                                 ; Generic_Register:Reg_Out|Q[6]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Generic_Register:Reg_Out|Q[7]                                                                 ; Generic_Register:Reg_Out|Q[7]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Generic_Register:Reg_Out|Q[8]                                                                 ; Generic_Register:Reg_Out|Q[8]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Generic_Register:Reg_Out|Q[9]                                                                 ; Generic_Register:Reg_Out|Q[9]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Generic_Register:Reg_Out|Q[10]                                                                ; Generic_Register:Reg_Out|Q[10]                                                                              ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.238 ; Generic_Register:Reg_A|Q[5]                                                                   ; Generic_Register:Reg_B|Q[5]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.390      ;
+; 0.238 ; Generic_Register:Reg_A|Q[0]                                                                   ; Generic_Register:Reg_B|Q[0]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.390      ;
+; 0.240 ; Generic_Memory:Mem_A|memory_rtl_0_bypass[25]                                                  ; Generic_Memory:Mem_A|DATA_OUT[4]                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.392      ;
+; 0.244 ; Generic_Register:Reg_B|Q[6]                                                                   ; Generic_Register:Reg_C|Q[6]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.396      ;
+; 0.248 ; Generic_Register:Reg_Out|Q[4]                                                                 ; Generic_Register:Reg_Out|Q[5]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.400      ;
+; 0.249 ; Generic_Register:Reg_Out|Q[4]                                                                 ; Generic_Register:Reg_Out|Q[6]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.401      ;
+; 0.250 ; Generic_Register:Reg_Out|Q[0]                                                                 ; Generic_Register:Reg_Out|Q[1]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.402      ;
+; 0.253 ; Generic_Register:Reg_Out|Q[0]                                                                 ; Generic_Register:Reg_Out|Q[3]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.405      ;
+; 0.255 ; Generic_Register:Reg_Out|Q[0]                                                                 ; Generic_Register:Reg_Out|Q[2]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.407      ;
+; 0.261 ; Generic_Register:Reg_Out|Q[7]                                                                 ; Generic_Register:Reg_Out|Q[9]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.413      ;
+; 0.265 ; Generic_Register:Reg_Out|Q[7]                                                                 ; Generic_Register:Reg_Out|Q[8]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.417      ;
+; 0.282 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:0:First_FF_Generation:First_FF|Q ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg0 ; CLK          ; CLK         ; 0.000        ; 0.070      ; 0.490      ;
+; 0.289 ; Generic_Memory:Mem_A|memory_rtl_0_bypass[27]                                                  ; Generic_Memory:Mem_A|DATA_OUT[6]                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.441      ;
+; 0.291 ; Generic_Memory:Mem_A|memory_rtl_0_bypass[28]                                                  ; Generic_Memory:Mem_A|DATA_OUT[7]                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.443      ;
+; 0.295 ; Generic_Memory:Mem_A|memory_rtl_0_bypass[26]                                                  ; Generic_Memory:Mem_A|DATA_OUT[5]                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.447      ;
+; 0.308 ; Generic_Memory:Mem_A|memory_rtl_0_bypass[23]                                                  ; Generic_Memory:Mem_A|DATA_OUT[2]                                                                            ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.461      ;
+; 0.316 ; Generic_Memory:Mem_A|memory_rtl_0_bypass[22]                                                  ; Generic_Memory:Mem_A|DATA_OUT[1]                                                                            ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.469      ;
+; 0.317 ; Generic_Memory:Mem_A|DATA_OUT[0]                                                              ; Generic_Register:Reg_A|Q[0]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.470      ;
+; 0.341 ; P_S.CHECK                                                                                     ; P_S.LD_MEM_B_00                                                                                             ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.493      ;
+; 0.342 ; P_S.CHECK                                                                                     ; P_S.LD_MEM_B_01                                                                                             ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.494      ;
+; 0.343 ; P_S.CHECK                                                                                     ; P_S.LD_MEM_B_11                                                                                             ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.495      ;
+; 0.346 ; P_S.CHECK                                                                                     ; P_S.LD_MEM_B_10                                                                                             ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.498      ;
+; 0.354 ; P_S.WR_A                                                                                      ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_we_reg       ; CLK          ; CLK         ; 0.000        ; 0.070      ; 0.562      ;
+; 0.356 ; Generic_Memory:Mem_A|memory_rtl_0_bypass[21]                                                  ; Generic_Memory:Mem_A|DATA_OUT[0]                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.508      ;
+; 0.361 ; Generic_Memory:Mem_A|memory_rtl_0_bypass[24]                                                  ; Generic_Memory:Mem_A|DATA_OUT[3]                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.369 ; Generic_Register:Reg_A|Q[6]                                                                   ; Generic_Register:Reg_B|Q[6]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; Generic_Register:Reg_Out|Q[1]                                                                 ; Generic_Register:Reg_Out|Q[2]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.521      ;
+; 0.371 ; Generic_Register:Reg_B|Q[7]                                                                   ; Generic_Register:Reg_C|Q[7]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.375 ; Generic_Register:Reg_B|Q[5]                                                                   ; Generic_Register:Reg_C|Q[5]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.527      ;
+; 0.377 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:7:Other_FF_Generation:Other_FF|Q ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:8:Other_FF_Generation:Other_FF|Q               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.529      ;
+; 0.377 ; Generic_Register:Reg_Out|Q[8]                                                                 ; Generic_Register:Reg_Out|Q[9]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.529      ;
+; 0.379 ; Generic_Register:Reg_Out|Q[2]                                                                 ; Generic_Register:Reg_Out|Q[3]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.531      ;
+; 0.382 ; Generic_Register:Reg_Out|Q[5]                                                                 ; Generic_Register:Reg_Out|Q[6]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.534      ;
+; 0.386 ; P_S.DONE_STATE                                                                                ; P_S.RESET                                                                                                   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.538      ;
+; 0.390 ; P_S.RESET                                                                                     ; P_S.WR_A                                                                                                    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.542      ;
+; 0.396 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:4:Other_FF_Generation:Other_FF|Q ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:5:Other_FF_Generation:Other_FF|Q               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.548      ;
+; 0.399 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:4:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg4 ; CLK          ; CLK         ; 0.000        ; 0.071      ; 0.608      ;
+; 0.405 ; P_S.SUB_Y_NUM3                                                                                ; P_S.ADD_Y_NUM1                                                                                              ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.558      ;
+; 0.407 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:0:First_FF_Generation:First_FF|Q ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg0 ; CLK          ; CLK         ; 0.000        ; 0.077      ; 0.622      ;
+; 0.409 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:1:Other_FF_Generation:Other_FF|Q ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:1:Other_FF_Generation:Other_FF|Q               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.561      ;
+; 0.410 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:1:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg1 ; CLK          ; CLK         ; 0.000        ; 0.070      ; 0.618      ;
+; 0.412 ; P_S.ADD_Y_NUM1                                                                                ; P_S.SUB_Y_NUM4                                                                                              ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.563      ;
+; 0.412 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:9:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg9 ; CLK          ; CLK         ; 0.000        ; 0.071      ; 0.621      ;
+; 0.416 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:2:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg2 ; CLK          ; CLK         ; 0.000        ; 0.071      ; 0.625      ;
+; 0.416 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:6:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg6 ; CLK          ; CLK         ; 0.000        ; 0.071      ; 0.625      ;
+; 0.422 ; Generic_Memory:Mem_A|DATA_OUT[6]                                                              ; Generic_Register:Reg_A|Q[6]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.004      ; 0.578      ;
+; 0.423 ; Generic_Memory:Mem_A|DATA_OUT[5]                                                              ; Generic_Register:Reg_A|Q[5]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.004      ; 0.579      ;
+; 0.424 ; Generic_Register:Reg_A|Q[7]                                                                   ; Generic_Register:Reg_B|Q[7]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.576      ;
+; 0.425 ; Generic_Register:Reg_A|Q[4]                                                                   ; Generic_Register:Reg_B|Q[4]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.577      ;
+; 0.432 ; Generic_Register:Reg_Out|Q[6]                                                                 ; Generic_Register:Reg_Out|Q[7]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.584      ;
+; 0.453 ; Generic_Register:Reg_Out|Q[1]                                                                 ; Generic_Register:Reg_Out|Q[3]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.605      ;
+; 0.456 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:8:Other_FF_Generation:Other_FF|Q ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:9:Other_FF_Generation:Other_FF|Q               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.608      ;
+; 0.458 ; Generic_Register:Reg_Y|Q[9]                                                                   ; Generic_Register:Reg_Y|Q[10]                                                                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.610      ;
+; 0.466 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:5:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|memory_rtl_0_bypass[11]                                                                ; CLK          ; CLK         ; 0.000        ; 0.009      ; 0.627      ;
+; 0.479 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:4:Other_FF_Generation:Other_FF|Q ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:4:Other_FF_Generation:Other_FF|Q               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.631      ;
+; 0.483 ; P_S.WR_A                                                                                      ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_we_reg       ; CLK          ; CLK         ; 0.000        ; 0.077      ; 0.698      ;
+; 0.509 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:2:Other_FF_Generation:Other_FF|Q ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:5:Other_FF_Generation:Other_FF|Q               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.661      ;
+; 0.511 ; P_S.RD_A                                                                                      ; Generic_Memory:Mem_A|DATA_OUT[7]                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:1:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg1 ; CLK          ; CLK         ; 0.000        ; 0.077      ; 0.726      ;
+; 0.511 ; P_S.RD_A                                                                                      ; Generic_Memory:Mem_A|DATA_OUT[5]                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; P_S.RD_A                                                                                      ; Generic_Memory:Mem_A|DATA_OUT[6]                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.663      ;
+; 0.515 ; Generic_Memory:Mem_A|memory_rtl_0_bypass[0]                                                   ; Generic_Memory:Mem_A|DATA_OUT[3]                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.667      ;
+; 0.526 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:2:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg2 ; CLK          ; CLK         ; 0.000        ; 0.064      ; 0.728      ;
+; 0.527 ; Generic_Register:Reg_Y|Q[4]                                                                   ; Generic_Register:Reg_Y|Q[4]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.679      ;
+; 0.529 ; Generic_Register:Reg_A|Q[2]                                                                   ; Generic_Register:Reg_B|Q[2]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.682      ;
+; 0.531 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:8:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg8 ; CLK          ; CLK         ; 0.000        ; 0.075      ; 0.744      ;
+; 0.532 ; Generic_Register:Reg_Y|Q[7]                                                                   ; Generic_Register:Reg_Y|Q[7]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.684      ;
+; 0.532 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:8:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg8 ; CLK          ; CLK         ; 0.000        ; 0.071      ; 0.741      ;
+; 0.536 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:9:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|memory_rtl_0_bypass[19]                                                                ; CLK          ; CLK         ; 0.000        ; 0.009      ; 0.697      ;
+; 0.538 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:7:Other_FF_Generation:Other_FF|Q ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:9:Other_FF_Generation:Other_FF|Q               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.690      ;
+; 0.539 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:3:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|memory_rtl_0_bypass[7]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.009      ; 0.700      ;
+; 0.539 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:4:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|memory_rtl_0_bypass[9]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.009      ; 0.700      ;
+; 0.540 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:7:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg7 ; CLK          ; CLK         ; 0.000        ; 0.075      ; 0.753      ;
+; 0.546 ; Generic_Register:Reg_Y|Q[5]                                                                   ; Generic_Register:Reg_Y|Q[5]                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.698      ;
+; 0.547 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:4:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg4 ; CLK          ; CLK         ; 0.000        ; 0.064      ; 0.749      ;
+; 0.548 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:6:Other_FF_Generation:Other_FF|Q ; Generic_Memory:Mem_A|memory_rtl_0_bypass[13]                                                                ; CLK          ; CLK         ; 0.000        ; 0.009      ; 0.709      ;
+; 0.548 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:3:Other_FF_Generation:Other_FF|Q ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:5:Other_FF_Generation:Other_FF|Q               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.700      ;
+; 0.549 ; Generic_Memory:Mem_A|DATA_OUT[3]                                                              ; Generic_Register:Reg_A|Q[3]                                                                                 ; CLK          ; CLK         ; 0.000        ; -0.003     ; 0.698      ;
+; 0.550 ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:0:First_FF_Generation:First_FF|Q ; Generic_Sync_Counter:Counter|T_Flip_Flop:\Counter_Generation:1:Other_FF_Generation:Other_FF|Q               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.702      ;
+; 0.551 ; Generic_Register:Reg_Out|Q[6]                                                                 ; Generic_Register:Reg_Out|Q[8]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.703      ;
+; 0.551 ; Generic_Register:Reg_Out|Q[6]                                                                 ; Generic_Register:Reg_Out|Q[9]                                                                               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.703      ;
++-------+-----------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLK'                                                                                                                                                       ;
++-------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                                      ;
++-------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------------------------------------+
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg4 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg5 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg6 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg7 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg8 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg9 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_datain_reg3  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_memory_reg0  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_we_reg       ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg1 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg2 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg3 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg4 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg5 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg6 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg7 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg8 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg9 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a1~porta_memory_reg0  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a2~porta_memory_reg0  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a3~porta_memory_reg0  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg0 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg1 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg2 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg3 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg4 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg5 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg6 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg7 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg8 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg9 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_datain_reg0  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_datain_reg1  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_datain_reg2  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_datain_reg3  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_memory_reg0  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_we_reg       ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg0 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg1 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg2 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg3 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg4 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg5 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg6 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg7 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg8 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~portb_address_reg9 ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a5~porta_memory_reg0  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a6~porta_memory_reg0  ;
+; 1.208 ; 3.335        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a7~porta_memory_reg0  ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg4 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg5 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg6 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg7 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg8 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_address_reg9 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_datain_reg3  ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_memory_reg0  ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~porta_we_reg       ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg1 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg2 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg3 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg4 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg5 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg6 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg7 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg8 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a0~portb_address_reg9 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a1~porta_memory_reg0  ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a2~porta_memory_reg0  ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a3~porta_memory_reg0  ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg0 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg1 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg2 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg3 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg4 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg5 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg6 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg7 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg8 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_address_reg9 ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_datain_reg0  ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_datain_reg1  ;
+; 1.209 ; 3.336        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; Generic_Memory:Mem_A|altsyncram:memory_rtl_0|altsyncram_utg1:auto_generated|ram_block1a4~porta_datain_reg2  ;
++-------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Setup Times                                                                ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; EXT_DATA[*]  ; CLK        ; 2.070  ; 2.070  ; Rise       ; CLK             ;
+;  EXT_DATA[0] ; CLK        ; 1.964  ; 1.964  ; Rise       ; CLK             ;
+;  EXT_DATA[1] ; CLK        ; 1.977  ; 1.977  ; Rise       ; CLK             ;
+;  EXT_DATA[2] ; CLK        ; 2.070  ; 2.070  ; Rise       ; CLK             ;
+;  EXT_DATA[3] ; CLK        ; 2.054  ; 2.054  ; Rise       ; CLK             ;
+;  EXT_DATA[4] ; CLK        ; 1.901  ; 1.901  ; Rise       ; CLK             ;
+;  EXT_DATA[5] ; CLK        ; 2.029  ; 2.029  ; Rise       ; CLK             ;
+;  EXT_DATA[6] ; CLK        ; 2.035  ; 2.035  ; Rise       ; CLK             ;
+;  EXT_DATA[7] ; CLK        ; -0.070 ; -0.070 ; Rise       ; CLK             ;
+; START        ; CLK        ; -0.096 ; -0.096 ; Rise       ; CLK             ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Hold Times                                                                 ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; EXT_DATA[*]  ; CLK        ; 0.375  ; 0.375  ; Rise       ; CLK             ;
+;  EXT_DATA[0] ; CLK        ; -1.696 ; -1.696 ; Rise       ; CLK             ;
+;  EXT_DATA[1] ; CLK        ; -1.821 ; -1.821 ; Rise       ; CLK             ;
+;  EXT_DATA[2] ; CLK        ; -1.904 ; -1.904 ; Rise       ; CLK             ;
+;  EXT_DATA[3] ; CLK        ; -1.886 ; -1.886 ; Rise       ; CLK             ;
+;  EXT_DATA[4] ; CLK        ; -1.718 ; -1.718 ; Rise       ; CLK             ;
+;  EXT_DATA[5] ; CLK        ; -1.759 ; -1.759 ; Rise       ; CLK             ;
+;  EXT_DATA[6] ; CLK        ; -1.771 ; -1.771 ; Rise       ; CLK             ;
+;  EXT_DATA[7] ; CLK        ; 0.375  ; 0.375  ; Rise       ; CLK             ;
+; START        ; CLK        ; 0.222  ; 0.222  ; Rise       ; CLK             ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; DONE        ; CLK        ; 3.744 ; 3.744 ; Rise       ; CLK             ;
+; OUTPUT[*]   ; CLK        ; 3.908 ; 3.908 ; Rise       ; CLK             ;
+;  OUTPUT[0]  ; CLK        ; 3.664 ; 3.664 ; Rise       ; CLK             ;
+;  OUTPUT[1]  ; CLK        ; 3.679 ; 3.679 ; Rise       ; CLK             ;
+;  OUTPUT[2]  ; CLK        ; 3.768 ; 3.768 ; Rise       ; CLK             ;
+;  OUTPUT[3]  ; CLK        ; 3.880 ; 3.880 ; Rise       ; CLK             ;
+;  OUTPUT[4]  ; CLK        ; 3.679 ; 3.679 ; Rise       ; CLK             ;
+;  OUTPUT[5]  ; CLK        ; 3.802 ; 3.802 ; Rise       ; CLK             ;
+;  OUTPUT[6]  ; CLK        ; 3.771 ; 3.771 ; Rise       ; CLK             ;
+;  OUTPUT[7]  ; CLK        ; 3.764 ; 3.764 ; Rise       ; CLK             ;
+;  OUTPUT[8]  ; CLK        ; 3.908 ; 3.908 ; Rise       ; CLK             ;
+;  OUTPUT[9]  ; CLK        ; 3.803 ; 3.803 ; Rise       ; CLK             ;
+;  OUTPUT[10] ; CLK        ; 3.652 ; 3.652 ; Rise       ; CLK             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; DONE        ; CLK        ; 3.744 ; 3.744 ; Rise       ; CLK             ;
+; OUTPUT[*]   ; CLK        ; 3.652 ; 3.652 ; Rise       ; CLK             ;
+;  OUTPUT[0]  ; CLK        ; 3.664 ; 3.664 ; Rise       ; CLK             ;
+;  OUTPUT[1]  ; CLK        ; 3.679 ; 3.679 ; Rise       ; CLK             ;
+;  OUTPUT[2]  ; CLK        ; 3.768 ; 3.768 ; Rise       ; CLK             ;
+;  OUTPUT[3]  ; CLK        ; 3.880 ; 3.880 ; Rise       ; CLK             ;
+;  OUTPUT[4]  ; CLK        ; 3.679 ; 3.679 ; Rise       ; CLK             ;
+;  OUTPUT[5]  ; CLK        ; 3.802 ; 3.802 ; Rise       ; CLK             ;
+;  OUTPUT[6]  ; CLK        ; 3.771 ; 3.771 ; Rise       ; CLK             ;
+;  OUTPUT[7]  ; CLK        ; 3.764 ; 3.764 ; Rise       ; CLK             ;
+;  OUTPUT[8]  ; CLK        ; 3.908 ; 3.908 ; Rise       ; CLK             ;
+;  OUTPUT[9]  ; CLK        ; 3.803 ; 3.803 ; Rise       ; CLK             ;
+;  OUTPUT[10] ; CLK        ; 3.652 ; 3.652 ; Rise       ; CLK             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -0.078 ; 0.215 ; N/A      ; N/A     ; 1.208               ;
+;  CLK             ; -0.078 ; 0.215 ; N/A      ; N/A     ; 1.208               ;
+; Design-wide TNS  ; -0.078 ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  CLK             ; -0.078 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++------------------+--------+-------+----------+---------+---------------------+
+
+
++--------------------------------------------------------------------------+
+; Setup Times                                                              ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; EXT_DATA[*]  ; CLK        ; 3.854 ; 3.854 ; Rise       ; CLK             ;
+;  EXT_DATA[0] ; CLK        ; 3.589 ; 3.589 ; Rise       ; CLK             ;
+;  EXT_DATA[1] ; CLK        ; 3.633 ; 3.633 ; Rise       ; CLK             ;
+;  EXT_DATA[2] ; CLK        ; 3.854 ; 3.854 ; Rise       ; CLK             ;
+;  EXT_DATA[3] ; CLK        ; 3.834 ; 3.834 ; Rise       ; CLK             ;
+;  EXT_DATA[4] ; CLK        ; 3.487 ; 3.487 ; Rise       ; CLK             ;
+;  EXT_DATA[5] ; CLK        ; 3.664 ; 3.664 ; Rise       ; CLK             ;
+;  EXT_DATA[6] ; CLK        ; 3.666 ; 3.666 ; Rise       ; CLK             ;
+;  EXT_DATA[7] ; CLK        ; 0.376 ; 0.376 ; Rise       ; CLK             ;
+; START        ; CLK        ; 0.372 ; 0.372 ; Rise       ; CLK             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Hold Times                                                                 ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; EXT_DATA[*]  ; CLK        ; 0.375  ; 0.375  ; Rise       ; CLK             ;
+;  EXT_DATA[0] ; CLK        ; -1.696 ; -1.696 ; Rise       ; CLK             ;
+;  EXT_DATA[1] ; CLK        ; -1.821 ; -1.821 ; Rise       ; CLK             ;
+;  EXT_DATA[2] ; CLK        ; -1.904 ; -1.904 ; Rise       ; CLK             ;
+;  EXT_DATA[3] ; CLK        ; -1.886 ; -1.886 ; Rise       ; CLK             ;
+;  EXT_DATA[4] ; CLK        ; -1.718 ; -1.718 ; Rise       ; CLK             ;
+;  EXT_DATA[5] ; CLK        ; -1.759 ; -1.759 ; Rise       ; CLK             ;
+;  EXT_DATA[6] ; CLK        ; -1.771 ; -1.771 ; Rise       ; CLK             ;
+;  EXT_DATA[7] ; CLK        ; 0.375  ; 0.375  ; Rise       ; CLK             ;
+; START        ; CLK        ; 0.222  ; 0.222  ; Rise       ; CLK             ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; DONE        ; CLK        ; 6.671 ; 6.671 ; Rise       ; CLK             ;
+; OUTPUT[*]   ; CLK        ; 7.017 ; 7.017 ; Rise       ; CLK             ;
+;  OUTPUT[0]  ; CLK        ; 6.414 ; 6.414 ; Rise       ; CLK             ;
+;  OUTPUT[1]  ; CLK        ; 6.433 ; 6.433 ; Rise       ; CLK             ;
+;  OUTPUT[2]  ; CLK        ; 6.641 ; 6.641 ; Rise       ; CLK             ;
+;  OUTPUT[3]  ; CLK        ; 6.977 ; 6.977 ; Rise       ; CLK             ;
+;  OUTPUT[4]  ; CLK        ; 6.430 ; 6.430 ; Rise       ; CLK             ;
+;  OUTPUT[5]  ; CLK        ; 6.682 ; 6.682 ; Rise       ; CLK             ;
+;  OUTPUT[6]  ; CLK        ; 6.647 ; 6.647 ; Rise       ; CLK             ;
+;  OUTPUT[7]  ; CLK        ; 6.636 ; 6.636 ; Rise       ; CLK             ;
+;  OUTPUT[8]  ; CLK        ; 7.017 ; 7.017 ; Rise       ; CLK             ;
+;  OUTPUT[9]  ; CLK        ; 6.691 ; 6.691 ; Rise       ; CLK             ;
+;  OUTPUT[10] ; CLK        ; 6.397 ; 6.397 ; Rise       ; CLK             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; DONE        ; CLK        ; 3.744 ; 3.744 ; Rise       ; CLK             ;
+; OUTPUT[*]   ; CLK        ; 3.652 ; 3.652 ; Rise       ; CLK             ;
+;  OUTPUT[0]  ; CLK        ; 3.664 ; 3.664 ; Rise       ; CLK             ;
+;  OUTPUT[1]  ; CLK        ; 3.679 ; 3.679 ; Rise       ; CLK             ;
+;  OUTPUT[2]  ; CLK        ; 3.768 ; 3.768 ; Rise       ; CLK             ;
+;  OUTPUT[3]  ; CLK        ; 3.880 ; 3.880 ; Rise       ; CLK             ;
+;  OUTPUT[4]  ; CLK        ; 3.679 ; 3.679 ; Rise       ; CLK             ;
+;  OUTPUT[5]  ; CLK        ; 3.802 ; 3.802 ; Rise       ; CLK             ;
+;  OUTPUT[6]  ; CLK        ; 3.771 ; 3.771 ; Rise       ; CLK             ;
+;  OUTPUT[7]  ; CLK        ; 3.764 ; 3.764 ; Rise       ; CLK             ;
+;  OUTPUT[8]  ; CLK        ; 3.908 ; 3.908 ; Rise       ; CLK             ;
+;  OUTPUT[9]  ; CLK        ; 3.803 ; 3.803 ; Rise       ; CLK             ;
+;  OUTPUT[10] ; CLK        ; 3.652 ; 3.652 ; Rise       ; CLK             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 2118     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 2118     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 10    ; 10   ;
+; Unconstrained Input Port Paths  ; 33    ; 33   ;
+; Unconstrained Output Ports      ; 12    ; 12   ;
+; Unconstrained Output Port Paths ; 12    ; 12   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II TimeQuest Timing Analyzer
+    Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu May 02 17:02:06 2019
+Info: Command: quartus_sta Artificial_Neuron -c Artificial_Neuron
+Info: qsta_default_script.tcl version: #1
+Warning: Parallel compilation is not licensed and has been disabled
+Info: Low junction temperature is 0 degrees C
+Info: High junction temperature is 85 degrees C
+Info: Reading SDC File: 'Artificial_Neuron.sdc'
+Info: Analyzing Slow Model
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -0.078
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -0.078        -0.078 CLK 
+Info: Worst-case hold slack is 0.391
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.391         0.000 CLK 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is 1.208
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     1.208         0.000 CLK 
+Info: The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info: Started post-fitting delay annotation
+Warning: Found 12 output pins without output pin load capacitance assignment
+    Info: Pin "DONE" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OUTPUT[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OUTPUT[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OUTPUT[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OUTPUT[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OUTPUT[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OUTPUT[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OUTPUT[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OUTPUT[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OUTPUT[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OUTPUT[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "OUTPUT[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+Info: Delay annotation completed successfully
+Info: Worst-case setup slack is 3.788
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     3.788         0.000 CLK 
+Info: Worst-case hold slack is 0.215
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.215         0.000 CLK 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is 1.208
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     1.208         0.000 CLK 
+Info: The selected device family is not supported by the report_metastability command.
+Info: Design is not fully constrained for setup requirements
+Info: Design is not fully constrained for hold requirements
+Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 287 megabytes
+    Info: Processing ended: Thu May 02 17:02:08 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+
