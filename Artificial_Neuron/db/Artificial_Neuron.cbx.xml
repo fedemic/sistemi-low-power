@@ -1,6 +1,0 @@
-<?xml version="1.0" ?>
-<LOG_ROOT>
-	<PROJECT NAME="Artificial_Neuron">
-		<CBX_INST_ENTRY INSTANCE_NAME="|Artificial_Neuron|Generic_Memory:Mem_A|altsyncram:memory_rtl_0" CBX_FILE_NAME="altsyncram_utg1.tdf"/>
-	</PROJECT>
-</LOG_ROOT>
