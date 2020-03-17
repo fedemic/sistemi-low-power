@@ -1,0 +1,106 @@
+# //  ModelSim SE-64 6.5c Aug 27 2009 Linux 3.10.0-957.5.1.el7.x86_64
+# //
+# //  Copyright 1991-2009 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_0/setup/constants.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Compiling package constants
+./compile
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Compiling package constants
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package constants
+# -- Compiling entity iv
+# -- Compiling architecture behavioral of iv
+# -- Compiling configuration cfg_iv_behavioral
+# -- Loading entity iv
+# -- Loading architecture behavioral of iv
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package constants
+# -- Compiling entity nd2
+# -- Compiling architecture arch1 of nd2
+# -- Compiling architecture arch2 of nd2
+# -- Loading entity nd2
+# -- Compiling configuration cfg_nd2_arch1
+# -- Loading entity nd2
+# -- Loading architecture arch1 of nd2
+# -- Compiling configuration cfg_nd2_arch2
+# -- Loading entity nd2
+# -- Loading architecture arch2 of nd2
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package constants
+# -- Compiling entity mux21
+# -- Compiling architecture behavioral_1 of mux21
+# -- Compiling architecture behavioral_2 of mux21
+# -- Loading entity mux21
+# -- Compiling architecture behavioral_3 of mux21
+# -- Loading entity mux21
+# -- Compiling architecture structural of mux21
+# -- Loading entity mux21
+# -- Compiling configuration cfg_mux21_behavioral_1
+# -- Loading entity mux21
+# -- Loading architecture behavioral_1 of mux21
+# -- Compiling configuration cfg_mux21_behavioral_2
+# -- Loading entity mux21
+# -- Loading architecture behavioral_2 of mux21
+# -- Compiling configuration cfg_mux21_behavioral_3
+# -- Loading entity mux21
+# -- Loading architecture behavioral_3 of mux21
+# -- Compiling configuration cfg_mux21_structural
+# -- Loading entity mux21
+# -- Loading architecture structural of mux21
+# -- Loading entity iv
+# -- Loading entity nd2
+# -- Loading configuration cfg_iv_behavioral
+# -- Loading configuration cfg_nd2_arch2
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package constants
+# -- Compiling entity tbmux21
+# -- Compiling architecture test of tbmux21
+# -- Compiling configuration mux21test
+# -- Loading entity tbmux21
+# -- Loading architecture test of tbmux21
+# -- Loading entity mux21
+# -- Loading configuration cfg_mux21_behavioral_1
+# -- Loading configuration cfg_mux21_behavioral_2
+# -- Loading configuration cfg_mux21_behavioral_3
+# -- Loading configuration cfg_mux21_structural
+vsim -t 100ps work.mux21test
+# vsim -t 100ps work.mux21test 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.constants
+# Loading work.mux21test#1
+# Loading work.tbmux21(test)#1
+# Loading work.cfg_mux21_behavioral_1#1
+# Loading work.mux21(behavioral_1)#1
+# Loading work.cfg_mux21_behavioral_2#1
+# Loading work.mux21(behavioral_2)#1
+# Loading work.cfg_mux21_behavioral_3#1
+# Loading work.mux21(behavioral_3)#1
+# Loading work.cfg_mux21_structural#1
+# Loading work.mux21(structural)#1
+# Loading work.cfg_iv_behavioral#1
+# Loading work.iv(behavioral)#1
+# Loading work.cfg_nd2_arch2#1
+# Loading work.nd2(arch2)#1
+add wave *
+run 3ns
+run 10000ps
