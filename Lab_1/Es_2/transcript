@@ -1,0 +1,531 @@
+# //  ModelSim SE-64 6.5c Aug 27 2009 Linux 3.10.0-957.5.1.el7.x86_64
+# //
+# //  Copyright 1991-2009 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/fa.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity fa
+# -- Compiling architecture behavioral of fa
+# -- Compiling configuration cfg_fa_behavioral
+# -- Loading entity fa
+# -- Loading architecture behavioral of fa
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/rca.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity rca
+# -- Compiling architecture structural of rca
+# -- Compiling configuration cfg_rca_structural
+# -- Loading entity rca
+# -- Loading architecture structural of rca
+# -- Loading entity fa
+# -- Loading configuration cfg_fa_behavioral
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/tb_rca.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity tbrca
+# -- Compiling architecture test of tbrca
+# Load canceled
+vsim -t 100ps -novopt work.tbrca
+# vsim -t 100ps -novopt work.tbrca 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.tbrca(test)
+# Loading work.tbrca(test)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.rca(structural)
+# Loading work.rca(structural)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.fa(behavioral)
+# Loading work.fa(behavioral)
+# ** Warning: (vsim-3473) Component instance "uut : lfsr16" is not bound.
+#    Time: 0 ps  Iteration: 0  Region: /tbrca  File: /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/tb_rca.vhd
+add wave *
+power add *
+run 10ns
+power report -file power_report/10_ns
+quit -sim
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/fa.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity fa
+# -- Compiling architecture behavioral of fa
+# -- Compiling configuration cfg_fa_behavioral
+# -- Loading entity fa
+# -- Loading architecture behavioral of fa
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/rca.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity rca
+# -- Compiling architecture structural of rca
+# -- Compiling configuration cfg_rca_structural
+# -- Loading entity rca
+# -- Loading architecture structural of rca
+# -- Loading entity fa
+# -- Loading configuration cfg_fa_behavioral
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/tb_rca.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity tbrca
+# -- Compiling architecture test of tbrca
+vsim -t 100ps -novopt work.tbrca
+# vsim -t 100ps -novopt work.tbrca 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.tbrca(test)
+# Loading work.tbrca(test)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.rca(structural)
+# Loading work.rca(structural)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.fa(behavioral)
+# Loading work.fa(behavioral)
+# ** Warning: (vsim-3473) Component instance "uut : lfsr16" is not bound.
+#    Time: 0 ps  Iteration: 0  Region: /tbrca  File: /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/tb_rca.vhd
+add wave *
+power add *
+run 10ns
+quit -sim
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/fa.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity fa
+# -- Compiling architecture behavioral of fa
+# -- Compiling configuration cfg_fa_behavioral
+# -- Loading entity fa
+# -- Loading architecture behavioral of fa
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/lfsr.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity lfsr16
+# -- Compiling architecture rtl of lfsr16
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/rca.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity rca
+# -- Compiling architecture structural of rca
+# -- Compiling configuration cfg_rca_structural
+# -- Loading entity rca
+# -- Loading architecture structural of rca
+# -- Loading entity fa
+# -- Loading configuration cfg_fa_behavioral
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/tb_rca.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity tbrca
+# -- Compiling architecture test of tbrca
+vsim -t 100ps -novopt work.tbrca
+# vsim -t 100ps -novopt work.tbrca 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.tbrca(test)
+# Loading work.tbrca(test)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.rca(structural)
+# Loading work.rca(structural)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.fa(behavioral)
+# Loading work.fa(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.lfsr16(rtl)
+# Loading work.lfsr16(rtl)
+add wave *
+power add *
+run 10ns
+run 90ns
+power report -file power_report/100_ns
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/fa.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity fa
+# -- Compiling architecture behavioral of fa
+# -- Compiling configuration cfg_fa_behavioral
+# -- Loading entity fa
+# -- Loading architecture behavioral of fa
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/lfsr.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity lfsr16
+# -- Compiling architecture rtl of lfsr16
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/rca.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity rca
+# -- Compiling architecture structural of rca
+# -- Compiling configuration cfg_rca_structural
+# -- Loading entity rca
+# -- Loading architecture structural of rca
+# -- Loading entity fa
+# -- Loading configuration cfg_fa_behavioral
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/tb_rca.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity tbrca
+# -- Compiling architecture test of tbrca
+restart
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.tbrca(test)
+# Loading work.tbrca(test)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.rca(structural)
+# Loading work.rca(structural)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.fa(behavioral)
+# Loading work.fa(behavioral)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.lfsr16(rtl)
+# Loading work.lfsr16(rtl)
+power add *
+run 100ns
+power report -file power_report/100_ns_carry_delay
+quit -sim
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/fa.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity fa
+# -- Compiling architecture behavioral of fa
+# -- Compiling configuration cfg_fa_behavioral
+# -- Loading entity fa
+# -- Loading architecture behavioral of fa
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/lfsr.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity lfsr16
+# -- Compiling architecture rtl of lfsr16
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/rca.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity rca
+# -- Compiling architecture structural of rca
+# -- Compiling configuration cfg_rca_structural
+# -- Loading entity rca
+# -- Loading architecture structural of rca
+# -- Loading entity fa
+# -- Loading configuration cfg_fa_behavioral
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/tb_rca.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity tbrca
+# -- Compiling architecture test of tbrca
+vsim -t 100ps -novopt work.tbrca
+# vsim -t 100ps -novopt work.tbrca 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.tbrca(test)
+# Loading work.tbrca(test)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.rca(structural)
+# Loading work.rca(structural)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.fa(behavioral)
+# Loading work.fa(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.lfsr16(rtl)
+# Loading work.lfsr16(rtl)
+add wave *
+power add *
+run 100ns
+power report -file power_report/100_ns_carry_delay
+quit -sim
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/fa.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity fa
+# -- Compiling architecture behavioral of fa
+# -- Compiling configuration cfg_fa_behavioral
+# -- Loading entity fa
+# -- Loading architecture behavioral of fa
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/lfsr.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity lfsr16
+# -- Compiling architecture rtl of lfsr16
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/rca.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity rca
+# -- Compiling architecture structural of rca
+# -- Compiling configuration cfg_rca_structural
+# -- Loading entity rca
+# -- Loading architecture structural of rca
+# -- Loading entity fa
+# -- Loading configuration cfg_fa_behavioral
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/tb_rca.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity tbrca
+# -- Compiling architecture test of tbrca
+vsim -t 100ps -novopt work.tbrca
+# vsim -t 100ps -novopt work.tbrca 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.tbrca(test)
+# Loading work.tbrca(test)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.rca(structural)
+# Loading work.rca(structural)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.fa(behavioral)
+# Loading work.fa(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.lfsr16(rtl)
+# Loading work.lfsr16(rtl)
+add wave *
+power add *
+run 100ns
+power report -file power_report/100_ns_no carry_delay
+# ** Error: (vsim-4006) Unexpected argument 'carry_delay'.
+# Usage: power report [-all] [-file <filename>] [-noheader] [-bsaif <filename>]
+power report -file power_report/100_ns_no_carry_delay
+power report -file power_report/100_ns_no_carry_delay
+quit -sim
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/fa.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity fa
+# -- Compiling architecture behavioral of fa
+# -- Compiling configuration cfg_fa_behavioral
+# -- Loading entity fa
+# -- Loading architecture behavioral of fa
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/lfsr.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity lfsr16
+# -- Compiling architecture rtl of lfsr16
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/rca.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity rca
+# -- Compiling architecture structural of rca
+# -- Compiling configuration cfg_rca_structural
+# -- Loading entity rca
+# -- Loading architecture structural of rca
+# -- Loading entity fa
+# -- Loading configuration cfg_fa_behavioral
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/tb_rca.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity tbrca
+# -- Compiling architecture test of tbrca
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/fa.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity fa
+# -- Compiling architecture behavioral of fa
+# -- Compiling configuration cfg_fa_behavioral
+# -- Loading entity fa
+# -- Loading architecture behavioral of fa
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/lfsr.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity lfsr16
+# -- Compiling architecture rtl of lfsr16
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/rca.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity rca
+# -- Compiling architecture structural of rca
+# -- Compiling configuration cfg_rca_structural
+# -- Loading entity rca
+# -- Loading architecture structural of rca
+# -- Loading entity fa
+# -- Loading configuration cfg_fa_behavioral
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/tb_rca.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity tbrca
+# -- Compiling architecture test of tbrca
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/fa.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity fa
+# -- Compiling architecture behavioral of fa
+# -- Compiling configuration cfg_fa_behavioral
+# -- Loading entity fa
+# -- Loading architecture behavioral of fa
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/lfsr.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity lfsr16
+# -- Compiling architecture rtl of lfsr16
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/rca.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity rca
+# -- Compiling architecture structural of rca
+# -- Compiling configuration cfg_rca_structural
+# -- Loading entity rca
+# -- Loading architecture structural of rca
+# -- Loading entity fa
+# -- Loading configuration cfg_fa_behavioral
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/tb_rca.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity tbrca
+# -- Compiling architecture test of tbrca
+vsim -t 100ps -novopt work.tbrca
+# vsim -t 100ps -novopt work.tbrca 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.tbrca(test)
+# Loading work.tbrca(test)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.rca(structural)
+# Loading work.rca(structural)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.fa(behavioral)
+# Loading work.fa(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.lfsr16(rtl)
+# Loading work.lfsr16(rtl)
+add wave *
+power add *
+run 200ns
+quit -sim
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/fa.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity fa
+# -- Compiling architecture behavioral of fa
+# -- Compiling configuration cfg_fa_behavioral
+# -- Loading entity fa
+# -- Loading architecture behavioral of fa
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/lfsr.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity lfsr16
+# -- Compiling architecture rtl of lfsr16
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/rca.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity rca
+# -- Compiling architecture structural of rca
+# -- Compiling configuration cfg_rca_structural
+# -- Loading entity rca
+# -- Loading architecture structural of rca
+# -- Loading entity fa
+# -- Loading configuration cfg_fa_behavioral
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/tb_rca.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity tbrca
+# -- Compiling architecture test of tbrca
+vsim -t 10ps -novopt work.tbrca
+# vsim -t 10ps -novopt work.tbrca 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.tbrca(test)
+# Loading work.tbrca(test)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.rca(structural)
+# Loading work.rca(structural)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.fa(behavioral)
+# Loading work.fa(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.lfsr16(rtl)
+# Loading work.lfsr16(rtl)
+add wave *
+power add *
+run 200ns
+power report -file power_report/200_ns_sim
+quit -sim
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/tb_rca2.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity tbrca
+# -- Compiling architecture test of tbrca
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/rca.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity rca
+# -- Compiling architecture structural of rca
+# -- Compiling configuration cfg_rca_structural
+# -- Loading entity rca
+# -- Loading architecture structural of rca
+# -- Loading entity fa
+# -- Loading configuration cfg_fa_behavioral
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/lfsr.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity lfsr16
+# -- Compiling architecture rtl of lfsr16
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/fa.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity fa
+# -- Compiling architecture behavioral of fa
+# -- Compiling configuration cfg_fa_behavioral
+# -- Loading entity fa
+# -- Loading architecture behavioral of fa
+vsim -t 10ps -novopt work.tbrca
+# vsim -t 10ps -novopt work.tbrca 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.tbrca(test)
+# Loading work.tbrca(test)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.rca(structural)
+# Loading work.rca(structural)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/work.fa(behavioral)
+# Loading work.fa(behavioral)
+add wave *
+power add *
+run 200ns

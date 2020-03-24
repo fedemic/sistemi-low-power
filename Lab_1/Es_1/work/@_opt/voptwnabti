@@ -1,0 +1,72 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/lp20.9/Desktop/low_power_2020/Lab_1/Es_1
+T_opt
+Z1 V^=_IKb[o_cA7ZFmzI[jjj1
+Z2 04 6 4 work tbprob test 1
+Z3 =1-52540093200d-5e79bbfb-588f9-6ddc
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 n@_opt
+Z6 OL;O;6.5c;42
+Elfsr16
+Z7 w1584556515
+Z8 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z9 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z10 8/home/lp20.9/Desktop/low_power_2020/Lab_1/Es_1/lfsr.vhd
+Z11 F/home/lp20.9/Desktop/low_power_2020/Lab_1/Es_1/lfsr.vhd
+l0
+L9
+Z12 VJOKMFfDBS_<;fE^1@c@?73
+Z13 OL;C;6.5c;42
+32
+Z14 o-work work
+Z15 tExplicit 1
+Z16 !s100 b;8@OZ1eTg^V8UP<l1oG82
+Artl
+R8
+R9
+Z17 DEx4 work 6 lfsr16 0 22 JOKMFfDBS_<;fE^1@c@?73
+l22
+L20
+Z18 VR2>hQNAJkNQiIj4Y=57853
+R13
+32
+Z19 Mx2 4 ieee 14 std_logic_1164
+Z20 Mx1 4 ieee 15 std_logic_arith
+R14
+R15
+Z21 !s100 E;`GmPL31IaSmPSZjZYm@3
+Etbprob
+R7
+Z22 DPx17 __model_tech/ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z23 DPx17 __model_tech/ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z24 DPx17 __model_tech/ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+32
+Z25 8/home/lp20.9/Desktop/low_power_2020/Lab_1/Es_1/tb_prob.vhd
+Z26 F/home/lp20.9/Desktop/low_power_2020/Lab_1/Es_1/tb_prob.vhd
+l0
+L6
+Z27 V@a8Jgz5;1Q;2TDEW2@MbL0
+R13
+R14
+R15
+Z28 !s100 3=hPmK45VZ;ga6E6mGP@:2
+Atest
+DEx51 /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_1/work 6 lfsr16 0 22 JOKMFfDBS_<;fE^1@c@?73
+R22
+R23
+R24
+DEx51 /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_1/work 6 tbprob 0 22 @a8Jgz5;1Q;2TDEW2@MbL0
+32
+Mx3 17 __model_tech/ieee 14 std_logic_1164
+Mx2 17 __model_tech/ieee 11 numeric_std
+Mx1 17 __model_tech/ieee 15 std_logic_arith
+l24
+L9
+Z29 VmHX>5VKE0]=dDl?Yzj6PU3
+R13
+R14
+R15
+Z30 !s100 OYKEa36P3b>[PPoBGAle83

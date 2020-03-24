@@ -1,0 +1,149 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2
+Ccfg_fa_behavioral
+abehavioral
+efa
+DAx4 work 2 fa 10 behavioral 22 :=D^j2_IDa4Hee^]DOX@m2
+Z1 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z2 DEx4 work 2 fa 0 22 zWO1M[UQeRGbPSJ3i[olh3
+Z3 w1584556515
+Z4 8/home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/fa.vhd
+Z5 F/home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/fa.vhd
+l0
+L24
+V13Ween<TWOfRP:WAR4eMl3
+Z6 OL;C;6.5c;42
+32
+Z7 Mx1 4 ieee 14 std_logic_1164
+Z8 o-work work
+Z9 tExplicit 1
+!s100 N8jaSFH>R4g@BRL@OEIF?2
+Ccfg_rca_structural
+astructural
+erca
+R2
+DCx4 work 17 cfg_fa_behavioral 0 22 13Ween<TWOfRP:WAR4eMl3
+DAx4 work 3 rca 10 structural 22 cIZkEK=5ed[fO7bZ?X^kY2
+R1
+Z10 DEx4 work 3 rca 0 22 ^A3P0D1hW=lA`ni0gf^W^0
+R3
+Z11 8/home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/rca.vhd
+Z12 F/home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/rca.vhd
+l0
+L43
+VEEYXQSVETQdFZb0j]RIA33
+R6
+32
+R7
+R8
+R9
+!s100 CO_=31C;:?OVnX8bTC5LE0
+Efa
+R3
+R1
+R4
+R5
+l0
+L4
+VzWO1M[UQeRGbPSJ3i[olh3
+R6
+32
+R8
+R9
+!s100 f3OXb<b=8oJ?=6agDk5k?0
+Abehavioral
+R1
+R2
+32
+R7
+l16
+L14
+V:=D^j2_IDa4Hee^]DOX@m2
+R6
+R8
+R9
+!s100 hVPSNOF<;T`_^kGBHDgCF1
+Elfsr16
+R3
+Z13 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+R1
+Z14 8/home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/lfsr.vhd
+Z15 F/home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/lfsr.vhd
+l0
+L9
+VJOKMFfDBS_<;fE^1@c@?73
+R6
+32
+R8
+R9
+!s100 b;8@OZ1eTg^V8UP<l1oG82
+Artl
+R13
+R1
+DEx4 work 6 lfsr16 0 22 JOKMFfDBS_<;fE^1@c@?73
+l22
+L20
+VR2>hQNAJkNQiIj4Y=57853
+R6
+32
+Z16 Mx2 4 ieee 14 std_logic_1164
+Z17 Mx1 4 ieee 15 std_logic_arith
+R8
+R9
+!s100 E;`GmPL31IaSmPSZjZYm@3
+Erca
+R3
+R1
+R11
+R12
+l0
+L4
+V^A3P0D1hW=lA`ni0gf^W^0
+R6
+32
+R8
+R9
+!s100 X<MAgSJOC4_e_D=EhdHj61
+Astructural
+R1
+R10
+32
+R7
+l29
+L14
+VcIZkEK=5ed[fO7bZ?X^kY2
+R6
+R8
+R9
+!s100 l`f`_b<8RBl4NjI>iP:n`0
+Etbrca
+R3
+Z18 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+R1
+Z19 8/home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/tb_rca2.vhd
+Z20 F/home/lp20.9/Desktop/low_power_2020/Lab_1/Es_2/tb_rca2.vhd
+l0
+L5
+Va]V;6aeMD=log:>64F;;;1
+R6
+32
+R8
+R9
+!s100 ><[R?8EI:3[_?OLbINKnZ3
+Atest
+R18
+R1
+DEx4 work 5 tbrca 0 22 a]V;6aeMD=log:>64F;;;1
+32
+R16
+Mx1 4 ieee 11 numeric_std
+l27
+L8
+VW9OP^=RY;K]g=7MUBGfcg0
+R6
+R8
+R9
+!s100 Oo4z@0noQVhzQQ0eaXS7S1

@@ -1,0 +1,121 @@
+# //  ModelSim SE-64 6.5c Aug 27 2009 Linux 3.10.0-957.5.1.el7.x86_64
+# //
+# //  Copyright 1991-2009 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Load canceled
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_1/tb_prob.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package std_logic_arith
+# -- Compiling entity tbprob
+# -- Compiling architecture test of tbprob
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_1/lfsr.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity lfsr16
+# -- Compiling architecture rtl of lfsr16
+vsim -t 100ps work.tbprob
+# vsim -t 100ps work.tbprob 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.tbprob(test)#1
+power add *
+add wave *
+run 100ns
+power report
+# 
+# Power Report Interval
+# 100000 ps
+# 
+# Power Report                        Node     Tc     Ti    Time At 1    Time At 0    Time At X
+# ---------------------------------------------------------------------------------------------
+#                              /tbprob/clk    200      0     50000 ps     50000 ps         0 ps
+#                            /tbprob/reset      1      0      1000 ps     99000 ps         0 ps
+#                               /tbprob/ld      1      0      2000 ps     98000 ps         0 ps
+#                         /tbprob/dout(15)     51      0     50500 ps     49500 ps         0 ps
+#                         /tbprob/dout(14)     50      0     50000 ps     50000 ps         0 ps
+#                         /tbprob/dout(13)     49      0     49500 ps     50500 ps         0 ps
+#                         /tbprob/dout(12)     48      0     49000 ps     51000 ps         0 ps
+#                         /tbprob/dout(11)     47      0     48500 ps     51500 ps         0 ps
+#                         /tbprob/dout(10)     46      0     48000 ps     52000 ps         0 ps
+#                          /tbprob/dout(9)     46      0     48000 ps     52000 ps         0 ps
+#                          /tbprob/dout(8)     46      0     48000 ps     52000 ps         0 ps
+#                          /tbprob/dout(7)     45      0     47500 ps     52500 ps         0 ps
+#                          /tbprob/dout(6)     45      0     46500 ps     53500 ps         0 ps
+#                          /tbprob/dout(5)     44      0     46000 ps     54000 ps         0 ps
+#                          /tbprob/dout(4)     44      0     46000 ps     54000 ps         0 ps
+#                          /tbprob/dout(3)     44      0     46000 ps     54000 ps         0 ps
+#                          /tbprob/dout(2)     43      0     45500 ps     54500 ps         0 ps
+#                          /tbprob/dout(1)     42      0     45000 ps     55000 ps         0 ps
+#                          /tbprob/dout(0)     43      0     47500 ps     52500 ps         0 ps
+# ---------------------------------------------------------------------------------------------
+# 
+power report -file tc_200
+restart
+run 10ns
+restart
+power add *
+run 10ns
+power report -file power_report/tc_20
+restart
+run 1000ns
+power report -file power_report/tc_2000
+# ** Warning: (vsim-3315) Power checking is not enabled.
+# 
+restart
+power add *
+run 1000ns
+power report -file power_report/tc_2000
+restart
+power add *
+run 10000ns
+power report -file power_report/tc_20000
+restart
+power add *
+run 100000ns
+power report -file power_report/tc_200000
+restart
+run 10ns
+vsim -t 100ps -novopt work.tbprob
+# vsim -t 100ps -novopt work.tbprob 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_1/work.tbprob(test)
+# Loading work.tbprob(test)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_1/work.lfsr16(rtl)
+# Loading work.lfsr16(rtl)
+add wave *
+power add *
+run 10ns
+power report -file power_report/tc_20
+restart
+power add *
+run 100ns
+power report -file power_report/tc_200
+restart
+power add *
+run 1000ns
+power report -file power_report/tc_2000
+restart
+power add *
+run 10000ns
+power report -file power_report/tc_20000
+restart
+power add *
+run 100000ns
+power report -file power_report/tc_200000
