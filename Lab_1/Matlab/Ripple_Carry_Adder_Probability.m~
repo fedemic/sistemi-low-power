@@ -21,12 +21,11 @@ for i = 1:8
     % Calcol carry in dello stadio successivo
     P_Cout = P_A(i)*P_B(i)*(1-P_Cin(i)) + P_A(i)*P_Cin(i)*(1-P_B(i)) + P_B(i)*P_Cin(i)*(1-P_A(i)) + P_A(i)*P_B(i)*P_Cin(i);
     P_Cin(i+1) = P_Cout;    
-    A_Cout(i) = 2*P_Cout*(1-P_Cout);
+    A_Cout(i) = 2*P_Cout*(1-
     
 end
 
 % Risultati
 P_S
 A_S
-P_Cin
-A_Cout
+
