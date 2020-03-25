@@ -1,0 +1,29 @@
+# //  ModelSim SE-64 6.5c Aug 27 2009 Linux 3.10.0-957.5.1.el7.x86_64
+# //
+# //  Copyright 1991-2009 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_4/vhdlsim/tb_mux21_glitch.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tbmux21bis
+# -- Compiling architecture test of tbmux21bis
+# -- Compiling configuration mux21bistest
+# -- Loading entity tbmux21bis
+# -- Loading architecture test of tbmux21bis
+vsim -t 10ps -novopt work.tbmux21bis
+# vsim -t 10ps -novopt work.tbmux21bis 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_4/vhdlsim/work.tbmux21bis(test)
+# Loading work.tbmux21bis(test)
+add wave *
+power add *
+run 5ns
+power report -file power_report.txt
