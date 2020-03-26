@@ -1,0 +1,114 @@
+# //  ModelSim SE-64 6.5c Aug 27 2009 Linux 3.10.0-957.5.1.el7.x86_64
+# //
+# //  Copyright 1991-2009 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_5/vhdlsim/ha.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity ha
+# -- Compiling architecture behavioral of ha
+# -- Compiling configuration cfg_ha_behavioral
+# -- Loading entity ha
+# -- Loading architecture behavioral of ha
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_5/vhdlsim/fd.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity fd
+# -- Compiling architecture pippo of fd
+# -- Compiling architecture pluto of fd
+# -- Loading entity fd
+# -- Compiling configuration cfg_fd_pippo
+# -- Loading entity fd
+# -- Loading architecture pippo of fd
+# -- Compiling configuration cfg_fd_pluto
+# -- Loading entity fd
+# -- Loading architecture pluto of fd
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_5/vhdlsim/counter.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity count
+# -- Compiling architecture structural of count
+# -- Compiling configuration cfg_count_structural
+# -- Loading entity count
+# -- Loading architecture structural of count
+# -- Loading entity ha
+# -- Loading entity fd
+# -- Loading configuration cfg_ha_behavioral
+# -- Loading configuration cfg_fd_pluto
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_5/vhdlsim/tb_counter.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity testcount
+# -- Compiling architecture test of testcount
+# -- Compiling configuration cfg_testcount
+# -- Loading entity testcount
+# -- Loading architecture test of testcount
+# -- Loading entity count
+# -- Loading configuration cfg_count_structural
+vsim -t 10ps -novopt work.testcount
+# vsim -t 10ps -novopt work.testcount 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_5/vhdlsim/work.testcount(test)
+# Loading work.testcount(test)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_5/vhdlsim/work.count(structural)
+# Loading work.count(structural)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_5/vhdlsim/work.ha(behavioral)
+# Loading work.ha(behavioral)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_5/vhdlsim/work.fd(pluto)
+# Loading work.fd(pluto)
+power add /testcount/UCOUNTER1/*
+add wave *
+run 520 ns
+power report -file power_report.txt
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_5/vhdlsim/tb_counter.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity testcount
+# -- Compiling architecture test of testcount
+# -- Compiling configuration cfg_testcount
+# -- Loading entity testcount
+# -- Loading architecture test of testcount
+# -- Loading entity count
+# -- Loading configuration cfg_count_structural
+quit -sim
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_5/vhdlsim/tb_counter.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity testcount
+# -- Compiling architecture test of testcount
+# -- Compiling configuration cfg_testcount
+# -- Loading entity testcount
+# -- Loading architecture test of testcount
+# -- Loading entity count
+# -- Loading configuration cfg_count_structural
+vsim -t 10ps -novopt work.testcount
+# vsim -t 10ps -novopt work.testcount 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_1/Es_5/vhdlsim/work.testcount(test)
+# Loading work.testcount(test)
+# Loading work.count(structural)
+# Loading work.ha(behavioral)
+# Loading work.fd(pluto)
+add wave *
+power add /testcount/UCOUNTER1/*
+run 30 ns
+power report -file power_report_clk_corto.txt
