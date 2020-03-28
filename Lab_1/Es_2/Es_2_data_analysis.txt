@@ -22,14 +22,14 @@ A_S = 0.5 per tutti i FA
 P_S = 0.5 per tutti i FA
 A_S = 0.5 per tutti i FA
 
-Commento: Se P_Cin = 0.5 l'attività dell'uscita è indipendente dalla 
+Commento: Se P_Cin = 0.5 l'attività dell'uscita è indipendente dalla
 probabilità degli ingressi
 
 3) Test RCA con delay variabili, 200ns, Tc = 400
 
 		DRCAS = 0.25ns		DRCAC = 0.25ns
 		DRCAC = 0ns			DRCAS = 0.25ns
-		
+
 A_S(7)	0.42				1.25
 A_S(6)	0.51				1.21
 A_S(5)	0.525				1.065
@@ -41,14 +41,12 @@ A_S(0)	0.46				0.46
 
 A_Co	0.615				0.615
 
-A(S)	3.845				6.92
+A(S)	3.845				7.925
 
 Commento: si nota che gli ingressi provenienti dal generatore
 sono quasi equiprobabili, quindi ci si aspetta di avvicinanarci
 ai risultati calcolati con la teoria, ma non è così. Un ritardo
 sul calcolo del carry porta infatti, come sottolinea la simulazione,
 a causare commutazioni spurie (glitch) che generano un'attività
-dell'uscita anche maggiore di 1 in alcuni casi. E' molto evidente 
+dell'uscita anche maggiore di 1 in alcuni casi. E' molto evidente
 inoltre dal calcolo dell'attività complessiva
-
-
