@@ -25,6 +25,8 @@ for i = 1:8
     
 end
 
+Total_A_S = sum(A_S);
+
 %% dati simulati
 clk_cycles = 200;
 
