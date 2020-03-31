@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.10)  25 MAR 2020 22:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.10)  30 MAR 2020 22:23
 entering extended mode
 **./master.tex
 (master.tex
@@ -2440,7 +2440,7 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 230--231
  
 Here is how much of TeX's memory you used:
  43 strings out of 481556
- 626 string characters out of 2914337
+ 680 string characters out of 2914337
  242180 words of memory out of 3000000
  15387 multiletter control sequences out of 15000+200000
  532814 words of font info for 26 fonts, out of 3000000 for 9000
