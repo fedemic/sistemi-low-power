@@ -1,0 +1,151 @@
+\documentclass[12pt,  english, makeidx, a4paper, titlepage, oneside]{article}
+\usepackage{babel}
+\usepackage{fancyhdr}
+\usepackage{makeidx}
+\usepackage{titlesec}
+\usepackage{listings} 
+\newenvironment{listato}{\footnotesize}
+                        {\normalsize }
+\textwidth 16cm
+\textheight 23cm
+\topmargin -1.5cm
+\oddsidemargin -0cm
+\linespread{1.2}
+
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\rhead{\thepage}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+%%%%modified for listing code
+\usepackage{color}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\usepackage{hyperref}
+\usepackage{booktabs} 
+\usepackage{colortbl} 
+\usepackage{xcolor} 
+\usepackage{xfrac}
+
+
+
+\usepackage{float} %%to fix images
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{subfloat}
+\usepackage{caption}
+%SI reference
+\usepackage{siunitx}
+
+%images on tabular in correct way
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{mwe}
+\usepackage{graphbox}
+
+%to draw electrical circuits
+\usepackage{tikz}
+\usepackage[americanresistors,americaninductors]{circuitikz}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titleformat{\chapter}[display]
+{\normalfont\Large\filcenter\sffamily}
+{\titlerule[0.5pt]%
+\vspace{1pt}
+\titlerule
+\vspace{1pc}
+\LARGE\MakeUppercase{\chaptertitlename} \thechapter
+}
+{1pc}
+{\titlerule
+\vspace{1pc}
+\Huge}
+
+\makeindex
+
+\begin{document}
+\begin{titlepage}
+\centerline{\Large\textbf{Signal processing} }
+\vspace{0.3cm}
+\centerline{\Large\textbf{and} }
+\vspace{0.3cm}
+\centerline{\Large\textbf{Wireless trasmission lab} }
+\bigskip
+\bigskip
+\bigskip
+\centerline{
+\includegraphics[width=4cm]{./image/polito.png}}  
+\vspace{1cm}
+\centerline{\LARGE Politecnico di Torino}
+%\centerline{\Large III Facolt\`a di Ingegneria}
+\vspace{2cm}
+\centerline{\Huge\sf Wireless relation }
+\bigskip
+\bigskip
+
+\vspace{2cm}
+\centerline{\Large Colonna Antonio 277965}
+\vspace{0.5cm}
+\centerline{\Large  Giuffrida Luigi 278039 }
+\vspace{0.5cm}
+\centerline{\Large Spanna Francesca 278040}
+\vspace{0.5cm}
+\centerline{\Large Simonetti Marco 277994}
+\vspace{0.5cm}
+\centerline{\Large GROUP-10}
+\vspace{3.25cm}
+\centerline{\Large ACADEMIC YEAR: 2019-2020}
+\end{titlepage}
+
+\tableofcontents
+
+\pagebreak
+
+\section{Introduction}
+Wireless transmission is experimental course based on the experience improved in laboratory.
+In the first part theoretical topics were addressed with regard to:
+\begin{itemize}
+\item Overview on the main components of the physical layer of broadband fixed and mobile radio-communication standards.
+\item Structure and main functions of conventional and software defined digital radio transceivers.
+\item Software defined radio (SDR) platforms.
+\end{itemize}
+
+Instead, the second and most important part, is based on
+\begin{itemize}
+\item Implementation on SDR platform (Ettus B210 and National Instruments USRP-2901) of some common transceiver blocks suitable for most wireless communication standards (WiFi, LTE, DVB)
+\item Test and measurements of the performance of some implemented receiver algorithms
+\end{itemize}
+
+The main purpose in laboratory is to implement on suitable hardware/software platforms some of the blocks of the studied wireless communication standards.
+To do this, the software "Visual Studio" based on the C++ language has been used and the library, developed by the Polytechnic of Turin, called "TOPCOM++" has been used.
+
+\section{First laboratory}
+Running a simulation whit TOPCOM++ implies the usage of different classes and fundamental blocks that implements the behaviour of a real communication system; the easiest one is composed by a transmitter, a channel and a receiver, in particular the channel, to make the simulation more realistic adds a white gaussian noise to the signal the is running through 
+
+
+\section{Second laboratory}
+\subsection{Goals}
+Purpose of this Lab is to analyze the system by producing plots with different parameters.
+The parameters th
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\columnwidth]{image/without_filter.PNG}
+    \caption*{System without TX and RX filters}
+    \label{fig:without_filter}
+\end{figure}
+
+\end{document}
