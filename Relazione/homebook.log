@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.31)  31 MAR 2020 11:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.31)  31 MAR 2020 12:16
 entering extended mode
 **./homebook.tex
 (homebook.tex
@@ -413,16 +413,29 @@ File: ./img/Lab_1/Es_2/Glitch.png Graphic file (type png)
 <use ./img/Lab_1/Es_2/Glitch.png>
 Package pdftex.def Info: ./img/Lab_1/Es_2/Glitch.png  used on input line 282.
 (pdftex.def)             Requested size: 170.71652pt x 92.22955pt.
- [4 <./img/Lab_1/Es_2/Glitch.png>]) [5] (homebook.aux)
+<./img/Lab_1/Es_2/Glitch_worst_case.png, id=36, 579.66562pt x 229.60782pt>
+File: ./img/Lab_1/Es_2/Glitch_worst_case.png Graphic file (type png)
+<use ./img/Lab_1/Es_2/Glitch_worst_case.png>
+Package pdftex.def Info: ./img/Lab_1/Es_2/Glitch_worst_case.png  used on input 
+line 286.
+(pdftex.def)             Requested size: 170.71652pt x 67.6216pt.
+ [4 <./img/Lab_1/Es_2/Glitch.png> <./img/Lab_1/Es_2/Glitch_worst_case.png>]
+<./img/Lab_1/Es_3/Full_adder.png, id=42, 768.62157pt x 194.97844pt>
+File: ./img/Lab_1/Es_3/Full_adder.png Graphic file (type png)
+<use ./img/Lab_1/Es_3/Full_adder.png>
+Package pdftex.def Info: ./img/Lab_1/Es_3/Full_adder.png  used on input line 32
+3.
+(pdftex.def)             Requested size: 170.71652pt x 43.30595pt.
+ [5 <./img/Lab_1/Es_3/Full_adder.png>]) [6] (homebook.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6002 strings out of 480934
- 88198 string characters out of 2899917
- 524181 words of memory out of 3000000
- 21796 multiletter control sequences out of 15000+200000
+ 6016 strings out of 480934
+ 88641 string characters out of 2899917
+ 525181 words of memory out of 3000000
+ 21807 multiletter control sequences out of 15000+200000
  538013 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  50i,11n,51p,385b,369s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -443,9 +456,9 @@ Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/m
 eeti/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
 b><C:/Users/meeti/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmsy7.pfb>
-Output written on homebook.pdf (7 pages, 490712 bytes).
+Output written on homebook.pdf (8 pages, 522590 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
+ 102 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

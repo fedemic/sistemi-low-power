@@ -281,24 +281,57 @@ Tale risultato è particolarmente evidente considerando la Esw totale dei due ca
 
 \includegraphics[width=6cm]{./img/Lab_1/Es_2/Glitch.png} 
 
+E' possibile notare, attraverso le waveforms, la presenza di commutazioni indesiderate nel secondo caso.
+ 
+\includegraphics[width=6cm]{./img/Lab_1/Es_2/Glitch_worst_case.png}
 
+COMMENTO SU WORST CASE PER COMMUTAZIONI
 
+\section{Sintesi e analisi di potenza di un RCA}
+
+E' possibile effettuare una stima di potenza avanzata attraverso la piattaforma Synopsys. 
+Partendo infatti dalla descrizione VHDL del RCA fornito, il software è in grado di compiere una sintesi ottimizzata e valutare parametri del circuito basandosi su una libreria di celle caratterizzate dal punto di vista di area, consumi e ritardi.
+
+Per poter stimare la potenza dinamica è necessario conoscere la frequenza di lavoro del circuito, ottenuta valutando il percorso combinatorio con ritardo maggiore: è possibile valutare tale parametro del circuito attraverso un timing report.
+Il ritardo massimo riportati è pari a 0.78ns, di conseguenza è stato scelto un periodo di clock pari a 1ns.\\
+Successivamente è possibile procedere con l'analisi relativa alla potenza.
+Il comando power report consente di ottenere una generica stima della potenza dissipata dal circuito, distinguendo tre contributi:
 \begin{itemize}
-\item this is the first item
-\item this is the second item...
-\item if you want to change the point of the item do as in the following ite:
-\item[-] whithin squared parentheses you can put a sign you like
-\end{itemize} 
+\item \textbf{leakage}: consumo statico dovuto alle correnti di leakage dei dispositivi utilizzati
+\item \textbf{internal}: contributo alla potenza dinamica totale dovuto alla corrente di corto circuito
+\item \textbf{switching}: contributo alla potenza dinamica dovuto alle commutazioni dei nodi e alle relative cariche/scariche delle capacità
+\end{itemize}
+Nella seguente tabella è riportata la suddivisione dei tre contributi.
 
+TABELLA
 
-\subsection{Eample of an enumeration}
+L'apporto maggiore al consumo totale è dato dalla potenza dinamica, in particolare dal consumo della potenza interna.
 
-\begin{enumerate}
-\item this is the first point
-\item the second.....
-\end{enumerate}
+E' interessante notare la suddivisione del consumo in potenza per i vari moduli interni (fa) dell'RCA. E' possibile ottenere ciò tramite un power report di tipo gerarchico. La distribuzione dei consumi è riportata nella seguente tabella.
 
+TABELLA
 
+E' possibile notare come la suddivisione risulti simile per tutti i FA fatta eccezione per FA 8. In particolare si differenzia dagli altri per il consumo relativo alla potenza di switch. Si ipotizza che quest'ultima risulti inferiore rispetto agli altri full adder a causa del minor carico di uscita.
+
+E' inoltre possibile approfondire l'analisi di potenza considerando i contributi interni dei singoli moduli. In particolare, è possibile mettere in luce i contributi dei nodi interni ai singoli full adder, sempre suddivisi nei tre contributi precedentemente descritti.
+
+in particolare, per comprendere l'origine del consumo inferiore del FA8, quest'ultimo è stato analizzato come cella ed è stato confrontato con il FA1.
+
+TABELLA
+la differenza nel consumo di potenza di switching è individuata nel nodo U2, legato al carry in uscita.
+
+\includegraphics[width=6cm]{./img/Lab_1/Es_3/Full_adder.png}
+
+E' possibile ottenere informazioni aggiuntive sul calcolo della potenza di switching con un'analisi di tipo verbose. In tale analisi, in particolare, sono riportati i contributi capacitivi necessari al calcolo della switching power, espressi nodo per nodo.
+
+TABELLA
+
+E' possibile notare come il nodo legato al carry in uscita presenti una capacità inferiore per il FA8. Ciò conferma l'ipotesi legata al carico inferiore.
+
+Analizzando i vari FA con analisi di tipo verbose si nota inoltre che i contributi di capacità relativi ai nodi della somma (U1) siano trascurabili rispetto agli altri contributi.
+DI conseguenza si nota che il contributo di potenza relativo a tale nodo è di un ordine di grandezza inferiore rispetto agli altri.
+CONFRONTO SWITCHING ACTIVITY
+CONFRONTO VERBOSE RCA
 
 \subsection{example of a description}
 \begin{description}
