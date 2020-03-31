@@ -84,64 +84,204 @@
 % or subsection -> \subsection{simulating a particular type of inverter}
 
 %%%%%%   First section
-\section{Calcolo di probabilit\`a e attivit\`a}
+\section{Calcolo di probabilit\`a e attivit\`a: porte logiche elementari}
 
-Il primo esercizio consiste nell'esempio di un inverter descritto
-in VHDL e riportato di seguito:
+Il primo esercizio consiste nel valutare le probabilit\`a e attività di quattro porte logiche elementari: NOT, AND, OR e XOR.
+\\
+Mentre la probabilità di uscita del gate è definita dalla funzione logica stessa, la switching activity è valutata allo stesso modo per tutti i casi, mediante la seguente formula: \\
+A = 2*P1*p0
 
-	\begin{listato}
-	\lstinputlisting{./cap1/iv.vhd}
-	\end{listato}
+Di seguito è riportata l'analisi delle porte logiche richieste, considerando ingressi equiprobabili e scorrelati.
 
+\begin{itemize}
+\item \textbf{NOT} \\
+P(Y=1) = 1-P(A=1) = 0.5 \\
+A(Y) = 0.5
+\item \textbf{AND} \\
+P(Y=1) = P(A=1)*P(B=1) = 0.25 \\
+A(Y) = 0.375
+\item \textbf{OR} \\
+P(Y=1) = 1-((1-P(A=1))*(1-P(B=1))) = 0.75 \\
+A(Y) = 0.375
+\item \textbf{XOR} \\
+P(Y=1) = P(A=1)*(1-P(B=1)) + P(B=1)*(1-P(A=1)) = 0.5 \\
+A(Y) = 0.5
+\end{itemize} 
 
-Il risultato della simulazione \`e riportato in figura \ref{fig:a}.
+Simulando il test bench fornito tramite ModelSim è possibile ottenere un file riportante il numero di commutazioni di ogni segnale del circuito durante il tempo di simulazione.
+Il testbench fornito sfrutta un generatore di numeri casuali per generare gli ingressi delle porte, rendendo questi ultimi equiprobabili e statisticamente indipendenti. 
+In particolare, è possibile ricavare la switching activity delle uscite dividendo il numero di commutazioni per il numero di cicli di clock simulati.
+Sono riportati i seguenti valori:
 
-% please note the use of the accent and the reference to the figure
-% using the string in the label field below
+\begin{table}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Tc(CLK) & Tc(INV) & Tc(AND) & Tc(OR) & Tc(XOR) \\
+\hline
+topolino & minni & tip & tap \\
+\hline
+\hline
+paperino & paperina & orazio & clarabella \\
+\hline
+qui & quo & qua & ottoperotto \\
+zio paperone & gastone & paperoga & battista \\ 
+\hline 
+\end{tabular}
+\end{center}
+\caption{A caption for your table}
+\label{A-lable-for-your-table}
+\end{table}
 
-\begin{figure}[htp] 
+E' possibile stimare la switching acitivty dividendo il numero di commutazini di un nodo per il numero di colpi di clock.
+Dal momento che il parametro Tc si riferisce al numero di commutazioni, il numero di cicli di clock è ottenuto dividendo per due tale parametro riferito al clk.
+I risultati dei calcoli sono riportati nella seguente tabella. 
+
+\begin{table}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Tc(CLK) & A(INV) & A(AND) & A(OR) & A(XOR) \\
+\hline
+topolino & minni & tip & tap \\
+\hline
+\hline
+paperino & paperina & orazio & clarabella \\
+\hline
+qui & quo & qua & ottoperotto \\
+zio paperone & gastone & paperoga & battista \\ 
+\hline 
+\end{tabular}
+\end{center}
+\caption{A caption for your table}
+\label{A-lable-for-your-table}
+\end{table}
+
+Per garantire una migliore visualizzazione dei dati ottenuti al variare del tempo di simulazione, sono stati realizzati i seguenti grafici.\\
+
+% primi due grafici
+\begin{figure} [htp]
     \centering
     \subfloat[data a]{%
-        \includegraphics[width=0.4cm]{./ciao}%
-        \label{fig:a}%
+        \includegraphics[width=7cm]{./img/Lab_1/Es_1/Inverter.png}%
+        \label{fig:inv_sim}%
         }%
     \hfill%
     \subfloat[data b]{%
-        \includegraphics[width=0.4cm]{./logopoli}%
-        \label{fig:b}%
+        \includegraphics[width=7cm]{./img/Lab_1/Es_1/And.png}%
+        \label{fig:and_sim}%
+        }%
+    \caption{all the data}
+    \hfill
+    \subfloat[data c]{%
+        \includegraphics[width=7cm]{./img/Lab_1/Es_1/OR.png}%
+        \label{fig:inv_sim}%
+        }%
+    \hfill%
+    \subfloat[data d]{%
+        \includegraphics[width=7cm]{./img/Lab_1/Es_1/XOR.png}%
+        \label{fig:and_sim}%
         }%
     \caption{all the data}
 \end{figure}
 
-Si osserva che l'uscita commuta invertendo l'ingresso ma con un ritardo
-dato dall'uso dei generics.
-
-	\begin{verbatim}
-	bla bla bla including comments between this ``verbatim'' commands
-	you can ingore latex commands  	
-	\end{verbatim}
-
-\subsection{Porte logiche elementari}
-
-\subsection{Half Adder e Full Adder}
-
-Ciao mi chiamo \textbf{Filippo}
-
-
+Si osserva che all'aumentare del tempo di simulazione la stima della Esw risulta a man mano più accurata. In particolare, nel caso analizzato, si osserva che per un numero di cicli di clock superiore a 10000, i due dati sono confrontabili.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % chapter 2
-\section{Sintesi RCA e analisi di potenza}
+\section{Calcolo di probabilit\`a e attivit\`a: half adder e full adder}
+
+Dalle tavole di verità si ottengono le seguenti funzioni:
+
+\begin{itemize}
+\item \textbf{Half adder} \\
+S = A XOR B
+Cout = A AND B
+\item \textbf{Full adder} \\
+S = A XOR B XOR Cin
+Cout = A AND B AND Cin
+\end{itemize} 
+
+Partendo dalle funzioni delle uscite è stato possibile ricavare le probabilità associate alle uscite e le relative switching activity.
+
+\begin{itemize}
+\item \textbf{Half adder} \\
+P(S=1) = 
+P(Cout = 1) =
+A(S) =
+A(COut) =
+\item \textbf{Full adder} \\
+P(S=1) = 
+P(Cout = 1) =
+A(S) =
+A(COut) =
+\end{itemize} 
+
+Sfruttando i risultati ottenuti per il singolo full adder, è possibile ottenere le probabilità e le attività di un ripple carry adder di parallelismo 8 bit.
+\\
+schema
+\\
+Si considerano ingressi equiprobabili con eccezione del carry in ingresso al primo full adder, fissato a 0.\\
+I risultati ottenuti sono riportati nella seguente tabella.
+
+\begin{table}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+ & S7 & S6 & S5 & S4 \\
+\hline
+topolino & minni & tip & tap \\
+\hline
+\hline
+paperino & paperina & orazio & clarabella \\
+\hline
+qui & quo & qua & ottoperotto \\
+zio paperone & gastone & paperoga & battista \\ 
+\hline 
+\end{tabular}
+\end{center}
+\caption{A caption for your table}
+\label{A-lable-for-your-table}
+\end{table}
+
+Variando le probabilità associate agli ingressi, in particolare considerando P(A=1) = 0.4 e P(B=1) = 0.6, si ottengono i seguenti risultati.
+
+\begin{table}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+ & S7 & S6 & S5 & S4 \\
+\hline
+topolino & minni & tip & tap \\
+\hline
+\hline
+paperino & paperina & orazio & clarabella \\
+\hline
+qui & quo & qua & ottoperotto \\
+zio paperone & gastone & paperoga & battista \\ 
+\hline 
+\end{tabular}
+\end{center}
+\caption{A caption for your table}
+\label{A-lable-for-your-table}
+\end{table}
+
+E' possibile notare come la probabilità delle varie uscite sia funzione delle probabilità degli ingressi.
+I particolare, la probabilità delle uscite relative alle somme aumenta. Commenti su tabella
+
+Al fine di avere un riscontro sui dati stimati, sono state effettuate due simulazioni tramite ModelSim: in un primo caso è stato considerato un ritardo solamente sulle uscite relative alla somme; successivamente è stato introdotto un ulteriore ritardo anche sul carry in uscita di ogni FA.
+Come descritto precedentemente, il file fornito da Modelsim riporta il numero di commutazioni dei segnali, di conseguenza l'attività è stata calcolata come prima.
+
+TABELLA ES 2 ANALISI
+
+Si nota come la prima simulazione abbia fornito dati comparabili con quelli precedentemente stimati. Nella seconda simulazione, invece, la presenza di un ritardo sul carry di uscita di ogni FA ha come conseguenza un generale aumento dell'attività delle uscite di somma. Tale ritardo causa infatti glitch, responsabili dell'aumento della Esw.
+Tale risultato è particolarmente evidente considerando la Esw totale dei due casi: si nota che la presenza del ritardo raddoppia tale valore.
+
+\includegraphics[width=6cm]{./img/Lab_1/Es_2/Glitch.png} 
 
 
-% include here only file for the third lesson and homeworks
-% here the path to figures and VHDL should be ./cap2/
-
-\subsection{Example for using some latex feature}
-
-\subsection{Example of an itemize}
 
 \begin{itemize}
 \item this is the first item

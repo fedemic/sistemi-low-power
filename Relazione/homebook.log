@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.10)  30 MAR 2020 22:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.31)  31 MAR 2020 11:02
 entering extended mode
 **./homebook.tex
 (homebook.tex
-LaTeX2e <2020-02-02> patch level 2
-L3 programming layer <2020-02-14>
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\book.cls"
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-03-06>
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\book.cls"
 Document Class: book 2019/12/20 v1.4l Standard LaTeX document class
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\bk10.clo"
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\bk10.clo"
 File: bk10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 )
 \c@part=\count167
@@ -22,30 +22,30 @@ File: bk10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 \belowcaptionskip=\skip48
 \bibindent=\dimen134
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.sty"
-Package: babel 2020/02/14 3.40 The Babel package
-
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\switch.def"
-File: switch.def 2020/02/14 3.40 Babel switching mechanism
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.sty"
+Package: babel 2020/02/28 3.41 The Babel package
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\switch.def
+"
+File: switch.def 2020/02/28 3.41 Babel switching mechanism
 )
 *************************************
 * Local config file bblopts.cfg used
 *
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/arabi\bblopts.cfg"
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/arabi\bblopts.cfg"
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/babel-english\engli
-sh.ldf"
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/babel-english\engl
+ish.ldf"
 Language: english 2017/06/06 v3.3r English support from the babel system
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.def"
-File: babel.def 2020/02/14 3.40 Babel common definitions
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.def"
+File: babel.def 2020/02/28 3.41 Babel common definitions
 \babel@savecnt=\count176
 \U@D=\dimen135
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\txtbabel.de
-f")
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\txtbabel.d
+ef")
 \bbl@readstream=\read2
 \bbl@dirlevel=\count177
 )
@@ -56,8 +56,8 @@ Package babel Info: \l@australian = using hyphenrules for ukenglish
 Package babel Info: \l@newzealand = using hyphenrules for ukenglish
 (babel)             (\language72) on input line 108.
 ))
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyhdr\fancyhdr.s
-ty"
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyhdr\fancyhdr.
+sty"
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
 s
 \f@nch@headwidth=\skip49
@@ -70,24 +70,23 @@ s
 \f@nch@O@olf=\skip56
 \f@nch@O@orf=\skip57
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\makeidx.sty"
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\makeidx.sty"
 Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
-)
-(titlesec.sty
+) (titlesec.sty
 Package: titlesec 2001/01/23 v2.4 Sectioning titles
 \ttl@box=\box45
 \titlewidth=\dimen136
  (titlesec.new *** titlesec 2.4, loading patch level 2 ***))
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.s
-ty"
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.sty
-"
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.
+sty"
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.st
+y"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks14
+\KV@toks@=\toks15
 )
 \lst@mode=\count178
 \lst@gtempboxa=\box46
-\lst@token=\toks15
+\lst@token=\toks16
 \lst@length=\count179
 \lst@currlwidth=\dimen137
 \lst@column=\count180
@@ -98,63 +97,67 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \lst@lineno=\count183
 \lst@maxwidth=\dimen140
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.st
-y"
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.s
+ty"
 File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
 \c@lstnumber=\count184
 \lst@skipnumbers=\count185
 \lst@framebox=\box47
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.c
-fg"
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.
+cfg"
 File: listings.cfg 2019/09/10 1.8c listings configuration
 ))
 Package: listings 2019/09/10 1.8c (Carsten Heinz)
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.s
-ty"
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.
+sty"
 Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.s
-ty"
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.
+sty"
 Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graphi
-cs.cfg"
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graph
+ics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdftex
-.def"
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdfte
+x.def"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen141
 \Gin@req@width=\dimen142
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty
-"
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.st
+y"
 Package: amsmath 2020/01/20 v2.17e AMS math features
 \@mathmargin=\skip58
 
 For additional information on amsmath, use the `?' option.
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.sty
-"
+
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.st
+y"
 Package: amstext 2000/06/29 v2.01 AMS text
- ("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty
+
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty
 "
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks16
+\@emptytoks=\toks17
 \ex@=\dimen143
 ))
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty"
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty
+"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen144
-) ("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.st
-y"
+)
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty
+"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count186
@@ -177,26 +180,26 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 \dotsspace@=\muskip16
 \c@parentequation=\count193
 \dspbrk@lvl=\count194
-\tag@help=\toks17
+\tag@help=\toks18
 \row@=\count195
 \column@=\count196
 \maxfields@=\count197
-\andhelp@=\toks18
+\andhelp@=\toks19
 \eqnshift@=\dimen146
 \alignsep@=\dimen147
 \tagshift@=\dimen148
 \tagwidth@=\dimen149
 \totwidth@=\dimen150
 \lineht@=\dimen151
-\@envbody=\toks19
+\@envbody=\toks20
 \multlinegap=\skip59
 \multlinetaggap=\skip60
-\mathdisplay@stack=\toks20
+\mathdisplay@stack=\toks21
 LaTeX Info: Redefining \[ on input line 2859.
 LaTeX Info: Redefining \] on input line 2860.
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.s
-ty"
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.
+sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
@@ -204,31 +207,31 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amscls\amsthm.sty"
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amscls\amsthm.sty"
 Package: amsthm 2017/10/31 v2.20.4
-\thm@style=\toks21
-\thm@bodyfont=\toks22
-\thm@headfont=\toks23
-\thm@notefont=\toks24
-\thm@headpunct=\toks25
+\thm@style=\toks22
+\thm@bodyfont=\toks23
+\thm@headfont=\toks24
+\thm@notefont=\toks25
+\thm@headpunct=\toks26
 \thm@preskip=\skip61
 \thm@postskip=\skip62
 \thm@headsep=\skip63
-\dth@everypar=\toks26
+\dth@everypar=\toks27
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amssymb.st
-y"
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amssymb.s
+ty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/subfig\subfig.sty"
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/subfig\subfig.sty"
 Package: subfig 2005/06/28 ver: 1.3 subfig package
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption.sty
-"
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption.st
+y"
 Package: caption 2020/01/03 v3.4h Customizing captions (AR)
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption3.st
-y"
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption3.s
+ty"
 Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 61.
 \captionmargin=\dimen152
@@ -264,9 +267,9 @@ Package caption Info: listings package is loaded.
 
 Writing index file homebook.idx
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backend
--pdfmode.def"
-File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backen
+d-pdfmode.def"
+File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count273
 \l__pdf_internal_box=\box50
 )
@@ -274,7 +277,32 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 LaTeX Warning: Unused global option(s):
     [makeidx].
 
-(homebook.aux)
+(homebook.aux
+
+LaTeX Warning: Label `A-lable-for-your-table' multiply defined.
+
+
+LaTeX Warning: Label `fig:inv_sim' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:inv_sim' multiply defined.
+
+
+LaTeX Warning: Label `fig:and_sim' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:and_sim' multiply defined.
+
+
+LaTeX Warning: Label `A-lable-for-your-table' multiply defined.
+
+
+LaTeX Warning: Label `A-lable-for-your-table' multiply defined.
+
+
+LaTeX Warning: Label `A-lable-for-your-table' multiply defined.
+
+)
 \openout1 = `homebook.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 113.
@@ -293,23 +321,23 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 113.
 LaTeX Font Info:    ... okay on input line 113.
 \c@lstlisting=\count274
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pd
-f.mkii"
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
+df.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count275
 \scratchdimen=\dimen160
 \scratchbox=\box51
 \nofMPsegments=\count276
 \nofMParguments=\count277
-\everyMPshowfont=\toks27
+\everyMPshowfont=\toks28
 \MPscratchCnt=\count278
 \MPscratchDim=\dimen161
 \MPnumerator=\count279
 \makeMPintoPDFobject=\count280
-\everyMPtoPDFconversion=\toks28
+\everyMPtoPDFconversion=\toks29
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstop
-df-base.sty"
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epsto
+pdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
@@ -326,108 +354,98 @@ Package pdftex.def Info: ./logopoli.jpg  used on input line 118.
 
 
 
-{C:/Users/TONI/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./logopoli.j
-pg>] (homebook.toc
+{C:/Users/meeti/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./logopoli.
+jpg>] (homebook.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
-
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 \tf@toc=\write4
 \openout4 = `homebook.toc'.
 
-[1
+ [1
 
 ]
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1.s
-ty"
+("C:\Users\meeti\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1.
+sty"
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 ) (master.tex
 Chapter 1.
-(cap1/iv.vhd
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 1
-4.
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omlcmr.fd"
-File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <8> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 14.
-LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <8> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 15.
-)
-<./ciao.jpg, id=14, 123.3408pt x 123.3408pt>
-File: ./ciao.jpg Graphic file (type jpg)
-<use ./ciao.jpg>
-Package pdftex.def Info: ./ciao.jpg  used on input line 107.
-(pdftex.def)             Requested size: 11.38092pt x 11.3806pt.
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--107
-[]\OT1/cmr/m/n/8 (a)
- []
-
-
-Overfull \hbox (5.1471pt too wide) in paragraph at lines 107--107
-|\OT1/cmr/m/n/8 data
- []
-
-File: ./logopoli.jpg Graphic file (type jpg)
-<use ./logopoli.jpg>
-Package pdftex.def Info: ./logopoli.jpg  used on input line 112.
-(pdftex.def)             Requested size: 11.38092pt x 11.20192pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 112--112
-[]\OT1/cmr/m/n/8 (b)
- []
-
-
-Overfull \hbox (5.1471pt too wide) in paragraph at lines 112--112
-|\OT1/cmr/m/n/8 data
  []
 
 [1
 
 
- <./ciao.jpg>] [2]) [3] (homebook.aux) ) 
+]
+<./img/Lab_1/Es_1/Inverter.png, id=19, 420.06938pt x 315.42844pt>
+File: ./img/Lab_1/Es_1/Inverter.png Graphic file (type png)
+<use ./img/Lab_1/Es_1/Inverter.png>
+Package pdftex.def Info: ./img/Lab_1/Es_1/Inverter.png  used on input line 168.
+
+(pdftex.def)             Requested size: 199.16928pt x 149.55571pt.
+<./img/Lab_1/Es_1/And.png, id=21, 420.82219pt x 315.42844pt>
+File: ./img/Lab_1/Es_1/And.png Graphic file (type png)
+<use ./img/Lab_1/Es_1/And.png>
+Package pdftex.def Info: ./img/Lab_1/Es_1/And.png  used on input line 173.
+(pdftex.def)             Requested size: 199.16928pt x 149.28618pt.
+<./img/Lab_1/Es_1/OR.png, id=22, 420.82219pt x 315.42844pt>
+File: ./img/Lab_1/Es_1/OR.png Graphic file (type png)
+<use ./img/Lab_1/Es_1/OR.png>
+Package pdftex.def Info: ./img/Lab_1/Es_1/OR.png  used on input line 179.
+(pdftex.def)             Requested size: 199.16928pt x 149.28618pt.
+<./img/Lab_1/Es_1/XOR.png, id=23, 420.82219pt x 315.42844pt>
+File: ./img/Lab_1/Es_1/XOR.png Graphic file (type png)
+<use ./img/Lab_1/Es_1/XOR.png>
+Package pdftex.def Info: ./img/Lab_1/Es_1/XOR.png  used on input line 184.
+(pdftex.def)             Requested size: 199.16928pt x 149.28618pt.
+ [2] [3 <./img/Lab_1/Es_1/Inverter.png> <./img/Lab_1/Es_1/And.png> <./img/Lab_1
+/Es_1/OR.png> <./img/Lab_1/Es_1/XOR.png>]
+<./img/Lab_1/Es_2/Glitch.png, id=35, 831.85782pt x 449.42906pt>
+File: ./img/Lab_1/Es_2/Glitch.png Graphic file (type png)
+<use ./img/Lab_1/Es_2/Glitch.png>
+Package pdftex.def Info: ./img/Lab_1/Es_2/Glitch.png  used on input line 282.
+(pdftex.def)             Requested size: 170.71652pt x 92.22955pt.
+ [4 <./img/Lab_1/Es_2/Glitch.png>]) [5] (homebook.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 6391 strings out of 481556
- 91060 string characters out of 2914337
- 521521 words of memory out of 3000000
- 21550 multiletter control sequences out of 15000+200000
- 541643 words of font info for 59 fonts, out of 3000000 for 9000
+ 6002 strings out of 480934
+ 88198 string characters out of 2899917
+ 524181 words of memory out of 3000000
+ 21796 multiletter control sequences out of 15000+200000
+ 538013 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 50i,11n,51p,227b,1367s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\TONI\AppData\Local\MiKTeX\2.
-9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/TONI/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/TONI/App
-Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Us
-ers/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8
-.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmex10.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmmi10.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/TONI/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/TONI/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/TONI/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Us
-ers/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17
-.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmr7.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmr8.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/TONI/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/TONI/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/TONI/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/User
-s/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.p
-fb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmtt10.pfb>
-Output written on homebook.pdf (5 pages, 421957 bytes).
+ 50i,11n,51p,385b,369s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\meeti\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\
+tcrm1000.pk><C:/Users/meeti/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmbx10.pfb><C:/Users/meeti/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/meeti/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/meeti/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/meeti
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:
+/Users/meeti/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mr10.pfb><C:/Users/meeti/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr12.pfb><C:/Users/meeti/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmr17.pfb><C:/Users/meeti/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/meeti/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/meeti/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/m
+eeti/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b><C:/Users/meeti/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmsy7.pfb>
+Output written on homebook.pdf (7 pages, 490712 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
+ 95 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
