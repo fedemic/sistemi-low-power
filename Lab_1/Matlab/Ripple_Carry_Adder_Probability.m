@@ -3,8 +3,8 @@ clear all;
 clc;
 
 %% Vettori da intendere da LSB a MSB
-P_A = 0.5*ones(8,1);
-P_B = 0.5*ones(8,1);
+P_A = 0.4*ones(8,1);
+P_B = 0.6*ones(8,1);
 P_Cin = [0 0 0 0 0 0 0 0 0]; % Ha 9 elementi per poter inserire l'ultimo Cout
 
 P_S = [0 0 0 0 0 0 0 0];
