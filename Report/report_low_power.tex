@@ -3,10 +3,10 @@
 % Packages
 \usepackage{graphicx} % Usato per \includegraphics 
 \usepackage{titlesec} % Usato per modificare/rimuovere le scritte Capitolo 1,2 ecc
-\usepackage{textcomp} % Per caratteri speciali
-\usepackage{listings} % Per VHDL
-\usepackage{xcolor} % per i colori
-%\usepackage[sfdefault]{Roboto}  
+\usepackage{textcomp} % Usaato per caratteri speciali
+\usepackage{listings} % Usato per VHDL
+\usepackage{xcolor} % Usato per i colori
+%\usepackage[sfdefault]{Roboto}
 %\usepackage[T1]{fontenc}
 
 % Impostazioni pagina
@@ -364,7 +364,7 @@ half adder sia differente rispetto alle uscite sincrone dei flip-flop.
 Infatti a causa dei ritardi di propagazione dei carry in uscita dai 
 singoli stadi, si generano una serie di glitch, che, propagandosi lungo
 la serie di half adder, causano commutazioni multiple dei nodi SUM.
-\\
+\\\\
 Similmente all'analisi effettuata per il blocco 7 è possibile ipotizzare
 comportamenti simili legati al carry in uscita anche per gli altri blocchi.
 Tale vettore di carry presenta infatti un'attività complessiva maggiore 
@@ -382,7 +382,7 @@ E' possibile notare che in questo caso il periodo di clock è
 sufficientemente elevato per garantire un corretto funzionamento 
 del contatore: la propagazione del carry out può avvenire correttamente
 in tutti gli stadi.
-\\
+\\\\
 Riducendo il periodo di clock a 0.8ns è possibile osservare un
 comportamento inatteso, rappresentato in figura, da parte del contatore.
 \\\\
@@ -395,20 +395,16 @@ L'immagine mette in luce una transizione da un conteggio all'altro:
 Tale errore è dovuto alla mancata completa propagazione del carry in tutti
 gli stadi, infatti il clock campiona le uscite dei flip-flops prima che tutti
 gli stadi abbiano raggiunto un valore stabile. 
-
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
+\\\\\\\\\\
+\textcolor{red}{COSE DA FARE: \\
+                - Capire il toggle rate nel verbose (ESW) \\
+                - Capire l'incongruenza del verbose RCA \\
+                - Spiegare il worst case del sommatore \\
+                - Fare mappa di Karnaugh \\
+                - Plot segnali MUX (fatto da noi) \\
+                - Plot dei segnali del blocchetto contatore e dei primi bit del contatore (fatto da noi)\\
+                - Completare le tabelle \\
+                - Revisione grafica}    
+                
 
 \end{document}
