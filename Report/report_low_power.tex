@@ -5,6 +5,7 @@
 \usepackage{titlesec} % Usato per modificare/rimuovere le scritte Capitolo 1,2 ecc
 \usepackage{textcomp} % Per caratteri speciali
 \usepackage{listings} % Per VHDL
+\usepackage{xcolor} % per i colori
 %\usepackage[sfdefault]{Roboto}  
 %\usepackage[T1]{fontenc}
 
@@ -284,7 +285,9 @@ TIMING CONTATORE FATTO DA NOI
 Dalle considerazioni fatte in precedenza è possibile stimare il numero
 di commutazioni delle 8 uscite e del terminal count durante 
 un intero ciclo di conta. Inoltre nella tabella seguente sono stati
-aggiunti i dati ottenuti tramite simulazione attraverso ModelSim.
+aggiunti i dati ottenuti tramite power report ottenuto attraverso 
+una simulazione ModelSim. Il clock utilizzato per la simulazione ha un periodo
+di 2ns.
 \\
 \begin{center}
 	\begin{tabular}{|c|c|c|}
@@ -314,6 +317,86 @@ aggiunti i dati ottenuti tramite simulazione attraverso ModelSim.
 	\end{tabular}
 \end{center}
 \vspace{0.3cm}
+Si può notare che i risultati ottenuti in entrambi i casi siano
+confrontabili, tuttavia è presente una leggera differenza, pari
+a 1 o 2 colpi di clock, dovuta al fatto che è stato scelto un 
+tempo di simulazione leggermente superiore al tempo di conta 
+totale.
+\\
+Dalla simulazione è stato inoltre possibile osservare l'andamento 
+delle waveforms delle uscite. E' stato possibile notare che, in
+un preciso intervallo temporale, il segnale OVFL ha assunto un valore 
+logico alto durante il conteggio, in figura X, comportamento inatteso da parte
+di un contatore. 
+\\\\
+\centerline{\includegraphics[width=15cm]{./img/Lab_1/Es_5/Glitch.png}}
+\\\\
+Si può notare che tale glitch avviene successivamente alla commutazione
+del bit più significativo (S7), infatti, per un certo intervallo di tempo,
+in ingresso all'half adder del blocco 7 sono presenti due ingressi con valore
+logico alto: uno dovuto al carry in uscita dal blocco precedente che, a causa
+dei ritardi, non ha ancora commutato il suo valore, e l'altro relativo all'uscita
+attuale S7.
+\\
+Successivamente, sempre attraverso un power report, è stato possibile
+analizzare l'attività dei segnali interni al contatore. I risultati sono 
+riportati nella seguenti tabelle.
+\\
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+	\hline
+	Segnale & Commutazioni & Attività \\ 
+	\hline
+	SUM(0) & 0.1 & 0 \\
+	\hline
+	\end{tabular}	
+	\begin{tabular}{|c|c|c|}
+	\hline
+	Segnale & Commutazioni & Attività \\ 
+	\hline
+	Cout(0) & 0.1 & 0 \\
+	\hline
+	\end{tabular}
+\end{center}
+\vspace{0.3cm}
+E' possibile notare come l'attività delle somme in uscita dagli
+half adder sia differente rispetto alle uscite sincrone dei flip-flop.
+Infatti a causa dei ritardi di propagazione dei carry in uscita dai 
+singoli stadi, si generano una serie di glitch, che, propagandosi lungo
+la serie di half adder, causano commutazioni multiple dei nodi SUM.
+\\
+Similmente all'analisi effettuata per il blocco 7 è possibile ipotizzare
+comportamenti simili legati al carry in uscita anche per gli altri blocchi.
+Tale vettore di carry presenta infatti un'attività complessiva maggiore 
+rispetto a quella stimata nel caso senza ritardi.
+\\\\
+Nella simulazione precedentemente effettuata i ritardi sono stati
+modellizzati in modo tale da presentare un valore significativamente
+inferiore rispetto al periodo di clock.
+\\\\
+\centerline{$Periodo = 2ns \\
+            Ritardo_somma = 0.2ns \\
+            Ritardo_carry = 0.2ns $}
+\\\\
+E' possibile notare che in questo caso il periodo di clock è 
+sufficientemente elevato per garantire un corretto funzionamento 
+del contatore: la propagazione del carry out può avvenire correttamente
+in tutti gli stadi.
+\\
+Riducendo il periodo di clock a 0.8ns è possibile osservare un
+comportamento inatteso, rappresentato in figura, da parte del contatore.
+\\\\
+\centerline{\includegraphics[width=15cm]{./img/Lab_1/Es_5/Clk_corto.png}}
+\\\\
+L'immagine mette in luce una transizione da un conteggio all'altro:
+\\\\
+\centerline{$00011111 \rightarrow 00010000$}
+\\\\
+Tale errore è dovuto alla mancata completa propagazione del carry in tutti
+gli stadi, infatti il clock campiona le uscite dei flip-flops prima che tutti
+gli stadi abbiano raggiunto un valore stabile. 
+
+            
 
 
 
