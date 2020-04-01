@@ -226,9 +226,9 @@ quanto atteso.
 Al fine di analizzare altre possibili combinazioni degli ingressi
 che possano generare un glitch in uscita è stata realizzata una 
 mappa di Karnaugh rappresentante la funzione logica del multiplexer.
-\\\\\
-MAPPA DI CARNO'
-\\\\\
+\\\\
+\centerline{\includegraphics[width=10cm]{./img/Lab_1/Es_4/Mappa_K_coperta.png}}
+\\\\
 In particolare è possibile notare come, al fine di coprire la mappa
 con il circuito in figura X, siano stati coperti i due implicanti
 rappresentati sulla mappa stessa. In particolare il glitch analizzato
@@ -236,7 +236,9 @@ rappresentati sulla mappa stessa. In particolare il glitch analizzato
 tra un implicante e l'altro. Tale problema potrebbe essere risolto
 andando a coprire, in modo ridondante, con un terzo implicante per evitare
 la transizione precedentemente trattata. 
-\\
+\\\\
+\centerline{\includegraphics[width=10cm]{./img/Lab_1/Es_4/Mappa_K_supercoperta.png}}
+\\\\
 Tale ragionamento porta alla conclusione che l'unica combinazione in grado
 di causare un glitch in uscita sia quella presa in analisi.
 \\\\\
@@ -294,25 +296,23 @@ di 2ns.
 	\hline
 	Segnale & Transizioni stimate & Transizioni simulate \\ 
 	\hline
-	20 & 0.1 & 0 \\
+	S0 & 255 & 257 \\
 	\hline
-	200 & 0.43 & 0.40\\
+	S1 & 127 & 128\\
 	\hline
-	2000 & 0.533 & 0.418\\
+	S2 & 63 & 64\\
 	\hline
-	20000 & 0.4916 & 0.3606\\
+	S3 & 31 & 32\\
 	\hline
-	200000 & 0.4997 & 0.3738 \\
+	S4 & 15 & 16 \\
 	\hline
-	200000 & 0.4997 & 0.3738 \\
+	S5 & 7 & 8 \\
 	\hline
-	200000 & 0.4997 & 0.3738 \\
+	S6 & 3 & 4 \\
 	\hline
-	200000 & 0.4997 & 0.3738 \\
+	S7 & 1 & 2 \\
 	\hline
-	200000 & 0.4997 & 0.3738 \\
-	\hline
-	200000 & 0.4997 & 0.3738 \\
+	OVFL & 1 & 16 \\
 	\hline
 	\end{tabular}
 \end{center}
@@ -322,6 +322,7 @@ confrontabili, tuttavia è presente una leggera differenza, pari
 a 1 o 2 colpi di clock, dovuta al fatto che è stato scelto un 
 tempo di simulazione leggermente superiore al tempo di conta 
 totale.
+\textcolor{red}{Dobbiamo commentare la differenza su OVFL}
 \\
 Dalla simulazione è stato inoltre possibile osservare l'andamento 
 delle waveforms delle uscite. E' stato possibile notare che, in
@@ -347,14 +348,42 @@ riportati nella seguenti tabelle.
 	\hline
 	Segnale & Commutazioni & Attività \\ 
 	\hline
-	SUM(0) & 0.1 & 0 \\
+	SUM(0) & 258  & 0.992  \\
+	\hline
+	SUM(1) & 385  & 1.377  \\
+	\hline
+	SUM(2) & 320  &  1.231  \\
+	\hline
+	SUM(3) & 224  & 0.862  \\
+	\hline
+	SUM(4) & 144  & 0.554  \\
+	\hline
+	SUM(5) & 88  & 0.338  \\
+	\hline
+	SUM(6) & 52  & 0.200  \\
+	\hline
+	SUM(7) & 30  & 0.115  \\
 	\hline
 	\end{tabular}	
 	\begin{tabular}{|c|c|c|}
 	\hline
 	Segnale & Commutazioni & Attività \\ 
 	\hline
-	Cout(0) & 0.1 & 0 \\
+	Cout(0) & 257  & 0.988  \\
+	\hline
+	Cout(1) & 256  & 0.985  \\
+	\hline
+	Cout(2) & 192  & 0.738  \\
+	\hline
+	Cout(3) & 128  & 0.492  \\
+	\hline
+	Cout(4) & 80  & 0.308  \\
+	\hline
+	Cout(5) & 48  & 0.185  \\
+	\hline
+	Cout(6) & 28  & 0.108  \\
+	\hline
+	Cout(7) & 16  & 0.062  \\
 	\hline
 	\end{tabular}
 \end{center}
@@ -400,7 +429,7 @@ gli stadi abbiano raggiunto un valore stabile.
                 - Capire il toggle rate nel verbose (ESW) \\
                 - Capire l'incongruenza del verbose RCA \\
                 - Spiegare il worst case del sommatore \\
-                - Fare mappa di Karnaugh \\
+                - Fare mappa di Karnaugh FATTO \\
                 - Plot segnali MUX (fatto da noi) \\
                 - Plot dei segnali del blocchetto contatore e dei primi bit del contatore (fatto da noi)\\
                 - Completare le tabelle \\

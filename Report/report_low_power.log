@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.10)  1 APR 2020 16:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.10)  1 APR 2020 23:04
 entering extended mode
 **./report_low_power.tex
 (report_low_power.tex
@@ -311,211 +311,236 @@ Underfull \hbox (badness 10000) in paragraph at lines 207--221
  []
 
 [5 <./img/Lab_1/Es_4/Mux.png> <./img/Lab_1/Es_4/Glitch.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 222--262
+<./img/Lab_1/Es_4/Mappa_K_coperta.png, id=40, 537.6888pt x 186.9384pt>
+File: ./img/Lab_1/Es_4/Mappa_K_coperta.png Graphic file (type png)
+<use ./img/Lab_1/Es_4/Mappa_K_coperta.png>
+Package pdftex.def Info: ./img/Lab_1/Es_4/Mappa_K_coperta.png  used on input li
+ne 230.
+(pdftex.def)             Requested size: 284.52756pt x 98.92569pt.
+<./img/Lab_1/Es_4/Mappa_K_supercoperta.png, id=41, 537.6888pt x 186.9384pt>
+File: ./img/Lab_1/Es_4/Mappa_K_supercoperta.png Graphic file (type png)
+<use ./img/Lab_1/Es_4/Mappa_K_supercoperta.png>
+Package pdftex.def Info: ./img/Lab_1/Es_4/Mappa_K_supercoperta.png  used on inp
+ut line 240.
+(pdftex.def)             Requested size: 284.52756pt x 98.92569pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--262
+Underfull \hbox (badness 10000) in paragraph at lines 222--264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--262
+Underfull \hbox (badness 10000) in paragraph at lines 222--264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--262
+Underfull \hbox (badness 10000) in paragraph at lines 222--264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--262
+Underfull \hbox (badness 10000) in paragraph at lines 222--264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--262
+Underfull \hbox (badness 10000) in paragraph at lines 222--264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--262
+Underfull \hbox (badness 10000) in paragraph at lines 222--264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--262
+Underfull \hbox (badness 10000) in paragraph at lines 222--264
 
  []
 
-<./img/Lab_1/Es_5/Sync_FA.png, id=40, 143.53625pt x 197.73875pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--264
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--264
+
+ []
+
+<./img/Lab_1/Es_5/Sync_FA.png, id=42, 143.53625pt x 197.73875pt>
 File: ./img/Lab_1/Es_5/Sync_FA.png Graphic file (type png)
 <use ./img/Lab_1/Es_5/Sync_FA.png>
-Package pdftex.def Info: ./img/Lab_1/Es_5/Sync_FA.png  used on input line 267.
+Package pdftex.def Info: ./img/Lab_1/Es_5/Sync_FA.png  used on input line 269.
 (pdftex.def)             Requested size: 85.35826pt x 117.59416pt.
-<./img/Lab_1/Es_5/Counter.png, id=41, 627.34375pt x 151.56625pt>
+<./img/Lab_1/Es_5/Counter.png, id=43, 627.34375pt x 151.56625pt>
 File: ./img/Lab_1/Es_5/Counter.png Graphic file (type png)
 <use ./img/Lab_1/Es_5/Counter.png>
-Package pdftex.def Info: ./img/Lab_1/Es_5/Counter.png  used on input line 278.
+Package pdftex.def Info: ./img/Lab_1/Es_5/Counter.png  used on input line 280.
 (pdftex.def)             Requested size: 569.05511pt x 137.48839pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 264--292
+Underfull \hbox (badness 10000) in paragraph at lines 266--294
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 264--292
+Underfull \hbox (badness 10000) in paragraph at lines 266--294
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 264--292
+Underfull \hbox (badness 10000) in paragraph at lines 266--294
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 264--292
+Underfull \hbox (badness 10000) in paragraph at lines 266--294
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 264--292
+Underfull \hbox (badness 10000) in paragraph at lines 266--294
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 264--292
+Underfull \hbox (badness 10000) in paragraph at lines 266--294
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 264--292
+Underfull \hbox (badness 10000) in paragraph at lines 266--294
 
  []
 
-[6 <./img/Lab_1/Es_5/Sync_FA.png>]
-<./img/Lab_1/Es_5/Glitch.png, id=48, 940.51375pt x 312.16624pt>
+[6 <./img/Lab_1/Es_4/Mappa_K_coperta.png> <./img/Lab_1/Es_4/Mappa_K_supercopert
+a.png>]
+<./img/Lab_1/Es_5/Glitch.png, id=51, 940.51375pt x 312.16624pt>
 File: ./img/Lab_1/Es_5/Glitch.png Graphic file (type png)
 <use ./img/Lab_1/Es_5/Glitch.png>
-Package pdftex.def Info: ./img/Lab_1/Es_5/Glitch.png  used on input line 332.
+Package pdftex.def Info: ./img/Lab_1/Es_5/Glitch.png  used on input line 333.
 (pdftex.def)             Requested size: 426.79134pt x 141.6548pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 320--345
+Underfull \hbox (badness 10000) in paragraph at lines 320--346
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 320--345
+Underfull \hbox (badness 10000) in paragraph at lines 320--346
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 320--345
+Underfull \hbox (badness 10000) in paragraph at lines 320--346
 
  []
 
-[7 <./img/Lab_1/Es_5/Counter.png> <./img/Lab_1/Es_5/Glitch.png>]
-<./img/Lab_1/Es_5/Clk_corto.png, id=54, 943.525pt x 323.2075pt>
+[7 <./img/Lab_1/Es_5/Sync_FA.png> <./img/Lab_1/Es_5/Counter.png>]
+<./img/Lab_1/Es_5/Clk_corto.png, id=57, 943.525pt x 323.2075pt>
 File: ./img/Lab_1/Es_5/Clk_corto.png Graphic file (type png)
 <use ./img/Lab_1/Es_5/Clk_corto.png>
-Package pdftex.def Info: ./img/Lab_1/Es_5/Clk_corto.png  used on input line 389
+Package pdftex.def Info: ./img/Lab_1/Es_5/Clk_corto.png  used on input line 418
 .
 (pdftex.def)             Requested size: 426.79134pt x 146.2015pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--408
+Underfull \hbox (badness 10000) in paragraph at lines 391--437
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--408
+Underfull \hbox (badness 10000) in paragraph at lines 391--437
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--408
+Underfull \hbox (badness 10000) in paragraph at lines 391--437
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--408
+Underfull \hbox (badness 10000) in paragraph at lines 391--437
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--408
+Underfull \hbox (badness 10000) in paragraph at lines 391--437
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--408
+Underfull \hbox (badness 10000) in paragraph at lines 391--437
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--408
+Underfull \hbox (badness 10000) in paragraph at lines 391--437
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--408
+Underfull \hbox (badness 10000) in paragraph at lines 391--437
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--408
+Underfull \hbox (badness 10000) in paragraph at lines 391--437
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--408
+Underfull \hbox (badness 10000) in paragraph at lines 391--437
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--408
+Underfull \hbox (badness 10000) in paragraph at lines 391--437
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--408
+Underfull \hbox (badness 10000) in paragraph at lines 391--437
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--408
+Underfull \hbox (badness 10000) in paragraph at lines 391--437
 
  []
 
-[8 <./img/Lab_1/Es_5/Clk_corto.png>] [9] (report_low_power.aux) ) 
+[8 <./img/Lab_1/Es_5/Glitch.png>] [9 <./img/Lab_1/Es_5/Clk_corto.png>]
+(report_low_power.aux) ) 
 Here is how much of TeX's memory you used:
- 3626 strings out of 481556
- 50289 string characters out of 2914337
- 292818 words of memory out of 3000000
- 18866 multiletter control sequences out of 15000+200000
+ 3638 strings out of 481556
+ 50755 string characters out of 2914337
+ 295818 words of memory out of 3000000
+ 18876 multiletter control sequences out of 15000+200000
  535807 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  31i,7n,37p,277b,1250s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\TON
-I\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/U
-sers/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx
-10.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmbx12.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmmi10.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/TONI/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/TONI/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/TONI/
-AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/
-Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
-17.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmr7.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmr8.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/TONI/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on report_low_power.pdf (10 pages, 543690 bytes).
+ <C:\Users\TONI\AppData\Local\MiKTeX\2.9\fonts/pk/ljfou
+r/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/TONI/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/TONI/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/
+TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb
+><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmmi8.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmr10.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr12.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/TONI/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/TONI/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/TONI
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C
+:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+msy10.pfb>
+Output written on report_low_power.pdf (10 pages, 614621 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
+ 109 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
