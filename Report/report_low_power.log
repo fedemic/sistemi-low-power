@@ -1,0 +1,409 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.10)  1 APR 2020 15:45
+entering extended mode
+**./report_low_power.tex
+(report_low_power.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14>
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\book.cls"
+Document Class: book 2019/12/20 v1.4l Standard LaTeX document class
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\bk10.clo"
+File: bk10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@chapter=\count168
+\c@section=\count169
+\c@subsection=\count170
+\c@subsubsection=\count171
+\c@paragraph=\count172
+\c@subparagraph=\count173
+\c@figure=\count174
+\c@table=\count175
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.s
+ty"
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.sty
+"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.s
+ty"
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graphi
+cs.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdftex
+.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen135
+\Gin@req@width=\dimen136
+)
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/titlesec\titlesec.s
+ty"
+Package: titlesec 2019/10/16 v2.13 Sectioning titles
+\ttl@box=\box45
+\beforetitleunit=\skip49
+\aftertitleunit=\skip50
+\ttl@plus=\dimen137
+\ttl@minus=\dimen138
+\ttl@toksa=\toks15
+\titlewidth=\dimen139
+\titlewidthlast=\dimen140
+\titlewidthfirst=\dimen141
+)
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\textcomp.sty"
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.s
+ty"
+\lst@mode=\count176
+\lst@gtempboxa=\box46
+\lst@token=\toks16
+\lst@length=\count177
+\lst@currlwidth=\dimen142
+\lst@column=\count178
+\lst@pos=\count179
+\lst@lostspace=\dimen143
+\lst@width=\dimen144
+\lst@newlines=\count180
+\lst@lineno=\count181
+\lst@maxwidth=\dimen145
+
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.st
+y"
+File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
+\c@lstnumber=\count182
+\lst@skipnumbers=\count183
+\lst@framebox=\box47
+)
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.c
+fg"
+File: listings.cfg 2019/09/10 1.8c listings configuration
+))
+Package: listings 2019/09/10 1.8c (Carsten Heinz)
+
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backend
+-pdfmode.def"
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count184
+\l__pdf_internal_box=\box48
+)
+
+LaTeX Warning: Unused global option(s):
+    [english,makeidx].
+
+(report_low_power.aux)
+\openout1 = `report_low_power.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pd
+f.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count185
+\scratchdimen=\dimen146
+\scratchbox=\box49
+\nofMPsegments=\count186
+\nofMParguments=\count187
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count188
+\MPscratchDim=\dimen147
+\MPnumerator=\count189
+\makeMPintoPDFobject=\count190
+\everyMPtoPDFconversion=\toks18
+)
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstop
+df-base.sty"
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+)
+\c@lstlisting=\count191
+<./img/general/polito.png, id=1, 376.40625pt x 376.40625pt>
+File: ./img/general/polito.png Graphic file (type png)
+<use ./img/general/polito.png>
+Package pdftex.def Info: ./img/general/polito.png  used on input line 30.
+(pdftex.def)             Requested size: 85.35826pt x 85.35973pt.
+ [1
+
+
+{C:/Users/TONI/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./img/genera
+l/polito.png>] (report_low_power.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 2.
+)
+\tf@toc=\write3
+\openout3 = `report_low_power.toc'.
+
+ [1
+
+]
+Chapter 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--71
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--71
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--99
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--126
+
+ []
+
+[2
+
+]
+<./img/Lab_1/Es_1/Grafici_Es_1.png, id=22, 841.7046pt x 631.158pt>
+File: ./img/Lab_1/Es_1/Grafici_Es_1.png Graphic file (type png)
+<use ./img/Lab_1/Es_1/Grafici_Es_1.png>
+Package pdftex.def Info: ./img/Lab_1/Es_1/Grafici_Es_1.png  used on input line 
+148.
+(pdftex.def)             Requested size: 426.79134pt x 320.03723pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--155
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--155
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--155
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--155
+
+ []
+
+[3 <./img/Lab_1/Es_1/Grafici_Es_1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 157--159
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--166
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--170
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--176
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--176
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--184
+
+ []
+
+[4]
+<./img/Lab_1/Es_4/Mux.png, id=31, 320.69812pt x 252.19218pt>
+File: ./img/Lab_1/Es_4/Mux.png Graphic file (type png)
+<use ./img/Lab_1/Es_4/Mux.png>
+Package pdftex.def Info: ./img/Lab_1/Es_4/Mux.png  used on input line 192.
+(pdftex.def)             Requested size: 142.26378pt x 111.8769pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--204
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--204
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--204
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--204
+
+ []
+
+(code/Lab_1/Es_4/mux_input_delays.vhd
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 1
+.
+
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omlcmr.fd"
+File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <8> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1.
+)
+<./img/Lab_1/Es_4/Glitch.png, id=32, 395.97937pt x 338.01282pt>
+File: ./img/Lab_1/Es_4/Glitch.png Graphic file (type png)
+<use ./img/Lab_1/Es_4/Glitch.png>
+Package pdftex.def Info: ./img/Lab_1/Es_4/Glitch.png  used on input line 219.
+(pdftex.def)             Requested size: 284.52756pt x 242.87906pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--220
+
+ []
+
+[5 <./img/Lab_1/Es_4/Mux.png> <./img/Lab_1/Es_4/Glitch.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 221--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--261
+
+ []
+
+<./img/Lab_1/Es_5/Sync_FA.png, id=40, 143.53625pt x 197.73875pt>
+File: ./img/Lab_1/Es_5/Sync_FA.png Graphic file (type png)
+<use ./img/Lab_1/Es_5/Sync_FA.png>
+Package pdftex.def Info: ./img/Lab_1/Es_5/Sync_FA.png  used on input line 266.
+(pdftex.def)             Requested size: 85.35826pt x 117.59416pt.
+<./img/Lab_1/Es_5/Counter.png, id=41, 627.34375pt x 151.56625pt>
+File: ./img/Lab_1/Es_5/Counter.png Graphic file (type png)
+<use ./img/Lab_1/Es_5/Counter.png>
+Package pdftex.def Info: ./img/Lab_1/Es_5/Counter.png  used on input line 277.
+(pdftex.def)             Requested size: 569.05511pt x 137.48839pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--289
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--289
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--289
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--289
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--289
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--289
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--289
+
+ []
+
+[6 <./img/Lab_1/Es_5/Sync_FA.png>] [7 <./img/Lab_1/Es_5/Counter.png>]
+(report_low_power.aux) ) 
+Here is how much of TeX's memory you used:
+ 3146 strings out of 481556
+ 44556 string characters out of 2914337
+ 282496 words of memory out of 3000000
+ 18393 multiletter control sequences out of 15000+200000
+ 535807 words of font info for 35 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 31i,6n,36p,277b,1250s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\TONI\AppData\Local\MiKTeX\2.9\fonts/pk/ljfou
+r/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/TONI/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/TONI/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/
+TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb
+><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmr10.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmr12.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr17.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/TONI/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/TONI/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/TON
+I/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on report_low_power.pdf (8 pages, 427893 bytes).
+PDF statistics:
+ 91 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+
