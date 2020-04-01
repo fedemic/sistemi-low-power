@@ -3,8 +3,10 @@
 % Packages
 \usepackage{graphicx} % Usato per \includegraphics 
 \usepackage{titlesec} % Usato per modificare/rimuovere le scritte Capitolo 1,2 ecc
-\usepackage[sfdefault]{Roboto}  
-\usepackage[T1]{fontenc}
+\usepackage{textcomp} % Per caratteri speciali
+\usepackage{listings} % Per VHDL
+%\usepackage[sfdefault]{Roboto}  
+%\usepackage[T1]{fontenc}
 
 % Impostazioni pagina
 \textwidth 15.5cm % larghezza del testo nella pagina
@@ -13,6 +15,8 @@
 \oddsidemargin 0cm % si può spostare il margine dove inizia il testo nella pagina 
 \titleformat{\chapter}[display]
 {\normalfont\bfseries}{}{0pt}{\Huge} % Rimuove le scritte Capitolo 1,2 ecc
+\newenvironment{listato}{\footnotesize}
+                        {\normalsize }
 
 
 
@@ -149,8 +153,7 @@ nel caso analizzato, si osserva che per un numero di cicli di clock
 superiore a 10000, i dati sono confrontabili con quelli teorici.
 \pagebreak
 
-\section{Calcolo di probabilità e attività: half adder e full adder}
-
+\section{Calcolo di probabilità e attività: half adder e full adder} % DA FINIRE
 Dalle tavole di verità di Half Adder e Full Adder si ottengono le seguenti funzioni:
 \\
 \begin{itemize}
@@ -180,6 +183,87 @@ associate alle uscite e le relative attività.
 	$A(COut) =$
 \end{itemize} 
 \pagebreak
+
+\section{MUX: generazione e propagazione di glitch}
+L'obiettivo di questo esercizio è lo studio delle conseguenze 
+introdotte dai ritardi delle porte, in particolare all'interno del
+multiplexer nella seguente figura.
+\\\\\
+\centerline{\includegraphics[width=5cm]{./img/Lab_1/Es_4/Mux.png}}
+\\\\\
+In questo caso particolare tutte le porte sono esenti da ritardi fatta
+eccezione per l'inverter, caratterizzato da un ritardo di propagazione
+di 0.1 ns.
+\\
+All'interno del file tb\textunderscore mux21\textunderscore
+glitch.vhd è stato possibile identificare la combinazione 
+dei segnali di ingresso con i quali il multiplexer è stato
+testato.
+\\\\
+\begin{listato}
+	\lstinputlisting{./code/Lab_1/Es_4/mux_input_delays.vhd}
+\end{listato}
+In particolare è possibile notare dal codice VHDL sopra riportato
+che inizialmente gli ingressi assumono tutti un valore logico alto.
+Dopo 1ns il segnale S commuta. L'uscita in un caso ideale non dovrebbe
+presentare commutazioni.
+\\
+Si ipotizza che, a causa del ritardo di propagazione introdotto dall'
+inverter, vi è un intervallo temporale in cui i nodi interni X e Z 
+assumono entrambi un valore logico basso, portando quindi l'uscita a 0.
+\\
+Attraverso una simulazione ModelSim è stato possibile osservare
+attraverso le waveforms il comportamento reale dei segnali. Il risultato
+di tale simulazione è riportato nella seguente immagine.
+\\\\
+\centerline{\includegraphics[width=10cm]{./img/Lab_1/Es_4/Glitch.png}}
+\newpage
+E' possibile visualizzare direttamente sulla waveform dell'uscita Y
+il glitch causato dall'inverter. Tale comportamento è in linea con 
+quanto atteso.
+\\
+Al fine di analizzare altre possibili combinazioni degli ingressi
+che possano generare un glitch in uscita è stata realizzata una 
+mappa di Karnaugh rappresentante la funzione logica del multiplexer.
+\\\\\
+MAPPA DI CARNO'
+\\\\\
+In particolare è possibile notare come, al fine di coprire la mappa
+con il circuito in figura X, siano stati coperti i due implicanti
+rappresentati sulla mappa stessa. In particolare il glitch analizzato
+è dovuto ad una transizione degli ingressi che consegue in un passaggio
+tra un implicante e l'altro. Tale problema potrebbe essere risolto
+andando a coprire, in modo ridondante, con un terzo implicante per evitare
+la transizione precedentemente trattata. 
+\\
+Tale ragionamento porta alla conclusione che l'unica combinazione in grado
+di causare un glitch in uscita sia quella presa in analisi.
+\\\\\
+Essendo i glitch associati a commutazioni di nodi, questi portano un 
+contributo aggiuntivo al consumo totale di potenza dinamica. In particolare
+l'energia sprecata durante queste commutazioni spurie è la somma dei consumi
+durante le due transizioni del segnale. Ciascuna delle due contribuisce alla
+potenza secondo la seguente equazione:
+\\\\
+\centerline{$E = C \cdot V^{2}$}
+\\\\
+Dove C rappresenta la capacità di carico e V la tensione a cui viene caricata
+tale capacità.
+\\
+Metà di tale contributo di energia è usata per caricare o scaricare la
+capacità di carico associata all'uscita, mentre la restante parte viene
+dissipata.
+Di conseguenza il consumo di energia totale associato ad un glitch è 
+dato da:
+\\\\
+\centerline{$E = 2 \cdot C \cdot V^{2}$}
+\\\\
+
+
+
+
+
+
 
 
 

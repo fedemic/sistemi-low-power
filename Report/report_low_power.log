@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.10)  31 MAR 2020 23:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.10)  1 APR 2020 15:21
 entering extended mode
 **./report_low_power.tex
 (report_low_power.tex
@@ -64,75 +64,42 @@ Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \titlewidthlast=\dimen140
 \titlewidthfirst=\dimen141
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/roboto\Roboto.sty"
-
-LaTeX Warning: You have requested package `Roboto',
-               but the package provides `roboto'.
-
-Package: roboto 2019/12/11 (Bob Tennent) Supports Roboto fonts for all LaTeX en
-gines.
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifxetex.sty
-"
-Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
- ("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\iftex.sty"
-Package: iftex 2019/11/07 v1.0c TeX engine tests
-))
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifluatex.st
-y"
-Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
-)
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xkeyval\xkeyval.sty
-"
-Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
-
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval\xkeyval.t
-ex"
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval\xkvutils.
-tex"
-\XKV@toks=\toks16
-\XKV@tempa@toks=\toks17
-)
-\XKV@depth=\count176
-File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-))
 ("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\textcomp.sty"
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-) ("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.sty"
-Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fontaxes\fontaxes.s
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.s
 ty"
-Package: fontaxes 2014/03/23 v1.0d Font selection axes
-LaTeX Info: Redefining \upshape on input line 29.
-LaTeX Info: Redefining \itshape on input line 31.
-LaTeX Info: Redefining \slshape on input line 33.
-LaTeX Info: Redefining \swshape on input line 35.
-LaTeX Info: Redefining \scshape on input line 37.
-LaTeX Info: Redefining \sscshape on input line 39.
-LaTeX Info: Redefining \ulcshape on input line 41.
-LaTeX Info: Redefining \textsw on input line 47.
-LaTeX Info: Redefining \textssc on input line 48.
-LaTeX Info: Redefining \textulc on input line 49.
-))
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.sty"
-Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
-LaTeX Font Info:    Trying to load font information for T1+Roboto-LF on input l
-ine 112.
+\lst@mode=\count176
+\lst@gtempboxa=\box46
+\lst@token=\toks16
+\lst@length=\count177
+\lst@currlwidth=\dimen142
+\lst@column=\count178
+\lst@pos=\count179
+\lst@lostspace=\dimen143
+\lst@width=\dimen144
+\lst@newlines=\count180
+\lst@lineno=\count181
+\lst@maxwidth=\dimen145
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/roboto\t1roboto-lf.
-fd"
-File: T1Roboto-LF.fd 2019/12/11 (autoinst) Font definitions for T1/Roboto-LF.
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.st
+y"
+File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
+\c@lstnumber=\count182
+\lst@skipnumbers=\count183
+\lst@framebox=\box47
 )
-LaTeX Font Info:    Font shape `T1/Roboto-LF/m/n' aliased to
-(Font)              `T1/Roboto-LF/regular/n' on input line 112.
-LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/n' will be
-(Font)              scaled to size 10.0pt on input line 112.
-)
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.c
+fg"
+File: listings.cfg 2019/09/10 1.8c listings configuration
+))
+Package: listings 2019/09/10 1.8c (Carsten Heinz)
+
 ("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backend
 -pdfmode.def"
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count177
-\l__pdf_internal_box=\box46
+\l__kernel_color_stack_int=\count184
+\l__pdf_internal_box=\box48
 )
 
 LaTeX Warning: Unused global option(s):
@@ -141,115 +108,53 @@ LaTeX Warning: Unused global option(s):
 (report_low_power.aux)
 \openout1 = `report_low_power.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
 
 ("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pd
 f.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count178
-\scratchdimen=\dimen142
-\scratchbox=\box47
-\nofMPsegments=\count179
-\nofMParguments=\count180
-\everyMPshowfont=\toks18
-\MPscratchCnt=\count181
-\MPscratchDim=\dimen143
-\MPnumerator=\count182
-\makeMPintoPDFobject=\count183
-\everyMPtoPDFconversion=\toks19
+\scratchcounter=\count185
+\scratchdimen=\dimen146
+\scratchbox=\box49
+\nofMPsegments=\count186
+\nofMParguments=\count187
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count188
+\MPscratchDim=\dimen147
+\MPnumerator=\count189
+\makeMPintoPDFobject=\count190
+\everyMPtoPDFconversion=\toks18
 )
 ("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstop
 df-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/generic/infwarerr\infware
-rr.sty"
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-)
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/grfext\grfext.sty"
-Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
-
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/generic/kvdefinekeys\kvde
-finekeys.sty"
-Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-))
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/kvoptions\kvoptions
-.sty"
-Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
-
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ltxcmds\ltxcmds.s
-ty"
-Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
-)
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/generic/kvsetkeys\kvsetke
-ys.sty"
-Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-))
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pdftexcmds\pdftexcm
-ds.sty"
-Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
-)
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 504.
 )
-\c@mv@tabular=\count184
-\c@mv@boldtabular=\count185
+\c@lstlisting=\count191
 <./img/general/polito.png, id=1, 376.40625pt x 376.40625pt>
 File: ./img/general/polito.png Graphic file (type png)
 <use ./img/general/polito.png>
-Package pdftex.def Info: ./img/general/polito.png  used on input line 26.
+Package pdftex.def Info: ./img/general/polito.png  used on input line 30.
 (pdftex.def)             Requested size: 85.35826pt x 85.35973pt.
-LaTeX Font Info:    Font shape `T1/Roboto-LF/m/n' aliased to
-(Font)              `T1/Roboto-LF/regular/n' on input line 28.
-LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/n' will be
-(Font)              scaled to size 14.4pt on input line 28.
-LaTeX Font Info:    Font shape `T1/Roboto-LF/m/n' aliased to
-(Font)              `T1/Roboto-LF/regular/n' on input line 32.
-LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/n' will be
-(Font)              scaled to size 24.88pt on input line 32.
-LaTeX Font Info:    Font shape `T1/Roboto-LF/b/n' aliased to
-(Font)              `T1/Roboto-LF/bold/n' on input line 32.
-LaTeX Font Info:    Font shape `T1/Roboto-LF/bold/n' will be
-(Font)              scaled to size 24.88pt on input line 32.
-LaTeX Font Info:    Font shape `T1/Roboto-LF/m/n' aliased to
-(Font)              `T1/Roboto-LF/regular/n' on input line 34.
-LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/n' will be
-(Font)              scaled to size 17.28pt on input line 34.
-LaTeX Font Info:    Font shape `T1/Roboto-LF/b/n' aliased to
-(Font)              `T1/Roboto-LF/bold/n' on input line 34.
-LaTeX Font Info:    Font shape `T1/Roboto-LF/bold/n' will be
-(Font)              scaled to size 17.28pt on input line 34.
  [1
 
 
 {C:/Users/TONI/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./img/genera
-l/polito.png>]
-LaTeX Font Info:    Font shape `T1/Roboto-LF/b/n' aliased to
-(Font)              `T1/Roboto-LF/bold/n' on input line 48.
-LaTeX Font Info:    Font shape `T1/Roboto-LF/bold/n' will be
-(Font)              scaled to size 10.0pt on input line 48.
- (report_low_power.toc
+l/polito.png>] (report_low_power.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -262,131 +167,198 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 ]
 Chapter 1.
-LaTeX Font Info:    Font shape `T1/Roboto-LF/b/n' aliased to
-(Font)              `T1/Roboto-LF/bold/n' on input line 54.
-LaTeX Font Info:    Font shape `T1/Roboto-LF/bold/n' will be
-(Font)              scaled to size 14.4pt on input line 54.
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--67
+Underfull \hbox (badness 10000) in paragraph at lines 60--71
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--67
-
- []
-
-LaTeX Font Info:    Trying to load font information for TS1+Roboto-LF on input 
-line 69.
-
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/roboto\ts1roboto-lf
-.fd"
-File: TS1Roboto-LF.fd 2019/12/11 (autoinst) Font definitions for TS1/Roboto-LF.
-
-)
-LaTeX Font Info:    Font shape `TS1/Roboto-LF/m/n' aliased to
-(Font)              `TS1/Roboto-LF/regular/n' on input line 69.
-LaTeX Font Info:    Font shape `TS1/Roboto-LF/regular/n' will be
-(Font)              scaled to size 10.0pt on input line 69.
-
-Underfull \hbox (badness 10000) in paragraph at lines 82--95
+Underfull \hbox (badness 10000) in paragraph at lines 60--71
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--122
+Underfull \hbox (badness 10000) in paragraph at lines 86--99
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--126
 
  []
 
 [2
 
 ]
-<./img/Lab_1/Es_1/Grafici_Es_1.png, id=20, 841.7046pt x 631.158pt>
+<./img/Lab_1/Es_1/Grafici_Es_1.png, id=22, 841.7046pt x 631.158pt>
 File: ./img/Lab_1/Es_1/Grafici_Es_1.png Graphic file (type png)
 <use ./img/Lab_1/Es_1/Grafici_Es_1.png>
 Package pdftex.def Info: ./img/Lab_1/Es_1/Grafici_Es_1.png  used on input line 
-144.
+148.
 (pdftex.def)             Requested size: 426.79134pt x 320.03723pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--151
+Underfull \hbox (badness 10000) in paragraph at lines 144--155
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--151
+Underfull \hbox (badness 10000) in paragraph at lines 144--155
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--151
+Underfull \hbox (badness 10000) in paragraph at lines 144--155
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--151
+Underfull \hbox (badness 10000) in paragraph at lines 144--155
 
  []
 
-LaTeX Font Info:    Font shape `T1/Roboto-LF/m/sl' aliased to
-(Font)              `T1/Roboto-LF/regular/sl' on input line 151.
-LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/sl' in size <10> not avail
-able
-(Font)              Font shape `T1/Roboto-LF/regular/it' tried instead on input
- line 151.
-LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/it' will be
-(Font)              scaled to size 10.0pt on input line 151.
 [3 <./img/Lab_1/Es_1/Grafici_Es_1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 154--156
+Underfull \hbox (badness 10000) in paragraph at lines 157--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--163
+Underfull \hbox (badness 10000) in paragraph at lines 163--166
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--167
+Underfull \hbox (badness 10000) in paragraph at lines 167--170
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--173
+Underfull \hbox (badness 10000) in paragraph at lines 171--176
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--173
+Underfull \hbox (badness 10000) in paragraph at lines 171--176
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--181
+Underfull \hbox (badness 10000) in paragraph at lines 176--184
 
  []
 
-[4] (report_low_power.aux) ) 
+[4]
+<./img/Lab_1/Es_4/Mux.png, id=31, 320.69812pt x 252.19218pt>
+File: ./img/Lab_1/Es_4/Mux.png Graphic file (type png)
+<use ./img/Lab_1/Es_4/Mux.png>
+Package pdftex.def Info: ./img/Lab_1/Es_4/Mux.png  used on input line 192.
+(pdftex.def)             Requested size: 142.26378pt x 111.8769pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--204
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--204
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--204
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--204
+
+ []
+
+(code/Lab_1/Es_4/mux_input_delays.vhd
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 1
+.
+
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omlcmr.fd"
+File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <8> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1.
+)
+<./img/Lab_1/Es_4/Glitch.png, id=32, 395.97937pt x 338.01282pt>
+File: ./img/Lab_1/Es_4/Glitch.png Graphic file (type png)
+<use ./img/Lab_1/Es_4/Glitch.png>
+Package pdftex.def Info: ./img/Lab_1/Es_4/Glitch.png  used on input line 219.
+(pdftex.def)             Requested size: 284.52756pt x 242.87906pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--220
+
+ []
+
+[5 <./img/Lab_1/Es_4/Mux.png> <./img/Lab_1/Es_4/Glitch.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 221--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--261
+
+ []
+
+[6] (report_low_power.aux) ) 
 Here is how much of TeX's memory you used:
- 2995 strings out of 481556
- 49957 string characters out of 2914337
- 279640 words of memory out of 3000000
- 18198 multiletter control sequences out of 15000+200000
- 579303 words of font info for 43 fonts, out of 3000000 for 9000
+ 3133 strings out of 481556
+ 44199 string characters out of 2914337
+ 282496 words of memory out of 3000000
+ 18383 multiletter control sequences out of 15000+200000
+ 535807 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,6n,39p,277b,290s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fo
-nts/enc/dvips/roboto/rbto_b5rac7.enc}{C:/Users/TONI/AppData/Local/Programs/MiKT
-eX 2.9/fonts/enc/dvips/roboto/rbto_ocbbsb.enc}<C:/Users/TONI/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/google/roboto/Roboto-Bold.pfb><C:/Users/TONI/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/google/roboto/Roboto-Italic.pfb><C:/Use
-rs/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/google/roboto/Roboto-Regu
-lar.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmmi10.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmr10.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on report_low_power.pdf (5 pages, 323383 bytes).
+ 31i,6n,36p,277b,1250s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\TONI\AppData\Local\MiKTeX\2.9\fonts/pk/l
+jfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/TONI/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/TONI/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/TONI/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Us
+ers/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8
+.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmr10.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmr12.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/TONI/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/TONI/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/TONI/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users
+/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb>
+Output written on report_low_power.pdf (7 pages, 393768 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
+ 84 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
