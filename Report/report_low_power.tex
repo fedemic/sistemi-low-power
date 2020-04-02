@@ -7,6 +7,7 @@
 \usepackage{listings} % Usato per VHDL
 \usepackage{xcolor} % Usato per i colori
 \usepackage{amsmath}	% usato per visualizzare e avere comandi sulle equazioni
+\usepackage{booktabs} % usato per gestire le tabelle, multicolonne
 %\usepackage[sfdefault]{Roboto}
 %\usepackage[T1]{fontenc}
 
@@ -92,10 +93,9 @@ ingressi delle porte, rendendo questi ultimi equiprobabili e statisticamente
 indipendenti.
 \\
 In particolare, è possibile ricavare la switching activity delle uscite dividendo 
-il numero di commutazioni per il numero di cicli di clock simulati.
-\\
-Sono riportati i seguenti valori:
-\\
+il numero di commutazioni per il numero di cicli di clock simulati.\\
+\newpage
+Sono riportati i seguenti valori:\\
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|} %numero di colonne
  	\hline % tira una riga
@@ -173,76 +173,111 @@ associate alle uscite e le relative attività.
 	$A(S) = 2 \cdot P(S=1) \cdot (1-P(S=1))$ \\
 	$A(Cout) = 2 \cdot P(Cout=1) \cdot (1-P(Cout=1))$ 
 	\item \textbf{Full adder} \\
+	\textcolor{red}{DA AGGIUSTARE}
 	\begin{align*}
 	P(S=1) & = P(A=1) \cdot(1-P(B=1)) \cdot (1-P(Cin=1)) + \\ 
 	          & + P(B=1) \cdot(1-P(A=1)) \cdot (1-P(Cin=1)) + \\
 	          & + P(Cin=1) \cdot (1-P(A=1)) \cdot(1-P(B=1)) + \\
 	          & + P(A=1) \cdot P(B=1) \cdot P(Cin=1)
 	  \end{align*}   
-	  
-	$P(Cout=1) =$\\
-	$A(S) = 2 \cdot P(S=1) \cdot (1-P(S=1))$ 
+	 \begin{align*}
+	 	P(Cout=1) & = P(A=1) \cdot P(B=1) \cdot (1-P(Cin=1)) +\\
+	 					& + P(Cin=1) \cdot P(A=1) \cdot (1-P(B=1)) +\\
+	 					& + P(Cin=1) \cdot P(B=1) \cdot (1-P(A=1)) +\\
+	 					& + P(A=1) \cdot P(B=1) \cdot P(Cin=1)
+	 \end{align*}
+	$A(S) = 2 \cdot P(S=1) \cdot (1-P(S=1))$ \\
 	$A(Cout) =2 \cdot P(Cout=1) \cdot (1-P(Cout=1))$ 
 \end{itemize} 
-\pagebreak
+I risultati ottenuti sono riportati nella seguente tabella.
+\vspace{0.3cm}
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|}
+	\multicolumn{5}{c}{P(A) = P(B) = 0.5 }\\
+	\hline
+	  & P(S=1) & A(S) & P(Cout=1) & A(Cout) \\ 
+	\hline
+	HA & 0.5 & 0.5 & 0.25 & 0.375 \\
+	\hline
+	FA & 0.5 & 0.5 & 0.5 & 0.5 \\
+	\hline
+	\end{tabular}
+\end{center}
+\newpage
 Sfruttando i risultati ottenuti per il singolo full adder, è possibile ottenere le probabilità e le attività di un ripple carry adder di parallelismo 8 bit.
 \\\\\\
 \centerline{\includegraphics[width=15cm]{./img/Lab_1/Es_2/RCA_8_bit.png}}
 \\\\\\
 Si considerano ingressi equiprobabili con eccezione del carry in ingresso al primo full adder, fissato a 0.\\
 I risultati ottenuti sono riportati nella seguente tabella.
-\begin{table}
+\vspace{0.3cm}
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
 \hline
- & S7 & S6 & S5 & S4 \\
+\multicolumn{10}{c}{P(A) = P(B) = 0.5}\\
 \hline
-topolino & minni & tip & tap \\
+ & S7 & S6 & S5 & S4 & S3 & S2 & S1 & S0 & Cout \\
 \hline
+P(Y=1) & 0.5 & 0.5 & 0.5 & 0.5 & 0.5 & 0.5 & 0.5 & 0.5 & 0.4980 \\
 \hline
-paperino & paperina & orazio & clarabella \\
+A(Y) & 0.5 & 0.5 & 0.5 & 0.5 & 0.5 & 0.5 & 0.5 & 0.5 & 0.5 \\
 \hline
-qui & quo & qua & ottoperotto \\
-zio paperone & gastone & paperoga & battista \\ 
-\hline 
 \end{tabular}
 \end{center}
-\caption{A caption for your table}
-\label{A-lable-for-your-table}
-\end{table}
+\vspace{0.3cm}
 Variando le probabilità associate agli ingressi, in particolare considerando P(A=1) = 0.4 e P(B=1) = 0.6, si ottengono i seguenti risultati.
-\begin{table}
+\vspace{0.3cm}
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
 \hline
- & S7 & S6 & S5 & S4 \\
+\multicolumn{10}{c}{P(A) = P(B) = 0.5}\\
 \hline
-topolino & minni & tip & tap \\
+ & S7 & S6 & S5 & S4 & S3 & S2 & S1 & S0 & Cout \\
 \hline
+P(Y=1) & 0.52 & 0.5104 & 0.5054 & 0.5028 & 0.5015 & 0.5008 & 0.5004 & 0.5002 & 0.4973 \\
 \hline
-paperino & paperina & orazio & clarabella \\
+A(Y) & 0.4992 & 0.4998 & 0.4999 & 0.5 & 0.5 & 0.5 & 0.5 & 0.5 & 0.5 \\
 \hline
-qui & quo & qua & ottoperotto \\
-zio paperone & gastone & paperoga & battista \\ 
-\hline 
 \end{tabular}
 \end{center}
-\caption{A caption for your table}
-\label{A-lable-for-your-table}
-\end{table}
-E' possibile notare come la probabilità delle varie uscite sia funzione delle probabilità degli ingressi.
-I particolare, la probabilità delle uscite relative alle somme aumenta. Commenti su tabella
-Al fine di avere un riscontro sui dati stimati, sono state effettuate due simulazioni tramite ModelSim: in un primo caso è stato considerato un ritardo solamente sulle uscite relative alla somme; successivamente è stato introdotto un ulteriore ritardo anche sul carry in uscita di ogni FA.
-Come descritto precedentemente, il file fornito da Modelsim riporta il numero di commutazioni dei segnali, di conseguenza l'attività è stata calcolata come prima.
-TABELLA ES 2 ANALISI
-Si nota come la prima simulazione abbia fornito dati comparabili con quelli precedentemente stimati. Nella seconda simulazione, invece, la presenza di un ritardo sul carry di uscita di ogni FA ha come conseguenza un generale aumento dell'attività delle uscite di somma. Tale ritardo causa infatti glitch, responsabili dell'aumento della Esw.
-Tale risultato è particolarmente evidente considerando la Esw totale dei due casi: si nota che la presenza del ritardo raddoppia tale valore.
+\vspace{0.3cm}
+È possibile notare come la probabilità delle varie uscite sia funzione delle probabilità degli ingressi.
+In particolare, la probabilità delle uscite relative alle somme aumenta. Si nota che ai bit relativi agli stadi iniziali sono associati valori che non si discostano molto dal caso di ingressi equiprobabili mentre i bit più significativi subiscono una variazione più marcata.\\\\
+Al fine di avere un riscontro sui dati stimati, sono state effettuate due simulazioni tramite ModelSim: in un primo caso è stato considerato un ritardo solamente sulle uscite relative alla somme; successivamente è stato introdotto un ulteriore ritardo anche sul carry in uscita di ogni full adder.
+Come descritto precedentemente, il file fornito da Modelsim riporta il numero di commutazioni dei segnali, di conseguenza l'attività è stata calcolata in modo analogo all'esercizio precedente.\\
+\vspace{0.3cm}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+ & A(S7) & A(S6) & A(S5) & A(S4) & A(S3) & A(S2) & A(S1) & A(S0) & A(Cout) \\
+\hline
+Sim. 1 & 0.42 & 0.51 & 0.525 & 0.425 & 0.49 & 0.505 & 0.51 & 0.46 & 0.615 \\
+\hline
+Sim. 2 & 1.25 & 1.21 & 1.065 & 0.995 & 1.05 & 1.005 & 0.89 & 0.46 & 0.615 \\
+\hline
+\end{tabular}
+\end{center}
+\vspace{0.3cm}
+Si nota come la prima simulazione abbia fornito dati comparabili con quelli precedentemente stimati. Nella seconda simulazione, invece, la presenza di un ritardo sul carry di uscita di ogni full adder ha come conseguenza un generale aumento dell'attività delle uscite di somma. Tale ritardo causa infatti glitch, responsabili dell'aumento della E\textsubscript{sw}.\\
+Tale risultato è particolarmente evidente considerando la E\textsubscript{sw} totale dei due casi: si nota che la presenza del ritardo raddoppia tale valore.\\\\
+\centerline{$A(S) = \sum\limits_{i=0}^N-1 A(S\textsubscript{i})$}\\
+\vspace{0.2cm}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+ & Sim. 1 & Sim. 2 \\
+\hline
+A(S) & 3.845 & 7.925\\
+\hline
+\end{tabular}
+\end{center}
+\vspace{0.3cm}
 \centerline{\includegraphics[width=12cm]{./img/Lab_1/Es_2/Glitch.png}}
-E' possibile notare, attraverso le waveforms, la presenza di commutazioni indesiderate nel secondo caso.
+\vspace{0.3cm}
+E' possibile notare, attraverso le waveforms, la presenza di commutazioni indesiderate nel secondo caso.\\\\
  \centerline{\includegraphics[width=12cm]{./img/Lab_1/Es_2/Glitch_worst_case.png}}
 \textcolor{red}{COMMENTO SU WORST CASE PER COMMUTAZIONI}
 \newpage
-
 \section{Sintesi e analisi di potenza di un RCA}
 E' possibile effettuare una stima di potenza avanzata attraverso la piattaforma Synopsys. 
 Partendo infatti dalla descrizione VHDL del RCA fornito, il software è in grado di compiere una sintesi ottimizzata e valutare parametri del circuito basandosi su una libreria di celle caratterizzate dal punto di vista di area, consumi e ritardi.
@@ -287,11 +322,12 @@ di 0.1 ns.
 All'interno del file tb\textunderscore mux21\textunderscore
 glitch.vhd è stato possibile identificare la combinazione 
 dei segnali di ingresso con i quali il multiplexer è stato
-testato.
-\\\\
+testato.\\
+\begin{center}
 \begin{listato}
 	\lstinputlisting{./code/Lab_1/Es_4/mux_input_delays.vhd}
 \end{listato}
+\end{center}
 In particolare è possibile notare dal codice VHDL sopra riportato
 che inizialmente gli ingressi assumono tutti un valore logico alto.
 Dopo 1ns il segnale S commuta. L'uscita in un caso ideale non dovrebbe
@@ -303,9 +339,9 @@ assumono entrambi un valore logico basso, portando quindi l'uscita a 0.
 \\
 Attraverso una simulazione ModelSim è stato possibile osservare
 attraverso le waveforms il comportamento reale dei segnali. Il risultato
-di tale simulazione è riportato nella seguente immagine.
+di tale simulazione è riportato nella seguente immagine.\\
 \\\\
-\centerline{\includegraphics[width=10cm]{./img/Lab_1/Es_4/Glitch.png}}
+\centerline{\includegraphics[width=7cm]{./img/Lab_1/Es_4/Glitch.png}}
 \newpage
 E' possibile visualizzare direttamente sulla waveform dell'uscita Y
 il glitch causato dall'inverter. Tale comportamento è in linea con 
@@ -349,7 +385,6 @@ dato da:
 \\\\
 \centerline{$E = 2 \cdot C \cdot V^{2}$}
 \\\\
-
 \section{Calcolo di probabilità e attività: contatore sincrono}
 Nella prima parte di questo esercicio è stato analizzato il timing del blocco 
 rappresentato nella figura seguente.
@@ -521,7 +556,5 @@ gli stadi abbiano raggiunto un valore stabile.
                 - Plot segnali MUX (fatto da noi) \\
                 - Plot dei segnali del blocchetto contatore e dei primi bit del contatore (fatto da noi)\\
                 - Completare le tabelle \\
-                - Revisione grafica}    
-                
-
+                - Revisione grafica}                
 \end{document}
