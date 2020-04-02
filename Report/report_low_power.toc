@@ -1,5 +1,6 @@
-\contentsline {chapter}{\numberline {1}Laboratorio 1}{2}%
-\contentsline {section}{\numberline {1.1}Calcolo di probabilità e attività: porte logiche elementari}{2}%
-\contentsline {section}{\numberline {1.2}Calcolo di probabilità e attività: half adder e full adder}{4}%
-\contentsline {section}{\numberline {1.3}MUX: generazione e propagazione di glitch}{5}%
-\contentsline {section}{\numberline {1.4}Calcolo di probabilità e attività: contatore sincrono}{6}%
+\contentsline {chapter}{\numberline {1}Laboratorio 1}{2}% 
+\contentsline {section}{\numberline {1.1}Calcolo di probabilit\IeC {\`a} e attivit\IeC {\`a}: porte logiche elementari}{2}% 
+\contentsline {section}{\numberline {1.2}Calcolo di probabilit\IeC {\`a} e attivit\IeC {\`a}: half adder e full adder}{5}% 
+\contentsline {section}{\numberline {1.3}Sintesi e analisi di potenza di un RCA}{8}% 
+\contentsline {section}{\numberline {1.4}MUX: generazione e propagazione di glitch}{9}% 
+\contentsline {section}{\numberline {1.5}Calcolo di probabilit\IeC {\`a} e attivit\IeC {\`a}: contatore sincrono}{12}% 

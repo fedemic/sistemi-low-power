@@ -1,4 +1,4 @@
-\documentclass[10pt,  english, makeidx, a4paper, titlepage, oneside]{book}
+\documentclass[11pt,  english, makeidx, a4paper, titlepage, oneside]{book}
 
 % Packages
 \usepackage{graphicx} % Usato per \includegraphics 
@@ -6,6 +6,7 @@
 \usepackage{textcomp} % Usaato per caratteri speciali
 \usepackage{listings} % Usato per VHDL
 \usepackage{xcolor} % Usato per i colori
+\usepackage{amsmath}	% usato per visualizzare e avere comandi sulle equazioni
 %\usepackage[sfdefault]{Roboto}
 %\usepackage[T1]{fontenc}
 
@@ -16,10 +17,8 @@
 \oddsidemargin 0cm % si può spostare il margine dove inizia il testo nella pagina 
 \titleformat{\chapter}[display]
 {\normalfont\bfseries}{}{0pt}{\Huge} % Rimuove le scritte Capitolo 1,2 ecc
-\newenvironment{listato}{\footnotesize}
-                        {\normalsize }
-
-
+\newenvironment{listato}{\footnotesize} {\normalsize }
+\renewcommand{\arraystretch}{1.4} % modifica alteza delle celle in tabella
 
 
 % inizio del documento
@@ -114,6 +113,7 @@ Sono riportati i seguenti valori:
  	\hline
 	\end{tabular}
 \end{center}
+\vspace{0.3cm}
 E' possibile stimare la switching activty dividendo il numero 
 di commutazioni di un nodo per il numero di colpi di clock della
 relativa simulazione.
@@ -145,9 +145,9 @@ I risultati dei calcoli sono riportati nella seguente tabella.
 Per garantire una migliore visualizzazione dei dati ottenuti 
 al variare del tempo di simulazione, sono stati realizzati 
 i seguenti grafici.
-\\\\\\
+\\\\
 \centerline{\includegraphics[width=15cm]{./img/Lab_1/Es_1/Grafici_Es_1.png}}
-\\\\\\
+\\\\
 Si osserva che all'aumentare del tempo di simulazione la stima 
 dell'attività risulta a man mano più accurata. In particolare, 
 nel caso analizzato, si osserva che per un numero di cicli di clock 
@@ -156,7 +156,6 @@ superiore a 10000, i dati sono confrontabili con quelli teorici.
 
 \section{Calcolo di probabilità e attività: half adder e full adder} % DA FINIRE
 Dalle tavole di verità di Half Adder e Full Adder si ottengono le seguenti funzioni:
-\\
 \begin{itemize}
 	\item \textbf{Half adder} \\
 	S = A XOR B \\
@@ -167,24 +166,113 @@ Dalle tavole di verità di Half Adder e Full Adder si ottengono le seguenti funz
 \end{itemize}
 Partendo dalle funzioni delle uscite è stato possibile ricavare le probabilità
 associate alle uscite e le relative attività.
-\\
 \begin{itemize}
-	\item \textbf{Half adder}\\\\
+	\item \textbf{Half adder}\\
 	$P(S=1) = P(A=1) \cdot ((1-P(B=1)) + P(B=1) \cdot (1-P(A=1))$ \\
 	$P(Cout=1) = P(A=1) \cdot P(B=1)$ \\
 	$A(S) = 2 \cdot P(S=1) \cdot (1-P(S=1))$ \\
-	$A(Cout) = 2 \cdot P(Cout=1) \cdot (1-P(Cout=1))$ \\
-	\item \textbf{Full adder} \\\\
-	$P(S=1) = P(A=1) \cdot(1-P(B=1)) \cdot (1-P(Cin=1)) + \\ 
-	          P(B=1) \cdot(1-P(A=1)) \cdot (1-P(Cin=1)) + \\
-	          P(Cin=1) \cdot (1-P(A=1)) \cdot(1-P(B=1)) + \\
-	          P(A=1) \cdot P(B=1) \cdot P(Cin=1)$	          
-	$P(Cout=1) =$
-	$A(S) =$
-	$A(COut) =$
+	$A(Cout) = 2 \cdot P(Cout=1) \cdot (1-P(Cout=1))$ 
+	\item \textbf{Full adder} \\
+	\begin{align*}
+	P(S=1) & = P(A=1) \cdot(1-P(B=1)) \cdot (1-P(Cin=1)) + \\ 
+	          & + P(B=1) \cdot(1-P(A=1)) \cdot (1-P(Cin=1)) + \\
+	          & + P(Cin=1) \cdot (1-P(A=1)) \cdot(1-P(B=1)) + \\
+	          & + P(A=1) \cdot P(B=1) \cdot P(Cin=1)
+	  \end{align*}   
+	  
+	$P(Cout=1) =$\\
+	$A(S) = 2 \cdot P(S=1) \cdot (1-P(S=1))$ 
+	$A(Cout) =2 \cdot P(Cout=1) \cdot (1-P(Cout=1))$ 
 \end{itemize} 
 \pagebreak
+Sfruttando i risultati ottenuti per il singolo full adder, è possibile ottenere le probabilità e le attività di un ripple carry adder di parallelismo 8 bit.
+\\\\\\
+\centerline{\includegraphics[width=15cm]{./img/Lab_1/Es_2/RCA_8_bit.png}}
+\\\\\\
+Si considerano ingressi equiprobabili con eccezione del carry in ingresso al primo full adder, fissato a 0.\\
+I risultati ottenuti sono riportati nella seguente tabella.
+\begin{table}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+ & S7 & S6 & S5 & S4 \\
+\hline
+topolino & minni & tip & tap \\
+\hline
+\hline
+paperino & paperina & orazio & clarabella \\
+\hline
+qui & quo & qua & ottoperotto \\
+zio paperone & gastone & paperoga & battista \\ 
+\hline 
+\end{tabular}
+\end{center}
+\caption{A caption for your table}
+\label{A-lable-for-your-table}
+\end{table}
+Variando le probabilità associate agli ingressi, in particolare considerando P(A=1) = 0.4 e P(B=1) = 0.6, si ottengono i seguenti risultati.
+\begin{table}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+ & S7 & S6 & S5 & S4 \\
+\hline
+topolino & minni & tip & tap \\
+\hline
+\hline
+paperino & paperina & orazio & clarabella \\
+\hline
+qui & quo & qua & ottoperotto \\
+zio paperone & gastone & paperoga & battista \\ 
+\hline 
+\end{tabular}
+\end{center}
+\caption{A caption for your table}
+\label{A-lable-for-your-table}
+\end{table}
+E' possibile notare come la probabilità delle varie uscite sia funzione delle probabilità degli ingressi.
+I particolare, la probabilità delle uscite relative alle somme aumenta. Commenti su tabella
+Al fine di avere un riscontro sui dati stimati, sono state effettuate due simulazioni tramite ModelSim: in un primo caso è stato considerato un ritardo solamente sulle uscite relative alla somme; successivamente è stato introdotto un ulteriore ritardo anche sul carry in uscita di ogni FA.
+Come descritto precedentemente, il file fornito da Modelsim riporta il numero di commutazioni dei segnali, di conseguenza l'attività è stata calcolata come prima.
+TABELLA ES 2 ANALISI
+Si nota come la prima simulazione abbia fornito dati comparabili con quelli precedentemente stimati. Nella seconda simulazione, invece, la presenza di un ritardo sul carry di uscita di ogni FA ha come conseguenza un generale aumento dell'attività delle uscite di somma. Tale ritardo causa infatti glitch, responsabili dell'aumento della Esw.
+Tale risultato è particolarmente evidente considerando la Esw totale dei due casi: si nota che la presenza del ritardo raddoppia tale valore.
+\centerline{\includegraphics[width=12cm]{./img/Lab_1/Es_2/Glitch.png}}
+E' possibile notare, attraverso le waveforms, la presenza di commutazioni indesiderate nel secondo caso.
+ \centerline{\includegraphics[width=12cm]{./img/Lab_1/Es_2/Glitch_worst_case.png}}
+\textcolor{red}{COMMENTO SU WORST CASE PER COMMUTAZIONI}
+\newpage
 
+\section{Sintesi e analisi di potenza di un RCA}
+E' possibile effettuare una stima di potenza avanzata attraverso la piattaforma Synopsys. 
+Partendo infatti dalla descrizione VHDL del RCA fornito, il software è in grado di compiere una sintesi ottimizzata e valutare parametri del circuito basandosi su una libreria di celle caratterizzate dal punto di vista di area, consumi e ritardi.
+Per poter stimare la potenza dinamica è necessario conoscere la frequenza di lavoro del circuito, ottenuta valutando il percorso combinatorio con ritardo maggiore: è possibile valutare tale parametro del circuito attraverso un timing report.
+Il ritardo massimo riportati è pari a 0.78ns, di conseguenza è stato scelto un periodo di clock pari a 1ns.\\
+Successivamente è possibile procedere con l'analisi relativa alla potenza.
+Il comando power report consente di ottenere una generica stima della potenza dissipata dal circuito, distinguendo tre contributi:
+\begin{itemize}
+\item \textbf{leakage}: consumo statico dovuto alle correnti di leakage dei dispositivi utilizzati
+\item \textbf{internal}: contributo alla potenza dinamica totale dovuto alla corrente di corto circuito
+\item \textbf{switching}: contributo alla potenza dinamica dovuto alle commutazioni dei nodi e alle relative cariche/scariche delle capacità
+\end{itemize}
+Nella seguente tabella è riportata la suddivisione dei tre contributi.
+TABELLA
+L'apporto maggiore al consumo totale è dato dalla potenza dinamica, in particolare dal consumo della potenza interna.
+E' interessante notare la suddivisione del consumo in potenza per i vari moduli interni (fa) dell'RCA. E' possibile ottenere ciò tramite un power report di tipo gerarchico. La distribuzione dei consumi è riportata nella seguente tabella.
+TABELLA
+E' possibile notare come la suddivisione risulti simile per tutti i FA fatta eccezione per FA 8. In particolare si differenzia dagli altri per il consumo relativo alla potenza di switch. Si ipotizza che quest'ultima risulti inferiore rispetto agli altri full adder a causa del minor carico di uscita.
+E' inoltre possibile approfondire l'analisi di potenza considerando i contributi interni dei singoli moduli. In particolare, è possibile mettere in luce i contributi dei nodi interni ai singoli full adder, sempre suddivisi nei tre contributi precedentemente descritti.
+in particolare, per comprendere l'origine del consumo inferiore del FA8, quest'ultimo è stato analizzato come cella ed è stato confrontato con il FA1
+TABELLA
+la differenza nel consumo di potenza di switching è individuata nel nodo U2, legato al carry in uscita.
+\includegraphics[width=6cm]{./img/Lab_1/Es_3/Full_adder.png}
+E' possibile ottenere informazioni aggiuntive sul calcolo della potenza di switching con un'analisi di tipo verbose. In tale analisi, in particolare, sono riportati i contributi capacitivi necessari al calcolo della switching power, espressi nodo per nodo.
+TABELLA
+E' possibile notare come il nodo legato al carry in uscita presenti una capacità inferiore per il FA8. Ciò conferma l'ipotesi legata al carico inferiore.
+Analizzando i vari FA con analisi di tipo verbose si nota inoltre che i contributi di capacità relativi ai nodi della somma (U1) siano trascurabili rispetto agli altri contributi.
+DI conseguenza si nota che il contributo di potenza relativo a tale nodo è di un ordine di grandezza inferiore rispetto agli altri.
+CONFRONTO SWITCHING ACTIVITY
+CONFRONTO VERBOSE RCA
 \section{MUX: generazione e propagazione di glitch}
 L'obiettivo di questo esercizio è lo studio delle conseguenze 
 introdotte dai ritardi delle porte, in particolare all'interno del
