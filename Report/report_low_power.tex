@@ -249,7 +249,7 @@ Variando le probabilità associate agli ingressi, in particolare considerando P(
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
 \hline
-\multicolumn{10}{c}{P(A) = P(B) = 0.5}\\
+\multicolumn{10}{c}{P(A) = 0.6 e P(B) = 0.4}\\
 \hline
  & S7 & S6 & S5 & S4 & S3 & S2 & S1 & S0 & Cout \\
 \hline
@@ -410,7 +410,7 @@ E' possibile notare come la suddivisione risulti simile per tutti i FA fatta ecc
 E' inoltre possibile approfondire l'analisi di potenza considerando i contributi interni dei singoli moduli. In particolare, è possibile mettere in luce i contributi dei nodi interni ai singoli full adder, sempre suddivisi nei tre contributi precedentemente descritti.
 in particolare, per comprendere l'origine del consumo inferiore del FA8, quest'ultimo è stato analizzato come cella ed è stato confrontato con il FA1.
 \\\\
-TABELLA
+\textcolor{red}{TABELLA}
 \\\\
 la differenza nel consumo di potenza di switching è individuata nel nodo U2, legato al carry in uscita.
 \\
@@ -418,16 +418,16 @@ la differenza nel consumo di potenza di switching è individuata nel nodo U2, le
 \\
 E' possibile ottenere informazioni aggiuntive sul calcolo della potenza di switching con un'analisi di tipo verbose. In tale analisi, in particolare, sono riportati i contributi capacitivi necessari al calcolo della switching power, espressi nodo per nodo.
 \\\\
-TABELLA
+\textcolor{red}{TABELLA}
 \\\\
 E' possibile notare come il nodo legato al carry in uscita presenti una capacità inferiore per il FA8. Ciò conferma l'ipotesi legata al carico inferiore.
 \\
 Analizzando i vari FA con analisi di tipo verbose si nota inoltre che i contributi di capacità relativi ai nodi della somma (U1) siano trascurabili rispetto agli altri contributi.
 Di conseguenza si nota che il contributo di potenza relativo a tale nodo è di un ordine di grandezza inferiore rispetto agli altri.
 \\\\
-CONFRONTO SWITCHING ACTIVITY
+\textcolor{red}{CONFRONTO SWITCHING ACTIVITY}
 \\\\
-CONFRONTO VERBOSE RCA
+\textcolor{red}{CONFRONTO VERBOSE RCA}
 \\\\
 \newpage
 \section{MUX: generazione e propagazione di glitch}
