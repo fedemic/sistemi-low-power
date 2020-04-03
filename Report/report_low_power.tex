@@ -8,13 +8,15 @@
 \usepackage{xcolor} % Usato per i colori
 \usepackage{amsmath}	% usato per visualizzare e avere comandi sulle equazioni
 \usepackage{booktabs} % usato per gestire le tabelle, multicolonne
+\usepackage{chngcntr} 
+\counterwithin{figure}{chapter}
 %\usepackage[sfdefault]{Roboto}
 %\usepackage[T1]{fontenc}
 
 % Impostazioni pagina
 \textwidth 15.5cm % larghezza del testo nella pagina
 \textheight 23cm % altezza del testo nella pagina
-\topmargin -2cm % spazio in più o in meno dall'alto
+\topmargin -1cm % spazio in più o in meno dall'alto
 \oddsidemargin 0cm % si può spostare il margine dove inizia il testo nella pagina 
 \titleformat{\chapter}[display]
 {\normalfont\bfseries}{}{0pt}{\Huge} % Rimuove le scritte Capitolo 1,2 ecc
@@ -60,7 +62,7 @@
 
 Il primo esercizio consiste nel valutare le probabilità e attività di 
 quattro porte logiche elementari: NOT, AND, OR e XOR.
-\\
+\\\\
 Mentre la probabilità di uscita del gate è definita dalla funzione logica
 stessa, la switching activity è valutata allo stesso modo per tutti i casi, 
 mediante la seguente formula:
@@ -93,9 +95,10 @@ ingressi delle porte, rendendo questi ultimi equiprobabili e statisticamente
 indipendenti.
 \\
 In particolare, è possibile ricavare la switching activity delle uscite dividendo 
-il numero di commutazioni per il numero di cicli di clock simulati.\\
+il numero di commutazioni per il numero di cicli di clock simulati.
 \newpage
-Sono riportati i seguenti valori:\\
+Sono riportati i seguenti valori:
+\\
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|} %numero di colonne
  	\hline % tira una riga
@@ -114,14 +117,14 @@ Sono riportati i seguenti valori:\\
 	\end{tabular}
 \end{center}
 \vspace{0.3cm}
-E' possibile stimare la switching activty dividendo il numero 
+E' possibile stimare la switching activity dividendo il numero 
 di commutazioni di un nodo per il numero di colpi di clock della
 relativa simulazione.
 \\
 Dal momento che il parametro Tc si riferisce al numero totale di 
 commutazioni, il numero di cicli di clock è ottenuto dividendo per due
 tale parametro.
-\\
+\\\\
 I risultati dei calcoli sono riportati nella seguente tabella. 
 \\
 \begin{center}
@@ -141,39 +144,51 @@ I risultati dei calcoli sono riportati nella seguente tabella.
 	\hline
 	\end{tabular}
 \end{center}
-\vspace{0.3cm}
+\vspace{1cm}
 Per garantire una migliore visualizzazione dei dati ottenuti 
 al variare del tempo di simulazione, sono stati realizzati 
 i seguenti grafici.
 \\\\
-\centerline{\includegraphics[width=15cm]{./img/Lab_1/Es_1/Grafici_Es_1.png}}
-\\\\
+\centerline{\includegraphics[width=8cm]{./img/Lab_1/Es_1/Inverter.png}
+            \includegraphics[width=8cm]{./img/Lab_1/Es_1/AND.png}}
+\newpage
+
+\centerline{\includegraphics[width=8cm]{./img/Lab_1/Es_1/XOR.png}
+            \includegraphics[width=8cm]{./img/Lab_1/Es_1/OR.png}}
+\vspace{0.5cm}
 Si osserva che all'aumentare del tempo di simulazione la stima 
 dell'attività risulta a man mano più accurata. In particolare, 
 nel caso analizzato, si osserva che per un numero di cicli di clock 
 superiore a 10000, i dati sono confrontabili con quelli teorici.
-\pagebreak
+\newpage
 
 \section{Calcolo di probabilità e attività: half adder e full adder} % DA FINIRE
 Dalle tavole di verità di Half Adder e Full Adder si ottengono le seguenti funzioni:
 \begin{itemize}
 	\item \textbf{Half adder} \\
-	S = A XOR B \\
-	Cout = A AND B
+	\centerline{S = A XOR B} \\
+	\centerline{Cout = A AND B}
 	\item \textbf{Full adder} \\
-	S = A XOR B XOR Cin \\
-	Cout = A AND B AND Cin \\
+	\centerline{S = A XOR B XOR Cin} \\
+	\centerline{Cout = A AND B AND Cin} \\
 \end{itemize}
 Partendo dalle funzioni delle uscite è stato possibile ricavare le probabilità
 associate alle uscite e le relative attività.
 \begin{itemize}
 	\item \textbf{Half adder}\\
-	$P(S=1) = P(A=1) \cdot ((1-P(B=1)) + P(B=1) \cdot (1-P(A=1))$ \\
-	$P(Cout=1) = P(A=1) \cdot P(B=1)$ \\
-	$A(S) = 2 \cdot P(S=1) \cdot (1-P(S=1))$ \\
-	$A(Cout) = 2 \cdot P(Cout=1) \cdot (1-P(Cout=1))$ 
-	\item \textbf{Full adder} \\
-	\textcolor{red}{DA AGGIUSTARE}
+	\begin{align*}
+	P(S=1) = P(A=1) \cdot ((1-P(B=1)) + P(B=1) \cdot (1-P(A=1))
+	\end{align*}
+	\begin{align*}
+	P(Cout=1) = P(A=1) \cdot P(B=1)
+	\end{align*}
+	\begin{align*}
+	A(S) = 2 \cdot P(S=1) \cdot (1-P(S=1))
+	\end{align*}
+    \begin{align*}
+    A(Cout) = 2 \cdot P(Cout=1) \cdot (1-P(Cout=1)) 
+    \end{align*}	
+	\item \textbf{Full adder}
 	\begin{align*}
 	P(S=1) & = P(A=1) \cdot(1-P(B=1)) \cdot (1-P(Cin=1)) + \\ 
 	          & + P(B=1) \cdot(1-P(A=1)) \cdot (1-P(Cin=1)) + \\
@@ -186,8 +201,12 @@ associate alle uscite e le relative attività.
 	 					& + P(Cin=1) \cdot P(B=1) \cdot (1-P(A=1)) +\\
 	 					& + P(A=1) \cdot P(B=1) \cdot P(Cin=1)
 	 \end{align*}
-	$A(S) = 2 \cdot P(S=1) \cdot (1-P(S=1))$ \\
-	$A(Cout) =2 \cdot P(Cout=1) \cdot (1-P(Cout=1))$ 
+	 \begin{align*}
+	 A(S) = & 2 \cdot P(S=1) \cdot (1-P(S=1))
+	 \end{align*}
+	\begin{align*}
+	A(Cout) =2 \cdot P(Cout=1) \cdot (1-P(Cout=1))
+	\end{align*}	
 \end{itemize} 
 I risultati ottenuti sono riportati nella seguente tabella.
 \vspace{0.3cm}
@@ -258,7 +277,8 @@ Sim. 2 & 1.25 & 1.21 & 1.065 & 0.995 & 1.05 & 1.005 & 0.89 & 0.46 & 0.615 \\
 \end{tabular}
 \end{center}
 \vspace{0.3cm}
-Si nota come la prima simulazione abbia fornito dati comparabili con quelli precedentemente stimati. Nella seconda simulazione, invece, la presenza di un ritardo sul carry di uscita di ogni full adder ha come conseguenza un generale aumento dell'attività delle uscite di somma. Tale ritardo causa infatti glitch, responsabili dell'aumento della E\textsubscript{sw}.\\
+Si nota come la prima simulazione abbia fornito dati comparabili con quelli precedentemente stimati. Nella seconda simulazione, invece, la presenza di un ritardo sul carry di uscita di ogni full adder ha come conseguenza un generale aumento dell'attività delle uscite di somma. Tale ritardo causa infatti glitch, responsabili dell'aumento della E\textsubscript{sw}.
+\\\\
 Tale risultato è particolarmente evidente considerando la E\textsubscript{sw} totale dei due casi: si nota che la presenza del ritardo raddoppia tale valore.\\\\
 \centerline{$A(S) = \sum\limits_{i=0}^N-1 A(S\textsubscript{i})$}\\
 \vspace{0.2cm}
@@ -272,15 +292,69 @@ A(S) & 3.845 & 7.925\\
 \end{tabular}
 \end{center}
 \vspace{0.3cm}
-\centerline{\includegraphics[width=12cm]{./img/Lab_1/Es_2/Glitch.png}}
+\centerline{\includegraphics[width=15cm]{./img/Lab_1/Es_2/Glitch.png}}
+\newpage
+E' possibile notare, attraverso le waveforms, la presenza di commutazioni indesiderate nel secondo caso.
+\\\\
+ \centerline{\includegraphics[width=15cm]{./img/Lab_1/Es_2/Glitch_worst_case.png}}
+\\\\
+\textcolor{blue}{In particolare nell'immagine sopra riportata è possibile osservare come i bit relativi all'uscita di somma, a partire dal
+terzo, presentino una continua commutazione fino al raggiungimento del valore logico corretto. La causa di tale comportamento è da ricercare
+nelle transizioni a cui gli ingressi di somma sono stati sottoposti nella simulazione. Le due somme, calcolate una di seguito all'altra,
+sono le seguenti:
 \vspace{0.3cm}
-E' possibile notare, attraverso le waveforms, la presenza di commutazioni indesiderate nel secondo caso.\\\\
- \centerline{\includegraphics[width=12cm]{./img/Lab_1/Es_2/Glitch_worst_case.png}}
-\textcolor{red}{COMMENTO SU WORST CASE PER COMMUTAZIONI}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+& Somma 1 & Somma 2 \\
+\hline
+Addendo 1 & 10101000 & 00000100\\
+\hline
+Addendo 2 & 10101000 & 11111100\\
+\hline
+Risultato & 01010000 & 00000000\\
+\hline
+Carry in & 01010000 & \\
+\hline
+\end{tabular}
+\end{center}
+\vspace{0.3cm}
+In particolare è possibile osservare che la Somma 2 è soggetta ad una propagazione di carry dal terzo bit in poi, inoltre è importante tenere
+in considerazione i carry in ingresso agli stadi lasciati dal risultato della Somma 1, in quanto questi andranno a causare potenziali glitch propagandosi anch'essi lungo gli stadi di somma. 
+\vspace{0.3cm}
+In questo caso la combinazione di carry lasciati dallo stadio precedente e la nuova somma richiesta (Somma 2) fanno si che il sommatore risulti in una condizione per cui, ad ogni colpo di clock, le uscite degli stadi successivi al secondo continueranno a commutare in modo alternato fino a che il carry introdotto dalla seconda somma non raggiungerà il suddetto stadio, portando così
+il bit di somma ad un risultato finale. 
+\vspace{0.3cm}
+Si può notare che i primi 3 bit della somma non sono affetti da tale fenomeno, questi infatti non sono soggetti alla propagazione carry
+derivanti da Somma 1 o Somma 2. E' possibile ricostruire una situazione simile per questi primi bit ponendo in ingresso un susseguirsi di due
+somme leggermente differenti dalle precedenti:
+\vspace{0.3cm}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+& Somma 1 & Somma 2 \\
+\hline
+Addendo 1 & 10101010 & 00000001\\
+\hline
+Addendo 2 & 10101010 & 11111111\\
+\hline
+Risultato & 01010100 & 00000000\\
+\hline
+Carry in & 01010100 & \\
+\hline
+\end{tabular}
+\end{center}
+\vspace{0.3cm}
+In tal modo il fenomeno di propagazione dei carry e delle commutazione delle uscite di somma è prolungano anche per i primi bit. Di seguito è 
+riportato un risultato della simulazione ottenuto ponendo tali valori in ingresso al sommatore.
+\\\\
+\centerline{\includegraphics[width=12cm]{./img/Lab_1/Es_2/Worst_case_nostro.png}}
+}
 \newpage
 \section{Sintesi e analisi di potenza di un RCA}
 E' possibile effettuare una stima di potenza avanzata attraverso la piattaforma Synopsys. 
 Partendo infatti dalla descrizione VHDL del RCA fornito, il software è in grado di compiere una sintesi ottimizzata e valutare parametri del circuito basandosi su una libreria di celle caratterizzate dal punto di vista di area, consumi e ritardi.
+\\\\
 Per poter stimare la potenza dinamica è necessario conoscere la frequenza di lavoro del circuito, ottenuta valutando il percorso combinatorio con ritardo maggiore: è possibile valutare tale parametro del circuito attraverso un timing report.
 Il ritardo massimo riportati è pari a 0.78ns, di conseguenza è stato scelto un periodo di clock pari a 1ns.\\
 Successivamente è possibile procedere con l'analisi relativa alla potenza.
@@ -291,23 +365,39 @@ Il comando power report consente di ottenere una generica stima della potenza di
 \item \textbf{switching}: contributo alla potenza dinamica dovuto alle commutazioni dei nodi e alle relative cariche/scariche delle capacità
 \end{itemize}
 Nella seguente tabella è riportata la suddivisione dei tre contributi.
+\\\\
 TABELLA
+\\\\
 L'apporto maggiore al consumo totale è dato dalla potenza dinamica, in particolare dal consumo della potenza interna.
 E' interessante notare la suddivisione del consumo in potenza per i vari moduli interni (fa) dell'RCA. E' possibile ottenere ciò tramite un power report di tipo gerarchico. La distribuzione dei consumi è riportata nella seguente tabella.
+\\\\
 TABELLA
+\\\\
 E' possibile notare come la suddivisione risulti simile per tutti i FA fatta eccezione per FA 8. In particolare si differenzia dagli altri per il consumo relativo alla potenza di switch. Si ipotizza che quest'ultima risulti inferiore rispetto agli altri full adder a causa del minor carico di uscita.
+\\
 E' inoltre possibile approfondire l'analisi di potenza considerando i contributi interni dei singoli moduli. In particolare, è possibile mettere in luce i contributi dei nodi interni ai singoli full adder, sempre suddivisi nei tre contributi precedentemente descritti.
-in particolare, per comprendere l'origine del consumo inferiore del FA8, quest'ultimo è stato analizzato come cella ed è stato confrontato con il FA1
+in particolare, per comprendere l'origine del consumo inferiore del FA8, quest'ultimo è stato analizzato come cella ed è stato confrontato con il FA1.
+\\\\
 TABELLA
+\\\\
 la differenza nel consumo di potenza di switching è individuata nel nodo U2, legato al carry in uscita.
-\includegraphics[width=6cm]{./img/Lab_1/Es_3/Full_adder.png}
+\\
+\includegraphics[width=15cm]{./img/Lab_1/Es_3/Full_adder.png}
+\\
 E' possibile ottenere informazioni aggiuntive sul calcolo della potenza di switching con un'analisi di tipo verbose. In tale analisi, in particolare, sono riportati i contributi capacitivi necessari al calcolo della switching power, espressi nodo per nodo.
+\\\\
 TABELLA
+\\\\
 E' possibile notare come il nodo legato al carry in uscita presenti una capacità inferiore per il FA8. Ciò conferma l'ipotesi legata al carico inferiore.
+\\
 Analizzando i vari FA con analisi di tipo verbose si nota inoltre che i contributi di capacità relativi ai nodi della somma (U1) siano trascurabili rispetto agli altri contributi.
-DI conseguenza si nota che il contributo di potenza relativo a tale nodo è di un ordine di grandezza inferiore rispetto agli altri.
+Di conseguenza si nota che il contributo di potenza relativo a tale nodo è di un ordine di grandezza inferiore rispetto agli altri.
+\\\\
 CONFRONTO SWITCHING ACTIVITY
+\\\\
 CONFRONTO VERBOSE RCA
+\\\\
+\newpage
 \section{MUX: generazione e propagazione di glitch}
 L'obiettivo di questo esercizio è lo studio delle conseguenze 
 introdotte dai ritardi delle porte, in particolare all'interno del
@@ -318,14 +408,14 @@ multiplexer nella seguente figura.
 In questo caso particolare tutte le porte sono esenti da ritardi fatta
 eccezione per l'inverter, caratterizzato da un ritardo di propagazione
 di 0.1 ns.
-\\
+\\\\
 All'interno del file tb\textunderscore mux21\textunderscore
 glitch.vhd è stato possibile identificare la combinazione 
 dei segnali di ingresso con i quali il multiplexer è stato
-testato.\\
+testato.
 \begin{center}
 \begin{listato}
-	\lstinputlisting{./code/Lab_1/Es_4/mux_input_delays.vhd}
+	\centerline{\lstinputlisting{./code/Lab_1/Es_4/mux_input_delays.vhd}}
 \end{listato}
 \end{center}
 In particolare è possibile notare dal codice VHDL sopra riportato
@@ -336,8 +426,8 @@ presentare commutazioni.
 Si ipotizza che, a causa del ritardo di propagazione introdotto dall'
 inverter, vi è un intervallo temporale in cui i nodi interni X e Z 
 assumono entrambi un valore logico basso, portando quindi l'uscita a 0.
-\\
-Attraverso una simulazione ModelSim è stato possibile osservare
+\\\\
+Per mezzo di una simulazione ModelSim è stato possibile osservare
 attraverso le waveforms il comportamento reale dei segnali. Il risultato
 di tale simulazione è riportato nella seguente immagine.\\
 \\\\
@@ -346,12 +436,12 @@ di tale simulazione è riportato nella seguente immagine.\\
 E' possibile visualizzare direttamente sulla waveform dell'uscita Y
 il glitch causato dall'inverter. Tale comportamento è in linea con 
 quanto atteso.
-\\
+\\\\
 Al fine di analizzare altre possibili combinazioni degli ingressi
 che possano generare un glitch in uscita è stata realizzata una 
 mappa di Karnaugh rappresentante la funzione logica del multiplexer.
 \\\\
-\centerline{\includegraphics[width=10cm]{./img/Lab_1/Es_4/Mappa_K_coperta.png}}
+\centerline{\includegraphics[width=8cm]{./img/Lab_1/Es_4/Mappa_K_coperta.png}}
 \\\\
 In particolare è possibile notare come, al fine di coprire la mappa
 con il circuito in figura X, siano stati coperti i due implicanti
@@ -361,7 +451,7 @@ tra un implicante e l'altro. Tale problema potrebbe essere risolto
 andando a coprire, in modo ridondante, con un terzo implicante per evitare
 la transizione precedentemente trattata. 
 \\\\
-\centerline{\includegraphics[width=10cm]{./img/Lab_1/Es_4/Mappa_K_supercoperta.png}}
+\centerline{\includegraphics[width=8cm]{./img/Lab_1/Es_4/Mappa_K_supercoperta.png}}
 \\\\
 Tale ragionamento porta alla conclusione che l'unica combinazione in grado
 di causare un glitch in uscita sia quella presa in analisi.
@@ -385,22 +475,24 @@ dato da:
 \\\\
 \centerline{$E = 2 \cdot C \cdot V^{2}$}
 \\\\
+\newpage
 \section{Calcolo di probabilità e attività: contatore sincrono}
 Nella prima parte di questo esercicio è stato analizzato il timing del blocco 
 rappresentato nella figura seguente.
 \\\\
-\centerline{\includegraphics[width=3cm]{./img/Lab_1/Es_5/Sync_FA.png}}
+\centerline{\includegraphics[width=3cm]{./img/Lab_1/Es_5/Sync_FA.png}
+			\includegraphics[width=3cm]{./img/Lab_1/Es_5/Sync_FA.png}} %MANCA IL TIMING NOSTRO
 \\\\
 In particolare è stato possibile stabilire il suo comportamento atteso. 
 Quando il segnale B0 è attivo alto, l'uscita S presenta una commutazione 
 per ogni fronte sensibile del clock. Al contrario, quando B0 non è attivo, 
 l'uscita non presenta alcuna commutazione.
-\\
+\\\\
 E' possibile utilizzare tali strutture per realizzare un contatore sincrono,
 come mostrato in figura. In particolare i segnali di CEN e OVFL rappresentano
 rispettivamente l'enable del contatore e il terminal count di questo.
 \\\\
-\centerline{\includegraphics[width=20cm]{./img/Lab_1/Es_5/Counter.png}}
+\centerline{\includegraphics[width=15cm]{./img/Lab_1/Es_5/Counter.png}}
 \\\\
 Considerando infatti il comportamento delle uscite quando il segnale di 
 enable è attivo si ottiene il seguente timing.
@@ -440,13 +532,20 @@ di 2ns.
 	\end{tabular}
 \end{center}
 \vspace{0.3cm}
-Si può notare che i risultati ottenuti in entrambi i casi siano
+Si può notare che, senza considerare il segnale OVFL
+i risultati ottenuti in entrambi i casi siano
 confrontabili, tuttavia è presente una leggera differenza, pari
 a 1 o 2 colpi di clock, dovuta al fatto che è stato scelto un 
 tempo di simulazione leggermente superiore al tempo di conta 
 totale.
-\textcolor{red}{Dobbiamo commentare la differenza su OVFL}
 \\
+\textcolor{blue}{Riguardo al segnale di OVFL il risultato simulato
+è distante da quello atteso, in quanto il segnale presenta un numero di commutazioni
+decisamente maggiore. Tale segnale, al contrario di quelli di uscita della somma (conteggio), non 
+presenta un elemento sequenziale che lo interfacci con l'esterno. Per tale motivo
+sono ben visibili tutte le commutazioni spurie del segnale stesso, dovute ai ritardi
+di propagazione definiti all'interno dei vari stati del contatore.}
+\\\\
 Dalla simulazione è stato inoltre possibile osservare l'andamento 
 delle waveforms delle uscite. E' stato possibile notare che, in
 un preciso intervallo temporale, il segnale OVFL ha assunto un valore 
@@ -461,7 +560,7 @@ in ingresso all'half adder del blocco 7 sono presenti due ingressi con valore
 logico alto: uno dovuto al carry in uscita dal blocco precedente che, a causa
 dei ritardi, non ha ancora commutato il suo valore, e l'altro relativo all'uscita
 attuale S7.
-\\
+\\\\
 Successivamente, sempre attraverso un power report, è stato possibile
 analizzare l'attività dei segnali interni al contatore. I risultati sono 
 riportati nella seguenti tabelle.
@@ -547,11 +646,20 @@ L'immagine mette in luce una transizione da un conteggio all'altro:
 Tale errore è dovuto alla mancata completa propagazione del carry in tutti
 gli stadi, infatti il clock campiona le uscite dei flip-flops prima che tutti
 gli stadi abbiano raggiunto un valore stabile. 
-\\\\\\\\\\
+\\\\
+\textcolor{blue}{Chiaramente la presenza di glitch all'interno del contatore sotto analisi comporta
+un'elevata percentuale di consumi maggiori rispetto al caso ideale. Una possibile soluzione che potrebbe
+essere adottata per garantire un numero inferiore di commutazioni spurie modificando il VHDL è legata
+all'aumento del ritardo coinvolto nel calcolo della somma per i singoli HA. 
+Se tale tempo fosse infatti maggiore o uguale del massimo tempo di propagazione 
+del carry attraverso tutti gli stadi, le uscite SUM non presenterebbero più un elevato numero di glitch
+\\\\
+FORSE CI STAREBBE VERIFICARE CON UNA SIMULAZIONE E NEL CASO METTERE I RISULTATI}
+\\\\
 \textcolor{red}{COSE DA FARE: \\
                 - Capire il toggle rate nel verbose (ESW) \\
                 - Capire l'incongruenza del verbose RCA \\
-                - Spiegare il worst case del sommatore \\
+                - Spiegare il worst case del sommatore FATTO \\
                 - Fare mappa di Karnaugh FATTO \\
                 - Plot segnali MUX (fatto da noi) \\
                 - Plot dei segnali del blocchetto contatore e dei primi bit del contatore (fatto da noi)\\
