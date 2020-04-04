@@ -25,6 +25,10 @@ for i = 1:8
     
 end
 
+P_S
+A_S
+P_Cin
+A_Cout
 Total_A_S = sum(A_S);
 
 %% dati simulati
