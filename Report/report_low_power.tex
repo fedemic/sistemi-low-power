@@ -476,9 +476,21 @@ Si nota come il nodo legato al carry in uscita presenti una capacità inferiore 
 Analizzando i vari FA con analisi di tipo verbose si nota inoltre che i contributi di capacità relativi ai nodi della somma (U1) siano trascurabili rispetto agli altri contributi.
 Di conseguenza si evince che il contributo di potenza relativo a tale nodo è di un ordine di grandezza inferiore rispetto agli altri.
 \\\\
-\textcolor{red}{CONFRONTO SWITCHING ACTIVITY}
+\textcolor{red}{CONFRONTO SWITCHING ACTIVITY 
+\\
+Da un report di tipo verbose è inoltre possibile confrontare i valori di static probability e toggle rate di un FA derivanti dalla
+simulazione con le probabilità in uscita e le attività stimate precedentemente in modo teorico. 
+\\
+Si nota come i valori di probabilità dei
+nodi di uscita, S e Cout, siano distribuiti attorno al valore 0.5, dunque confrontabili con il caso precedentemente considerato di ingressi equiprobabili. 
+\\
+Risulta differente rispetto ai risultati teorici il valore del toggle rate associato a tali nodi, in quanto l'applicazione
+della formula facente uso della probabilità del nodo non porta a risultati simili. La causa di tale incongruenza è intrinseca nel fatto
+che il modello probabilistico per la valutazione della switching activity risulta essere approssimativo in quanto non prende in 
+considerazione la possibile correlazione, spaziale e temporale, tra i differenti nodi del circuito.}
 \\\\
-\textcolor{red}{CONFRONTO VERBOSE RCA}
+\textcolor{red}{CONFRONTO VERBOSE RCA
+\\}
 \\\\
 \newpage
 \section{MUX: generazione e propagazione di glitch}
