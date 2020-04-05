@@ -58,7 +58,6 @@
 
 \chapter{Laboratorio 1}
 
-
 \section{Calcolo di probabilità e attività: porte logiche elementari}
 
 Il primo esercizio consiste nel valutare le probabilità e attività dell'uscita di 
@@ -488,10 +487,33 @@ Risulta differente rispetto ai risultati teorici il valore del toggle rate assoc
 della formula facente uso della probabilità del nodo non porta a risultati simili. La causa di tale incongruenza è intrinseca nel fatto
 che il modello probabilistico per la valutazione della switching activity risulta essere approssimativo in quanto non prende in 
 considerazione la possibile correlazione, spaziale e temporale, tra i differenti nodi del circuito.}
-\\\\
+\newpage
 \textcolor{red}{CONFRONTO VERBOSE RCA
-\\}
-\\\\
+\\
+E' stato richiesto inoltre un power report di tipo verbose relativo all'intero RCA. Si può osservare come i contributi capacitivi relativi
+alle uscite di somma siano significativamente inferiori rispetto ai contributi dei nodi relativi ai carry tra uno stadio e quello successivo.
+Anche in questo caso la motivazione è dovuta al carico capacitivo inferiore delle uscite di somma, che non risultano collegate ad ulteriori
+blocchi. Tuttavia, osservando i contributi totali riportati dall'analisi di tipo verbose, è possibile osservare una differenza tra questi e 
+quelli presenti nel power report precedentemente richiesto.
+\\
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	& Internal Power & Switching Power & Leakage Power & Total Power \\ 
+	\hline
+	Power report & 16.7429 uW & 9.7406 uW & 953.4833 nW & 27.4370 uW \\
+	\hline
+	Verbose & 8.848 uW & 3.766 uW & 403.098 nW & 12.614 uW \\
+	\hline
+	\end{tabular}
+\end{center}
+\vspace{0.3cm}
+I contributi riportati dall'analisi di tipo verbose risultano proporzionalmente inferiori. La possibile causa di ciò è da attribuirsi al tipo
+di analisi effettuata da Synopsys: in particolare la keyword -net utilizzata ha richiesto uno studio della potenza relativo ai nodi interni
+dell'architettura dell'RCA, presenti tra i vari FA connessi. In tale analisi i contributi dei nodi interni ai FA stessi sono stati
+tralasciati. Al contrario un'analisi di tipo power report fornisce un risultato completo comprendendo all'interno l'analisi di tutti i nodi dei
+blocchi che compongono l'architettura.
+}
 \newpage
 \section{MUX: generazione e propagazione di glitch}
 L'obiettivo di questo esercizio è lo studio delle conseguenze 
@@ -753,7 +775,7 @@ del carry attraverso tutti gli stadi, le uscite SUM non presenterebbero più un 
 FORSE CI STAREBBE VERIFICARE CON UNA SIMULAZIONE E NEL CASO METTERE I RISULTATI}
 \\\\
 \textcolor{red}{COSE DA FARE: \\
-                 - Capire il toggle rate nel verbose (ESW)  \\
+                 - Capire il toggle rate nel verbose (ESW)IPOTESI FATTE  \\
                  - Capire l'incongruenza del verbose RCA FATTO \\
                  - Spiegare il worst case del sommatore FATTO \\
                  - Fare mappa di Karnaugh FATTO \\
