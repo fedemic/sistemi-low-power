@@ -6,7 +6,7 @@ entity FSM_Adder is
 port(CLK: in std_logic;
 	 RST:	in std_logic;
 	A, B, C, D, E, F: in std_logic_vector(15 downto 0);
-	Somma: out std_logic_vector(15 downto 0);
+	Somma: out std_logic_vector(15 downto 0)
 );
 end	FSM_Adder;
 
@@ -15,7 +15,7 @@ architecture behavior of FSM_Adder is
 component fsm1 is
 port(clock: in std_logic;
 	reset:	in std_logic;
-	S00, S01, S10, S11: out std_logic;
+	S00, S01, S10, S11: out std_logic
 );
 end component;
 

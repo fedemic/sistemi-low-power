@@ -6,7 +6,7 @@ use IEEE.std_logic_1164.all; --  libreria IEEE con definizione tipi standard log
 entity fsm1 is
 port(clock: in std_logic;
 	reset:	in std_logic;
-	S00, S01, S10, S11: out std_logic;
+	S00, S01, S10, S11: out std_logic
 );
 end	fsm1;
 
@@ -29,7 +29,7 @@ begin
 		elsif (CLOCK'EVENT and CLOCK ='1') then 
 			p_s <= n_s;
 		end if;
-	end process Next_state_transition
+	end process Next_state_transition;
 
 	Next_state_evaluation : process(p_s)
 	begin
@@ -40,25 +40,25 @@ begin
 			when SE => n_s <= SF;
 			when SF => n_s <= AB;		
 		end case;	
-	end process Next_state_evaluation
+	end process Next_state_evaluation;
 
 	
 	Output_evaluation: process(p_s)
 	begin
 		case p_s is
 				
-			when AB => S11 <= '0', S10 <= '0', S01 <= '0', S00 <= '0';
-			when SC => S11 <= '0', S10 <= '1', S01 <= '0', S00 <= '1';
-			when SD => S11 <= '0', S10 <= '1', S01 <= '1', S00 <= '1';
-			when SE => S11 <= '1', S10 <= '1', S01 <= '1', S00 <= '0';
-			when SF => S11 <= '1', S10 <= '0', S01 <= '1', S00 <= '0';
+			when AB => S11 <= '0'; S10 <= '0'; S01 <= '0'; S00 <= '0';
+			when SC => S11 <= '0'; S10 <= '1'; S01 <= '0'; S00 <= '1';
+			when SD => S11 <= '0'; S10 <= '1'; S01 <= '1'; S00 <= '1';
+			when SE => S11 <= '1'; S10 <= '1'; S01 <= '1'; S00 <= '0';
+			when SF => S11 <= '1'; S10 <= '0'; S01 <= '1'; S00 <= '0';
 		end case; 	
 	end process Output_evaluation;
 
 end behavior;
  
 
-configuration CFG_FSM_OPC of odd_parity_checker is
-	for  FSM_OPC
+configuration CFG_FSM_OPC of fsm1 is
+	for  behavior
 	end for;
 end CFG_FSM_OPC;
