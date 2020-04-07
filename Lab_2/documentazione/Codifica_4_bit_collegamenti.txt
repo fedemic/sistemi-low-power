@@ -1,0 +1,16 @@
+MUX1 S1 S0
+
+Pos		Segnale
+00		B
+01		C
+10		S
+11		D
+
+
+MUX2 S3 S2
+
+Pos		Segnale
+00		A
+01		S
+10		F
+11		E

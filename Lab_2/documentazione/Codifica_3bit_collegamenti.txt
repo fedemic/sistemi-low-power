@@ -1,0 +1,10 @@
+STATI
+011 A+B
+010 S+C
+000	S+D
+101 S+E
+100 S+F
+
+Commutazioni: 12 + inverter
+
+Per la connessione vedere immagine
