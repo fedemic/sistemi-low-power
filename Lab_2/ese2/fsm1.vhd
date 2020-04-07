@@ -3,60 +3,59 @@ library IEEE;
 use IEEE.std_logic_1164.all; --  libreria IEEE con definizione tipi standard logic
 
 
-entity odd_parity_checker is
-port( 	A:	in std_logic;
-	clock: 	in std_logic;
+entity fsm1 is
+port(clock: in std_logic;
 	reset:	in std_logic;
-	O:	out std_logic
+	S00, S01, S10, S11: out std_logic;
 );
-end	odd_parity_checker;
+end	fsm1;
 
 ---------------------------------------------
 
-architecture FSM_OPC of odd_parity_checker is
+architecture behavior of fsm1 is
 
-	type TYPE_STATE is (S0, S1);
-	signal CURRENT_STATE : TYPE_STATE;
-	signal NEXT_STATE : TYPE_STATE;
+	type TYPE_STATE is (AB, SC, SD, SE, SF);
+	ATTRIBUTE enum_encoding: string;
+	ATTRIBUTE enum_encoding of TYPE_STATE: TYPE is "0000 0101 0111 1110 1010";
+	signal p_s : TYPE_STATE;
+	signal n_s : TYPE_STATE;
 
 begin
- 	P_OPC : process(CLOCK, RESET)		
+ 	Next_state_transition : process(CLOCK, RESET)		
 	begin
 		
 		if reset='1' then
-	    	CURRENT_STATE <= S0;
-		elsif (CLOCK ='1' and CLOCK'EVENT) then 
-			CURRENT_STATE <= NEXT_STATE;
+	    	p_s <= AB;
+		elsif (CLOCK'EVENT and CLOCK ='1') then 
+			p_s <= n_s;
 		end if;
-	end process P_OPC;
+	end process Next_state_transition
 
-	P_NEXT_STATE : process(CURRENT_STATE,A)
+	Next_state_evaluation : process(p_s)
 	begin
-		case CURRENT_STATE is
-			when S0 => if A ='0' then
-					NEXT_STATE <= S0;
-				   elsif A ='1' then
-					NEXT_STATE <= S1;	
-				   end if;
-			when S1 => if A ='0' then
-					NEXT_STATE <= S1;
-			     	   elsif A ='1' then
-                    NEXT_STATE <= S0;
-				   end if;
+		case p_s is
+			when AB => n_s <= SC;
+			when SC => n_s <= SD;
+			when SD => n_s <= SE;
+			when SE => n_s <= SF;
+			when SF => n_s <= AB;		
 		end case;	
-	end process P_NEXT_STATE;
+	end process Next_state_evaluation
 
 	
-	P_OUTPUTS: process(CURRENT_STATE)
+	Output_evaluation: process(p_s)
 	begin
-		--O <= '0';
-		case CURRENT_STATE is
+		case p_s is
 				
-			when S0 => O <= '0';
-			when S1 => O <= '1';
+			when AB => S11 <= '0', S10 <= '0', S01 <= '0', S00 <= '0';
+			when SC => S11 <= '0', S10 <= '1', S01 <= '0', S00 <= '1';
+			when SD => S11 <= '0', S10 <= '1', S01 <= '1', S00 <= '1';
+			when SE => S11 <= '1', S10 <= '1', S01 <= '1', S00 <= '0';
+			when SF => S11 <= '1', S10 <= '0', S01 <= '1', S00 <= '0';
 		end case; 	
-	end process P_OUTPUTS;
-end FSM_OPC;
+	end process Output_evaluation;
+
+end behavior;
  
 
 configuration CFG_FSM_OPC of odd_parity_checker is
