@@ -1,5 +1,5 @@
 gui_start
-analyze -library WORK -format vhdl {/home/lp20.9/Desktop/low_power_2020/Lab_2/codifica_3bit_bis/syn/dpadder.vhd /home/lp20.9/Desktop/low_power_2020/Lab_2/codifica_3bit_bis/syn/fsm1.vhd /home/lp20.9/Desktop/low_power_2020/Lab_2/codifica_3bit_bis/syn/FSM_Adder.vhd}
+analyze -library WORK -format vhdl {/home/lp20.9/Desktop/low_power_2020/Lab_2/codifica_alternativa_3_bit/syn/dpadder.vhd /home/lp20.9/Desktop/low_power_2020/Lab_2/codifica_alternativa_3_bit/syn/fsm1.vhd /home/lp20.9/Desktop/low_power_2020/Lab_2/codifica_alternativa_3_bit/syn/FSM_Adder.vhd}
 elaborate FSM_ADDER -architecture BEHAVIOR -library WORK
 change_selection -name __slctBus18 -type {cell design} _sel426
 create_clock -name "CLK" -period 10 {CLK}
