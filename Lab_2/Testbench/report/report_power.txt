@@ -1,0 +1,14 @@
+
+Power Report Interval
+12000000 ps
+
+Power Report                        Node     Tc     Ti    Time At 1    Time At 0    Time At X
+---------------------------------------------------------------------------------------------
+                       /tb_adder/dut/clk   4000      0   6000000 ps   6000000 ps         0 ps
+                       /tb_adder/dut/rst      1      0      8000 ps  11990000 ps      2000 ps
+                /tb_adder/dut/sel00_wire    802      0   7198000 ps   4802000 ps         0 ps
+                /tb_adder/dut/sel01_wire    799      0   7194000 ps   4806000 ps         0 ps
+                /tb_adder/dut/sel10_wire    802      0   4798000 ps   7202000 ps         0 ps
+                /tb_adder/dut/sel11_wire    799      0   4794000 ps   7206000 ps         0 ps
+---------------------------------------------------------------------------------------------
+

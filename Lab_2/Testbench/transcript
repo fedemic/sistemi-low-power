@@ -1,0 +1,86 @@
+# //  ModelSim SE-64 6.5c Aug 27 2009 Linux 3.10.0-957.5.1.el7.x86_64
+# //
+# //  Copyright 1991-2009 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_2/Testbench/dpadder.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_signed
+# -- Compiling entity datapath_adder
+# -- Compiling architecture behavioral of datapath_adder
+# -- Compiling configuration cfg_dp_adder
+# -- Loading entity datapath_adder
+# -- Loading architecture behavioral of datapath_adder
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_2/Testbench/fsm1.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity fsm1
+# -- Compiling architecture behavior of fsm1
+# -- Compiling configuration cfg_fsm_opc
+# -- Loading entity fsm1
+# -- Loading architecture behavior of fsm1
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_2/Testbench/FSM_Adder.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity fsm_adder
+# -- Compiling architecture behavior of fsm_adder
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_2/Testbench/tb_fsm1.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_adder
+# -- Compiling architecture behavior of tb_adder
+# -- Compiling configuration cfg_tb
+# -- Loading entity tb_adder
+# -- Loading architecture behavior of tb_adder
+# -- Loading entity fsm_adder
+power add /tb_adder/fsm1/*
+# No Design!
+# ** Warning: (vsim-8431) The 'power add' command works only on nets/signals
+# 
+vsim -t 10ps -novopt work.tb_adder
+# vsim -t 10ps -novopt work.tb_adder 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_2/Testbench/work.tb_adder(behavior)
+# Loading work.tb_adder(behavior)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_2/Testbench/work.fsm_adder(behavior)
+# Loading work.fsm_adder(behavior)
+# ** Warning: (vsim-3473) Component instance "datapath : dpadder" is not bound.
+#    Time: 0 ps  Iteration: 0  Region: /tb_adder/dut  File: /home/lp20.9/Desktop/low_power_2020/Lab_2/Testbench/FSM_Adder.vhd
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_2/Testbench/work.fsm1(behavior)
+# Loading work.fsm1(behavior)
+power add /tb_adder/fsm1/*
+# ** Error: (vsim-3561) No objects found matching 'fsm1'.
+# ** Warning: (vsim-8431) The 'power add' command works only on nets/signals
+# 
+power add /tb_adder/FSM/*
+# ** Error: (vsim-3561) No objects found matching 'FSM'.
+# ** Warning: (vsim-8431) The 'power add' command works only on nets/signals
+# 
+power add /tb_adder/dut/*
+add wave *
+run 12000ns
+power report -power_report.txt
+# ** Error: (vsim-4006) Unexpected argument '-power_report.txt'.
+# Usage: power report [-all] [-file <filename>] [-noheader] [-bsaif <filename>]
+power report - power_report.txt
+# ** Error: (vsim-4006) Unexpected argument '-'.
+# Usage: power report [-all] [-file <filename>] [-noheader] [-bsaif <filename>]
+power report -file power_report.txt
+power report file power_report.txt
+# ** Error: (vsim-4006) Unexpected argument 'file'.
+# Usage: power report [-all] [-file <filename>] [-noheader] [-bsaif <filename>]
+power report -file "prova.txt"
+power report -file report
+power report -file report.txt
