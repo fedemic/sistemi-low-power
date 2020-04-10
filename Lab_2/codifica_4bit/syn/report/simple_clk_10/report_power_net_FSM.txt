@@ -1,0 +1,64 @@
+ 
+****************************************
+Report : power
+        -net
+        -analysis_effort low
+        -sort_mode net_switching_power
+Design : FSM_Adder/FSM (fsm1)
+Version: F-2011.09-SP3
+Date   : Fri Apr 10 10:23:31 2020
+****************************************
+
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/mg.lowpower/do/libnangate/NangateOpenCellLibrary_typical_ecsm.db)
+
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+FSM_Adder              5K_hvratio_1_1    NangateOpenCellLibrary
+
+
+Global Operating Voltage = 1.1  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+
+  Attributes
+  ----------
+      a  -  Switching activity information annotated on net
+      d  -  Default switching activity information on net
+
+                             Total      Static   Toggle   Switching
+Net                          Net Load   Prob.    Rate     Power      Attrs
+--------------------------------------------------------------------------------
+p_s[2]                         9.639    0.263    0.0285      0.1661  
+p_s[1]                         8.142    0.263    0.0285      0.1403  
+n5                             7.629    0.763    0.0256      0.1182  
+p_s[3]                         6.062    0.236    0.0255      0.0937  
+n7                             3.980    0.760    0.0307      0.0738  
+p_s[0]                         3.871    0.239    0.0306      0.0717  
+n9                             3.998    0.861    0.0285      0.0689  
+n8                             4.063    0.876    0.0255      0.0628  
+n1                             8.750    0.500    0.0100      0.0529  d
+n12                            2.010    0.737    0.0285      0.0346  
+n11                            1.909    0.861    0.0285      0.0329  
+n10                            1.974    0.876    0.0255      0.0305  
+n6                             1.438    0.736    0.0285      0.0248  
+n3                             1.438    0.263    0.0285      0.0248  
+S00                            0.310    0.139    0.0285      0.0053  
+S01                            0.310    0.263    0.0285      0.0053  
+S10                            0.310    0.263    0.0285      0.0053  
+S11                            0.310    0.124    0.0255      0.0048  
+--------------------------------------------------------------------------------
+Total (18 nets)                                              1.0168 uW
+1

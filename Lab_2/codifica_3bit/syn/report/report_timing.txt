@@ -1,0 +1,50 @@
+Warning: Design 'FSM_Adder' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : FSM_Adder
+Version: F-2011.09-SP3
+Date   : Fri Apr 10 11:18:31 2020
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: FSM/p_s_reg[2]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: FSM/p_s_reg[2]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FSM_Adder          5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  FSM/p_s_reg[2]/CK (DFFR_X1)              0.00       0.00 r
+  FSM/p_s_reg[2]/Q (DFFR_X1)               0.12       0.12 r
+  FSM/U11/Z (MUX2_X1)                      0.08       0.20 f
+  FSM/p_s_reg[2]/D (DFFR_X1)               0.01       0.21 f
+  data arrival time                                   0.21
+
+  clock CLK (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  FSM/p_s_reg[2]/CK (DFFR_X1)              0.00      10.00 r
+  library setup time                      -0.04       9.96
+  data required time                                  9.96
+  -----------------------------------------------------------
+  data required time                                  9.96
+  data arrival time                                  -0.21
+  -----------------------------------------------------------
+  slack (MET)                                         9.75
+
+
+1

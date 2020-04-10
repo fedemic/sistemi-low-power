@@ -1,0 +1,66 @@
+ 
+****************************************
+Report : power
+        -net
+        -analysis_effort low
+        -sort_mode net_switching_power
+Design : FSM_Adder
+Version: F-2011.09-SP3
+Date   : Fri Apr 10 10:10:13 2020
+****************************************
+
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/mg.lowpower/do/libnangate/NangateOpenCellLibrary_typical_ecsm.db)
+
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+FSM_Adder              5K_hvratio_1_1    NangateOpenCellLibrary
+
+
+Global Operating Voltage = 1.1  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+
+  Attributes
+  ----------
+      a  -  Switching activity information annotated on net
+      d  -  Default switching activity information on net
+
+                             Total      Static   Toggle   Switching
+Net                          Net Load   Prob.    Rate     Power      Attrs
+--------------------------------------------------------------------------------
+Somma[0]                       1.146    0.500    0.0100      0.0069  d
+Somma[1]                       1.146    0.500    0.0100      0.0069  d
+Somma[2]                       1.146    0.500    0.0100      0.0069  d
+Somma[3]                       1.146    0.500    0.0100      0.0069  d
+Somma[4]                       1.146    0.500    0.0100      0.0069  d
+Somma[5]                       1.146    0.500    0.0100      0.0069  d
+Somma[6]                       1.146    0.500    0.0100      0.0069  d
+Somma[7]                       1.146    0.500    0.0100      0.0069  d
+Somma[8]                       1.146    0.500    0.0100      0.0069  d
+Somma[9]                       1.146    0.500    0.0100      0.0069  d
+Somma[10]                      1.146    0.500    0.0100      0.0069  d
+Somma[11]                      1.146    0.500    0.0100      0.0069  d
+Somma[12]                      1.146    0.500    0.0100      0.0069  d
+Somma[13]                      1.146    0.500    0.0100      0.0069  d
+Somma[14]                      1.146    0.500    0.0100      0.0069  d
+Somma[15]                      1.146    0.500    0.0100      0.0069  d
+sel00_wire                     0.310    0.139    0.0285      0.0053  
+sel01_wire                     0.310    0.263    0.0285      0.0053  
+sel10_wire                     0.310    0.263    0.0285      0.0053  
+sel11_wire                     0.310    0.124    0.0255      0.0048  
+--------------------------------------------------------------------------------
+Total (20 nets)                                            131.7696 nW
+1

@@ -1,0 +1,32 @@
+Warning: Design 'FSM_Adder' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : area
+Design : FSM_Adder
+Version: F-2011.09-SP3
+Date   : Fri Apr 10 09:43:47 2020
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/mg.lowpower/do/libnangate/NangateOpenCellLibrary_typical_ecsm.db)
+
+Number of ports:                          114
+Number of nets:                           118
+Number of cells:                            2
+Number of combinational cells:              1
+Number of sequential cells:                 0
+Number of macros:                           0
+Number of buf/inv:                          0
+Number of references:                       2
+
+Combinational area:          9.842000
+Noncombinational area:      21.280001
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:            31.122001
+Total area:                 undefined
+
+Information: This design contains black box (unknown) components. (RPT-8)
+1

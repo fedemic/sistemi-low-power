@@ -1,0 +1,28 @@
+ 
+****************************************
+Report : FSM
+Design : fsm1
+Version: F-2011.09-SP3
+Date   : Fri Apr 10 09:50:39 2020
+****************************************
+
+
+Clock             : Unspecified
+Asynchronous Reset: Unspecified
+
+Encoding Bit Length: 4
+Encoding style     : auto
+
+State Vector: { p_s_reg[3] p_s_reg[2] p_s_reg[1] p_s_reg[0] }
+
+
+State Encodings and Order: 
+
+AB         : 0000
+SC         : 0101
+SD         : 0111
+SE         : 1110
+SF         : 1010
+
+
+1
