@@ -1,0 +1,85 @@
+CODIFICA 3 BIT ALTERNATIVA
+
+
+STATO	CODIFICA		SELECT MUX			OPERAZIONE
+
+		C2	C1	C0		S3	S2	S1	S0		
+AB		1	1	1		0	1	0	1		A+B
+SC		1	0	1		0	0	0	0		S+C
+SD		0	0	0		0	0	1	0		S+D
+SE		0	1	0		1	0	1	1		S+E
+SF		0	1	1		1	1	1	1		S+F
+
+
+Visto che abbiamo notato che ci voleva molta logica per gestire l'evolversi degli 
+stati della macchina con un certo ordine l'idea è di rendere il calcolo dello
+stato futuro il più semplice possibile. Dato un certo stato, questo genera, attraverso
+semplici funzioni logiche, i controlli dei mux. La codifica dello stato successivo è ricavata
+dai valori stessi dei segnali di selezione dei mux che sono appena stati generati, in particolare
+C2 C1 e C0 di uno stato successivo vengono prelevati direttamente da S2 S1 e S0 delle uscite
+di controllo attuale.
+
+PRO										CONTRO
+
+- Nessuna logica complessa				- Servono delle funzioni
+ per gestire l'evoluzione 			  	  logiche per generare dallo
+  della macchina.					  	  stato i valori delle uscite.
+  
+- Susseguirsi di stati tutti
+  con codifica di grey a parte
+  uno che varia di 2 bit.
+  
+- Le funzioni logiche per
+  generare le uscite sono semplici
+  (Mappe di Karnaut facili da coprire
+  con poche porte)
+  
+- In tutto questo le transizioni dei 
+  segnali S sono esattamente come le
+  abbiamo programmate quindi senza
+  commutazioni in eccesso.
+  
+MAPPE DI KARNAUT
+
+S3
+
+C2,C1	00	01	11	10
+----------------------
+C0		
+0		0	1	-	-
+1		-	1	0	0
+
+
+S2
+
+C2,C1	00	01	11	10
+----------------------
+C0		
+0		0	0	-	-
+1		-	1	1	0
+
+
+S1
+
+C2,C1	00	01	11	10
+----------------------
+C0		
+0		1	1	-	-
+1		-	1	0	0
+
+
+S0
+
+C2,C1	00	01	11	10
+----------------------
+C0		
+0		0	1	-	-
+1		-	1	1	0
+
+La logica per coprire queste funzioni è tutto sommato semplice, inoltre
+molti implicanti che servono a più funzioni sono in comune e non c'è
+bisogno di valutarli più volte.
+
+
+
+
