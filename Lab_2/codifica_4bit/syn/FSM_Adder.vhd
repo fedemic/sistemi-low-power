@@ -19,7 +19,7 @@ port(clock: in std_logic;
 );
 end component;
 
-component dpadder is
+component datapath_adder is
 port( 	MUX00:	in std_logic_vector(15 downto 0);
 	MUX01:	in std_logic_vector(15 downto 0);
 	MUX02:	in std_logic_vector(15 downto 0);
@@ -43,14 +43,14 @@ signal sel00_wire, sel01_wire, sel10_wire, sel11_wire : std_logic;
 
 begin
 
-Datapath: dpadder port map (MUX00 => B,
-							MUX01 => C,
-							MUX02 => Sum_feedback,
-							MUX03 => D,
-							MUX10 => A,
-							MUX11 => Sum_feedback,
-							MUX12 => F,
-							MUX13 => E,
+Datapath: datapath_adder port map (MUX00 => C,
+							MUX01 => A,
+							MUX02 => D,
+							MUX03 => Sum_feedback,
+							MUX10 => Sum_feedback,
+							MUX11 => B,
+							MUX12 => E,
+							MUX13 => F,
 							clock => CLK,
 							reset => RST,
 							SEL00 => sel00_wire,
