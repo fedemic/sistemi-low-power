@@ -10,6 +10,6 @@ report_power > report/simple_clk_10/report_power.txt
 report_power -hier > report/simple_clk_10/report_power_hier.txt
 report_power -net > report/simple_clk_10/report_power_net.txt
 current_instance FSM
-report_power -hier > report/simple_clk_10/report_power_hier_FSM.txt
+report_power -cell > report/simple_clk_10/report_power_cell_FSM.txt
 report_power -net > report/simple_clk_10/report_power_net_FSM.txt
 report_fsm > report/simple_clk_10/report_fsm_encoding.txt
