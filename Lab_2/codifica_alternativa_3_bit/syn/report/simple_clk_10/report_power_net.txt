@@ -1,0 +1,66 @@
+ 
+****************************************
+Report : power
+        -net
+        -analysis_effort low
+        -sort_mode net_switching_power
+Design : FSM_Adder
+Version: F-2011.09-SP3
+Date   : Mon Apr 13 20:49:46 2020
+****************************************
+
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/mg.lowpower/do/libnangate/NangateOpenCellLibrary_typical_ecsm.db)
+
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+FSM_Adder              5K_hvratio_1_1    NangateOpenCellLibrary
+
+
+Global Operating Voltage = 1.1  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+
+  Attributes
+  ----------
+      a  -  Switching activity information annotated on net
+      d  -  Default switching activity information on net
+
+                             Total      Static   Toggle   Switching
+Net                          Net Load   Prob.    Rate     Power      Attrs
+--------------------------------------------------------------------------------
+sel11_wire                    13.792    0.120    0.0246      0.2055  
+sel01_wire                    10.222    0.253    0.0272      0.1682  
+sel10_wire                     8.489    0.720    0.0301      0.1547  
+sel00_wire                     7.058    0.720    0.0301      0.1286  
+Somma[11]                      4.418    0.255    0.0290      0.0774  
+Somma[3]                       4.418    0.255    0.0289      0.0772  
+Somma[5]                       4.418    0.254    0.0288      0.0769  
+Somma[13]                      4.418    0.255    0.0287      0.0768  
+Somma[15]                      4.418    0.253    0.0287      0.0767  
+Somma[12]                      4.418    0.254    0.0286      0.0764  
+Somma[2]                       4.418    0.255    0.0285      0.0763  
+Somma[6]                       4.418    0.253    0.0285      0.0762  
+Somma[7]                       4.418    0.252    0.0285      0.0761  
+Somma[10]                      4.418    0.253    0.0285      0.0761  
+Somma[4]                       4.418    0.256    0.0285      0.0761  
+Somma[1]                       4.418    0.249    0.0284      0.0759  
+Somma[0]                       4.418    0.252    0.0284      0.0758  
+Somma[8]                       4.418    0.254    0.0283      0.0755  
+Somma[9]                       4.418    0.253    0.0280      0.0747  
+Somma[14]                      4.418    0.252    0.0279      0.0746  
+--------------------------------------------------------------------------------
+Total (20 nets)                                              1.8759 uW
+1

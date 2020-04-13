@@ -1,0 +1,21 @@
+Information: Updating graph... (UID-83)
+ 
+****************************************
+Report : clocks
+Design : FSM_Adder
+Version: F-2011.09-SP3
+Date   : Mon Apr 13 20:49:39 2020
+****************************************
+
+Attributes:
+    d - dont_touch_network
+    f - fix_hold
+    p - propagated_clock
+    G - generated_clock
+    g - lib_generated_clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+CLK             10.00   {0 5}                         {CLK}
+--------------------------------------------------------------------------------
+1
