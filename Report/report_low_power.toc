@@ -8,4 +8,4 @@
 \contentsline {section}{\numberline {2.1}FSM State Assignment}{23}%
 \contentsline {subsection}{\numberline {2.1.1}Progetto}{23}%
 \contentsline {subsection}{\numberline {2.1.2}Descrizione VHDL e simulazione Modelsim}{25}%
-\contentsline {section}{\numberline {2.2}Sintesi del VHDL}{26}%
+\contentsline {section}{\numberline {2.2}Sintesi del VHDL}{25}%
