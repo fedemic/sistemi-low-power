@@ -978,8 +978,35 @@ Il periodo di variazione dei selettori è confrontabile con le variazioni medie 
 \\
 Successivamente è stata effettuata un'analisi più dettagliata della FSM accedendovi tramite la direttiva current instance FSM.
 Attraverso il comando report fsm è stato possibile verificare la corretta implementazione della codifica progettata.
-\textcolor{red}{comment cell and net}
-
+E' possibile risalire alla suddivisione del consumo della potenza dinamica all'interno delle celle che costituiscono la FSM attraverso un'analisi di potenza di tipo cell. In particolare nella seguente tabella vengono riportati i tre contributi maggiori relativi al consumo di potenza dinamica.
+\begin{center}
+	\begin{tabular}{|c|c|}
+	\hline
+	  psreg[1] & 1.143  \\
+	\hline
+	 psreg[2] & 0.979 \\
+	\hline
+	psreg[0] & 0.924 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Si nota che tali contributi sono relativi alle variabili di stato, che presentano numerose commutazioni durante l'esecuzione dell'algoritmo.
+\\
+Uno studio più approfondito sulla switching power relativa ai nodi interni è ottenuta tramite un'analisi di tipo net. In particolare nella seguente tabella sono riportati i dati relativi ai segnali di uscita della FSM, ovvero i segnali di selezione dei multiplexer.
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	 S11 & 13.792  &  0.120  &  0.0246  & 0.2055 \\
+	\hline
+	 psreg[2] & 0.979 \\
+	\hline
+	psreg[0] & 0.924 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+E' possibile notare che il contributo maggiore del consumo è dovuto alle capacità di carico dei nodi in analisi, che assumono  valori significativi. Questo è il principale motivo per cui tali segnali contribuiscono maggiormente, a parità di toggle rate.
 
 
 
