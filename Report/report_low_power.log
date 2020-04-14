@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.10)  5 APR 2020 20:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.18)  14 APR 2020 12:39
 entering extended mode
 **./report_low_power.tex
 (report_low_power.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14>
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\book.cls"
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\book.cls"
 Document Class: book 2019/12/20 v1.4l Standard LaTeX document class
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\bk11.clo"
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\bk11.clo"
 File: bk11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 )
 \c@part=\count167
@@ -22,37 +22,31 @@ File: bk11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 \belowcaptionskip=\skip48
 \bibindent=\dimen134
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.s
-ty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphicx.sty"
 Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.sty
-"
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.s
-ty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphics.sty"
 Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graphi
-cs.cfg"
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\graphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdftex
-.def"
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-def\pdftex.def"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen135
 \Gin@req@width=\dimen136
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/titlesec\titlesec.s
-ty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/titlesec\titlesec.sty"
 Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \ttl@box=\box45
 \beforetitleunit=\skip49
@@ -64,11 +58,10 @@ Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \titlewidthlast=\dimen140
 \titlewidthfirst=\dimen141
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\textcomp.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\textcomp.sty"
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.s
-ty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/listings\listings.sty"
 \lst@mode=\count176
 \lst@gtempboxa=\box46
 \lst@token=\toks16
@@ -82,24 +75,21 @@ ty"
 \lst@lineno=\count181
 \lst@maxwidth=\dimen145
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.st
-y"
+("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstmisc.sty"
 File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
 \c@lstnumber=\count182
 \lst@skipnumbers=\count183
 \lst@framebox=\box47
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.c
-fg"
+("C:\Program Files\MiKTeX 2.9\tex/latex/listings\listings.cfg"
 File: listings.cfg 2019/09/10 1.8c listings configuration
 ))
 Package: listings 2019/09/10 1.8c (Carsten Heinz)
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\color.
-cfg"
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -113,26 +103,24 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty
-"
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty"
 Package: amsmath 2020/01/20 v2.17e AMS math features
 \@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.sty
-"
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01 AMS text
- ("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty
-"
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks17
 \ex@=\dimen146
 ))
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen147
-) ("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.st
-y"
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count184
@@ -173,12 +161,10 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 LaTeX Info: Redefining \[ on input line 2859.
 LaTeX Info: Redefining \] on input line 2860.
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amssymb.st
-y"
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.s
-ty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
@@ -186,8 +172,7 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/booktabs\booktabs.s
-ty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/booktabs\booktabs.sty"
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen155
 \lightrulewidth=\dimen156
@@ -207,14 +192,12 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@lastruleclass=\count199
 \@thisrulewidth=\dimen167
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/chngcntr\chngcntr.s
-ty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/chngcntr\chngcntr.sty"
 Package: chngcntr 2018/04/09 v1.1a change counter resetting
 Package chngcntr Info: \counterwithout already defined.
 (chngcntr)             Quitting chngcntr on input line 21.
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backend
--pdfmode.def"
+("C:\Program Files\MiKTeX 2.9\tex/latex/l3backend\l3backend-pdfmode.def"
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count266
 \l__pdf_internal_box=\box50
@@ -241,8 +224,7 @@ LaTeX Font Info:    ... okay on input line 29.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pd
-f.mkii"
+("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count267
 \scratchdimen=\dimen168
@@ -255,9 +237,7 @@ f.mkii"
 \MPnumerator=\count271
 \makeMPintoPDFobject=\count272
 \everyMPtoPDFconversion=\toks23
-)
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstop
-df-base.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
@@ -268,25 +248,26 @@ File: ./img/general/polito.png Graphic file (type png)
 <use ./img/general/polito.png>
 Package pdftex.def Info: ./img/general/polito.png  used on input line 34.
 (pdftex.def)             Requested size: 85.35826pt x 85.35973pt.
- [1
+
+[1
 
 
-{C:/Users/TONI/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./img/genera
-l/polito.png>] (report_low_power.toc
+{C:/Users/Francy/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./img/gene
+ral/polito.png>] (report_low_power.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 \tf@toc=\write3
 \openout3 = `report_low_power.toc'.
 
-[1
+ [1
 
 ]
 Chapter 1.
@@ -353,18 +334,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 148--154
 
  []
 
-[3 <./img/Lab_1/Es_1/Inverter.png> <./img/Lab_1/Es_1/AND.png>]
-<./img/Lab_1/Es_1/XOR.png, id=32, 420.82219pt x 315.42844pt>
+
+Overfull \hbox (23.64444pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
+ TECHNIQUES \OT1/cmr/m/n/10.95 3
+ []
+
+[3]
+Overfull \hbox (23.64444pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
+ TECHNIQUES \OT1/cmr/m/n/10.95 4
+ []
+
+[4 <./img/Lab_1/Es_1/Inverter.png> <./img/Lab_1/Es_1/AND.png>]
+<./img/Lab_1/Es_1/XOR.png, id=35, 420.82219pt x 315.42844pt>
 File: ./img/Lab_1/Es_1/XOR.png Graphic file (type png)
 <use ./img/Lab_1/Es_1/XOR.png>
 Package pdftex.def Info: ./img/Lab_1/Es_1/XOR.png  used on input line 157.
 (pdftex.def)             Requested size: 227.62204pt x 170.6176pt.
-<./img/Lab_1/Es_1/OR.png, id=33, 420.82219pt x 315.42844pt>
+<./img/Lab_1/Es_1/OR.png, id=36, 420.82219pt x 315.42844pt>
 File: ./img/Lab_1/Es_1/OR.png Graphic file (type png)
 <use ./img/Lab_1/Es_1/OR.png>
 Package pdftex.def Info: ./img/Lab_1/Es_1/OR.png  used on input line 157.
 (pdftex.def)             Requested size: 227.62204pt x 170.6176pt.
- [4 <./img/Lab_1/Es_1/XOR.png> <./img/Lab_1/Es_1/OR.png>]
+
+Overfull \hbox (23.64444pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
+ TECHNIQUES \OT1/cmr/m/n/10.95 5
+ []
+
+[5 <./img/Lab_1/Es_1/XOR.png> <./img/Lab_1/Es_1/OR.png>]
 Overfull \hbox (27.37506pt too wide) in paragraph at lines 168--171
 [] 
  []
@@ -394,8 +393,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 178--179
 
  []
 
-[5]
-<./img/Lab_1/Es_2/RCA_8_bit.png, id=42, 565.11125pt x 115.43124pt>
+
+Overfull \hbox (23.64444pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
+ TECHNIQUES \OT1/cmr/m/n/10.95 6
+ []
+
+[6]
+<./img/Lab_1/Es_2/RCA_8_bit.png, id=46, 565.11125pt x 115.43124pt>
 File: ./img/Lab_1/Es_2/RCA_8_bit.png Graphic file (type png)
 <use ./img/Lab_1/Es_2/RCA_8_bit.png>
 Package pdftex.def Info: ./img/Lab_1/Es_2/RCA_8_bit.png  used on input line 216
@@ -426,7 +431,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 251--256
 
  []
 
-[6 <./img/Lab_1/Es_2/RCA_8_bit.png>]
+
+Overfull \hbox (23.64444pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
+ TECHNIQUES \OT1/cmr/m/n/10.95 7
+ []
+
+[7 <./img/Lab_1/Es_2/RCA_8_bit.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 268--273
 
  []
@@ -436,12 +447,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 268--273
 
  []
 
-<./img/Lab_1/Es_2/Glitch.png, id=48, 831.85782pt x 449.42906pt>
+<./img/Lab_1/Es_2/Glitch.png, id=51, 831.85782pt x 449.42906pt>
 File: ./img/Lab_1/Es_2/Glitch.png Graphic file (type png)
 <use ./img/Lab_1/Es_2/Glitch.png>
 Package pdftex.def Info: ./img/Lab_1/Es_2/Glitch.png  used on input line 283.
 (pdftex.def)             Requested size: 426.79134pt x 230.58418pt.
-<./img/Lab_1/Es_2/Glitch_worst_case.png, id=49, 579.66562pt x 229.60782pt>
+<./img/Lab_1/Es_2/Glitch_worst_case.png, id=52, 579.66562pt x 229.60782pt>
 File: ./img/Lab_1/Es_2/Glitch_worst_case.png Graphic file (type png)
 <use ./img/Lab_1/Es_2/Glitch_worst_case.png>
 Package pdftex.def Info: ./img/Lab_1/Es_2/Glitch_worst_case.png  used on input 
@@ -457,7 +468,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 285--337
 
  []
 
-[7 <./img/Lab_1/Es_2/Glitch.png>]
+
+Overfull \hbox (23.64444pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
+ TECHNIQUES \OT1/cmr/m/n/10.95 8
+ []
+
+[8 <./img/Lab_1/Es_2/Glitch.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 337--337
 
  []
@@ -467,8 +484,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 337--337
 
  []
 
-[8 <./img/Lab_1/Es_2/Glitch_worst_case.png>]
-<./img/Lab_1/Es_2/Worst_case_nostro.png, id=62, 452.4403pt x 205.5178pt>
+
+Overfull \hbox (23.64444pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
+ TECHNIQUES \OT1/cmr/m/n/10.95 9
+ []
+
+[9 <./img/Lab_1/Es_2/Glitch_worst_case.png>]
+<./img/Lab_1/Es_2/Worst_case_nostro.png, id=65, 452.4403pt x 205.5178pt>
 File: ./img/Lab_1/Es_2/Worst_case_nostro.png Graphic file (type png)
 <use ./img/Lab_1/Es_2/Worst_case_nostro.png>
 Package pdftex.def Info: ./img/Lab_1/Es_2/Worst_case_nostro.png  used on input 
@@ -484,7 +507,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 337--338
 
  []
 
-[9 <./img/Lab_1/Es_2/Worst_case_nostro.png>]
+
+Overfull \hbox (29.11945pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
+ TECHNIQUES \OT1/cmr/m/n/10.95 10
+ []
+
+[10 <./img/Lab_1/Es_2/Worst_case_nostro.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 340--347
 
  []
@@ -499,7 +528,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 364--367
 
  []
 
-<./img/Lab_1/Es_3/Full_adder.png, id=67, 768.62157pt x 194.97844pt>
+<./img/Lab_1/Es_3/Full_adder.png, id=70, 768.62157pt x 194.97844pt>
 File: ./img/Lab_1/Es_3/Full_adder.png Graphic file (type png)
 <use ./img/Lab_1/Es_3/Full_adder.png>
 Package pdftex.def Info: ./img/Lab_1/Es_3/Full_adder.png  used on input line 39
@@ -525,7 +554,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 393--401
 
  []
 
-[10]
+
+Overfull \hbox (29.11945pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
+ TECHNIQUES \OT1/cmr/m/n/10.95 11
+ []
+
+[11]
 Overfull \hbox (5.10286pt too wide) in paragraph at lines 435--439
 []\OT1/cmr/m/n/10.95 E pos-si-bile ot-tenere in-for-mazioni ag-giun-tive sul ca
 l-colo della potenza di switch-ing con un'analisi
@@ -541,18 +576,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 435--439
 
  []
 
-[11 <./img/Lab_1/Es_3/Full_adder.png>]
+
+Overfull \hbox (29.11945pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
+ TECHNIQUES \OT1/cmr/m/n/10.95 12
+ []
+
+[12 <./img/Lab_1/Es_3/Full_adder.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 473--490
 
  []
 
-[12]
+
+Overfull \hbox (29.11945pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
+ TECHNIQUES \OT1/cmr/m/n/10.95 13
+ []
+
+[13]
 Underfull \hbox (badness 10000) in paragraph at lines 516--516
 
  []
 
-[13]
-<./img/Lab_1/Es_4/Mux.png, id=82, 320.69812pt x 252.19218pt>
+
+Overfull \hbox (29.11945pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
+ TECHNIQUES \OT1/cmr/m/n/10.95 14
+ []
+
+[14]
+<./img/Lab_1/Es_4/Mux.png, id=85, 320.69812pt x 252.19218pt>
 File: ./img/Lab_1/Es_4/Mux.png Graphic file (type png)
 <use ./img/Lab_1/Es_4/Mux.png>
 Package pdftex.def Info: ./img/Lab_1/Es_4/Mux.png  used on input line 523.
@@ -576,30 +629,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 519--533
 LaTeX Font Info:    Trying to load font information for OML+cmr on input line 1
 .
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omlcmr.fd"
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\omlcmr.fd"
 File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 1.
 )
-<./img/Lab_1/Es_4/Mux_plot.png, id=83, 505.13719pt x 387.69844pt>
+<./img/Lab_1/Es_4/Mux_plot.png, id=86, 505.13719pt x 387.69844pt>
 File: ./img/Lab_1/Es_4/Mux_plot.png Graphic file (type png)
 <use ./img/Lab_1/Es_4/Mux_plot.png>
 Package pdftex.def Info: ./img/Lab_1/Es_4/Mux_plot.png  used on input line 547.
 
 (pdftex.def)             Requested size: 199.16928pt x 152.8641pt.
-<./img/Lab_1/Es_4/Glitch.png, id=84, 394.47375pt x 338.01282pt>
+<./img/Lab_1/Es_4/Glitch.png, id=87, 394.47375pt x 338.01282pt>
 File: ./img/Lab_1/Es_4/Glitch.png Graphic file (type png)
 <use ./img/Lab_1/Es_4/Glitch.png>
 Package pdftex.def Info: ./img/Lab_1/Es_4/Glitch.png  used on input line 553.
 (pdftex.def)             Requested size: 199.16928pt x 170.66159pt.
-<./img/Lab_1/Es_4/Mappa_K_coperta.png, id=85, 537.6888pt x 186.9384pt>
+<./img/Lab_1/Es_4/Mappa_K_coperta.png, id=88, 537.6888pt x 186.9384pt>
 File: ./img/Lab_1/Es_4/Mappa_K_coperta.png Graphic file (type png)
 <use ./img/Lab_1/Es_4/Mappa_K_coperta.png>
 Package pdftex.def Info: ./img/Lab_1/Es_4/Mappa_K_coperta.png  used on input li
 ne 563.
 (pdftex.def)             Requested size: 227.62204pt x 79.13828pt.
-<./img/Lab_1/Es_4/Mappa_K_supercoperta.png, id=86, 537.6888pt x 186.9384pt>
+<./img/Lab_1/Es_4/Mappa_K_supercoperta.png, id=89, 537.6888pt x 186.9384pt>
 File: ./img/Lab_1/Es_4/Mappa_K_supercoperta.png Graphic file (type png)
 <use ./img/Lab_1/Es_4/Mappa_K_supercoperta.png>
 Package pdftex.def Info: ./img/Lab_1/Es_4/Mappa_K_supercoperta.png  used on inp
@@ -697,26 +750,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 538--595
 
  []
 
-[14 <./img/Lab_1/Es_4/Mux.png> <./img/Lab_1/Es_4/Mux_plot.png>] [15 <./img/Lab_
-1/Es_4/Glitch.png> <./img/Lab_1/Es_4/Mappa_K_coperta.png> <./img/Lab_1/Es_4/Map
-pa_K_supercoperta.png>] [16]
-<./img/Lab_1/Es_5/Sync_FA.png, id=102, 143.53625pt x 197.73875pt>
+
+Overfull \hbox (29.11945pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
+ TECHNIQUES \OT1/cmr/m/n/10.95 15
+ []
+
+[15 <./img/Lab_1/Es_4/Mux.png> <./img/Lab_1/Es_4/Mux_plot.png>]
+Overfull \hbox (29.11945pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
+ TECHNIQUES \OT1/cmr/m/n/10.95 16
+ []
+
+[16 <./img/Lab_1/Es_4/Glitch.png> <./img/Lab_1/Es_4/Mappa_K_coperta.png> <./img
+/Lab_1/Es_4/Mappa_K_supercoperta.png>]
+Overfull \hbox (29.11945pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
+ TECHNIQUES \OT1/cmr/m/n/10.95 17
+ []
+
+[17]
+<./img/Lab_1/Es_5/Sync_FA.png, id=105, 143.53625pt x 197.73875pt>
 File: ./img/Lab_1/Es_5/Sync_FA.png Graphic file (type png)
 <use ./img/Lab_1/Es_5/Sync_FA.png>
 Package pdftex.def Info: ./img/Lab_1/Es_5/Sync_FA.png  used on input line 601.
 (pdftex.def)             Requested size: 85.35826pt x 117.59416pt.
-<./img/Lab_1/Es_5/Half_add_contatore.png, id=103, 645.16031pt x 334.24875pt>
+<./img/Lab_1/Es_5/Half_add_contatore.png, id=106, 645.16031pt x 334.24875pt>
 File: ./img/Lab_1/Es_5/Half_add_contatore.png Graphic file (type png)
 <use ./img/Lab_1/Es_5/Half_add_contatore.png>
 Package pdftex.def Info: ./img/Lab_1/Es_5/Half_add_contatore.png  used on input
  line 601.
 (pdftex.def)             Requested size: 199.16928pt x 103.18251pt.
-<./img/Lab_1/Es_5/Counter.png, id=104, 627.34375pt x 151.56625pt>
+<./img/Lab_1/Es_5/Counter.png, id=107, 627.34375pt x 151.56625pt>
 File: ./img/Lab_1/Es_5/Counter.png Graphic file (type png)
 <use ./img/Lab_1/Es_5/Counter.png>
 Package pdftex.def Info: ./img/Lab_1/Es_5/Counter.png  used on input line 612.
 (pdftex.def)             Requested size: 426.79134pt x 103.11687pt.
-<./img/Lab_1/Es_5/Contatore.png, id=105, 970.3753pt x 754.31813pt>
+<./img/Lab_1/Es_5/Contatore.png, id=108, 970.3753pt x 754.31813pt>
 File: ./img/Lab_1/Es_5/Contatore.png Graphic file (type png)
 <use ./img/Lab_1/Es_5/Contatore.png>
 Package pdftex.def Info: ./img/Lab_1/Es_5/Contatore.png  used on input line 617
@@ -762,9 +832,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 597--626
 
  []
 
-[17 <./img/Lab_1/Es_5/Sync_FA.png> <./img/Lab_1/Es_5/Half_add_contatore.png> <.
+
+Overfull \hbox (29.11945pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
+ TECHNIQUES \OT1/cmr/m/n/10.95 18
+ []
+
+[18 <./img/Lab_1/Es_5/Sync_FA.png> <./img/Lab_1/Es_5/Half_add_contatore.png> <.
 /img/Lab_1/Es_5/Counter.png>]
-<./img/Lab_1/Es_5/Glitch.png, id=111, 945.03062pt x 312.16624pt>
+<./img/Lab_1/Es_5/Glitch.png, id=115, 945.03062pt x 312.16624pt>
 File: ./img/Lab_1/Es_5/Glitch.png Graphic file (type png)
 <use ./img/Lab_1/Es_5/Glitch.png>
 Package pdftex.def Info: ./img/Lab_1/Es_5/Glitch.png  used on input line 669.
@@ -794,14 +870,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 652--686
 
  []
 
-[18 <./img/Lab_1/Es_5/Contatore.png>]
+
+Overfull \hbox (29.11945pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
+ TECHNIQUES \OT1/cmr/m/n/10.95 19
+ []
+
+[19 <./img/Lab_1/Es_5/Contatore.png>]
 
 LaTeX Warning: Command \textunderscore invalid in math mode on input line 748.
 
 
 LaTeX Warning: Command \textunderscore invalid in math mode on input line 748.
 
-<./img/Lab_1/Es_5/Clk_corto.png, id=116, 948.54375pt x 323.2075pt>
+<./img/Lab_1/Es_5/Clk_corto.png, id=119, 948.54375pt x 323.2075pt>
 File: ./img/Lab_1/Es_5/Clk_corto.png Graphic file (type png)
 <use ./img/Lab_1/Es_5/Clk_corto.png>
 Package pdftex.def Info: ./img/Lab_1/Es_5/Clk_corto.png  used on input line 758
@@ -867,38 +949,124 @@ Underfull \hbox (badness 10000) in paragraph at lines 731--786
 
  []
 
-[19 <./img/Lab_1/Es_5/Glitch.png>] [20 <./img/Lab_1/Es_5/Clk_corto.png>]
-[21] (report_low_power.aux) ) 
+
+Overfull \hbox (29.11945pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
+ TECHNIQUES \OT1/cmr/m/n/10.95 20
+ []
+
+[20 <./img/Lab_1/Es_5/Glitch.png>]
+Overfull \hbox (29.11945pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
+ TECHNIQUES \OT1/cmr/m/n/10.95 21
+ []
+
+[21 <./img/Lab_1/Es_5/Clk_corto.png>]
+Overfull \hbox (29.11945pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
+ TECHNIQUES \OT1/cmr/m/n/10.95 22
+ []
+
+[22]
+Chapter 2.
+<./img/Lab_2/Datapath.png, id=129, 240.14719pt x 210.7875pt>
+File: ./img/Lab_2/Datapath.png Graphic file (type png)
+<use ./img/Lab_2/Datapath.png>
+Package pdftex.def Info: ./img/Lab_2/Datapath.png  used on input line 793.
+(pdftex.def)             Requested size: 227.62204pt x 199.79669pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 791--796
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 791--796
+
+ []
+
+[23
+
+ <./img/Lab_2/Datapath.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 819--821
+
+ []
+
+File: ./img/Lab_2/Datapath.png Graphic file (type png)
+<use ./img/Lab_2/Datapath.png>
+Package pdftex.def Info: ./img/Lab_2/Datapath.png  used on input line 836.
+(pdftex.def)             Requested size: 227.62204pt x 199.79669pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 833--839
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 833--839
+
+ []
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 857--865
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 857--865
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 890--892
+
+ []
+
+File: ./img/Lab_2/Datapath.png Graphic file (type png)
+<use ./img/Lab_2/Datapath.png>
+Package pdftex.def Info: ./img/Lab_2/Datapath.png  used on input line 907.
+(pdftex.def)             Requested size: 227.62204pt x 199.79669pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 893--921
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 893--921
+
+ []
+
+[25] [26]
+Overfull \hbox (27.3692pt too wide) in paragraph at lines 951--952
+\OT1/cmr/m/n/10.95 Sono stati ot-tenuti dati ag-giun-tivi rel-a-tivi al con-sum
+o di potenza dei sin-goli mod-uli dell'architettura,
+ []
+
+[27] (report_low_power.aux) ) 
 Here is how much of TeX's memory you used:
- 4930 strings out of 481556
- 67133 string characters out of 2914337
+ 4942 strings out of 481556
+ 65932 string characters out of 2923631
  309427 words of memory out of 3000000
- 20101 multiletter control sequences out of 15000+200000
- 542341 words of font info for 61 fonts, out of 3000000 for 9000
+ 20111 multiletter control sequences out of 15000+200000
+ 542946 words of font info for 63 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 31i,8n,37p,421b,1329s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\TONI\AppData\Local\MiKTeX\2.9\fonts/pk/
-ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/TONI/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/TONI/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/TONI/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/U
-sers/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
-10.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmmi8.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmmi9.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/TONI/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/TONI/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/TONI/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Use
-rs/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.p
-fb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmsl10.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/TONI/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on report_low_power.pdf (22 pages, 1125685 bytes).
+ 31i,8n,37p,668b,1329s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Francy\AppData\Local\MiKTeX\2.9\fonts/p
+k/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmm
+i10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmsl10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on report_low_power.pdf (28 pages, 1152538 bytes).
 PDF statistics:
- 177 PDF objects out of 1000 (max. 8388607)
+ 198 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
 

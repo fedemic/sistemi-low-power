@@ -56,7 +56,7 @@
 \tableofcontents % imposta l'indice in automatico
 \pagebreak % per passare direttamente alla prossima pagina
 
-\chapter{Laboratorio 1}
+\chapter{Laboratorio 1 - Power Estimation: probabilistic techniques}
 
 \section{Calcolo di probabilità e attività: porte logiche elementari}
 
@@ -782,5 +782,278 @@ FORSE CI STAREBBE VERIFICARE CON UNA SIMULAZIONE E NEL CASO METTERE I RISULTATI}
                  - Plot segnali MUX (fatto da noi) FATTO \\
                  - Plot dei segnali del blocchetto contatore e dei primi bit del contatore (fatto da noi) FATTO\\
                  - Completare le tabelle FATTO\\
-                - Revisione grafica FATTO }                
+                - Revisione grafica FATTO }  
+\newpage
+\chapter{Laboratorio 2 \\
+FSM Assignment and VHDL Synthesis}    
+\section{FSM State Assignment}
+\subsection{Progetto}
+L'obiettivo del progetto è la definizione di una macchina  a stati al fine di realizzare un algoritmo di somma tra 6 input, utilizzando il datapath in figura seguente e scegliendo l'ordine con cui collegare i diversi ingressi ai multiplexer.
+\\\\
+\centerline{\includegraphics[width=8cm]{./img/Lab_2/Datapath.png}}
+\\\\   
+In particolare, al fine di minimizzare i consumi della macchina a stati, è richiesta la minimizzazione del numero di commutazioni di:
+\begin{itemize}
+\item variabili di stato
+\item segnali di controllo
+\end{itemize} 
+Essendo i segnali di controllo coincidenti con i selettori dei multiplexer, è stata innanzitutto stabilita una sequenza di questi tale per cui il numero di commutazioni durante le transizioni fosse minimo.
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	Operazione & S3 & S2 & S1 & S0 \\ 
+	\hline
+	A+B & 0 & 1 & 0 & 1 \\
+	\hline
+	S+C & 0 & 0 & 0 & 0  \\
+	\hline
+	S+D & 0 & 0 & 1 & 0  \\
+	\hline
+    E+S & 1 & 0 & 1 & 1  \\
+	\hline
+	F+S & 1 & 1 & 1 & 1 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}     
+E' possibile notare come sia necessario riportare il valore della somma in ingresso ad entrambi i multiplexer, denominato S. Nella transizione da uno stato all'altro il numero di commutazioni è pari alla variazione degli addendi. In questo modo il massimo numero di commutazioni durante una transizione è pari a 2.\\
+Considerando un ciclo di esecuzione dell'algoritmo, è possibile stimare il numero totale di commutazione sui segnali di selezione e la loro switching activity.\\
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	Parametro & S3 & S2 & S1 & S0 \\ 
+	\hline
+	Commutazioni in un ciclo & 2 & 2 & 2 & 2 \\
+	\hline
+	Attività & 0.4 & 0.4 & 0.4 & 0.4  \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}  
+Il numero di commutazioni totale risulta pari a 8.\\
+E' stata scelta dunque la seguente configurazione degli ingressi 
+\\\\
+\centerline{\includegraphics[width=8cm]{./img/Lab_2/Datapath.png}}
+\\\\  
+Il passo successivo è la scelta della codifica dei singoli stati. In tale contesto è importante tenere in considerazione che una generica FSM presenta una rete per la generazione degli output e una rete per il calcolo dello stato futuro. Una codifica ottimale punta alla minimizzazione delle commutazioni in entrambe le reti. Per tale scopo, è stato scelto di far coincidere le due reti, in modo che la logica utilizzata per generare le uscite potesse essere utilizzata anche per la definizione dello stato futuro. In particolare, la codifica dello stato futuro si ottiene a a partire dalle uscite di controllo dello stato attuale.
+\begin{center}
+	\begin{tabular}{|c||c||c|c|c|c|}
+	\hline
+	Operazione & Codifica dello stato & S3 & S2 & S1 & S0 \\ 
+	\hline
+	A+B & 1 1 1 & 0 & 1 & 0 & 1 \\
+	\hline
+	S+C & 1 0 1 & 0 & 0 & 0 & 0 \\
+	\hline
+	S+D & 0 0 0 & 0 & 0 & 1 & 0 \\
+	\hline
+	E+S & 0 1 0 & 1 & 0 & 1 & 1 \\
+	\hline
+	F+S & 0 1 1 & 1 & 1 & 1 & 1 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}  
+E' possibile notare come tutte le transizioni presentino una distanza di Hamming pari a 1, fatta eccezione della transizione da S+C a S+D, nella quale tale distanza è pari a 2.
+\\
+In tale contesto, l'unica logica combinatoria necessaria è relativa alla valutazione delle uscite a partire dalla codifica dello stato attuale. Si è notato che tali funzioni logiche presentano un'implementazione semplice con un numero limitato di porte.
+\\
+\textcolor{red}{MAPPE KARNAUGH}
+\\
+E' possibile notare che le funzioni logiche presentano implicanti in comune, semplificando maggiormente la logica necessaria.
+\\\\
+\subsection{Descrizione VHDL e simulazione Modelsim}
+La macchina a stati precedentemente definita è stata descritta attraverso il VHDL, specificando in particolare la codifica degli stati progettata.
+\\
+\textcolor{red}{VHDL??????}
+\\
+Al fine della simulazione, datapath e fsm sono stati inclusi in un'unica entity per ottenre il Processing Element complessivo.E' stato dunque realizzato un testbench per verificare il corretto susseguirsi degli stati e le relative transizioni dei segnali.
+In particolare, è stata effettuata una simulazione di 2000 colpi di clock, che ha fornito i seguenti risultati attraverso un power report.
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+	\hline
+	Segnale & Tc & Activity \\ 
+	\hline
+	Clock & 4000 & 2 \\
+	\hline
+	S3 & 799 & 0.3995 \\
+	\hline
+	S2 & 802 & 0.4010 \\
+	\hline
+	S1 & 799 & 0.3995 \\
+	\hline
+	S0 & 802 & 0.4010 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}  
+Le attività ottenute sono comparabili con quelle stimate in fase di progetto.  
+\\
+\section{Sintesi del VHDL} 
+In tale sezione è stata effettuata la sintesi della top level entity che comprende sia FSM sia datapath.
+\\
+Inizialamente i file sono stati analizzati nel corretto ordine ed è stata elaborata la struttura del processing element.
+\\
+Successivamente è stato creato un clock di periodo pari a 10 ns.
+\\
+\centerline{create clock -name "CLK" -period 10 {CLK}} 
+\\
+E' stata verificata la presenza del clock generato attraverso il comando \textbf{report clock}.
+\\
+Successivamente è stata effettuata la sintesi attraverso la direttiva \textbf{compile -exact map}.
+\\
+Successivamente è stato possibile visualizzare, in modo gerarchico, la mappatura del circuito con la libreria scelta. Nell'immagine seguente, in particolare, è riportato lo schematico della macchina a stati.
+\\\\
+\centerline{\includegraphics[width=8cm]{./img/Lab_2/Datapath.png}}
+\\\\ 
+E' possibile notare, come atteso, che il numero di porte logiche utilizzato risulta limitato.
+\\
+Sono stati effettuati una serie di report inizialmente sulla top level entity per poi analizzare in modo più approfondito la macchina a stati.
+Inizialmente è stato possibile ottenere una stima dell'area delle celle utilizzate nella sintesi, attraverso il comando \textbf{reportarea}.
+\\
+\centerline{Total cell area = 295.53 um2 ??}
+\\
+Successivamente, al fine di valutare lo slack, sono stati analizzati i 10 percorsi combinatori con ritardi maggiori.
+\\
+\centerline{report timing -nworst 10}
+\\
+Per semplicità sono riportati i dati relativi al critical path.
+\begin{center}
+	\begin{tabular}{|c|c|}
+	\hline
+	Data required time & 9.97 ns \\
+	\hline
+	Data arrival time & -1.94 ns \\
+	\hline
+	Slack & 8.02 ns \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}  
+Come è possibile notare, lo slack risulta particolarmente elevato se confrontato con il periodo di clock.
+Nel report sono inoltre presenti i ritardi relativi agli elementi compresi tra lo start point e l'end point del percorso critico.
+\\
+E' possibile ottenere informazioni riguardo alla potenza dissipata attraverso il comando \textbf{report power}. In particolare, si evidenziano i tre contributi relativi alla top level entity.
+\begin{center}
+	\begin{tabular}{|c|c|}
+	\hline
+	Internal Power & 29.4711 uW \\
+	\hline
+	Switching Power & 13.2924 uW \\
+	\hline
+	Leakage Power & 5.4747 uW \\
+	\hline
+	Total Power & 48.2382 uW \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}  
+Sono stati ottenuti dati aggiuntivi relativi al consumo di potenza dei singoli moduli dell'architettura, tramite l'aggiunta della direttiva hier.
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+	\hline
+	FSM & 4.504 uW & 9.3 perc \\
+	\hline
+	Datapath & 43.734 uW & 90.7 perc \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}  
+Il consumo della macchina a stati rappresenta una piccola parte rispetto al consumo totale.
+\\
+Per approfondire lo studio sui nodi interni del circuito, è stata realizzata un'analisi di tipo net. In particolare sono riportati i risultati relativi ai nodi dei segnali di selezione dei multiplexer.
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+	\hline
+	FSM & 4.504 uW & 9.3 perc \\
+	\hline
+	Datapath & 43.734 uW & 90.7 perc \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm} 
+Il periodo di variazione dei selettori è confrontabile con le variazioni medie che avvengono su tali segnali in un ciclo di esecuzione. E' importante tenere in considerazione la possibile presenza di commutazioni non previste a causa dell'attivazione del segnale di reset durante la simulazione, il quale presenta una certa probabilità non nulla di commutare.
+\\
+\textcolor{red}{constraint timing and power}
+\\
+Successivamente è stata effettuata un'analisi più dettagliata della FSM accedendovi tramite la direttiva current instance FSM.
+Attraverso il comando report fsm è stato possibile verificare la corretta implementazione della codifica progettata.
+\textcolor{red}{comment cell and net}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
 \end{document}
