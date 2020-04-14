@@ -821,7 +821,7 @@ Considerando un ciclo di esecuzione dell'algoritmo, è possibile stimare il nume
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|}
 	\hline
-	Parametro & S3 & S2 & S1 & S0 \\ 
+	 & S3 & S2 & S1 & S0 \\ 
 	\hline
 	Commutazioni in un ciclo & 2 & 2 & 2 & 2 \\
 	\hline
@@ -835,7 +835,9 @@ E' stata scelta dunque la seguente configurazione degli ingressi
 \\\\
 \centerline{\includegraphics[width=8cm]{./img/Lab_2/Datapath.png}}
 \\\\  
-Il passo successivo è la scelta della codifica dei singoli stati. In tale contesto è importante tenere in considerazione che una generica FSM presenta una rete per la generazione degli output e una rete per il calcolo dello stato futuro. Una codifica ottimale punta alla minimizzazione delle commutazioni in entrambe le reti. Per tale scopo, è stato scelto di far coincidere le due reti, in modo che la logica utilizzata per generare le uscite potesse essere utilizzata anche per la definizione dello stato futuro. In particolare, la codifica dello stato futuro si ottiene a a partire dalle uscite di controllo dello stato attuale.
+Il passo successivo è la scelta della codifica dei singoli stati. In tale contesto è importante tenere in considerazione che una generica FSM presenta una rete per la generazione degli output e una rete per il calcolo dello stato futuro. 
+\\
+Una codifica ottimale punta alla minimizzazione delle commutazioni in entrambe le reti. Per tale scopo, è stato scelto di far coincidere le due reti, in modo che la logica utilizzata per generare le uscite potesse essere utilizzata anche per la definizione dello stato futuro. In particolare, la codifica dello stato futuro si ottiene a a partire dalle uscite di controllo dello stato attuale.
 \begin{center}
 	\begin{tabular}{|c||c||c|c|c|c|}
 	\hline
@@ -867,7 +869,7 @@ La macchina a stati precedentemente definita è stata descritta attraverso il VH
 \\
 \textcolor{red}{VHDL??????}
 \\
-Al fine della simulazione, datapath e fsm sono stati inclusi in un'unica entity per ottenre il Processing Element complessivo.E' stato dunque realizzato un testbench per verificare il corretto susseguirsi degli stati e le relative transizioni dei segnali.
+Al fine della simulazione, datapath e FSM sono stati inclusi in un'unica entity per ottenre il Processing Element complessivo.E' stato dunque realizzato un testbench per verificare il corretto susseguirsi degli stati e le relative transizioni dei segnali.
 In particolare, è stata effettuata una simulazione di 2000 colpi di clock, che ha fornito i seguenti risultati attraverso un power report.
 \begin{center}
 	\begin{tabular}{|c|c|c|}
@@ -896,7 +898,7 @@ Inizialamente i file sono stati analizzati nel corretto ordine ed è stata elabo
 \\
 Successivamente è stato creato un clock di periodo pari a 10 ns.
 \\
-\centerline{create clock -name "CLK" -period 10 {CLK}} 
+\centerline{create\_clock -name "CLK" -period 10 {CLK}} 
 \\
 E' stata verificata la presenza del clock generato attraverso il comando \textbf{report clock}.
 \\
@@ -909,14 +911,14 @@ Successivamente è stato possibile visualizzare, in modo gerarchico, la mappatur
 E' possibile notare, come atteso, che il numero di porte logiche utilizzato risulta limitato.
 \\
 Sono stati effettuati una serie di report inizialmente sulla top level entity per poi analizzare in modo più approfondito la macchina a stati.
-Inizialmente è stato possibile ottenere una stima dell'area delle celle utilizzate nella sintesi, attraverso il comando \textbf{reportarea}.
+Inizialmente è stato possibile ottenere una stima dell'area delle celle utilizzate nella sintesi, attraverso il comando \textbf{report\_area}.
 \\
 \centerline{Total cell area = 295.53 um2 ??}
 \\
 Successivamente, al fine di valutare lo slack, sono stati analizzati i 10 percorsi combinatori con ritardi maggiori.
 \\
-\centerline{report timing -nworst 10}
-\\
+\centerline{report\_timing -nworst 10}
+\\\\
 Per semplicità sono riportati i dati relativi al critical path.
 \begin{center}
 	\begin{tabular}{|c|c|}
@@ -933,7 +935,7 @@ Per semplicità sono riportati i dati relativi al critical path.
 Come è possibile notare, lo slack risulta particolarmente elevato se confrontato con il periodo di clock.
 Nel report sono inoltre presenti i ritardi relativi agli elementi compresi tra lo start point e l'end point del percorso critico.
 \\
-E' possibile ottenere informazioni riguardo alla potenza dissipata attraverso il comando \textbf{report power}. In particolare, si evidenziano i tre contributi relativi alla top level entity.
+E' possibile ottenere informazioni riguardo alla potenza dissipata attraverso il comando \textbf{report\_power}. In particolare, si evidenziano i tre contributi relativi alla top level entity.
 \begin{center}
 	\begin{tabular}{|c|c|}
 	\hline
@@ -948,65 +950,76 @@ E' possibile ottenere informazioni riguardo alla potenza dissipata attraverso il
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}  
-Sono stati ottenuti dati aggiuntivi relativi al consumo di potenza dei singoli moduli dell'architettura, tramite l'aggiunta della direttiva hier.
+Sono stati ottenuti dati aggiuntivi relativi al consumo di potenza dei singoli moduli dell'architettura, tramite l'aggiunta della direttiva -hier.
 \begin{center}
 	\begin{tabular}{|c|c|c|}
 	\hline
-	FSM & 4.504 uW & 9.3 perc \\
+	FSM & 4.504 uW & 9.3\% \\
 	\hline
-	Datapath & 43.734 uW & 90.7 perc \\
+	Datapath & 43.734 uW & 90.7\% \\
 	\hline
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}  
 Il consumo della macchina a stati rappresenta una piccola parte rispetto al consumo totale.
 \\
-Per approfondire lo studio sui nodi interni del circuito, è stata realizzata un'analisi di tipo net. In particolare sono riportati i risultati relativi ai nodi dei segnali di selezione dei multiplexer.
+Per approfondire lo studio sui nodi interni del circuito, è stata realizzata un'analisi di tipo -net. In particolare sono riportati i risultati relativi ai nodi dei segnali di selezione dei multiplexer.
 \begin{center}
-	\begin{tabular}{|c|c|c|}
+	\begin{tabular}{|c|c|c|c|c|}
 	\hline
-	FSM & 4.504 uW & 9.3 perc \\
+	Segnale & Net Load[fF] & Static Probability & Toggle Rate & Switching Power[uW] \\
 	\hline
-	Datapath & 43.734 uW & 90.7 perc \\
+	 sel11\_wire & 13.792  &  0.120  &  0.0246  & 0.2055 \\
+	\hline
+	 sel01\_wire & 10.222  &  0.253  &  0.0272  & 0.1682 \\
+	\hline
+	sel10\_wire & 8.489  &  0.720  &  0.0301  & 0.1547\\
+	\hline
+	sel00\_wire & 7.058  &  0.720  &  0.0301  & 0.1286 \\
 	\hline
 	\end{tabular}	
 \end{center}
-\vspace{0.3cm} 
+\vspace{0.3cm}
 Il periodo di variazione dei selettori è confrontabile con le variazioni medie che avvengono su tali segnali in un ciclo di esecuzione. E' importante tenere in considerazione la possibile presenza di commutazioni non previste a causa dell'attivazione del segnale di reset durante la simulazione, il quale presenta una certa probabilità non nulla di commutare.
 \\
 \textcolor{red}{constraint timing and power}
 \\
-Successivamente è stata effettuata un'analisi più dettagliata della FSM accedendovi tramite la direttiva current instance FSM.
-Attraverso il comando report fsm è stato possibile verificare la corretta implementazione della codifica progettata.
-E' possibile risalire alla suddivisione del consumo della potenza dinamica all'interno delle celle che costituiscono la FSM attraverso un'analisi di potenza di tipo cell. In particolare nella seguente tabella vengono riportati i tre contributi maggiori relativi al consumo di potenza dinamica.
+\\
+Successivamente è stata effettuata un'analisi più dettagliata della FSM accedendovi tramite la direttiva\textbf{ current\_instance FSM}.\\
+Attraverso il comando \textbf{report\_fsm} è stato possibile verificare la corretta implementazione della codifica progettata.\\
+E' possibile risalire alla suddivisione del consumo della potenza dinamica all'interno delle celle che costituiscono la FSM attraverso un'analisi di potenza di tipo -cell. In particolare nella seguente tabella vengono riportati i tre contributi maggiori relativi al consumo di potenza dinamica.
 \begin{center}
 	\begin{tabular}{|c|c|}
 	\hline
-	  psreg[1] & 1.143  \\
+	  ps\_reg[1] & 1.143 uW  \\
 	\hline
-	 psreg[2] & 0.979 \\
+	 ps\_reg[2] & 0.979 uW\\
 	\hline
-	psreg[0] & 0.924 \\
+	ps\_reg[0] & 0.924 uW\\
 	\hline
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
 Si nota che tali contributi sono relativi alle variabili di stato, che presentano numerose commutazioni durante l'esecuzione dell'algoritmo.
 \\
-Uno studio più approfondito sulla switching power relativa ai nodi interni è ottenuta tramite un'analisi di tipo net. In particolare nella seguente tabella sono riportati i dati relativi ai segnali di uscita della FSM, ovvero i segnali di selezione dei multiplexer.
+Uno studio più approfondito sulla switching power relativa ai nodi interni è ottenuta tramite un'analisi di tipo -net. In particolare, nella seguente tabella, sono riportati i dati relativi ai segnali di uscita della FSM, ovvero i segnali di selezione dei multiplexer.
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|}
 	\hline
+	Segnale & Net Load[fF] & Static Probability & Toggle Rate & Switching Power[uW] \\
+	\hline
 	 S11 & 13.792  &  0.120  &  0.0246  & 0.2055 \\
 	\hline
-	 psreg[2] & 0.979 \\
+	 S01 & 10.222  &  0.253  &  0.0272  & 0.1682 \\
 	\hline
-	psreg[0] & 0.924 \\
+	S10 & 8.489  &  0.720  &  0.0301  & 0.1547\\
+	\hline
+	S00 & 7.058  &  0.720  &  0.0301  & 0.1286 \\
 	\hline
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-E' possibile notare che il contributo maggiore del consumo è dovuto alle capacità di carico dei nodi in analisi, che assumono  valori significativi. Questo è il principale motivo per cui tali segnali contribuiscono maggiormente, a parità di toggle rate.
+E' possibile notare che tali valori coincidono con quelli trovati precedentemente durante l'analisi -net della top level entity. Il contributo maggiore del consumo è dovuto alle capacità di carico dei nodi in analisi, che assumono  valori significativi rispetto agli altri nodi. Questo è il principale motivo per cui tali segnali contribuiscono maggiormente, data la parità di toggle rate.
 
 
 
@@ -1044,27 +1057,6 @@ E' possibile notare che il contributo maggiore del consumo è dovuto alle capaci
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-          
-          
-          
-          
           
           
           

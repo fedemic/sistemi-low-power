@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.18)  14 APR 2020 18:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.18)  14 APR 2020 19:48
 entering extended mode
 **./report_low_power.tex
 (report_low_power.tex
@@ -996,48 +996,58 @@ File: ./img/Lab_2/Datapath.png Graphic file (type png)
 Package pdftex.def Info: ./img/Lab_2/Datapath.png  used on input line 836.
 (pdftex.def)             Requested size: 227.62204pt x 199.79669pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 833--839
+Underfull \hbox (badness 10000) in paragraph at lines 833--841
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 833--839
+Underfull \hbox (badness 10000) in paragraph at lines 833--841
 
  []
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 857--865
+Underfull \hbox (badness 10000) in paragraph at lines 859--867
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 857--865
+Underfull \hbox (badness 10000) in paragraph at lines 859--867
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 890--892
+Underfull \hbox (badness 10000) in paragraph at lines 892--894
 
  []
 
 File: ./img/Lab_2/Datapath.png Graphic file (type png)
 <use ./img/Lab_2/Datapath.png>
-Package pdftex.def Info: ./img/Lab_2/Datapath.png  used on input line 907.
+Package pdftex.def Info: ./img/Lab_2/Datapath.png  used on input line 909.
 (pdftex.def)             Requested size: 227.62204pt x 199.79669pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 893--921
+Underfull \hbox (badness 10000) in paragraph at lines 895--923
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 893--921
+Underfull \hbox (badness 10000) in paragraph at lines 895--923
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 895--923
 
  []
 
 [25] [26]
-Overfull \hbox (27.3692pt too wide) in paragraph at lines 951--952
+Overfull \hbox (27.3692pt too wide) in paragraph at lines 953--954
 \OT1/cmr/m/n/10.95 Sono stati ot-tenuti dati ag-giun-tivi rel-a-tivi al con-sum
 o di potenza dei sin-goli mod-uli dell'architettura,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 983--991
+
  []
 
 [27] [28] (report_low_power.aux) ) 
@@ -1048,7 +1058,7 @@ Here is how much of TeX's memory you used:
  20111 multiletter control sequences out of 15000+200000
  542946 words of font info for 63 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 31i,8n,37p,668b,1329s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 31i,8n,37p,428b,1329s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Francy\AppData\Local\MiKTeX\2.9\fo
 nts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Program Files/MiKTeX 2.9/fonts
 /type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
@@ -1064,7 +1074,7 @@ ublic/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmsl10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pf
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on report_low_power.pdf (29 pages, 1154347 bytes).
+Output written on report_low_power.pdf (29 pages, 1155941 bytes).
 PDF statistics:
  201 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
