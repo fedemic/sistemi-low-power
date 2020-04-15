@@ -785,12 +785,12 @@ L'obiettivo del progetto è la definizione di una macchina  a stati al fine di r
 \\\\
 \centerline{\includegraphics[width=8cm]{./img/Lab_2/Datapath.png}}
 \\\\   
-In particolare, al fine di minimizzare i consumi della macchina a stati, è richiesta la minimizzazione del numero di commutazioni di:
+In particolare, al fine di minimizzare i consumi della macchina a stati, è necessario ridurre al minimo il numero di commutazioni di:
 \begin{itemize}
 \item variabili di stato
 \item segnali di controllo
 \end{itemize} 
-Essendo i segnali di controllo coincidenti con i selettori dei multiplexer, è stata innanzitutto stabilita una sequenza di questi tale per cui il numero di commutazioni durante le transizioni fosse minimo.
+Essendo i segnali di controllo coincidenti con i selettori dei multiplexer, è stata innanzitutto stabilita una sequenza per la selezione dei diversi input tale per cui il numero di commutazioni durante l'esecuzione dell'interno algoritmo di somma fosse minimo.
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|}
 	\hline
@@ -809,7 +809,7 @@ Essendo i segnali di controllo coincidenti con i selettori dei multiplexer, è s
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}     
-E' possibile notare come sia necessario riportare il valore della somma in ingresso ad entrambi i multiplexer, denominato S. Nella transizione da uno stato all'altro il numero di commutazioni è pari alla variazione degli addendi. In questo modo il massimo numero di commutazioni durante una transizione è pari a 2.\\
+E' possibile notare come sia necessario riportare il valore della somma, denominato S, in ingresso ad entrambi i multiplexer. Nella transizione da uno stato all'altro il numero di commutazioni è pari alla variazione degli addendi. Ne consegue che il massimo numero di commutazioni durante una transizione è pari a 2.\\
 Considerando un ciclo di esecuzione dell'algoritmo, è possibile stimare il numero totale di commutazione sui segnali di selezione e la loro switching activity.\\
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|}
@@ -851,18 +851,22 @@ Una codifica ottimale punta alla minimizzazione delle commutazioni in entrambe l
 \vspace{0.3cm}  
 E' possibile notare come tutte le transizioni presentino una distanza di Hamming pari a 1, fatta eccezione della transizione da S+C a S+D, nella quale tale distanza è pari a 2.
 \\
-In tale contesto, l'unica logica combinatoria necessaria è relativa alla valutazione delle uscite a partire dalla codifica dello stato attuale. Si è notato che tali funzioni logiche presentano un'implementazione semplice con un numero limitato di porte.
-\\
-\textcolor{red}{MAPPE KARNAUGH}
-\\
+In tale contesto, l'unica logica combinatoria necessaria è relativa alla valutazione delle uscite a partire dalla codifica dello stato attuale. Si è notato che tali funzioni logiche presentano un'implementazione semplice con un numero limitato di porte. \textcolor{blue}{Di seguito sono riportate le mappe di Karnaugh per le funzioni logiche sopra descritte}
+\\\\
+\centerline{\includegraphics[width=7cm]{./img/Lab_2/K_S3.png}
+			\includegraphics[width=7cm]{./img/Lab_2/K_S2.png}}
+\\\\
+\centerline{\includegraphics[width=7cm]{./img/Lab_2/K_S1.png}
+			\includegraphics[width=7cm]{./img/Lab_2/K_S0.png}}
+\\\\
 E' possibile notare che le funzioni logiche presentano implicanti in comune, semplificando maggiormente la logica necessaria.
 \\\\
 \subsection{Descrizione VHDL e simulazione Modelsim}
 La macchina a stati precedentemente definita è stata descritta attraverso il VHDL, specificando in particolare la codifica degli stati progettata.
-\\
-\textcolor{red}{VHDL??????}
-\\
-Al fine della simulazione, datapath e FSM sono stati inclusi in un'unica entity per ottenre il Processing Element complessivo. E' stato dunque realizzato un testbench per verificare il corretto susseguirsi degli stati e le relative transizioni dei segnali.
+\\\\
+\textcolor{red}{DOBBIAMO METTERE IL VHDL?}
+\\\\
+Al fine della simulazione, datapath e FSM sono stati inclusi in un'unica entity per ottenere il Processing Element complessivo. E' stato dunque realizzato un testbench per verificare il corretto susseguirsi degli stati e le relative transizioni dei segnali.
 In particolare, è stata effettuata una simulazione di 2000 colpi di clock, che ha fornito i seguenti risultati attraverso un power report.
 \begin{center}
 	\begin{tabular}{|c|c|c|}
@@ -887,29 +891,29 @@ Le attività ottenute sono comparabili con quelle stimate in fase di progetto.
 \section{Sintesi del VHDL} 
 In tale sezione è stata effettuata la sintesi della top level entity che comprende sia FSM sia datapath.
 \\
-Inizialamente i file sono stati analizzati nel corretto ordine ed è stata elaborata la struttura del processing element.
+Inizialamente i file sono stati analizzati nel corretto ordine ed è stata elaborata la struttura del Processing Element.
 \\
-Successivamente è stato creato un clock di periodo pari a 10 ns.
-\\
+Successivamente è stato generato un clock di periodo pari a 10 ns.
+\\\\
 \centerline{create\_clock -name "CLK" -period 10 {CLK}} 
-\\
+\\\\
 E' stata verificata la presenza del clock generato attraverso il comando \textbf{report clock}.
 \\
 Successivamente è stata effettuata la sintesi attraverso la direttiva \textbf{compile -exact map}.
 \\
-Successivamente è stato possibile visualizzare, in modo gerarchico, la mappatura del circuito con la libreria scelta. Nell'immagine seguente, in particolare, è riportato lo schematico della macchina a stati.
+In seguito è stato possibile visualizzare, in modo gerarchico, la mappatura del circuito con la libreria scelta. Nell'immagine seguente, in particolare, è riportato lo schematico della macchina a stati.
 \\\\
 \centerline{\includegraphics[width=15cm]{./img/Lab_2/FSM_Schematic.png}}
 \\\\ 
 E' possibile notare, come atteso, che il numero di porte logiche utilizzato risulta limitato.
 \\
 Sono stati effettuati una serie di report inizialmente sulla top level entity per poi analizzare in modo più approfondito la macchina a stati.
-Inizialmente è stato possibile ottenere una stima dell'area delle celle utilizzate nella sintesi, attraverso il comando \textbf{report\_area}.
-\\
+Come prima cosa è stata ottenuta una stima dell'area delle celle utilizzate nella sintesi, attraverso il comando \textbf{report\_area}.
+\\\\
 \centerline{Total cell area = 295.53 um2 ??}
-\\
+\\\\
 Successivamente, al fine di valutare lo slack, sono stati analizzati i 10 percorsi combinatori con ritardi maggiori.
-\\
+\\\\
 \centerline{report\_timing -nworst 10}
 \\\\
 Per semplicità sono riportati i dati relativi al critical path.
@@ -954,9 +958,9 @@ Sono stati ottenuti dati aggiuntivi relativi al consumo di potenza dei singoli m
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}  
-Il consumo della macchina a stati rappresenta una piccola parte rispetto al consumo totale.
+Il consumo della macchina a stati rappresenta una percentuale ridotta rispetto al consumo totale.
 \\
-Per approfondire lo studio sui nodi interni del circuito, è stata realizzata un'analisi di tipo -net. In particolare sono riportati i risultati relativi ai nodi dei segnali di selezione dei multiplexer.
+Al fine di approfondire lo studio relativo ai nodi interni del circuito, è stata realizzata un'analisi di tipo -net. In particolare sono riportati i risultati relativi ai nodi dei segnali di selezione dei multiplexer.
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|}
 	\hline
@@ -973,11 +977,10 @@ Per approfondire lo studio sui nodi interni del circuito, è stata realizzata un
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-Il periodo di variazione dei selettori è confrontabile con le variazioni medie che avvengono su tali segnali in un ciclo di esecuzione. E' importante tenere in considerazione la possibile presenza di commutazioni non previste a causa dell'attivazione del segnale di reset durante la simulazione, il quale presenta una certa probabilità non nulla di commutare.
-\\
-\textcolor{red}{constraint timing and power}
-\\
-\\
+Il periodo medio di variazione dei selettori, ottenibile dal toggle rate, è confrontabile con le variazioni medie che avvengono su tali segnali in un ciclo di esecuzione. E' importante tenere in considerazione la possibile presenza di commutazioni non previste a causa dell'attivazione del segnale di reset durante la simulazione, il quale è caratterizzato da una probabilità non nulla di commutazione.
+\\\\
+\textcolor{red}{CONSTRAINT POWER E TIMING}
+\\\\
 Successivamente è stata effettuata un'analisi più dettagliata della FSM accedendovi tramite la direttiva\textbf{ current\_instance FSM}.\\
 Attraverso il comando \textbf{report\_fsm} è stato possibile verificare la corretta implementazione della codifica progettata.\\
 E' possibile risalire alla suddivisione del consumo della potenza dinamica all'interno delle celle che costituiscono la FSM attraverso un'analisi di potenza di tipo -cell. In particolare nella seguente tabella vengono riportati i tre contributi maggiori relativi al consumo di potenza dinamica.
@@ -1012,7 +1015,7 @@ Uno studio più approfondito sulla switching power relativa ai nodi interni è o
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-E' possibile notare che tali valori coincidono con quelli trovati precedentemente durante l'analisi -net della top level entity. Il contributo maggiore del consumo è dovuto alle capacità di carico dei nodi in analisi, che assumono  valori significativi rispetto agli altri nodi. Questo è il principale motivo per cui tali segnali contribuiscono maggiormente, data la parità di toggle rate.
+E' possibile notare che tali valori coincidono con quelli ottenuti precedentemente durante l'analisi -net della top level entity. Il contributo maggiore del consumo è dovuto alle capacità di carico dei nodi in analisi, che assumono  valori significativi rispetto agli altri nodi. Questo è il principale motivo per cui tali segnali contribuiscono maggiormente, data la parità di toggle rate.
 
 
 
@@ -1050,7 +1053,6 @@ E' possibile notare che tali valori coincidono con quelli trovati precedentement
 
 
 
-          
           
           
           
