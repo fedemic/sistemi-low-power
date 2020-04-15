@@ -392,7 +392,7 @@ L'apporto maggiore al consumo totale è dato dalla potenza dinamica, in particol
 \vspace{0.3cm}
 Si nota come la suddivisione risulti simile per tutti i FA fatta eccezione per FA(8). In particolare si differenzia dagli altri per il consumo relativo alla potenza di switch. Si ipotizza che quest'ultima risulti inferiore rispetto agli altri full adder a causa del minor carico di uscita.
 \\\\
-È inoltre possibile approfondire l'analisi di potenza considerando i contributi interni dei singoli moduli. In particolare, vengono messi in luce i contributi dei nodi interni ai singoli full adder, sempre suddivisi nei tre contributi precedentemente descritti.
+È inoltre possibile approfondire l'analisi di potenza considerando i contributi \textcolor{blue}{delle celle} interne ai singoli moduli. In particolare, vengono messi in luce i contributi \textcolor{blue}{delle celle che compongono i singoli FA}, sempre suddivisi nei tre contributi precedentemente descritti.
 Per comprendere l'origine del consumo inferiore del FA8, quest'ultimo è stato analizzato come cella ed è stato confrontato con FA1.
 Lo schema del circuito interno e i risultati ottenuti sono riportati di seguito.
 \\\\
@@ -402,7 +402,7 @@ Lo schema del circuito interno e i risultati ottenuti sono riportati di seguito.
 	\begin{tabular}{|c|c|c|c|c|}
 	\multicolumn{5}{c}{FA(1) }\\
 	\hline
-	Nodo &  Switching Power & Internal Power & Leakage Power & Total Dynamic Power \\ 
+	\textcolor{blue}{Cella} &  Switching Power & Internal Power & Leakage Power & Total Dynamic Power \\ 
 	\hline
 	U4 & 0.5488 uW & 0.5899 uW & 36.1637 nW & 1.138 uW  \\
 	\hline
@@ -419,7 +419,7 @@ Lo schema del circuito interno e i risultati ottenuti sono riportati di seguito.
 	\begin{tabular}{|c|c|c|c|c|}
 	\multicolumn{5}{c}{FA(8) }\\
 	\hline
-	Nodo &  Switching Power & Internal Power & Leakage Power & Total Dynamic Power \\ 
+	\textcolor{blue}{Cella} &  Switching Power & Internal Power & Leakage Power & Total Dynamic Power \\ 
 	\hline
 	U4 & 0.5365 uW & 0.5757 uW & 36.1637 nW & 1.112 uW  \\
 	\hline
@@ -432,9 +432,9 @@ Lo schema del circuito interno e i risultati ottenuti sono riportati di seguito.
 	\end{tabular}
 \end{center}
 \vspace{0.3cm}
-La differenza nel consumo di potenza di switching è individuata nel nodo U2, legato al carry in uscita.
+La differenza nel consumo di potenza di switching è individuata \textcolor{blue}{nella cella} U2, legata al carry in uscita dal singolo FA.
 \\
-È possibile ottenere informazioni aggiuntive sul calcolo della potenza di switching con un'analisi di tipo verbose. In tale analisi sono riportati i contributi capacitivi necessari al calcolo della switching power, espressi nodo per nodo.
+È possibile ottenere informazioni aggiuntive sul calcolo della switching power \textcolor{blue}{relativa ai nodi interni ad un modulo} con un'analisi di tipo \textcolor{blue}{net} verbose. In tale analisi sono riportati i contributi capacitivi necessari al calcolo di tale potenza, espressi nodo per nodo.
 \\\\
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|}
@@ -472,29 +472,25 @@ La differenza nel consumo di potenza di switching è individuata nel nodo U2, le
 \vspace{0.3cm}
 Si nota come il nodo legato al carry in uscita presenti una capacità inferiore per FA8. Ciò conferma l'ipotesi legata al carico inferiore.
 \\
-Analizzando i vari FA con analisi di tipo verbose si nota inoltre che i contributi di capacità relativi ai nodi della somma (U1) siano trascurabili rispetto agli altri contributi.
+Analizzando i vari FA con analisi di tipo net verbose si nota inoltre che i contributi di capacità relativi ai nodi della somma (S) siano trascurabili rispetto agli altri contributi.
 Di conseguenza si evince che il contributo di potenza relativo a tale nodo è di un ordine di grandezza inferiore rispetto agli altri.
 \\\\
-\textcolor{red}{CONFRONTO SWITCHING ACTIVITY 
-\\
-Da un report di tipo verbose è inoltre possibile confrontare i valori di static probability e toggle rate di un FA derivanti dalla
-simulazione con le probabilità in uscita e le attività stimate precedentemente in modo teorico. 
+\textcolor{blue}{
+Da un report di tipo net verbose è inoltre possibile confrontare i valori di static probability e toggle rate \textcolor{blue}{dei nodi di uscita di} un FA derivanti dalla simulazione con le probabilità in uscita e le attività stimate precedentemente in modo teorico. 
 \\
 Si nota come i valori di probabilità dei
 nodi di uscita, S e Cout, siano distribuiti attorno al valore 0.5, dunque confrontabili con il caso precedentemente considerato di ingressi equiprobabili. 
 \\
-Risulta differente rispetto ai risultati teorici il valore del toggle rate associato a tali nodi, in quanto l'applicazione
-della formula facente uso della probabilità del nodo non porta a risultati simili. La causa di tale incongruenza è intrinseca nel fatto
-che il modello probabilistico per la valutazione della switching activity risulta essere approssimativo in quanto non prende in 
-considerazione la possibile correlazione, spaziale e temporale, tra i differenti nodi del circuito.}
+Il toggle rate rappresenta la frequenza media di commutazione associata al singolo nodo, che identifica, con il suo reciproco, il periodo medio
+con cui tale nodo presenta una commutazione: attraverso tale valore è possibile stimare la switching activity dei nodi di somma e dei carry in uscita. In tal caso, poichè il periodo di clock è pari a 1ns, il valore di toggle rate riportato coincide con la switching activity del segnale. E' possibile notare come i valori simulati si distanzino da quelli teorici, in quanto all'interno del metodo probabilistico non viene tenuta in considerazione la correlazione spaziale e temporale tra diversi segnali. Tale fatto mette in luce, di conseguenza, le limitazioni che l'utilizzo di un modello probabilistico comporta.}
 \newpage
-\textcolor{red}{CONFRONTO VERBOSE RCA
+\textcolor{blue}{CONFRONTO VERBOSE RCA
 \\
-E' stato richiesto inoltre un power report di tipo verbose relativo all'intero RCA. Si può osservare come i contributi capacitivi relativi
-alle uscite di somma siano significativamente inferiori rispetto ai contributi dei nodi relativi ai carry tra uno stadio e quello successivo.
+E' stato richiesto inoltre un power report di tipo net verbose relativo all'intero RCA. Si può osservare come i contributi capacitivi relativi
+ai nodi delle uscite di somma siano significativamente inferiori rispetto ai contributi dei nodi relativi ai carry tra uno stadio e quello successivo.
 Anche in questo caso la motivazione è dovuta al carico capacitivo inferiore delle uscite di somma, che non risultano collegate ad ulteriori
 blocchi. Tuttavia, osservando i contributi totali riportati dall'analisi di tipo verbose, è possibile osservare una differenza tra questi e 
-quelli presenti nel power report precedentemente richiesto.
+quelli presenti nel power report precedentemente richiesto. 
 \\
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|}
@@ -503,12 +499,12 @@ quelli presenti nel power report precedentemente richiesto.
 	\hline
 	Power report & 16.7429 uW & 9.7406 uW & 953.4833 nW & 27.4370 uW \\
 	\hline
-	Verbose & 8.848 uW & 3.766 uW & 403.098 nW & 12.614 uW \\
+	Net Verbose & 8.848 uW & 3.766 uW & 403.098 nW & 12.614 uW \\
 	\hline
 	\end{tabular}
 \end{center}
 \vspace{0.3cm}
-I contributi riportati dall'analisi di tipo verbose risultano proporzionalmente inferiori. La possibile causa di ciò è da attribuirsi al tipo
+I contributi riportati dall'analisi di tipo net verbose risultano proporzionalmente inferiori. La possibile causa di ciò è da attribuirsi al tipo
 di analisi effettuata da Synopsys: in particolare la keyword -net utilizzata ha richiesto uno studio della potenza relativo ai nodi interni
 dell'architettura dell'RCA, presenti tra i vari FA connessi. In tale analisi i contributi dei nodi interni ai FA stessi sono stati
 tralasciati. Al contrario un'analisi di tipo power report fornisce un risultato completo comprendendo all'interno l'analisi di tutti i nodi dei
@@ -784,8 +780,7 @@ FORSE CI STAREBBE VERIFICARE CON UNA SIMULAZIONE E NEL CASO METTERE I RISULTATI}
                  - Completare le tabelle FATTO\\
                 - Revisione grafica FATTO }  
 \newpage
-\chapter{Laboratorio 2 \\
-FSM Assignment and VHDL Synthesis}    
+\chapter{Laboratorio 2 - FSM Assignment and VHDL Synthesis}    
 \section{FSM State Assignment}
 \subsection{Progetto}
 L'obiettivo del progetto è la definizione di una macchina  a stati al fine di realizzare un algoritmo di somma tra 6 input, utilizzando il datapath in figura seguente e scegliendo l'ordine con cui collegare i diversi ingressi ai multiplexer.
