@@ -151,8 +151,6 @@ i seguenti grafici.
 \\\\
 \centerline{\includegraphics[width=8cm]{./img/Lab_1/Es_1/Inverter.png}
             \includegraphics[width=8cm]{./img/Lab_1/Es_1/AND.png}}
-\newpage
-
 \centerline{\includegraphics[width=8cm]{./img/Lab_1/Es_1/XOR.png}
             \includegraphics[width=8cm]{./img/Lab_1/Es_1/OR.png}}
 \vspace{0.5cm}
@@ -832,7 +830,7 @@ E' stata scelta dunque la seguente configurazione degli ingressi
 \\\\  
 Il passo successivo è la scelta della codifica dei singoli stati. In tale contesto è importante tenere in considerazione che una generica FSM presenta una rete per la generazione degli output e una rete per il calcolo dello stato futuro. 
 \\
-Una codifica ottimale punta alla minimizzazione delle commutazioni in entrambe le reti. Per tale scopo, è stato scelto di far coincidere le due reti, in modo che la logica utilizzata per generare le uscite potesse essere utilizzata anche per la definizione dello stato futuro. In particolare, la codifica dello stato futuro si ottiene a a partire dalle uscite di controllo dello stato attuale.
+Una codifica ottimale punta alla minimizzazione delle commutazioni in entrambe le reti. Per tale scopo, è stato scelto di far coincidere le due reti, in modo che la logica utilizzata per generare le uscite potesse essere utilizzata anche per la definizione dello stato futuro. In particolare, la codifica dello stato futuro si ottiene a partire dalle uscite di controllo dello stato attuale.
 \begin{center}
 	\begin{tabular}{|c||c||c|c|c|c|}
 	\hline
@@ -864,7 +862,7 @@ La macchina a stati precedentemente definita è stata descritta attraverso il VH
 \\
 \textcolor{red}{VHDL??????}
 \\
-Al fine della simulazione, datapath e FSM sono stati inclusi in un'unica entity per ottenre il Processing Element complessivo.E' stato dunque realizzato un testbench per verificare il corretto susseguirsi degli stati e le relative transizioni dei segnali.
+Al fine della simulazione, datapath e FSM sono stati inclusi in un'unica entity per ottenre il Processing Element complessivo. E' stato dunque realizzato un testbench per verificare il corretto susseguirsi degli stati e le relative transizioni dei segnali.
 In particolare, è stata effettuata una simulazione di 2000 colpi di clock, che ha fornito i seguenti risultati attraverso un power report.
 \begin{center}
 	\begin{tabular}{|c|c|c|}

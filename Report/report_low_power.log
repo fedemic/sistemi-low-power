@@ -1,105 +1,250 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.10)  15 APR 2020 18:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.9)  15 APR 2020 18:45
 entering extended mode
-**./report_low_power.tex
-(report_low_power.tex
-LaTeX2e <2020-02-02> patch level 2
-L3 programming layer <2020-02-14>
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\book.cls"
-Document Class: book 2019/12/20 v1.4l Standard LaTeX document class
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\bk11.clo"
-File: bk11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**report_low_power.tex
+(./report_low_power.tex
+LaTeX2e <2018-12-01>
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2018/09/03 v1.4i Standard LaTeX document class
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/bk11.clo
+File: bk11.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 )
-\c@part=\count167
-\c@chapter=\count168
-\c@section=\count169
-\c@subsection=\count170
-\c@subsubsection=\count171
-\c@paragraph=\count172
-\c@subparagraph=\count173
-\c@figure=\count174
-\c@table=\count175
-\abovecaptionskip=\skip47
-\belowcaptionskip=\skip48
-\bibindent=\dimen134
+\c@part=\count80
+\c@chapter=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.s
-ty"
-Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.sty
-"
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.s
-ty"
-Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graphi
-cs.cfg"
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 105.
+Package graphics Info: Driver file: pdftex.def on input line 99.
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdftex
-.def"
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen135
-\Gin@req@width=\dimen136
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/titlesec\titlesec.s
-ty"
-Package: titlesec 2019/10/16 v2.13 Sectioning titles
-\ttl@box=\box45
-\beforetitleunit=\skip49
-\aftertitleunit=\skip50
-\ttl@plus=\dimen137
-\ttl@minus=\dimen138
+(/usr/local/texlive/2019/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
+\ttl@box=\box27
+\beforetitleunit=\skip43
+\aftertitleunit=\skip44
+\ttl@plus=\dimen105
+\ttl@minus=\dimen106
 \ttl@toksa=\toks15
-\titlewidth=\dimen139
-\titlewidthlast=\dimen140
-\titlewidthfirst=\dimen141
+\titlewidth=\dimen107
+\titlewidthlast=\dimen108
+\titlewidthfirst=\dimen109
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\textcomp.sty"
-Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-)
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.s
-ty"
-\lst@mode=\count176
-\lst@gtempboxa=\box46
-\lst@token=\toks16
-\lst@length=\count177
-\lst@currlwidth=\dimen142
-\lst@column=\count178
-\lst@pos=\count179
-\lst@lostspace=\dimen143
-\lst@width=\dimen144
-\lst@newlines=\count180
-\lst@lineno=\count181
-\lst@maxwidth=\dimen145
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2018/08/11 v2.0j Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.st
-y"
-File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
-\c@lstnumber=\count182
-\lst@skipnumbers=\count183
-\lst@framebox=\box47
-)
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.c
-fg"
-File: listings.cfg 2019/09/10 1.8c listings configuration
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1enc.dfu
+File: ts1enc.dfu 2018/10/05 v1.2f UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+   defining Unicode char U+FEFF (decimal 65279)
 ))
-Package: listings 2019/09/10 1.8c (Carsten Heinz)
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count89
+\lst@gtempboxa=\box28
+\lst@token=\toks16
+\lst@length=\count90
+\lst@currlwidth=\dimen110
+\lst@column=\count91
+\lst@pos=\count92
+\lst@lostspace=\dimen111
+\lst@width=\dimen112
+\lst@newlines=\count93
+\lst@lineno=\count94
+\lst@maxwidth=\dimen113
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
+\c@lstnumber=\count95
+\lst@skipnumbers=\count96
+\lst@framebox=\box29
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2019/02/27 1.8b listings configuration
+))
+Package: listings 2019/02/27 1.8b (Carsten Heinz)
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\color.
-cfg"
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -113,184 +258,220 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty
-"
-Package: amsmath 2020/01/20 v2.17e AMS math features
-\@mathmargin=\skip51
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2018/12/01 v2.17b AMS math features
+\@mathmargin=\skip45
 
 For additional information on amsmath, use the `?' option.
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.sty
-"
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
- ("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty
-"
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks17
-\ex@=\dimen146
+\ex@=\dimen114
 ))
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty"
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen147
-) ("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.st
-y"
+\pmbraise@=\dimen115
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count184
-LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count185
-\leftroot@=\count186
-LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count187
-\DOTSCASE@=\count188
-LaTeX Info: Redefining \ldots on input line 486.
-LaTeX Info: Redefining \dots on input line 489.
-LaTeX Info: Redefining \cdots on input line 610.
-\Mathstrutbox@=\box48
-\strutbox@=\box49
-\big@size=\dimen148
-LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count189
-\c@MaxMatrixCols=\count190
-\dotsspace@=\muskip16
-\c@parentequation=\count191
-\dspbrk@lvl=\count192
+\inf@bad=\count97
+LaTeX Info: Redefining \frac on input line 223.
+\uproot@=\count98
+\leftroot@=\count99
+LaTeX Info: Redefining \overline on input line 385.
+\classnum@=\count100
+\DOTSCASE@=\count101
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box30
+\strutbox@=\box31
+\big@size=\dimen116
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+\macc@depth=\count102
+\c@MaxMatrixCols=\count103
+\dotsspace@=\muskip10
+\c@parentequation=\count104
+\dspbrk@lvl=\count105
 \tag@help=\toks18
-\row@=\count193
-\column@=\count194
-\maxfields@=\count195
+\row@=\count106
+\column@=\count107
+\maxfields@=\count108
 \andhelp@=\toks19
-\eqnshift@=\dimen149
-\alignsep@=\dimen150
-\tagshift@=\dimen151
-\tagwidth@=\dimen152
-\totwidth@=\dimen153
-\lineht@=\dimen154
+\eqnshift@=\dimen117
+\alignsep@=\dimen118
+\tagshift@=\dimen119
+\tagwidth@=\dimen120
+\totwidth@=\dimen121
+\lineht@=\dimen122
 \@envbody=\toks20
-\multlinegap=\skip52
-\multlinetaggap=\skip53
+\multlinegap=\skip46
+\multlinetaggap=\skip47
 \mathdisplay@stack=\toks21
-LaTeX Info: Redefining \[ on input line 2859.
-LaTeX Info: Redefining \] on input line 2860.
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amssymb.st
-y"
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.s
-ty"
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
-LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/booktabs\booktabs.s
-ty"
-Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen155
-\lightrulewidth=\dimen156
-\cmidrulewidth=\dimen157
-\belowrulesep=\dimen158
-\belowbottomsep=\dimen159
-\aboverulesep=\dimen160
-\abovetopsep=\dimen161
-\cmidrulesep=\dimen162
-\cmidrulekern=\dimen163
-\defaultaddspace=\dimen164
-\@cmidla=\count196
-\@cmidlb=\count197
-\@aboverulesep=\dimen165
-\@belowrulesep=\dimen166
-\@thisruleclass=\count198
-\@lastruleclass=\count199
-\@thisrulewidth=\dimen167
+(/usr/local/texlive/2019/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2016/04/27 v1.618033 publication quality tables
+\heavyrulewidth=\dimen123
+\lightrulewidth=\dimen124
+\cmidrulewidth=\dimen125
+\belowrulesep=\dimen126
+\belowbottomsep=\dimen127
+\aboverulesep=\dimen128
+\abovetopsep=\dimen129
+\cmidrulesep=\dimen130
+\cmidrulekern=\dimen131
+\defaultaddspace=\dimen132
+\@cmidla=\count109
+\@cmidlb=\count110
+\@aboverulesep=\dimen133
+\@belowrulesep=\dimen134
+\@thisruleclass=\count111
+\@lastruleclass=\count112
+\@thisrulewidth=\dimen135
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/chngcntr\chngcntr.s
-ty"
+(/usr/local/texlive/2019/texmf-dist/tex/latex/chngcntr/chngcntr.sty
 Package: chngcntr 2018/04/09 v1.1a change counter resetting
 Package chngcntr Info: \counterwithout already defined.
 (chngcntr)             Quitting chngcntr on input line 21.
-)
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backend
--pdfmode.def"
-File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count266
-\l__pdf_internal_box=\box50
 )
 
 LaTeX Warning: Unused global option(s):
     [english,makeidx].
 
-(report_low_power.aux)
+(./report_low_power.aux)
 \openout1 = `report_low_power.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
 LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 29.
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pd
-f.mkii"
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 29.
+
+(/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count267
-\scratchdimen=\dimen168
-\scratchbox=\box51
-\nofMPsegments=\count268
-\nofMParguments=\count269
+\scratchcounter=\count113
+\scratchdimen=\dimen136
+\scratchbox=\box32
+\nofMPsegments=\count114
+\nofMParguments=\count115
 \everyMPshowfont=\toks22
-\MPscratchCnt=\count270
-\MPscratchDim=\dimen169
-\MPnumerator=\count271
-\makeMPintoPDFobject=\count272
+\MPscratchCnt=\count116
+\MPscratchDim=\dimen137
+\MPnumerator=\count117
+\makeMPintoPDFobject=\count118
 \everyMPtoPDFconversion=\toks23
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstop
-df-base.sty"
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+(/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+(/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+))))
+(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-)
-\c@lstlisting=\count273
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\c@lstlisting=\count119
 <./img/general/polito.png, id=1, 376.40625pt x 376.40625pt>
 File: ./img/general/polito.png Graphic file (type png)
 <use ./img/general/polito.png>
 Package pdftex.def Info: ./img/general/polito.png  used on input line 34.
 (pdftex.def)             Requested size: 85.35826pt x 85.35973pt.
- [1
+
+[1
 
 
-{C:/Users/TONI/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./img/genera
-l/polito.png>] (report_low_power.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./img/g
+eneral/polito.png>] (./report_low_power.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 2.
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+LaTeX Font Info:    Try loading font information for U+msb on input line 2.
 
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 \tf@toc=\write3
 \openout3 = `report_low_power.toc'.
 
-[1
+ [1
 
 ]
 Chapter 1.
-<./img/Lab_1/Es_1/Porte.png, id=16, 457.71pt x 60.97781pt>
+<./img/Lab_1/Es_1/Porte.png, id=17, 457.71pt x 60.97781pt>
 File: ./img/Lab_1/Es_1/Porte.png Graphic file (type png)
 <use ./img/Lab_1/Es_1/Porte.png>
 Package pdftex.def Info: ./img/Lab_1/Es_1/Porte.png  used on input line 66.
@@ -337,19 +518,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 120--130
 
  []
 
-<./img/Lab_1/Es_1/Inverter.png, id=24, 420.06938pt x 315.42844pt>
+<./img/Lab_1/Es_1/Inverter.png, id=25, 420.06938pt x 315.42844pt>
 File: ./img/Lab_1/Es_1/Inverter.png Graphic file (type png)
 <use ./img/Lab_1/Es_1/Inverter.png>
 Package pdftex.def Info: ./img/Lab_1/Es_1/Inverter.png  used on input line 153.
 
 (pdftex.def)             Requested size: 227.62204pt x 170.9208pt.
-<./img/Lab_1/Es_1/AND.png, id=25, 420.82219pt x 315.42844pt>
+<./img/Lab_1/Es_1/AND.png, id=26, 420.82219pt x 315.42844pt>
 File: ./img/Lab_1/Es_1/AND.png Graphic file (type png)
 <use ./img/Lab_1/Es_1/AND.png>
 Package pdftex.def Info: ./img/Lab_1/Es_1/AND.png  used on input line 153.
 (pdftex.def)             Requested size: 227.62204pt x 170.6176pt.
+<./img/Lab_1/Es_1/XOR.png, id=27, 420.82219pt x 315.42844pt>
+File: ./img/Lab_1/Es_1/XOR.png Graphic file (type png)
+<use ./img/Lab_1/Es_1/XOR.png>
+Package pdftex.def Info: ./img/Lab_1/Es_1/XOR.png  used on input line 155.
+(pdftex.def)             Requested size: 227.62204pt x 170.6176pt.
+<./img/Lab_1/Es_1/OR.png, id=28, 420.82219pt x 315.42844pt>
+File: ./img/Lab_1/Es_1/OR.png Graphic file (type png)
+<use ./img/Lab_1/Es_1/OR.png>
+Package pdftex.def Info: ./img/Lab_1/Es_1/OR.png  used on input line 155.
+(pdftex.def)             Requested size: 227.62204pt x 170.6176pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--154
+Underfull \hbox (badness 10000) in paragraph at lines 148--161
 
  []
 
@@ -365,50 +556,72 @@ Overfull \hbox (23.64444pt too wide) has occurred while \output is active
  TECHNIQUES \OT1/cmr/m/n/10.95 4
  []
 
-[4 <./img/Lab_1/Es_1/Inverter.png> <./img/Lab_1/Es_1/AND.png>]
-<./img/Lab_1/Es_1/XOR.png, id=35, 420.82219pt x 315.42844pt>
-File: ./img/Lab_1/Es_1/XOR.png Graphic file (type png)
-<use ./img/Lab_1/Es_1/XOR.png>
-Package pdftex.def Info: ./img/Lab_1/Es_1/XOR.png  used on input line 157.
-(pdftex.def)             Requested size: 227.62204pt x 170.6176pt.
-<./img/Lab_1/Es_1/OR.png, id=36, 420.82219pt x 315.42844pt>
-File: ./img/Lab_1/Es_1/OR.png Graphic file (type png)
-<use ./img/Lab_1/Es_1/OR.png>
-Package pdftex.def Info: ./img/Lab_1/Es_1/OR.png  used on input line 157.
-(pdftex.def)             Requested size: 227.62204pt x 170.6176pt.
+[4 <./img/Lab_1/Es_1/Inverter.png> <./img/Lab_1/Es_1/AND.png> <./img/Lab_1/Es_1
+/XOR.png> <./img/Lab_1/Es_1/OR.png>]
+Overfull \hbox (27.37506pt too wide) in paragraph at lines 166--169
+[] 
+ []
+
+
+Overfull \hbox (27.37506pt too wide) in paragraph at lines 166--169
+[] 
+ []
+
+
+Overfull \hbox (27.37506pt too wide) in paragraph at lines 169--172
+[] 
+ []
+
+
+Overfull \hbox (27.37506pt too wide) in paragraph at lines 169--172
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--172
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--177
+
+ []
+
 
 Overfull \hbox (23.64444pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
  TECHNIQUES \OT1/cmr/m/n/10.95 5
  []
 
-[5 <./img/Lab_1/Es_1/XOR.png> <./img/Lab_1/Es_1/OR.png>]
-Overfull \hbox (27.37506pt too wide) in paragraph at lines 168--171
-[] 
- []
+[5]
+<./img/Lab_1/Es_2/RCA_8_bit.png, id=43, 565.11125pt x 115.43124pt>
+File: ./img/Lab_1/Es_2/RCA_8_bit.png Graphic file (type png)
+<use ./img/Lab_1/Es_2/RCA_8_bit.png>
+Package pdftex.def Info: ./img/Lab_1/Es_2/RCA_8_bit.png  used on input line 214
+.
+(pdftex.def)             Requested size: 426.79134pt x 87.17911pt.
 
-
-Overfull \hbox (27.37506pt too wide) in paragraph at lines 168--171
-[] 
- []
-
-
-Overfull \hbox (27.37506pt too wide) in paragraph at lines 171--174
-[] 
- []
-
-
-Overfull \hbox (27.37506pt too wide) in paragraph at lines 171--174
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 171--174
+Underfull \hbox (badness 10000) in paragraph at lines 212--219
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 178--179
+Underfull \hbox (badness 10000) in paragraph at lines 212--219
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--219
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--219
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 249--254
 
  []
 
@@ -418,35 +631,34 @@ Overfull \hbox (23.64444pt too wide) has occurred while \output is active
  TECHNIQUES \OT1/cmr/m/n/10.95 6
  []
 
-[6]
-<./img/Lab_1/Es_2/RCA_8_bit.png, id=46, 565.11125pt x 115.43124pt>
-File: ./img/Lab_1/Es_2/RCA_8_bit.png Graphic file (type png)
-<use ./img/Lab_1/Es_2/RCA_8_bit.png>
-Package pdftex.def Info: ./img/Lab_1/Es_2/RCA_8_bit.png  used on input line 216
-.
-(pdftex.def)             Requested size: 426.79134pt x 87.17911pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 214--221
+[6 <./img/Lab_1/Es_2/RCA_8_bit.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 266--271
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 214--221
+Underfull \hbox (badness 10000) in paragraph at lines 266--271
+
+ []
+
+<./img/Lab_1/Es_2/Glitch.png, id=49, 831.85782pt x 449.42906pt>
+File: ./img/Lab_1/Es_2/Glitch.png Graphic file (type png)
+<use ./img/Lab_1/Es_2/Glitch.png>
+Package pdftex.def Info: ./img/Lab_1/Es_2/Glitch.png  used on input line 281.
+(pdftex.def)             Requested size: 426.79134pt x 230.58418pt.
+<./img/Lab_1/Es_2/Glitch_worst_case.png, id=50, 579.66562pt x 229.60782pt>
+File: ./img/Lab_1/Es_2/Glitch_worst_case.png Graphic file (type png)
+<use ./img/Lab_1/Es_2/Glitch_worst_case.png>
+Package pdftex.def Info: ./img/Lab_1/Es_2/Glitch_worst_case.png  used on input 
+line 285.
+(pdftex.def)             Requested size: 426.79134pt x 169.05576pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--335
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 214--221
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 214--221
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 251--256
+Underfull \hbox (badness 10000) in paragraph at lines 283--335
 
  []
 
@@ -456,34 +668,13 @@ Overfull \hbox (23.64444pt too wide) has occurred while \output is active
  TECHNIQUES \OT1/cmr/m/n/10.95 7
  []
 
-[7 <./img/Lab_1/Es_2/RCA_8_bit.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 268--273
+[7 <./img/Lab_1/Es_2/Glitch.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 335--335
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--273
-
- []
-
-<./img/Lab_1/Es_2/Glitch.png, id=51, 831.85782pt x 449.42906pt>
-File: ./img/Lab_1/Es_2/Glitch.png Graphic file (type png)
-<use ./img/Lab_1/Es_2/Glitch.png>
-Package pdftex.def Info: ./img/Lab_1/Es_2/Glitch.png  used on input line 283.
-(pdftex.def)             Requested size: 426.79134pt x 230.58418pt.
-<./img/Lab_1/Es_2/Glitch_worst_case.png, id=52, 579.66562pt x 229.60782pt>
-File: ./img/Lab_1/Es_2/Glitch_worst_case.png Graphic file (type png)
-<use ./img/Lab_1/Es_2/Glitch_worst_case.png>
-Package pdftex.def Info: ./img/Lab_1/Es_2/Glitch_worst_case.png  used on input 
-line 287.
-(pdftex.def)             Requested size: 426.79134pt x 169.05576pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 285--337
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 285--337
+Underfull \hbox (badness 10000) in paragraph at lines 335--335
 
  []
 
@@ -493,13 +684,20 @@ Overfull \hbox (23.64444pt too wide) has occurred while \output is active
  TECHNIQUES \OT1/cmr/m/n/10.95 8
  []
 
-[8 <./img/Lab_1/Es_2/Glitch.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 337--337
+[8 <./img/Lab_1/Es_2/Glitch_worst_case.png>]
+<./img/Lab_1/Es_2/Worst_case_nostro.png, id=63, 452.4403pt x 205.5178pt>
+File: ./img/Lab_1/Es_2/Worst_case_nostro.png Graphic file (type png)
+<use ./img/Lab_1/Es_2/Worst_case_nostro.png>
+Package pdftex.def Info: ./img/Lab_1/Es_2/Worst_case_nostro.png  used on input 
+line 335.
+(pdftex.def)             Requested size: 341.43306pt x 155.0913pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--336
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--337
+Underfull \hbox (badness 10000) in paragraph at lines 335--336
 
  []
 
@@ -509,20 +707,44 @@ Overfull \hbox (23.64444pt too wide) has occurred while \output is active
  TECHNIQUES \OT1/cmr/m/n/10.95 9
  []
 
-[9 <./img/Lab_1/Es_2/Glitch_worst_case.png>]
-<./img/Lab_1/Es_2/Worst_case_nostro.png, id=65, 452.4403pt x 205.5178pt>
-File: ./img/Lab_1/Es_2/Worst_case_nostro.png Graphic file (type png)
-<use ./img/Lab_1/Es_2/Worst_case_nostro.png>
-Package pdftex.def Info: ./img/Lab_1/Es_2/Worst_case_nostro.png  used on input 
-line 337.
-(pdftex.def)             Requested size: 341.43306pt x 155.0913pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 337--338
+[9 <./img/Lab_1/Es_2/Worst_case_nostro.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 338--345
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--338
+Underfull \hbox (badness 10000) in paragraph at lines 350--352
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 362--365
+
+ []
+
+<./img/Lab_1/Es_3/Full_adder.png, id=68, 768.62157pt x 194.97844pt>
+File: ./img/Lab_1/Es_3/Full_adder.png Graphic file (type png)
+<use ./img/Lab_1/Es_3/Full_adder.png>
+Package pdftex.def Info: ./img/Lab_1/Es_3/Full_adder.png  used on input line 39
+7.
+(pdftex.def)             Requested size: 426.79134pt x 108.26785pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 391--399
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 391--399
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 391--399
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 391--399
 
  []
 
@@ -532,44 +754,13 @@ Overfull \hbox (29.11945pt too wide) has occurred while \output is active
  TECHNIQUES \OT1/cmr/m/n/10.95 10
  []
 
-[10 <./img/Lab_1/Es_2/Worst_case_nostro.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 340--347
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 433--437
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--354
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--367
-
- []
-
-<./img/Lab_1/Es_3/Full_adder.png, id=70, 768.62157pt x 194.97844pt>
-File: ./img/Lab_1/Es_3/Full_adder.png Graphic file (type png)
-<use ./img/Lab_1/Es_3/Full_adder.png>
-Package pdftex.def Info: ./img/Lab_1/Es_3/Full_adder.png  used on input line 39
-9.
-(pdftex.def)             Requested size: 426.79134pt x 108.26785pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 393--401
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 393--401
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 393--401
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 393--401
+Underfull \hbox (badness 10000) in paragraph at lines 433--437
 
  []
 
@@ -579,13 +770,8 @@ Overfull \hbox (29.11945pt too wide) has occurred while \output is active
  TECHNIQUES \OT1/cmr/m/n/10.95 11
  []
 
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 435--439
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 435--439
+[11 <./img/Lab_1/Es_3/Full_adder.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 471--484
 
  []
 
@@ -595,8 +781,8 @@ Overfull \hbox (29.11945pt too wide) has occurred while \output is active
  TECHNIQUES \OT1/cmr/m/n/10.95 12
  []
 
-[12 <./img/Lab_1/Es_3/Full_adder.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 473--486
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 510--510
 
  []
 
@@ -607,7 +793,147 @@ Overfull \hbox (29.11945pt too wide) has occurred while \output is active
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 512--512
+<./img/Lab_1/Es_4/Mux.png, id=83, 320.69812pt x 252.19218pt>
+File: ./img/Lab_1/Es_4/Mux.png Graphic file (type png)
+<use ./img/Lab_1/Es_4/Mux.png>
+Package pdftex.def Info: ./img/Lab_1/Es_4/Mux.png  used on input line 517.
+(pdftex.def)             Requested size: 142.26378pt x 111.8769pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 513--527
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 513--527
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 513--527
+
+ []
+
+(./code/Lab_1/Es_4/mux_input_delays.vhd
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 1.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1.
+)
+<./img/Lab_1/Es_4/Mux_plot.png, id=84, 505.13719pt x 387.69844pt>
+File: ./img/Lab_1/Es_4/Mux_plot.png Graphic file (type png)
+<use ./img/Lab_1/Es_4/Mux_plot.png>
+Package pdftex.def Info: ./img/Lab_1/Es_4/Mux_plot.png  used on input line 541.
+
+(pdftex.def)             Requested size: 199.16928pt x 152.8641pt.
+<./img/Lab_1/Es_4/Glitch.png, id=85, 394.47375pt x 338.01282pt>
+File: ./img/Lab_1/Es_4/Glitch.png Graphic file (type png)
+<use ./img/Lab_1/Es_4/Glitch.png>
+Package pdftex.def Info: ./img/Lab_1/Es_4/Glitch.png  used on input line 547.
+(pdftex.def)             Requested size: 199.16928pt x 170.66159pt.
+<./img/Lab_1/Es_4/Mappa_K_coperta.png, id=86, 537.6888pt x 186.9384pt>
+File: ./img/Lab_1/Es_4/Mappa_K_coperta.png Graphic file (type png)
+<use ./img/Lab_1/Es_4/Mappa_K_coperta.png>
+Package pdftex.def Info: ./img/Lab_1/Es_4/Mappa_K_coperta.png  used on input li
+ne 557.
+(pdftex.def)             Requested size: 227.62204pt x 79.13828pt.
+<./img/Lab_1/Es_4/Mappa_K_supercoperta.png, id=87, 537.6888pt x 186.9384pt>
+File: ./img/Lab_1/Es_4/Mappa_K_supercoperta.png Graphic file (type png)
+<use ./img/Lab_1/Es_4/Mappa_K_supercoperta.png>
+Package pdftex.def Info: ./img/Lab_1/Es_4/Mappa_K_supercoperta.png  used on inp
+ut line 566.
+(pdftex.def)             Requested size: 227.62204pt x 79.13828pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--589
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--589
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--589
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--589
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--589
+
+ []
+
+
+Overfull \hbox (2.82037pt too wide) in paragraph at lines 532--589
+[]\OT1/cmr/m/n/10.95 E pos-si-bile vi-su-al-iz-zare di-ret-ta-mente sulla wave-
+form dell'uscita Y il glitch causato dall'inverter.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--589
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--589
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--589
+
+ []
+
+
+Overfull \hbox (5.22571pt too wide) in paragraph at lines 532--589
+\OT1/cmr/m/n/10.95 In par-ti-co-lare, ^^Re pos-si-bile no-tare che il cir-cuito
+ prece-den-te-mente ri-por-tato sia l'implementazione
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--589
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--589
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--589
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--589
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--589
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--589
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--589
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--589
 
  []
 
@@ -617,231 +943,117 @@ Overfull \hbox (29.11945pt too wide) has occurred while \output is active
  TECHNIQUES \OT1/cmr/m/n/10.95 14
  []
 
-[14]
-<./img/Lab_1/Es_4/Mux.png, id=85, 320.69812pt x 252.19218pt>
-File: ./img/Lab_1/Es_4/Mux.png Graphic file (type png)
-<use ./img/Lab_1/Es_4/Mux.png>
-Package pdftex.def Info: ./img/Lab_1/Es_4/Mux.png  used on input line 519.
-(pdftex.def)             Requested size: 142.26378pt x 111.8769pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 515--529
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 515--529
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 515--529
-
- []
-
-(code/Lab_1/Es_4/mux_input_delays.vhd
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 1
-.
-
-("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omlcmr.fd"
-File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1.
-)
-<./img/Lab_1/Es_4/Mux_plot.png, id=86, 505.13719pt x 387.69844pt>
-File: ./img/Lab_1/Es_4/Mux_plot.png Graphic file (type png)
-<use ./img/Lab_1/Es_4/Mux_plot.png>
-Package pdftex.def Info: ./img/Lab_1/Es_4/Mux_plot.png  used on input line 543.
-
-(pdftex.def)             Requested size: 199.16928pt x 152.8641pt.
-<./img/Lab_1/Es_4/Glitch.png, id=87, 394.47375pt x 338.01282pt>
-File: ./img/Lab_1/Es_4/Glitch.png Graphic file (type png)
-<use ./img/Lab_1/Es_4/Glitch.png>
-Package pdftex.def Info: ./img/Lab_1/Es_4/Glitch.png  used on input line 549.
-(pdftex.def)             Requested size: 199.16928pt x 170.66159pt.
-<./img/Lab_1/Es_4/Mappa_K_coperta.png, id=88, 537.6888pt x 186.9384pt>
-File: ./img/Lab_1/Es_4/Mappa_K_coperta.png Graphic file (type png)
-<use ./img/Lab_1/Es_4/Mappa_K_coperta.png>
-Package pdftex.def Info: ./img/Lab_1/Es_4/Mappa_K_coperta.png  used on input li
-ne 559.
-(pdftex.def)             Requested size: 227.62204pt x 79.13828pt.
-<./img/Lab_1/Es_4/Mappa_K_supercoperta.png, id=89, 537.6888pt x 186.9384pt>
-File: ./img/Lab_1/Es_4/Mappa_K_supercoperta.png Graphic file (type png)
-<use ./img/Lab_1/Es_4/Mappa_K_supercoperta.png>
-Package pdftex.def Info: ./img/Lab_1/Es_4/Mappa_K_supercoperta.png  used on inp
-ut line 568.
-(pdftex.def)             Requested size: 227.62204pt x 79.13828pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 534--591
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 534--591
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 534--591
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 534--591
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 534--591
-
- []
-
-
-Overfull \hbox (2.82037pt too wide) in paragraph at lines 534--591
-[]\OT1/cmr/m/n/10.95 E pos-si-bile vi-su-al-iz-zare di-ret-ta-mente sulla wave-
-form dell'uscita Y il glitch causato dall'inverter.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 534--591
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 534--591
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 534--591
-
- []
-
-
-Overfull \hbox (5.22571pt too wide) in paragraph at lines 534--591
-\OT1/cmr/m/n/10.95 In par-ti-co-lare, e pos-si-bile no-tare che il cir-cuito p
-rece-den-te-mente ri-por-tato sia l'implementazione
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 534--591
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 534--591
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 534--591
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 534--591
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 534--591
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 534--591
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 534--591
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 534--591
-
- []
-
-
+[14 <./img/Lab_1/Es_4/Mux.png> <./img/Lab_1/Es_4/Mux_plot.png>]
 Overfull \hbox (29.11945pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
  TECHNIQUES \OT1/cmr/m/n/10.95 15
  []
 
-[15 <./img/Lab_1/Es_4/Mux.png> <./img/Lab_1/Es_4/Mux_plot.png>]
+[15 <./img/Lab_1/Es_4/Glitch.png> <./img/Lab_1/Es_4/Mappa_K_coperta.png> <./img
+/Lab_1/Es_4/Mappa_K_supercoperta.png>]
 Overfull \hbox (29.11945pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
  TECHNIQUES \OT1/cmr/m/n/10.95 16
  []
 
-[16 <./img/Lab_1/Es_4/Glitch.png> <./img/Lab_1/Es_4/Mappa_K_coperta.png> <./img
-/Lab_1/Es_4/Mappa_K_supercoperta.png>]
+[16]
+<./img/Lab_1/Es_5/Sync_FA.png, id=103, 143.53625pt x 197.73875pt>
+File: ./img/Lab_1/Es_5/Sync_FA.png Graphic file (type png)
+<use ./img/Lab_1/Es_5/Sync_FA.png>
+Package pdftex.def Info: ./img/Lab_1/Es_5/Sync_FA.png  used on input line 595.
+(pdftex.def)             Requested size: 85.35826pt x 117.59416pt.
+<./img/Lab_1/Es_5/Half_add_contatore.png, id=104, 645.16031pt x 334.24875pt>
+File: ./img/Lab_1/Es_5/Half_add_contatore.png Graphic file (type png)
+<use ./img/Lab_1/Es_5/Half_add_contatore.png>
+Package pdftex.def Info: ./img/Lab_1/Es_5/Half_add_contatore.png  used on input
+ line 595.
+(pdftex.def)             Requested size: 199.16928pt x 103.18251pt.
+<./img/Lab_1/Es_5/Counter.png, id=105, 627.34375pt x 151.56625pt>
+File: ./img/Lab_1/Es_5/Counter.png Graphic file (type png)
+<use ./img/Lab_1/Es_5/Counter.png>
+Package pdftex.def Info: ./img/Lab_1/Es_5/Counter.png  used on input line 606.
+(pdftex.def)             Requested size: 426.79134pt x 103.11687pt.
+<./img/Lab_1/Es_5/Contatore.png, id=106, 970.3753pt x 754.31813pt>
+File: ./img/Lab_1/Es_5/Contatore.png Graphic file (type png)
+<use ./img/Lab_1/Es_5/Contatore.png>
+Package pdftex.def Info: ./img/Lab_1/Es_5/Contatore.png  used on input line 611
+.
+(pdftex.def)             Requested size: 284.52756pt x 221.17526pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 591--620
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 591--620
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 591--620
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 591--620
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 591--620
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 591--620
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 591--620
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 591--620
+
+ []
+
+
 Overfull \hbox (29.11945pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
  TECHNIQUES \OT1/cmr/m/n/10.95 17
  []
 
-[17]
-<./img/Lab_1/Es_5/Sync_FA.png, id=105, 143.53625pt x 197.73875pt>
-File: ./img/Lab_1/Es_5/Sync_FA.png Graphic file (type png)
-<use ./img/Lab_1/Es_5/Sync_FA.png>
-Package pdftex.def Info: ./img/Lab_1/Es_5/Sync_FA.png  used on input line 597.
-(pdftex.def)             Requested size: 85.35826pt x 117.59416pt.
-<./img/Lab_1/Es_5/Half_add_contatore.png, id=106, 645.16031pt x 334.24875pt>
-File: ./img/Lab_1/Es_5/Half_add_contatore.png Graphic file (type png)
-<use ./img/Lab_1/Es_5/Half_add_contatore.png>
-Package pdftex.def Info: ./img/Lab_1/Es_5/Half_add_contatore.png  used on input
- line 597.
-(pdftex.def)             Requested size: 199.16928pt x 103.18251pt.
-<./img/Lab_1/Es_5/Counter.png, id=107, 627.34375pt x 151.56625pt>
-File: ./img/Lab_1/Es_5/Counter.png Graphic file (type png)
-<use ./img/Lab_1/Es_5/Counter.png>
-Package pdftex.def Info: ./img/Lab_1/Es_5/Counter.png  used on input line 608.
-(pdftex.def)             Requested size: 426.79134pt x 103.11687pt.
-<./img/Lab_1/Es_5/Contatore.png, id=108, 970.3753pt x 754.31813pt>
-File: ./img/Lab_1/Es_5/Contatore.png Graphic file (type png)
-<use ./img/Lab_1/Es_5/Contatore.png>
-Package pdftex.def Info: ./img/Lab_1/Es_5/Contatore.png  used on input line 613
-.
-(pdftex.def)             Requested size: 284.52756pt x 221.17526pt.
+[17 <./img/Lab_1/Es_5/Sync_FA.png> <./img/Lab_1/Es_5/Half_add_contatore.png> <.
+/img/Lab_1/Es_5/Counter.png>]
+<./img/Lab_1/Es_5/Glitch.png, id=112, 945.03062pt x 312.16624pt>
+File: ./img/Lab_1/Es_5/Glitch.png Graphic file (type png)
+<use ./img/Lab_1/Es_5/Glitch.png>
+Package pdftex.def Info: ./img/Lab_1/Es_5/Glitch.png  used on input line 663.
+(pdftex.def)             Requested size: 426.79134pt x 140.98317pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 593--622
+Underfull \hbox (badness 10000) in paragraph at lines 646--680
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 593--622
+Underfull \hbox (badness 10000) in paragraph at lines 646--680
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 593--622
+Underfull \hbox (badness 10000) in paragraph at lines 646--680
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 593--622
+Underfull \hbox (badness 10000) in paragraph at lines 646--680
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 593--622
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 593--622
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 593--622
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 593--622
+Underfull \hbox (badness 10000) in paragraph at lines 646--680
 
  []
 
@@ -851,35 +1063,76 @@ Overfull \hbox (29.11945pt too wide) has occurred while \output is active
  TECHNIQUES \OT1/cmr/m/n/10.95 18
  []
 
-[18 <./img/Lab_1/Es_5/Sync_FA.png> <./img/Lab_1/Es_5/Half_add_contatore.png> <.
-/img/Lab_1/Es_5/Counter.png>]
-<./img/Lab_1/Es_5/Glitch.png, id=115, 945.03062pt x 312.16624pt>
-File: ./img/Lab_1/Es_5/Glitch.png Graphic file (type png)
-<use ./img/Lab_1/Es_5/Glitch.png>
-Package pdftex.def Info: ./img/Lab_1/Es_5/Glitch.png  used on input line 665.
-(pdftex.def)             Requested size: 426.79134pt x 140.98317pt.
+[18 <./img/Lab_1/Es_5/Contatore.png>]
 
-Underfull \hbox (badness 10000) in paragraph at lines 648--682
-
- []
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 742.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 648--682
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 742.
 
- []
+<./img/Lab_1/Es_5/Clk_corto.png, id=117, 948.54375pt x 323.2075pt>
+File: ./img/Lab_1/Es_5/Clk_corto.png Graphic file (type png)
+<use ./img/Lab_1/Es_5/Clk_corto.png>
+Package pdftex.def Info: ./img/Lab_1/Es_5/Clk_corto.png  used on input line 752
+.
+(pdftex.def)             Requested size: 426.79134pt x 145.4223pt.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 648--682
+Underfull \hbox (badness 10000) in paragraph at lines 725--780
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 648--682
+Underfull \hbox (badness 10000) in paragraph at lines 725--780
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 648--682
+Underfull \hbox (badness 10000) in paragraph at lines 725--780
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 725--780
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 725--780
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 725--780
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 725--780
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 725--780
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 725--780
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 725--780
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 725--780
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 725--780
 
  []
 
@@ -889,220 +1142,141 @@ Overfull \hbox (29.11945pt too wide) has occurred while \output is active
  TECHNIQUES \OT1/cmr/m/n/10.95 19
  []
 
-[19 <./img/Lab_1/Es_5/Contatore.png>]
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 744.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 744.
-
-<./img/Lab_1/Es_5/Clk_corto.png, id=119, 948.54375pt x 323.2075pt>
-File: ./img/Lab_1/Es_5/Clk_corto.png Graphic file (type png)
-<use ./img/Lab_1/Es_5/Clk_corto.png>
-Package pdftex.def Info: ./img/Lab_1/Es_5/Clk_corto.png  used on input line 754
-.
-(pdftex.def)             Requested size: 426.79134pt x 145.4223pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 727--782
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 727--782
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 727--782
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 727--782
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 727--782
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 727--782
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 727--782
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 727--782
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 727--782
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 727--782
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 727--782
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 727--782
-
- []
-
-
+[19 <./img/Lab_1/Es_5/Glitch.png>]
 Overfull \hbox (29.11945pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
  TECHNIQUES \OT1/cmr/m/n/10.95 20
  []
 
-[20 <./img/Lab_1/Es_5/Glitch.png>]
+[20 <./img/Lab_1/Es_5/Clk_corto.png>]
 Overfull \hbox (29.11945pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
  TECHNIQUES \OT1/cmr/m/n/10.95 21
  []
 
-[21 <./img/Lab_1/Es_5/Clk_corto.png>]
-Overfull \hbox (29.11945pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
- TECHNIQUES \OT1/cmr/m/n/10.95 22
- []
-
-[22]
+[21]
 Chapter 2.
 
-Overfull \hbox (3.96269pt too wide) in paragraph at lines 783--783
+Overfull \hbox (3.96269pt too wide) in paragraph at lines 781--781
 |\OT1/cmr/bx/n/24.88 Laboratorio 2 - FSM As-sign-ment and
  []
 
-<./img/Lab_2/Datapath.png, id=129, 501.875pt x 419.5675pt>
+<./img/Lab_2/Datapath.png, id=127, 501.875pt x 419.5675pt>
 File: ./img/Lab_2/Datapath.png Graphic file (type png)
 <use ./img/Lab_2/Datapath.png>
-Package pdftex.def Info: ./img/Lab_2/Datapath.png  used on input line 788.
+Package pdftex.def Info: ./img/Lab_2/Datapath.png  used on input line 786.
 (pdftex.def)             Requested size: 227.62204pt x 190.2953pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 786--791
+Underfull \hbox (badness 10000) in paragraph at lines 784--789
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 786--791
+Underfull \hbox (badness 10000) in paragraph at lines 784--789
 
  []
 
-[23
+[22
 
  <./img/Lab_2/Datapath.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 814--816
+Underfull \hbox (badness 10000) in paragraph at lines 812--814
 
  []
 
-<./img/Lab_2/Datapath_input.png, id=134, 501.875pt x 419.5675pt>
+<./img/Lab_2/Datapath_input.png, id=132, 501.875pt x 419.5675pt>
 File: ./img/Lab_2/Datapath_input.png Graphic file (type png)
 <use ./img/Lab_2/Datapath_input.png>
-Package pdftex.def Info: ./img/Lab_2/Datapath_input.png  used on input line 831
+Package pdftex.def Info: ./img/Lab_2/Datapath_input.png  used on input line 829
 .
 (pdftex.def)             Requested size: 227.62204pt x 190.2953pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 828--836
+Underfull \hbox (badness 10000) in paragraph at lines 826--834
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 828--836
+Underfull \hbox (badness 10000) in paragraph at lines 826--834
 
  []
 
-[24 <./img/Lab_2/Datapath_input.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 854--862
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 854--862
+[23 <./img/Lab_2/Datapath_input.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 852--860
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 887--889
+Underfull \hbox (badness 10000) in paragraph at lines 852--860
 
  []
 
-<./img/Lab_2/FSM_Schematic.png, id=139, 895.345pt x 237.88875pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 885--887
+
+ []
+
+<./img/Lab_2/FSM_Schematic.png, id=136, 895.345pt x 237.88875pt>
 File: ./img/Lab_2/FSM_Schematic.png Graphic file (type png)
 <use ./img/Lab_2/FSM_Schematic.png>
-Package pdftex.def Info: ./img/Lab_2/FSM_Schematic.png  used on input line 904.
+Package pdftex.def Info: ./img/Lab_2/FSM_Schematic.png  used on input line 902.
 
 (pdftex.def)             Requested size: 426.79134pt x 113.3976pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 890--918
+Underfull \hbox (badness 10000) in paragraph at lines 888--916
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 890--918
+Underfull \hbox (badness 10000) in paragraph at lines 888--916
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 890--918
+Underfull \hbox (badness 10000) in paragraph at lines 888--916
 
  []
 
-[25]
-Overfull \hbox (27.3692pt too wide) in paragraph at lines 948--949
+[24]
+Overfull \hbox (27.3692pt too wide) in paragraph at lines 946--947
 \OT1/cmr/m/n/10.95 Sono stati ot-tenuti dati ag-giun-tivi rel-a-tivi al con-sum
 o di potenza dei sin-goli mod-uli dell'architettura,
  []
 
-[26 <./img/Lab_2/FSM_Schematic.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 978--986
+[25 <./img/Lab_2/FSM_Schematic.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 976--984
 
  []
 
-[27] [28] (report_low_power.aux) ) 
+[26] [27] (./report_low_power.aux) ) 
 Here is how much of TeX's memory you used:
- 4954 strings out of 481556
- 67746 string characters out of 2914337
- 309427 words of memory out of 3000000
- 20121 multiletter control sequences out of 15000+200000
- 542946 words of font info for 63 fonts, out of 3000000 for 9000
+ 5437 strings out of 492616
+ 73990 string characters out of 6129482
+ 143567 words of memory out of 5000000
+ 9241 multiletter control sequences out of 15000+600000
+ 14248 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 31i,8n,37p,656b,1329s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\TONI\AppData\Local\MiKTeX\2.9\font
-s/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/TONI/AppData/Local/Program
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/TONI/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/TO
-NI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-<C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmmi10.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmmi8.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmmi9.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/TONI/AppData/Local/Progr
-ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/TONI/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/TO
-NI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C
-:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mr9.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmsl10.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmsy10.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/TONI/AppData/Local/Program
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on report_low_power.pdf (29 pages, 1238196 bytes).
+ 41i,8n,35p,654b,1329s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2019/texmf-dist/fonts/e
+nc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2019/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr17.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsl10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mti10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1
+095.pfb>
+Output written on report_low_power.pdf (28 pages, 1226927 bytes).
 PDF statistics:
  204 PDF objects out of 1000 (max. 8388607)
+ 113 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  126 words of extra memory for PDF output out of 10000 (max. 10000000)
 
