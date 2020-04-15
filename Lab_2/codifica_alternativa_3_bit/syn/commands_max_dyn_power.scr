@@ -1,0 +1,19 @@
+analyze -library WORK -format vhdl {/home/lp20.9/Desktop/low_power_2020/Lab_2/codifica_alternativa_3_bit/syn/dpadder.vhd /home/lp20.9/Desktop/low_power_2020/Lab_2/codifica_alternativa_3_bit/syn/fsm1.vhd /home/lp20.9/Desktop/low_power_2020/Lab_2/codifica_alternativa_3_bit/syn/FSM_Adder.vhd}
+elaborate FSM_ADDER -architecture BEHAVIOR -library WORK
+change_selection -name __slctBus18 -type {cell design} _sel426
+create_clock -name "CLK" -period 10 {CLK}
+report_clock > report/max_dyn_power/report_clock.txt
+compile -exact_map
+set_max_dynamic_power 40000000
+compile -exact_map
+report_constraints > report/max_dyn_power/report_contraints.txt
+report_area > report/max_dyn_power/report_area.txt
+report_timing -nworst 10 > report/max_dyn_power/report_timing_10_worst.txt
+report_power > report/max_dyn_power/report_power.txt
+report_power -hier > report/max_dyn_power/report_power_hier.txt
+report_power -net > report/max_dyn_power/report_power_net.txt
+current_instance FSM
+report_power > report/max_dyn_power/FSM_report_power.txt
+report_power -cell > report/max_dyn_power/FSM_report_power_cell.txt
+report_power -net > report/max_dyn_power/FSM_report_power_net.txt
+report_fsm > report/max_dyn_power/FSM_report_encoding.txt
