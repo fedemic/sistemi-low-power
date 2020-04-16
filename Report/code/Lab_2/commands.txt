@@ -1,0 +1,18 @@
+gui_start
+analyze -library WORK -format vhdl
+{/home/lp20.9/Desktop/low_power_2020/Lab_2/codifica_3bit_bis/syn/dpadder.vhd
+/home/lp20.9/Desktop/low_power_2020/Lab_2/codifica_3bit_bis/syn/fsm1.vhd
+/home/lp20.9/Desktop/low_power_2020/Lab_2/codifica_3bit_bis/syn/FSM_Adder.vhd}
+elaborate FSM_ADDER -architecture BEHAVIOR -library WORK
+change_selection -name __slctBus18 -type {cell design} _sel426
+create_clock -name "CLK" -period 10 {CLK}
+compile -exact_map
+report_timing -nworst 10 > report/simple_clk_10/report_clock.txt
+report_area > report/simple_clk_10/report_area.txt
+report_power > report/simple_clk_10/report_power.txt
+report_power -hier > report/simple_clk_10/report_power_hier.txt
+report_power -net > report/simple_clk_10/report_power_net.txt
+current_instance FSM
+report_power -hier > report/simple_clk_10/report_power_hier_FSM.txt
+report_power -net > report/simple_clk_10/report_power_net_FSM.txt
+report_fsm > report/simple_clk_10/report_fsm_encoding.txt

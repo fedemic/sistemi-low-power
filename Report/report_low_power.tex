@@ -922,7 +922,7 @@ Per semplicità sono riportati i dati relativi al critical path.
 	\hline
 	Data required time & 9.97 ns \\
 	\hline
-	Data arrival time & -1.94 ns \\
+	Data arrival time & 1.94 ns \\
 	\hline
 	Slack & 8.02 ns \\
 	\hline
@@ -979,7 +979,61 @@ Al fine di approfondire lo studio relativo ai nodi interni del circuito, è stat
 \vspace{0.3cm}
 Il periodo medio di variazione dei selettori, ottenibile dal toggle rate, è confrontabile con le variazioni medie che avvengono su tali segnali in un ciclo di esecuzione. E' importante tenere in considerazione la possibile presenza di commutazioni non previste a causa dell'attivazione del segnale di reset durante la simulazione, il quale è caratterizzato da una probabilità non nulla di commutazione.
 \\\\
-\textcolor{red}{CONSTRAINT POWER E TIMING}
+È possibile imporre dei vincoli sui vari parametri coinvolti nel processo di sintesi. In particolare, è stato generato un segnale di clock alla massima frequenza consentita dal circuito, la stima di tale frequenza è stata effettuata a partire dall'analisi del critical path precedentemente riportato.
+\begin{center}
+	\begin{tabular}{|c|c|}
+	\hline
+	Clock period & 1.94 ns\\
+	\hline
+	Data required time & 1.91 ns \\
+	\hline
+	Data arrival time & 1.91 ns \\
+	\hline
+	Slack & 0 ns \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm} 
+Come atteso, lo slack relativo al percorso critico risulta pari essere nullo, di conseguenza il circuito opera alla massima frequenza supportata.
+Dal momento che la potenza dissipata è funzione della frequenza di lavoro, si è riscontrato un aumento dei consumi.
+\begin{center}
+	\begin{tabular}{|c|c|}
+	\hline
+	Internal Power & 151.3501 uW \\
+	\hline
+	Switching Power & 69.4127 uW \\
+	\hline
+	Leakage Power & 5.5735 uW \\
+	\hline
+	Total Power & 226.3363 uW \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm} 
+A seguito di un incremento della frequenza di un fattore di circa 5, la potenza è aumentata proporzionalmente.
+\\\\
+\textcolor{red}{E' inoltre possibile imporre un vincolo sul contributo totale di potenza dinamica, attraverso la direttiva\\
+\centerline{set max dyn power = 40uw\\}
+In particolare, è stato considerato il clock di partenza di periodo pari a 10 ns. Si nota che tale valore è leggermente inferiore rispetto alla potenza dinamica ottenuta nelle prime simulazioni.
+Di seguito sono i risultati ottenuti.}
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+	\hline
+	& No constraints & Power constraints\\
+	\hline
+	Internal Power & 29.4711 uW & 33.8116 uW \\
+	\hline
+	Switching Power & 13.2924 uW & 13.3092 uW \\
+	\hline
+	\hline
+	Total Dynamic Power & 42.76 uW & 47.12 uW \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}  
+\textcolor{red}{I risultati ottenuti dalla sintesi non risultano in linea con quanto atteso, infatti è registrato un aumento del consumo di potenza dinamica.
+\\
+Si ipotizza che il consumo di potenza dinamica ottenuto nella prima sintesi fosse già prossimo al minimo globale.}
 \\\\
 Successivamente è stata effettuata un'analisi più dettagliata della FSM accedendovi tramite la direttiva\textbf{ current\_instance FSM}.\\
 Attraverso il comando \textbf{report\_fsm} è stato possibile verificare la corretta implementazione della codifica progettata.\\
@@ -1016,15 +1070,13 @@ Uno studio più approfondito sulla switching power relativa ai nodi interni è o
 \end{center}
 \vspace{0.3cm}
 E' possibile notare che tali valori coincidono con quelli ottenuti precedentemente durante l'analisi -net della top level entity. Il contributo maggiore del consumo è dovuto alle capacità di carico dei nodi in analisi, che assumono  valori significativi rispetto agli altri nodi. Questo è il principale motivo per cui tali segnali contribuiscono maggiormente, data la parità di toggle rate.
-
-
-
-
-
-
-
-
-
+\\\\
+Per comodità è possibile raggruppare i comandi e le direttive in uno script in modo da lanciare una sintesi automatica.
+\begin{center}
+\begin{listato}
+	\centerline{\lstinputlisting{./code/Lab_2/commands.txt}}
+\end{listato}
+\end{center}
 
 
 
