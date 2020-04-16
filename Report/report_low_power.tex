@@ -811,8 +811,8 @@ Essendo i segnali di controllo coincidenti con i selettori dei multiplexer, è s
 \vspace{0.3cm}     
 È possibile notare come sia necessario riportare il valore della somma, denominato S, in ingresso ad entrambi i multiplexer.
 \\
-Nella transizione da uno stato all'altro il numero di commutazioni è pari alla variazione degli addendi. Ne consegue che il massimo numero di commutazioni durante una transizione è pari a 2.\\
-Considerando un ciclo di esecuzione dell'algoritmo, è possibile stimare il numero totale di commutazione sui segnali di selezione e la loro switching activity.\\
+Nella transizione da uno stato all'altro il numero di commutazioni coincide con la variazione degli addendi; ne consegue che il massimo numero di commutazioni durante una transizione risulta pari 2.\\
+Considerando un ciclo di esecuzione dell'algoritmo, è possibile stimare il numero totale di commutazioni sui segnali di selezione e la loro switching activity.\\
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|}
 	\hline
@@ -832,7 +832,7 @@ Il numero di commutazioni totale risulta quindi pari a 8.\\
 \\\\  
 Il passo successivo è la scelta della codifica dei singoli stati. In tale contesto è importante tenere in considerazione che una generica FSM presenta una rete per la generazione degli output e una rete per il calcolo dello stato futuro. 
 \\\\
-Una codifica ottimale punta alla minimizzazione delle commutazioni in entrambe le reti. Per tale scopo è stato scelto di far coincidere le due reti, in modo che la logica utilizzata per generare le uscite potesse essere utilizzata anche per la definizione dello stato futuro. In particolare, la codifica dello stato futuro si ottiene a partire dalle uscite di controllo dello stato attuale.
+Una codifica ottimale punta alla minimizzazione delle commutazioni in entrambe le reti. Per tale scopo si è deciso di far coincidere le due reti, in modo che la logica utilizzata per generare le uscite possa essere sfruttata anche per la definizione dello stato futuro. In particolare, la codifica dello stato futuro si ottiene a partire dalle uscite di controllo dello stato attuale.
 \\
 \begin{center}
 	\begin{tabular}{|c||c||c|c|c|c|}
@@ -856,7 +856,7 @@ Una codifica ottimale punta alla minimizzazione delle commutazioni in entrambe l
 \\
 In tale contesto, la sola logica combinatoria necessaria è relativa alla valutazione delle uscite a partire dalla codifica dello stato attuale.
 \\\\
-Si è notato che tali funzioni logiche presentano un'implementazione semplice con un numero limitato di porte. \textcolor{blue}{Di seguito sono riportate le mappe di Karnaugh per le funzioni logiche sopra descritte}
+Si è notato che tali funzioni logiche presentano un'implementazione semplice con un numero limitato di porte. Di seguito sono riportate le mappe di Karnaugh per le funzioni logiche sopra descritte.
 \\\\
 \centerline{\includegraphics[width=7cm]{./img/Lab_2/K_S3.png}
 			\includegraphics[width=7cm]{./img/Lab_2/K_S2.png}}
