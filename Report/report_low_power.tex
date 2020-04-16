@@ -390,7 +390,7 @@ L'apporto maggiore al consumo totale è dato dalla potenza dinamica, in particol
 \vspace{0.3cm}
 Si nota come la suddivisione risulti simile per tutti i FA fatta eccezione per FA(8). In particolare si differenzia dagli altri per il consumo relativo alla potenza di switch. Si ipotizza che quest'ultima risulti inferiore rispetto agli altri full adder a causa del minor carico di uscita.
 \\\\
-È inoltre possibile approfondire l'analisi di potenza considerando i contributi \textcolor{blue}{delle celle} interne ai singoli moduli. In particolare, vengono messi in luce i contributi \textcolor{blue}{delle celle che compongono i singoli FA}, sempre suddivisi nei tre contributi precedentemente descritti.
+È inoltre possibile approfondire l'analisi di potenza considerando i contributi delle celle interne ai singoli moduli. In particolare, vengono messi in luce i contributi delle celle che compongono i singoli FA, sempre suddivisi nei tre contributi precedentemente descritti.
 Per comprendere l'origine del consumo inferiore del FA8, quest'ultimo è stato analizzato come cella ed è stato confrontato con FA1.
 Lo schema del circuito interno e i risultati ottenuti sono riportati di seguito.
 \\\\
@@ -400,7 +400,7 @@ Lo schema del circuito interno e i risultati ottenuti sono riportati di seguito.
 	\begin{tabular}{|c|c|c|c|c|}
 	\multicolumn{5}{c}{FA(1) }\\
 	\hline
-	\textcolor{blue}{Cella} &  Switching Power & Internal Power & Leakage Power & Total Dynamic Power \\ 
+	Cella &  Switching Power & Internal Power & Leakage Power & Total Dynamic Power \\ 
 	\hline
 	U4 & 0.5488 uW & 0.5899 uW & 36.1637 nW & 1.138 uW  \\
 	\hline
@@ -417,7 +417,7 @@ Lo schema del circuito interno e i risultati ottenuti sono riportati di seguito.
 	\begin{tabular}{|c|c|c|c|c|}
 	\multicolumn{5}{c}{FA(8) }\\
 	\hline
-	\textcolor{blue}{Cella} &  Switching Power & Internal Power & Leakage Power & Total Dynamic Power \\ 
+	Cella &  Switching Power & Internal Power & Leakage Power & Total Dynamic Power \\ 
 	\hline
 	U4 & 0.5365 uW & 0.5757 uW & 36.1637 nW & 1.112 uW  \\
 	\hline
@@ -430,9 +430,9 @@ Lo schema del circuito interno e i risultati ottenuti sono riportati di seguito.
 	\end{tabular}
 \end{center}
 \vspace{0.3cm}
-La differenza nel consumo di potenza di switching è individuata \textcolor{blue}{nella cella} U2, legata al carry in uscita dal singolo FA.
+La differenza nel consumo di potenza di switching è individuata nella cella U2, legata al carry in uscita dal singolo FA.
 \\
-È possibile ottenere informazioni aggiuntive sul calcolo della switching power \textcolor{blue}{relativa ai nodi interni ad un modulo} con un'analisi di tipo \textcolor{blue}{net} verbose. In tale analisi sono riportati i contributi capacitivi necessari al calcolo di tale potenza, espressi nodo per nodo.
+È possibile ottenere informazioni aggiuntive sul calcolo della switching power relativa ai nodi interni ad un modulo con un'analisi di tipo net verbose. In tale analisi sono riportati i contributi capacitivi necessari al calcolo di tale potenza, espressi nodo per nodo.
 \\\\
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|}
@@ -1030,7 +1030,7 @@ A seguito di un incremento della frequenza di un fattore di circa 5, la potenza 
 \\\\
 \centerline{\textbf{set\_max\_dynamic\_power}}
 \\\\
-tale valore è stato fissato a 40 uW. Si nota che tale valore è leggermente inferiore rispetto alla potenza dinamica ottenuta nelle prime simulazioni.
+Tale valore è stato fissato a 40 uW, leggermente inferiore rispetto alla potenza dinamica ottenuta nelle prime simulazioni.
 \\
 In particolare, è stato considerato il clock di partenza di periodo pari a 10 ns.
 Di seguito sono riportati i risultati ottenuti.}
