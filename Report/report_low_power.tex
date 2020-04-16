@@ -790,7 +790,7 @@ In particolare, al fine di minimizzare i consumi della macchina a stati, è nece
 \item variabili di stato
 \item segnali di controllo
 \end{itemize} 
-Essendo i segnali di controllo coincidenti con i selettori dei multiplexer, è stata innanzitutto stabilita una sequenza per la selezione dei diversi input tale per cui il numero di commutazioni durante l'esecuzione dell'interno algoritmo di somma fosse minimo.
+Essendo i segnali di controllo coincidenti con i selettori dei multiplexer, è stata innanzitutto stabilita una sequenza per la selezione dei diversi input tale per cui il numero di commutazioni durante l'esecuzione dell'intero algoritmo di somma fosse minimo.
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|}
 	\hline
@@ -809,7 +809,9 @@ Essendo i segnali di controllo coincidenti con i selettori dei multiplexer, è s
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}     
-E' possibile notare come sia necessario riportare il valore della somma, denominato S, in ingresso ad entrambi i multiplexer. Nella transizione da uno stato all'altro il numero di commutazioni è pari alla variazione degli addendi. Ne consegue che il massimo numero di commutazioni durante una transizione è pari a 2.\\
+È possibile notare come sia necessario riportare il valore della somma, denominato S, in ingresso ad entrambi i multiplexer.
+\\
+Nella transizione da uno stato all'altro il numero di commutazioni è pari alla variazione degli addendi. Ne consegue che il massimo numero di commutazioni durante una transizione è pari a 2.\\
 Considerando un ciclo di esecuzione dell'algoritmo, è possibile stimare il numero totale di commutazione sui segnali di selezione e la loro switching activity.\\
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|}
@@ -823,14 +825,15 @@ Considerando un ciclo di esecuzione dell'algoritmo, è possibile stimare il nume
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}  
-Il numero di commutazioni totale risulta pari a 8.\\
-E' stata scelta dunque la seguente configurazione degli ingressi 
+Il numero di commutazioni totale risulta quindi pari a 8.\\
+È stata scelta dunque la seguente configurazione degli ingressi 
 \\\\
 \centerline{\includegraphics[width=8cm]{./img/Lab_2/Datapath_input.png}}
 \\\\  
 Il passo successivo è la scelta della codifica dei singoli stati. In tale contesto è importante tenere in considerazione che una generica FSM presenta una rete per la generazione degli output e una rete per il calcolo dello stato futuro. 
+\\\\
+Una codifica ottimale punta alla minimizzazione delle commutazioni in entrambe le reti. Per tale scopo è stato scelto di far coincidere le due reti, in modo che la logica utilizzata per generare le uscite potesse essere utilizzata anche per la definizione dello stato futuro. In particolare, la codifica dello stato futuro si ottiene a partire dalle uscite di controllo dello stato attuale.
 \\
-Una codifica ottimale punta alla minimizzazione delle commutazioni in entrambe le reti. Per tale scopo, è stato scelto di far coincidere le due reti, in modo che la logica utilizzata per generare le uscite potesse essere utilizzata anche per la definizione dello stato futuro. In particolare, la codifica dello stato futuro si ottiene a partire dalle uscite di controllo dello stato attuale.
 \begin{center}
 	\begin{tabular}{|c||c||c|c|c|c|}
 	\hline
@@ -849,9 +852,11 @@ Una codifica ottimale punta alla minimizzazione delle commutazioni in entrambe l
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}  
-E' possibile notare come tutte le transizioni presentino una distanza di Hamming pari a 1, fatta eccezione della transizione da S+C a S+D, nella quale tale distanza è pari a 2.
+È possibile notare come tutte le transizioni presentino una distanza di Hamming pari a 1, fatta eccezione della transizione da S+C a S+D, nella quale tale distanza è pari a 2.
 \\
-In tale contesto, l'unica logica combinatoria necessaria è relativa alla valutazione delle uscite a partire dalla codifica dello stato attuale. Si è notato che tali funzioni logiche presentano un'implementazione semplice con un numero limitato di porte. \textcolor{blue}{Di seguito sono riportate le mappe di Karnaugh per le funzioni logiche sopra descritte}
+In tale contesto, la sola logica combinatoria necessaria è relativa alla valutazione delle uscite a partire dalla codifica dello stato attuale.
+\\\\
+Si è notato che tali funzioni logiche presentano un'implementazione semplice con un numero limitato di porte. \textcolor{blue}{Di seguito sono riportate le mappe di Karnaugh per le funzioni logiche sopra descritte}
 \\\\
 \centerline{\includegraphics[width=7cm]{./img/Lab_2/K_S3.png}
 			\includegraphics[width=7cm]{./img/Lab_2/K_S2.png}}
@@ -859,15 +864,16 @@ In tale contesto, l'unica logica combinatoria necessaria è relativa alla valuta
 \centerline{\includegraphics[width=7cm]{./img/Lab_2/K_S1.png}
 			\includegraphics[width=7cm]{./img/Lab_2/K_S0.png}}
 \\\\
-E' possibile notare che le funzioni logiche presentano implicanti in comune, semplificando maggiormente la logica necessaria.
-\\\\
+È possibile notare che le funzioni logiche presentano implicanti in comune, semplificando maggiormente la logica necessaria.
+\\
 \subsection{Descrizione VHDL e simulazione Modelsim}
 La macchina a stati precedentemente definita è stata descritta attraverso il VHDL, specificando in particolare la codifica degli stati progettata.
 \\\\
-\textcolor{red}{DOBBIAMO METTERE IL VHDL?}
+\textcolor{red}{DOBBIAMO METTERE IL VHDL? fare eventuale appendice}
 \\\\
-Al fine della simulazione, datapath e FSM sono stati inclusi in un'unica entity per ottenere il Processing Element complessivo. E' stato dunque realizzato un testbench per verificare il corretto susseguirsi degli stati e le relative transizioni dei segnali.
+Al fine della simulazione, datapath e FSM sono stati inclusi in un'unica entity per ottenere il Processing Element complessivo. È stato dunque realizzato un testbench per verificare il corretto susseguirsi degli stati e le relative transizioni dei segnali.
 In particolare, è stata effettuata una simulazione di 2000 colpi di clock, che ha fornito i seguenti risultati attraverso un power report.
+\\
 \begin{center}
 	\begin{tabular}{|c|c|c|}
 	\hline
@@ -895,30 +901,34 @@ Inizialamente i file sono stati analizzati nel corretto ordine ed è stata elabo
 \\
 Successivamente è stato generato un clock di periodo pari a 10 ns.
 \\\\
-\centerline{create\_clock -name "CLK" -period 10 {CLK}} 
+\centerline{\textbf{create\_clock -name "CLK" -period 10 {CLK}} }
 \\\\
-E' stata verificata la presenza del clock generato attraverso il comando \textbf{report clock}.
+È stata verificata la presenza del clock generato attraverso il comando \textbf{report\_clock}.
 \\
 Successivamente è stata effettuata la sintesi attraverso la direttiva \textbf{compile -exact map}.
-\\
+\\\\
 In seguito è stato possibile visualizzare, in modo gerarchico, la mappatura del circuito con la libreria scelta. Nell'immagine seguente, in particolare, è riportato lo schematico della macchina a stati.
 \\\\
 \centerline{\includegraphics[width=15cm]{./img/Lab_2/FSM_Schematic.png}}
 \\\\ 
-E' possibile notare, come atteso, che il numero di porte logiche utilizzato risulta limitato.
+È possibile notare, come atteso, che il numero di porte logiche utilizzato risulta limitato.
 \\
 Sono stati effettuati una serie di report inizialmente sulla top level entity per poi analizzare in modo più approfondito la macchina a stati.
-Come prima cosa è stata ottenuta una stima dell'area delle celle utilizzate nella sintesi, attraverso il comando \textbf{report\_area}.
+\\
+In primo luogo è stata ottenuta una stima dell'area delle celle utilizzate nella sintesi, attraverso il comando \textbf{report\_area}.
 \\\\
-\centerline{Total cell area = 295.53 um2 ??}
+\centerline{Total cell area = 295.53 um2}
 \\\\
 Successivamente, al fine di valutare lo slack, sono stati analizzati i 10 percorsi combinatori con ritardi maggiori.
 \\\\
-\centerline{report\_timing -nworst 10}
+\centerline{\textbf{report\_timing -nworst 10}}
 \\\\
 Per semplicità sono riportati i dati relativi al critical path.
+\\
 \begin{center}
 	\begin{tabular}{|c|c|}
+	\hline
+	Clock period & 10 ns\\
 	\hline
 	Data required time & 9.97 ns \\
 	\hline
@@ -930,9 +940,10 @@ Per semplicità sono riportati i dati relativi al critical path.
 \end{center}
 \vspace{0.3cm}  
 Come è possibile notare, lo slack risulta particolarmente elevato se confrontato con il periodo di clock.
-Nel report sono inoltre presenti i ritardi relativi agli elementi compresi tra lo start point e l'end point del percorso critico.
+Nel report sono inoltre presenti i ritardi relativi agli elementi compresi tra lo start-point e l'end-point del percorso critico.
+\\\\
+È possibile ottenere informazioni riguardo alla potenza dissipata attraverso il comando \textbf{report\_power}. In particolare, si evidenziano i tre contributi relativi alla top level entity.
 \\
-E' possibile ottenere informazioni riguardo alla potenza dissipata attraverso il comando \textbf{report\_power}. In particolare, si evidenziano i tre contributi relativi alla top level entity.
 \begin{center}
 	\begin{tabular}{|c|c|}
 	\hline
@@ -947,7 +958,7 @@ E' possibile ottenere informazioni riguardo alla potenza dissipata attraverso il
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}  
-Sono stati ottenuti dati aggiuntivi relativi al consumo di potenza dei singoli moduli dell'architettura, tramite l'aggiunta della direttiva -hier.
+Sono stati ottenuti dati aggiuntivi relativi al consumo di potenza dei singoli moduli dell'architettura, tramite l'aggiunta della direttiva \textbf{-hier}.
 \begin{center}
 	\begin{tabular}{|c|c|c|}
 	\hline
@@ -958,13 +969,14 @@ Sono stati ottenuti dati aggiuntivi relativi al consumo di potenza dei singoli m
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}  
-Il consumo della macchina a stati rappresenta una percentuale ridotta rispetto al consumo totale.
+Il consumo della macchina a stati rappresenta una percentuale ridotta rispetto al valore totale.
 \\
-Al fine di approfondire lo studio relativo ai nodi interni del circuito, è stata realizzata un'analisi di tipo -net. In particolare sono riportati i risultati relativi ai nodi dei segnali di selezione dei multiplexer.
+Al fine di approfondire lo studio relativo ai nodi interni del circuito, è stata realizzata un'analisi di tipo \textbf{-net}. In particolare sono riportati i risultati relativi ai nodi dei segnali di selezione dei multiplexer.
+\\
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|}
 	\hline
-	Segnale & Net Load[fF] & Static Probability & Toggle Rate & Switching Power[uW] \\
+	Segnale & Net Load [fF] & Static Probability & Toggle Rate & Switching Power [uW] \\
 	\hline
 	 sel11\_wire & 13.792  &  0.120  &  0.0246  & 0.2055 \\
 	\hline
@@ -977,9 +989,10 @@ Al fine di approfondire lo studio relativo ai nodi interni del circuito, è stat
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-Il periodo medio di variazione dei selettori, ottenibile dal toggle rate, è confrontabile con le variazioni medie che avvengono su tali segnali in un ciclo di esecuzione. E' importante tenere in considerazione la possibile presenza di commutazioni non previste a causa dell'attivazione del segnale di reset durante la simulazione, il quale è caratterizzato da una probabilità non nulla di commutazione.
+Il periodo medio di variazione dei selettori, ottenibile dal toggle rate, è confrontabile con le variazioni medie che avvengono su tali segnali in un ciclo di esecuzione. È importante tenere in considerazione la possibile presenza di commutazioni non previste a causa dell'attivazione del segnale di reset durante la simulazione, il quale è caratterizzato da una probabilità non nulla di commutazione.
 \\\\
-È possibile imporre dei vincoli sui vari parametri coinvolti nel processo di sintesi. In particolare, è stato generato un segnale di clock alla massima frequenza consentita dal circuito, la stima di tale frequenza è stata effettuata a partire dall'analisi del critical path precedentemente riportato.
+È possibile imporre dei vincoli sui vari parametri coinvolti nel processo di sintesi. In particolare, è stato generato un segnale di clock alla massima frequenza consentita dal circuito. La stima di tale frequenza è stata effettuata a partire dall'analisi del critical path precedentemente riportato.
+\\
 \begin{center}
 	\begin{tabular}{|c|c|}
 	\hline
@@ -994,8 +1007,9 @@ Il periodo medio di variazione dei selettori, ottenibile dal toggle rate, è con
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm} 
-Come atteso, lo slack relativo al percorso critico risulta pari essere nullo, di conseguenza il circuito opera alla massima frequenza supportata.
-Dal momento che la potenza dissipata è funzione della frequenza di lavoro, si è riscontrato un aumento dei consumi.
+Come atteso, lo slack relativo al percorso critico risulta essere nullo, di conseguenza il circuito opera alla massima frequenza supportata.
+Dal momento che la potenza dissipata è funzione della frequenza di lavoro, è stato riscontrato un aumento dei consumi.
+\\
 \begin{center}
 	\begin{tabular}{|c|c|}
 	\hline
@@ -1012,10 +1026,15 @@ Dal momento che la potenza dissipata è funzione della frequenza di lavoro, si �
 \vspace{0.3cm} 
 A seguito di un incremento della frequenza di un fattore di circa 5, la potenza è aumentata proporzionalmente.
 \\\\
-\textcolor{red}{E' inoltre possibile imporre un vincolo sul contributo totale di potenza dinamica, attraverso la direttiva\\
-\centerline{set max dyn power = 40uw\\}
-In particolare, è stato considerato il clock di partenza di periodo pari a 10 ns. Si nota che tale valore è leggermente inferiore rispetto alla potenza dinamica ottenuta nelle prime simulazioni.
-Di seguito sono i risultati ottenuti.}
+\textcolor{red}{È inoltre possibile imporre un vincolo sul contributo totale di potenza dinamica, attraverso la direttiva
+\\\\
+\centerline{\textbf{set\_max\_dynamic\_power}}
+\\\\
+tale valore è stato fissato a 40 uW. Si nota che tale valore è leggermente inferiore rispetto alla potenza dinamica ottenuta nelle prime simulazioni.
+\\
+In particolare, è stato considerato il clock di partenza di periodo pari a 10 ns.
+Di seguito sono riportati i risultati ottenuti.}
+\\
 \begin{center}
 	\begin{tabular}{|c|c|c|}
 	\hline
@@ -1024,7 +1043,6 @@ Di seguito sono i risultati ottenuti.}
 	Internal Power & 29.4711 uW & 33.8116 uW \\
 	\hline
 	Switching Power & 13.2924 uW & 13.3092 uW \\
-	\hline
 	\hline
 	Total Dynamic Power & 42.76 uW & 47.12 uW \\
 	\hline
@@ -1036,8 +1054,10 @@ Di seguito sono i risultati ottenuti.}
 Si ipotizza che il consumo di potenza dinamica ottenuto nella prima sintesi fosse già prossimo al minimo globale.}
 \\\\
 Successivamente è stata effettuata un'analisi più dettagliata della FSM accedendovi tramite la direttiva\textbf{ current\_instance FSM}.\\
-Attraverso il comando \textbf{report\_fsm} è stato possibile verificare la corretta implementazione della codifica progettata.\\
-E' possibile risalire alla suddivisione del consumo della potenza dinamica all'interno delle celle che costituiscono la FSM attraverso un'analisi di potenza di tipo -cell. In particolare nella seguente tabella vengono riportati i tre contributi maggiori relativi al consumo di potenza dinamica.
+Attraverso il comando \textbf{report\_fsm} è stato possibile verificare la corretta implementazione della codifica progettata.
+\\\\
+È possibile risalire alla suddivisione del consumo della potenza dinamica all'interno delle celle che costituiscono la FSM attraverso un'analisi di potenza di tipo \textbf{-cell}. In particolare, nella seguente tabella vengono riportati i tre contributi maggiori relativi al consumo di potenza dinamica.
+\\
 \begin{center}
 	\begin{tabular}{|c|c|}
 	\hline
@@ -1052,11 +1072,12 @@ E' possibile risalire alla suddivisione del consumo della potenza dinamica all'i
 \vspace{0.3cm}
 Si nota che tali contributi sono relativi alle variabili di stato, che presentano numerose commutazioni durante l'esecuzione dell'algoritmo.
 \\
-Uno studio più approfondito sulla switching power relativa ai nodi interni è ottenuta tramite un'analisi di tipo -net. In particolare, nella seguente tabella, sono riportati i dati relativi ai segnali di uscita della FSM, ovvero i segnali di selezione dei multiplexer.
+Uno studio più approfondito sulla switching power relativa ai nodi interni è ottenuta tramite un'analisi di tipo \textbf{-net}. In particolare, nella seguente tabella, sono riportati i dati relativi ai segnali di uscita della FSM, ovvero i segnali di selezione dei multiplexer.
+\\
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|}
 	\hline
-	Segnale & Net Load[fF] & Static Probability & Toggle Rate & Switching Power[uW] \\
+	Segnale & Net Load [fF] & Static Probability & Toggle Rate & Switching Power [uW] \\
 	\hline
 	 S11 & 13.792  &  0.120  &  0.0246  & 0.2055 \\
 	\hline
@@ -1069,9 +1090,9 @@ Uno studio più approfondito sulla switching power relativa ai nodi interni è o
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-E' possibile notare che tali valori coincidono con quelli ottenuti precedentemente durante l'analisi -net della top level entity. Il contributo maggiore del consumo è dovuto alle capacità di carico dei nodi in analisi, che assumono  valori significativi rispetto agli altri nodi. Questo è il principale motivo per cui tali segnali contribuiscono maggiormente, data la parità di toggle rate.
+È possibile notare che tali valori coincidono con quelli ottenuti precedentemente durante l'analisi -net della top level entity. Il contributo maggiore del consumo è dovuto alle capacità di carico dei nodi in analisi, che assumono  valori significativi rispetto agli altri nodi. Questo è il principale motivo per cui tali segnali contribuiscono maggiormente, data la parità di toggle rate.
 \\\\
-Per comodità è possibile raggruppare i comandi e le direttive in uno script in modo da lanciare una sintesi automatica.
+Per ragioni di praticità, tali sintesi sono state effettuate raggruppando i comandi e le direttive in uno script in modo darendere il processo automatico. Di seguito è riportato uno degli script utilizzati.
 \begin{center}
 \begin{listato}
 	\centerline{\lstinputlisting{./code/Lab_2/commands.txt}}

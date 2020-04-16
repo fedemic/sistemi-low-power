@@ -7,5 +7,5 @@
 \contentsline {chapter}{\numberline {2}Laboratorio 2 - FSM Assignment and VHDL Synthesis}{22}% 
 \contentsline {section}{\numberline {2.1}FSM State Assignment}{22}% 
 \contentsline {subsection}{\numberline {2.1.1}Progetto}{22}% 
-\contentsline {subsection}{\numberline {2.1.2}Descrizione VHDL e simulazione Modelsim}{24}% 
+\contentsline {subsection}{\numberline {2.1.2}Descrizione VHDL e simulazione Modelsim}{25}% 
 \contentsline {section}{\numberline {2.2}Sintesi del VHDL}{25}% 
