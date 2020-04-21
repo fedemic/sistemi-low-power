@@ -1,0 +1,37 @@
+CIRCUITO BASE
+
+	Critical Path = 1 Reg + 1 Incremento + 1 Comp + 1 Mux + 1 Reg = 2ns + 40ns + 84ns + 14ns + 2ns = 142ns
+	Allowed Clock Frequency = 7.042 MHz
+	Power_5_MHz = P_nominale = 2 Reg + 2 Incr + 1 Comp + 1 Mux + 1 Reg = 10.73 uW
+	Power_Max_f = 15.12 uW
+	Area = 2 Reg + 2 Incr + 1 Comp + 1 Mux + 1 Reg = 1747 um quadrati
+
+CIRCUITO DOPPIO PARALLELO
+	
+	Dal grafico il fattore di scalamento che presenta il miglior trade-off in termini
+	di delay e potenza è u = 0.5.
+	
+
+	CELL TYPE		DELAY		POWER		AREA
+	
+	REGISTER		3 ns		0.15 uW		319.0
+	
+	INCREMENT		60 ns		0.6375 uW	256.0
+	
+	COMPARATOR		126 ns		0.54 uW		161.0
+	
+	MUX				21 ns		0.4175 uW	117.0
+	
+	
+	Critical Path = 1 Reg + 1 Incremento + 1 Comp + 1 Mux + 1 Reg + 1 Mux = 234 ns
+	Allowed Clock Frequency = 4.27 MHz
+	Power_2.5_MHz = P_nominale = 2 Reg + 2 Incr + 1 Comp + 1 Mux + 1 Reg + 1 Mux = 3.1 uW
+	Power_Max_f = 5.29 uW
+	Area = 2 * (2 Reg + 2 Incr + 1 Comp + 1 Mux + 1 Reg) + 1 Mux = 3611 um quadrati
+	
+
+	
+	
+
+
+				
