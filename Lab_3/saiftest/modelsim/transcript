@@ -1,0 +1,107 @@
+# //  ModelSim SE-64 6.5c Aug 27 2009 Linux 3.10.0-957.5.1.el7.x86_64
+# //
+# //  Copyright 1991-2009 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+vlog -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_3/saiftest/inccomp_netlist.v
+# Model Technology ModelSim SE-64 vlog 6.5c Compiler 2009.08 Aug 27 2009
+# -- Compiling module inccomp
+# 
+# Top level modules:
+# 	inccomp
+vlog -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_3/saiftest/tb_inccomp.v
+# Model Technology ModelSim SE-64 vlog 6.5c Compiler 2009.08 Aug 27 2009
+# -- Compiling module tbinccomp
+# 
+# Top level modules:
+# 	tbinccomp
+vlog -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_3/saiftest/inccomp_netlist.v
+# Model Technology ModelSim SE-64 vlog 6.5c Compiler 2009.08 Aug 27 2009
+# -- Compiling module inccomp
+# 
+# Top level modules:
+# 	inccomp
+vlog -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_3/saiftest/tb_inccomp.v
+# Model Technology ModelSim SE-64 vlog 6.5c Compiler 2009.08 Aug 27 2009
+# -- Compiling module tbinccomp
+# 
+# Top level modules:
+# 	tbinccomp
+run forward.do
+# No Design Loaded!
+source forward.do
+# vsim -L /software/dk/nangate45/verilog/msim6.5c -voptargs=+acc -sdftyp /tbinccomp/DUT=../inccomp.sdf -t ps work.tbinccomp 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.tbinccomp(fast)
+# Loading work.inccomp(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'inccomp' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /tbinccomp/DUT
+# Loading /software/dk/nangate45/verilog/msim6.5c.DFFR_X1(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'DFFR_X1' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /tbinccomp/DUT/syncha_reg_0_
+# Loading /software/dk/nangate45/verilog/msim6.5c.INV_X1(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'INV_X1' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /tbinccomp/DUT/U66
+# Loading /software/dk/nangate45/verilog/msim6.5c.OAI222_X1(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'OAI222_X1' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /tbinccomp/DUT/U67
+# Loading /software/dk/nangate45/verilog/msim6.5c.OAI211_X1(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'OAI211_X1' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /tbinccomp/DUT/U75
+# Loading /software/dk/nangate45/verilog/msim6.5c.NAND2_X1(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'NAND2_X1' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /tbinccomp/DUT/U76
+# Loading /software/dk/nangate45/verilog/msim6.5c.OAI21_X1(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'OAI21_X1' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /tbinccomp/DUT/U77
+# Loading /software/dk/nangate45/verilog/msim6.5c.OAI221_X1(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'OAI221_X1' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /tbinccomp/DUT/U78
+# Loading /software/dk/nangate45/verilog/msim6.5c.NOR3_X1(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'NOR3_X1' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /tbinccomp/DUT/U86
+# Loading /software/dk/nangate45/verilog/msim6.5c.OR2_X1(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'OR2_X1' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /tbinccomp/DUT/U87
+# Loading /software/dk/nangate45/verilog/msim6.5c.MUX2_X1(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'MUX2_X1' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /tbinccomp/DUT/U89
+# Loading /software/dk/nangate45/verilog/msim6.5c.XOR2_X1(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'XOR2_X1' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /tbinccomp/DUT/r68_U2
+# Loading /software/dk/nangate45/verilog/msim6.5c.HA_X1(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'HA_X1' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /tbinccomp/DUT/r68_U1_1_1
+# Loading instances from ../inccomp.sdf
+# Loading timing data from ../inccomp.sdf
+# ** Warning: (vsim-3448) ../inccomp.sdf(1793): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) ../inccomp.sdf(1819): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) ../inccomp.sdf(1845): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) ../inccomp.sdf(1871): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) ../inccomp.sdf(1897): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) ../inccomp.sdf(1923): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) ../inccomp.sdf(1949): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) ../inccomp.sdf(1975): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) ../inccomp.sdf(2001): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) ../inccomp.sdf(2027): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) ../inccomp.sdf(2053): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) ../inccomp.sdf(2079): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) ../inccomp.sdf(2105): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) ../inccomp.sdf(2131): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) ../inccomp.sdf(2157): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) ../inccomp.sdf(2183): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) ../inccomp.sdf(2209): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) ../inccomp.sdf(2235): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) ../inccomp.sdf(2261): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) ../inccomp.sdf(2287): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) ../inccomp.sdf(2313): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) ../inccomp.sdf(2339): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) ../inccomp.sdf(2365): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) ../inccomp.sdf(2391): Setting negative specify check constraint (-28 ps) to zero.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Region: /tbinccomp  File: /home/lp20.9/Desktop/low_power_2020/Lab_3/saiftest/tb_inccomp.v

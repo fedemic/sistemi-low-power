@@ -1,0 +1,202 @@
+# //  ModelSim SE-64 6.5c Aug 27 2009 Linux 3.10.0-957.5.1.el7.x86_64
+# //
+# //  Copyright 1991-2009 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_3/Es_1/fd.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity fd
+# -- Compiling architecture pippo of fd
+# -- Compiling architecture pluto of fd
+# -- Loading entity fd
+# -- Compiling configuration cfg_fd_pippo
+# -- Loading entity fd
+# -- Loading architecture pippo of fd
+# -- Compiling configuration cfg_fd_pluto
+# -- Loading entity fd
+# -- Loading architecture pluto of fd
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_3/Es_1/ckgbug.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity ckgbug
+# -- Compiling architecture test of ckgbug
+# -- Compiling configuration cfg_ckgbug_test
+# -- Loading entity ckgbug
+# -- Loading architecture test of ckgbug
+# -- Loading entity fd
+# -- Loading configuration cfg_fd_pluto
+vsim -t 10ps -novopt work.ckgbug
+# vsim -t 10ps -novopt work.ckgbug 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_3/Es_1/work.ckgbug(test)
+# Loading work.ckgbug(test)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_3/Es_1/work.fd(pluto)
+# Loading work.fd(pluto)
+add wave *
+run 10ns
+quit -sim
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_3/Es_1/fd.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity fd
+# -- Compiling architecture pippo of fd
+# -- Compiling architecture pluto of fd
+# -- Loading entity fd
+# -- Compiling configuration cfg_fd_pippo
+# -- Loading entity fd
+# -- Loading architecture pippo of fd
+# -- Compiling configuration cfg_fd_pluto
+# -- Loading entity fd
+# -- Loading architecture pluto of fd
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_3/Es_1/ckgbug.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity ckgbug
+# -- Compiling architecture test of ckgbug
+# -- Compiling configuration cfg_ckgbug_test
+# -- Loading entity ckgbug
+# -- Loading architecture test of ckgbug
+# -- Loading entity fd
+# -- Loading configuration cfg_fd_pluto
+vsim -t 10ps -novopt work.ckgbug
+# vsim -t 10ps -novopt work.ckgbug 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_3/Es_1/work.ckgbug(test)
+# Loading work.ckgbug(test)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_3/Es_1/work.fd(pluto)
+# Loading work.fd(pluto)
+add wave *
+run 10 ns
+quit -sim
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_3/Es_1/fd.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity fd
+# -- Compiling architecture pippo of fd
+# -- Compiling architecture pluto of fd
+# -- Loading entity fd
+# -- Compiling configuration cfg_fd_pippo
+# -- Loading entity fd
+# -- Loading architecture pippo of fd
+# -- Compiling configuration cfg_fd_pluto
+# -- Loading entity fd
+# -- Loading architecture pluto of fd
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_3/Es_1/ckgbug.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity ckgbug
+# -- Compiling architecture test of ckgbug
+# -- Compiling configuration cfg_ckgbug_test
+# -- Loading entity ckgbug
+# -- Loading architecture test of ckgbug
+# -- Loading entity fd
+# -- Loading configuration cfg_fd_pluto
+vsim -t 10ps -novopt work.ckgbug
+# vsim -t 10ps -novopt work.ckgbug 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_3/Es_1/work.ckgbug(test)
+# Loading work.ckgbug(test)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_3/Es_1/work.fd(pluto)
+# Loading work.fd(pluto)
+# ** Warning: (vsim-3479) Time unit 'ps' is less than the simulator resolution (10ps).
+#    Time: 0 ps  Iteration: 0  Region: /ckgbug/l1__1/reg1
+add wave *
+run 10 ns
+quit -sim
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_3/Es_1/fd.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity fd
+# -- Compiling architecture pippo of fd
+# -- Compiling architecture pluto of fd
+# -- Loading entity fd
+# -- Compiling configuration cfg_fd_pippo
+# -- Loading entity fd
+# -- Loading architecture pippo of fd
+# -- Compiling configuration cfg_fd_pluto
+# -- Loading entity fd
+# -- Loading architecture pluto of fd
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_3/Es_1/ckgbug.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity ckgbug
+# -- Compiling architecture test of ckgbug
+# -- Compiling configuration cfg_ckgbug_test
+# -- Loading entity ckgbug
+# -- Loading architecture test of ckgbug
+# -- Loading entity fd
+# -- Loading configuration cfg_fd_pluto
+vsim -t 10ps -novopt work.ckgbug
+# vsim -t 10ps -novopt work.ckgbug 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_3/Es_1/work.ckgbug(test)
+# Loading work.ckgbug(test)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_3/Es_1/work.fd(pluto)
+# Loading work.fd(pluto)
+# ** Warning: (vsim-3479) Time unit 'ps' is less than the simulator resolution (10ps).
+#    Time: 0 ps  Iteration: 0  Region: /ckgbug/l1__1/reg1
+vsim -t 10fs -novopt work.ckgbug
+# vsim -t 10fs -novopt work.ckgbug 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.ckgbug(test)
+# Loading work.fd(pluto)
+add wave *
+run 10 na
+# Invalid time value: 10 na
+run 10 ns
+quit -sim
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_3/Es_1/fd.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity fd
+# -- Compiling architecture pippo of fd
+# -- Compiling architecture pluto of fd
+# -- Loading entity fd
+# -- Compiling configuration cfg_fd_pippo
+# -- Loading entity fd
+# -- Loading architecture pippo of fd
+# -- Compiling configuration cfg_fd_pluto
+# -- Loading entity fd
+# -- Loading architecture pluto of fd
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_3/Es_1/ckgbug.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity ckgbug
+# -- Compiling architecture test of ckgbug
+# -- Compiling configuration cfg_ckgbug_test
+# -- Loading entity ckgbug
+# -- Loading architecture test of ckgbug
+# -- Loading entity fd
+# -- Loading configuration cfg_fd_pluto
+# Optimization canceled
+vsim -t 10fs -novopt work.ckgbug
+# vsim -t 10fs -novopt work.ckgbug 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_3/Es_1/work.ckgbug(test)
+# Loading work.ckgbug(test)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_3/Es_1/work.fd(pluto)
+# Loading work.fd(pluto)
+add wave *
+run 10 ns

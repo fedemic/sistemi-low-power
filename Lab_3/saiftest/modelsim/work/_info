@@ -1,0 +1,38 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/lp20.9/Desktop/low_power_2020/Lab_3/saiftest/modelsim
+T_opt
+V1Fa:P<4V0?n8D5Bl`^o9J1
+04 9 4 work tbinccomp fast 0
+Z1 =1-52540093200d-5e9ebbd0-1b7da-66d4
+Z2 o-quiet -auto_acc_if_foreign -work work -L /software/dk/nangate45/verilog/msim6.5c -sdftyp /tbinccomp/DUT=../inccomp.sdf -suppress 1948 +acc
+Z3 n@_opt
+Z4 OL;O;6.5c;42
+vinccomp
+Z5 Ic?j2[ki;k]j^[^z0WBalR0
+Z6 V4XcJ@foOCTedJgI<Q8Pk@3
+Z7 w1587460901
+Z8 8/home/lp20.9/Desktop/low_power_2020/Lab_3/saiftest/inccomp_netlist.v
+Z9 F/home/lp20.9/Desktop/low_power_2020/Lab_3/saiftest/inccomp_netlist.v
+L0 2
+Z10 OL;L;6.5c;42
+r1
+31
+Z11 o-work work -L mtiAvm -L mtiOvm -L mtiUPF
+Z12 !s100 gGSVjl07am:8BkKk[E>kN3
+!s85 0
+vtbinccomp
+Z13 I1?IQRLnk2GTjFT2JW[j@S0
+Z14 VoYlC@Q[N3[aai^Y]OX^E51
+Z15 w1587364709
+Z16 8/home/lp20.9/Desktop/low_power_2020/Lab_3/saiftest/tb_inccomp.v
+Z17 F/home/lp20.9/Desktop/low_power_2020/Lab_3/saiftest/tb_inccomp.v
+L0 2
+R10
+r1
+31
+R11
+Z18 !s100 @nm[4f76`kNNF_J>c5bK;1
+!s85 0

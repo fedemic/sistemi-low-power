@@ -1,0 +1,37 @@
+# //  ModelSim SE-64 6.5c Aug 27 2009 Linux 3.10.0-957.5.1.el7.x86_64
+# //
+# //  Copyright 1991-2009 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+vlog -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_3/Es_2/tb_inccomp.v
+# Model Technology ModelSim SE-64 vlog 6.5c Compiler 2009.08 Aug 27 2009
+# -- Compiling module tbinccomp
+# 
+# Top level modules:
+# 	tbinccomp
+vcom -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_3/Es_2/inccomp.vhd
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_signed
+# -- Compiling entity inccomp
+# -- Compiling architecture behavioral of inccomp
+vsim -t 10ps -novopt work.tbinccomp
+# vsim -t 10ps -novopt work.tbinccomp 
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_3/Es_2/work.tbinccomp
+# Loading work.tbinccomp
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Refreshing /home/lp20.9/Desktop/low_power_2020/Lab_3/Es_2/work.inccomp(behavioral)
+# Loading work.inccomp(behavioral)
+add wave *
+run 10 ns
+run 100 ns
