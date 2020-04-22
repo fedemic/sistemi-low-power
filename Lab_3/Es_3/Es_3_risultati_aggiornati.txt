@@ -43,27 +43,25 @@ PIPELINE
 	  frequenza di prima, ma consumiamo meno poichè la tensione di alimentazione può essere ridotta.
 	  
 	  Facendo il rapporto delle frequenze si ottiene un fattore di miglioramento pari a 2.33. Quindi il
-	  percorso critico può essere coperto 2.33 volte più lentamente: 86ns*2.33 = 200 ns. Sia il circuito
-	  nominale che questo portano fuori dati a 5 MHz, tuttavia il percorso critico della è 1.4 volte più
-	  grande rispetto al caso nominale: pertando possiamo fare andare il circuito 1.4 volte più lentamente
-	  mantenendo lo stesso throughput.
-	  Per garantire questo percorso critico la tensione di alimentazione può essere scalata di un
-	  fattore circa u = 0.51.
+	  percorso critico può essere coperto 2.33 volte più lentamente: 86ns*2.33 = 200 ns. Invertendo 
+	  l'equazione è possibile ottenere una stima del fattore u = 0.37. Tale risultato può anche essere
+	  ottenuto graficamente considerando lo stesso fattore di scalamento del ritardo rispetto ad un'
+	  alimentazione nominale.	  
 	  
 	---------------------------------------------
 	CELL TYPE		DELAY		POWER		AREA
 	---------------------------------------------
-	REGISTER		2.94 ns		0.016 uW	319.0
+	REGISTER		 ns		 uW	319.0
 	---------------------------------------------
-	INCREMENT		58.8 ns		0.663 uW	256.0
+	INCREMENT		 ns		 uW	256.0
 	---------------------------------------------
-	COMPARATOR		124 ns		0.562 uW	161.0
+	COMPARATOR		 ns		 uW	161.0
 	---------------------------------------------
-	MUX				2.06 ns		0.434 uW	117.0
+	MUX				 ns		 uW	117.0
 	---------------------------------------------
 	  
-	- Power_5_MHz = 2 Reg + 2 Incr + 1 Comp + 1 Mux + 1 Reg + 3 Reg_overhead =  2.418 uW
-	- Power_Max_f = 5.62 uW	
+	- Power_5_MHz = 2 Reg + 2 Incr + 1 Comp + 1 Mux + 1 Reg + 3 Reg_overhead =  1.8 uW
+	- Power_Max_f = 4.194 uW
 	- Area = Area senza registri + 3 reg = 2704 um quadrati
 	
 MIX DI TECNICHE (2*PIPELINE)
@@ -71,22 +69,23 @@ MIX DI TECNICHE (2*PIPELINE)
 		Raddioppiando il datapath pipelinato, i due moduli che lo compongono lavorano a 2.5 MHz. 
 		Di conseguenza è possibile avere ancora più margine nel percorso critico, in particolare
 		questo ha il doppio del tempo a disposizione rispetto al caso pipelinato: 2*200ns = 400ns.
-		Il vantaggio rispetto al caso nominale è di un fattore 400/142 = 2.8. Utilizzando il grafico
-		fornito si ottiene un fattore di scalamento per la tensione di alimentazione u = 0.35.
+		Il vantaggio rispetto al caso nominale è di un fattore 400/86 = 4.65. Utilizzando la formula
+		fornita	si ottiene un fattore di scalamento per la tensione di alimentazione u = 0.298.
 		
 	---------------------------------------------
 	CELL TYPE		DELAY		POWER		AREA
 	---------------------------------------------
-	REGISTER		2.94 ns		0.016 uW	319.0
+	REGISTER		9.31 ns		0.053 uW	319.0
 	---------------------------------------------
-	INCREMENT		58.8 ns		0.663 uW	256.0
+	INCREMENT		186 ns		0.226 uW	256.0
 	---------------------------------------------
-	COMPARATOR		124 ns		0.562 uW	161.0
+	COMPARATOR		391 ns		0.192 uW	161.0
 	---------------------------------------------
-	MUX				2.06 ns		0.434 uW	117.0
+	MUX				65.18 ns	0.148 uW	117.0
 	---------------------------------------------
 	
-	
+	- Power_5_MHz = 2 Reg + 2 Incr + 1 Comp + 1 Mux + 1 Reg + 3 Reg_overhead + 1 Mux_overhead =  1.258 uW
+	- Area = Area senza registri + 3 reg = 2704*2 + 1 Mux = 5525 um quadrati
 
 	
 	
