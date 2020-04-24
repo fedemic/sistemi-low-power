@@ -26,8 +26,8 @@ CIRCUITO DOPPIO PARALLELO
 	
 	- Critical Path = 1 Reg + 1 Incremento + 1 Comp + 1 Mux + 1 Reg + 1 Mux = 234 ns
 	- Allowed Clock Frequency = 4.27 MHz
-	- Power_2.5_MHz = P_nominale = 2 * (2 Reg + 2 Incr + 1 Comp + 1 Mux + 1 Reg) + 1 Mux = 3.1 uW (dovrebbe essere 5.7825)
-	- Power_Max_f = 5.29 uW (questo 9.877)
+	- Power_2.5_MHz = P_nominale = 2 Reg + 2 Incr + 1 Comp + 1 Mux + 1 Reg + 1 Mux = 3.1 uW
+	- Power_Max_f = 5.29 uW
 	- Area = 2 * (2 Reg + 2 Incr + 1 Comp + 1 Mux + 1 Reg) + 1 Mux = 3611 um quadrati
 	
 PIPELINE
