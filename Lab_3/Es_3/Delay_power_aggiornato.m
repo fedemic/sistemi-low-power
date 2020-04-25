@@ -26,7 +26,7 @@ if (pipeline == 1)
     T = k_parallelismo*k_pipeline*T_nom;
     
 else
-    T_nom = 142e-9;
+    T_nom = 140e-9;                %%CAMBIATO, era 142 ns
     T = k_parallelismo*T_nom;
 end
 
@@ -50,7 +50,7 @@ mux_pow = k_power*mux_pow_nom;
 
 % Pipeline attiva
 if (pipeline == 1)
-    tot_delay = comp_delay;
+    tot_delay = reg_delay + comp_delay;               %%CAMBIATO, aggiunto reg_delay
     % Solo pipeline
     if (k_parallelismo == 1)
         tot_power = 6*reg_pow + 2*incr_pow + comp_pow + mux_pow;
@@ -60,7 +60,7 @@ if (pipeline == 1)
     end
 % Solo parallel   
 else
-    tot_delay = reg_delay + incr_delay + comp_delay + mux_delay + reg_delay;
+    tot_delay = reg_delay + incr_delay + comp_delay + mux_delay;           %%CAMBIATO, tolto +reg_delay
     tot_power = 3*reg_pow + 2*incr_pow + comp_pow + mux_pow + mux_pow;
     
 end

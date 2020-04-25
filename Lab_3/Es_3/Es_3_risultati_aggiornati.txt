@@ -1,7 +1,7 @@
 CIRCUITO BASE
 
-	- Critical Path = 1 Reg + 1 Incremento + 1 Comp + 1 Mux + 1 Reg = 2ns + 40ns + 84ns + 14ns + 2ns = 142ns
-	- Allowed Clock Frequency = 7.042 MHz
+	- Critical Path = 1 Reg + 1 Incremento + 1 Comp + 1 Mux  = 2ns + 40ns + 84ns + 14ns = 140ns
+	- Allowed Clock Frequency = 7.14 MHz
 	- Power_5_MHz = P_nominale = 2 Reg + 2 Incr + 1 Comp + 1 Mux + 1 Reg = 10.73 uW
 	- Power_Max_f = 15.12 uW
 	- Area = 2 Reg + 2 Incr + 1 Comp + 1 Mux + 1 Reg = 1747 um quadrati
@@ -24,8 +24,8 @@ CIRCUITO DOPPIO PARALLELO
 	---------------------------------------------
 	
 	
-	- Critical Path = 1 Reg + 1 Incremento + 1 Comp + 1 Mux + 1 Reg + 1 Mux = 234 ns
-	- Allowed Clock Frequency = 4.27 MHz
+	- Critical Path = 1 Reg + 1 Incremento + 1 Comp + 1 Mux + 1 Mux = 231 ns
+	- Allowed Clock Frequency = 4.3 MHz
 	- Power_2.5_MHz = P_nominale = 2 Reg + 2 Incr + 1 Comp + 1 Mux + 1 Reg + 1 Mux = 3.1 uW
 	- Power_Max_f = 5.29 uW
 	- Area = 2 * (2 Reg + 2 Incr + 1 Comp + 1 Mux + 1 Reg) + 1 Mux = 3611 um quadrati
@@ -66,7 +66,7 @@ PIPELINE
 	
 MIX DI TECNICHE (2*PIPELINE)
 		
-		Raddioppiando il datapath pipelinato, i due moduli che lo compongono lavorano a 2.5 MHz. 
+		Raddoppiando il datapath pipelinato, i due moduli che lo compongono lavorano a 2.5 MHz. 
 		Di conseguenza è possibile avere ancora più margine nel percorso critico, in particolare
 		questo ha il doppio del tempo a disposizione rispetto al caso pipelinato: 2*200ns = 400ns.
 		Il vantaggio rispetto al caso nominale è di un fattore 400/86 = 4.65. Utilizzando la formula
