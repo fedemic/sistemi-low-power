@@ -9,7 +9,7 @@ Report : power
         -include_input_nets
 Design : inccomp
 Version: F-2011.09-SP3
-Date   : Tue Apr 28 13:34:14 2020
+Date   : Tue Apr 28 20:54:30 2020
 ****************************************
 
 
@@ -35,12 +35,12 @@ Power-specific unit information :
     Leakage Power Units = 1nW
 
 
-  Cell Internal Power  =  21.3760 uW   (65%)
-  Net Switching Power  =  11.4117 uW   (35%)
+  Cell Internal Power  =  21.5273 uW   (66%)
+  Net Switching Power  =  10.8718 uW   (34%)
                          ---------
-Total Dynamic Power    =  32.7876 uW  (100%)
+Total Dynamic Power    =  32.3990 uW  (100%)
 
-Cell Leakage Power     =   4.5424 uW
+Cell Leakage Power     =   4.0921 uW
 
 
                  Internal         Switching           Leakage            Total
@@ -50,9 +50,9 @@ io_pad             0.0000            0.0000            0.0000            0.0000 
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register          20.1045            0.4158        2.1153e+03           22.6357  (  82.07%)
+register          20.5257            0.3486        2.1135e+03           22.9878  (  85.93%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational      1.2715            1.2467        2.4270e+03            4.9452  (  17.93%)
+combinational      1.0016            0.7828        1.9786e+03            3.7629  (  14.07%)
 --------------------------------------------------------------------------------------------------
-Total             21.3760 uW         1.6626 uW     4.5424e+03 nW        27.5809 uW
+Total             21.5273 uW         1.1314 uW     4.0921e+03 nW        26.7508 uW
 1
