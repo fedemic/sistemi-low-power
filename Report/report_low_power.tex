@@ -1213,7 +1213,6 @@ Segnale & Static probability & Toggle rate \\
 \end{center}
 \vspace{0.3cm}
 In seguito, impostando le statistiche relative ai segnali INCA e INCB con static probability pari a 0.12 e toggle rate pari a 0.025, come specificato nella consegna, si ottengono i seguenti risultati.
-\textcolor{red}{Aggiornare dati in tabella sotto}
 \\
 \begin{center}
 	\begin{tabular}{|c|c|c|c|}
@@ -1222,7 +1221,7 @@ In seguito, impostando le statistiche relative ai segnali INCA e INCB con static
 	\hline
 	Internal power [uW] & Net switching power [uW] & Leakage power [uW] & Total power [uW] \\
 	\hline
-	 27.6360 & 14.8140  & 4.18  &  46.6302 \\
+	21.5273 & 10.8718  & 4.0921  &  36.4911 \\
 	\hline
 	\end{tabular}	
 \end{center}
@@ -1337,8 +1336,7 @@ Nelle seguenti tabelle sono riportati i risultati relativi ai consumi.
 	\hline
 	\end{tabular}	
 \end{center}
-\vspace{0.3cm} 
-\textcolor{red}{Aggiornare tabella sotto}          
+\vspace{0.3cm}    
 \begin{center}
 	\begin{tabular}{|c|c|c|}
 	\hline
@@ -1346,13 +1344,13 @@ Nelle seguenti tabelle sono riportati i risultati relativi ai consumi.
 	\hline
 	& No clock gating & Clock gating \\
 	\hline
-	Internal power [uW] & 21.3760 & 27.8883 \\
+	Internal power [uW] & 21.3760 & 10.0773 \\
 	\hline 
- 	Net switching power [uW] & 1.6626 & 11.9228 \\
+ 	Net switching power [uW] & 11.4117 & 4.1839 \\
 	\hline
-	Leakage power [uW] & 4.6611 & 4.4199 \\
+	Leakage power [uW] & 4.5424 & 4.3468 \\
 	\hline
-	Total power [uW] & 49.5103 & 44.2311 \\
+	Total power [uW] & 37.3300 & 18.6080 \\
 	\hline
 	\end{tabular}	
 \end{center}
@@ -1380,4 +1378,57 @@ Per verificare ciò è stato effettuato un report di tipo cell.
 Si ipotizza che, a causa della modifica apportata al file VHDL, il sintetizzatore, nel caso in cui non sia specificato di applicare il clock gating, interpreti la descrizione inserendo della logica aggiuntiva per verificare la condizione di if. Al contrario, applicando la direttiva \textbf{-gate\_clock}, la descrizione viene interpretata correttamente dal sintetizzatore.
 \\
 Il numero di celle risulta maggiore rispetto al caso in cui il clock gating viene applicato solamente ai registri REG\_A e REG\_B.
+\\
+\subsection{Simulazione di consumi tramite back-annotation}
+Al fine di ottenere una stima più accurata del consumo di potenza del circuito preso in considerazione, è necessario avere valutazione più realistica dell'attività dei singoli nodi del circuito sintetizzato. A tale scopo è possibile effettuare una simulazione back-annotated, generando post-sintetizzazione un file contenente la descrizione della netlist del circuito.
+\\
+L'ambiente di simulazione ModelSim è in grado, partendo dal file di cui sopra, di svolgere diverse simulazioni atte a caratterizzare l'attività dei nodi in questione. Tali risultati vengono riportati in un apposito file che successivamente ad una conversione può essere letto dal CAD di sintesi.
+\\
+Attraverso le informazioni ottenute, si è in grado di simulare più realisticamente il comportamento del circuito in termini di potenza.
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+	Internal power [uW] & Net switching power [uW] & Leakage power [uW] & Total power [uW] \\
+	\hline
+	 39.6187 & 18.3103  & 4.6799  &  62.6089 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+	\hline
+Segnale & Static probability & Toggle rate \\
+	\hline
+	 clock & 0.5  &  0.4 \\
+	\hline
+	 reset & 0.004  &  0.0005 \\
+	\hline
+	 INCA & 0.019  &  0.001 \\
+	\hline
+	 INCB & 0.986  &  0.0005 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+È possibile notare che i valori di static probability e toggle rate sono differenti rispetto a quanto impostato precedentemente su Synopsys. In particolare, l'ingresso INCB ha una probabilità prossima a 1 e una switching acitivity molto bassa.
+\\
+Si ipotizza che i consumi elevati siano dovuti al quasi continuo incremento del valore contenuto nel registro REG\_B. Tale fatto mette in luce l'importanza di un testbench in grado di rappresentare correttamente la statistica  degli input del circuito.
+\newpage
+\section{Pipelining e parallelizzazione}
+È possibile applicare una serie di soluzioni architetturali  al fine di ridurre il consumo di potenza dinamica di un generico circuito che presenta un datapath delimitato da barriere di registri.
+\\
+In particolare è preso in considerazione il medesimo circuito usato nei punti precedenti, il quale è stato caratterizzato dal punto di vista di ritardo, potenza e area.
+\\\\
+\centerline{percorso critico = reg + inc + comp + mux = 140 ns\\}
+\centerline{frequenza massima = 7.14MHz\\}
+\centerline{potenza @ 5MHz = 3 reg + 2 inc + comp + mux = 10.73 uW\\}
+\centerline{area = 3 reg + 2 inc + comp + mux = 1747 um 2\\}
+\\\\
+
+
+
+
+
 \end{document}
