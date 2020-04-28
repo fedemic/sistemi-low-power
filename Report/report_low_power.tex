@@ -1099,40 +1099,177 @@ Per ragioni di praticità, tali sintesi sono state effettuate raggruppando i com
 \end{listato}
 \end{center}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-          
-          
-          
-          
-          
-          
+\chapter{Laboratorio 3 - Clock gating e soluzioni architetturali}
+\section{Un primo approccio al clock gating}
+Il clock gating è una tecnica di riduzione dei consumi a livello architetturale, il cui scopo è impedire la commutazione del segnale di clock in determinate parti del circuito non utilizzate.
+\\
+È fornita una descrizione VHDL del seguente circuito.
+\\
+\centerline{\includegraphics[width=8cm]{./img/Lab_3/circuito_clk_bug.png}}
+\\
+Dal file VHDL è possibile notare il valore assegnato ai segnali D1, D2 e D3:
+\begin{center}
+\begin{listato}
+	\centerline{\lstinputlisting{./code/Lab_3/d1_d2_d3.vhd}}
+\end{listato}
+\end{center}
+Essendo il segnale di clock enable sempre attivo, è atteso che l'uscita D3 assuma un valore pari a D1 dopo due cicli di clock. Tale comportamento non è verificato da una prima simulazione ModelSim effettuata.
+\\
+Come possibile notare dalla seguente figura, al primo fronte di clock successivo al reset, il valore di D1 è già riportato in uscita al flip-flop controllato dal segnale di strobe.
+\\\\
+\centerline{\includegraphics[width=10cm]{./img/Lab_3/clk_bug.png}}
+\\\\
+Ciò accade poiché il simulatore, in assenza di informazioni sui ritardi, deve comunque simulare il circuito mantenendo una causalità nella propagazione dei segnali all'interno degli elementi descritti.
+\\
+Come conseguenza, l'informazione relativa al clock, a causa della presenza di una porta AND, è riportata all'ingresso del secondo flip-flop uno step simuazione dopo rispetto al primo. Tale comportamento è deleterio in quanto altera il timing previsto del circuito.
+\\\\
+Per assicurare il corretto funzionamento del circuito, è sufficiente indicare la presenza di un ritardo CK- > Q per entrambi i flip-flop. A tale scopo è stato modificato il file \textbf{fd.vhd}.
+\begin{center}
+\begin{listato}
+	\centerline{\lstinputlisting{./code/Lab_3/ff_delay.vhd}}
+\end{listato}
+\end{center}
+Il ritardo aggiunto sulla propagazione dell'uscita permette di raggiungere il risultato atteso dalla simulazione.
+\\\\
+\centerline{\includegraphics[width=10cm]{./img/Lab_3/clk_bug_resolved.png}}
+\\\\
+Si nota che se la porta AND fosse caratterizzata da un ritardo maggiore rispetto al ritardo precedentemente inserito, il valore campionato non sarebbe quello corretto. In particolare, l'errore riscontrato è analogo a prima, come mostrato nella seguente figura.
+\\\\
+\centerline{\includegraphics[width=10cm]{./img/Lab_3/clk_bug_delay.png}}
+\newpage
+\section{Clock gating per un circuito complesso}
+\subsection{Simulazione del circuito}
+All'interno del file \textbf{inccomp.vhd} è presenta una descrizione del circuito mostrato nella figura seguente.
+\\\\
+\centerline{\includegraphics[width=10cm]{./img/Lab_3/inccomp_no_gating.png}}
+\\\\
+Dal codice si evince che il circuito è in grado di incrementare e confrontare due valori, rappresentati su 8 bit, contenuti nei registri A e B, e portare il maggiore di essi in uscita. In particolare, l'operazione di incremento è gestita attraverso INCA e INCB, due segnali attivi alti.
+\\
+È stato realizzato un testbench con lo scopo di simulare e verificare il comportamento del circuito.
+\\\\
+\centerline{\includegraphics[width=10cm]{./img/Lab_3/inccomp_no_gating_behavior.png}}
+\\\\
+Come possibile notare dalle forme d'onda sopra riportate, il comportamento è in linea con quanto atteso.
+\\ 
+Infatti, il segnale INCA viene campionato per tre colpi di clock prima che INCB risulti attivo, ciò porta il valore contenuto in REG\_A uguale a 3. In seguito, asserendo INCB, anche il valore contenuto in REG\_B inizia ad aumentare. Nei cicli di clock in cui entrambi INCA e INCB sono asseriti, la differenza tra i due dati rimane costante. Nel momento in cui INCA viene negato, il valore in uscita dal circuito rimane costante fino a che il dato contenuto in REG\_B risulti maggiore: questo accade esattamente dopo tre cicli di clock.
+\\\\
+Nel caso in cui i segnali di incremento non siano asseriti, non è necessario far commutare il clock all'interno dei registri, in quanto nessun valore deve essere aggiornato; a tal proposito, è possibile sfruttare la tecnica del clock gating. Una possibile implementazione è mostrata nella seguente figura.
+\\\\
+\textcolor{red}{Circuito applicazione clk gating a mano}
+\\\\
+È possibile notare la presenza di due latch atti a filtrare eventuali glitch presenti sugli ingressi INCA e INCB.
+\subsection{Sintesi del circuito}
+Inizialmente è stata effettuata una sintesi in assenza di direttive per l'implementazione del clock gating.
+Successivamente alla generazione di un clock di periodo pari a 5 ns, è stato effettuato un power report includendo anche il contributo dei nodi relativi agli ingressi attraverso la direttiva \textbf{-include\_input\_net}.
+\\
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+	\multicolumn{4}{c}{Power report - no clock gating, statistica di default} \\
+	\hline
+	Internal power [uW] & Switching power [uW] & Leakage power [uW] & Total power [uW] \\
+	\hline
+	 38.7514 & 13.6944  &  3.7969  &  56.2428 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Un'analisi di potenza di tipo net permette di ottenere informazioni più dettagliate sulla statistica dei segnali. In particolare sono riportate le informazioni relative ai segnali di clock, reset, INCA e INCB.
+\\
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+	\hline
+Segnale & Stati probability & Toggle rate \\
+	\hline
+	 clock & 0.5  &  0.4 \\
+	\hline
+	 reset & 0.5  &  0.02 \\
+	\hline
+	 INCA & 0.5  &  0.02 \\
+	\hline
+	 INCB & 0.5  &  0.02 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+È possibile notare come tali valori non siano realistici rispetto ai segnali presi in considerazione.
+\\
+È possibile effettuare stime più accurate comunicando al sintetizzatore i dati statistici relativi ai segnali. In particolare, è stata inizialmente modificata la statistica del segnale di reset, impostando la static probability = 0.
+\\
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+	\multicolumn{4}{c}{Power report - no clock gating, reset modificato}\\
+	\hline
+	Internal power [uW] & Switching power [uW] & Leakage power [uW] & Total power [uW] \\
+	\hline
+	 27.6360 & 14.8140  & 4.18  &  46.6302 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+In seguito, impostando le statistiche relative ai segnali INCA e INCB con static probability pari a 0.12 e toggle rate pari a 0.025, come specificato nella consegna, si ottengono i seguenti risultati.
+\textcolor{red}{Aggiornare dati in tabella}
+\\
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+	\multicolumn{4}{c}{Power report - no clock gating, reset e ingressi modificati}\\
+	\hline
+	Internal power [uW] & Switching power [uW] & Leakage power [uW] & Total power [uW] \\
+	\hline
+	 27.6360 & 14.8140  & 4.18  &  46.6302 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Si nota una sensibile riduzione dei consumi dovuti al minor numero di commutazioni medie dei segnali in ingresso.
+\\
+È possibile ottenere il numero totale di celle utilizzato dal sintetizzatore attraverso un report di tipo cell.
+\\
+\begin{center}
+	\begin{tabular}{|c|c|}
+	\hline
+	Numero celle & Area [um 2] \\
+	\hline
+	 74 & 229.29 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Attraverso una particolare descrizione VHDL, è possibile notificare al sintetizzatore la possibilità di implementare la tecnica del clock gating, ce può essere richiesta nella fase di sintesi attraverso la direttiva \textbf{-gate\_clock}.
+Utilizzando sempre un clock di periodo 5 ns sono stati ottenuti i seguenti risultati, includendo sempre i contributi dovuti ai nodi di ingresso.       
+\\
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+	\multicolumn{4}{c}{Power report - clock gating, statistiche di default}\\
+	\hline
+	Internal power [uW] & Switching power [uW] & Leakage power [uW] & Total power [uW] \\
+	\hline
+	 32.9555 & 10.8986  & 3.9349  &  47.7882 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}         
+Come atteso, il clock gating ha portato ad una riduzione della potenza generale rispetto al caso in cui tale tecnica non è stata implementata. In particolare, è possibile notare una riduzione della potenza dinamica e un leggero aumento della potenza di leakage: si ipotizza che tale incremento sia dovuto ad un numero maggiore di celle.
+\\
+Successivamente, come effettuato in precedenza, sono state modificate le statistiche relative ai segnali di reset, INCA e INCB.
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+	\multicolumn{4}{c}{Power report - clock gating, reset e ingressi modificati}\\
+	\hline
+	Internal power [uW] & Switching power [uW] & Leakage power [uW] & Total power [uW] \\
+	\hline
+	 13.3592 & 5.8499  & 4.2570  &  23.4661 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}        
+L'effetto del clock gating risulta più marcato adottando una statistica più realistica dei segnali presi in considerazione.
+\\
+Tuttavia, tale implementazione richiede l'impiego di un numero maggiore di celle atte all'inserimento della logica necessaria alla gestione del clock gating.     
           
           
           
