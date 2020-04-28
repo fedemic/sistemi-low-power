@@ -15,7 +15,7 @@
 %\usepackage[T1]{fontenc}
 
 % Impostazioni pagina
-\textwidth 15.5cm % larghezza del testo nella pagina
+\textwidth 16cm % larghezza del testo nella pagina
 \textheight 23cm % altezza del testo nella pagina
 \topmargin -1cm % spazio in più o in meno dall'alto
 \oddsidemargin 0cm % si può spostare il margine dove inizia il testo nella pagina 
@@ -1167,19 +1167,23 @@ Successivamente alla generazione di un clock di periodo pari a 5 ns, è stato ef
 	\hline
 	\multicolumn{4}{c}{Power report - no clock gating, statistica di default} \\
 	\hline
-	Internal power [uW] & Switching power [uW] & Leakage power [uW] & Total power [uW] \\
+	Internal power [uW] & Net switching power [uW] & Leakage power [uW] & Total power [uW] \\
 	\hline
 	 38.7514 & 13.6944  &  3.7969  &  56.2428 \\
 	\hline
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-Un'analisi di potenza di tipo net permette di ottenere informazioni più dettagliate sulla statistica dei segnali. In particolare sono riportate le informazioni relative ai segnali di clock, reset, INCA e INCB.
+Un'analisi di potenza di tipo net permette di ottenere informazioni più dettagliate sulla statistica dei segnali e sulle capacità coinvolte. 
+\\
+In particolare, si nota che le capacità relative ai nodi di ingresso assumono un valore significativo, di conseguenza è importante tenere in considerazione tali nodi in una stima di potenza.
+\\
+Sono riportate le informazioni statistiche relative ai segnali di clock, reset, INCA e INCB.
 \\
 \begin{center}
 	\begin{tabular}{|c|c|c|}
 	\hline
-Segnale & Stati probability & Toggle rate \\
+Segnale & Static probability & Toggle rate \\
 	\hline
 	 clock & 0.5  &  0.4 \\
 	\hline
@@ -1201,7 +1205,7 @@ Segnale & Stati probability & Toggle rate \\
 	\hline
 	\multicolumn{4}{c}{Power report - no clock gating, reset modificato}\\
 	\hline
-	Internal power [uW] & Switching power [uW] & Leakage power [uW] & Total power [uW] \\
+	Internal power [uW] & Net switching power [uW] & Leakage power [uW] & Total power [uW] \\
 	\hline
 	 27.6360 & 14.8140  & 4.18  &  46.6302 \\
 	\hline
@@ -1209,14 +1213,14 @@ Segnale & Stati probability & Toggle rate \\
 \end{center}
 \vspace{0.3cm}
 In seguito, impostando le statistiche relative ai segnali INCA e INCB con static probability pari a 0.12 e toggle rate pari a 0.025, come specificato nella consegna, si ottengono i seguenti risultati.
-\textcolor{red}{Aggiornare dati in tabella}
+\textcolor{red}{Aggiornare dati in tabella sotto}
 \\
 \begin{center}
 	\begin{tabular}{|c|c|c|c|}
 	\hline
 	\multicolumn{4}{c}{Power report - no clock gating, reset e ingressi modificati}\\
 	\hline
-	Internal power [uW] & Switching power [uW] & Leakage power [uW] & Total power [uW] \\
+	Internal power [uW] & Net switching power [uW] & Leakage power [uW] & Total power [uW] \\
 	\hline
 	 27.6360 & 14.8140  & 4.18  &  46.6302 \\
 	\hline
@@ -1245,7 +1249,7 @@ Utilizzando sempre un clock di periodo 5 ns sono stati ottenuti i seguenti risul
 	\hline
 	\multicolumn{4}{c}{Power report - clock gating, statistiche di default}\\
 	\hline
-	Internal power [uW] & Switching power [uW] & Leakage power [uW] & Total power [uW] \\
+	Internal power [uW] & Net switching power [uW] & Leakage power [uW] & Total power [uW] \\
 	\hline
 	 32.9555 & 10.8986  & 3.9349  &  47.7882 \\
 	\hline
@@ -1260,7 +1264,7 @@ Successivamente, come effettuato in precedenza, sono state modificate le statist
 	\hline
 	\multicolumn{4}{c}{Power report - clock gating, reset e ingressi modificati}\\
 	\hline
-	Internal power [uW] & Switching power [uW] & Leakage power [uW] & Total power [uW] \\
+	Internal power [uW] & Net switching power [uW] & Leakage power [uW] & Total power [uW] \\
 	\hline
 	 13.3592 & 5.8499  & 4.2570  &  23.4661 \\
 	\hline
@@ -1270,14 +1274,110 @@ Successivamente, come effettuato in precedenza, sono state modificate le statist
 L'effetto del clock gating risulta più marcato adottando una statistica più realistica dei segnali presi in considerazione.
 \\
 Tuttavia, tale implementazione richiede l'impiego di un numero maggiore di celle atte all'inserimento della logica necessaria alla gestione del clock gating.     
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
+\\
+\begin{center}
+	\begin{tabular}{|c|c|}
+	\hline
+	Numero celle & Area [um 2] \\
+	\hline
+	 78 & 238.07 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}          
+È possibile navigare all'interno dello schematico al fine di individuare le celle relative all'implementazione di tale tecnica.        
+\\\\
+\centerline{\includegraphics[width=13cm]{./img/Lab_3/clock_gating_cells.png}}
+\\\\
+Si nota la presenza di due strutture aggiuntive che controllano il clock in ingresso ai due registri REG\_A e REG\_B. In particolare, è possibile visualizzare l'interno di tali strutture, costituite da un latch attivo basso seguito da una porta AND.
+\\\\
+\centerline{\includegraphics[width=10cm]{./img/Lab_3/clock_gating_implementation.png}}
+\\\\       
+Si nota che non è presente nessuna struttura adibita al clock gating sul registro in uscita. Infatti, dalla descrizione VHDL, il sintetizzatore non è in grado di riconoscere la possibilità di applicare il clock gating. A tal proposito, il codice è stato modificato al fine di includere questa opzione.
+\begin{center}
+\begin{listato}
+	\centerline{\lstinputlisting{./code/Lab_3/clock_gating_output.vhd}}
+\end{listato}
+\end{center}
+In particolare, è stato notato che all'interno del process per la descrizione dell'architettura, l'aggiornamento dei registri REG\_A e REG\_B avviene successivamente a due condizioni di if relative al valore di INCA e INCB. Si ipotizza che tramite tale descrizione il sintetizzatore sia in grado di applicare il clock gating. Di conseguenza, tale sintassi è stata adottata anche per descrivere l'aggiornamento del registro in uscita, il quale deve essere aggiornato solo quando almeno un segnale di incremento viene asserito.
+\\\\
+Nelle seguenti tabelle sono riportati i risultati relativi ai consumi.      
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	\multicolumn{3}{c}{Power report - statistiche di default}\\
+	\hline
+	& No clock gating & Clock gating \\
+	\hline
+	Internal power [uW] & 39.1897 & 33.1194 \\
+	\hline
+	Net switching power [uW] & 14.8742  & 10.8040 \\
+	\hline
+	Leakage power [uW] & 4.6358 & 4.0346 \\
+	\hline
+	Total power [uW] & 58.6997 & 47.9580 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}      
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+	\hline
+	\multicolumn{3}{c}{Power report - reset modificato}\\
+	\hline
+	& No clock gating & Clock gating \\
+	\hline
+	Internal power [uW] & 28.3881 & 27.8883 \\
+	\hline 
+ 	Net switching power [uW] & 16.4611 & 11.9228 \\
+	\hline
+	Leakage power [uW] & 4.6611 & 4.4199 \\
+	\hline
+	Total power [uW] & 49.5103 & 44.2311 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm} 
+\textcolor{red}{Aggiornare tabella sotto}          
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+	\hline
+	\multicolumn{3}{c}{Power report - reset e ingressi modificati}\\
+	\hline
+	& No clock gating & Clock gating \\
+	\hline
+	Internal power [uW] & 21.3760 & 27.8883 \\
+	\hline 
+ 	Net switching power [uW] & 1.6626 & 11.9228 \\
+	\hline
+	Leakage power [uW] & 4.6611 & 4.4199 \\
+	\hline
+	Total power [uW] & 49.5103 & 44.2311 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}          
+Si nota che il clock gating porta ad una riduzione generale della potenza, come già verificato in precedenza. Tuttavia, applicando il clock gating, la potenza di leakage presenta una riduzione: si ipotizza che tale comportamento sia correlato ad una riduzione delle celle utilizzate.
+\\
+Per verificare ciò è stato effettuato un report di tipo cell.
+\\
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+	\hline
+	\multicolumn{3}{c}{Cell report - reset e ingressi modificati}\\
+	\hline
+	& No clock gating & Clock gating \\
+	\hline
+	Numero celle & 96 & 81 \\
+	\hline
+	 Area [um 2] & 244.72 & 243.66 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm} 
+ L'ipotesi di riduzione del numero di celle è confermato, tuttavia tale risultato è in controtendenza con quanto atteso successivamente all'implementazione di clock gating: ci si aspetta un incremento dell'area totale dovuto all'inserimento della logica atta all'implementazione di tale tecnica.
+ \\\\
+Si ipotizza che, a causa della modifica apportata al file VHDL, il sintetizzatore, nel caso in cui non sia specificato di applicare il clock gating, interpreti la descrizione inserendo della logica aggiuntiva per verificare la condizione di if. Al contrario, applicando la direttiva \textbf{-gate\_clock}, la descrizione viene interpretata correttamente dal sintetizzatore.
+\\
+Il numero di celle risulta maggiore rispetto al caso in cui il clock gating viene applicato solamente ai registri REG\_A e REG\_B.
 \end{document}

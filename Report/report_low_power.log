@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.9)  28 APR 2020 11:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.9)  28 APR 2020 12:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -471,6 +471,11 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ]
 Chapter 1.
+
+Overfull \hbox (29.75468pt too wide) in paragraph at lines 59--59
+|\OT1/cmr/bx/n/24.88 Laboratorio 1 - Power Es-ti-ma-tion: prob-
+ []
+
 <./img/Lab_1/Es_1/Porte.png, id=17, 457.71pt x 60.97781pt>
 File: ./img/Lab_1/Es_1/Porte.png Graphic file (type png)
 <use ./img/Lab_1/Es_1/Porte.png>
@@ -545,13 +550,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 148--161
  []
 
 
-Overfull \hbox (23.64444pt too wide) has occurred while \output is active
+Overfull \hbox (9.41808pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
  TECHNIQUES \OT1/cmr/m/n/10.95 3
  []
 
 [3]
-Overfull \hbox (23.64444pt too wide) has occurred while \output is active
+Overfull \hbox (9.41808pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
  TECHNIQUES \OT1/cmr/m/n/10.95 4
  []
@@ -588,7 +593,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 176--177
  []
 
 
-Overfull \hbox (23.64444pt too wide) has occurred while \output is active
+Overfull \hbox (9.41808pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
  TECHNIQUES \OT1/cmr/m/n/10.95 5
  []
@@ -626,7 +631,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 249--254
  []
 
 
-Overfull \hbox (23.64444pt too wide) has occurred while \output is active
+Overfull \hbox (9.41808pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
  TECHNIQUES \OT1/cmr/m/n/10.95 6
  []
@@ -663,7 +668,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 283--335
  []
 
 
-Overfull \hbox (23.64444pt too wide) has occurred while \output is active
+Overfull \hbox (9.41808pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
  TECHNIQUES \OT1/cmr/m/n/10.95 7
  []
@@ -679,7 +684,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 335--335
  []
 
 
-Overfull \hbox (23.64444pt too wide) has occurred while \output is active
+Overfull \hbox (9.41808pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
  TECHNIQUES \OT1/cmr/m/n/10.95 8
  []
@@ -702,7 +707,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 335--336
  []
 
 
-Overfull \hbox (23.64444pt too wide) has occurred while \output is active
+Overfull \hbox (9.41808pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
  TECHNIQUES \OT1/cmr/m/n/10.95 9
  []
@@ -749,7 +754,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 391--399
  []
 
 
-Overfull \hbox (29.11945pt too wide) has occurred while \output is active
+Overfull \hbox (14.89308pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
  TECHNIQUES \OT1/cmr/m/n/10.95 10
  []
@@ -765,7 +770,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 433--437
  []
 
 
-Overfull \hbox (29.11945pt too wide) has occurred while \output is active
+Overfull \hbox (14.89308pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
  TECHNIQUES \OT1/cmr/m/n/10.95 11
  []
@@ -776,7 +781,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 471--484
  []
 
 
-Overfull \hbox (29.11945pt too wide) has occurred while \output is active
+Overfull \hbox (14.89308pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
  TECHNIQUES \OT1/cmr/m/n/10.95 12
  []
@@ -787,7 +792,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 510--510
  []
 
 
-Overfull \hbox (29.11945pt too wide) has occurred while \output is active
+Overfull \hbox (14.89308pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
  TECHNIQUES \OT1/cmr/m/n/10.95 13
  []
@@ -871,12 +876,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 532--589
  []
 
 
-Overfull \hbox (2.82037pt too wide) in paragraph at lines 532--589
-[]\OT1/cmr/m/n/10.95 E pos-si-bile vi-su-al-iz-zare di-ret-ta-mente sulla wave-
-form dell'uscita Y il glitch causato dall'inverter.
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 532--589
 
  []
@@ -884,17 +883,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 532--589
 
 Underfull \hbox (badness 10000) in paragraph at lines 532--589
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 532--589
-
- []
-
-
-Overfull \hbox (5.22571pt too wide) in paragraph at lines 532--589
-\OT1/cmr/m/n/10.95 In par-ti-co-lare, ^^Re pos-si-bile no-tare che il cir-cuito
- prece-den-te-mente ri-por-tato sia l'implementazione
  []
 
 
@@ -938,20 +926,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 532--589
  []
 
 
-Overfull \hbox (29.11945pt too wide) has occurred while \output is active
+Underfull \hbox (badness 10000) in paragraph at lines 532--589
+
+ []
+
+
+Overfull \hbox (14.89308pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
  TECHNIQUES \OT1/cmr/m/n/10.95 14
  []
 
 [14 <./img/Lab_1/Es_4/Mux.png> <./img/Lab_1/Es_4/Mux_plot.png>]
-Overfull \hbox (29.11945pt too wide) has occurred while \output is active
+Overfull \hbox (14.89308pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
  TECHNIQUES \OT1/cmr/m/n/10.95 15
  []
 
 [15 <./img/Lab_1/Es_4/Glitch.png> <./img/Lab_1/Es_4/Mappa_K_coperta.png> <./img
 /Lab_1/Es_4/Mappa_K_supercoperta.png>]
-Overfull \hbox (29.11945pt too wide) has occurred while \output is active
+Overfull \hbox (14.89308pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
  TECHNIQUES \OT1/cmr/m/n/10.95 16
  []
@@ -1020,7 +1013,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 591--620
  []
 
 
-Overfull \hbox (29.11945pt too wide) has occurred while \output is active
+Overfull \hbox (14.89308pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
  TECHNIQUES \OT1/cmr/m/n/10.95 17
  []
@@ -1058,7 +1051,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 646--680
  []
 
 
-Overfull \hbox (29.11945pt too wide) has occurred while \output is active
+Overfull \hbox (14.89308pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
  TECHNIQUES \OT1/cmr/m/n/10.95 18
  []
@@ -1137,30 +1130,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 725--780
  []
 
 
-Overfull \hbox (29.11945pt too wide) has occurred while \output is active
+Overfull \hbox (14.89308pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
  TECHNIQUES \OT1/cmr/m/n/10.95 19
  []
 
 [19 <./img/Lab_1/Es_5/Glitch.png>]
-Overfull \hbox (29.11945pt too wide) has occurred while \output is active
+Overfull \hbox (14.89308pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
  TECHNIQUES \OT1/cmr/m/n/10.95 20
  []
 
 [20 <./img/Lab_1/Es_5/Clk_corto.png>]
-Overfull \hbox (29.11945pt too wide) has occurred while \output is active
+Overfull \hbox (14.89308pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
  TECHNIQUES \OT1/cmr/m/n/10.95 21
  []
 
 [21]
 Chapter 2.
-
-Overfull \hbox (3.96269pt too wide) in paragraph at lines 781--781
-|\OT1/cmr/bx/n/24.88 Laboratorio 2 - FSM As-sign-ment and
- []
-
 <./img/Lab_2/Datapath.png, id=127, 501.875pt x 419.5675pt>
 File: ./img/Lab_2/Datapath.png Graphic file (type png)
 <use ./img/Lab_2/Datapath.png>
@@ -1255,23 +1243,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 855--869
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 870--877
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 870--877
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 870--877
+
+ []
+
 [24 <./img/Lab_2/K_S3.png> <./img/Lab_2/K_S2.png> <./img/Lab_2/K_S1.png> <./img
 /Lab_2/K_S0.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 870--877
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 870--877
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 870--877
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 895--897
 
  []
@@ -1343,7 +1331,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 942--947
  []
 
 
-Overfull \hbox (27.3692pt too wide) in paragraph at lines 961--962
+Overfull \hbox (13.14284pt too wide) in paragraph at lines 961--962
 \OT1/cmr/m/n/10.95 Sono stati ot-tenuti dati ag-giun-tivi rel-a-tivi al con-sum
 o di potenza dei sin-goli mod-uli dell'architettura,
  []
@@ -1424,7 +1412,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 ) [29]
 Chapter 3.
 
-Overfull \hbox (27.16396pt too wide) in paragraph at lines 1102--1102
+Overfull \hbox (12.93759pt too wide) in paragraph at lines 1102--1102
 |\OT1/cmr/bx/n/24.88 Laboratorio 3 - Clock gat-ing e soluzioni
  []
 
@@ -1435,15 +1423,11 @@ Package pdftex.def Info: ./img/Lab_3/circuito_clk_bug.png  used on input line 1
 108.
 (pdftex.def)             Requested size: 227.62204pt x 174.09293pt.
 (./code/Lab_3/d1_d2_d3.vhd
-Overfull \hbox (36.28386pt too wide) in paragraph at lines 1--2
+Overfull \hbox (22.0575pt too wide) in paragraph at lines 1--2
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 )
-Overfull \hbox (2.98375pt too wide) in paragraph at lines 3--1113
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
 <./img/Lab_3/clk_bug.png, id=167, 726.46407pt x 407.27156pt>
 File: ./img/Lab_3/clk_bug.png Graphic file (type png)
 <use ./img/Lab_3/clk_bug.png>
@@ -1494,19 +1478,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 1132--1139
 
  []
 
-
-Overfull \hbox (7.97746pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 CHAPTER 3.  LABORATORIO 3 - CLOCK GATING E SOLUZIONI ARCHIT
-ETTURALI \OT1/cmr/m/n/10.95 31
- []
-
-[31 <./img/Lab_3/clk_bug.png>]
-Overfull \hbox (7.97746pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 CHAPTER 3.  LABORATORIO 3 - CLOCK GATING E SOLUZIONI ARCHIT
-ETTURALI \OT1/cmr/m/n/10.95 32
- []
-
-[32 <./img/Lab_3/clk_bug_resolved.png> <./img/Lab_3/clk_bug_delay.png>]
+[31 <./img/Lab_3/clk_bug.png>] [32 <./img/Lab_3/clk_bug_resolved.png> <./img/La
+b_3/clk_bug_delay.png>]
 <./img/Lab_3/inccomp_no_gating.png, id=184, 897.3525pt x 438.8897pt>
 File: ./img/Lab_3/inccomp_no_gating.png Graphic file (type png)
 <use ./img/Lab_3/inccomp_no_gating.png>
@@ -1555,12 +1528,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 1142--1161
 
  []
 
-
-Overfull \hbox (7.97746pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 CHAPTER 3.  LABORATORIO 3 - CLOCK GATING E SOLUZIONI ARCHIT
-ETTURALI \OT1/cmr/m/n/10.95 33
- []
-
 [33 <./img/Lab_3/inccomp_no_gating.png> <./img/Lab_3/inccomp_no_gating_behavior
 .png>]
 Underfull \hbox (badness 10000) in paragraph at lines 1162--1165
@@ -1568,54 +1535,102 @@ Underfull \hbox (badness 10000) in paragraph at lines 1162--1165
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1177--1179
+Underfull \hbox (badness 10000) in paragraph at lines 1177--1183
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1195--1199
+Underfull \hbox (badness 10000) in paragraph at lines 1199--1203
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1211--1214
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1218
 
  []
 
 
-Overfull \hbox (7.97746pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 CHAPTER 3.  LABORATORIO 3 - CLOCK GATING E SOLUZIONI ARCHIT
-ETTURALI \OT1/cmr/m/n/10.95 34
+Underfull \hbox (badness 10000) in paragraph at lines 1230--1234
+
  []
 
 [34]
-Underfull \hbox (badness 10000) in paragraph at lines 1226--1230
+Underfull \hbox (badness 10000) in paragraph at lines 1244--1247
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1240--1243
-
- []
-
-
-Overfull \hbox (28.73782pt too wide) in paragraph at lines 1270--1273
+Overfull \hbox (14.51146pt too wide) in paragraph at lines 1274--1278
 \OT1/cmr/m/n/10.95 Tuttavia, tale im-ple-men-tazione richiede l'impiego di un n
 u-mero mag-giore di celle atte all'inserimento
  []
 
 
-Overfull \hbox (7.97746pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 CHAPTER 3.  LABORATORIO 3 - CLOCK GATING E SOLUZIONI ARCHIT
-ETTURALI \OT1/cmr/m/n/10.95 35
+Underfull \hbox (badness 10000) in paragraph at lines 1274--1278
+
  []
 
-[35] (./report_low_power.aux) ) 
+<./img/Lab_3/clock_gating_cells.png, id=194, 1011.02719pt x 454.69875pt>
+File: ./img/Lab_3/clock_gating_cells.png Graphic file (type png)
+<use ./img/Lab_3/clock_gating_cells.png>
+Package pdftex.def Info: ./img/Lab_3/clock_gating_cells.png  used on input line
+ 1290.
+(pdftex.def)             Requested size: 369.88582pt x 166.35567pt.
+<./img/Lab_3/clock_gating_implementation.png, id=195, 871.00406pt x 260.47313pt
+>
+File: ./img/Lab_3/clock_gating_implementation.png Graphic file (type png)
+<use ./img/Lab_3/clock_gating_implementation.png>
+Package pdftex.def Info: ./img/Lab_3/clock_gating_implementation.png  used on i
+nput line 1294.
+(pdftex.def)             Requested size: 284.52756pt x 85.08598pt.
+
+Overfull \hbox (34.6157pt too wide) in paragraph at lines 1288--1297
+[]\OT1/cmr/m/n/10.95 E pos-si-bile nav-i-gare all'interno dello schematico al f
+ine di in-di-vid-uare le celle rel-a-tive all'implementazione
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1288--1297
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1288--1297
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1288--1297
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1288--1297
+
+ []
+
+[35] (./code/Lab_3/clock_gating_output.vhd) [36 <./img/Lab_3/clock_gating_cells
+.png> <./img/Lab_3/clock_gating_implementation.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1302--1305
+
+ []
+
+[37]
+Underfull \hbox (badness 10000) in paragraph at lines 1360--1364
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1378--1383
+
+ []
+
+[38] (./report_low_power.aux) ) 
 Here is how much of TeX's memory you used:
- 5520 strings out of 492616
- 75976 string characters out of 6129482
- 152567 words of memory out of 5000000
- 9298 multiletter control sequences out of 15000+600000
+ 5533 strings out of 492616
+ 76466 string characters out of 6129482
+ 153567 words of memory out of 5000000
+ 9306 multiletter control sequences out of 15000+600000
  14248 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,8n,35p,654b,1329s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1638,10 +1653,10 @@ y10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.p
 fb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb
 >
-Output written on report_low_power.pdf (36 pages, 1551632 bytes).
+Output written on report_low_power.pdf (39 pages, 1606412 bytes).
 PDF statistics:
- 253 PDF objects out of 1000 (max. 8388607)
- 133 compressed objects within 2 object streams
+ 269 PDF objects out of 1000 (max. 8388607)
+ 142 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 176 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
 
