@@ -10,7 +10,7 @@ set_switching_activity -static_probability 0 -base_clock ck {rst}
 report_power -include_input_nets > report/Es_3_2_1/correct_rst_clk/no_clk_gating/power_report.txt
 report_power -net -include_input_nets > report/Es_3_2_1/correct_rst_clk/no_clk_gating/power_report_net.txt
 set_switching_activity -static_probability 0.12 -toggle_rate 0.025 -base_clock ck {INCA INCB}
-report_power > report/Es_3_2_1/correct_rst_clk/no_clk_gating/power_report_realistic_inputs.txt
+report_power -include_input_nets > report/Es_3_2_1/correct_rst_clk/no_clk_gating/power_report_realistic_inputs.txt
 report_cell > report/Es_3_2_1/correct_rst_clk/no_clk_gating/report_cell_realistic_inputs.txt
 remove_design -designs
 analyze -format vhdl inccomp.vhd
@@ -25,5 +25,5 @@ set_switching_activity -static_probability 0 -base_clock ck {rst}
 report_power -include_input_nets > report/Es_3_2_1/correct_rst_clk/clk_gating/power_report.txt
 report_power -net -include_input_nets > report/Es_3_2_1/correct_rst_clk/clk_gating/power_report_net.txt
 set_switching_activity -static_probability 0.12 -toggle_rate 0.025 -base_clock ck {INCA INCB}
-report_power > report/Es_3_2_1/correct_rst_clk/clk_gating/power_report_realistic_inputs.txt
+report_power -include_input_nets > report/Es_3_2_1/correct_rst_clk/clk_gating/power_report_realistic_inputs.txt
 report_cell > report/Es_3_2_1/correct_rst_clk/clk_gating/report_cell_realistic_inputs.txt
