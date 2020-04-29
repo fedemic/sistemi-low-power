@@ -1426,6 +1426,138 @@ In particolare è preso in considerazione il medesimo circuito usato nei punti p
 \centerline{potenza @ 5MHz = 3 reg + 2 inc + comp + mux = 10.73 uW\\}
 \centerline{area = 3 reg + 2 inc + comp + mux = 1747 um 2\\}
 \\\\
+È possibile apportare dei miglioramenti in termini di consumo di potenza adottando svariate tecniche a livello architetturale: una di queste consiste nella parallelizzazione del datapath come mostrato nella seguente figura.
+\\\\
+\centerline{\includegraphics[width=10cm]{./img/Lab_3/clock_gating_implementation.png}}
+\\\\
+In particolare, raddoppiando il datapath e inserendo un opportuno multiplexer, è possibile far lavorare i componenti a metà della frequenza originale, mantenendo comunque lo stesso throughput in uscita del circuito originale. Data l'espressione per valutare il consumo di potenza dinamica:
+\\\\
+\centerline{P = Cf...}
+\\\\
+è possibile notare come, in questo caso, il dimezzamento della frequenza di funzionamento sia compensato dal raddoppio della capacità totale.
+\\
+Tuttavia, si nota che i componenti hanno il doppio del tempo a disposizione per completare le loro operazioni, pertanto è possibile ridurre la tensione di alimentazione al fine di aumentare il ritardo di propagazione in questi ultimi, rispettando comunque il limite imposto dal percorso critico.
+\\\\
+Dal momento che la tensione di alimentazione contribuisce in modo quadratico al consumo di potenza, quest'ultima risulterà ridotta di un fattore u 2, dove u rappresenta il fattore di riduzione di Vdd.
+\\\\
+\centerline{P new = P nom * u 2}
+\\\\
+I ritardi di propagazione non si riducono linearmente con la tensione di alimentazione ma seguono un andamento che può essere descritto dalla seguente formula:
+\\\\
+\centerline{T new = T nom * 0.75u/u-0.25}
+\\\\
+Il seguente grafico mostra, in unità relative, l'andamento di potenza e ritardo in funzione del fattore di scalamento.
+\\\\
+\centerline{\includegraphics[width=10cm]{./img/Lab_3/grafico_u.png}}
+\\\\
+La modifica apportata all'architettura consente, come mostrato in precedenza, di lavorare ad una frequenza pari alla metà della frequenza nominale, di conseguenza si stima che i ritardi non possano essere incrementati al di sopra di un fattore 2.
+\\
+Considerando ciò e osservando il grafico è stato scelto u = 0.5, corrispondente ad un buon trade-off tra riduzione dei consumi e aumento dei ritardi. Successivamente è stata caratterizzata nuovamente la tabella che descrive i parametri dei componenti.
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+	Cella & Ritardo [ns] & Potenza [uW] & Area [um 2] \\
+	\hline
+	 registro & 3 & 0.15 & 319 \\
+	\hline
+	 incrementatore & 60 & 0.6375 & 256 \\
+	\hline
+	 comparatore & 126 & 0.54 & 161 \\
+	\hline
+	 mux & 21 & 0.4175 & 117 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Come atteso, si nota che un aumento dei ritardi dei singoli componenti corrisponde ad una riduzione dei loro consumi.
+\\\\
+\centerline{percorso critico = reg + inc + comp + mux + mux = 231 ns\\}
+\centerline{frequenza massima = 4.3 MHz\\}
+\centerline{potenza @ 2.5 MHz = 3 reg + 2 inc + comp + 2 mux = 3.1 uW\\}
+\centerline{area = 2*(3 reg + 2 inc + comp + mux) + mux = 3611 um 2\\}
+\\\\
+Si può notare che la potenza è stata ridotta di un fattore 3.46 a fronte di un raddoppio dell'area. In particolare, è possbile osservare l'effetto dell'overhead del mux in uscita nella valutazione del percorso critico, che risulta maggiore.
+\\\\
+Un'altra tecnica a livello architetturali applicabile in questo contesto è la pipeline. L'inserimento di registri all'interno del percorso combinatorio permette di ridurre il percorso critico, mantenendo comunque un throughput elevato.
+\\
+Riducendo il percorso critico si potrebbe lavorare ad una frequenza maggiore rispetto alla frequenza nominale, tuttavia si decide di mantenere la stessa frequenza del circuito originale, avendo quindi la possibilità di incrementare i ritardi attraverso una riduzione di Vdd.
+\\
+In questo caso si è deciso di isolare, attraverso due barriere di registri, il comparatore, essendo il componente che presenta il maggior ritardo di propagazione. Di conseguenza è stato ottenuto il seguente datapath.
+\\\\
+\centerline{\includegraphics[width=10cm]{./img/Lab_3/clock_gating_implementation.png}}
+\\\\
+È dunque possibile stimare il nuovo percorso critico del circuito, considerando la tensione di alimentazione nominale:
+\\\\
+\centerline{percorso critico: 1 reg + 1 comp = 86 ns}
+\\\\
+tale valore consente di lavorare ad una massima frequenza pari  a 11.63 MHz. Date le considerazioni precedenti, nel contesto attuale è sufficiente lavorare ad una frequenza di 5 MHz, pari a quella nominale.
+\\
+Il massimo fattore di scalamento dei ritardi di propagazione è pari a:
+\\\\
+\centerline{11.63/5 = 2.33}
+\\\\
+A tale fattore di scalamento corrisponde una u max = 0.37, ricavato invertendo la formula precedentemente riportata. In questo caso, è stata ricercata la massima riduzione possibile della tensione di alimentazione.
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+	Cella & Ritardo [ns] & Potenza [uW] & Area [um 2] \\
+	\hline
+	 registro & 4.6 & 0.082 & 319 \\
+	\hline
+	 incrementatore & 92.5 & 0.349 & 256 \\
+	\hline
+	 comparatore & 194.25 & 0.296 & 161 \\
+	\hline
+	 mux & 32.4 & 0.228 & 117 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+\centerline{percorso critico = reg +  comp = 198.85 ns\\}
+\centerline{frequenza massima = 5.03 MHz\\}
+\centerline{potenza @ 5 MHz = 3 reg + 2 inc + comp + mux + 3 reg (pipe) = 1.7 uW\\}
+\centerline{area = 3 reg + 2 inc + comp + mux + 3reg (pipe) = 2704 um 2\\}
+\vspace{0.3cm}
+Come atteso, si nota una significativa riduzione del consumo di potenza, pari ad un fattore 6.3. Inoltre, il circuito risulta più compatto rispetto al caso della parallelizzazione.
+\\
+In generale, la tecnica della pipeline è permette di raggiungere risultati migliori in termini di trade-off tra potenza e area. Tuttavia tale soluzione modifica radicalmente il timing del sistema, il quale rimane invariato nel caso di utilizzo della tecnica di parallelizzazione.
+\\
+Di conseguenza, la tecnica migliore dipende fortemente dal contesto di progetto: nel caso di un sistema da progettare si privilegia la pipeline; al contrario, nel caso sia necessaria un'ottimizzazione di un sistema già progettato è prediletta la tecnica della parallelizzazione in quanto meno invasiva.
+\\\\
+Per confronto si è cercato il minimo consumo di potenza applicando una solamente la tecnica della parallelizzazione, con parallelismo 2.  In seguito alla riduzione di Vdd, il minimo consumo di potenza dinamica ottenibile è pari a 1.98 uW, scegliendo u = 0.4.
+\\
+Per raggiungere le stesse prestazioni della pipeline in termini di riduzione dei consumi, è necessario introdurre un ulteriore livello di parallelismo: in questo caso è possibile selezionare u = 0.37, ottenendo quindi un consumo di potenza pari a 1.74 uW, comparabile con il risultato ottenuto con la pipeline.
+\\\\
+Partendo dalla soluzione con pipeline, sono stati ricercati possibili miglioramenti unendo le due tecniche. Il grafico seguente mostra il prodotto potenza ritardo in funzione del fattore u, considerando la presenza di pipeline e di un parallelismo pari a 2.
+\\\\
+\centerline{\includegraphics[width=15cm]{./img/Lab_3/prodotto_potenza_ritardo.png}}
+\\\\
+Si evince che sarebbe possibile utilizzare un fattore di scalamento della tensione di alimentazione inferiore a 0.37, tuttavia riducendolo vi è un'inversione di tendenza della curva mostrata. Ciò significa che per valori di u al di sotto del punto di minimo, il guadagno in termini di potenza risparmiata è poco significativo rispetto ai ritardi introdotti.
+\\
+Si fa presente che l'analisi effettuata è relativa alla sola potenza dinamica, infatti una riduzione significativa di Vdd comporta l'utilizzo di transistor caratterizzati da una tensione di soglia minore, aumentando il contributo di corrente di leakage.
+\subsection{Il problema della coerenza}
+Applicando la tecnica della parallelizzazione all struttura di base, è possibile notare che la coerenza dei dati in uscita non è assicurata.
+\\
+Considerando le forme d'onda in ingresso come mostrato nella figura seguente, è possibile stimare l'andamento dell'uscita C.
+\textcolor{red}{TIMING}
+\\\\
+\centerline{\includegraphics[width=15cm]{./img/Lab_3/prodotto_potenza_ritardo.png}}
+\\\\
+Si nota che il comportamento è inatteso in quanto non vi è coerenza tra i registri delle due sottostrutture. Per assicurare un corretto funzionamento del circuito, è necessario che i dati con cui lavorano le due entità siano condivisi, in modo da garantire la coerenza.
+\\\\
+Una possibile soluzione potrebbe essere l'impiego di due soli registri REG\_A e REG\_B condivisi da entrambe le strutture in parallelo e scritti ad una frequenza doppia.
+
+\textcolor{red}{
+\begin{itemize}
+\item schema clock gating
+\item datapath parallelizzazione
+\item datapath pipeline
+\item forme d'onda
+\end{itemize}}
+
+
 
 
 
