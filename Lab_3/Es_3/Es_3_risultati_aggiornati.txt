@@ -59,7 +59,8 @@ PIPELINE
 	---------------------------------------------
 	MUX				 ns		 uW	117.0
 	---------------------------------------------
-	  
+	
+	- Percorso_critico = Reg + Comp = 	  
 	- Power_5_MHz = 2 Reg + 2 Incr + 1 Comp + 1 Mux + 1 Reg + 3 Reg_overhead =  1.8 uW
 	- Power_Max_f = 4.194 uW
 	- Area = Area senza registri + 3 reg = 2704 um quadrati
