@@ -15,7 +15,7 @@ mux_pow_nom = 1.67e-6;
 
 %% Calcolo ritardi e potenze
 pipeline = 1; % Attiva o disattiva la pipeline
-k_parallelismo = 1; % Indica quante unità lavorano in parallelo, se la pipe è
+k_parallelismo = 2; % Indica quante unità lavorano in parallelo, se la pipe è
                     % disattivata lasciare a 2
 k_pipeline = 2.33;
 
