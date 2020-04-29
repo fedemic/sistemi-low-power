@@ -15,7 +15,7 @@ mux_pow_nom = 1.67e-6;
 
 %% Calcolo ritardi e potenze
 pipeline = 1; % Attiva o disattiva la pipeline
-k_parallelismo = 2; % Indica quante unità lavorano in parallelo, se la pipe è
+k_parallelismo = 1; % Indica quante unità lavorano in parallelo, se la pipe è
                     % disattivata lasciare a 2
 k_pipeline = 2.33;
 
@@ -53,10 +53,10 @@ if (pipeline == 1)
     tot_delay = reg_delay + comp_delay;               %%CAMBIATO, aggiunto reg_delay
     % Solo pipeline
     if (k_parallelismo == 1)
-        tot_power = 7*reg_pow + 2*incr_pow + comp_pow + mux_pow;
+        tot_power = 8*reg_pow + 2*incr_pow + comp_pow + mux_pow;
     % Pipeline e parallel attivi  
     else
-        tot_power = 7*reg_pow + 2*incr_pow + comp_pow + mux_pow + mux_pow;        
+        tot_power = 8*reg_pow + 2*incr_pow + comp_pow + mux_pow + mux_pow;        
     end
 % Solo parallel   
 else
