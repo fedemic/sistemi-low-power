@@ -53,10 +53,10 @@ if (pipeline == 1)
     tot_delay = reg_delay + comp_delay;               %%CAMBIATO, aggiunto reg_delay
     % Solo pipeline
     if (k_parallelismo == 1)
-        tot_power = 6*reg_pow + 2*incr_pow + comp_pow + mux_pow;
+        tot_power = 7*reg_pow + 2*incr_pow + comp_pow + mux_pow;
     % Pipeline e parallel attivi  
     else
-        tot_power = 6*reg_pow + 2*incr_pow + comp_pow + mux_pow + mux_pow;        
+        tot_power = 7*reg_pow + 2*incr_pow + comp_pow + mux_pow + mux_pow;        
     end
 % Solo parallel   
 else
