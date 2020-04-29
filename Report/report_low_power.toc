@@ -16,3 +16,4 @@
 \contentsline {subsection}{\numberline {3.2.2}Sintesi del circuito}{34}% 
 \contentsline {subsection}{\numberline {3.2.3}Simulazione di consumi tramite back-annotation}{38}% 
 \contentsline {section}{\numberline {3.3}Pipelining e parallelizzazione}{40}% 
+\contentsline {subsection}{\numberline {3.3.1}Il problema della coerenza}{43}% 
