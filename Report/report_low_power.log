@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.9)  29 APR 2020 16:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.9)  29 APR 2020 21:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1641,12 +1641,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 1383--1389
  []
 
 [38] [39]
-File: ./img/Lab_3/clock_gating_implementation.png Graphic file (type png)
-<use ./img/Lab_3/clock_gating_implementation.png>
-Package pdftex.def Info: ./img/Lab_3/clock_gating_implementation.png  used on i
-nput line 1431.
-(pdftex.def)             Requested size: 284.52756pt x 85.08598pt.
-<./img/Lab_3/grafico_u.png, id=214, 746.03719pt x 526.21594pt>
+<./img/Lab_3/datapath_parallelo.jpeg, id=214, 680.3016pt x 392.4261pt>
+File: ./img/Lab_3/datapath_parallelo.jpeg Graphic file (type jpg)
+<use ./img/Lab_3/datapath_parallelo.jpeg>
+Package pdftex.def Info: ./img/Lab_3/datapath_parallelo.jpeg  used on input lin
+e 1431.
+(pdftex.def)             Requested size: 284.52756pt x 164.12923pt.
+<./img/Lab_3/grafico_u.png, id=215, 746.03719pt x 526.21594pt>
 File: ./img/Lab_3/grafico_u.png Graphic file (type png)
 <use ./img/Lab_3/grafico_u.png>
 Package pdftex.def Info: ./img/Lab_3/grafico_u.png  used on input line 1451.
@@ -1726,153 +1727,154 @@ Underfull \hbox (badness 10000) in paragraph at lines 1420--1457
 
  []
 
-[40]
-File: ./img/Lab_3/clock_gating_implementation.png Graphic file (type png)
-<use ./img/Lab_3/clock_gating_implementation.png>
-Package pdftex.def Info: ./img/Lab_3/clock_gating_implementation.png  used on i
-nput line 1488.
-(pdftex.def)             Requested size: 284.52756pt x 85.08598pt.
+[40 <./img/Lab_3/datapath_parallelo.jpeg>]
+<./img/Lab_3/datapath_pipeline.jpeg, id=219, 732.0951pt x 341.1144pt>
+File: ./img/Lab_3/datapath_pipeline.jpeg Graphic file (type jpg)
+<use ./img/Lab_3/datapath_pipeline.jpeg>
+Package pdftex.def Info: ./img/Lab_3/datapath_pipeline.jpeg  used on input line
+ 1488.
+(pdftex.def)             Requested size: 284.52756pt x 132.57602pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1502
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1502
+Underfull \hbox (badness 10000) in paragraph at lines 1473--1503
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1502
+Underfull \hbox (badness 10000) in paragraph at lines 1473--1503
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1502
+Underfull \hbox (badness 10000) in paragraph at lines 1473--1503
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1502
+Underfull \hbox (badness 10000) in paragraph at lines 1473--1503
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1502
+Underfull \hbox (badness 10000) in paragraph at lines 1473--1503
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1502
+Underfull \hbox (badness 10000) in paragraph at lines 1473--1503
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1502
+Underfull \hbox (badness 10000) in paragraph at lines 1473--1503
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1502
+Underfull \hbox (badness 10000) in paragraph at lines 1473--1503
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1502
+Underfull \hbox (badness 10000) in paragraph at lines 1473--1503
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1502
+Underfull \hbox (badness 10000) in paragraph at lines 1473--1503
 
  []
 
-[41 <./img/Lab_3/grafico_u.png>]
-<./img/Lab_3/prodotto_potenza_ritardo.png, id=222, 537.63477pt x 231.66925pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1473--1503
+
+ []
+
+[41 <./img/Lab_3/grafico_u.png>] [42 <./img/Lab_3/datapath_pipeline.jpeg>]
+<./img/Lab_3/prodotto_potenza_ritardo.png, id=228, 537.63477pt x 231.66925pt>
 File: ./img/Lab_3/prodotto_potenza_ritardo.png Graphic file (type png)
 <use ./img/Lab_3/prodotto_potenza_ritardo.png>
 Package pdftex.def Info: ./img/Lab_3/prodotto_potenza_ritardo.png  used on inpu
-t line 1535.
+t line 1536.
 (pdftex.def)             Requested size: 426.79134pt x 183.90752pt.
 
-Overfull \hbox (6.82622pt too wide) in paragraph at lines 1523--1540
+Overfull \hbox (6.82622pt too wide) in paragraph at lines 1524--1541
 \OT1/cmr/m/n/10.95 sis-tema da pro-gettare si priv-i-le-gia la pipeline; al con
 -trario, nel caso sia nec-es-saria un'ottimizzazione
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1523--1540
+Underfull \hbox (badness 10000) in paragraph at lines 1524--1541
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1523--1540
+Underfull \hbox (badness 10000) in paragraph at lines 1524--1541
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1523--1540
+Underfull \hbox (badness 10000) in paragraph at lines 1524--1541
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1523--1540
+Underfull \hbox (badness 10000) in paragraph at lines 1524--1541
 
  []
 
-[42]
+[43 <./img/Lab_3/prodotto_potenza_ritardo.png>]
 File: ./img/Lab_3/prodotto_potenza_ritardo.png Graphic file (type png)
 <use ./img/Lab_3/prodotto_potenza_ritardo.png>
 Package pdftex.def Info: ./img/Lab_3/prodotto_potenza_ritardo.png  used on inpu
-t line 1546.
+t line 1547.
 (pdftex.def)             Requested size: 426.79134pt x 183.90752pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1541--1551
+Underfull \hbox (badness 10000) in paragraph at lines 1542--1552
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1541--1551
+Underfull \hbox (badness 10000) in paragraph at lines 1542--1552
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1541--1551
+Underfull \hbox (badness 10000) in paragraph at lines 1542--1552
 
  []
 
-[43 <./img/Lab_3/prodotto_potenza_ritardo.png>] [44] (./report_low_power.aux) )
- 
+[44] (./report_low_power.aux) ) 
 Here is how much of TeX's memory you used:
- 5543 strings out of 492616
- 76805 string characters out of 6129482
+ 5554 strings out of 492616
+ 77167 string characters out of 6129482
  153567 words of memory out of 5000000
- 9314 multiletter control sequences out of 15000+600000
+ 9322 multiletter control sequences out of 15000+600000
  14248 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,8n,35p,654b,1329s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
-/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></
-usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></u
-sr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
-r/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
-/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/l
-ocal/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/loc
-al/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
-/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/t
-exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/tex
-live/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texliv
-e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2
-019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/20
-19/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/201
-9/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2019/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/tex
-mf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on report_low_power.pdf (45 pages, 1671156 bytes).
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dv
+ips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr17.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sl10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.
+pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.p
+fb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb
+>
+Output written on report_low_power.pdf (45 pages, 2218680 bytes).
 PDF statistics:
- 292 PDF objects out of 1000 (max. 8388607)
+ 294 PDF objects out of 1000 (max. 8388607)
  155 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 196 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 206 words of extra memory for PDF output out of 10000 (max. 10000000)
 
