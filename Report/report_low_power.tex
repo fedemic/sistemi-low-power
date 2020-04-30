@@ -1155,7 +1155,7 @@ Infatti, il segnale INCA viene campionato per tre colpi di clock prima che INCB 
 \\\\
 Nel caso in cui i segnali di incremento non siano asseriti, non è necessario far commutare il clock all'interno dei registri, in quanto nessun valore deve essere aggiornato; a tal proposito, è possibile sfruttare la tecnica del clock gating. Una possibile implementazione è mostrata nella seguente figura.
 \\\\
-\textcolor{red}{Circuito applicazione clk gating a mano}
+\centerline{\includegraphics[width=10cm]{./img/Lab_3/Clk_gating_img.png}}
 \\\\
 È possibile notare la presenza di due latch atti a filtrare eventuali glitch presenti sugli ingressi INCA e INCB.
 \subsection{Sintesi del circuito}
