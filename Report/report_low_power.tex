@@ -1139,7 +1139,7 @@ Se la porta AND è caratterizzata da un ritardo maggiore rispetto al ritardo CK 
 \newpage
 \section{Clock gating per un circuito complesso}
 \subsection{Simulazione del circuito}
-All'interno del file \textbf{inccomp.vhd} è presenta una descrizione del circuito mostrato nella figura seguente.
+All'interno del file \textbf{inccomp.vhd} è presente una descrizione del circuito mostrato nella figura seguente.
 \\\\
 \centerline{\includegraphics[width=10cm]{./img/Lab_3/inccomp_no_gating.png}}
 \\\\
@@ -1147,7 +1147,7 @@ Dal codice si evince che il circuito è in grado di incrementare e confrontare d
 \\
 È stato realizzato un testbench con lo scopo di simulare e verificare il comportamento del circuito.
 \\\\
-\centerline{\includegraphics[width=10cm]{./img/Lab_3/inccomp_no_gating_behavior.png}}
+\centerline{\includegraphics[width=12cm]{./img/Lab_3/inccomp_no_gating_behavior.png}}
 \\\\
 Come possibile notare dalle forme d'onda sopra riportate, il comportamento è in linea con quanto atteso.
 \\ 
@@ -1240,7 +1240,7 @@ Per ottenere il numero totale di celle utilizzato dal sintetizzatore, è stata r
 \end{center}
 \vspace{0.3cm}
 Attraverso una particolare descrizione VHDL, è possibile notificare al sintetizzatore la possibilità di implementare la tecnica del clock gating, che può essere richiesta nella fase di sintesi attraverso la direttiva \textbf{-gate\_clock}.
-Utilizzando sempre un clock di periodo 5 ns sono stati ottenuti i seguenti risultati, includendo sempre i contributi dovuti ai nodi di ingresso.       
+Utilizzando sempre un clock di periodo 5 ns, sono stati ottenuti i seguenti risultati, includendo sempre i contributi dovuti ai nodi di ingresso.       
 \\
 \begin{center}
 	\begin{tabular}{|c|c|c|c|}
@@ -1381,7 +1381,7 @@ Il numero di celle risulta maggiore rispetto al caso in cui il clock gating vien
 \subsection{Simulazione di consumi tramite back-annotation}
 Al fine di ottenere una stima più accurata del consumo di potenza del circuito preso in considerazione, è necessario avere valutazione più realistica dell'attività dei singoli nodi del circuito sintetizzato. A tale scopo è possibile effettuare una simulazione back-annotated, generando post-sintesi un file contenente la descrizione della netlist del circuito.
 \\
-L'ambiente di simulazione ModelSim è in grado, partendo dal file di cui sopra, di svolgere diverse simulazioni atte a caratterizzare l'attività dei nodi in questione. Tali risultati vengono riportati in un apposito file che successivamente ad una conversione può essere letto dal CAD di sintesi.
+L'ambiente di simulazione ModelSim è in grado, partendo dal file di cui sopra, di svolgere diverse simulazioni atte a caratterizzare l'attività dei nodi in questione. Tali risultati vengono riportati in un apposito file che, successivamente ad una conversione, può essere letto dal CAD di sintesi.
 \\
 Attraverso le informazioni ottenute, si è in grado di simulare più realisticamente il comportamento del circuito in termini di potenza.
 \\\\
@@ -1416,9 +1416,9 @@ Segnale & Static probability & Toggle rate \\
 Si ipotizza che i consumi elevati siano dovuti al quasi continuo incremento del valore contenuto nel registro REG\_B. Tale fatto mette in luce l'importanza di un testbench in grado di rappresentare correttamente la statistica  degli input del circuito.
 \newpage
 \section{Pipelining e parallelizzazione}
-È possibile applicare una serie di soluzioni architetturali  al fine di ridurre il consumo di potenza dinamica di un generico circuito che presenta un datapath delimitato da barriere di registri.
-\\
-In particolare è preso in considerazione il medesimo circuito usato nei punti precedenti, il quale è stato caratterizzato dal punto di vista di ritardo, potenza e area.
+Al fine di ridurre il consumo di potenza dinamica di un generico circuito che presenta un datapath delimitato da barriere di registri, è possibile applicare una serie di soluzioni architetturali.
+\\\\
+In particolare, è preso in considerazione il medesimo circuito usato nei punti precedenti, il quale è stato caratterizzato dal punto di vista di ritardo, potenza e area.
 \\\\
 \centerline{percorso critico = reg + inc + comp + mux = 140 ns\\}
 \centerline{frequenza massima = 7.14MHz\\}
@@ -1437,7 +1437,7 @@ In particolare, duplicando il datapath e inserendo un opportuno multiplexer, è 
 \\
 Tuttavia, si nota che i componenti hanno il doppio del tempo a disposizione per completare le loro operazioni, pertanto è possibile ridurre la tensione di alimentazione al fine di aumentare il ritardo di propagazione in questi ultimi, rispettando comunque il limite imposto dal percorso critico.
 \\\\
-Dal momento che la tensione di alimentazione contribuisce in modo quadratico al consumo di potenza, quest'ultima risulterà ridotta di un fattore u$^2$, dove u rappresenta il fattore di riduzione di Vdd.
+Dal momento che la tensione di alimentazione contribuisce in modo quadratico al consumo di potenza, quest'ultima risulterà ridotta di un fattore u$^2$, dove u rappresenta il fattore di riduzione di V\textsubscript{dd}.
 \\\\
 \centerline{P(u) = P\textsubscript{nom} u$^2$}
 \\\\
@@ -1456,7 +1456,7 @@ Considerando ciò e osservando il grafico è stato scelto u = 0.5, corrispondent
 \begin{center}
 	\begin{tabular}{|c|c|c|c|}
 	\hline
-	Cella & Ritardo [ns] & Potenza [uW] & Area [um 2] \\
+	Cella & Ritardo [ns] & Potenza [uW] & Area [um$^2$] \\
 	\hline
 	 registro & 3 & 0.15 & 319 \\
 	\hline
@@ -1474,14 +1474,14 @@ Come atteso, si nota che un aumento dei ritardi dei singoli componenti corrispon
 \centerline{percorso critico = reg + inc + comp + mux + mux = 231 ns\\}
 \centerline{frequenza massima = 4.3 MHz\\}
 \centerline{potenza @ 2.5 MHz = 3 reg + 2 inc + comp + 2 mux = 3.1 uW\\}
-\centerline{area = 2*(3 reg + 2 inc + comp + mux) + mux = 3611 um$^2$\\}
+\centerline{area = 2$\cdot$(3 reg + 2 inc + comp + mux) + mux = 3611 um$^2$\\}
 \\\\
 Si può notare che la potenza è stata ridotta di un fattore 3.46 a fronte di un raddoppio dell'area. In particolare, è possbile osservare l'effetto dell'overhead del mux in uscita nella valutazione del percorso critico, che risulta maggiore.
 \\\\
 Un'altra tecnica a livello architetturale applicabile in questo contesto è la pipeline. L'inserimento di registri all'interno del percorso combinatorio permette di ridurre il percorso critico, mantenendo comunque un throughput elevato.
 \\
-Riducendo il percorso critico si potrebbe lavorare ad una frequenza maggiore rispetto alla frequenza nominale, tuttavia si decide di mantenere la stessa frequenza del circuito originale, avendo quindi la possibilità di incrementare i ritardi attraverso una riduzione di Vdd.
-\\
+Riducendo il percorso critico si potrebbe lavorare ad una frequenza maggiore rispetto alla frequenza nominale, tuttavia si decide di mantenere la stessa frequenza del circuito originale, avendo quindi la possibilità di incrementare i ritardi attraverso una riduzione di V\textsubscript{dd}.
+\\\\
 In questo caso si è deciso di isolare, attraverso due barriere di registri, il comparatore, essendo il componente che presenta il maggior ritardo di propagazione. Di conseguenza è stato ottenuto il seguente datapath.
 \\\\
 \centerline{\includegraphics[width=10cm]{./img/Lab_3/datapath_pipeline.jpeg}}
@@ -1495,14 +1495,14 @@ tale valore consente di lavorare ad una massima frequenza pari  a 11.63 MHz. Dat
 \\
 Il massimo fattore di scalamento dei ritardi di propagazione è pari a:
 \\\\
-\centerline{11.63/5 = 2.33}
+\centerline{$\frac{11.63}{5}$ = 2.33}
 \\\\
 A tale fattore di scalamento corrisponde una u\textsubscript{max} = 0.37, ricavata invertendo la formula precedentemente riportata. In questo caso, è stata ricercata la massima riduzione possibile della tensione di alimentazione.
 \\\\
 \begin{center}
 	\begin{tabular}{|c|c|c|c|}
 	\hline
-	Cella & Ritardo [ns] & Potenza [uW] & Area [um 2] \\
+	Cella & Ritardo [ns] & Potenza [uW] & Area [um$^2$] \\
 	\hline
 	 registro & 4.6 & 0.082 & 319 \\
 	\hline
@@ -1518,15 +1518,15 @@ A tale fattore di scalamento corrisponde una u\textsubscript{max} = 0.37, ricava
 \centerline{percorso critico = reg +  comp = 198.85 ns\\}
 \centerline{frequenza massima = 5.03 MHz\\}
 \centerline{potenza @ 5 MHz = 3 reg + 2 inc + comp + mux + 5 reg (pipe) = 1.86 uW\\}
-\centerline{area = 3 reg + 2 inc + comp + mux + 5 reg (pipe) = 3342 um 2\\}
+\centerline{area = 3 reg + 2 inc + comp + mux + 5 reg (pipe) = 3342 um$^2$\\}
 \vspace{0.3cm}
 Come atteso, si nota una significativa riduzione del consumo di potenza, pari ad un fattore 5.77. Inoltre, il circuito risulta più compatto rispetto al caso della parallelizzazione.
-\\
-In generale, la tecnica della pipeline è permette di raggiungere risultati migliori in termini di trade-off tra potenza e area. Tuttavia tale soluzione modifica radicalmente il timing del sistema, il quale rimane invariato nel caso di utilizzo della tecnica di parallelizzazione.
-\\
+\\\\
+In generale, la tecnica della pipeline permette di raggiungere risultati migliori in termini di trade-off tra potenza e area. Tuttavia tale soluzione modifica radicalmente il timing del sistema, il quale rimane invariato nel caso di utilizzo della tecnica di parallelizzazione.
+\\\\
 Di conseguenza, la tecnica migliore dipende fortemente dal contesto di progetto: nel caso di un sistema da progettare si privilegia la pipeline; al contrario, nel caso sia necessaria un'ottimizzazione di un sistema già progettato è prediletta la tecnica della parallelizzazione in quanto meno invasiva.
 \\\\
-Per confronto si è cercato il minimo consumo di potenza applicando solamente la tecnica della parallelizzazione, con parallelismo 2.  In seguito alla riduzione di Vdd, il minimo consumo di potenza dinamica ottenibile è pari a 1.98 uW, scegliendo u = 0.4.
+Per confronto si è cercato il minimo consumo di potenza applicando solamente la tecnica della parallelizzazione, con parallelismo 2.  In seguito alla riduzione di V\textsubscript{dd}, il minimo consumo di potenza dinamica ottenibile è pari a 1.98 uW, scegliendo u = 0.4.
 \\
 Per raggiungere le stesse prestazioni della pipeline in termini di riduzione dei consumi, è necessario introdurre un ulteriore livello di parallelismo: in questo caso è possibile selezionare u = 0.37, ottenendo quindi un consumo di potenza pari a 1.74 uW, leggermente inferiore rispetto al risultato ottenuto con la pipeline.
 \\\\
@@ -1535,8 +1535,8 @@ Partendo dalla soluzione con pipeline, sono stati ricercati possibili migliorame
 \centerline{\includegraphics[width=15cm]{./img/Lab_3/prodotto_potenza_ritardo.png}}
 \\\\
 Si evince che sarebbe possibile utilizzare un fattore di scalamento della tensione di alimentazione inferiore a 0.37, tuttavia riducendolo vi è un'inversione di tendenza della curva mostrata. Ciò significa che per valori di u al di sotto del punto di minimo, il guadagno in termini di potenza risparmiata è poco significativo rispetto ai ritardi introdotti.
-\\
-Si fa presente che l'analisi effettuata è relativa alla sola potenza dinamica, infatti una riduzione significativa di Vdd comporta l'utilizzo di transistor caratterizzati da una tensione di soglia minore, aumentando il contributo di corrente di leakage.
+\\\\
+Si fa presente che l'analisi effettuata è relativa alla sola potenza dinamica, infatti una riduzione significativa di V\textsubscript{dd} comporta l'utilizzo di transistor caratterizzati da una tensione di soglia minore, aumentando il contributo di corrente di leakage.
 \subsection{Il problema della coerenza}
 Applicando la tecnica della parallelizzazione all struttura di base, è possibile notare che la coerenza dei dati in uscita non è assicurata.
 \\
