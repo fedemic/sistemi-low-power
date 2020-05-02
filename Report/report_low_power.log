@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.18)  30 APR 2020 20:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.18)  2 MAY 2020 13:00
 entering extended mode
 **./report_low_power.tex
 (report_low_power.tex
@@ -1357,23 +1357,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 1215--1217
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1229--1233
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1232
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1243--1246
+Underfull \hbox (badness 10000) in paragraph at lines 1242--1245
 
  []
 
 
-Overfull \hbox (14.51146pt too wide) in paragraph at lines 1273--1277
+Overfull \hbox (14.51146pt too wide) in paragraph at lines 1272--1276
 \OT1/cmr/m/n/10.95 Tuttavia, tale im-ple-men-tazione richiede l'impiego di un n
 u-mero mag-giore di celle atte all'inserimento
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1273--1277
+Underfull \hbox (badness 10000) in paragraph at lines 1272--1276
 
  []
 
@@ -1382,69 +1382,69 @@ Underfull \hbox (badness 10000) in paragraph at lines 1273--1277
 File: ./img/Lab_3/clock_gating_cells.png Graphic file (type png)
 <use ./img/Lab_3/clock_gating_cells.png>
 Package pdftex.def Info: ./img/Lab_3/clock_gating_cells.png  used on input line
- 1289.
+ 1288.
 (pdftex.def)             Requested size: 369.88582pt x 166.35567pt.
 <./img/Lab_3/clock_gating_implementation.png, id=198, 871.00406pt x 260.47313pt
 >
 File: ./img/Lab_3/clock_gating_implementation.png Graphic file (type png)
 <use ./img/Lab_3/clock_gating_implementation.png>
 Package pdftex.def Info: ./img/Lab_3/clock_gating_implementation.png  used on i
-nput line 1293.
+nput line 1292.
 (pdftex.def)             Requested size: 284.52756pt x 85.08598pt.
 
-Overfull \hbox (34.6157pt too wide) in paragraph at lines 1287--1296
+Overfull \hbox (34.6157pt too wide) in paragraph at lines 1286--1295
 []\OT1/cmr/m/n/10.95 E pos-si-bile nav-i-gare all'interno dello schematico al f
 ine di in-di-vid-uare le celle rel-a-tive all'implementazione
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1287--1296
+Underfull \hbox (badness 10000) in paragraph at lines 1286--1295
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1287--1296
+Underfull \hbox (badness 10000) in paragraph at lines 1286--1295
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1287--1296
+Underfull \hbox (badness 10000) in paragraph at lines 1286--1295
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1287--1296
+Underfull \hbox (badness 10000) in paragraph at lines 1286--1295
 
  []
 
 (code/Lab_3/clock_gating_output.vhd) [36 <./img/Lab_3/clock_gating_cells.png> <
 ./img/Lab_3/clock_gating_implementation.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1301--1304
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1303
 
  []
 
 [37]
-Underfull \hbox (badness 10000) in paragraph at lines 1358--1362
+Underfull \hbox (badness 10000) in paragraph at lines 1357--1361
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1376--1382
+Underfull \hbox (badness 10000) in paragraph at lines 1375--1381
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1376--1382
+Underfull \hbox (badness 10000) in paragraph at lines 1375--1381
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1383--1389
+Underfull \hbox (badness 10000) in paragraph at lines 1382--1388
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1383--1389
+Underfull \hbox (badness 10000) in paragraph at lines 1382--1388
 
  []
 
@@ -1453,85 +1453,85 @@ Underfull \hbox (badness 10000) in paragraph at lines 1383--1389
 File: ./img/Lab_3/datapath_parallelo.jpeg Graphic file (type jpg)
 <use ./img/Lab_3/datapath_parallelo.jpeg>
 Package pdftex.def Info: ./img/Lab_3/datapath_parallelo.jpeg  used on input lin
-e 1431.
+e 1430.
 (pdftex.def)             Requested size: 284.52756pt x 164.12923pt.
 <./img/Lab_3/grafico_u.png, id=215, 746.03719pt x 526.21594pt>
 File: ./img/Lab_3/grafico_u.png Graphic file (type png)
 <use ./img/Lab_3/grafico_u.png>
-Package pdftex.def Info: ./img/Lab_3/grafico_u.png  used on input line 1451.
+Package pdftex.def Info: ./img/Lab_3/grafico_u.png  used on input line 1450.
 (pdftex.def)             Requested size: 284.52756pt x 200.68678pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1420--1457
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1456
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1420--1457
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1456
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1420--1457
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1456
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1420--1457
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1456
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1420--1457
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1456
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1420--1457
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1456
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1420--1457
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1456
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1420--1457
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1456
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1420--1457
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1456
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1420--1457
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1456
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1420--1457
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1456
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1420--1457
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1456
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1420--1457
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1456
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1420--1457
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1456
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1420--1457
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1456
 
  []
 
@@ -1540,60 +1540,60 @@ Underfull \hbox (badness 10000) in paragraph at lines 1420--1457
 File: ./img/Lab_3/datapath_pipeline.jpeg Graphic file (type jpg)
 <use ./img/Lab_3/datapath_pipeline.jpeg>
 Package pdftex.def Info: ./img/Lab_3/datapath_pipeline.jpeg  used on input line
- 1488.
+ 1487.
 (pdftex.def)             Requested size: 284.52756pt x 132.57602pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1503
+Underfull \hbox (badness 10000) in paragraph at lines 1472--1502
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1503
+Underfull \hbox (badness 10000) in paragraph at lines 1472--1502
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1503
+Underfull \hbox (badness 10000) in paragraph at lines 1472--1502
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1503
+Underfull \hbox (badness 10000) in paragraph at lines 1472--1502
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1503
+Underfull \hbox (badness 10000) in paragraph at lines 1472--1502
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1503
+Underfull \hbox (badness 10000) in paragraph at lines 1472--1502
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1503
+Underfull \hbox (badness 10000) in paragraph at lines 1472--1502
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1503
+Underfull \hbox (badness 10000) in paragraph at lines 1472--1502
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1503
+Underfull \hbox (badness 10000) in paragraph at lines 1472--1502
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1503
+Underfull \hbox (badness 10000) in paragraph at lines 1472--1502
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1503
+Underfull \hbox (badness 10000) in paragraph at lines 1472--1502
 
  []
 
@@ -1602,31 +1602,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 1473--1503
 File: ./img/Lab_3/prodotto_potenza_ritardo.png Graphic file (type png)
 <use ./img/Lab_3/prodotto_potenza_ritardo.png>
 Package pdftex.def Info: ./img/Lab_3/prodotto_potenza_ritardo.png  used on inpu
-t line 1536.
+t line 1535.
 (pdftex.def)             Requested size: 426.79134pt x 183.90752pt.
 
-Overfull \hbox (6.82622pt too wide) in paragraph at lines 1524--1541
+Overfull \hbox (6.82622pt too wide) in paragraph at lines 1523--1540
 \OT1/cmr/m/n/10.95 sis-tema da pro-gettare si priv-i-le-gia la pipeline; al con
 -trario, nel caso sia nec-es-saria un'ottimizzazione
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1524--1541
+Underfull \hbox (badness 10000) in paragraph at lines 1523--1540
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1524--1541
+Underfull \hbox (badness 10000) in paragraph at lines 1523--1540
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1524--1541
+Underfull \hbox (badness 10000) in paragraph at lines 1523--1540
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1524--1541
+Underfull \hbox (badness 10000) in paragraph at lines 1523--1540
 
  []
 
@@ -1634,20 +1634,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 1524--1541
 File: ./img/Lab_3/prodotto_potenza_ritardo.png Graphic file (type png)
 <use ./img/Lab_3/prodotto_potenza_ritardo.png>
 Package pdftex.def Info: ./img/Lab_3/prodotto_potenza_ritardo.png  used on inpu
-t line 1547.
+t line 1546.
 (pdftex.def)             Requested size: 426.79134pt x 183.90752pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1542--1552
+Underfull \hbox (badness 10000) in paragraph at lines 1541--1551
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1542--1552
+Underfull \hbox (badness 10000) in paragraph at lines 1541--1551
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1542--1552
+Underfull \hbox (badness 10000) in paragraph at lines 1541--1551
 
  []
 
@@ -1676,7 +1676,7 @@ cm/cmsl10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy1
 0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:
 /Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program 
 Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on report_low_power.pdf (45 pages, 2821818 bytes).
+Output written on report_low_power.pdf (45 pages, 2825932 bytes).
 PDF statistics:
  292 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
