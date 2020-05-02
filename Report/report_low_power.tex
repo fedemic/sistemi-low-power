@@ -1533,11 +1533,11 @@ In generale, la tecnica della pipeline permette di raggiungere risultati miglior
 \\\\
 Di conseguenza, la tecnica migliore dipende fortemente dal contesto di progetto: nel caso di un sistema da progettare si privilegia la pipeline; al contrario, nel caso sia necessaria un'ottimizzazione di un sistema già progettato è prediletta la tecnica della parallelizzazione in quanto meno invasiva.
 \\\\
-Per confronto si è cercato il minimo consumo di potenza applicando solamente la tecnica della parallelizzazione, con parallelismo 2.  In seguito alla riduzione di V\textsubscript{dd}, il minimo consumo di potenza dinamica ottenibile è pari a 1.98 uW, scegliendo u = 0.4.
+Per confronto si è cercato il minimo consumo di potenza applicando solamente la tecnica della parallelizzazione, con parallelismo 2.  In seguito alla riduzione di V\textsubscript{dd}, il minimo consumo di potenza dinamica ottenibile è pari a 1.85 uW, scegliendo u = 0.4, consumo comparabile a quello ottenuto con la tecnica di pipeline.
 \\
-Per raggiungere le stesse prestazioni della pipeline in termini di riduzione dei consumi, è necessario introdurre un ulteriore livello di parallelismo: in questo caso è possibile selezionare u = 0.37, ottenendo quindi un consumo di potenza pari a 1.74 uW, leggermente inferiore rispetto al risultato ottenuto con la pipeline.
+Per raggiungere un'ulteriore riduzione dei consumi, è necessario introdurre un terzo livello di parallelismo: in questo caso è possibile selezionare u = 0.37, ottenendo quindi un consumo di potenza pari a 1.58 uW.
 \\\\
-Partendo dalla soluzione con pipeline, sono stati ricercati possibili miglioramenti unendo le due tecniche. Il grafico seguente mostra il prodotto potenza ritardo in funzione del fattore u, considerando la presenza di pipeline e di un parallelismo pari a 2.
+Partendo dalla soluzione parallelizzata, sono stati ricercati possibili miglioramenti unendo le due tecniche. Il grafico seguente mostra il prodotto potenza ritardo in funzione del fattore u, considerando la presenza di pipeline e di un parallelismo pari a 2.
 \\\\
 \centerline{\includegraphics[width=15cm]{./img/Lab_3/prodotto_potenza_ritardo.png}}
 \\\\
