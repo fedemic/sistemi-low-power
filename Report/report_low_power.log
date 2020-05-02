@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.9)  2 MAY 2020 15:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.9)  2 MAY 2020 15:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1648,11 +1648,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 1382--1388
  []
 
 [38] [39]
-<./img/Lab_3/datapath_parallelo.jpeg, id=215, 680.3016pt x 392.4261pt>
-File: ./img/Lab_3/datapath_parallelo.jpeg Graphic file (type jpg)
-<use ./img/Lab_3/datapath_parallelo.jpeg>
-Package pdftex.def Info: ./img/Lab_3/datapath_parallelo.jpeg  used on input lin
-e 1430.
+<./img/Lab_3/datapath_parallelo.jpg, id=215, 680.3016pt x 392.4261pt>
+File: ./img/Lab_3/datapath_parallelo.jpg Graphic file (type jpg)
+<use ./img/Lab_3/datapath_parallelo.jpg>
+Package pdftex.def Info: ./img/Lab_3/datapath_parallelo.jpg  used on input line
+ 1430.
 (pdftex.def)             Requested size: 284.52756pt x 164.12923pt.
 <./img/Lab_3/grafico_u.png, id=216, 746.03719pt x 526.21594pt>
 File: ./img/Lab_3/grafico_u.png Graphic file (type png)
@@ -1739,7 +1739,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1419--1456
 
  []
 
-[40 <./img/Lab_3/datapath_parallelo.jpeg>]
+[40 <./img/Lab_3/datapath_parallelo.jpg>]
 <./img/Lab_3/datapath_pipeline.jpeg, id=220, 732.0951pt x 341.1144pt>
 File: ./img/Lab_3/datapath_pipeline.jpeg Graphic file (type jpg)
 <use ./img/Lab_3/datapath_pipeline.jpeg>
@@ -1878,7 +1878,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1541--1551
 [44 <./img/Lab_3/prodotto_potenza_ritardo.png>] [45] (./report_low_power.aux) )
  
 Here is how much of TeX's memory you used:
- 5559 strings out of 492616
+ 5560 strings out of 492616
  77324 string characters out of 6129482
  153567 words of memory out of 5000000
  9326 multiletter control sequences out of 15000+600000
@@ -1903,7 +1903,7 @@ e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2019/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/tex
 mf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on report_low_power.pdf (46 pages, 2521344 bytes).
+Output written on report_low_power.pdf (46 pages, 2517817 bytes).
 PDF statistics:
  298 PDF objects out of 1000 (max. 8388607)
  157 compressed objects within 2 object streams
