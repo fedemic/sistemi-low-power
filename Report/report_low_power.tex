@@ -1372,11 +1372,11 @@ Per verificare ciò è stato effettuato un report di tipo \textbf{-cell}.
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm} 
- L'ipotesi di riduzione del numero di celle è confermato, tuttavia tale risultato è in controtendenza con quanto atteso successivamente all'implementazione di clock gating: ci si aspetta un incremento dell'area totale dovuto all'inserimento della logica atta all'implementazione di tale tecnica.
+ L'ipotesi di riduzione del numero di celle è confermata, tuttavia tale risultato è in controtendenza con quanto atteso successivamente all'implementazione di clock gating: ci si aspetta un incremento dell'area totale dovuto all'inserimento della logica atta all'implementazione di tale tecnica.
  \\\\
 Si ipotizza che, a causa della modifica apportata al file VHDL, il sintetizzatore, nel caso in cui non sia specificato di applicare il clock gating, interpreti la descrizione inserendo della logica aggiuntiva per verificare la condizione di if. Al contrario, applicando la direttiva \textbf{-gate\_clock}, la descrizione viene interpretata correttamente dal sintetizzatore.
 \\
-Il numero di celle risulta maggiore rispetto al caso in cui il clock gating viene applicato solamente ai registri REG\_A e REG\_B.
+Il numero di celle risulta comunque maggiore rispetto al caso in cui il clock gating viene applicato solamente ai registri REG\_A e REG\_B.
 \\
 \subsection{Simulazione di consumi tramite back-annotation}
 Al fine di ottenere una stima più accurata del consumo di potenza del circuito preso in considerazione, è necessario avere valutazione più realistica dell'attività dei singoli nodi del circuito sintetizzato. A tale scopo è possibile effettuare una simulazione back-annotated, generando post-sintesi un file contenente la descrizione della netlist del circuito.
@@ -1424,7 +1424,14 @@ In particolare, è preso in considerazione il medesimo circuito usato nei punti 
 \centerline{frequenza massima = 7.14MHz\\}
 \centerline{potenza @ 5MHz = 3 reg + 2 inc + comp + mux = 10.73 uW\\}
 \centerline{area = 3 reg + 2 inc + comp + mux = 1747 um$^2$\\}
-\\\\
+\\
+\begin{itemize}
+\item percorso critico = reg + inc + comp + mux = 140 ns
+\item frequenza massima = 7.14MHz
+\item potenza @ 5MHz = 3 reg + 2 inc + comp + mux = 10.73 uW
+\item area = 3 reg + 2 inc + comp + mux = 1747 um$^2$
+\end{itemize}
+\vspace{0.3cm}
 È possibile apportare dei miglioramenti in termini di consumo di potenza adottando svariate tecniche a livello architetturale: una di queste consiste nella parallelizzazione del datapath come mostrato nella seguente figura.
 \\\\
 \centerline{\includegraphics[width=10cm]{./img/Lab_3/datapath_parallelo.jpg}}
@@ -1456,27 +1463,27 @@ Considerando ciò e osservando il grafico è stato scelto u = 0.5, corrispondent
 \begin{center}
 	\begin{tabular}{|c|c|c|c|}
 	\hline
-	Cella & Ritardo [ns] & Potenza [uW] & Area [um$^2$] \\
+	Cella & Ritardo [ns] & Potenza @2.5MHz [uW] & Area [um$^2$] \\
 	\hline
-	 registro & 3 & 0.15 & 319 \\
+	 registro & 3 & 0.075 & 319 \\
 	\hline
-	 incrementatore & 60 & 0.6375 & 256 \\
+	 incrementatore & 60 & 0.319 & 256 \\
 	\hline
-	 comparatore & 126 & 0.54 & 161 \\
+	 comparatore & 126 & 0.27 & 161 \\
 	\hline
-	 mux & 21 & 0.4175 & 117 \\
+	 mux & 21 & 0.209 & 117 \\
 	\hline
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
 Come atteso, si nota che un aumento dei ritardi dei singoli componenti corrisponde ad una riduzione dei loro consumi.
 \\\\
-\centerline{percorso critico = reg + inc + comp + mux + mux = 231 ns\\}
-\centerline{frequenza massima = 4.3 MHz\\}
-\centerline{potenza @ 2.5 MHz = 3 reg + 2 inc + comp + 2 mux = 3.1 uW\\}
+\centerline{percorso critico = reg + inc + comp + mux = 210 ns\\}
+\centerline{frequenza massima = 4.76 MHz\\}
+\centerline{potenza @ 2.5 MHz = 2$\cdot$(3 reg + 2 inc + comp + mux) + mux(overhead) = 2.89 uW\\}
 \centerline{area = 2$\cdot$(3 reg + 2 inc + comp + mux) + mux = 3611 um$^2$\\}
 \\\\
-Si può notare che la potenza è stata ridotta di un fattore 3.46 a fronte di un raddoppio dell'area. In particolare, è possbile osservare l'effetto dell'overhead del mux in uscita nella valutazione del percorso critico, che risulta maggiore.
+Si può notare che la potenza è stata ridotta di un fattore 3.71 a fronte di un raddoppio dell'area. In particolare, è possbile osservare l'effetto dell'overhead del mux in uscita nella valutazione del percorso critico, che risulta maggiore.
 \\\\
 Un'altra tecnica a livello architetturale applicabile in questo contesto è la pipeline. L'inserimento di registri all'interno del percorso combinatorio permette di ridurre il percorso critico, mantenendo comunque un throughput elevato.
 \\
@@ -1502,7 +1509,7 @@ A tale fattore di scalamento corrisponde una u\textsubscript{max} = 0.37, ricava
 \begin{center}
 	\begin{tabular}{|c|c|c|c|}
 	\hline
-	Cella & Ritardo [ns] & Potenza [uW] & Area [um$^2$] \\
+	Cella & Ritardo [ns] & Potenza @5MHz [uW] & Area [um$^2$] \\
 	\hline
 	 registro & 4.6 & 0.082 & 319 \\
 	\hline
