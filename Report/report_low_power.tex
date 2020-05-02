@@ -1419,12 +1419,6 @@ Si ipotizza che i consumi elevati siano dovuti al quasi continuo incremento del 
 Al fine di ridurre il consumo di potenza dinamica di un generico circuito che presenta un datapath delimitato da barriere di registri, è possibile applicare una serie di soluzioni architetturali.
 \\\\
 In particolare, è preso in considerazione il medesimo circuito usato nei punti precedenti, il quale è stato caratterizzato dal punto di vista di ritardo, potenza e area.
-\\\\
-\centerline{percorso critico = reg + inc + comp + mux = 140 ns\\}
-\centerline{frequenza massima = 7.14MHz\\}
-\centerline{potenza @ 5MHz = 3 reg + 2 inc + comp + mux = 10.73 uW\\}
-\centerline{area = 3 reg + 2 inc + comp + mux = 1747 um$^2$\\}
-\\
 \begin{itemize}
 \item percorso critico = reg + inc + comp + mux = 140 ns
 \item frequenza massima = 7.14MHz
@@ -1477,12 +1471,13 @@ Considerando ciò e osservando il grafico è stato scelto u = 0.5, corrispondent
 \end{center}
 \vspace{0.3cm}
 Come atteso, si nota che un aumento dei ritardi dei singoli componenti corrisponde ad una riduzione dei loro consumi.
-\\\\
-\centerline{percorso critico = reg + inc + comp + mux = 210 ns\\}
-\centerline{frequenza massima = 4.76 MHz\\}
-\centerline{potenza @ 2.5 MHz = 2$\cdot$(3 reg + 2 inc + comp + mux) + mux(overhead) = 2.89 uW\\}
-\centerline{area = 2$\cdot$(3 reg + 2 inc + comp + mux) + mux = 3611 um$^2$\\}
-\\\\
+\begin{itemize}
+\item percorso critico = reg + inc + comp + mux = 210 ns
+\item frequenza massima = 4.76 MHz
+\item potenza @ 2.5 MHz = 2$\cdot$(3 reg + 2 inc + comp + mux) + mux(overhead) = 2.89 uW
+\item area = 2$\cdot$(3 reg + 2 inc + comp + mux) + mux = 3611 um$^2$
+\end{itemize}
+\vspace{0.3cm}
 Si può notare che la potenza è stata ridotta di un fattore 3.71 a fronte di un raddoppio dell'area. In particolare, è possbile osservare l'effetto dell'overhead del mux in uscita nella valutazione del percorso critico, che risulta maggiore.
 \\\\
 Un'altra tecnica a livello architetturale applicabile in questo contesto è la pipeline. L'inserimento di registri all'interno del percorso combinatorio permette di ridurre il percorso critico, mantenendo comunque un throughput elevato.
@@ -1521,11 +1516,12 @@ A tale fattore di scalamento corrisponde una u\textsubscript{max} = 0.37, ricava
 	\hline
 	\end{tabular}	
 \end{center}
-\vspace{0.3cm}
-\centerline{percorso critico = reg +  comp = 198.85 ns\\}
-\centerline{frequenza massima = 5.03 MHz\\}
-\centerline{potenza @ 5 MHz = 3 reg + 2 inc + comp + mux + 5 reg (pipe) = 1.86 uW\\}
-\centerline{area = 3 reg + 2 inc + comp + mux + 5 reg (pipe) = 3342 um$^2$\\}
+\begin{itemize}
+\item percorso critico = reg +  comp = 198.85 ns
+\item frequenza massima = 5.03 MHz
+\item potenza @ 5 MHz = 3 reg + 2 inc + comp + mux + 5 reg (pipe) = 1.86 uW
+\item area = 3 reg + 2 inc + comp + mux + 5 reg (pipe) = 3342 um$^2$
+\end{itemize}
 \vspace{0.3cm}
 Come atteso, si nota una significativa riduzione del consumo di potenza, pari ad un fattore 5.77. Inoltre, il circuito risulta più compatto rispetto al caso della parallelizzazione.
 \\\\
@@ -1539,7 +1535,7 @@ Per raggiungere un'ulteriore riduzione dei consumi, è necessario introdurre un 
 \\\\
 Partendo dalla soluzione parallelizzata, sono stati ricercati possibili miglioramenti unendo le due tecniche. Il grafico seguente mostra il prodotto potenza ritardo in funzione del fattore u, considerando la presenza di pipeline e di un parallelismo pari a 2.
 \\\\
-\centerline{\includegraphics[width=15cm]{./img/Lab_3/prodotto_potenza_ritardo.png}}
+\centerline{\includegraphics[width=12cm]{./img/Lab_3/prodotto_potenza_ritardo.png}}
 \\\\
 Si evince che sarebbe possibile utilizzare un fattore di scalamento della tensione di alimentazione inferiore a 0.37, tuttavia riducendolo vi è un'inversione di tendenza della curva mostrata. Ciò significa che per valori di u al di sotto del punto di minimo, il guadagno in termini di potenza risparmiata è poco significativo rispetto ai ritardi introdotti.
 \\\\
@@ -1547,10 +1543,13 @@ Si fa presente che l'analisi effettuata è relativa alla sola potenza dinamica, 
 \subsection{Il problema della coerenza}
 Applicando la tecnica della parallelizzazione all struttura di base, è possibile notare che la coerenza dei dati in uscita non è assicurata.
 \\
-Considerando le forme d'onda in ingresso come mostrato nella figura seguente, è possibile stimare l'andamento dell'uscita C.
-\textcolor{red}{TIMING}
+Considerando le forme d'onda in ingresso come mostrato nella figura seguente, è possibile stimare l'andamento atteso dell'uscita C nel caso del circuito originale.
 \\\\
-\centerline{\includegraphics[width=15cm]{./img/Lab_3/prodotto_potenza_ritardo.png}}
+\centerline{\includegraphics[width=12cm]{./img/Lab_3/Comportamento_atteso.png}}
+\\\\
+Al contrario nel caso di implementazione con 2 livelli di parallelizzazione si ha il comportamento seguente.
+\\\\
+\centerline{\includegraphics[width=12cm]{./img/Lab_3/Comportamento_attuale.png}}
 \\\\
 Si nota che il comportamento è inatteso in quanto non vi è coerenza tra i registri delle due sottostrutture. Per assicurare un corretto funzionamento del circuito, è necessario che i dati con cui lavorano le due entità siano condivisi, in modo da garantire la coerenza.
 \\\\
@@ -1558,10 +1557,10 @@ Una possibile soluzione potrebbe essere l'impiego di due soli registri REG\_A e 
 
 \textcolor{red}{
 \begin{itemize}
-\item schema clock gating
-\item datapath parallelizzazione
-\item datapath pipeline
-\item forme d'onda
+\item schema clock gating FATTO
+\item datapath parallelizzazione FATTO
+\item datapath pipeline FATTO
+\item forme d'onda FATTO
 \end{itemize}}
 
 

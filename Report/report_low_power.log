@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.10)  2 MAY 2020 19:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.10)  2 MAY 2020 22:52
 entering extended mode
 **./report_low_power.tex
 (report_low_power.tex
@@ -1470,17 +1470,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1382--1388
  []
 
 [38] [39]
-Underfull \hbox (badness 10000) in paragraph at lines 1419--1428
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1419--1428
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1419--1428
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1422
 
  []
 
@@ -1488,220 +1478,228 @@ Underfull \hbox (badness 10000) in paragraph at lines 1419--1428
 File: ./img/Lab_3/datapath_parallelo.jpg Graphic file (type jpg)
 <use ./img/Lab_3/datapath_parallelo.jpg>
 Package pdftex.def Info: ./img/Lab_3/datapath_parallelo.jpg  used on input line
- 1437.
+ 1431.
 (pdftex.def)             Requested size: 284.52756pt x 164.12923pt.
 <./img/Lab_3/grafico_u.png, id=215, 746.03719pt x 526.21594pt>
 File: ./img/Lab_3/grafico_u.png Graphic file (type png)
 <use ./img/Lab_3/grafico_u.png>
-Package pdftex.def Info: ./img/Lab_3/grafico_u.png  used on input line 1457.
+Package pdftex.def Info: ./img/Lab_3/grafico_u.png  used on input line 1451.
 (pdftex.def)             Requested size: 284.52756pt x 200.68678pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1435--1463
+Underfull \hbox (badness 10000) in paragraph at lines 1429--1457
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1435--1463
+Underfull \hbox (badness 10000) in paragraph at lines 1429--1457
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1435--1463
+Underfull \hbox (badness 10000) in paragraph at lines 1429--1457
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1435--1463
+Underfull \hbox (badness 10000) in paragraph at lines 1429--1457
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1435--1463
+Underfull \hbox (badness 10000) in paragraph at lines 1429--1457
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1435--1463
+Underfull \hbox (badness 10000) in paragraph at lines 1429--1457
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1435--1463
+Underfull \hbox (badness 10000) in paragraph at lines 1429--1457
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1435--1463
+Underfull \hbox (badness 10000) in paragraph at lines 1429--1457
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1435--1463
+Underfull \hbox (badness 10000) in paragraph at lines 1429--1457
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1435--1463
+Underfull \hbox (badness 10000) in paragraph at lines 1429--1457
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1435--1463
+Underfull \hbox (badness 10000) in paragraph at lines 1429--1457
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1435--1463
+Underfull \hbox (badness 10000) in paragraph at lines 1429--1457
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1435--1463
+Underfull \hbox (badness 10000) in paragraph at lines 1429--1457
 
  []
 
-[40 <./img/Lab_3/datapath_parallelo.jpg>]
-<./img/Lab_3/datapath_pipeline.jpeg, id=219, 732.0951pt x 341.1144pt>
+[40 <./img/Lab_3/datapath_parallelo.jpg>] [41 <./img/Lab_3/grafico_u.png>]
+<./img/Lab_3/datapath_pipeline.jpeg, id=223, 732.0951pt x 341.1144pt>
 File: ./img/Lab_3/datapath_pipeline.jpeg Graphic file (type jpg)
 <use ./img/Lab_3/datapath_pipeline.jpeg>
 Package pdftex.def Info: ./img/Lab_3/datapath_pipeline.jpeg  used on input line
- 1494.
+ 1489.
 (pdftex.def)             Requested size: 284.52756pt x 132.57602pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1479--1509
+Underfull \hbox (badness 10000) in paragraph at lines 1481--1504
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1479--1509
+Underfull \hbox (badness 10000) in paragraph at lines 1481--1504
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1479--1509
+Underfull \hbox (badness 10000) in paragraph at lines 1481--1504
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1479--1509
+Underfull \hbox (badness 10000) in paragraph at lines 1481--1504
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1479--1509
+Underfull \hbox (badness 10000) in paragraph at lines 1481--1504
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1479--1509
+Underfull \hbox (badness 10000) in paragraph at lines 1481--1504
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1479--1509
+Underfull \hbox (badness 10000) in paragraph at lines 1481--1504
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1479--1509
+Underfull \hbox (badness 10000) in paragraph at lines 1481--1504
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1479--1509
+Underfull \hbox (badness 10000) in paragraph at lines 1481--1504
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1479--1509
+Underfull \hbox (badness 10000) in paragraph at lines 1481--1504
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1479--1509
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1479--1509
-
- []
-
-[41 <./img/Lab_3/grafico_u.png>] [42 <./img/Lab_3/datapath_pipeline.jpeg>]
+[42 <./img/Lab_3/datapath_pipeline.jpeg>]
 <./img/Lab_3/prodotto_potenza_ritardo.png, id=228, 537.63477pt x 231.66925pt>
 File: ./img/Lab_3/prodotto_potenza_ritardo.png Graphic file (type png)
 <use ./img/Lab_3/prodotto_potenza_ritardo.png>
 Package pdftex.def Info: ./img/Lab_3/prodotto_potenza_ritardo.png  used on inpu
-t line 1542.
-(pdftex.def)             Requested size: 426.79134pt x 183.90752pt.
+t line 1538.
+(pdftex.def)             Requested size: 341.43306pt x 147.126pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1530--1547
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1530--1547
+Underfull \hbox (badness 10000) in paragraph at lines 1526--1543
 
  []
 
 
-Overfull \hbox (6.82622pt too wide) in paragraph at lines 1530--1547
+Underfull \hbox (badness 10000) in paragraph at lines 1526--1543
+
+ []
+
+
+Overfull \hbox (6.82622pt too wide) in paragraph at lines 1526--1543
 \OT1/cmr/m/n/10.95 sis-tema da pro-gettare si priv-i-le-gia la pipeline; al con
 -trario, nel caso sia nec-es-saria un'ottimizzazione
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1530--1547
+Underfull \hbox (badness 10000) in paragraph at lines 1526--1543
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1530--1547
+Underfull \hbox (badness 10000) in paragraph at lines 1526--1543
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1530--1547
+Underfull \hbox (badness 10000) in paragraph at lines 1526--1543
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1530--1547
+Underfull \hbox (badness 10000) in paragraph at lines 1526--1543
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1530--1547
+Underfull \hbox (badness 10000) in paragraph at lines 1526--1543
 
  []
 
 [43]
-File: ./img/Lab_3/prodotto_potenza_ritardo.png Graphic file (type png)
-<use ./img/Lab_3/prodotto_potenza_ritardo.png>
-Package pdftex.def Info: ./img/Lab_3/prodotto_potenza_ritardo.png  used on inpu
-t line 1553.
-(pdftex.def)             Requested size: 426.79134pt x 183.90752pt.
+<./img/Lab_3/Comportamento_atteso.png, id=232, 537.6888pt x 239.9364pt>
+File: ./img/Lab_3/Comportamento_atteso.png Graphic file (type png)
+<use ./img/Lab_3/Comportamento_atteso.png>
+Package pdftex.def Info: ./img/Lab_3/Comportamento_atteso.png  used on input li
+ne 1548.
+(pdftex.def)             Requested size: 341.43306pt x 152.36523pt.
+<./img/Lab_3/Comportamento_attuale.png, id=233, 537.6888pt x 239.4546pt>
+File: ./img/Lab_3/Comportamento_attuale.png Graphic file (type png)
+<use ./img/Lab_3/Comportamento_attuale.png>
+Package pdftex.def Info: ./img/Lab_3/Comportamento_attuale.png  used on input l
+ine 1552.
+(pdftex.def)             Requested size: 341.43306pt x 152.05928pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1548--1558
+Underfull \hbox (badness 10000) in paragraph at lines 1544--1557
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1544--1557
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1548--1558
+Underfull \hbox (badness 10000) in paragraph at lines 1544--1557
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1548--1558
+Underfull \hbox (badness 10000) in paragraph at lines 1544--1557
 
  []
 
-[44 <./img/Lab_3/prodotto_potenza_ritardo.png>] [45] (report_low_power.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1544--1557
+
+ []
+
+[44 <./img/Lab_3/prodotto_potenza_ritardo.png> <./img/Lab_3/Comportamento_attes
+o.png>] [45 <./img/Lab_3/Comportamento_attuale.png>] (report_low_power.aux) ) 
 Here is how much of TeX's memory you used:
- 5100 strings out of 481556
- 72057 string characters out of 2914337
+ 5112 strings out of 481556
+ 72509 string characters out of 2914337
  319427 words of memory out of 3000000
- 20228 multiletter control sequences out of 15000+200000
+ 20238 multiletter control sequences out of 15000+200000
  542946 words of font info for 63 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  31i,8n,37p,656b,1329s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1726,9 +1724,9 @@ Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
 y8.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmsy9.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
 public/amsfonts/cm/cmti10.pfb>
-Output written on report_low_power.pdf (46 pages, 2545473 bytes).
+Output written on report_low_power.pdf (46 pages, 2597798 bytes).
 PDF statistics:
- 295 PDF objects out of 1000 (max. 8388607)
+ 299 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 211 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 221 words of extra memory for PDF output out of 10000 (max. 10000000)
 
