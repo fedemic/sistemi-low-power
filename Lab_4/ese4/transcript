@@ -1,0 +1,459 @@
+# //  ModelSim SE-64 6.5c Aug 27 2009 Linux 3.10.0-957.5.1.el7.x86_64
+# //
+# //  Copyright 1991-2009 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Cannot determine language of /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4
+vlog -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v
+# Model Technology ModelSim SE-64 vlog 6.5c Compiler 2009.08 Aug 27 2009
+# -- Compiling module busnormal
+# 
+# Top level modules:
+# 	busnormal
+vlog -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v
+# Model Technology ModelSim SE-64 vlog 6.5c Compiler 2009.08 Aug 27 2009
+# -- Compiling module T0beh
+# 
+# Top level modules:
+# 	T0beh
+vlog -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v
+# Model Technology ModelSim SE-64 vlog 6.5c Compiler 2009.08 Aug 27 2009
+# -- Compiling module transbased
+# 
+# Top level modules:
+# 	transbased
+vlog -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v
+# Model Technology ModelSim SE-64 vlog 6.5c Compiler 2009.08 Aug 27 2009
+# -- Compiling module grayencoder
+# 
+# Top level modules:
+# 	grayencoder
+vlog -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSINV_.v
+# Model Technology ModelSim SE-64 vlog 6.5c Compiler 2009.08 Aug 27 2009
+# -- Compiling module businvbeh
+# 
+# Top level modules:
+# 	businvbeh
+vlog -reportprogress 300 -work work /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/tb_encdec.v
+# Model Technology ModelSim SE-64 vlog 6.5c Compiler 2009.08 Aug 27 2009
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+do fill_forward.scr
+# DATA
+# vsim -L /software/dk/nangate45/verilog/msim6.5c -voptargs=+acc -sdftyp /testbench/UBUSNORM=busnormal.sdf -sdftyp /testbench/UBUSINV=businvbeh.sdf -sdftyp /testbench/UBUSTRAN=transbased.sdf -sdftyp /testbench/UBUSGRAY=grayencoder.sdf -sdftyp /testbench/UBUST0=T0beh.sdf -t 1ps work.testbench 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.testbench(fast)
+# Loading work.busnormal(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'busnormal' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /testbench/UBUSNORM
+# Loading /software/dk/nangate45/verilog/msim6.5c.DFFR_X1(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'DFFR_X1' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /testbench/UBUSNORM/buss_reg_7_
+# Loading /software/dk/nangate45/verilog/msim6.5c.INV_X1(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'INV_X1' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /testbench/UBUSNORM/U4
+# Loading work.businvbeh(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'businvbeh' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /testbench/UBUSINV
+# Loading /software/dk/nangate45/verilog/msim6.5c.HA_X1(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'HA_X1' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /testbench/UBUSINV/add_51_I9_U1_1_1
+# Loading /software/dk/nangate45/verilog/msim6.5c.FA_X1(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'FA_X1' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /testbench/UBUSINV/add_3_root_add_51_I8_aco_U1_0
+# Loading /software/dk/nangate45/verilog/msim6.5c.XOR2_X1(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'XOR2_X1' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /testbench/UBUSINV/U98
+# Loading /software/dk/nangate45/verilog/msim6.5c.AND2_X1(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'AND2_X1' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /testbench/UBUSINV/U99
+# Loading /software/dk/nangate45/verilog/msim6.5c.NOR2_X1(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'NOR2_X1' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /testbench/UBUSINV/U111
+# Loading /software/dk/nangate45/verilog/msim6.5c.MUX2_X1(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'MUX2_X1' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /testbench/UBUSINV/U124
+# Loading /software/dk/nangate45/verilog/msim6.5c.AOI21_X1(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'AOI21_X1' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /testbench/UBUSINV/U125
+# Loading /software/dk/nangate45/verilog/msim6.5c.OR2_X1(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'OR2_X1' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /testbench/UBUSINV/U126
+# Loading /software/dk/nangate45/verilog/msim6.5c.AOI211_X1(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'AOI211_X1' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /testbench/UBUSINV/U127
+# Loading /software/dk/nangate45/verilog/msim6.5c.NAND2_X1(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'NAND2_X1' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /testbench/UBUSINV/U128
+# Loading /software/dk/nangate45/verilog/msim6.5c.XNOR2_X1(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'XNOR2_X1' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /testbench/UBUSINV/U130
+# Loading work.transbased(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'transbased' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /testbench/UBUSTRAN
+# Loading work.grayencoder(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'grayencoder' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /testbench/UBUSGRAY
+# Loading work.T0beh(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'T0beh' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /testbench/UBUST0
+# Loading /software/dk/nangate45/verilog/msim6.5c.INV_X2(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'INV_X2' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /testbench/UBUST0/U39
+# Loading /software/dk/nangate45/verilog/msim6.5c.NOR4_X1(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'NOR4_X1' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /testbench/UBUST0/U57
+# Loading instances from busnormal.sdf
+# Loading instances from businvbeh.sdf
+# Loading instances from transbased.sdf
+# Loading instances from grayencoder.sdf
+# Loading instances from T0beh.sdf
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(9): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSNORM/buss_reg_7_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(9): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(10): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSNORM/buss_reg_6_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(10): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(11): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSNORM/buss_reg_5_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(11): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(12): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSNORM/buss_reg_4_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(12): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(13): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSNORM/buss_reg_3_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(13): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(14): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSNORM/buss_reg_2_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(14): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(15): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSNORM/buss_reg_1_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(15): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(16): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSNORM/buss_reg_0_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(16): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(17): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSNORM/C_reg_7_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(17): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(18): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSNORM/C_reg_6_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(18): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(19): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSNORM/C_reg_5_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(19): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(20): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSNORM/C_reg_4_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(20): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(21): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSNORM/C_reg_3_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(21): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(22): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSNORM/C_reg_2_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(22): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(23): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSNORM/C_reg_1_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(23): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(24): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSNORM/C_reg_0_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSNORM_.v(24): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSINV_.v(25): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSINV/C_reg_7_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSINV_.v(25): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSINV_.v(26): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSINV/C_reg_6_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSINV_.v(26): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSINV_.v(27): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSINV/C_reg_5_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSINV_.v(27): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSINV_.v(28): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSINV/C_reg_4_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSINV_.v(28): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSINV_.v(29): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSINV/C_reg_3_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSINV_.v(29): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSINV_.v(30): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSINV/C_reg_2_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSINV_.v(30): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSINV_.v(31): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSINV/C_reg_1_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSINV_.v(31): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSINV_.v(32): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSINV/C_reg_0_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSINV_.v(32): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(11): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSTRAN/buss_reg_7_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(11): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(12): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSTRAN/buss_reg_6_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(12): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(13): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSTRAN/buss_reg_5_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(13): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(14): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSTRAN/buss_reg_4_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(14): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(15): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSTRAN/buss_reg_3_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(15): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(16): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSTRAN/buss_reg_2_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(16): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(17): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSTRAN/buss_reg_1_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(17): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(18): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSTRAN/buss_reg_0_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(18): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(27): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSTRAN/CENCOLD_reg_7_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(27): [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(28): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSTRAN/CENCOLD_reg_6_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(28): [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(29): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSTRAN/CENCOLD_reg_5_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(29): [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(30): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSTRAN/CENCOLD_reg_4_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(30): [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(31): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSTRAN/CENCOLD_reg_3_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(31): [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(32): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSTRAN/CENCOLD_reg_2_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(32): [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(33): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSTRAN/CENCOLD_reg_1_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(33): [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(34): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSTRAN/CENCOLD_reg_0_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSTRAN_.v(34): [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(10): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSGRAY/buss_reg_7_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(10): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(11): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSGRAY/buss_reg_6_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(11): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(12): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSGRAY/buss_reg_5_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(12): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(13): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSGRAY/buss_reg_4_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(13): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(14): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSGRAY/buss_reg_3_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(14): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(15): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSGRAY/buss_reg_2_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(15): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(16): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSGRAY/buss_reg_1_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(16): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(17): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSGRAY/buss_reg_0_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(17): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(18): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSGRAY/BTMP_reg_7_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(18): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(19): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSGRAY/BTMP_reg_6_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(19): [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(20): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSGRAY/BTMP_reg_5_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(20): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(21): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSGRAY/BTMP_reg_4_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(21): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(22): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSGRAY/BTMP_reg_3_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(22): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(23): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSGRAY/BTMP_reg_2_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(23): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(24): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSGRAY/BTMP_reg_1_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(24): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(25): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUSGRAY/BTMP_reg_0_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUSGRAY_.v(25): [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(15): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUST0/AOLD_reg_7_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(15): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(16): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUST0/AOLD_reg_6_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(16): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(17): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUST0/AOLD_reg_5_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(17): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(18): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUST0/AOLD_reg_4_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(18): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(19): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUST0/AOLD_reg_3_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(19): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(20): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUST0/AOLD_reg_2_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(20): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(21): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUST0/AOLD_reg_1_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(21): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(22): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUST0/AOLD_reg_0_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(22): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(25): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUST0/C_tmp_reg_1_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(25): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(26): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUST0/C_tmp_reg_2_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(26): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(27): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUST0/C_tmp_reg_3_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(27): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(28): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUST0/C_tmp_reg_4_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(28): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(29): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUST0/C_tmp_reg_5_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(29): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(30): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUST0/C_tmp_reg_6_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(30): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(31): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUST0/C_tmp_reg_7_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(31): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(32): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUST0/buss_reg_0_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(32): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(33): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUST0/buss_reg_1_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(33): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(34): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUST0/buss_reg_2_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(34): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(35): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUST0/buss_reg_3_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(35): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(36): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUST0/buss_reg_4_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(36): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(37): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUST0/buss_reg_5_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(37): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(38): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUST0/buss_reg_6_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(38): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(39): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /testbench/UBUST0/buss_reg_7_
+# ** Warning: (vsim-3722) /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/fromsynopsys_BUST0_.v(39): [TFMPC] - Missing connection for port 'QN'.
+# Loading timing data from busnormal.sdf
+# ** Warning: (vsim-3448) busnormal.sdf(101): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) busnormal.sdf(127): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) busnormal.sdf(153): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) busnormal.sdf(179): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) busnormal.sdf(205): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) busnormal.sdf(231): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) busnormal.sdf(257): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) busnormal.sdf(283): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) busnormal.sdf(309): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) busnormal.sdf(335): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) busnormal.sdf(361): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) busnormal.sdf(387): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) busnormal.sdf(413): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) busnormal.sdf(439): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) busnormal.sdf(465): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) busnormal.sdf(491): Setting negative specify check constraint (-40 ps) to zero.
+# Loading timing data from businvbeh.sdf
+# ** Warning: (vsim-3448) businvbeh.sdf(779): Setting negative specify check constraint (-38 ps) to zero.
+# ** Warning: (vsim-3448) businvbeh.sdf(805): Setting negative specify check constraint (-38 ps) to zero.
+# ** Warning: (vsim-3448) businvbeh.sdf(831): Setting negative specify check constraint (-38 ps) to zero.
+# ** Warning: (vsim-3448) businvbeh.sdf(857): Setting negative specify check constraint (-38 ps) to zero.
+# ** Warning: (vsim-3448) businvbeh.sdf(883): Setting negative specify check constraint (-38 ps) to zero.
+# ** Warning: (vsim-3448) businvbeh.sdf(909): Setting negative specify check constraint (-38 ps) to zero.
+# ** Warning: (vsim-3448) businvbeh.sdf(935): Setting negative specify check constraint (-38 ps) to zero.
+# ** Warning: (vsim-3448) businvbeh.sdf(961): Setting negative specify check constraint (-38 ps) to zero.
+# ** Warning: (vsim-3448) businvbeh.sdf(987): Setting negative specify check constraint (-38 ps) to zero.
+# ** Warning: (vsim-3448) businvbeh.sdf(1013): Setting negative specify check constraint (-38 ps) to zero.
+# ** Warning: (vsim-3448) businvbeh.sdf(1039): Setting negative specify check constraint (-38 ps) to zero.
+# ** Warning: (vsim-3448) businvbeh.sdf(1065): Setting negative specify check constraint (-38 ps) to zero.
+# ** Warning: (vsim-3448) businvbeh.sdf(1091): Setting negative specify check constraint (-38 ps) to zero.
+# ** Warning: (vsim-3448) businvbeh.sdf(1117): Setting negative specify check constraint (-38 ps) to zero.
+# ** Warning: (vsim-3448) businvbeh.sdf(1143): Setting negative specify check constraint (-38 ps) to zero.
+# ** Warning: (vsim-3448) businvbeh.sdf(1169): Setting negative specify check constraint (-38 ps) to zero.
+# ** Warning: (vsim-3448) businvbeh.sdf(1195): Setting negative specify check constraint (-38 ps) to zero.
+# Loading timing data from transbased.sdf
+# ** Warning: (vsim-3448) transbased.sdf(349): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) transbased.sdf(375): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) transbased.sdf(401): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) transbased.sdf(427): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) transbased.sdf(453): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) transbased.sdf(479): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) transbased.sdf(505): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) transbased.sdf(531): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) transbased.sdf(557): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) transbased.sdf(583): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) transbased.sdf(609): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) transbased.sdf(635): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) transbased.sdf(661): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) transbased.sdf(687): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) transbased.sdf(713): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) transbased.sdf(739): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) transbased.sdf(765): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) transbased.sdf(791): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) transbased.sdf(817): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) transbased.sdf(843): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) transbased.sdf(869): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) transbased.sdf(895): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) transbased.sdf(921): Setting negative specify check constraint (-28 ps) to zero.
+# ** Warning: (vsim-3448) transbased.sdf(947): Setting negative specify check constraint (-28 ps) to zero.
+# Loading timing data from grayencoder.sdf
+# ** Warning: (vsim-3448) grayencoder.sdf(297): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) grayencoder.sdf(323): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) grayencoder.sdf(349): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) grayencoder.sdf(375): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) grayencoder.sdf(401): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) grayencoder.sdf(427): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) grayencoder.sdf(453): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) grayencoder.sdf(479): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) grayencoder.sdf(505): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) grayencoder.sdf(531): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) grayencoder.sdf(557): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) grayencoder.sdf(583): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) grayencoder.sdf(609): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) grayencoder.sdf(635): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) grayencoder.sdf(661): Setting negative specify check constraint (-40 ps) to zero.
+# ** Warning: (vsim-3448) grayencoder.sdf(687): Setting negative specify check constraint (-40 ps) to zero.
+# Loading timing data from T0beh.sdf
+# ** Warning: (vsim-3448) T0beh.sdf(786): Setting negative specify check constraint (-43 ps) to zero.
+# ** Warning: (vsim-3448) T0beh.sdf(812): Setting negative specify check constraint (-43 ps) to zero.
+# ** Warning: (vsim-3448) T0beh.sdf(838): Setting negative specify check constraint (-43 ps) to zero.
+# ** Warning: (vsim-3448) T0beh.sdf(864): Setting negative specify check constraint (-43 ps) to zero.
+# ** Warning: (vsim-3448) T0beh.sdf(890): Setting negative specify check constraint (-43 ps) to zero.
+# ** Warning: (vsim-3448) T0beh.sdf(916): Setting negative specify check constraint (-43 ps) to zero.
+# ** Warning: (vsim-3448) T0beh.sdf(942): Setting negative specify check constraint (-43 ps) to zero.
+# ** Warning: (vsim-3448) T0beh.sdf(968): Setting negative specify check constraint (-43 ps) to zero.
+# ** Warning: (vsim-3448) T0beh.sdf(994): Setting negative specify check constraint (-43 ps) to zero.
+# ** Warning: (vsim-3448) T0beh.sdf(1020): Setting negative specify check constraint (-43 ps) to zero.
+# ** Warning: (vsim-3448) T0beh.sdf(1046): Setting negative specify check constraint (-43 ps) to zero.
+# ** Warning: (vsim-3448) T0beh.sdf(1072): Setting negative specify check constraint (-43 ps) to zero.
+# ** Warning: (vsim-3448) T0beh.sdf(1098): Setting negative specify check constraint (-43 ps) to zero.
+# ** Warning: (vsim-3448) T0beh.sdf(1124): Setting negative specify check constraint (-43 ps) to zero.
+# ** Warning: (vsim-3448) T0beh.sdf(1150): Setting negative specify check constraint (-43 ps) to zero.
+# ** Warning: (vsim-3448) T0beh.sdf(1176): Setting negative specify check constraint (-43 ps) to zero.
+# ** Warning: (vsim-3448) T0beh.sdf(1202): Setting negative specify check constraint (-43 ps) to zero.
+# ** Warning: (vsim-3448) T0beh.sdf(1228): Setting negative specify check constraint (-43 ps) to zero.
+# ** Warning: (vsim-3448) T0beh.sdf(1254): Setting negative specify check constraint (-43 ps) to zero.
+# ** Warning: (vsim-3448) T0beh.sdf(1280): Setting negative specify check constraint (-43 ps) to zero.
+# ** Warning: (vsim-3448) T0beh.sdf(1306): Setting negative specify check constraint (-43 ps) to zero.
+# ** Warning: (vsim-3448) T0beh.sdf(1332): Setting negative specify check constraint (-43 ps) to zero.
+# ** Warning: (vsim-3448) T0beh.sdf(1358): Setting negative specify check constraint (-43 ps) to zero.
+# ** Warning: (vsim-3448) T0beh.sdf(1384): Setting negative specify check constraint (-43 ps) to zero.
+# ** Warning: (vsim-3448) T0beh.sdf(1410): Setting negative specify check constraint (-43 ps) to zero.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Region: /testbench  File: /home/lp20.9/Desktop/low_power_2020/Lab_4/ese4/tb_encdec.v
