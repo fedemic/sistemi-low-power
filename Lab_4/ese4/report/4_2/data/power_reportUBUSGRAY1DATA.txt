@@ -10,7 +10,7 @@ Report : power
         -sort_mode dynamic_power
 Design : grayencoder
 Version: F-2011.09-SP3
-Date   : Wed May  6 17:28:33 2020
+Date   : Tue May 12 08:31:06 2020
 ****************************************
 
 
