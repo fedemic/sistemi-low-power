@@ -1563,6 +1563,287 @@ Una possibile soluzione potrebbe essere l'impiego di due soli registri REG\_A e 
 \item forme d'onda FATTO
 \end{itemize}}
 
+\chapter{Bus encoding}
+\section{Introduzione alle tecniche utilizzate}
+Lo scopo di questa esercitazione è testare diverse codifiche utilizzate per ridurre le commutazioni sui bus. È fondamentale, in un contesto low power, prestare attenzione ai consumi relativi alle interconnessioni, in quanto ad esse è associata una capacità significativa.
+\\
+In particolare, sono state testate le seguenti quattro tecniche:
+\begin{itemize}
+\item \textbf{Bus normale}
+\\
+Interconnessione priva di qualunque tipo di codifica e, per tale motivo non ridondante.
+\item Bus invert
+\\
+Il valore logico sull'interconnesione è invertito se la distanza di Hamming rispetto al valore precedente è maggiore di $\frac{N}{2}$, dove N è il parallelismo dell'informazione. Si tratta di una codifica ridondante, infatti è necessario notificare al ricevitore l'eventuale inversione dell'informazione inviata.
+Tale codifica è idonea alla trasmissione dei dati, in quanto la statistica di questi è casuale rispetto a quella di indirizzi e controlli.
+\item \textbf{Transition based}
+\\
+L'informazione è codificata non in un livello logico ma in una transizione della linea, che avviene quando il dato assume un valore pari a 1. Si nota che tale codifica non è ridondante dal momento che non sono necessari ulteriori segnali.
+\\
+I circuiti di codifica e decodifica fanno uso di porte XOR e flip flop per memorizzare il valore precedente, che viene comparato con quello attuale. Si nota che, in trasmissione, un valore di A pari a 1 porta alla commutazione del bus rispetto al valore assunto precedentemente. In ricezione, invece, quando è identificata una transizione sul bus, confrontando il valore attuale con quello precedente, l'uscita C assume un valore logico alto.
+\\\\
+\centerline{\includegraphics[width=12cm]{./img/Lab_4/tran_based.png}}
+\\\\
+\item \textbf{Gray code}
+\\
+La codifica ha come principale scopo il mantenimento della distanza di Hamming pari a 1 tra due informazioni consecutive. Tale codifica risulta appropriata per la trasmissione degli indirizzi. Si nota inoltre che questa codifica non prevede l'invio di ulteriori segnali di controllo, è pertanto non ridondante.
+\\
+In particolare, il seguente schema mostra i circuiti di codifica e decodifica.
+\\\\
+\centerline{\includegraphics[width=12cm]{./img/Lab_4/gray.png}}
+\\\\
+È possibile notare come un ingresso sia codificato correttamente solo andando in sequenza.
+\item \textbf{T0 encoding}
+\\
+Tale codifica ha il principale scopo di eliminare le commutazioni sul bus, nel caso in cui l'informazione sia sequenziale: per tale motivo è particolarmente adatta a indirizzi. Quando è identificata una sequenza dal trasmettitore, quest'ultimo mantiene l'indirizzo di partenza fisso sul bus e abilita un apposito segnale aggiuntivo atto a segnalare al ricevitore la sequenzialità dell'informazione.
+\\
+Per tale motivo è necessario implementare un incrementatore al ricevitore per generare l'indirizzo corretto.
+\\
+In caso di salto, quest'ultimo viene segnalato cambiando l'indirizzo inviato sul bus e negando il segnale seq.
+Si nota quindi che tale tecnica è ridondante.
+\\
+\textcolor{red}{block scheme}
+\\\\
+\centerline{\includegraphics[width=12cm]{./img/Lab_4/tran_based.png}}
+\\\\
+Basandosi sul principio di funzionamento sopra descritto, è stata realizzata la seguente descrizione VHDL.
+\begin{center}
+\begin{listato}
+	\centerline{\lstinputlisting{./code/Lab_4/T0beh.vhd}}
+\end{listato}
+\end{center}
+\end{itemize}
+\section{Simulazione}
+Attraverso la piattaforma ModelSim è possibile, attraverso un testbench, ottenere una stima dell'attività relativa alle diverse tecniche di codifica implementate.
+\\
+Dal momento che alcune codifiche sono più appropriate al trattamento di dati o indirizzi, vi è la possibilità di generare sequenze di informazioni con opportune distribuzioni statistiche.
+\\\\
+All'interno del file tb\_encdec.v è possibile, attraverso due direttive, scegliere la statistica dei segnali da simulare opportunamente generata tramite due process. In particolare, si nota come il process relativo ai dati prelevi questi ultimi dal file rdin.txt dove è presente una sequenza pseudo-random di valori rappresentati su 8 bit.
+\\\\
+Al contrario, il process relativo agli indirizzi, procede in sequenza fino al raggiungimento dell'indirizzo 63, successivamente al quale simula un salto prelevando l'indirizzo successivo dal file di cui sopra.
+\\
+Tutte le tecniche di codifica sono state simulate sia con dati che con indirizzi, riportando le attività dell'ingresso A e delle linee di bus B. Come primo risultato, è interessante notare la diversa attività delle due statistiche dell'informazione in ingresso.
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	& \multicolumn{2}{c}{Address} & \multicolumn{2}{c}{Data}\\
+	\hline
+	Nodo & Tc & E\textsubscript{sw} & Tc & E\textsubscript{sw} \\
+	\hline
+	 A(7) & 97 & & 4974 & \\
+	 \hline
+	A(6) & 118 & & 5022 & \\
+	\hline
+	A(5) & 312 & & 4987 & \\
+	\hline
+	A(4) & 625 & & 4972 & \\
+	\hline
+	A(3) & 1250 & & 4960 & \\
+	\hline
+	A(2) & 2500 & & 4965 & \\
+	\hline
+	A(1) & 5000 & & 5024 & \\
+	\hline
+	A(0) & 10000 & & 5060 & \\
+	\hline
+	Totale &  & &  & \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Come atteso, la statistica relativa ai dati presenta attività maggiori e confrontabili tra loro. Per quanto riguarda gli indirizzi, invece, si nota un'attività che mostra la sequenzialità.
+\subsection{Bus normal}
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	& \multicolumn{2}{c}{Address} & \multicolumn{2}{c}{Data}\\
+	\hline
+	Nodo & Tc & E\textsubscript{sw} & Tc & E\textsubscript{sw} \\
+	\hline
+	 BUSNORM(7) & 97 & & 4974 & \\
+	 \hline
+	BUSNORM(6) & 118 & & 5021 & \\
+	\hline
+	BUSNORM(5) & 312 & & 4987 & \\
+	\hline
+	BUSNORM(4) & 624 & & 4972 & \\
+	\hline
+	BUSNORM(3) & 1249 & & 4959 & \\
+	\hline
+	BUSNORM(2) & 2499 & & 4965 & \\
+	\hline
+	BUSNORM(1) & 4999 & & 5023 & \\
+	\hline
+	BUSNORM(0) & 9999 & & 5060 & \\
+	\hline
+	Totale & 19897 & & 39961 & \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Come atteso, in assenza di codifica, l'attività del bus rispecchia quella dell'ingresso.
+\subsection{Bus invert}
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	& \multicolumn{2}{c}{Address} & \multicolumn{2}{c}{Data}\\
+	\hline
+	Nodo & Tc & E\textsubscript{sw} & Tc & E\textsubscript{sw} \\
+	\hline
+	inv & 624 & & 3650 & \\
+	\hline
+	BUSINV(7) & 527 & & 3576 & \\
+	 \hline
+	BUSINV(6) & 506 & & 3611 & \\
+	\hline
+	BUSINV(5) & 312 & & 3617 & \\
+	\hline
+	BUSINV(4) & 0 & & 3640 & \\
+	\hline
+	BUSINV(3) & 625 & & 3613 & \\
+	\hline
+	BUSINV(2) & 1875 & & 3601 & \\
+	\hline
+	BUSINV(1) & 4375 & & 3639 & \\
+	\hline
+	BUSINV(0) & 9375 & & 3722 & \\
+	\hline
+	Totale & 18219 & & 32669 & \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Come atteso, osservando i valori totali, è possibile notare come sia presente una significativa riduzione delle commutazioni per quanto riguarda i dati rispetto al bus normal. Al contrario, le attività degli indirizzi risultano conforntabili.
+\\
+La riduzione delle commutazioni è tanto più marcata quante più transizioni con una distanza di Hamming maggiore di 4 sono presenti nei dati; attraverso uno script Matlab è stata stimata la percentuale di tali transizioni sul totale, che risulta pari a circa il 36 perc.
+\\
+\textcolor{red}{se avanza tempo fare simulazione con perc = 100}
+\subsection{Transition based}
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	& \multicolumn{2}{c}{Address} & \multicolumn{2}{c}{Data}\\
+	\hline
+	Nodo & Tc & E\textsubscript{sw} & Tc & E\textsubscript{sw} \\
+	\hline
+	TRAN(7) & 4816 & & 5003 & \\
+	 \hline
+	TRAN(6) & 3776 & & 4946 & \\
+	\hline
+	TRAN(5) & 4992 & & 4938 & \\
+	\hline
+	TRAN(4) & 4992 & & 4997 & \\
+	\hline
+	TRAN(3) & 5000 & & 5125 & \\
+	\hline
+	TRAN(2) & 5000 & & 4989 & \\
+	\hline
+	TRAN(1) & 5000 & & 5000 & \\
+	\hline
+	TRAN(0) & 5000 & & 4994 & \\
+	\hline
+	Totale & 38576 & & 39992 & \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Si nota come tale codifica non sia indicata per gli indirizzi in quanto la sequenza stessa ha come prerogativa il mantenimento di valori logici alti sulle linee di bus.
+\\
+Per quanto riguarda i dati, è atteso un miglioramento nel caso in cui la probabilità di avere valori logici alti sia sufficientemente ridotta. Tuttavia, analizzando il file rndin.txt è possibile osservare la presenza di numerosi 1 all'interno dei dati.
+\\
+\textcolor{red}{se avanza tempo fare simulazione file pochi uni}
+\subsection{Gray coding}
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	& \multicolumn{2}{c}{Address} & \multicolumn{2}{c}{Data}\\
+	\hline
+	Nodo & Tc & E\textsubscript{sw} & Tc & E\textsubscript{sw} \\
+	\hline
+	GRAY(7) & 97 & & 4974 & \\
+	 \hline
+	GRAY(6) & 55 & & 5087 & \\
+	\hline
+	GRAY(5) & 194 & & 4952 & \\
+	\hline
+	GRAY(4) & 312 & & 4981 & \\
+	\hline
+	GRAY(3) & 625 & & 4937 & \\
+	\hline
+	GRAY(2) & 1250 & & 5056 & \\
+	\hline
+	GRAY(1) & 2500 & & 4962 & \\
+	\hline
+	GRAY(0) & 5000 & & 5075 & \\
+	\hline
+	Totale & 10033 & & 40024 & \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Come atteso, tale codifica non ha benefici sulla codifica dei dati ma presenta notevoli miglioramenti per quanto riguarda gli indirizzi. L'attività totale degli indirizzi risulta infatti dimezzata rispetto al caso bus normal.
+\subsection{T0}
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	& \multicolumn{2}{c}{Address} & \multicolumn{2}{c}{Data}\\
+	\hline
+	Nodo & Tc & E\textsubscript{sw} & Tc & E\textsubscript{sw} \\
+	\hline
+	seq & 119 & & 72 &  \\
+	\hline
+	T0(7) & 29 & & 4974 & \\
+	 \hline
+	T0(6) & 24 & & 5021 & \\
+	\hline
+	T0(5) & 0 & & 4987 & \\
+	\hline
+	T0(4) & 0 & & 4972 & \\
+	\hline
+	T0(3) & 0 & & 4957 & \\
+	\hline
+	T0(2) & 0 & & 4963 & \\
+	\hline
+	T0(1) & 0 & & 5001 & \\
+	\hline
+	T0(0) & 0 & & 5028 & \\
+	\hline
+	Totale & 172 & & 39975 & \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Si nota un netto miglioramento per la trasmissione degli indirizzi, in particolare l'attività molto basse mette in luce che gli indirizzi generati mostrano un'elevata sequenzialità.
+\\
+In linea con i risultati attesi, i dati presentano un'elevata attività.
+\section{Sintesi}
+Lo scopo di questa sezione è l'analisi del consumo di potenza relativo alle varie tecniche implementate. Tale stima è stata effettuata attraverso il procedimento di back-annotation descritto nel laboratorio precedente, in modo da ottenere stime verosimili sia per dati che per indirizzi.
+\\\\
+L'intero processo è basato su un insieme di script forniti che descrivono la sequenza delle operazioni da svolgere che coinvolgono i tool ModelSim e Synopsys. L'analisi è inoltre effettuata considerando diversi carichi capacitivi per le linee di interconnessione.
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+	\hline
+	Power & \multicolumn{4}{c}{Address} & \multicolumn{4}{c}{Data}\\
+	\hline
+	[uW] & 1fF & 10fF & 50fF & 100fF & 1fF & 10fF & 50fF & 100fF \\
+	\hline
+	BUSNORM & 29 & & 4974 & \\
+	 \hline
+	BUSINV & 24 & & 5021 & \\
+	\hline
+	TRAN-BASED & 0 & & 4987 & \\
+	\hline
+	GRAY & 0 & & 4972 & \\
+	\hline
+	T0 & 0 & & 4957 & \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+ciao
+
 
 
 
