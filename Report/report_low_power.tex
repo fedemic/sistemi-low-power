@@ -1822,27 +1822,66 @@ Lo scopo di questa sezione è l'analisi del consumo di potenza relativo alle var
 \\\\
 L'intero processo è basato su un insieme di script forniti che descrivono la sequenza delle operazioni da svolgere che coinvolgono i tool ModelSim e Synopsys. L'analisi è inoltre effettuata considerando diversi carichi capacitivi per le linee di interconnessione.
 \\\\
+Inizialmente sono stati valutati i contributi di potenza relativi alle linee di bus B, riportati nella seguente tabella e affiancati dalla rispettiva percentuale sul consumo di switching totale dei nodi della rete.
+\textcolor{red}{\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+	\hline
+	Power [uW] & \multicolumn{4}{c}{Address} & \multicolumn{4}{c}{Data}\\
+	\hline
+	 & 1fF & 10fF & 50fF & 100fF & 1fF & 10fF & 50fF & 100fF \\
+	\hline
+	BUSNORM & 14.76 & 15.99 & 20.82 & 28.16 & 19.34 & 21.81 & 31.51 & 45.97 \\
+	 \hline
+	BUSINV & 33.58 & 35.19 & 39.61 & 46.33 & 44.32 & 46.18 & 54.10 & 65.90 \\
+	\hline
+	TRAN-BASED & 35.57 & 38.04 & 47.54 & 61.52 & 34.80 & 37.33 & 47.14 & 61.62 \\
+	\hline
+	GRAY & 14.85 & 15.47 & 17.91 & 21.75 & 27.48 & 29.95 & 39.67 & 54.15 \\
+	\hline
+	T0 & N/A & N/A & N/A & N/A & N/A & N/A & N/A & N/A \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}}
+Nella seguente tabella sono riportati i risultati relativi al consumo di potenza totale considerando anche il contributo degli ingressi per le varie codifiche implementate.
+\\\\
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
 	\hline
-	Power & \multicolumn{4}{c}{Address} & \multicolumn{4}{c}{Data}\\
+	Power [uW] & \multicolumn{4}{c}{Address} & \multicolumn{4}{c}{Data}\\
 	\hline
-	[uW] & 1fF & 10fF & 50fF & 100fF & 1fF & 10fF & 50fF & 100fF \\
+	 & 1fF & 10fF & 50fF & 100fF & 1fF & 10fF & 50fF & 100fF \\
 	\hline
-	BUSNORM & 29 & & 4974 & \\
+	BUSNORM & 14.76 & 15.99 & 20.82 & 28.16 & 19.34 & 21.81 & 31.51 & 45.97 \\
 	 \hline
-	BUSINV & 24 & & 5021 & \\
+	BUSINV & 33.58 & 35.19 & 39.61 & 46.33 & 44.32 & 46.18 & 54.10 & 65.90 \\
 	\hline
-	TRAN-BASED & 0 & & 4987 & \\
+	TRAN-BASED & 35.57 & 38.04 & 47.54 & 61.52 & 34.80 & 37.33 & 47.14 & 61.62 \\
 	\hline
-	GRAY & 0 & & 4972 & \\
+	GRAY & 14.85 & 15.47 & 17.91 & 21.75 & 27.48 & 29.95 & 39.67 & 54.15 \\
 	\hline
-	T0 & 0 & & 4957 & \\
+	T0 & N/A & N/A & N/A & N/A & N/A & N/A & N/A & N/A \\
 	\hline
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-ciao
+È possibile, per ogni implementazione, notare un incremento della potenza dissipata in seguito ad un aumento della capacità di carico del bus.
+\\
+È possibile osservare come le diverse codifiche presentino diversi consumi di leakage. In particolare, questa è legata alla complessità della logica necessaria all'implementazione della tecnica di encoding. Di conseguenza, è stato notato che la codifica T0 presenta il consumo di potenza statica a causa della presenza di un elevato numero di gate rispetto alle altre codifiche.
+\\\\
+Osservando i dati relativi alla tecnica BUSINV, si nota come non vi sia alcun miglioramento netto né per dati né per indirizzi. Utilizzando tale codifica è atteso un miglioramento per i consumi relativi alla trasmissione dei dati, ciò non avviene poiché la distribuzione dei dati presenta un numero non elevato di transizioni con distanza di Hamming maggiore di $\frac{N}{2}$. Di conseguenza, l'aggiunta della logica di codifica e decodifica non ha un contributo trascurabile.
+\\\\
+Anche per la codifica TRANSITION-BASED non è rilevato alcun miglioramento. Il motivo principale è sempre dovuto alla distribuzione dei dati che presenta un numero di uni sufficientemente elevato, generando un numero elevato di transizioni.
+\\\\
+Per quanto la codifica GRAY, è possibile notare un miglioramento riguardante la trasmissione di indirizzi. Tale miglioramento risulta sempre più evidente al crescere della capacità di carico del bus: più questa è elevato più il consumo relativo alla logica di codifica e decodifica diventa trascurabile.
+\\
+In generale, nella scelta di una codifica ottimale è importante tenere in considerazione la capacità di carico del bus e confrontarla con la logica necessaria all'implementazione del bus encoding. Infatti, una tecnica in grado di portare un'elevata riduzione delle commutazioni sul bus potrebbe richiedere un consumo di implementazione significativo tale da compensare il risparmio apportato.
+\\\\
+\textcolor{red}{T0 quando si risolve N/A}
+\\\\
+\textcolor{red}{Tabella switching power bus B e confronto con il totale
+\\
+analisi power dinamica e leakage separatamente}
 
 
 
