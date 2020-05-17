@@ -7,8 +7,8 @@ new_set(1,:) = [0 1 0 0 1 0 0 1];
 for i = 2:10001
     
     flag = 0;
-    % Genera una word a caso finchè non trova una distanza
-    % di hamming > 0.8 rispetto a quella precedente
+    % Genera una word a caso fino a che non trova una distanza
+    % di hamming maggiore di 0.8 rispetto a quella precedente
     while (flag == 0)        
         rand = randi([0 1], 1, 8);    
         if (pdist2(new_set(i-1, :), rand, 'hamming') > 0.8)

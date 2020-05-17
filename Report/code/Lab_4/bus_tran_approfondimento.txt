@@ -1,6 +1,6 @@
 % Matrice per il nuovo set di valori
 new_set = zeros(10001, 8);
-n = 2;
+n = 1;
 
 for i = 1:10001
     

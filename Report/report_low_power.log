@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.9)  13 MAY 2020 17:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.9)  17 MAY 2020 12:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1952,12 +1952,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 1617--1627
  []
 
 
-Overfull \hbox (18.34396pt too wide) in paragraph at lines 1617--1627
-\OT1/cmr/m/n/10.95 Al con-trario, il pro-cess rel-a-tivo agli in-d-i-rizzi, pro
--cede in se-quenza fino al rag-giung-i-mento dell'indirizzo
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 1617--1627
 
  []
@@ -1967,78 +1961,109 @@ Underfull \hbox (badness 10000) in paragraph at lines 1617--1627
 
  []
 
-[48] [49] [50] [51]
-Underfull \hbox (badness 10000) in paragraph at lines 1821--1827
+[48] [49] [50] [51] [52]
+Underfull \hbox (badness 10000) in paragraph at lines 1818--1843
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1821--1827
+Underfull \hbox (badness 10000) in paragraph at lines 1818--1843
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1821--1827
+Underfull \hbox (badness 10000) in paragraph at lines 1818--1843
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1821--1827
+Underfull \hbox (badness 10000) in paragraph at lines 1849--1852
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1847--1858
+Underfull \hbox (badness 10000) in paragraph at lines 1849--1852
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1847--1858
+Underfull \hbox (badness 10000) in paragraph at lines 1849--1852
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1847--1858
+Underfull \hbox (badness 10000) in paragraph at lines 1849--1852
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1847--1858
+Underfull \hbox (badness 10000) in paragraph at lines 1849--1852
 
  []
 
-[52] [53] (./report_low_power.aux) ) 
+[53]
+Underfull \hbox (badness 10000) in paragraph at lines 1872--1883
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1872--1883
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1872--1883
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1872--1883
+
+ []
+
+[54] (./code/Lab_4/bus_inv_approfondimento.txt)
+(./code/Lab_4/bus_tran_approfondimento.txt) [55]
+Underfull \hbox (badness 10000) in paragraph at lines 1925--1932
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1925--1932
+
+ []
+
+[56] (./report_low_power.aux) ) 
 Here is how much of TeX's memory you used:
- 5585 strings out of 492616
- 78021 string characters out of 6129482
+ 5591 strings out of 492616
+ 78230 string characters out of 6129482
  162567 words of memory out of 5000000
  9342 multiletter control sequences out of 15000+600000
  14248 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,10n,35p,654b,1329s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dist/fonts/e
-nc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2019/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr17.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsl10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
-i10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm109
-5.pfb>
-Output written on report_low_power.pdf (54 pages, 2615230 bytes).
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dv
+ips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr17.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sl10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.
+pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.p
+fb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb
+>
+Output written on report_low_power.pdf (57 pages, 2622607 bytes).
 PDF statistics:
- 331 PDF objects out of 1000 (max. 8388607)
- 174 compressed objects within 2 object streams
+ 341 PDF objects out of 1000 (max. 8388607)
+ 181 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  231 words of extra memory for PDF output out of 10000 (max. 10000000)
 

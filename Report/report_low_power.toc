@@ -25,4 +25,7 @@
 \contentsline {subsection}{\numberline {4.2.3}Transition based}{51}% 
 \contentsline {subsection}{\numberline {4.2.4}Gray coding}{51}% 
 \contentsline {subsection}{\numberline {4.2.5}T0}{52}% 
-\contentsline {section}{\numberline {4.3}Sintesi}{52}% 
+\contentsline {section}{\numberline {4.3}Sintesi}{53}% 
+\contentsline {section}{\numberline {4.4}Approfondimenti}{55}% 
+\contentsline {subsection}{\numberline {4.4.1}Bus invert}{55}% 
+\contentsline {subsection}{\numberline {4.4.2}Transition based}{55}% 

@@ -1567,12 +1567,12 @@ Una possibile soluzione potrebbe essere l'impiego di due soli registri REG\_A e 
 \section{Introduzione alle tecniche utilizzate}
 Lo scopo di questa esercitazione è testare diverse codifiche utilizzate per ridurre le commutazioni sui bus. È fondamentale, in un contesto low power, prestare attenzione ai consumi relativi alle interconnessioni, in quanto ad esse è associata una capacità significativa.
 \\
-In particolare, sono state testate le seguenti quattro tecniche:
+In particolare, sono state testate le seguenti tecniche:
 \begin{itemize}
 \item \textbf{Bus normale}
 \\
-Interconnessione priva di qualunque tipo di codifica e, per tale motivo non ridondante.
-\item Bus invert
+Interconnessione priva di qualunque tipo di codifica e, per tale motivo, non ridondante.
+\item \textbf{Bus invert}
 \\
 Il valore logico sull'interconnesione è invertito se la distanza di Hamming rispetto al valore precedente è maggiore di $\frac{N}{2}$, dove N è il parallelismo dell'informazione. Si tratta di una codifica ridondante, infatti è necessario notificare al ricevitore l'eventuale inversione dell'informazione inviata.
 Tale codifica è idonea alla trasmissione dei dati, in quanto la statistica di questi è casuale rispetto a quella di indirizzi e controlli.
@@ -1595,7 +1595,7 @@ In particolare, il seguente schema mostra i circuiti di codifica e decodifica.
 È possibile notare come un ingresso sia codificato correttamente solo andando in sequenza.
 \item \textbf{T0 encoding}
 \\
-Tale codifica ha il principale scopo di eliminare le commutazioni sul bus, nel caso in cui l'informazione sia sequenziale: per tale motivo è particolarmente adatta a indirizzi. Quando è identificata una sequenza dal trasmettitore, quest'ultimo mantiene l'indirizzo di partenza fisso sul bus e abilita un apposito segnale aggiuntivo atto a segnalare al ricevitore la sequenzialità dell'informazione.
+Tale codifica ha il principale scopo di eliminare le commutazioni sul bus, nel caso in cui l'informazione sia sequenziale: per tale motivo è particolarmente adatta alla trasmissione indirizzi. Quando è identificata una sequenza dal trasmettitore, quest'ultimo mantiene l'indirizzo di partenza fisso sul bus e abilita un apposito segnale aggiuntivo atto a segnalare al ricevitore la sequenzialità dell'informazione.
 \\
 Per tale motivo è necessario implementare un incrementatore al ricevitore per generare l'indirizzo corretto.
 \\
@@ -1614,18 +1614,18 @@ Basandosi sul principio di funzionamento sopra descritto, è stata realizzata la
 \end{center}
 \end{itemize}
 \section{Simulazione}
-Attraverso la piattaforma ModelSim è possibile, attraverso un testbench, ottenere una stima dell'attività relativa alle diverse tecniche di codifica implementate.
+Sulla piattaforma ModelSim è possibile, attraverso un testbench, ottenere una stima dell'attività relativa alle diverse tecniche di codifica implementate.
 \\
 Dal momento che alcune codifiche sono più appropriate al trattamento di dati o indirizzi, vi è la possibilità di generare sequenze di informazioni con opportune distribuzioni statistiche.
 \\\\
-All'interno del file tb\_encdec.v è possibile, attraverso due direttive, scegliere la statistica dei segnali da simulare opportunamente generata tramite due process. In particolare, si nota come il process relativo ai dati prelevi questi ultimi dal file rdin.txt dove è presente una sequenza pseudo-random di valori rappresentati su 8 bit.
+All'interno del file \textbf{tb\_encdec.v} è possibile, attraverso due direttive, scegliere la statistica dei segnali da simulare opportunamente generata tramite due process. In particolare, si nota come il process relativo ai dati prelevi questi ultimi dal file \textbf{rdin.txt} dove è presente una sequenza pseudo-random di valori rappresentati su 8 bit.
 \\\\
-Al contrario, il process relativo agli indirizzi, procede in sequenza fino al raggiungimento dell'indirizzo 63, successivamente al quale simula un salto prelevando l'indirizzo successivo dal file di cui sopra.
+Al contrario, il process atto alla generazione degli indirizzi, procede in sequenza fino al raggiungimento dell'indirizzo 63, successivamente al quale simula un salto prelevando l'indirizzo successivo dal file di cui sopra.
 \\
 Tutte le tecniche di codifica sono state simulate sia con dati che con indirizzi, riportando le attività dell'ingresso A e delle linee di bus B. Come primo risultato, è interessante notare la diversa attività delle due statistiche dell'informazione in ingresso.
 \\\\
 \begin{center}
-	\begin{tabular}{|c|c|c|c|c|}
+	\begin{tabular}{|c|c|c||c|c|}
 	\hline
 	& \multicolumn{2}{c}{Address} & \multicolumn{2}{c}{Data}\\
 	\hline
@@ -1655,7 +1655,7 @@ Tutte le tecniche di codifica sono state simulate sia con dati che con indirizzi
 Come atteso, la statistica relativa ai dati presenta attività maggiori e confrontabili tra loro. Per quanto riguarda gli indirizzi, invece, si nota un'attività che mostra la sequenzialità.
 \subsection{Bus normal}
 \begin{center}
-	\begin{tabular}{|c|c|c|c|c|}
+	\begin{tabular}{|c|c|c||c|c|}
 	\hline
 	& \multicolumn{2}{c}{Address} & \multicolumn{2}{c}{Data}\\
 	\hline
@@ -1685,7 +1685,7 @@ Come atteso, la statistica relativa ai dati presenta attività maggiori e confro
 Come atteso, in assenza di codifica, l'attività del bus rispecchia quella dell'ingresso.
 \subsection{Bus invert}
 \begin{center}
-	\begin{tabular}{|c|c|c|c|c|}
+	\begin{tabular}{|c|c|c||c|c|}
 	\hline
 	& \multicolumn{2}{c}{Address} & \multicolumn{2}{c}{Data}\\
 	\hline
@@ -1716,12 +1716,10 @@ Come atteso, in assenza di codifica, l'attività del bus rispecchia quella dell'
 \vspace{0.3cm}
 Come atteso, osservando i valori totali, è possibile notare come sia presente una significativa riduzione delle commutazioni per quanto riguarda i dati rispetto al bus normal. Al contrario, le attività degli indirizzi risultano conforntabili.
 \\
-La riduzione delle commutazioni è tanto più marcata quante più transizioni con una distanza di Hamming maggiore di 4 sono presenti nei dati; attraverso uno script Matlab è stata stimata la percentuale di tali transizioni sul totale, che risulta pari a circa il 36 perc.
-\\
-\textcolor{red}{se avanza tempo fare simulazione con perc = 100}
+La riduzione delle commutazioni è tanto più marcata quante più transizioni con una distanza di Hamming maggiore di 4 sono presenti nei dati; attraverso uno script Matlab è stata stimata la percentuale di tali transizioni sul totale, che risulta pari a circa il 36\%.
 \subsection{Transition based}
 \begin{center}
-	\begin{tabular}{|c|c|c|c|c|}
+	\begin{tabular}{|c|c|c||c|c|}
 	\hline
 	& \multicolumn{2}{c}{Address} & \multicolumn{2}{c}{Data}\\
 	\hline
@@ -1750,12 +1748,10 @@ La riduzione delle commutazioni è tanto più marcata quante più transizioni co
 \vspace{0.3cm}
 Si nota come tale codifica non sia indicata per gli indirizzi in quanto la sequenza stessa ha come prerogativa il mantenimento di valori logici alti sulle linee di bus.
 \\
-Per quanto riguarda i dati, è atteso un miglioramento nel caso in cui la probabilità di avere valori logici alti sia sufficientemente ridotta. Tuttavia, analizzando il file rndin.txt è possibile osservare la presenza di numerosi 1 all'interno dei dati.
-\\
-\textcolor{red}{se avanza tempo fare simulazione file pochi uni}
+Per quanto riguarda i dati, è atteso un miglioramento nel caso in cui la probabilità di avere valori logici alti sia sufficientemente ridotta. Tuttavia, analizzando il file \textbf{rndin.txt} è possibile osservare la presenza di numerosi 1 all'interno dei dati.
 \subsection{Gray coding}
 \begin{center}
-	\begin{tabular}{|c|c|c|c|c|}
+	\begin{tabular}{|c|c|c||c|c|}
 	\hline
 	& \multicolumn{2}{c}{Address} & \multicolumn{2}{c}{Data}\\
 	\hline
@@ -1785,7 +1781,7 @@ Per quanto riguarda i dati, è atteso un miglioramento nel caso in cui la probab
 Come atteso, tale codifica non ha benefici sulla codifica dei dati ma presenta notevoli miglioramenti per quanto riguarda gli indirizzi. L'attività totale degli indirizzi risulta infatti dimezzata rispetto al caso bus normal.
 \subsection{T0}
 \begin{center}
-	\begin{tabular}{|c|c|c|c|c|}
+	\begin{tabular}{|c|c|c||c|c|}
 	\hline
 	& \multicolumn{2}{c}{Address} & \multicolumn{2}{c}{Data}\\
 	\hline
@@ -1814,39 +1810,47 @@ Come atteso, tale codifica non ha benefici sulla codifica dei dati ma presenta n
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-Si nota un netto miglioramento per la trasmissione degli indirizzi, in particolare l'attività molto basse mette in luce che gli indirizzi generati mostrano un'elevata sequenzialità.
+Si nota un netto miglioramento per la trasmissione degli indirizzi, in particolare l'attività molto bassa mette in luce che gli indirizzi generati mostrano un'elevata sequenzialità.
 \\
-In linea con i risultati attesi, i dati presentano un'elevata attività.
+I dati presentano invece un'elevata attività, rimanendo in linea con i risultati attesi.
+\newpage
 \section{Sintesi}
 Lo scopo di questa sezione è l'analisi del consumo di potenza relativo alle varie tecniche implementate. Tale stima è stata effettuata attraverso il procedimento di back-annotation descritto nel laboratorio precedente, in modo da ottenere stime verosimili sia per dati che per indirizzi.
 \\\\
-L'intero processo è basato su un insieme di script forniti che descrivono la sequenza delle operazioni da svolgere che coinvolgono i tool ModelSim e Synopsys. L'analisi è inoltre effettuata considerando diversi carichi capacitivi per le linee di interconnessione.
+L'intero processo è basato su un insieme di script forniti che descrivono la sequenza delle operazioni da svolgere, coinvolgendo i tool ModelSim e Synopsys. L'analisi è inoltre effettuata considerando diversi carichi capacitivi per le linee di interconnessione.
 \\\\
-Inizialmente sono stati valutati i contributi di potenza relativi alle linee di bus B, riportati nella seguente tabella e affiancati dalla rispettiva percentuale sul consumo di switching totale dei nodi della rete.
+Inizialmente sono stati valutati i contributi di potenza relativi alle sole linee di bus B, riportati nella seguente tabella.
+\\\\
 \textcolor{red}{\begin{center}
-	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+	\begin{tabular}{|c|c|c|c|c||c|c|c|c|}
 	\hline
 	Power [uW] & \multicolumn{4}{c}{Address} & \multicolumn{4}{c}{Data}\\
 	\hline
 	 & 1fF & 10fF & 50fF & 100fF & 1fF & 10fF & 50fF & 100fF \\
 	\hline
-	BUSNORM & 14.76 & 15.99 & 20.82 & 28.16 & 19.34 & 21.81 & 31.51 & 45.97 \\
+	BUSNORM & 0.22 & 1.42 & 6.24 & 12.26 & 0.44 & 2.86 & 12.53 & 24.62 \\
 	 \hline
-	BUSINV & 33.58 & 35.19 & 39.61 & 46.33 & 44.32 & 46.18 & 54.10 & 65.90 \\
+	BUSINV & 0.03 & 1.14 & 5.55 & 11.06 & 0.06 & 2.08 & 9.99 & 19.87 \\
 	\hline
-	TRAN-BASED & 35.57 & 38.04 & 47.54 & 61.52 & 34.80 & 37.33 & 47.14 & 61.62 \\
+	TRAN-BASED & 1.05 & 3.38 & 12.72 & 24.49 & 1.09 & 3.51 & 13.20 & 25.30 \\
 	\hline
-	GRAY & 14.85 & 15.47 & 17.91 & 21.75 & 27.48 & 29.95 & 39.67 & 54.15 \\
+	GRAY & 0.11 & 0.72 & 3.15 & 6.18 & 0.44 & 2.86 & 12.55 & 24.66 \\
 	\hline
-	T0 & N/A & N/A & N/A & N/A & N/A & N/A & N/A & N/A \\
+	T0 & N/A & N/A & N/A & N/A & N/A & N/A & N/A & N/A\\
 	\hline
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}}
-Nella seguente tabella sono riportati i risultati relativi al consumo di potenza totale considerando anche il contributo degli ingressi per le varie codifiche implementate.
+\textcolor{blue}{Si nota come l'applicazione della codifica BUSINV riduca la potenza dissipata sia per dati che per indirizzi: in quest'ultimo caso i benefici sono particolarmente marcati nel caso di salti frequenti.
+\\\\
+Al contrario di quanto atteso, la codifica TRAN-BASED non apporta miglioramenti significativi. La causa di tale risultato è da ricercare nella distribuzione dei dati generati: questi presentano infatti un numero di 1 elevato.
+\\\\
+La codifica GRAY introduce notevoli miglioramenti nella trasmissione degli indirizzi, si nota infatti che il consumo di potenza è dimezzato rispetto al caso del BUSNORM. Per quanto riguarda i dati non si notano riduzioni nel consumo di potenza.
+\\\\}
+Nella seguente tabella sono invece riportati i risultati relativi al consumo di potenza totale, considerando anche il contributo degli ingressi per le varie codifiche implementate.
 \\\\
 \begin{center}
-	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+	\begin{tabular}{|c|c|c|c|c||c|c|c|c|}
 	\hline
 	Power [uW] & \multicolumn{4}{c}{Address} & \multicolumn{4}{c}{Data}\\
 	\hline
@@ -1867,15 +1871,58 @@ Nella seguente tabella sono riportati i risultati relativi al consumo di potenza
 \vspace{0.3cm}
 È possibile, per ogni implementazione, notare un incremento della potenza dissipata in seguito ad un aumento della capacità di carico del bus.
 \\
-È possibile osservare come le diverse codifiche presentino diversi consumi di leakage. In particolare, questa è legata alla complessità della logica necessaria all'implementazione della tecnica di encoding. Di conseguenza, è stato notato che la codifica T0 presenta il consumo di potenza statica a causa della presenza di un elevato numero di gate rispetto alle altre codifiche.
+Si nota come le diverse codifiche dissipino una potenza di leakage differente. In particolare, quest'ultima è legata alla complessità della logica necessaria all'implementazione della tecnica di encoding. Di conseguenza, è stato notato che la codifica T0 presenta il consumo di potenza statica maggiore a causa della presenza di un elevato numero di gate rispetto alle altre codifiche.
 \\\\
 Osservando i dati relativi alla tecnica BUSINV, si nota come non vi sia alcun miglioramento netto né per dati né per indirizzi. Utilizzando tale codifica è atteso un miglioramento per i consumi relativi alla trasmissione dei dati, ciò non avviene poiché la distribuzione dei dati presenta un numero non elevato di transizioni con distanza di Hamming maggiore di $\frac{N}{2}$. Di conseguenza, l'aggiunta della logica di codifica e decodifica non ha un contributo trascurabile.
 \\\\
-Anche per la codifica TRANSITION-BASED non è rilevato alcun miglioramento. Il motivo principale è sempre dovuto alla distribuzione dei dati che presenta un numero di uni sufficientemente elevato, generando un numero elevato di transizioni.
+Anche per la codifica TRANSITION-BASED non è rilevato alcun miglioramento. Il motivo principale è sempre da ricercare nella distribuzione dei dati. Questi infatti presentano un numero di 1 significativo, generando una quantità elevata di transizioni.
 \\\\
-Per quanto la codifica GRAY, è possibile notare un miglioramento riguardante la trasmissione di indirizzi. Tale miglioramento risulta sempre più evidente al crescere della capacità di carico del bus: più questa è elevato più il consumo relativo alla logica di codifica e decodifica diventa trascurabile.
-\\
+Per quanto la codifica GRAY, è possibile notare un miglioramento riguardante la trasmissione di indirizzi. Tale miglioramento risulta sempre più evidente al crescere della capacità di carico del bus: più questa è elevata più il consumo relativo alla logica di codifica e decodifica diventa trascurabile.
+\\\\
 In generale, nella scelta di una codifica ottimale è importante tenere in considerazione la capacità di carico del bus e confrontarla con la logica necessaria all'implementazione del bus encoding. Infatti, una tecnica in grado di portare un'elevata riduzione delle commutazioni sul bus potrebbe richiedere un consumo di implementazione significativo tale da compensare il risparmio apportato.
+\newpage
+\section{Approfondimenti}
+Al fine di approfondire il funzionamento per le codifiche BUSINV e TRAN-BASED, è stato modificato il file contenente la sequenza di dati utilizzati nella simulazione, in particolare è stata variata la statistica di questi.
+\subsection{Bus invert}
+Attraverso il seguente script Matlab, è stata generata una sequenza di dati in modo tale che tra un dato ed il successivo sia presente una distanza di Hamming pari ad almeno 7 bit. Tale approfondimento è stato svolto solo per la statistica relativa ai dati essendo il BUSINV adatto alla trasmissione di questi.
+\begin{center}
+\begin{listato}
+	\centerline{\lstinputlisting{./code/Lab_4/bus_inv_approfondimento.txt}}
+\end{listato}
+\end{center}
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	Power [uW] & Data [C = 100 fF]\\
+	\hline
+	BUSNORM & 73.64\\
+	 \hline
+	BUSINV & 66.54\\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+In questo caso è possibile osservare un miglioramento del consumo in potenza quando è associato un carico di almeno 100 fF sul bus.
+\subsection{Transition based}
+Il seguente script Matlab genera una sequenza di dati in modo tale che la quantità di 1 presenti in ogni dato sia al massimo di un'unità.
+\begin{center}
+\begin{listato}
+	\centerline{\lstinputlisting{./code/Lab_4/bus_tran_approfondimento.txt}}
+\end{listato}
+\end{center}
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	Power [uW] & Data [C = 100 fF]\\
+	\hline
+	BUSNORM & 28.10\\
+	 \hline
+	TRANBASED & 26.79\\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Anche in questo caso è possibile osservare un miglioramento, anche se poco marcato, del consumo in potenza quando è associato un carico di almeno 100 fF sul bus.
 \\\\
 \textcolor{red}{T0 quando si risolve N/A}
 \\\\
