@@ -1,0 +1,20 @@
+% Matrice per il nuovo set di valori
+new_set = zeros(10001, 8);
+% Prima word/indirizzo
+new_set(1,:) = [0 1 0 0 1 0 0 1];
+
+
+for i = 2:10001
+    
+    flag = 0;
+    % Genera una word a caso finchè non trova una distanza
+    % di hamming > 0.8 rispetto a quella precedente
+    while (flag == 0)        
+        rand = randi([0 1], 1, 8);    
+        if (pdist2(new_set(i-1, :), rand, 'hamming') > 0.8)
+            new_set(i, :) = rand;
+            flag = 1;
+        end
+    end   
+    
+end
