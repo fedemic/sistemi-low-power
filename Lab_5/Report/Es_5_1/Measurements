@@ -1,0 +1,13 @@
+ES 5.1
+tpd in_rise = 49ps
+tpd in_fall = 57 ps
+tr = 89 ps
+tf = 75 ps
+
+risultati corrispondono a nandHS.chi
+
+ES 5.1.1
+Vtn0 = 3.1371E-01   
+Vtn1 = 2.7241E-01  
+Vtp0 = -2.4712E-01  
+Vtp1 = -2.4712E-01
