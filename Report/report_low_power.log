@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.9)  17 MAY 2020 12:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.9)  20 MAY 2020 23:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -471,11 +471,6 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ]
 Chapter 1.
-
-Overfull \hbox (29.75468pt too wide) in paragraph at lines 59--59
-|\OT1/cmr/bx/n/24.88 Laboratorio 1 - Power Es-ti-ma-tion: prob-
- []
-
 <./img/Lab_1/Es_1/Porte.png, id=17, 457.71pt x 60.97781pt>
 File: ./img/Lab_1/Es_1/Porte.png Graphic file (type png)
 <use ./img/Lab_1/Es_1/Porte.png>
@@ -549,20 +544,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 148--161
 
  []
 
-
-Overfull \hbox (9.41808pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
- TECHNIQUES \OT1/cmr/m/n/10.95 3
- []
-
-[3]
-Overfull \hbox (9.41808pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
- TECHNIQUES \OT1/cmr/m/n/10.95 4
- []
-
-[4 <./img/Lab_1/Es_1/Inverter.png> <./img/Lab_1/Es_1/AND.png> <./img/Lab_1/Es_1
-/XOR.png> <./img/Lab_1/Es_1/OR.png>]
+[3] [4 <./img/Lab_1/Es_1/Inverter.png> <./img/Lab_1/Es_1/AND.png> <./img/Lab_1/
+Es_1/XOR.png> <./img/Lab_1/Es_1/OR.png>]
 Overfull \hbox (27.37506pt too wide) in paragraph at lines 166--169
 [] 
  []
@@ -590,12 +573,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 169--172
 
 Underfull \hbox (badness 10000) in paragraph at lines 176--177
 
- []
-
-
-Overfull \hbox (9.41808pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
- TECHNIQUES \OT1/cmr/m/n/10.95 5
  []
 
 [5]
@@ -630,12 +607,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 249--254
 
  []
 
-
-Overfull \hbox (9.41808pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
- TECHNIQUES \OT1/cmr/m/n/10.95 6
- []
-
 [6 <./img/Lab_1/Es_2/RCA_8_bit.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 266--271
 
@@ -667,12 +638,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 283--335
 
  []
 
-
-Overfull \hbox (9.41808pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
- TECHNIQUES \OT1/cmr/m/n/10.95 7
- []
-
 [7 <./img/Lab_1/Es_2/Glitch.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 335--335
 
@@ -681,12 +646,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 335--335
 
 Underfull \hbox (badness 10000) in paragraph at lines 335--335
 
- []
-
-
-Overfull \hbox (9.41808pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
- TECHNIQUES \OT1/cmr/m/n/10.95 8
  []
 
 [8 <./img/Lab_1/Es_2/Glitch_worst_case.png>]
@@ -704,12 +663,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 335--336
 
 Underfull \hbox (badness 10000) in paragraph at lines 335--336
 
- []
-
-
-Overfull \hbox (9.41808pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
- TECHNIQUES \OT1/cmr/m/n/10.95 9
  []
 
 [9 <./img/Lab_1/Es_2/Worst_case_nostro.png>]
@@ -753,12 +706,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 391--399
 
  []
 
-
-Overfull \hbox (14.89308pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
- TECHNIQUES \OT1/cmr/m/n/10.95 10
- []
-
 [10]
 Underfull \hbox (badness 10000) in paragraph at lines 433--437
 
@@ -769,32 +716,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 433--437
 
  []
 
-
-Overfull \hbox (14.89308pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
- TECHNIQUES \OT1/cmr/m/n/10.95 11
- []
-
 [11 <./img/Lab_1/Es_3/Full_adder.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 471--484
 
  []
 
-
-Overfull \hbox (14.89308pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
- TECHNIQUES \OT1/cmr/m/n/10.95 12
- []
-
 [12]
 Underfull \hbox (badness 10000) in paragraph at lines 510--510
 
- []
-
-
-Overfull \hbox (14.89308pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
- TECHNIQUES \OT1/cmr/m/n/10.95 13
  []
 
 [13]
@@ -930,26 +859,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 532--589
 
  []
 
-
-Overfull \hbox (14.89308pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
- TECHNIQUES \OT1/cmr/m/n/10.95 14
- []
-
-[14 <./img/Lab_1/Es_4/Mux.png> <./img/Lab_1/Es_4/Mux_plot.png>]
-Overfull \hbox (14.89308pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
- TECHNIQUES \OT1/cmr/m/n/10.95 15
- []
-
-[15 <./img/Lab_1/Es_4/Glitch.png> <./img/Lab_1/Es_4/Mappa_K_coperta.png> <./img
-/Lab_1/Es_4/Mappa_K_supercoperta.png>]
-Overfull \hbox (14.89308pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
- TECHNIQUES \OT1/cmr/m/n/10.95 16
- []
-
-[16]
+[14 <./img/Lab_1/Es_4/Mux.png> <./img/Lab_1/Es_4/Mux_plot.png>] [15 <./img/Lab_
+1/Es_4/Glitch.png> <./img/Lab_1/Es_4/Mappa_K_coperta.png> <./img/Lab_1/Es_4/Map
+pa_K_supercoperta.png>] [16]
 <./img/Lab_1/Es_5/Sync_FA.png, id=103, 143.53625pt x 197.73875pt>
 File: ./img/Lab_1/Es_5/Sync_FA.png Graphic file (type png)
 <use ./img/Lab_1/Es_5/Sync_FA.png>
@@ -1012,12 +924,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 591--620
 
  []
 
-
-Overfull \hbox (14.89308pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
- TECHNIQUES \OT1/cmr/m/n/10.95 17
- []
-
 [17 <./img/Lab_1/Es_5/Sync_FA.png> <./img/Lab_1/Es_5/Half_add_contatore.png> <.
 /img/Lab_1/Es_5/Counter.png>]
 <./img/Lab_1/Es_5/Glitch.png, id=112, 945.03062pt x 312.16624pt>
@@ -1048,12 +954,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 646--680
 
 Underfull \hbox (badness 10000) in paragraph at lines 646--680
 
- []
-
-
-Overfull \hbox (14.89308pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
- TECHNIQUES \OT1/cmr/m/n/10.95 18
  []
 
 [18 <./img/Lab_1/Es_5/Contatore.png>]
@@ -1129,24 +1029,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 725--780
 
  []
 
-
-Overfull \hbox (14.89308pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
- TECHNIQUES \OT1/cmr/m/n/10.95 19
- []
-
-[19 <./img/Lab_1/Es_5/Glitch.png>]
-Overfull \hbox (14.89308pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
- TECHNIQUES \OT1/cmr/m/n/10.95 20
- []
-
-[20 <./img/Lab_1/Es_5/Clk_corto.png>]
-Overfull \hbox (14.89308pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 CHAPTER 1.  LABORATORIO 1 - POWER ESTIMATION: PROBABILISTIC
- TECHNIQUES \OT1/cmr/m/n/10.95 21
- []
-
+[19 <./img/Lab_1/Es_5/Glitch.png>] [20 <./img/Lab_1/Es_5/Clk_corto.png>]
 [21]
 Chapter 2.
 <./img/Lab_2/Datapath.png, id=127, 501.875pt x 419.5675pt>
@@ -1411,11 +1294,6 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 3.
 ) [29]
 Chapter 3.
-
-Overfull \hbox (12.93759pt too wide) in paragraph at lines 1102--1102
-|\OT1/cmr/bx/n/24.88 Laboratorio 3 - Clock gat-ing e soluzioni
- []
-
 <./img/Lab_3/circuito_clk_bug.png, id=166, 646.66594pt x 494.59781pt>
 File: ./img/Lab_3/circuito_clk_bug.png Graphic file (type png)
 <use ./img/Lab_3/circuito_clk_bug.png>
@@ -1962,108 +1840,285 @@ Underfull \hbox (badness 10000) in paragraph at lines 1617--1627
  []
 
 [48] [49] [50] [51] [52]
-Underfull \hbox (badness 10000) in paragraph at lines 1818--1843
+Underfull \hbox (badness 10000) in paragraph at lines 1818--1824
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1818--1843
+Underfull \hbox (badness 10000) in paragraph at lines 1818--1824
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1818--1843
+Underfull \hbox (badness 10000) in paragraph at lines 1818--1824
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1849--1852
+Underfull \hbox (badness 10000) in paragraph at lines 1818--1824
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1849--1852
+Underfull \hbox (badness 10000) in paragraph at lines 1844--1854
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1849--1852
+Underfull \hbox (badness 10000) in paragraph at lines 1844--1854
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1849--1852
+Underfull \hbox (badness 10000) in paragraph at lines 1844--1854
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1849--1852
+Underfull \hbox (badness 10000) in paragraph at lines 1844--1854
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1844--1854
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1844--1854
 
  []
 
 [53]
-Underfull \hbox (badness 10000) in paragraph at lines 1872--1883
+Underfull \hbox (badness 10000) in paragraph at lines 1874--1887
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1872--1883
+Underfull \hbox (badness 10000) in paragraph at lines 1874--1887
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1872--1883
+Underfull \hbox (badness 10000) in paragraph at lines 1874--1887
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1872--1883
+Underfull \hbox (badness 10000) in paragraph at lines 1874--1887
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1874--1887
 
  []
 
 [54] (./code/Lab_4/bus_inv_approfondimento.txt)
 (./code/Lab_4/bus_tran_approfondimento.txt) [55]
-Underfull \hbox (badness 10000) in paragraph at lines 1925--1932
+Underfull \hbox (badness 10000) in paragraph at lines 1929--1936
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1925--1932
+Underfull \hbox (badness 10000) in paragraph at lines 1929--1936
 
  []
 
-[56] (./report_low_power.aux) ) 
+[56]
+Chapter 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1938--1947
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1938--1947
+
+ []
+
+(./code/Lab_5/delay_lh.txt)
+<./img/Lab_5/waveform_1.png, id=284, 1128.215pt x 459.7175pt>
+File: ./img/Lab_5/waveform_1.png Graphic file (type png)
+<use ./img/Lab_5/waveform_1.png>
+Package pdftex.def Info: ./img/Lab_5/waveform_1.png  used on input line 1968.
+(pdftex.def)             Requested size: 398.33858pt x 162.31349pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1960--1974
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1960--1974
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1960--1974
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1960--1974
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1960--1974
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1960--1974
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1960--1974
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1960--1974
+
+ []
+
+[57
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1990--1996
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1990--1996
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1990--1996
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2012--2018
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2012--2018
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2012--2018
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2012--2018
+
+ []
+
+[58 <./img/Lab_5/waveform_1.png (PNG copy)>]
+<./img/Lab_5/waveform_2.png, id=292, 978.65625pt x 431.6125pt>
+File: ./img/Lab_5/waveform_2.png Graphic file (type png)
+<use ./img/Lab_5/waveform_2.png>
+Package pdftex.def Info: ./img/Lab_5/waveform_2.png  used on input line 2023.
+(pdftex.def)             Requested size: 398.33858pt x 175.67802pt.
+<./img/Lab_5/waveform_3.png, id=293, 978.65625pt x 431.6125pt>
+File: ./img/Lab_5/waveform_3.png Graphic file (type png)
+<use ./img/Lab_5/waveform_3.png>
+Package pdftex.def Info: ./img/Lab_5/waveform_3.png  used on input line 2027.
+(pdftex.def)             Requested size: 398.33858pt x 175.67802pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2019--2029
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2019--2029
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2019--2029
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2019--2029
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2019--2029
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2019--2029
+
+ []
+
+[59 <./img/Lab_5/waveform_2.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 2057--2067
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2057--2067
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2057--2067
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2057--2067
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2057--2067
+
+ []
+
+[60 <./img/Lab_5/waveform_3.png (PNG copy)>] [61] (./report_low_power.aux) ) 
 Here is how much of TeX's memory you used:
- 5591 strings out of 492616
- 78230 string characters out of 6129482
+ 5614 strings out of 492616
+ 78769 string characters out of 6129482
  162567 words of memory out of 5000000
- 9342 multiletter control sequences out of 15000+600000
- 14248 words of font info for 53 fonts, out of 8000000 for 9000
+ 9356 multiletter control sequences out of 15000+600000
+ 14585 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,10n,35p,654b,1329s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dv
-ips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr17.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sl10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.
-pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.p
-fb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb
->
-Output written on report_low_power.pdf (57 pages, 2622607 bytes).
+ 41i,10n,35p,703b,1329s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/u
+sr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</us
+r/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr
+/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/
+local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/l
+ocal/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/lo
+cal/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loca
+l/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/
+texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/te
+xlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texl
+ive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texliv
+e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
+019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2019
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2019/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2019/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texmf-
+dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2019/texmf-di
+st/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on report_low_power.pdf (62 pages, 2659698 bytes).
 PDF statistics:
- 341 PDF objects out of 1000 (max. 8388607)
- 181 compressed objects within 2 object streams
+ 364 PDF objects out of 1000 (max. 8388607)
+ 195 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 231 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 246 words of extra memory for PDF output out of 10000 (max. 10000000)
 

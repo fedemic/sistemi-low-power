@@ -56,7 +56,7 @@
 \tableofcontents % imposta l'indice in automatico
 \pagebreak % per passare direttamente alla prossima pagina
 
-\chapter{Laboratorio 1 - Power Estimation: probabilistic techniques}
+\chapter{Power Estimation: probabilistic techniques}
 
 \section{Calcolo di probabilità e attività: porte logiche elementari}
 
@@ -778,7 +778,7 @@ FORSE CI STAREBBE VERIFICARE CON UNA SIMULAZIONE E NEL CASO METTERE I RISULTATI}
                  - Completare le tabelle FATTO\\
                 - Revisione grafica FATTO }  
 \newpage
-\chapter{Laboratorio 2 - FSM Assignment and VHDL Synthesis}    
+\chapter{FSM Assignment and VHDL Synthesis}    
 \section{FSM State Assignment}
 \subsection{Progetto}
 L'obiettivo del progetto è la definizione di una macchina  a stati al fine di realizzare un algoritmo di somma tra 6 input, utilizzando il datapath in figura seguente e scegliendo l'ordine con cui collegare i diversi ingressi ai multiplexer.
@@ -1099,7 +1099,7 @@ Per ragioni di praticità, tali sintesi sono state effettuate raggruppando i com
 \end{listato}
 \end{center}
 
-\chapter{Laboratorio 3 - Clock gating e soluzioni architetturali}
+\chapter{Clock gating e soluzioni architetturali}
 \section{Un primo approccio al clock gating}
 Il clock gating è una tecnica di riduzione dei consumi a livello architetturale, il cui scopo è impedire la commutazione del segnale di clock in determinate parti del circuito non utilizzate.
 \\
@@ -1821,7 +1821,7 @@ L'intero processo è basato su un insieme di script forniti che descrivono la se
 \\\\
 Inizialmente sono stati valutati i contributi di potenza relativi alle sole linee di bus B, riportati nella seguente tabella.
 \\\\
-\textcolor{red}{\begin{center}
+\begin{center}
 	\begin{tabular}{|c|c|c|c|c||c|c|c|c|}
 	\hline
 	Power [uW] & \multicolumn{4}{c}{Address} & \multicolumn{4}{c}{Data}\\
@@ -1836,17 +1836,19 @@ Inizialmente sono stati valutati i contributi di potenza relativi alle sole line
 	\hline
 	GRAY & 0.11 & 0.72 & 3.15 & 6.18 & 0.44 & 2.86 & 12.55 & 24.66 \\
 	\hline
-	T0 & N/A & N/A & N/A & N/A & N/A & N/A & N/A & N/A\\
+	T0 & 0.0009 & 0.0033 & 0.0161 & 0.0322 & 0.73 & 2.49 & 12.15 & 24.22 \\
 	\hline
 	\end{tabular}	
 \end{center}
-\vspace{0.3cm}}
-\textcolor{blue}{Si nota come l'applicazione della codifica BUSINV riduca la potenza dissipata sia per dati che per indirizzi: in quest'ultimo caso i benefici sono particolarmente marcati nel caso di salti frequenti.
+\vspace{0.3cm}
+Osservando tali risultati si nota come vi sia un miglioramento teorico dei consumi utilizzando tutte le codifiche fatta eccezione della TRAN-BASED. La causa di tale eccezione è da ricercare nella distribuzione dei dati generati: questi presentano infatti un numero di 1 elevato.
 \\\\
-Al contrario di quanto atteso, la codifica TRAN-BASED non apporta miglioramenti significativi. La causa di tale risultato è da ricercare nella distribuzione dei dati generati: questi presentano infatti un numero di 1 elevato.
+Si nota come l'applicazione della codifica BUSINV riduca la potenza dissipata sia per dati che per indirizzi: in quest'ultimo caso i benefici sono particolarmente marcati nel caso di salti frequenti.
 \\\\
 La codifica GRAY introduce notevoli miglioramenti nella trasmissione degli indirizzi, si nota infatti che il consumo di potenza è dimezzato rispetto al caso del BUSNORM. Per quanto riguarda i dati non si notano riduzioni nel consumo di potenza.
-\\\\}
+\\\\
+È possibile osservare come la riduzione di potenza dovuta alla codifica T0 sia particolarmente significativa per gli indirizzi. Questo risultato mette in luce la sequenzialità degli indirizzi di test nella simulazione.
+\\\\
 Nella seguente tabella sono invece riportati i risultati relativi al consumo di potenza totale, considerando anche il contributo degli ingressi per le varie codifiche implementate.
 \\\\
 \begin{center}
@@ -1864,7 +1866,7 @@ Nella seguente tabella sono invece riportati i risultati relativi al consumo di 
 	\hline
 	GRAY & 14.85 & 15.47 & 17.91 & 21.75 & 27.48 & 29.95 & 39.67 & 54.15 \\
 	\hline
-	T0 & N/A & N/A & N/A & N/A & N/A & N/A & N/A & N/A \\
+	T0 & 33.53 & 30.80 & 30.87 & 30.55 & 40.73 & 44.33 & 53.87 & 68.30 \\
 	\hline
 	\end{tabular}	
 \end{center}
@@ -1878,6 +1880,8 @@ Osservando i dati relativi alla tecnica BUSINV, si nota come non vi sia alcun mi
 Anche per la codifica TRANSITION-BASED non è rilevato alcun miglioramento. Il motivo principale è sempre da ricercare nella distribuzione dei dati. Questi infatti presentano un numero di 1 significativo, generando una quantità elevata di transizioni.
 \\\\
 Per quanto la codifica GRAY, è possibile notare un miglioramento riguardante la trasmissione di indirizzi. Tale miglioramento risulta sempre più evidente al crescere della capacità di carico del bus: più questa è elevata più il consumo relativo alla logica di codifica e decodifica diventa trascurabile.
+\\\\
+Relativamente alla codifica T0 è possibile notare come, simulando gli indirizzi, il consumo rimanga circa costante. Tale comportamento è dovuto al basso numero di commutazioni che la codifica permette di effettuare sui bus, portando quindi in secondo piano il peso delle capacità di carico. Nonostante ciò, l'overhead dovuto alla logica aggiunta, ha un contributo non trascurabile nei contesti analizzati. È implicito che tale codifica non sia particolarmente adatta alla trasmissione dei dati.
 \\\\
 In generale, nella scelta di una codifica ottimale è importante tenere in considerazione la capacità di carico del bus e confrontarla con la logica necessaria all'implementazione del bus encoding. Infatti, una tecnica in grado di portare un'elevata riduzione delle commutazioni sul bus potrebbe richiedere un consumo di implementazione significativo tale da compensare il risparmio apportato.
 \newpage
@@ -1929,6 +1933,170 @@ Anche in questo caso è possibile osservare un miglioramento, anche se poco marc
 \textcolor{red}{Tabella switching power bus B e confronto con il totale
 \\
 analisi power dinamica e leakage separatamente}
+\chapter{Leakage}
+\section{Caratterizzazione di una NAND high speed}
+L'obiettivo di questa prima parte consiste nella caratterizzazione dell'andamento delle correnti all'interno di una porta NAND in logica CMOS, la cui descrizione è contenuta allinterno del file \textbf{CMOS013.spi}.
+I transistor che definiscono la netlist del gate sono prelevati da una libreria contenente modelli di MOS high speed e low leakage. Tali modelli sono particolarmente complessi dal momento che prendono in considerazione un elevato numero di parametri che influenzano il comportamento del dispositivo.
+\\\\
+In particolare, la netlist descrive il seguente circuito.
+\textcolor{red}{IMMAGINE NETLIST}
+\\\\
+Le direttive di simulazione sono presenti all'interno del file \textbf{nandHS.sp}, all'interno del quale è istanziato il circuito interessato. Sono definiti alimentazione, massa, carico e ingressi del circuito; di questi uno è costante, l'altro è definito da una serie di transizioni.
+\\
+Sono presenti una serie di direttive atte alla misura di vari parametri temporali:
+\begin{itemize}
+\item rise time dell'uscita (10\% - 90\%)
+\item fall time dell'uscita (90\% - 10\%)
+\item delay HL
+\item delay LH
+\end{itemize}
+In particolare, il calcolo del parametro delay LH è stato aggiunto attraverso la seguente direttiva:
+\begin{center}
+\begin{listato}
+	\centerline{\lstinputlisting{./code/Lab_5/delay_lh.txt}}
+\end{listato}
+\end{center}
+\vspace{0.3cm}
+Successivamente è stata lanciata la simulazione relativa all'analisi del transitorio, grazie alla quale è stata ottenuta una stima della potenza totale dissipata.
+\\\\
+\centerline{Total power dissipation: 6.79 nW}
+\\\\
+In seguito è stata effettuata un'analisi delle forme d'onda attraverso il comando:
+\\\\
+\centerline{\textbf{ezwave}}
+\\\\
+\centerline{\includegraphics[width=14cm]{./img/Lab_5/waveform_1.png}}
+\\\\
+In particolare, è possibile notare come l'ingresso A assuma un valore costante mentre B presenti variazioni, che comportano conseguenti commutazioni dell'uscita della porta. Tale comportamento è concorde con quanto atteso.
+\\\\
+Attraverso l'uso di opportuni marker, è stato possibile stimare i parametri di cui sopra. Tali risultati sono confrontati con quelli misurati dal simulatore. I risultati ottenuti sono riportati nella seguente tabella.
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+	\hline
+	Parametro & Valore stimato [ps] & Valore simulato [ps] \\
+	\hline
+	 rise time & 89 &  89.3 \\
+	\hline
+	 fall time & 75 & 74.3 \\
+	\hline
+	delay HL & 49 &  48.99 \\
+	\hline
+	delay LH & 57  &  56.5 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Si nota che i valori in tabella risultano comparabili.
+\\\\
+In seguito sono state stimate le tensioni di soglia dei transistor NMOS e PMOS facenti parte dello schematico, attraverso una simulazione dc.
+\\
+I risultati ottenuti sono riportanti nella seguente tabella.
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|}
+	\hline
+	Parametro & Tensione di soglia [V] \\
+	\hline
+	 V\textsubscript{tn0} & 0.314\\
+	\hline
+	 V\textsubscript{tn1} & 0.272 \\
+	\hline
+	V\textsubscript{tp0} & -0.247 \\
+	\hline
+	V\textsubscript{tp1} & -0.247 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Come possibile notare dallo schematico rappresentato precedentemente, i due NMOS sono disposti in serie. Ciò ha come conseguenza il fatto che le loro tensioni di soglia assumano valori differenti, al contratio i due PMOS, disposti in parallelo, presentano la medesima soglia.
+\\\\
+All'interno di un modello di un transistor è tenuto conto della variazione della tensione di soglia rispetto alla differenza di potenziale tra source e bulk (effetto body) e tra source e drain (DIBL). In particolare, tali tensioni sono differenti per transistor disposti in serie a causa della ripartizione di tensione tra questi.
+\\\\
+\textcolor{blue}{Si nota inoltre che le tensioni di soglia dei PMOS sono, in modulo, leggermente minori rispetto a quelle degli NMOS. A causa della differente mobilità tra elettroni e lacune, i PMOS devono avere dimensioni maggiori, di conseguenza la relativa capacità di gate risulterà maggiore. In particolare, incrementando tale capacità si ha una riduzione della tensione di soglia.}
+\\\\
+\subsection{Caratterizzazione della porta NAND con carico variabile}
+L'obiettivo di questa sezione è consiste nella caratterizzazione delle forme d'onda di tensioni e correnti di uscita della porta NAND high speed nel caso di carico variabile. Si nota che alla descrizione del circuito sono aggiunti dei generatori di tensione denominati \textit{dummy}, che fungono da terminali per la misurazione della corrente attraverso V\textsubscript{dd}, GND e uscita.
+\\\\
+Inizialmente sono state visualizzate le forme d'onda di tensioni e correnti, rappresentate nelle seguenti immagini.
+\\\\
+\centerline{\includegraphics[width=14cm]{./img/Lab_5/waveform_2.png}}
+\\\\
+È possibile notare come, a fronte della medesima variazione in ingresso, l'uscita presenti ritardi di propagazione differenti in funzione del carico.
+\\\\
+\centerline{\includegraphics[width=14cm]{./img/Lab_5/waveform_3.png}}
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|}
+	\hline
+	Parametro & 0.005 fF & 0.05 fF & 0.5 fF & 5 fF & 50fF \\
+	\hline
+	rise time [ps] & 67 & 68 & 71 & 103 & 364\\
+	\hline
+	 fall time [ps] & 69 & 69 & 72 & 99 & 297 \\
+	\hline
+	delay HL [ps] & 20.5 & 21 & 24 & 49 & 180 \\
+	\hline
+	delay LH [ps] & 37.9 & 38 & 42 & 67 & 209 \\
+	\hline
+	max current GND f [uA] & 77 & 77 & 82 & 117 & 241 \\
+	\hline
+	max current GND r [uA] & 46 & 46 & 44 & 35 & 13\\
+	\hline
+	max current V\textsubscript{dd} f [uA] & -48 & -48 & -46 & -34 & -11\\
+	\hline
+	max current V\textsubscript{dd} r [uA] & -70 & -70 & -74 & -103 & -209 \\
+	\hline
+	max current OUT f [uA] & -13 & -1.3 & -12 & -75 & -230 \\
+	\hline
+	max current OUT r [uA] & 12 & 1.1 & 11 & 67 & 200\\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Si nota come all'aumentare della capacità di carico si abbia un incremento dei parametri temporali. Come conseguenza si ha infatti un progressivo incremento delle costanti di tempo per le varie transizioni. 
+\\\\
+Successivamente ad un fronte di salita sull'uscita, è possibile che non solo è presente un contributo di corrente che scorre dall'alimentazione verso il carico, ma anche un contributo verso massa. Tale comportamento è inatteso secondo il comportamento ideale dei transistori. In realtà, in seguito ad una commutazione, vi è un breve intervallo di tempo durante il quale entrambi i dispositivi sono in conduzione, generando un contributo di corrente di corto circuito tra alimentazione e massa. Tale contributo è ben visibile anche osservando i valori riportati in tabella. Si fa presente che tali contributi apportino un incremento della potenza dinamica dissipata.
+\\
+Una situazione duale si presenta in corrispondenza di un fronte di discesa dell'uscita.
+\\\\
+È possibile osservare come i picchi di corrente di corto circuito si riducano con la presenza di capacità di carico maggiori in uscita. Infatti, durante l'intervallo temporale in cui entrambi i MOS sono in conduzione, una capacità di uscita maggiore convoglia un contributo di corrente altrettanto maggiore verso il carico stesso.
+\\\\
+Attraverso una analisi DC sono stati stimati i valori di tensione di soglia e, indipendentemente dalla capacità di carico, sono stati ottenuti i seguenti valori.
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|}
+	\hline
+	Parametro & Tensione di soglia [V] \\
+	\hline
+	 V\textsubscript{tn0} & 0.314\\
+	\hline
+	 V\textsubscript{tn1} & 0.272 \\
+	\hline
+	V\textsubscript{tp0} & -0.247 \\
+	\hline
+	V\textsubscript{tp1} & -0.247 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Si nota come il carico capacitivo della porta non abbia alcun effetto sulla tensione di soglia dei transistori.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
