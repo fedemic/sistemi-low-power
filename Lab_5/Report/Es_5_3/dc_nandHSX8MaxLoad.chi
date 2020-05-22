@@ -1,10 +1,10 @@
   Run on localhost.localdomain (Linux 3.10.0-957.5.1.el7.x86_64)
 
-/software/mentor/ams_2008.1_64/aol/bin/eldo_64.exe -i /home/lp20.9/Desktop/low_power_2020/Lab_5/ese5/src/nandHScharMaxLoad.sp 
+/software/mentor/ams_2008.1_64/aol/bin/eldo_64.exe -i /home/lp20.9/Desktop/low_power_2020/Lab_5/ese5/src/nandHSX8MaxLoad.sp 
 
-1*******22-May-20 *******  ELDO 2008.1 Production(64 bits)  (v6.11_1.1)  *******15:29:08******
+1*******22-May-20 *******  ELDO 2008.1 Production(64 bits)  (v6.11_1.1)  *******15:38:28******
 
-0* Characterizing a nand with maximum load
+0* Characterizing a simple nand X8 with maximum load
 
 0****     INPUT LISTING                                               
 
@@ -5960,27 +5960,27 @@ Warning 902: In file "/home/mg.lowpower/lowpower/ese5/lib/diode.lib" line 181:
     9  *****************************************************
    10  
    11  * the nand  subcircuit is already described in the file CMOS013.spi
-   12  * included above. the name of the subcircuit is ND2HS
-   13  * and its template is: .subckt ND2HS A B Z gnd vdd
+   12  * included above. the name of the subcircuit is ND2HSX8
+   13  * and its template is: .subckt ND2HSX8 A B Z gnd vdd
    14  
    15  
    16  * instance of the nand: can be the same as for mynand
    17  * only the reference to the template name must be changed 
-   18  XNAND INA INB OUTBIS GND_INT VDD_INT ND2HS
-   19  CLOAD OUT 0 LOAD
+   18  XNAND INA8 INB8 OUTBIS GND_INT VDD_INT ND2HSX8
+   19  CLOAD OUT8 0 LOAD
    20  
-   21  vdummy_c outbis out dc 0
-   22  vdummy_gnd gnd_int 0 dc 0
-   23  vdummy_vdd vdd_int vdd dc 0
+   21  vdummy_c8 outbis out8 dc 0
+   22  vdummy_gnd8 gnd_int 0 dc 0
+   23  vdummy_vdd8 vdd_int vdd dc 0
    24  
-   25  .PLOT I(VDUMMY_C)
-   26  .PLOT I(VDUMMY_GND)
-   27  .PLOT I(VDUMMY_VDD)
+   25  .PLOT I(VDUMMY_C8)
+   26  .PLOT I(VDUMMY_GND8)
+   27  .PLOT I(VDUMMY_VDD8)
    28  
    29  *****************************************************
    30  * defining inputs
-   31  vina inA 0 dc 1.2
-   32  vinb inB 0 pwl 0 0 1n 0 '1n+t_tran/0.8' 1.2 2n 1.2 '2n+t_tran/0.8' 0 
+   31  vina inA8 0 dc 1.2
+   32  vinb inB8 0 pwl 0 0 1n 0 '1n+t_tran/0.8' 1.2 2n 1.2 '2n+t_tran/0.8' 0 
    33  v_vdd vdd 0 DC alim
    34  .PARAM ALIM=1.2
    35  
@@ -5991,68 +5991,72 @@ Warning 902: In file "/home/mg.lowpower/lowpower/ese5/lib/diode.lib" line 181:
    40  
    41  *********************************************************
    42  * defining load variations
-   43  .DATA vectorload
+   43  .DATA vectorload8
    44  + load
    45  + 0.06f
    46  + 60.0f
    47  .ENDDATA
    48  
-   49  **********************************************************
-   50  *    Measuring rising and rising times
-   51  .MEASure tran rnand TRIG v(out) VAL='alim*0.1' RISE=1
-   52  +TARG v(out) VAL='alim*0.9' RISE=1
-   53  .MEASure tran fnand TRIG v(out) VAL='alim*0.9' FALL=1
-   54  +TARG v(out) VAL='alim*0.1' FALL=1
-   55  
-   56  *    Measuring delay
-   57  .MEASure tran nanddelayHL TRIG V(inB) VAL='alim*0.5' RISE=1 
-   58  + TARG V(out) VAL='alim*0.5' FALL=1
-   59  
-   60  * ADD THE RISE propagation time measure
-   61  .MEASure tran nanddelayLH TRIG V(inB) VAL='alim*0.5' FALL=1 
-   62  + TARG V(out) VAL='alim*0.5' RISE=1
-   63  
-   64  * Measuring peak current
-   65  .MEASure tran maxIgndF MAX I(vdummy_gnd) FROM=1n TO 2ns 
-   66  .MEASure tran maxIvddR MIN I(vdummy_vdd) FROM=2n TO 3ns 
-   67  .MEASure tran maxIgndR MAX I(vdummy_gnd) FROM=2n TO 3ns 
-   68  .MEASure tran maxIvddF MIN I(vdummy_vdd) FROM=1n TO 2ns 
-   69  .MEASure tran maxIloadF MIN I(vdummy_c) FROM=1n TO 2ns 
-   70  .MEASure tran maxIloadR MAX I(vdummy_c) FROM=2n TO 3ns 
-   71  
-   72  * ADD THE CORRECT MEASURES FOR GND and VDD CURRENTS
-   73  .MEASure tran IgndF I(vdummy_gnd) FROM=1n TO 2ns 
-ERROR  453: In file "./nandHScharMaxLoad.sp" line 73:
+   49  
+   50  **********************************************************
+   51  *    Measuring rising and rising times
+   52  .MEASure tran rnand TRIG v(out8) VAL='alim*0.1' RISE=1
+   53  +TARG v(out8) VAL='alim*0.9' RISE=1
+   54  .MEASure tran fnand TRIG v(out8) VAL='alim*0.9' FALL=1
+   55  +TARG v(out8) VAL='alim*0.1' FALL=1
+   56  
+   57  *    Measuring delay
+   58  .MEASure tran nanddelay TRIG V(inB8) VAL='alim*0.5' RISE=1 
+   59  + TARG V(out8) VAL='alim*0.5' FALL=1
+   60  
+   61  * ADD THE RISE propagation time measure
+   62  .MEASure tran nanddelayLH TRIG V(inB) VAL='alim*0.5' FALL=1 
+   63  + TARG V(out) VAL='alim*0.5' RISE=1
+   64  
+   65  * Measuring peak current
+   66  .MEASure tran maxIgndF MAX I(vdummy_gnd8) FROM=1n TO 2ns 
+   67  .MEASure tran maxIvddR MIN I(vdummy_vdd8) FROM=2n TO 3ns 
+   68  .MEASure tran maxIgndR MAX I(vdummy_gnd8) FROM=2n TO 3ns 
+   69  .MEASure tran maxIvddF MIN I(vdummy_vdd8) FROM=1n TO 2ns 
+   70  .MEASure tran maxIloadF MIN I(vdummy_c8) FROM=1n TO 2ns 
+   71  .MEASure tran maxIloadR MAX I(vdummy_c8) FROM=2n TO 3ns 
+   72  
+   73  * ADD THE CORRECT MEASURES FOR GND and CDD CURRENTS
+   74  .MEASure tran IgndF I(vdummy_gnd8) FROM=1n TO 2ns 
+ERROR  453: In file "./nandHSX8MaxLoad.sp" line 74:
 +   COMMAND .MEAS: Unknown function I
-   74  .MEASure tran IvddR I(vdummy_vdd) FROM=2n TO 3ns 
-ERROR  453: In file "./nandHScharMaxLoad.sp" line 74:
+   75  .MEASure tran IvddR I(vdummy_vdd8) FROM=2n TO 3ns 
+ERROR  453: In file "./nandHSX8MaxLoad.sp" line 75:
 +   COMMAND .MEAS: Unknown function I
-   75  .MEASure tran IgndR I(vdummy_gnd) FROM=2n TO 3ns 
-ERROR  453: In file "./nandHScharMaxLoad.sp" line 75:
+   76  .MEASure tran IgndR I(vdummy_gnd8) FROM=2n TO 3ns 
+ERROR  453: In file "./nandHSX8MaxLoad.sp" line 76:
 +   COMMAND .MEAS: Unknown function I
-   76  .MEASure tran IvddF I(vdummy_vdd) FROM=1n TO 2ns 
-ERROR  453: In file "./nandHScharMaxLoad.sp" line 76:
+   77  .MEASure tran IvddF I(vdummy_vdd8) FROM=1n TO 2ns 
+ERROR  453: In file "./nandHSX8MaxLoad.sp" line 77:
 +   COMMAND .MEAS: Unknown function I
-   77  .MEASure tran IloadF I(vdummy_c) FROM=1n TO 2ns 
-ERROR  453: In file "./nandHScharMaxLoad.sp" line 77:
+   78  .MEASure tran IloadF I(vdummy_c8) FROM=1n TO 2ns 
+ERROR  453: In file "./nandHSX8MaxLoad.sp" line 78:
 +   COMMAND .MEAS: Unknown function I
-   78  .MEASure tran IloadR I(vdummy_c) FROM=2n TO 3ns 
-   79  
-   80  **********************************************************
-   81  * defining the simulation step and duration  
-ERROR  453: In file "./nandHScharMaxLoad.sp" line 78:
+   79  .MEASure tran IloadR I(vdummy_c8) FROM=2n TO 3ns 
+   80  
+   81  **********************************************************
+   82  * defining the simulation step and duration  
+   83  *.tran 1p 3n sweep data=vectorload8
+ERROR  453: In file "./nandHSX8MaxLoad.sp" line 79:
 +   COMMAND .MEAS: Unknown function I
-   82  .tran 1p 3n sweep data=vectorload
-   83  *.dc
-   84  *.print VT(XNAND.XMN0.M1) VT(XNAND.XMN1.M1) VT(XNAND.XMP0.M1) VT(XNAND.XMP1.M1)
-   85  
-   86  * instruction necessary for creating output data
-   87  * to be processed by a waveform viewer 
-   88  .OPTION post
+   84  .DC
+   85  .PRINT VT(XNAND.XMN0.M1) VT(XNAND.XMN1.M1) VT(XNAND.XMN2.M1) VT(XNAND.XMN3.M1) 
+   86  .PRINT VT(XNAND.XMN4.M1) VT(XNAND.XMN5.M1) VT(XNAND.XMN6.M1) VT(XNAND.XMN7.M1)
+   87  .PRINT VT(XNAND.XMP6.M1) VT(XNAND.XMP7.M1) VT(XNAND.XMP6_2.M1) VT(XNAND.XMP7_2.M1)
+   88  .PRINT VT(XNAND.XMP6_3.M1) VT(XNAND.XMP7_3.M1)
    89  
-   90  .OPTION LIMPROBE = 200000
-   91  .OPTION EPS=1.0e-9 NOMOD NOTRC SIMUDIV=4 BE ABSTOL=1e-15
-   92  
+   90  * instruction necessary for creating output data
+   91  * to be processed by a waveform viewer 
+   92  .OPTION post
+   93  
+   94  .OPTION LIMPROBE = 200000
+   95  .OPTION EPS=1.0e-9 NOMOD NOTRC SIMUDIV=4 BE ABSTOL=1e-15
+   96  
 
 End of file 
 
@@ -6066,14 +6070,20 @@ End of file
 
 ***** GENERATION ...
 
-Warning 252: In file "/home/mg.lowpower/lowpower/ese5/lib/CMOS013.spi" line 14:
+Warning 252: In file "/home/mg.lowpower/lowpower/ese5/lib/CMOS013.spi" line 66:
 +   OBJECT "XNAND.C2": Self-connected object not created.
+Warning 113:  NODE "INB": Not connected to any element.
++   This node has been removed from the netlist.
+Warning 113:  NODE "OUT": Not connected to any element.
++   This node has been removed from the netlist.
 Warning 382: COMMAND .OPTION EPS Value set to 1.000000E-09
 +   This setting gives higher accuracy than default tuning,
 +   but simulation time may increase.
+Warning 1479: Some .PLOT, .PRINT and .MEAS commands are declared for TRAN analysis.
++   They are ignored because this analysis is not enabled.
 
 ***** 0  error(s). 
-***** 27  warning(s). 
+***** 30  warning(s). 
 
        6 error(s) related to output converted into warnings. 
      Set option exerr to keep them as errors. 
@@ -6081,16 +6091,16 @@ Warning 382: COMMAND .OPTION EPS Value set to 1.000000E-09
 INFORMATION ABOUT COMPILATION 
 
 
-Memory space allocated (bytes): 9744034
-20 elements
-8 nodes 
+Memory space allocated (bytes): 9844255
+29 elements
+11 nodes 
 5 input signals
 Detail about objects and nodes found in the design...
-Number of nodes                     8
+Number of nodes                     11
 Number of intrinsic nodes           0
 Number of input signals             5
 Number of resistors                 0
-Number of floating capacitors       10
+Number of floating capacitors       9
 Number of grounded capacitors       5
 Number of inductors                 0
 Number of voltage sources           6
@@ -6099,34 +6109,25 @@ Number of dependent sources         0
 Number of diodes                    0
 Number of BJT                       0
 Number of JFET                      0
-Number of MOS                       4
+Number of MOS                       14
 Number of SWITCHES                  0
 Number of transmission lines        0
-Total number of elements            20
-
-
-0************************************************************************************************************************
-
-
-run number 1 out of 2
-   value of parameter LOAD is 6.000000E-17
-1************************************************************************************************************************
-
+Total number of elements            29
 
 Eldo VERSION : ELDO 2008.1 Production(64 bits) Mon Jun 30 08:52:46 GMT 2008
 
-*** DATE: 22-May-2020 15:29:09
+*** DATE: 22-May-2020 15:38:28
 
-*** TITLE: * Characterizing a nand with maximum load
+*** TITLE: * Characterizing a simple nand X8 with maximum load
 
 TEMPERATURE : 27.000000 degrees C
 
 
 
 
-1***************22-May-2020 ***********************  ELDO 2008.1 Production(64 bits)  (v6.11_1.1)  ***********************15:29:09*****************
+1***************22-May-2020 ***********************  ELDO 2008.1 Production(64 bits)  (v6.11_1.1)  ***********************15:38:28*****************
 
-0* Characterizing a nand with maximum load
+0* Characterizing a simple nand X8 with maximum load
 0****                 OPTION SUMMARY                                        TEMPERATURE =   27.000 DEG C
 
 0*************************************************************************************************************************
@@ -6203,174 +6204,120 @@ DC:5 iterations FOR DC analysis
 
 
 
-1***************22-May-2020 ***********************  ELDO 2008.1 Production(64 bits)  (v6.11_1.1)  ***********************15:29:09*****************
+1***************22-May-2020 ***********************  ELDO 2008.1 Production(64 bits)  (v6.11_1.1)  ***********************15:38:28*****************
 
-0* Characterizing a nand with maximum load
-0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+0* Characterizing a simple nand X8 with maximum load
+0****                 DC OPERATING POINT                                   TEMPERATURE =   27.000 DEG C
 
 0*************************************************************************************************************************
 
 
-  NODE         VOLTAGE      NODE         VOLTAGE      NODE         VOLTAGE    
-GND_INT      0.0         INA          1.2000E+00  INB          0.0         
-OUT          1.2000E+00  OUTBIS       1.2000E+00  VDD          1.2000E+00  
-VDD_INT      1.2000E+00  XNAND.NET15  4.0840E-06  
+  NODE         VOLTAGE    
+ GND_INT       0.0       
+ INA8       1.2000E+00
+ INB8       0.0       
+ OUT8       1.2000E+00
+ OUTBIS       1.2000E+00
+ VDD       1.2000E+00
+ VDD_INT       1.2000E+00
+ XNAND.NET132       3.6196E-06
+ XNAND.NET140       3.6196E-06
+ XNAND.NET148       3.6196E-06
+ XNAND.NET156       3.6196E-06
+
 
 
    VOLTAGE SOURCE CURRENT
 
 NAME      CURRENT      VOLTAGE      POWER        
-VDUMMY_C   0.0          0.0          0.0         
-VDUMMY_GND   5.6590E-09   0.0          0.0         
-VDUMMY_VDD  -5.6590E-09   0.0          0.0         
+VDUMMY_C8   0.0          0.0          0.0         
+VDUMMY_GND8   4.1224E-08   0.0          0.0         
+VDUMMY_VDD8  -4.1224E-08   0.0          0.0         
 VINA       0.0          1.2000E+00   0.0         
 VINB       0.0          0.0          0.0         
-V_VDD     -5.6590E-09   1.2000E+00  -6.7908E-09  
+V_VDD     -4.1224E-08   1.2000E+00  -4.9469E-08  
 
-   TOTAL POWER DISSIPATION:  6.7908E-09 WATTS
-
-
+   TOTAL POWER DISSIPATION:  4.9469E-08 WATTS
 
 
 
-Eldo NEWTON: VNTOL=1.000000e-09 RELTOL=1.000000e-06
-
-................................................
-Simulation progress           : 25%
-Elapsed CPU time              : 0h 0mn 0s 0
-................................................
-Simulation progress           : 50%
-Elapsed CPU time              : 0h 0mn 0s 30
-................................................
-Simulation progress           : 75%
-Elapsed CPU time              : 0h 0mn 0s 60
-................................................
-Simulation progress           : 100%
-Elapsed CPU time              : 0h 0mn 0s 70
 
 
-1***************22-May-2020 ***********************  ELDO 2008.1 Production(64 bits)  (v6.11_1.1)  ***********************15:29:09*****************
 
-0* Characterizing a nand with maximum load
-0****                 EXTRACT INFORMATION                                   
-0****   PARAM LOAD =  6.0000E-17
-0****   TEMPERATURE =  2.7000E+01 Celsius
+1***************22-May-2020 ***********************  ELDO 2008.1 Production(64 bits)  (v6.11_1.1)  ***********************15:38:28*****************
+
+0* Characterizing a simple nand X8 with maximum load
+0****                 DC ANALYSIS                                           TEMPERATURE =   27.000 DEG C
 
 0*************************************************************************************************************************
 
 
 
-  RNAND        =  6.7692E-11   targ=  2.2289E-09     trig=  2.1612E-09
-  FNAND        =  6.8976E-11   targ=  1.2076E-09     trig=  1.1386E-09
-  NANDDELAYHL  =  2.0923E-11   targ=  1.1839E-09     trig=  1.1630E-09
-  NANDDELAYLH  =  3.8361E-11   targ=  2.2014E-09     trig=  2.1630E-09
-  MAXIGNDF     =  7.7172E-05     at=  1.1910E-09  from=  1.0000E-09     to=  2.0000E-09
-  MAXIVDDR     = -7.0514E-05     at=  2.2003E-09  from=  2.0000E-09     to=  3.0000E-09
-  MAXIGNDR     =  4.5653E-05     at=  2.1783E-09  from=  2.0000E-09     to=  3.0000E-09
-  MAXIVDDF     = -4.7631E-05     at=  1.1710E-09  from=  1.0000E-09     to=  2.0000E-09
-  MAXILOADF    = -1.4979E-06     at=  1.1940E-09  from=  1.0000E-09     to=  2.0000E-09
-  MAXILOADR    =  1.3693E-06     at=  2.2076E-09  from=  2.0000E-09     to=  3.0000E-09
+Print_Legend 1: VT(XNAND.XMN0.M1)
+Print_Legend 2: VT(XNAND.XMN1.M1)
+Print_Legend 3: VT(XNAND.XMN2.M1)
+Print_Legend 4: VT(XNAND.XMN3.M1)
+              1            2            3            4             
+X 
+  
+ 2.7000E+01   3.1893E-01   2.7763E-01   3.1893E-01   2.7763E-01  
+Y
+1***************22-May-2020 ***********************  ELDO 2008.1 Production(64 bits)  (v6.11_1.1)  ***********************15:38:28*****************
 
-
-***>CPU TIME 0s 070ms <***
-
-
-
-0************************************************************************************************************************
-
-
-run number 2 out of 2
-   value of parameter LOAD is 6.000000E-14
-1************************************************************************************************************************
-
-
-Eldo VERSION : ELDO 2008.1 Production(64 bits) Mon Jun 30 08:52:46 GMT 2008
-
-*** DATE: 22-May-2020 15:29:10
-
-*** TITLE: * Characterizing a nand with maximum load
-
-TEMPERATURE : 27.000000 degrees C
-
-
-***> DC CPU TIME 0s 000ms <***
-
-DC:1 iterations FOR DC analysis
-
-
-
-
-1***************22-May-2020 ***********************  ELDO 2008.1 Production(64 bits)  (v6.11_1.1)  ***********************15:29:10*****************
-
-0* Characterizing a nand with maximum load
-0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
-
-0*************************************************************************************************************************
-
-
-  NODE         VOLTAGE      NODE         VOLTAGE      NODE         VOLTAGE    
-GND_INT      0.0         INA          1.2000E+00  INB          0.0         
-OUT          1.2000E+00  OUTBIS       1.2000E+00  VDD          1.2000E+00  
-VDD_INT      1.2000E+00  XNAND.NET15  4.0840E-06  
-
-
-   VOLTAGE SOURCE CURRENT
-
-NAME      CURRENT      VOLTAGE      POWER        
-VDUMMY_C   0.0          0.0          0.0         
-VDUMMY_GND   5.6590E-09   0.0          0.0         
-VDUMMY_VDD  -5.6590E-09   0.0          0.0         
-VINA       0.0          1.2000E+00   0.0         
-VINB       0.0          0.0          0.0         
-V_VDD     -5.6590E-09   1.2000E+00  -6.7908E-09  
-
-   TOTAL POWER DISSIPATION:  6.7908E-09 WATTS
-
-
-
-
-
-Eldo NEWTON: VNTOL=1.000000e-09 RELTOL=1.000000e-06
-
-................................................
-Simulation progress           : 25%
-Elapsed CPU time              : 0h 0mn 0s 0
-................................................
-Simulation progress           : 50%
-Elapsed CPU time              : 0h 0mn 0s 20
-................................................
-Simulation progress           : 75%
-Elapsed CPU time              : 0h 0mn 0s 40
-................................................
-Simulation progress           : 100%
-Elapsed CPU time              : 0h 0mn 0s 70
-
-
-1***************22-May-2020 ***********************  ELDO 2008.1 Production(64 bits)  (v6.11_1.1)  ***********************15:29:10*****************
-
-0* Characterizing a nand with maximum load
-0****                 EXTRACT INFORMATION                                   
-0****   PARAM LOAD =  6.0000E-14
-0****   TEMPERATURE =  2.7000E+01 Celsius
+0* Characterizing a simple nand X8 with maximum load
+0****                 DC ANALYSIS                                           TEMPERATURE =   27.000 DEG C
 
 0*************************************************************************************************************************
 
 
 
-  RNAND        =  4.2504E-10   targ=  2.6634E-09     trig=  2.2384E-09
-  FNAND        =  3.4177E-10   targ=  1.5622E-09     trig=  1.2205E-09
-  NANDDELAYHL  =  2.0371E-10   targ=  1.3667E-09     trig=  1.1630E-09
-  NANDDELAYLH  =  2.3661E-10   targ=  2.3996E-09     trig=  2.1630E-09
-  MAXIGNDF     =  2.4547E-04     at=  1.3260E-09  from=  1.0000E-09     to=  2.0000E-09
-  MAXIVDDR     = -2.1472E-04     at=  2.3260E-09  from=  2.0000E-09     to=  3.0000E-09
-  MAXIGNDR     =  1.0965E-05     at=  2.1948E-09  from=  2.0000E-09     to=  3.0000E-09
-  MAXIVDDF     = -9.4773E-06     at=  1.1935E-09  from=  1.0000E-09     to=  2.0000E-09
-  MAXILOADF    = -2.3649E-04     at=  1.3276E-09  from=  1.0000E-09     to=  2.0000E-09
-  MAXILOADR    =  2.0627E-04     at=  2.3271E-09  from=  2.0000E-09     to=  3.0000E-09
+Print_Legend 1: VT(XNAND.XMN4.M1)
+Print_Legend 2: VT(XNAND.XMN5.M1)
+Print_Legend 3: VT(XNAND.XMN6.M1)
+Print_Legend 4: VT(XNAND.XMN7.M1)
+              1            2            3            4             
+X 
+  
+ 2.7000E+01   2.7763E-01   3.1893E-01   2.7763E-01   3.1893E-01  
+Y
+1***************22-May-2020 ***********************  ELDO 2008.1 Production(64 bits)  (v6.11_1.1)  ***********************15:38:28*****************
 
-1***************22-May-2020 ***********************  ELDO 2008.1 Production(64 bits)  (v6.11_1.1)  ***********************15:29:10*****************
+0* Characterizing a simple nand X8 with maximum load
+0****                 DC ANALYSIS                                           TEMPERATURE =   27.000 DEG C
 
-0* Characterizing a nand with maximum load
+0*************************************************************************************************************************
+
+
+
+Print_Legend 1: VT(XNAND.XMP6.M1)
+Print_Legend 2: VT(XNAND.XMP7.M1)
+Print_Legend 3: VT(XNAND.XMP6_2.M1)
+Print_Legend 4: VT(XNAND.XMP7_2.M1)
+              1            2            3            4             
+X 
+  
+ 2.7000E+01  -2.4164E-01  -2.4164E-01  -2.4164E-01  -2.4164E-01  
+Y
+1***************22-May-2020 ***********************  ELDO 2008.1 Production(64 bits)  (v6.11_1.1)  ***********************15:38:28*****************
+
+0* Characterizing a simple nand X8 with maximum load
+0****                 DC ANALYSIS                                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+
+Print_Legend 1: VT(XNAND.XMP6_3.M1)
+Print_Legend 2: VT(XNAND.XMP7_3.M1)
+              1            2             
+X 
+  
+ 2.7000E+01  -2.4164E-01  -2.4164E-01  
+Y
+
+1***************22-May-2020 ***********************  ELDO 2008.1 Production(64 bits)  (v6.11_1.1)  ***********************15:38:28*****************
+
+0* Characterizing a simple nand X8 with maximum load
 0****                 ACCOUNTING INFORMATION                                TEMPERATURE =   27.000 DEG C
 
 0*************************************************************************************************************************
@@ -6381,7 +6328,7 @@ Elapsed CPU time              : 0h 0mn 0s 70
 
     NUNODS NCNODS NUMNOD   NUMEL   DIODES    BJT  JFET  MOSFET
 
-         8      8      8      20        0      0     0       4
+         8     11     11      29        0      0     0      14
 
     NUMGC
 
@@ -6390,37 +6337,36 @@ Elapsed CPU time              : 0h 0mn 0s 70
 
     NSTOP    NTERM    PERSPA  
 
-        4       10 3.750e+01
+        7       17 6.531e+01
 
     NUMTTP  NUMRTP  LTERTP  LTERTPNW NWNOCON
 
-       304      85      85      85       0
+         0       0       0       0       0
 
   DIGITAL  INWCALL    ITERNW   MEMSIZE
 
-        0      915 2.350e+00  10529958
+        0        5 5.000e+00  10758145
 
     NDEVCALL       NKIRCH  NMAXCALL      ITERM     LATENCY
 
-        3794            5         3   9.60e-01   0.000e+00%
-
-
-  TRANSIENT JOB TIME                 0
+         248            5         5   0.00e+00   0.000e+00%
 
 
 
 
-***>CPU TIME 0s 070ms <***
 
 
-***>GLOBAL CPU TIME 0s 280ms <***
+***>CPU TIME 0s 000ms <***
 
 
-***>GLOBAL ELAPSED TIME 2s <***
+***>GLOBAL CPU TIME 0s 170ms <***
 
 
-  Job started at 22-May-2020 15:29:08
-  Job end at     22-May-2020 15:29:10
+***>GLOBAL ELAPSED TIME 1s <***
+
+
+  Job started at 22-May-2020 15:38:28
+  Job end at     22-May-2020 15:38:29
 
   Run on localhost.localdomain (Linux 3.10.0-957.5.1.el7.x86_64)
 
