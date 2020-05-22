@@ -2081,27 +2081,278 @@ Attraverso una analisi DC sono stati stimati i valori di tensione di soglia e, i
 \end{center}
 \vspace{0.3cm}
 Si nota come il carico capacitivo della porta non abbia alcun effetto sulla tensione di soglia dei transistori.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\section{Caratterizzazione di porte NAND aventi dimensioni differenti}
+L'obiettivo di questa sezione consiste nel comparare i parametri associati a porte NAND di dimensioni differenti, in particolare sono state considerate le porte descritte nei file \textbf{NANDHScharMaxLoad.sp} \textbf{NANDHSX8MaxLoad.sp}.
+\\
+Dal file \textbf{CMOS13.spi} è stato possibile osservare come le larghezze di canale dei transistor costituenti le due porte fosse differenti, in particolare le dimensioni dei NMOS crescono di un fattore 2 mentre per i PMOS tale fattore è circa pari a 2.65. Inoltre, è possibile notare come, nella definizione della porta X8, sia presente un maggior numero di transistor utilizzati.
+\\\\
+Prima di avviare la simulazione sono state inserite le seguenti direttive al fine di ottenere dati relativi all'andamento delle correnti.
+\begin{center}
+\begin{listato}
+	\centerline{\lstinputlisting{./code/Lab_5/direttive_correnti.txt}}
+\end{listato}
+\end{center}
+\vspace{0.3cm}
+Successivamente sono state analizzate le forme d'onda delle tensioni in uscita alle due porte rispetto alla transizione in ingresso.
+\\\\
+\centerline{\includegraphics[width=14cm]{./img/Lab_5/waveform_4.png}}
+\\\\
+Si nota come il comportamento delle due porte sia comparabile a fronte di un carico non elevato. Al contrario, la differenza dei ritardi di propagazione risulta significativa con carichi maggiori.
+\\\\
+L'andamento delle correnti è di seguito riportato.
+\\\\
+\centerline{\includegraphics[width=14cm]{./img/Lab_5/waveform_5.png}}
+\\\\
+È possibile notare come la porta di dimensioni maggiori sia in grado di pilotare carichi con correnti maggiori, riducendo quindi il ritardo in caso di carichi significativi. Tuttavia, è anche visibile come l'effetto della corrente di corto circuito sia più marcato rispetto alla NAND base.
+\\\\
+Nella seguente tabella sono riportati i ritardi di propagazione ottenuti tramite simulazione.
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|c||c|c|}
+	\hline
+	& \multicolumn{2}{c}{NAND base} & \multicolumn{2}{c}{NAND 8X}\\
+	\hline
+	Parametro & 0.006 fF & 60 fF & 0.006 fF & 60 fF \\
+	\hline
+	rise time [ps] & 67.8 & 425 & 62.3 & 113.4\\
+	\hline
+	 fall time [ps] & 69 & 342 & 63.8 & 107 \\
+	\hline
+	delay HL [ps] & 20.9 & 204 & 17.5 & 57.4  \\
+	\hline
+	delay LH [ps] & 38.4 & 237 & 31.4 & 72.3 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+I ritardi riportati in tabella rispecchiano in modo numerico le stime effettuate sul grafico in precedenza.
+\\\\
+Nella seguente tabella sono riportati i contributi di correnti massime attraverso i nodi di GND, V\textsubscript{dd} ed il carico.
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|c||c|c|}
+	\hline
+	& \multicolumn{2}{c}{NAND base} & \multicolumn{2}{c}{NAND 8X}\\
+	\hline
+	Parametro & 0.006 fF & 60 fF & 0.006 fF & 60 fF \\
+	\hline
+	max current GND f [uA] & 77.2 & 245 & 637 & 1069 \\
+	\hline
+	max current GND r [uA] & 45.7 & 10.9 & 379 & 265 \\
+	\hline
+	max current V\textsubscript{dd} f [uA] & -47.6 & -9.47 & -553 & -259 \\
+	\hline
+	max current V\textsubscript{dd} r [uA] & -70.5 & -215 & -410 & -929  \\
+	\hline
+	max current OUT f [uA] & -1.5 & -237 & -1.71 & -812 \\
+	\hline
+	max current OUT r [uA] & 1.36 & 206 & 1.55 & 727 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Come atteso, un carico maggiore comporta correnti più elevate all'interno dei nodi. Si nota come sia sconveniente l'impiego di una NAND 8X con carico ridotto, dal momento che non vi sono significativi miglioramenti nei ritardi a fronte di correnti maggiori all'interno del circuito.
+\\\\
+Per avere una visione completa sulle differenze dell'implementazione delle due porte, sono di seguito riportati i consumi di potenza. 
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|c||c|c|}
+	\hline
+	& \multicolumn{2}{c}{NAND base} & \multicolumn{2}{c}{NAND 8X}\\
+	\hline
+	Parametro & 0.006 fF & 60 fF & 0.006 fF & 60 fF \\
+	\hline
+	Potenza dissipata [nW] & 6.79 & 6.79 & 49.47 & 49.47\\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+È possibile notare come la porta di dimensioni maggiori sia associata a consumi di potenza maggiori. Si osserva inoltre l'indipendenza della potenza dissipata rispetto al carico utilizzato in uscita. \textcolor{red}{spiegare il motivo}
+\\\\
+Di seguito sono riportati i risultati relativi all'analisi delle tensioni di soglia.
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|}
+	\hline
+	 \multicolumn{2}{c}{NAND base} \\
+	\hline
+	Parametro & Tensione di soglia [V] \\
+	\hline
+	 V\textsubscript{tn0} & 0.314\\
+	\hline
+	 V\textsubscript{tn1} & 0.272 \\
+	\hline
+	V\textsubscript{tp0} & -0.247 \\
+	\hline
+	V\textsubscript{tp1} & -0.247 \\
+	\hline
+	\end{tabular}	
+	\begin{tabular}{|c|c|}
+	\hline
+	 \multicolumn{2}{c}{NAND 8X} \\
+	\hline
+	Parametro & Tensione di soglia [V] \\
+	\hline
+	 V\textsubscript{tn0} & 0.319\\
+	\hline
+	 V\textsubscript{tn1} & 0.278 \\
+	 \hline
+	 V\textsubscript{tn2} & 0.319 \\
+	 \hline
+	 V\textsubscript{tn3} & 0.278 \\
+	 \hline
+	 V\textsubscript{tn4} & 0.278 \\
+	 \hline
+	 V\textsubscript{tn5} & 0.319 \\
+	 \hline
+	 V\textsubscript{tn6} & 0.278 \\
+	\hline
+	 V\textsubscript{tn7} & 0.319 \\
+	 \hline
+	V\textsubscript{tp6} & -0.242 \\
+	\hline
+	V\textsubscript{tp7} & -0.242 \\
+	\hline
+	V\textsubscript{tp6\_2} & -0.242 \\
+	\hline
+	V\textsubscript{tp7\_2} & -0.242 \\
+	\hline
+	V\textsubscript{tp6\_3} & -0.242 \\
+	\hline
+	V\textsubscript{tp7\_3} & -0.242 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+È possibile notare come, nel caso della NAND 8X, gli NMOS presentino tensioni di soglia differenti dovute alla disposizione in serie dei transistor.
+\\
+In particolare, tali valori presentano un incremento rispetto alla NAND standard. Ciò è dovuto all'aumento delle dimensioni dei transistor.
+\section{Caratterizzazione di porte NAND high speed e low leakage}
+Nelle sezioni precedenti è stato utilizzato un modello di NAND ottimizzato per ridurre i ritardi di propagazione. È interessante comparare tale tipo di gate con una porta analoga ottimizzata per ridurre il consumo dovuto al leakage.
+\\
+È stata effettuata un'analisi dei risultati di simulazione analoga a quella svolta nella sezione precedente, considerando anche in questo caso porte aventi dimensioni differenti.
+\\\\
+\centerline{\includegraphics[width=14cm]{./img/Lab_5/waveform_6.png}}
+\\\\
+\centerline{\includegraphics[width=14cm]{./img/Lab_5/waveform_7.png}}
+\\\\
+Osservando le forme d'onda, si nota come l'andamento sia analogo al caso high speed. Le differenze rispetto al caso precedente sono da ricercare nell'ampiezza dei picchi relativi alla corrente di corto circuito.
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|c||c|c|}
+	\hline
+	& \multicolumn{2}{c}{NAND base} & \multicolumn{2}{c}{NAND 8X}\\
+	\hline
+	Parametro & 0.006 fF & 60 fF & 0.006 fF & 60 fF \\
+	\hline
+	rise time [ps] & 72 & 592 & 63 & 138\\
+	\hline
+	 fall time [ps] & 63 & 406 & 57 & 112 \\
+	\hline
+	delay HL [ps] & 32 & 258 & 27 & 78  \\
+	\hline
+	delay LH [ps] & 53 & 331 & 45 & 103 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+In generale, vi è un incremento dei ritardi rispetto alla porta ottimizzata per high speed. Rimane circa invariato il rapporto di aumento di ritardo dovuto all'incremento di capacità di carico.
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|c||c|c|}
+	\hline
+	& \multicolumn{2}{c}{NAND base} & \multicolumn{2}{c}{NAND 8X}\\
+	\hline
+	Parametro & 0.006 fF & 60 fF & 0.006 fF & 60 fF \\
+	\hline
+	max current GND f [uA] & 52 & 194 & 404 & 867 \\
+	\hline
+	max current GND r [uA] & 17 & 3.63 & 133 & 68.3 \\
+	\hline
+	max current V\textsubscript{dd} f [uA] & -20 & -2.48 & -166 & -70 \\
+	\hline
+	max current V\textsubscript{dd} r [uA] & -42 & -152 & -303 & -684  \\
+	\hline
+	max current OUT f [uA] & -1.3 & -187 & -1.52 & -688 \\
+	\hline
+	max current OUT r [uA] & 1.1 & 145 & 1.2 & 543 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Come atteso, i picchi di corrente nel caso della porta low leakage risultano essere di valore inferiore rispetto al caso high speed.
+\\
+Di seguito sono riportati i valori di potenza totale dissipata stimata dal simulatore.
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|c||c|c|}
+	\hline
+	& \multicolumn{2}{c}{NAND base} & \multicolumn{2}{c}{NAND 8X}\\
+	\hline
+	Parametro & 0.006 fF & 60 fF & 0.006 fF & 60 fF \\
+	\hline
+	Potenza dissipata [nW] & 0.45 & 0.45 & 2.97 & 2.97\\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+\textcolor{red}{commento da inserire}
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|}
+	\hline
+	 \multicolumn{2}{c}{NAND base} \\
+	\hline
+	Parametro & Tensione di soglia [V] \\
+	\hline
+	 V\textsubscript{tn0} & 0.413\\
+	\hline
+	 V\textsubscript{tn1} & 0.381 \\
+	\hline
+	V\textsubscript{tp0} & -0.367 \\
+	\hline
+	V\textsubscript{tp1} & -0.367 \\
+	\hline
+	\end{tabular}	
+	\begin{tabular}{|c|c|}
+	\hline
+	 \multicolumn{2}{c}{NAND 8X} \\
+	\hline
+	Parametro & Tensione di soglia [V] \\
+	\hline
+	 V\textsubscript{tn0} & 0.419\\
+	\hline
+	 V\textsubscript{tn1} & 0.386 \\
+	 \hline
+	 V\textsubscript{tn2} & 0.419 \\
+	 \hline
+	 V\textsubscript{tn3} & 0.386 \\
+	 \hline
+	 V\textsubscript{tn4} & 0.386 \\
+	 \hline
+	 V\textsubscript{tn5} & 0.419 \\
+	 \hline
+	 V\textsubscript{tn6} & 0.386 \\
+	\hline
+	 V\textsubscript{tn7} & 0.419 \\
+	 \hline
+	V\textsubscript{tp6} & -0.368 \\
+	\hline
+	V\textsubscript{tp7} & -0.368 \\
+	\hline
+	V\textsubscript{tp6\_2} & -0.368 \\
+	\hline
+	V\textsubscript{tp7\_2} & -0.368 \\
+	\hline
+	V\textsubscript{tp6\_3} & -0.368 \\
+	\hline
+	V\textsubscript{tp7\_3} & -0.368 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Si nota come una tecnologia low leakage preveda la caratterizzazione di transistori con tensioni di soglia maggiori rispetto alla controparte high speed. La corrente di leakage, infatti, presenza una riduzione esponenziale rispetto alla tensione di soglia.
+\\
+\textcolor{red}{COMMENTO}
 
 \end{document}
