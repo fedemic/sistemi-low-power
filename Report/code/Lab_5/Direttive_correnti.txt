@@ -1,0 +1,7 @@
+* ADD THE CORRECT MEASURES FOR GND and CDD CURRENTS
+.measure tran IgndF I(vdummy_gnd8) FROM=1n TO 2ns 
+.measure tran IvddR I(vdummy_vdd8) FROM=2n TO 3ns 
+.measure tran IgndR I(vdummy_gnd8) FROM=2n TO 3ns 
+.measure tran IvddF I(vdummy_vdd8) FROM=1n TO 2ns 
+.measure tran IloadF I(vdummy_c8) FROM=1n TO 2ns 
+.measure tran IloadR I(vdummy_c8) FROM=2n TO 3ns 
