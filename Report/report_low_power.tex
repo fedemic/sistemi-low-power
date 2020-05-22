@@ -2296,7 +2296,7 @@ Di seguito sono riportati i valori di potenza totale dissipata stimata dal simul
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-\textcolor{red}{commento da inserire}
+\textcolor{red}{commento da inserire su confronto tra high speed e low power}
 \\\\
 \begin{center}
 	\begin{tabular}{|c|c|}
@@ -2352,7 +2352,39 @@ Di seguito sono riportati i valori di potenza totale dissipata stimata dal simul
 \end{center}
 \vspace{0.3cm}
 Si nota come una tecnologia low leakage preveda la caratterizzazione di transistori con tensioni di soglia maggiori rispetto alla controparte high speed. La corrente di leakage, infatti, presenza una riduzione esponenziale rispetto alla tensione di soglia.
+\\\\
+\textcolor{red}{COMMENTO su confronto tra high speed e low power}
+\section{Dipendenza dalla temperatura}
+In questa sezione è proposta un'ultima analisi della dipendenza di una porta NAND nei confronti della temperatura. In particolare, è stato considerato il seguente vettore di temperature:
+\\\\
+\centerline{-40°C  0°C   40°C   80°C   120°C   150°C   180°C}
+\\\\
+Per semplicità, tali simulazioni sono state svolte considerando un'unica capacità di carico di valore 0.06 fF.
 \\
-\textcolor{red}{COMMENTO}
+Attingendo dai risultati della simulazione, i valori di potenza totale al variare della temperatura sono stati prelevati e rappresentati graficamente.
+\\\\
+\centerline{\includegraphics[width=10cm]{./img/Lab_5/power_temp.png}}
+\\\\
+Il grafico mette in luce una dipendenza esponenziale della potenza dalla temperatura. In particolare, all'interno del range analizzato, è possibile osservare una variazione di potenza pari a circa un ordine di grandezza. Si nota come, data la dipendenza esponenziale, l'effetto risulti limitato al di sotto di una temperatura pari a 50°C.
+\\\\
+Allo stesso modo è stata analizzata la variazione delle tensioni di soglia al variare della temperatura. 
+\\\\
+\centerline{\includegraphics[width=10cm]{./img/Lab_5/vt_temp.png}}
+\\\\
+\textcolor{red}{cambiare ylabel}
+Si nota una riduzione lineare in modulo delle tensioni di soglia sia degli NMOS sia dei PMOS. All'interno del range di variazione si nota su entrambe una riduzione di circa 150mV. Tale variazione si spiega a causa dell'effetto della temperatura sulla densità di portatori intrinseci, n\textsubscript{i}, la quale tende ad aumentare.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \end{document}

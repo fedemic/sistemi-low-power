@@ -34,3 +34,4 @@
 \contentsline {subsection}{\numberline {5.1.1}Caratterizzazione della porta NAND con carico variabile}{60}% 
 \contentsline {section}{\numberline {5.2}Caratterizzazione di porte NAND aventi dimensioni differenti}{62}% 
 \contentsline {section}{\numberline {5.3}Caratterizzazione di porte NAND high speed e low leakage}{65}% 
+\contentsline {section}{\numberline {5.4}Dipendenza dalla temperatura}{68}% 
