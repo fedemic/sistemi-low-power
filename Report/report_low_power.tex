@@ -1935,13 +1935,14 @@ Anche in questo caso è possibile osservare un miglioramento, anche se poco marc
 analisi power dinamica e leakage separatamente}
 \chapter{Leakage}
 \section{Caratterizzazione di una NAND high speed}
-L'obiettivo di questa prima parte consiste nella caratterizzazione dell'andamento delle correnti all'interno di una porta NAND in logica CMOS, la cui descrizione è contenuta allinterno del file \textbf{CMOS013.spi}.
-I transistor che definiscono la netlist del gate sono prelevati da una libreria contenente modelli di MOS high speed e low leakage. Tali modelli sono particolarmente complessi dal momento che prendono in considerazione un elevato numero di parametri che influenzano il comportamento del dispositivo.
+L'obiettivo di questa prima sezione consiste nella caratterizzazione delle metriche di ritardo temporale di una porta NAND in logica CMOS, la cui descrizione è contenuta all'interno del file \textbf{CMOS013.spi}.
+I transistor che definiscono la netlist del gate sono prelevati da una libreria contenente modelli di MOS high speed e low leakage. Tali modelli sono particolarmente complessi, dal momento che prendono in considerazione la dipendenza da numerosi parametri in grado di influenzare il comportamento del dispositivo.
 \\\\
 In particolare, la netlist descrive il seguente circuito.
+\\\\
 \textcolor{red}{IMMAGINE NETLIST}
 \\\\
-Le direttive di simulazione sono presenti all'interno del file \textbf{nandHS.sp}, all'interno del quale è istanziato il circuito interessato. Sono definiti alimentazione, massa, carico e ingressi del circuito; di questi uno è costante, l'altro è definito da una serie di transizioni.
+Le direttive di simulazione sono presenti all'interno del file \textbf{nandHS.sp}, nel del quale è inoltre istanziato il circuito interessato. Sono definiti alimentazione, massa, carico e ingressi del circuito; di questi uno è costante, l'altro è definito da una serie di transizioni.
 \\
 Sono presenti una serie di direttive atte alla misura di vari parametri temporali:
 \begin{itemize}
@@ -1961,7 +1962,7 @@ Successivamente è stata lanciata la simulazione relativa all'analisi del transi
 \\\\
 \centerline{Total power dissipation: 6.79 nW}
 \\\\
-In seguito è stata effettuata un'analisi delle forme d'onda attraverso il comando:
+In seguito è stata effettuata un'analisi più approfondita osservando le forme d'onda attraverso il comando:
 \\\\
 \centerline{\textbf{ezwave}}
 \\\\
@@ -2011,18 +2012,22 @@ I risultati ottenuti sono riportanti nella seguente tabella.
 \vspace{0.3cm}
 Come possibile notare dallo schematico rappresentato precedentemente, i due NMOS sono disposti in serie. Ciò ha come conseguenza il fatto che le loro tensioni di soglia assumano valori differenti, al contratio i due PMOS, disposti in parallelo, presentano la medesima soglia.
 \\\\
-All'interno di un modello di un transistor è tenuto conto della variazione della tensione di soglia rispetto alla differenza di potenziale tra source e bulk (effetto body) e tra source e drain (DIBL). In particolare, tali tensioni sono differenti per transistor disposti in serie a causa della ripartizione di tensione tra questi.
+All'interno delle equazioni che modellizzano un transistor è infatti tenuto conto della variazione della tensione di soglia rispetto alla differenza di potenziale tra source e bulk (effetto body) e tra source e drain (DIBL). In particolare, tali tensioni sono differenti per transistor disposti in serie a causa della ripartizione di tensione tra questi.
 \\\\
-\textcolor{blue}{Si nota inoltre che le tensioni di soglia dei PMOS sono, in modulo, leggermente minori rispetto a quelle degli NMOS. A causa della differente mobilità tra elettroni e lacune, i PMOS devono avere dimensioni maggiori, di conseguenza la relativa capacità di gate risulterà maggiore. In particolare, incrementando tale capacità si ha una riduzione della tensione di soglia.}
+\textcolor{blue}{Si nota inoltre che le tensioni di soglia dei PMOS sono, in modulo, leggermente minori rispetto a quelle degli NMOS. A causa della differente mobilità tra elettroni e lacune, i PMOS devono avere dimensioni maggiori, di conseguenza la relativa capacità di gate risulterà maggiore. In particolare, incrementando tale capacità si ha una riduzione della tensione di soglia.
+\\\\
+Forse nel file dove ci sono tutte le dipendenze da vth c'è una variazione rispetto a W}
 \\\\
 \subsection{Caratterizzazione della porta NAND con carico variabile}
-L'obiettivo di questa sezione è consiste nella caratterizzazione delle forme d'onda di tensioni e correnti di uscita della porta NAND high speed nel caso di carico variabile. Si nota che alla descrizione del circuito sono aggiunti dei generatori di tensione denominati \textit{dummy}, che fungono da terminali per la misurazione della corrente attraverso V\textsubscript{dd}, GND e uscita.
+L'obiettivo di questa sezione è consiste nella caratterizzazione delle forme d'onda di tensioni e correnti di uscita della porta NAND high speed, nel caso di carico variabile. Si nota che alla descrizione del circuito sono aggiunti dei generatori di tensione denominati \textit{dummy}, che fungono da terminali per la misurazione della corrente attraverso V\textsubscript{dd}, GND e uscita.
 \\\\
 Inizialmente sono state visualizzate le forme d'onda di tensioni e correnti, rappresentate nelle seguenti immagini.
 \\\\
 \centerline{\includegraphics[width=14cm]{./img/Lab_5/waveform_2.png}}
 \\\\
 È possibile notare come, a fronte della medesima variazione in ingresso, l'uscita presenti ritardi di propagazione differenti in funzione del carico.
+\\
+Di seguito è riportato il grafico relativo all'andamento delle correnti e una tabella contenente le stime ottenute per i parametri sotto analisi.
 \\\\
 \centerline{\includegraphics[width=14cm]{./img/Lab_5/waveform_3.png}}
 \\\\
@@ -2054,11 +2059,11 @@ Inizialmente sono state visualizzate le forme d'onda di tensioni e correnti, rap
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-Si nota come all'aumentare della capacità di carico si abbia un incremento dei parametri temporali. Come conseguenza si ha infatti un progressivo incremento delle costanti di tempo per le varie transizioni. 
+Si nota come all'aumentare della capacità di carico si abbia un incremento dei ritardi temporali. Come conseguenza si ha infatti un progressivo incremento delle costanti di tempo per le varie transizioni. 
 \\\\
-Successivamente ad un fronte di salita sull'uscita, è possibile che non solo è presente un contributo di corrente che scorre dall'alimentazione verso il carico, ma anche un contributo verso massa. Tale comportamento è inatteso secondo il comportamento ideale dei transistori. In realtà, in seguito ad una commutazione, vi è un breve intervallo di tempo durante il quale entrambi i dispositivi sono in conduzione, generando un contributo di corrente di corto circuito tra alimentazione e massa. Tale contributo è ben visibile anche osservando i valori riportati in tabella. Si fa presente che tali contributi apportino un incremento della potenza dinamica dissipata.
+Successivamente ad un fronte di salita sull'uscita, è possibile che non solo sia presente un contributo di corrente che scorre dall'alimentazione verso il carico, ma anche un contributo verso massa. Tale comportamento è inatteso secondo il comportamento ideale dei transistori. In realtà, in seguito ad una commutazione, vi è un breve intervallo di tempo durante il quale entrambi i dispositivi sono in conduzione, generando un contributo di corrente di corto circuito tra alimentazione e massa. Si fa presente che tali contributi apportano un incremento della potenza dinamica dissipata.
 \\
-Una situazione duale si presenta in corrispondenza di un fronte di discesa dell'uscita.
+Una situazione duale si presenta in corrispondenza di un fronte di discesa presente sull'uscita.
 \\\\
 È possibile osservare come i picchi di corrente di corto circuito si riducano con la presenza di capacità di carico maggiori in uscita. Infatti, durante l'intervallo temporale in cui entrambi i MOS sono in conduzione, una capacità di uscita maggiore convoglia un contributo di corrente altrettanto maggiore verso il carico stesso.
 \\\\
@@ -2087,6 +2092,8 @@ L'obiettivo di questa sezione consiste nel comparare i parametri associati a por
 Dal file \textbf{CMOS13.spi} è stato possibile osservare come le larghezze di canale dei transistor costituenti le due porte fosse differenti, in particolare le dimensioni dei NMOS crescono di un fattore 2 mentre per i PMOS tale fattore è circa pari a 2.65. Inoltre, è possibile notare come, nella definizione della porta X8, sia presente un maggior numero di transistor utilizzati.
 \\\\
 Prima di avviare la simulazione sono state inserite le seguenti direttive al fine di ottenere dati relativi all'andamento delle correnti.
+\\
+\textcolor{red}{Dobbiamo usare questi valori?}
 \begin{center}
 \begin{listato}
 	\centerline{\lstinputlisting{./code/Lab_5/direttive_correnti.txt}}
@@ -2167,7 +2174,7 @@ Per avere una visione completa sulle differenze dell'implementazione delle due p
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-È possibile notare come la porta di dimensioni maggiori sia associata a consumi di potenza maggiori. Si osserva inoltre l'indipendenza della potenza dissipata rispetto al carico utilizzato in uscita. \textcolor{red}{spiegare il motivo}
+È possibile notare come la porta di dimensioni maggiori sia associata a consumi di potenza più elevati. Si osserva inoltre l'indipendenza della potenza dissipata rispetto al carico utilizzato in uscita. \textcolor{red}{spiegare il motivo}
 \\\\
 Di seguito sono riportati i risultati relativi all'analisi delle tensioni di soglia.
 \\\\
@@ -2226,7 +2233,9 @@ Di seguito sono riportati i risultati relativi all'analisi delle tensioni di sog
 \vspace{0.3cm}
 È possibile notare come, nel caso della NAND 8X, gli NMOS presentino tensioni di soglia differenti dovute alla disposizione in serie dei transistor.
 \\
-In particolare, tali valori presentano un incremento rispetto alla NAND standard. Ciò è dovuto all'aumento delle dimensioni dei transistor.
+In particolare, tali valori presentano un incremento rispetto alla NAND standard. \textcolor{red}{Ciò è dovuto all'aumento delle dimensioni dei transistor
+\\
+Dobbiamo capire se vt aumenta o diminuisce con le dimensioni, o se c'entra altro. Forse conviene fare anche uno schema di come è fatto questo circuito}
 \section{Caratterizzazione di porte NAND high speed e low leakage}
 Nelle sezioni precedenti è stato utilizzato un modello di NAND ottimizzato per ridurre i ritardi di propagazione. È interessante comparare tale tipo di gate con una porta analoga ottimizzata per ridurre il consumo dovuto al leakage.
 \\
@@ -2236,12 +2245,14 @@ Nelle sezioni precedenti è stato utilizzato un modello di NAND ottimizzato per 
 \\\\
 \centerline{\includegraphics[width=14cm]{./img/Lab_5/waveform_7.png}}
 \\\\
-Osservando le forme d'onda, si nota come l'andamento sia analogo al caso high speed. Le differenze rispetto al caso precedente sono da ricercare nell'ampiezza dei picchi relativi alla corrente di corto circuito.
+Osservando le forme d'onda, si nota come l'andamento sia analogo al caso high speed. Le differenze rispetto al caso precedente sono da ricercare nell'ampiezza dei picchi relativi alla corrente di corto circuito e nei differenti ritardi introdotti.
+\\\\
+Nella seguente tabella è riportata l'analisi delle principali metriche temporali.
 \\\\
 \begin{center}
 	\begin{tabular}{|c|c|c||c|c|}
 	\hline
-	& \multicolumn{2}{c}{NAND base} & \multicolumn{2}{c}{NAND 8X}\\
+	& \multicolumn{2}{c}{NAND low leakage} & \multicolumn{2}{c}{NAND high speed}\\
 	\hline
 	Parametro & 0.006 fF & 60 fF & 0.006 fF & 60 fF \\
 	\hline
@@ -2256,12 +2267,14 @@ Osservando le forme d'onda, si nota come l'andamento sia analogo al caso high sp
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-In generale, vi è un incremento dei ritardi rispetto alla porta ottimizzata per high speed. Rimane circa invariato il rapporto di aumento di ritardo dovuto all'incremento di capacità di carico.
+In generale, vi è un incremento dei ritardi nel caso low leakage rispetto a quello high speed. Rimane circa invariato il rapporto di aumento di ritardo dovuto all'incremento di capacità di carico.
+\\\\
+Si passa ora all'analisi relativa alle correnti.
 \\\\
 \begin{center}
 	\begin{tabular}{|c|c|c||c|c|}
 	\hline
-	& \multicolumn{2}{c}{NAND base} & \multicolumn{2}{c}{NAND 8X}\\
+	& \multicolumn{2}{c}{NAND low leakage} & \multicolumn{2}{c}{NAND high speed}\\
 	\hline
 	Parametro & 0.006 fF & 60 fF & 0.006 fF & 60 fF \\
 	\hline
@@ -2280,7 +2293,7 @@ In generale, vi è un incremento dei ritardi rispetto alla porta ottimizzata per
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-Come atteso, i picchi di corrente nel caso della porta low leakage risultano essere di valore inferiore rispetto al caso high speed.
+Come atteso, i picchi di corrente nel caso della porta low leakage assumono valori inferiore rispetto al caso high speed.
 \\
 Di seguito sono riportati i valori di potenza totale dissipata stimata dal simulatore.
 \\\\
@@ -2351,6 +2364,7 @@ Di seguito sono riportati i valori di potenza totale dissipata stimata dal simul
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
+\textcolor{red}{Ma sono giusti i valori di questa tabella?}
 Si nota come una tecnologia low leakage preveda la caratterizzazione di transistori con tensioni di soglia maggiori rispetto alla controparte high speed. La corrente di leakage, infatti, presenza una riduzione esponenziale rispetto alla tensione di soglia.
 \\\\
 \textcolor{red}{COMMENTO su confronto tra high speed e low power}
