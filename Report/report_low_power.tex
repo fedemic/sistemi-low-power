@@ -2252,7 +2252,7 @@ Nella seguente tabella è riportata l'analisi delle principali metriche temporal
 \begin{center}
 	\begin{tabular}{|c|c|c||c|c|}
 	\hline
-	& \multicolumn{2}{c}{NAND low leakage} & \multicolumn{2}{c}{NAND high speed}\\
+	& \multicolumn{2}{c}{NAND base} & \multicolumn{2}{c}{NAND 8X}\\
 	\hline
 	Parametro & 0.006 fF & 60 fF & 0.006 fF & 60 fF \\
 	\hline
@@ -2274,7 +2274,7 @@ Si passa ora all'analisi relativa alle correnti.
 \begin{center}
 	\begin{tabular}{|c|c|c||c|c|}
 	\hline
-	& \multicolumn{2}{c}{NAND low leakage} & \multicolumn{2}{c}{NAND high speed}\\
+	& \multicolumn{2}{c}{NAND base} & \multicolumn{2}{c}{NAND 8X}\\
 	\hline
 	Parametro & 0.006 fF & 60 fF & 0.006 fF & 60 fF \\
 	\hline
@@ -2364,7 +2364,6 @@ Di seguito sono riportati i valori di potenza totale dissipata stimata dal simul
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-\textcolor{red}{Ma sono giusti i valori di questa tabella?}
 Si nota come una tecnologia low leakage preveda la caratterizzazione di transistori con tensioni di soglia maggiori rispetto alla controparte high speed. La corrente di leakage, infatti, presenza una riduzione esponenziale rispetto alla tensione di soglia.
 \\\\
 \textcolor{red}{COMMENTO su confronto tra high speed e low power}
@@ -2386,7 +2385,22 @@ Allo stesso modo è stata analizzata la variazione delle tensioni di soglia al v
 \centerline{\includegraphics[width=10cm]{./img/Lab_5/vt_temp.png}}
 \\\\
 \textcolor{red}{cambiare ylabel}
+\\
 Si nota una riduzione lineare in modulo delle tensioni di soglia sia degli NMOS sia dei PMOS. All'interno del range di variazione si nota su entrambe una riduzione di circa 150mV. Tale variazione si spiega a causa dell'effetto della temperatura sulla densità di portatori intrinseci, n\textsubscript{i}, la quale tende ad aumentare.
+\section{Caratterizzazione di una memoria low leakage}
+Lo scopo di questa sezione consiste nella scelta di un'architettura ottimale di una memoria al fine di ridurre i consumi di potenza.
+\\\\
+A tale scopo, sono stati analizzati i datasheet di un gruppo di memorie caratterizzate da dimensioni, parallelismo e multiplexer di interfacciamento differenti. In particolare, le principali metriche di interesse sono:
+\begin{itemize}
+\item \textbf{Area}: è possibile ottenere una stima di tale parametro considerando i dati relativi a larghezza e altezza della memoria\\
+\item \textbf{Capacità dei pin}: è necessario considerare tali capacità per tenere conto dei consumi relativi all'interfacciamento della memoria con circuiti esterni. Importanti contributi sono le capacità di indirizzi, dati e clock\\
+\item \textbf{Corrente di lettura e scrittura}: sono le principali metriche per la stima della potenza dinamica, è importante notare la dipendenza di tali parametri dalla frequenza di funzionamento\\
+\item \textbf{Corrente stand by}: è il principale parametro per la stima della potenza statica in un contesto in cui non viene effettuato alcun accesso alla memoria, pertanto è un parametro indipendente dalla frequenza di funzionamento\\\\
+\end{itemize}
+Si nota come siano presenti due contributi di potenza: statica e dinamica. Al fine dell'ottimizzazione è importante considerare il contesto in cui la memoria lavora, considerando anche il pattern e la frequenza di accesso ai dati richiesti dal sistema. Per tale motivo, l'ottimizzazione è stata effettuata per due diverse ipotesi.
+\\\\
+La prima ipotesi consiste nel considerare la memoria vicina al processore, per esempio una cache, che deve garantire bassi consumi con accessi frequenti. In questo caso è importante minimizzare il contributo di potenza dinamica, in quanto la memoria si troverà raramente in stand by.
+\\
 
 
 
