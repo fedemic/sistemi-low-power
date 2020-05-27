@@ -36,3 +36,5 @@
 \contentsline {section}{\numberline {5.3}Caratterizzazione di porte NAND high speed e low leakage}{65}% 
 \contentsline {section}{\numberline {5.4}Dipendenza dalla temperatura}{68}% 
 \contentsline {section}{\numberline {5.5}Caratterizzazione di una memoria low leakage}{70}% 
+\contentsline {subsection}{\numberline {5.5.1}Ottimizzazione P\textsubscript {dyn}}{71}% 
+\contentsline {subsection}{\numberline {5.5.2}Ottimizzazione P\textsubscript {s}}{72}% 

@@ -2091,16 +2091,7 @@ L'obiettivo di questa sezione consiste nel comparare i parametri associati a por
 \\
 Dal file \textbf{CMOS13.spi} è stato possibile osservare come le larghezze di canale dei transistor costituenti le due porte fosse differenti, in particolare le dimensioni dei NMOS crescono di un fattore 2 mentre per i PMOS tale fattore è circa pari a 2.65. Inoltre, è possibile notare come, nella definizione della porta X8, sia presente un maggior numero di transistor utilizzati.
 \\\\
-Prima di avviare la simulazione sono state inserite le seguenti direttive al fine di ottenere dati relativi all'andamento delle correnti.
-\\
-\textcolor{red}{Dobbiamo usare questi valori?}
-\begin{center}
-\begin{listato}
-	\centerline{\lstinputlisting{./code/Lab_5/direttive_correnti.txt}}
-\end{listato}
-\end{center}
-\vspace{0.3cm}
-Successivamente sono state analizzate le forme d'onda delle tensioni in uscita alle due porte rispetto alla transizione in ingresso.
+Successivamente alla simulazione sono state analizzate le forme d'onda delle tensioni in uscita alle due porte rispetto alla transizione in ingresso.
 \\\\
 \centerline{\includegraphics[width=14cm]{./img/Lab_5/waveform_4.png}}
 \\\\
@@ -2399,8 +2390,109 @@ A tale scopo, sono stati analizzati i datasheet di un gruppo di memorie caratter
 \end{itemize}
 Si nota come siano presenti due contributi di potenza: statica e dinamica. Al fine dell'ottimizzazione è importante considerare il contesto in cui la memoria lavora, considerando anche il pattern e la frequenza di accesso ai dati richiesti dal sistema. Per tale motivo, l'ottimizzazione è stata effettuata per due diverse ipotesi.
 \\\\
-La prima ipotesi consiste nel considerare la memoria vicina al processore, per esempio una cache, che deve garantire bassi consumi con accessi frequenti. In questo caso è importante minimizzare il contributo di potenza dinamica, in quanto la memoria si troverà raramente in stand by.
+Si ipotizza di partire da un'implementazione definita dalle seguenti caratteristiche:
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|}
+	\hline
+	Righe & 8192\\
+	\hline
+	Parallelismo & 16\\
+	\hline
+	Multiplexer & 16\\
+	\hline
+	Area & A\\
+	\hline
+	Potenza statica & P\textsubscript{s}\\
+	\hline
+	Frequenza & F\\
+	\hline
+	Potenza dinamica & P\textsubscript{dyn}\\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+\subsection{Ottimizzazione P\textsubscript{dyn}}
+La prima ipotesi consiste nel considerare la memoria che deve garantire bassi consumi con accessi frequenti, tali che il contributo di potenza statica sia inizialmente trascurabile. In questo caso è importante minimizzare il contributo di potenza dinamica, in quanto la memoria si troverà raramente in stand by.
+\\\\
+Le metriche da osservare per la riduzione del contributo di potenza dinamica sono le correnti di read/write e la frequenza di accesso che agisce come fattore di scalamento lineare per tale consumo.
 \\
+Come primo accorgimento è possibile applicare, rispetto alla memoria di base, un raddoppio del parallelismo e un dimezzamento del numero di righe, ottenendo una memoria 4096x32. In tal modo le dimensioni della memoria rimangono inalterate, ma sarà disponibile accedere ad un dato di parallelismo doppio rispetto al caso precedente; dunque è possibile mantenere il throughput originale dimezzando la frequenza di accesso.
+\\
+Osservando il valore delle correnti di read/write dai datasheet forniti, è possibile notare come questi presentino una variazione poco significativa alla riduzione delle righe ma, al contrario, aumentano circa di un fattore 1.6 al raddoppiare del parallelismo. La potenza dinamica viene quindi ridotta di un fattore:
+\\
+\begin{itemize}
+\item F\textsubscript{new} = 0.5*F
+\item P\textsubscript{dyn new} = 0.5*1.6*P\textsubscript{dyn} = 0.8*P\textsubscript{dyn}
+\item P\textsubscript{s} = P\textsubscript{s}
+\item A\textsubscript{new} = 1.06*A
+\end{itemize}
+\vspace{0.3cm}
+Nonostante la potenza statica sia stata assunta trascurabile, è importante, ad ogni passo di ottimizzazione, osservare gli effetti che modifiche apportate hanno su questa. In questo caso è possibile notare come la potenza statica rimanga circa invariata.
+\\
+Inoltre, è possibile notare come tale ottimizzazione comporti un leggero aumento di area.
+\\\\\
+Un secondo accorgimento per ridurre la potenza dinamica è la tecnica della parallelizzazione: l'obiettivo è portare il design dell'architettura su più blocchi di memoria in grado di lavorare in parallelo. Partendo dal blocco precedentemente ricavato, di dimensioni 4096x32, è possibile implementare due blocchi di dimensioni 2048x32.
+\\\\
+Si osserva come la dimensione totale rimanga sempre invariata ma, in questo caso, per mantenere lo stesso throughput di partenza è possibile compiere accessi alternativamente alle due memorie, dimezzando quindi la frequenza di accesso a ciascuna di esse. Tale ottimizzazione è possibile sotto l'assunzione di dati opportunamente organizzati per accessi interleaved.
+\\
+Anche in questo caso è necessario osservare come un dimezzamento del numero di righe porti ad una riduzione poco significativa, di circa 5\%, delle correnti di read/write.
+\\
+\begin{itemize}
+\item F\textsubscript{new 2} = 0.5*0.5*F = 0.25*F
+\item P\textsubscript{dyn new 2} = 0.5*0.8*P\textsubscript{dyn} = 0.4*P\textsubscript{dyn}
+\item P\textsubscript{s} = 1.5*P\textsubscript{s}
+\item A\textsubscript{new} = 1.3*1.06*A = 1.378*A
+\end{itemize}
+\vspace{0.3cm}
+Utilizzando questa tecnica si ha però un incremento della potenza statica, in particolare di circa un fattore 1.5 rispetto al caso precedente. In tal caso, è necessario verificare se, dopo tale trasformazione, la potenza sia ancora trascurabile rispetto a quella dinamica; in caso affermativo si può procedere con un ulteriore step di parallelizzazione implementando quattro blocchi di memoria. Tale ottimizzazione si può ripetere fino al raggiungimento di un rapporto ottimale tra potenza statica e dinamica.
+\\
+È importante considerare tale trade off tra potenza statica e dinamica.
+\\
+Si nota inoltre come ogni step di parallelizzazione porti ad un aumento dell'area occupata.
+\\\\
+Un'ultima considerazione risiede nella scelta della profondità del multiplexer dei singoli blocchi che compongono la memoria. Si nota infatti che utilizzare una profondità pari a 4, rispetto al valore iniziale di 16, può portare ad una riduzione ulteriore delle correnti di read/write, di un fattore 1.3. Tale scelta comporta però un contributo di potenza statica maggiore: anche in questo caso è necessario confrontare i due contributi prima di confermare le ottimizzazioni apportate all'architettura.
+\\\\
+In particolare, è stato notato come la profondità del multiplexer sia l'unico parametro che determina una variazione associata alle capacità dei pin di dato.
+\\\\
+\centerline{C\textsubscript{data new} = 0.07*C\textsubscript{data}}
+\\\\
+Un riduzione di tali capacità comporta un consumo di potenza dinamica inferiore nel pilotare i dati in ingresso alla memoria. Ciò va considerato in quanto linee di dato che presentano numerose commutazioni possono portare ad un consumo aggiuntivo nel caso di profondità del mux pari a 16.
+\\\\
+È possibile inoltre notare come, applicando la parallelizzazione, sia possibile ridurre entrambi i contributi di potenza statica e dinamica riducendo la tensione di alimentazione, con particolare attenzione all'effetto che questo ha sui margini di rumore della memoria stessa.
+\subsection{Ottimizzazione P\textsubscript{s}}
+È possibile ipotizzare di trovarsi in un contesto differente in cui la frequenza di accesso alla memoria non è elevata, comportando quindi un contributo di potenza dinamica trascurabile rispetto al contributo statico.
+\\\\
+Si nota come, partendo dalla memoria originale e osservando i datasheet forniti, un qualunque incremento di dimensioni o implementazione di blocchi multipli porterebbe ad un incremento del consumo di potenza statica.
+\\
+Un'ottimizzazione possibile è relativa alla profondità del multiplexer. In questo contesto, un valore pari a 16 risulta essere più indicato in quanto, a costo di un incremento di potenza dinamica, vi è una riduzione del contributo statico.
+\\\\
+Poiché la frequenza di accesso non è elevata, sarebbe possibile ridurre il consumo statico imponendo una modalità di data retention tra un accesso e l'altro applicabile con una riduzione della tensione di alimentazione.
+\\\\
+\textcolor{red}{AGGIUNGERE EVENTUALE ESEMPIO}
+\\\\
+\textcolor{red}{
+schema netlist base e 8x\\
+variazione vth tra nmos e pmos\\
+potenze uguali con carichi diversi (lasciare solo differenza base/8x?)\\
+riformulare tabelle tra base e 8x (tabelle lunghe)\\
+controllare completezza confronto high speed low power\\
+cambiare ylabel 5.4\\
+esempio memoria?
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
