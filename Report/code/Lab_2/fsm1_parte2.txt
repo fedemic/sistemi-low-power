@@ -1,0 +1,19 @@
+	Output_evaluation: process(p_s)
+	begin
+		case p_s is
+
+			when AB => S11 <= '0'; S10 <= '1'; S01 <= '0'; S00 <= '1';
+			when SC => S11 <= '0'; S10 <= '0'; S01 <= '0'; S00 <= '0';
+			when SD => S11 <= '0'; S10 <= '0'; S01 <= '1'; S00 <= '0';
+			when SE => S11 <= '1'; S10 <= '0'; S01 <= '1'; S00 <= '1';
+			when SF => S11 <= '1'; S10 <= '1'; S01 <= '1'; S00 <= '1';
+		end case;
+	end process Output_evaluation;
+
+end behavior;
+
+
+configuration CFG_FSM_OPC of fsm1 is
+	for  behavior
+	end for;
+end CFG_FSM_OPC;

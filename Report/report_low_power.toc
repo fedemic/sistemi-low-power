@@ -39,4 +39,4 @@
 \contentsline {subsection}{\numberline {5.5.1}Ottimizzazione P\textsubscript {dyn}}{70}%
 \contentsline {subsection}{\numberline {5.5.2}Ottimizzazione P\textsubscript {s}}{71}%
 \contentsline {chapter}{\numberline {6}Appendice A}{73}%
-\contentsline {section}{\numberline {6.1}Laboratorio 2 - FSM}{74}%
+\contentsline {section}{\numberline {6.1}Laboratorio 2 - FSM}{73}%
