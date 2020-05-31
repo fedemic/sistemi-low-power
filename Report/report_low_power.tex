@@ -60,12 +60,12 @@
 
 \section{Calcolo di probabilità e attività: porte logiche elementari}
 
-Il primo esercizio consiste nel valutare le probabilità e attività dell'uscita di 
+Il primo esercizio consiste nel valutare probabilità e attività dell'uscita di 
 quattro porte logiche elementari: NOT, AND, OR e XOR.
 \\\\
 \centerline{\includegraphics[width=12cm]{./img/Lab_1/Es_1/Porte.png}}
 \\\\
-Mentre la probabilità di uscita del gate è definita dalla funzione logica
+Mentre la probabilità dell'uscita del gate è definita dalla funzione logica
 stessa, la switching activity è valutata allo stesso modo per tutti i casi, 
 mediante la seguente formula:
 \\\\
@@ -89,8 +89,8 @@ ingressi equiprobabili e scorrelati.
 	$P(Y=1) = P(A=1) \cdot(1-P(B=1)) + P(B=1) \cdot(1-P(A=1)) = 0.5$ \\
 	$A(Y) = 0.5$ 
 \end{itemize} 
-Simulando il testbench fornito tramite ModelSim, è possibile ottenere un file 
-riportante il numero di commutazioni di ogni segnale del circuito durante il 
+Attraverso una simulazione ModelSim, è possibile ottenere un file 
+contenente il numero di commutazioni di ogni segnale del circuito durante il 
 tempo di simulazione.
 \\
 Il testbench fornito sfrutta un generatore di numeri casuali per generare gli 
@@ -169,10 +169,10 @@ Dalle tavole di verità di Half Adder e Full Adder si ottengono le seguenti funz
 	\item \textbf{Full adder} \\
 	\centerline{S = A XOR B XOR Cin} \\
 	\centerline{Cout = A AND B AND Cin} \\
-	\textcolor{red}{non dovrebbe essere: Cout = (A AND B) OR (A AND Cin) OR (B AND Cin) OR (A AND B AND Cin) ?}\\
+	\textcolor{red}{FEDE: non dovrebbe essere: Cout = (A AND B) OR (A AND Cin) OR (B AND Cin) OR (A AND B AND Cin) ? SIMO: Concordo. Si potrebbe anche scrivere ((A XOR B) AND Cin) OR (A AND B)}\\
 \end{itemize}
 Partendo dalle funzioni logiche che descrivono le uscite è stato possibile ricavare le probabilità
-associate alle uscite e le relative attività.
+associate ad esse e le relative attività.
 \begin{itemize}
 	\item \textbf{Half adder}\\
 	\begin{align*}
@@ -199,7 +199,8 @@ I risultati ottenuti sono riportati nella seguente tabella.
 \vspace{0.3cm}
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|}
-	\multicolumn{5}{c}{P(A) = P(B) = 0.5 }\\
+	\hline
+	\multicolumn{5}{|c|}{P(A) = P(B) = 0.5  }\\
 	\hline
 	  & P(S=1) & A(S) & P(Cout=1) & A(Cout) \\ 
 	\hline
@@ -220,7 +221,7 @@ I risultati ottenuti sono riportati nella seguente tabella.
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
 \hline
-\multicolumn{10}{c}{P(A) = P(B) = 0.5}\\
+\multicolumn{10}{|c|}{P(A) = P(B) = 0.5}\\
 \hline
  & S7 & S6 & S5 & S4 & S3 & S2 & S1 & S0 & Cout \\
 \hline
@@ -236,7 +237,7 @@ Variando le probabilità associate agli ingressi, in particolare considerando P(
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
 \hline
-\multicolumn{10}{c}{P(A) = 0.4 e P(B) = 0.6}\\
+\multicolumn{10}{|c|}{P(A) = 0.4 e P(B) = 0.6}\\
 \hline
  & S7 & S6 & S5 & S4 & S3 & S2 & S1 & S0 & Cout \\
 \hline
@@ -282,6 +283,8 @@ A(S) & 3.845 & 7.925\\
 \centerline{\includegraphics[width=15cm]{./img/Lab_1/Es_2/Glitch.png}}
 \vspace{0.3cm}
 È possibile notare, attraverso le waveforms, la presenza di commutazioni indesiderate nel secondo caso, rappresentato dal vettore di segnali s2.
+\\
+Sono di seguito riportati i risultati di un ulteriore simulazione atta a mettere in luce le commutazioni spurie dei segnali di somma.
 \\\\
  \centerline{\includegraphics[width=15cm]{./img/Lab_1/Es_2/Glitch_worst_case.png}}
 \\\\
@@ -336,15 +339,16 @@ In tal modo il fenomeno di propagazione dei carry e delle commutazioni delle usc
 \newpage
 \section{Sintesi e analisi di potenza di un RCA}
 È possibile effettuare una stima di potenza avanzata attraverso la piattaforma Synopsys. 
-Partendo infatti dalla descrizione VHDL del RCA fornito, il software è in grado di compiere una sintesi ottimizzata e valutare parametri del circuito basandosi su una libreria di celle caratterizzate dal punto di vista di area, consumi e ritardi.
+Partendo infatti dalla descrizione VHDL del RCA fornito, il software è in grado di compiere una sintesi ottimizzata e mappare il circuito su una libreria di celle caratterizzate dal punto di vista di area, consumi e ritardi.
 \\\\
-Per poter stimare la potenza dinamica è necessario conoscere la frequenza di lavoro del circuito, ottenuta valutando il percorso combinatorio con ritardo maggiore: è possibile valutare tale parametro del circuito attraverso un timing report.
+Per poter stimare la potenza dinamica è necessario conoscere la frequenza di lavoro del circuito, ottenuta valutando il percorso combinatorio con ritardo maggiore: è possibile ottenere tale parametro attraverso un timing report.
 Il ritardo massimo riportato è pari a 0.78ns, di conseguenza è stato scelto un periodo di clock pari a 1ns.\\
 Successivamente è possibile procedere con l'analisi relativa alla potenza.
 Il comando power report consente di ottenere una generica stima della potenza dissipata dal circuito, distinguendo tre contributi:
 \begin{itemize}
 \item \textbf{leakage}: consumo statico dovuto alle correnti di leakage dei dispositivi utilizzati
-\item \textbf{internal}: contributo alla potenza dinamica totale dovuto alla corrente di corto circuito
+\item \textbf{internal}: contributo alla potenza dinamica totale dovuto alla corrente di corto circuito.
+\textcolor{red}{SIMO: contributo di potenza dinamica dovuto al consumo interno delle celle utilizzate per la sintesi del circuito, comprende al suo interno il contributo di corrente di corto circuito}
 \item \textbf{switching}: contributo alla potenza dinamica dovuto alle commutazioni dei nodi e alle relative cariche/scariche delle capacità
 \end{itemize}
 Nella seguente tabella è riportata la suddivisione dei tre contributi.
@@ -388,7 +392,7 @@ L'apporto maggiore al consumo totale è dato dalla potenza dinamica, in particol
 	\end{tabular}
 \end{center}
 \vspace{0.3cm}
-Si nota come la suddivisione risulti simile per tutti i FA fatta eccezione per FA(8). In particolare si differenzia dagli altri per il consumo relativo alla potenza di switch. Si ipotizza che quest'ultima risulti inferiore rispetto agli altri full adder a causa del minor carico di uscita.
+Si nota come la suddivisione risulti simile per tutti i FA fatta eccezione per FA(8). In particolare quest'ultimo si differenzia dagli altri per il consumo relativo alla potenza di switch. Si ipotizza che quest'ultima risulti inferiore rispetto agli altri full adder a causa del minor carico di uscita.
 \\\\
 È inoltre possibile approfondire l'analisi di potenza considerando i contributi delle celle interne ai singoli moduli. In particolare, vengono messi in luce i contributi delle celle che compongono i singoli FA, sempre suddivisi nei tre contributi precedentemente descritti.
 Per comprendere l'origine del consumo inferiore del FA8, quest'ultimo è stato analizzato come cella ed è stato confrontato con FA1.
