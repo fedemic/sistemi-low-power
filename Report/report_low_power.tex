@@ -856,9 +856,11 @@ Si è notato che tali funzioni logiche presentano un'implementazione semplice co
 È possibile notare che le funzioni logiche presentano implicanti in comune, semplificando maggiormente la logica necessaria.
 \\
 \subsection{Descrizione VHDL e simulazione Modelsim}
-La macchina a stati precedentemente definita è stata descritta attraverso il VHDL, specificando in particolare la codifica degli stati progettata.
-\\\\
-\textcolor{red}{DOBBIAMO METTERE IL VHDL? fare eventuale appendice}
+La macchina a stati precedentemente definita è stata descritta attraverso in VHDL, specificando in particolare la codifica degli stati progettata.
+\\
+Il codice implementato è riportato nell'Appendice A alla sezione \textit{Laboratorio 2 - FSM}.
+\\
+\textcolor{red}{RISOLVERE: non importa l'intero file txt ma ne taglia una parte}
 \\\\
 Al fine della simulazione, datapath e FSM sono stati inclusi in un'unica entity per ottenere il Processing Element complessivo. È stato dunque realizzato un testbench per verificare il corretto susseguirsi degli stati e le relative transizioni dei segnali.
 In particolare, è stata effettuata una simulazione di 2000 colpi di clock, che ha fornito i seguenti risultati attraverso un power report.
@@ -906,7 +908,7 @@ Sono stati effettuati una serie di report inizialmente sulla top level entity pe
 \\
 In primo luogo è stata ottenuta una stima dell'area delle celle utilizzate nella sintesi, attraverso il comando \textbf{report\_area}.
 \\\\
-\centerline{Total cell area = 295.53 um2}
+\centerline{Total cell area = 295.53 um$^2$}
 \\\\
 Successivamente, al fine di valutare lo slack, sono stati analizzati i 10 percorsi combinatori con ritardi maggiori.
 \\\\
@@ -1015,14 +1017,14 @@ Dal momento che la potenza dissipata è funzione della frequenza di lavoro, è s
 \vspace{0.3cm} 
 A seguito di un incremento della frequenza di un fattore di circa 5, la potenza è aumentata proporzionalmente.
 \\\\
-\textcolor{red}{È inoltre possibile imporre un vincolo sul contributo totale di potenza dinamica, attraverso la direttiva
+È inoltre possibile imporre un vincolo sul contributo totale di potenza dinamica, attraverso la direttiva:
 \\\\
 \centerline{\textbf{set\_max\_dynamic\_power}}
 \\\\
 Tale valore è stato fissato a 40 uW, leggermente inferiore rispetto alla potenza dinamica ottenuta nelle prime simulazioni.
 \\
 In particolare, è stato considerato il clock di partenza di periodo pari a 10 ns.
-Di seguito sono riportati i risultati ottenuti.}
+Di seguito sono riportati i risultati ottenuti.
 \\
 \begin{center}
 	\begin{tabular}{|c|c|c|}
@@ -1038,11 +1040,11 @@ Di seguito sono riportati i risultati ottenuti.}
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}  
-\textcolor{red}{I risultati ottenuti dalla sintesi non risultano in linea con quanto atteso, infatti è registrato un aumento del consumo di potenza dinamica.
+I risultati ottenuti dalla sintesi non risultano in linea con quanto atteso, infatti è registrato un aumento del consumo di potenza dinamica.
 \\
-Si ipotizza che il consumo di potenza dinamica ottenuto nella prima sintesi fosse già prossimo al minimo globale.}
+Si ipotizza che il consumo di potenza dinamica ottenuto nella prima sintesi fosse già prossimo al minimo globale.
 \\\\
-Successivamente è stata effettuata un'analisi più dettagliata della FSM accedendovi tramite la direttiva\textbf{ current\_instance FSM}.\\
+Successivamente, è stata effettuata un'analisi più dettagliata della FSM accedendovi tramite la direttiva\textbf{ current\_instance FSM}.\\
 Attraverso il comando \textbf{report\_fsm} è stato possibile verificare la corretta implementazione della codifica progettata.
 \\\\
 È possibile risalire alla suddivisione del consumo della potenza dinamica all'interno delle celle che costituiscono la FSM attraverso un'analisi di potenza di tipo \textbf{-cell}. In particolare, nella seguente tabella vengono riportati i tre contributi maggiori relativi al consumo di potenza dinamica.
@@ -1060,7 +1062,7 @@ Attraverso il comando \textbf{report\_fsm} è stato possibile verificare la corr
 \end{center}
 \vspace{0.3cm}
 Si nota che tali contributi sono relativi alle variabili di stato, che presentano numerose commutazioni durante l'esecuzione dell'algoritmo.
-\\
+\\\\
 Uno studio più approfondito sulla switching power relativa ai nodi interni è ottenuta tramite un'analisi di tipo \textbf{-net}. In particolare, nella seguente tabella, sono riportati i dati relativi ai segnali di uscita della FSM, ovvero i segnali di selezione dei multiplexer.
 \\
 \begin{center}
@@ -1081,7 +1083,7 @@ Uno studio più approfondito sulla switching power relativa ai nodi interni è o
 \vspace{0.3cm}
 È possibile notare che tali valori coincidono con quelli ottenuti precedentemente durante l'analisi -net della top level entity. Il contributo maggiore del consumo è dovuto alle capacità di carico dei nodi in analisi, che assumono  valori significativi rispetto agli altri nodi. Questo è il principale motivo per cui tali segnali contribuiscono maggiormente, data la parità di toggle rate.
 \\\\
-Per ragioni di praticità, tali sintesi sono state effettuate raggruppando i comandi e le direttive in uno script in modo darendere il processo automatico. Di seguito è riportato uno degli script utilizzati.
+Per ragioni di praticità, tali sintesi sono state effettuate raggruppando i comandi e le direttive in uno script in modo da rendere il processo automatico. Di seguito è riportato uno degli script utilizzati.
 \begin{center}
 \begin{listato}
 	\centerline{\lstinputlisting{./code/Lab_2/commands.txt}}
@@ -2469,8 +2471,13 @@ controllare completezza confronto high speed low power\\
 cambiare ylabel 5.4\\
 esempio memoria?
 }
-
-
+\chapter{Appendice A}
+\section{Laboratorio 2 - FSM}
+\begin{center}
+\begin{listato}
+	\centerline{\lstinputlisting{./code/Lab_2/fsm1.txt}}
+\end{listato}
+\end{center}
 
 
 
