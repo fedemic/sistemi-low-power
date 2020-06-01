@@ -1156,7 +1156,7 @@ Successivamente alla generazione di un clock di periodo pari a 5 ns, è stato ef
 \begin{center}
 	\begin{tabular}{|c|c|c|c|}
 	\hline
-	\multicolumn{4}{c}{Power report - no clock gating, statistica di default} \\
+	\multicolumn{4}{|c|}{Power report - no clock gating, statistica di default} \\
 	\hline
 	Internal power [uW] & Net switching power [uW] & Leakage power [uW] & Total power [uW] \\
 	\hline
@@ -1194,7 +1194,7 @@ Tali valori non sono realistici rispetto ai segnali presi in considerazione.
 \begin{center}
 	\begin{tabular}{|c|c|c|c|}
 	\hline
-	\multicolumn{4}{c}{Power report - no clock gating, reset modificato}\\
+	\multicolumn{4}{|c|}{Power report - no clock gating, reset modificato}\\
 	\hline
 	Internal power [uW] & Net switching power [uW] & Leakage power [uW] & Total power [uW] \\
 	\hline
@@ -1208,7 +1208,7 @@ In seguito, impostando le statistiche relative ai segnali INCA e INCB con static
 \begin{center}
 	\begin{tabular}{|c|c|c|c|}
 	\hline
-	\multicolumn{4}{c}{Power report - no clock gating, reset e ingressi modificati}\\
+	\multicolumn{4}{|c|}{Power report - no clock gating, reset e ingressi modificati}\\
 	\hline
 	Internal power [uW] & Net switching power [uW] & Leakage power [uW] & Total power [uW] \\
 	\hline
@@ -1230,13 +1230,13 @@ Per ottenere il numero totale di celle utilizzato dal sintetizzatore, è stata r
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-Attraverso una particolare descrizione VHDL, è possibile notificare al sintetizzatore la possibilità di implementare la tecnica del clock gating, che può essere richiesta nella fase di sintesi attraverso la direttiva \textbf{-gate\_clock}.
+Attraverso una particolare descrizione VHDL, è possibile notificare al sintetizzatore la possibilità di implementare, attraverso opportune celle, la tecnica del clock gating, che può essere richiesta nella fase di sintesi attraverso la direttiva \textbf{-gate\_clock}.
 Utilizzando sempre un clock di periodo 5 ns, sono stati ottenuti i seguenti risultati, includendo sempre i contributi dovuti ai nodi di ingresso.       
 \\
 \begin{center}
 	\begin{tabular}{|c|c|c|c|}
 	\hline
-	\multicolumn{4}{c}{Power report - clock gating, statistiche di default}\\
+	\multicolumn{4}{|c|}{Power report - clock gating, statistiche di default}\\
 	\hline
 	Internal power [uW] & Net switching power [uW] & Leakage power [uW] & Total power [uW] \\
 	\hline
@@ -1251,7 +1251,7 @@ Successivamente, come effettuato in precedenza, sono state modificate le statist
 \begin{center}
 	\begin{tabular}{|c|c|c|c|}
 	\hline
-	\multicolumn{4}{c}{Power report - clock gating, reset e ingressi modificati}\\
+	\multicolumn{4}{|c|}{Power report - clock gating, reset e ingressi modificati}\\
 	\hline
 	Internal power [uW] & Net switching power [uW] & Leakage power [uW] & Total power [uW] \\
 	\hline
@@ -1282,7 +1282,7 @@ Si nota la presenza di due strutture aggiuntive che controllano il clock in ingr
 \\\\
 \centerline{\includegraphics[width=10cm]{./img/Lab_3/clock_gating_implementation.png}}
 \\\\       
-Si nota che non è presente nessuna struttura adibita al clock gating sul registro in uscita. Infatti, dalla descrizione VHDL, il sintetizzatore non è in grado di riconoscere la possibilità di applicare il clock gating. A tal proposito, il codice è stato modificato al fine di includere questa opzione.
+Si nota che non è presente alcuna struttura adibita al clock gating sul registro in uscita; infatti, dalla descrizione VHDL, il sintetizzatore non è in grado di riconoscere la possibilità di applicare il clock gating. A tal proposito, il codice è stato modificato al fine di includere questa opzione.
 \begin{center}
 \begin{listato}
 	\centerline{\lstinputlisting{./code/Lab_3/clock_gating_output.vhd}}
@@ -1294,7 +1294,7 @@ Nelle seguenti tabelle sono riportati i risultati relativi ai consumi.
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|}
 	\hline
-	\multicolumn{3}{c}{Power report - statistiche di default}\\
+	\multicolumn{3}{|c|}{Power report - statistiche di default}\\
 	\hline
 	& No clock gating & Clock gating \\
 	\hline
@@ -1312,7 +1312,7 @@ Nelle seguenti tabelle sono riportati i risultati relativi ai consumi.
 \begin{center}
 	\begin{tabular}{|c|c|c|}
 	\hline
-	\multicolumn{3}{c}{Power report - reset modificato}\\
+	\multicolumn{3}{|c|}{Power report - reset modificato}\\
 	\hline
 	& No clock gating & Clock gating \\
 	\hline
@@ -1330,7 +1330,7 @@ Nelle seguenti tabelle sono riportati i risultati relativi ai consumi.
 \begin{center}
 	\begin{tabular}{|c|c|c|}
 	\hline
-	\multicolumn{3}{c}{Power report - reset e ingressi modificati}\\
+	\multicolumn{3}{|c|}{Power report - reset e ingressi modificati}\\
 	\hline
 	& No clock gating & Clock gating \\
 	\hline
@@ -1345,14 +1345,14 @@ Nelle seguenti tabelle sono riportati i risultati relativi ai consumi.
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}          
-Si nota che il clock gating porta ad una riduzione generale della potenza, come già verificato in precedenza. Tuttavia, applicando il clock gating, la potenza di leakage presenta una riduzione: si ipotizza che tale comportamento sia correlato ad una riduzione delle celle utilizzate.
+Si nota che il clock gating porta ad una riduzione generale della potenza, come già verificato in precedenza. Tuttavia, applicando tale tecnica, la potenza di leakage presenta una riduzione: si ipotizza che tale comportamento \textcolor{red}{inatteso} sia correlato ad una riduzione delle celle utilizzate.
 \\
 Per verificare ciò è stato effettuato un report di tipo \textbf{-cell}.
 \\
 \begin{center}
 	\begin{tabular}{|c|c|c|}
 	\hline
-	\multicolumn{3}{c}{Cell report - reset e ingressi modificati}\\
+	\multicolumn{3}{|c|}{Cell report - reset e ingressi modificati}\\
 	\hline
 	& No clock gating & Clock gating \\
 	\hline
@@ -1370,11 +1370,11 @@ Si ipotizza che, a causa della modifica apportata al file VHDL, il sintetizzator
 Il numero di celle risulta comunque maggiore rispetto al caso in cui il clock gating viene applicato solamente ai registri REG\_A e REG\_B.
 \\
 \subsection{Simulazione di consumi tramite back-annotation}
-Al fine di ottenere una stima più accurata del consumo di potenza del circuito preso in considerazione, è necessario avere valutazione più realistica dell'attività dei singoli nodi del circuito sintetizzato. A tale scopo è possibile effettuare una simulazione back-annotated, generando post-sintesi un file contenente la descrizione della netlist del circuito.
+Al fine di ottenere una stima più accurata del consumo di potenza del circuito preso in considerazione, è necessario avere una valutazione più realistica dell'attività dei singoli nodi del circuito sintetizzato. A tale scopo è possibile effettuare una simulazione back-annotated, generando post-sintesi un file contenente la descrizione della netlist del circuito.
 \\
 L'ambiente di simulazione ModelSim è in grado, partendo dal file di cui sopra, di svolgere diverse simulazioni atte a caratterizzare l'attività dei nodi in questione. Tali risultati vengono riportati in un apposito file che, successivamente ad una conversione, può essere letto dal CAD di sintesi.
 \\
-Attraverso le informazioni ottenute, si è in grado di simulare più realisticamente il comportamento del circuito in termini di potenza.
+Attraverso le informazioni ottenute, si è in grado di simulare più realisticamente il comportamento del circuito in termini di potenza. Sono riportati di seguito i risultati.
 \\\\
 \begin{center}
 	\begin{tabular}{|c|c|c|c|}
@@ -1421,7 +1421,7 @@ In particolare, è preso in considerazione il medesimo circuito usato nei punti 
 \\\\
 \centerline{\includegraphics[width=10cm]{./img/Lab_3/datapath_parallelo.jpg}}
 \\\\
-In particolare, duplicando il datapath e inserendo un opportuno multiplexer, è possibile far lavorare i componenti a metà della frequenza originale, mantenendo comunque lo stesso throughput in uscita del circuito originale. Data l'espressione per valutare il consumo di potenza dinamica:
+In particolare, duplicando il datapath e inserendo un opportuno multiplexer, è possibile far lavorare i componenti a metà della frequenza originale, mantenendo comunque lo stesso throughput in uscita del circuito di partenza. Data l'espressione per valutare il consumo di potenza dinamica:
 \\\\
 \centerline{P = C\textsubscript{eff} V\textsubscript{dd}$^2$ f\textsubscript{clk}}
 \\\\
@@ -1469,11 +1469,11 @@ Come atteso, si nota che un aumento dei ritardi dei singoli componenti corrispon
 \item area = 2$\cdot$(3 reg + 2 inc + comp + mux) + mux = 3611 um$^2$
 \end{itemize}
 \vspace{0.3cm}
-Si può notare che la potenza è stata ridotta di un fattore 3.71 a fronte di un raddoppio dell'area. In particolare, è possbile osservare l'effetto dell'overhead del mux in uscita nella valutazione del percorso critico, che risulta maggiore.
+Si può notare che la potenza è stata ridotta di un fattore 3.71 a fronte di un raddoppio dell'area. In particolare, è possibile osservare l'effetto dell'overhead del mux in uscita nella valutazione del percorso critico, che risulta maggiore.
 \\\\
 Un'altra tecnica a livello architetturale applicabile in questo contesto è la pipeline. L'inserimento di registri all'interno del percorso combinatorio permette di ridurre il percorso critico, mantenendo comunque un throughput elevato.
 \\
-Riducendo il percorso critico si potrebbe lavorare ad una frequenza maggiore rispetto alla frequenza nominale, tuttavia si decide di mantenere la stessa frequenza del circuito originale, avendo quindi la possibilità di incrementare i ritardi attraverso una riduzione di V\textsubscript{dd}.
+Riducendo il percorso critico si potrebbe lavorare ad una frequenza maggiore rispetto alla frequenza nominale, tuttavia si decide di mantenere lo stesso throughput del circuito originale, avendo quindi la possibilità di incrementare i ritardi attraverso una riduzione di V\textsubscript{dd}.
 \\\\
 In questo caso si è deciso di isolare, attraverso due barriere di registri, il comparatore, essendo il componente che presenta il maggior ritardo di propagazione. Di conseguenza è stato ottenuto il seguente datapath.
 \\\\
@@ -1522,15 +1522,19 @@ Di conseguenza, la tecnica migliore dipende fortemente dal contesto di progetto:
 \\\\
 Per confronto si è cercato il minimo consumo di potenza applicando solamente la tecnica della parallelizzazione, con parallelismo 2.  In seguito alla riduzione di V\textsubscript{dd}, il minimo consumo di potenza dinamica ottenibile è pari a 1.85 uW, scegliendo u = 0.4, consumo comparabile a quello ottenuto con la tecnica di pipeline.
 \\
-Per raggiungere un'ulteriore riduzione dei consumi, è necessario introdurre un terzo livello di parallelismo: in questo caso è possibile selezionare u = 0.37, ottenendo quindi un consumo di potenza pari a 1.58 uW.
+Per raggiungere un'ulteriore riduzione dei consumi, è necessario introdurre un terzo livello di parallelizzazione: in questo caso è possibile selezionare u = 0.37, ottenendo quindi un consumo di potenza pari a 1.58 uW.
 \\\\
 Partendo dalla soluzione parallelizzata, sono stati ricercati possibili miglioramenti unendo le due tecniche. Il grafico seguente mostra il prodotto potenza ritardo in funzione del fattore u, considerando la presenza di pipeline e di un parallelismo pari a 2.
 \\\\
 \centerline{\includegraphics[width=12cm]{./img/Lab_3/prodotto_potenza_ritardo.png}}
 \\\\
 Si evince che sarebbe possibile utilizzare un fattore di scalamento della tensione di alimentazione inferiore a 0.37, tuttavia riducendolo vi è un'inversione di tendenza della curva mostrata. Ciò significa che per valori di u al di sotto del punto di minimo, il guadagno in termini di potenza risparmiata è poco significativo rispetto ai ritardi introdotti.
+\\
+\textcolor{red}{SIMO: Nonostante l'uso contemporaneo delle due tecniche, l'uso di 3 livelli di sola parallelizzazione risulta la scelta migliore dal punto di vista della sola riduzione dei consumi dinamici.}
 \\\\
 Si fa presente che l'analisi effettuata è relativa alla sola potenza dinamica, infatti una riduzione significativa di V\textsubscript{dd} comporta l'utilizzo di transistor caratterizzati da una tensione di soglia minore, aumentando il contributo di corrente di leakage.
+\\
+\textcolor{red}{SIMO: Inoltre la parallelizzazione comporta un overhead in termini di elementi utilizzati elevato, che ha come diretta conseguenza un incremento della potenza di leakage complessiva. Ne consegue che la valutazione della scelta dell'architettura che ottimizza la potenza complessiva debba essere fatta in funzione di contributi sia statici sia dinamici.}
 \subsection{Il problema della coerenza}
 Applicando la tecnica della parallelizzazione all struttura di base, è possibile notare che la coerenza dei dati in uscita non è assicurata.
 \\
