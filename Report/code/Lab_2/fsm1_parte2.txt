@@ -1,3 +1,17 @@
+	Next_state_evaluation : process(p_s)
+	begin
+		case p_s is
+			when AB => n_s <= SC;
+			when SC => n_s <= SD;
+			when SD => n_s <= SE;
+			when SE => n_s <= SF;
+			when SF => n_s <= AB;
+		end case;
+	end process Next_state_evaluation;
+
+
+
+
 	Output_evaluation: process(p_s)
 	begin
 		case p_s is

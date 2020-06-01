@@ -858,14 +858,11 @@ Si è notato che tali funzioni logiche presentano un'implementazione semplice co
 È possibile notare che le funzioni logiche presentano implicanti in comune, semplificando maggiormente la logica necessaria.
 \\
 \subsection{Descrizione VHDL e simulazione Modelsim}
-La macchina a stati precedentemente definita è stata descritta attraverso in VHDL, specificando in particolare la codifica degli stati progettata.
+La macchina a stati precedentemente definita è stata descritta in VHDL, specificando in particolare la codifica degli stati progettata.
 \\
 Il codice implementato è riportato nell'Appendice A alla sezione \textit{Laboratorio 2 - FSM}.
-\\
-\textcolor{red}{RISOLVERE: non importa l'intero file txt ma ne taglia una parte
-SIMO: ho spezzato il file txt in due file in modo da poterlo riportare in due pagine diverse}
 \\\\
-Al fine della simulazione, datapath e FSM sono stati inclusi in un'unica entity per ottenere il Processing Element complessivo. È stato dunque realizzato un testbench per verificare il corretto susseguirsi degli stati e le relative transizioni dei segnali.
+Al fine della simulazione, datapath e FSM sono stati inclusi in un'unica entity per ottenere il Processing Element complessivo. È stato dunque realizzato un testbench (riportato nell' Appendice A alla sezione \textit{Laboratorio 2 - FSM}) per verificare il corretto susseguirsi degli stati e le relative transizioni dei segnali.
 In particolare, è stata effettuata una simulazione di 2000 colpi di clock, che ha fornito i seguenti risultati attraverso un power report.
 \\
 \begin{center}
@@ -898,10 +895,10 @@ Successivamente è stato generato un clock di periodo pari a 10 ns.
 \centerline{\textbf{create\_clock -name "CLK" -period 10 {CLK}} }
 \\\\
 È stata verificata la presenza del clock generato attraverso il comando \textbf{report\_clock}.
-\\
-Successivamente è stata effettuata la sintesi attraverso la direttiva \textbf{compile -exact map}.
 \\\\
-In seguito è stato possibile visualizzare, in modo gerarchico, la mappatura del circuito con la libreria scelta. Nell'immagine seguente, in particolare, è riportato lo schematico della macchina a stati.
+Successivamente è stata effettuata la sintesi attraverso la direttiva \textbf{compile -exact map}.
+\\
+Dunque è stato possibile visualizzare, in modo gerarchico, la mappatura del circuito con la libreria scelta. Nell'immagine seguente, in particolare, è riportato lo schematico della macchina a stati.
 \\\\
 \centerline{\includegraphics[width=15cm]{./img/Lab_2/FSM_Schematic.png}}
 \\\\ 
@@ -965,7 +962,7 @@ Sono stati ottenuti dati aggiuntivi relativi al consumo di potenza dei singoli m
 \vspace{0.3cm}  
 Il consumo della macchina a stati rappresenta una percentuale ridotta rispetto al valore totale.
 \\
-Al fine di approfondire lo studio relativo ai nodi interni del circuito, è stata realizzata un'analisi di tipo \textbf{-net}. In particolare sono riportati i risultati relativi ai nodi dei segnali di selezione dei multiplexer.
+Al fine di approfondire lo studio relativo ai nodi interni del circuito, è stata realizzata un'analisi di tipo \textbf{-net}. In particolare sono riportati i risultati relativi ai nodi dei segnali di selezione dei multiplexer, che costituicono il contributo preponderante.
 \\
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|}
@@ -983,9 +980,9 @@ Al fine di approfondire lo studio relativo ai nodi interni del circuito, è stat
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-Il periodo medio di variazione dei selettori, ottenibile dal toggle rate, è confrontabile con le variazioni medie che avvengono su tali segnali in un ciclo di esecuzione. È importante tenere in considerazione la possibile presenza di commutazioni non previste a causa dell'attivazione del segnale di reset durante la simulazione, il quale è caratterizzato da una probabilità non nulla di commutazione. \textcolor{red}{SIMO (da aggiungere): Per ottenere una stima realistica sarebbe necessario infatti caratterizzare le attività dei nodi con risultati legati al comportamento reale del circuito.}
+Il periodo medio di variazione dei selettori, ottenibile dal toggle rate, è confrontabile con le variazioni medie che avvengono su tali segnali in un ciclo di esecuzione. È importante tenere in considerazione la possibile presenza di commutazioni non previste a causa dell'attivazione del segnale di reset durante la simulazione, il quale è caratterizzato da una probabilità non nulla di commutazione. Per ottenere una stima realistica sarebbe necessario infatti caratterizzare le attività dei nodi con risultati legati al comportamento reale del circuito.
 \\\\
-È possibile imporre dei vincoli sui vari parametri coinvolti nel processo di sintesi. In particolare, è stato generato un segnale di clock alla massima frequenza consentita dal circuito. La stima di tale frequenza è stata effettuata a partire dall'analisi del critical path precedentemente riportato.
+È possibile imporre dei vincoli sui vari parametri coinvolti nel processo di sintesi. In particolare, è stato generato un segnale di clock alla massima frequenza consentita dal circuito. La stima di tale frequenza è stata effettuata a partire dall'analisi del critical path precedentemente riportata.
 \\
 \begin{center}
 	\begin{tabular}{|c|c|}
@@ -1084,7 +1081,7 @@ Uno studio più approfondito sulla switching power relativa ai nodi interni è o
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-È possibile notare che tali valori coincidono con quelli ottenuti precedentemente durante l'analisi -net della top level entity. Il contributo maggiore del consumo è dovuto alle capacità di carico dei nodi in analisi, che assumono  valori significativi rispetto agli altri nodi. Questo è il principale motivo per cui tali segnali contribuiscono maggiormente, data la parità di toggle rate.
+È possibile notare che tali valori coincidono con quelli ottenuti precedentemente durante l'analisi -net della top level entity. Il contributo maggiore del consumo è dovuto alle capacità di carico dei nodi in analisi, che assumono  valori significativi rispetto agli altri nodi. Questo è il principale motivo per cui tali segnali contribuiscono maggiormente, considerando che il toggle rate risulta confrontabile.
 \\\\
 Per ragioni di praticità, tali sintesi sono state effettuate raggruppando i comandi e le direttive in uno script in modo da rendere il processo automatico. Di seguito è riportato uno degli script utilizzati.
 \begin{center}
@@ -2476,6 +2473,8 @@ esempio memoria?
 }
 \chapter{Appendice A}
 \section{Laboratorio 2 - FSM}
+\begin{itemize}
+\item FSM
 \begin{center}
 \begin{listato}
 	\centerline{\lstinputlisting{./code/Lab_2/fsm1_parte1.txt}}
@@ -2487,8 +2486,14 @@ esempio memoria?
 	\centerline{\lstinputlisting{./code/Lab_2/fsm1_parte2.txt}}
 \end{listato}
 \end{center}
-
-
+\newpage
+\item Testbench
+\begin{center}
+\begin{listato}
+	\centerline{\lstinputlisting{./code/Lab_2/tb_fsm1.txt}}
+\end{listato}
+\end{center}
+\end{itemize}
 
 
 
