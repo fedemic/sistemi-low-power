@@ -22,7 +22,7 @@
 \titleformat{\chapter}[display]
 {\normalfont\bfseries}{}{0pt}{\Huge} % Rimuove le scritte Capitolo 1,2 ecc
 \newenvironment{listato}{\footnotesize} {\normalsize }
-\renewcommand{\arraystretch}{1.4} % modifica alteza delle celle in tabella
+\renewcommand{\arraystretch}{1.4} % modifica altezza delle celle in tabella
 
 
 % inizio del documento
@@ -168,8 +168,7 @@ Dalle tavole di verità di Half Adder e Full Adder si ottengono le seguenti funz
 	\centerline{Cout = A AND B}
 	\item \textbf{Full adder} \\
 	\centerline{S = A XOR B XOR Cin} \\
-	\centerline{Cout = A AND B AND Cin} \\
-	\textcolor{red}{FEDE: non dovrebbe essere: Cout = (A AND B) OR (A AND Cin) OR (B AND Cin) OR (A AND B AND Cin) ? SIMO: Concordo. Si potrebbe anche scrivere ((A XOR B) AND Cin) OR (A AND B)}\\
+	\centerline{Cout = (A AND B) OR (A AND Cin) OR (B AND Cin)}\\
 \end{itemize}
 Partendo dalle funzioni logiche che descrivono le uscite è stato possibile ricavare le probabilità
 associate ad esse e le relative attività.
@@ -215,7 +214,7 @@ Sfruttando i risultati ottenuti per il singolo full adder, è stato possibile ot
 \\\\\\
 \centerline{\includegraphics[width=15cm]{./img/Lab_1/Es_2/RCA_8_bit.png}}
 \\\\\\
-Per tale analisi sono stati considerati equiprobabili gli ingressi A e B mentre il carry in ingresso al primo full adder è stato fissato a 0.\\
+Per tale analisi sono stati considerati equiprobabili e scorrelati gli ingressi A e B mentre il carry in ingresso al primo full adder è stato fissato a 0.\\
 I risultati ottenuti sono riportati nella seguente tabella.
 \vspace{0.3cm}
 \begin{center}
@@ -284,7 +283,7 @@ A(S) & 3.845 & 7.925\\
 \vspace{0.3cm}
 È possibile notare, attraverso le waveforms, la presenza di commutazioni indesiderate nel secondo caso, rappresentato dal vettore di segnali s2.
 \\
-Sono di seguito riportati i risultati di un ulteriore simulazione atta a mettere in luce le commutazioni spurie dei segnali di somma.
+Sono di seguito riportati i risultati di un'ulteriore simulazione atta a mettere in luce le commutazioni spurie dei segnali di somma.
 \\\\
  \centerline{\includegraphics[width=15cm]{./img/Lab_1/Es_2/Glitch_worst_case.png}}
 \\\\
@@ -347,8 +346,7 @@ Successivamente è possibile procedere con l'analisi relativa alla potenza.
 Il comando power report consente di ottenere una generica stima della potenza dissipata dal circuito, distinguendo tre contributi:
 \begin{itemize}
 \item \textbf{leakage}: consumo statico dovuto alle correnti di leakage dei dispositivi utilizzati
-\item \textbf{internal}: contributo alla potenza dinamica totale dovuto alla corrente di corto circuito.
-\textcolor{red}{SIMO: contributo di potenza dinamica dovuto al consumo interno delle celle utilizzate per la sintesi del circuito, comprende al suo interno il contributo di corrente di corto circuito}
+\item \textbf{internal}: contributo di potenza dinamica dovuto al consumo interno delle celle utilizzate per la sintesi del circuito, comprende al suo interno il contributo di corrente di corto circuito
 \item \textbf{switching}: contributo alla potenza dinamica dovuto alle commutazioni dei nodi e alle relative cariche/scariche delle capacità
 \end{itemize}
 Nella seguente tabella è riportata la suddivisione dei tre contributi.
