@@ -1345,7 +1345,7 @@ Nelle seguenti tabelle sono riportati i risultati relativi ai consumi.
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}          
-Si nota che il clock gating porta ad una riduzione generale della potenza, che risulta più marcata se si considerano statistiche realistiche degli input e del seganle di reset, come già verificato in precedenza. Tuttavia, applicando tale tecnica, la potenza di leakage presenta una riduzione: si ipotizza che tale comportamento \textcolor{red}{inatteso} sia correlato ad una riduzione delle celle utilizzate.
+Si nota che il clock gating porta ad una riduzione generale della potenza, che risulta più marcata se si considerano statistiche realistiche degli input e del seganle di reset, come già verificato in precedenza. Tuttavia, applicando tale tecnica, la potenza di leakage presenta una riduzione: si ipotizza che tale comportamento inatteso sia correlato ad una riduzione delle celle utilizzate.
 \\
 Per verificare ciò è stato effettuato un report di tipo \textbf{-cell}.
 \\
@@ -1410,7 +1410,7 @@ Si ipotizza che i consumi elevati siano dovuti al quasi continuo incremento del 
 Al fine di ridurre il consumo di potenza dinamica di un generico circuito che presenta un datapath delimitato da barriere di registri, è possibile applicare una serie di soluzioni architetturali.
 \\\\
 In particolare, è preso in considerazione il medesimo circuito usato nei punti precedenti, il quale è stato caratterizzato dal punto di vista di ritardo, potenza e area.
-\textcolor{red}{Le condizioni di funzionamento standard consistono in V\textsubscript{dd} = 1V e f\textsubscript{clk} = 5MHz.}
+Le condizioni di funzionamento standard consistono in V\textsubscript{dd} = 1V e f\textsubscript{clk} = 5MHz.
 \begin{itemize}
 \item percorso critico = reg + inc + comp + mux = 140 ns
 \item frequenza massima = 7.14MHz
@@ -1531,11 +1531,11 @@ Partendo dalla soluzione parallelizzata, sono stati ricercati possibili migliora
 \\\\
 Si evince che sarebbe possibile utilizzare un fattore di scalamento della tensione di alimentazione inferiore a 0.37, tuttavia riducendolo vi è un'inversione di tendenza della curva mostrata. Ciò significa che per valori di u al di sotto del punto di minimo, il guadagno in termini di potenza risparmiata è poco significativo rispetto ai ritardi introdotti.
 \\
-\textcolor{red}{SIMO: Nonostante l'uso contemporaneo delle due tecniche, l'uso di 3 livelli di sola parallelizzazione risulta la scelta migliore dal punto di vista della sola riduzione dei consumi dinamici.}
+Nonostante l'uso contemporaneo delle due tecniche, l'uso di 3 livelli di sola parallelizzazione risulta la scelta migliore dal punto di vista della sola riduzione dei consumi dinamici.
 \\\\
 Si fa presente che l'analisi effettuata è relativa alla sola potenza dinamica, infatti una riduzione significativa di V\textsubscript{dd} comporta l'utilizzo di transistor caratterizzati da una tensione di soglia minore, aumentando il contributo di corrente di leakage.
-\\
-\textcolor{red}{SIMO: Inoltre la parallelizzazione comporta un overhead in termini di elementi utilizzati elevato, che ha come diretta conseguenza un incremento della potenza di leakage complessiva. Ne consegue che la valutazione della scelta dell'architettura che ottimizza la potenza complessiva debba essere fatta in funzione di contributi sia statici sia dinamici.}
+\\\\
+Inoltre, la parallelizzazione comporta un overhead elevato in termini di elementi utilizzati, che ha come diretta conseguenza un incremento della potenza di leakage complessiva. Ne consegue che la valutazione della scelta dell'architettura che ottimizza la potenza complessiva debba essere fatta in funzione di contributi sia statici sia dinamici.
 \subsection{Il problema della coerenza}
 Applicando la tecnica della parallelizzazione all struttura di base, è possibile notare che la coerenza dei dati in uscita non è assicurata.
 \\
@@ -1615,7 +1615,7 @@ Tutte le tecniche di codifica sono state simulate sia con dati che con indirizzi
 \begin{center}
 	\begin{tabular}{|c|c|c||c|c|}
 	\hline
-	& \multicolumn{2}{c}{Address} & \multicolumn{2}{c}{Data}\\
+	& \multicolumn{2}{|c||}{Address} & \multicolumn{2}{|c|}{Data}\\
 	\hline
 	Nodo & Tc & E\textsubscript{sw} & Tc & E\textsubscript{sw} \\
 	\hline
@@ -1645,7 +1645,7 @@ Come atteso, la statistica relativa ai dati presenta attività maggiori e confro
 \begin{center}
 	\begin{tabular}{|c|c|c||c|c|}
 	\hline
-	& \multicolumn{2}{c}{Address} & \multicolumn{2}{c}{Data}\\
+	& \multicolumn{2}{|c||}{Address} & \multicolumn{2}{|c|}{Data}\\
 	\hline
 	Nodo & Tc & E\textsubscript{sw} & Tc & E\textsubscript{sw} \\
 	\hline
@@ -1709,7 +1709,7 @@ La riduzione delle commutazioni è tanto più marcata quante più transizioni co
 \begin{center}
 	\begin{tabular}{|c|c|c||c|c|}
 	\hline
-	& \multicolumn{2}{c}{Address} & \multicolumn{2}{c}{Data}\\
+	& \multicolumn{2}{|c||}{Address} & \multicolumn{2}{|c|}{Data}\\
 	\hline
 	Nodo & Tc & E\textsubscript{sw} & Tc & E\textsubscript{sw} \\
 	\hline
@@ -1741,7 +1741,7 @@ Per quanto riguarda i dati, è atteso un miglioramento nel caso in cui la probab
 \begin{center}
 	\begin{tabular}{|c|c|c||c|c|}
 	\hline
-	& \multicolumn{2}{c}{Address} & \multicolumn{2}{c}{Data}\\
+	& \multicolumn{2}{|c||}{Address} & \multicolumn{2}{|c|}{Data}\\
 	\hline
 	Nodo & Tc & E\textsubscript{sw} & Tc & E\textsubscript{sw} \\
 	\hline
@@ -1771,7 +1771,7 @@ Come atteso, tale codifica non ha benefici sulla codifica dei dati ma presenta n
 \begin{center}
 	\begin{tabular}{|c|c|c||c|c|}
 	\hline
-	& \multicolumn{2}{c}{Address} & \multicolumn{2}{c}{Data}\\
+	& \multicolumn{2}{|c||}{Address} & \multicolumn{2}{|c|}{Data}\\
 	\hline
 	Nodo & Tc & E\textsubscript{sw} & Tc & E\textsubscript{sw} \\
 	\hline
@@ -1812,7 +1812,7 @@ Inizialmente sono stati valutati i contributi di potenza relativi alle sole line
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c||c|c|c|c|}
 	\hline
-	Power [uW] & \multicolumn{4}{c}{Address} & \multicolumn{4}{c}{Data}\\
+	Power [uW] & \multicolumn{4}{|c||}{Address} & \multicolumn{4}{|c|}{Data}\\
 	\hline
 	 & 1fF & 10fF & 50fF & 100fF & 1fF & 10fF & 50fF & 100fF \\
 	\hline
@@ -1842,7 +1842,7 @@ Nella seguente tabella sono invece riportati i risultati relativi al consumo di 
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c||c|c|c|c|}
 	\hline
-	Power [uW] & \multicolumn{4}{c}{Address} & \multicolumn{4}{c}{Data}\\
+	Power [uW] & \multicolumn{4}{|c||}{Address} & \multicolumn{4}{|c|}{Data}\\
 	\hline
 	 & 1fF & 10fF & 50fF & 100fF & 1fF & 10fF & 50fF & 100fF \\
 	\hline
@@ -1861,9 +1861,9 @@ Nella seguente tabella sono invece riportati i risultati relativi al consumo di 
 \vspace{0.3cm}
 È possibile, per ogni implementazione, notare un incremento della potenza dissipata in seguito ad un aumento della capacità di carico del bus.
 \\
-Si nota come le diverse codifiche dissipino una potenza di leakage differente. In particolare, quest'ultima è legata alla complessità della logica necessaria all'implementazione della tecnica di encoding. Di conseguenza, è stato notato che la codifica T0 presenta il consumo di potenza statica maggiore a causa della presenza di un elevato numero di gate rispetto alle altre codifiche.
+I report ottenuti mostrano come le diverse codifiche dissipino una potenza di leakage differente. In particolare, quest'ultima è legata alla complessità della logica necessaria all'implementazione della tecnica di encoding. Di conseguenza, è stato notato che la codifica T0 presenta il consumo di potenza statica maggiore a causa della presenza di un elevato numero di gate rispetto alle altre codifiche.
 \\\\
-Osservando i dati relativi alla tecnica BUSINV, si nota come non vi sia alcun miglioramento netto né per dati né per indirizzi. Utilizzando tale codifica è atteso un miglioramento per i consumi relativi alla trasmissione dei dati, ciò non avviene poiché la distribuzione dei dati presenta un numero non elevato di transizioni con distanza di Hamming maggiore di $\frac{N}{2}$. Di conseguenza, l'aggiunta della logica di codifica e decodifica non ha un contributo trascurabile.
+Osservando i dati relativi alla tecnica BUSINV, si nota come non vi sia alcun miglioramento netto né per dati né per indirizzi. Utilizzando tale codifica è atteso un miglioramento per i consumi relativi alla trasmissione dei dati, ciò non avviene poiché la distribuzione dei dati non presenta un numero elevato di transizioni con distanza di Hamming maggiore di $\frac{N}{2}$. Di conseguenza, l'aggiunta della logica di codifica e decodifica non ha un contributo trascurabile.
 \\\\
 Anche per la codifica TRANSITION-BASED non è rilevato alcun miglioramento. Il motivo principale è sempre da ricercare nella distribuzione dei dati. Questi infatti presentano un numero di 1 significativo, generando una quantità elevata di transizioni.
 \\\\
@@ -1915,12 +1915,6 @@ Il seguente script Matlab genera una sequenza di dati in modo tale che la quanti
 \end{center}
 \vspace{0.3cm}
 Anche in questo caso è possibile osservare un miglioramento, anche se poco marcato, del consumo in potenza quando è associato un carico di almeno 100 fF sul bus.
-\\\\
-\textcolor{red}{T0 quando si risolve N/A}
-\\\\
-\textcolor{red}{Tabella switching power bus B e confronto con il totale
-\\
-analisi power dinamica e leakage separatamente}
 \chapter{Leakage}
 \section{Caratterizzazione di una NAND high speed}
 L'obiettivo di questa prima sezione consiste nella caratterizzazione delle metriche di ritardo temporale di una porta NAND in logica CMOS, la cui descrizione è contenuta all'interno del file \textbf{CMOS013.spi}.
