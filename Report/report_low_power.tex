@@ -1112,7 +1112,7 @@ Come possibile notare dalla seguente figura, al primo fronte attivo di clock suc
 \\\\
 Ciò accade poiché il simulatore, in assenza di informazioni sui ritardi, deve comunque simulare il circuito mantenendo una causalità nella propagazione dei segnali all'interno degli elementi descritti.
 \\
-Come conseguenza, l'informazione relativa al clock, a causa della presenza di una porta AND, è riportata all'ingresso del secondo flip-flop uno step simuazione dopo rispetto al primo. Tale comportamento è deleterio in quanto altera il timing previsto del circuito.
+Come conseguenza, l'informazione relativa al clock, a causa della presenza di una porta AND, è riportata all'ingresso del secondo flip-flop uno step di simulazione dopo rispetto al primo. Tale comportamento è deleterio in quanto altera il timing previsto del circuito.
 \\\\
 Per assicurare il corretto funzionamento del circuito, è sufficiente indicare la presenza di un ritardo CK $\rightarrow$ Q per entrambi i flip-flop. A tale scopo è stato modificato il file \textbf{fd.vhd}.
 \begin{center}
@@ -1288,7 +1288,7 @@ Si nota che non è presente alcuna struttura adibita al clock gating sul registr
 	\centerline{\lstinputlisting{./code/Lab_3/clock_gating_output.vhd}}
 \end{listato}
 \end{center}
-In particolare, è stato notato che all'interno del process per la descrizione dell'architettura, l'aggiornamento dei registri REG\_A e REG\_B avviene successivamente a due condizioni di if relative al valore di INCA e INCB. Si ipotizza che tramite tale descrizione il sintetizzatore sia in grado di applicare il clock gating. Di conseguenza, tale sintassi è stata adottata anche per descrivere l'aggiornamento del registro in uscita, il quale deve essere aggiornato solo quando almeno un segnale di incremento viene asserito.
+In particolare, è stato notato che all'interno del process per la descrizione dell'architettura, l'aggiornamento dei registri REG\_A e REG\_B avviene successivamente a due condizioni di if relative al valore di INCA e INCB. Si ipotizza che, tramite tale descrizione, il sintetizzatore sia in grado di applicare il clock gating. Di conseguenza, tale sintassi è stata adottata anche per descrivere l'aggiornamento del registro in uscita, il quale deve essere aggiornato solo quando almeno un segnale di incremento viene asserito.
 \\\\
 Nelle seguenti tabelle sono riportati i risultati relativi ai consumi.      
 \begin{center}
@@ -1345,7 +1345,7 @@ Nelle seguenti tabelle sono riportati i risultati relativi ai consumi.
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}          
-Si nota che il clock gating porta ad una riduzione generale della potenza, come già verificato in precedenza. Tuttavia, applicando tale tecnica, la potenza di leakage presenta una riduzione: si ipotizza che tale comportamento \textcolor{red}{inatteso} sia correlato ad una riduzione delle celle utilizzate.
+Si nota che il clock gating porta ad una riduzione generale della potenza, che risulta più marcata se si considerano statistiche realistiche degli input e del seganle di reset, come già verificato in precedenza. Tuttavia, applicando tale tecnica, la potenza di leakage presenta una riduzione: si ipotizza che tale comportamento \textcolor{red}{inatteso} sia correlato ad una riduzione delle celle utilizzate.
 \\
 Per verificare ciò è stato effettuato un report di tipo \textbf{-cell}.
 \\
@@ -1370,9 +1370,9 @@ Si ipotizza che, a causa della modifica apportata al file VHDL, il sintetizzator
 Il numero di celle risulta comunque maggiore rispetto al caso in cui il clock gating viene applicato solamente ai registri REG\_A e REG\_B.
 \\
 \subsection{Simulazione di consumi tramite back-annotation}
-Al fine di ottenere una stima più accurata del consumo di potenza del circuito preso in considerazione, è necessario avere una valutazione più realistica dell'attività dei singoli nodi del circuito sintetizzato. A tale scopo è possibile effettuare una simulazione back-annotated, generando post-sintesi un file contenente la descrizione della netlist del circuito.
+Al fine di ottenere una stima più accurata del consumo di potenza del circuito preso in considerazione, è necessario avere una valutazione più realistica dell'attività dei singoli nodi del circuito sintetizzato. A tale scopo è possibile effettuare una simulazione back-annotated, generando post-sintesi un file SDF contenente la descrizione della netlist del circuito.
 \\
-L'ambiente di simulazione ModelSim è in grado, partendo dal file di cui sopra, di svolgere diverse simulazioni atte a caratterizzare l'attività dei nodi in questione. Tali risultati vengono riportati in un apposito file che, successivamente ad una conversione, può essere letto dal CAD di sintesi.
+L'ambiente di simulazione ModelSim è in grado, partendo dal file di cui sopra, di svolgere diverse simulazioni atte a caratterizzare l'attività dei nodi in questione. Tali risultati vengono riportati in un apposito file VCD che, successivamente ad una conversione in un file SAIF, può essere letto dal CAD di sintesi.
 \\
 Attraverso le informazioni ottenute, si è in grado di simulare più realisticamente il comportamento del circuito in termini di potenza. Sono riportati di seguito i risultati.
 \\\\
@@ -1410,6 +1410,7 @@ Si ipotizza che i consumi elevati siano dovuti al quasi continuo incremento del 
 Al fine di ridurre il consumo di potenza dinamica di un generico circuito che presenta un datapath delimitato da barriere di registri, è possibile applicare una serie di soluzioni architetturali.
 \\\\
 In particolare, è preso in considerazione il medesimo circuito usato nei punti precedenti, il quale è stato caratterizzato dal punto di vista di ritardo, potenza e area.
+\textcolor{red}{Le condizioni di funzionamento standard consistono in V\textsubscript{dd} = 1V e f\textsubscript{clk} = 5MHz.}
 \begin{itemize}
 \item percorso critico = reg + inc + comp + mux = 140 ns
 \item frequenza massima = 7.14MHz
@@ -1427,7 +1428,7 @@ In particolare, duplicando il datapath e inserendo un opportuno multiplexer, è 
 \\\\
 è possibile notare come, in questo caso, il dimezzamento della frequenza di funzionamento sia compensato dal raddoppio della capacità totale.
 \\
-Tuttavia, si nota che i componenti hanno il doppio del tempo a disposizione per completare le loro operazioni, pertanto è possibile ridurre la tensione di alimentazione al fine di aumentare il ritardo di propagazione in questi ultimi, rispettando comunque il limite imposto dal percorso critico.
+Tuttavia, i componenti hanno il doppio del tempo a disposizione per completare le loro operazioni, pertanto è possibile ridurre la tensione di alimentazione al fine di aumentare il ritardo di propagazione in questi ultimi, rispettando comunque il limite imposto dal percorso critico.
 \\\\
 Dal momento che la tensione di alimentazione contribuisce in modo quadratico al consumo di potenza, quest'ultima risulterà ridotta di un fattore u$^2$, dove u rappresenta il fattore di riduzione di V\textsubscript{dd}.
 \\\\
@@ -1549,14 +1550,6 @@ Al contrario nel caso di implementazione con 2 livelli di parallelizzazione si h
 Si nota che il comportamento è inatteso in quanto non vi è coerenza tra i registri delle due sottostrutture. Per assicurare un corretto funzionamento del circuito, è necessario che i dati con cui lavorano le due entità siano condivisi, in modo da garantire la coerenza.
 \\\\
 Una possibile soluzione potrebbe essere l'impiego di due soli registri REG\_A e REG\_B condivisi da entrambe le strutture in parallelo e scritti ad una frequenza doppia.
-
-\textcolor{red}{
-\begin{itemize}
-\item schema clock gating FATTO
-\item datapath parallelizzazione FATTO
-\item datapath pipeline FATTO
-\item forme d'onda FATTO
-\end{itemize}}
 
 \chapter{Bus encoding}
 \section{Introduzione alle tecniche utilizzate}
