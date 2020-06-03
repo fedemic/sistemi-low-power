@@ -1675,7 +1675,7 @@ Come atteso, in assenza di codifica, l'attività del bus rispecchia quella dell'
 \begin{center}
 	\begin{tabular}{|c|c|c||c|c|}
 	\hline
-	& \multicolumn{2}{c}{Address} & \multicolumn{2}{c}{Data}\\
+	& \multicolumn{2}{|c||}{Address} & \multicolumn{2}{|c|}{Data}\\
 	\hline
 	Nodo & Tc & E\textsubscript{sw} & Tc & E\textsubscript{sw} \\
 	\hline
@@ -1831,15 +1831,13 @@ Inizialmente sono stati valutati, per ogni codifica, i contributi di potenza rel
 \vspace{0.3cm}
 Osservando tali risultati si nota come vi sia un miglioramento teorico dei consumi utilizzando tutte le codifiche fatta eccezione della TRAN-BASED. La causa di tale eccezione è da ricercare nella distribuzione dei dati generati: questi presentano infatti un numero di 1 elevato.
 \\\\
-Si nota come l'applicazione della codifica BUSINV riduca la potenza dissipata sia per dati che per indirizzi: in quest'ultimo caso i benefici sono particolarmente marcati nel caso di salti frequenti.
-\textcolor{red}{SIMO: in quest'ultimo caso i benefici sono particolarmente marcati nel caso di salti con distanza di Hamming maggiore di N/2.}
+Si nota come l'applicazione della codifica BUSINV riduca la potenza dissipata sia per dati che per indirizzi: in quest'ultimo caso i benefici sono particolarmente marcati nel caso di salti frequenti con distanza di Hamming maggiore di N/2.
 \\\\
 La codifica GRAY introduce notevoli miglioramenti nella trasmissione degli indirizzi, si nota infatti che il consumo di potenza è dimezzato rispetto al caso BUSNORM. Per quanto riguarda i dati non si notano riduzioni nel consumo di potenza.
 \\\\
 È possibile osservare come la riduzione di potenza dovuta alla codifica T0 sia particolarmente significativa per gli indirizzi. Questo risultato mette in luce la sequenzialità degli indirizzi di test nella simulazione.
 \\\\
-Nella seguente tabella sono invece riportati i risultati relativi al consumo di potenza totale, considerando anche il contributo degli ingressi per le varie codifiche implementate.
-\textcolor{red}{SIMO: Nella seguente tabella sono invece riportati i risultati relativi al consumo di potenza totale, comprendenti il contributo degli ingressi e della logica atta alle operazioni di codifica e decodifica.}
+Nella seguente tabella sono invece riportati i risultati relativi al consumo di potenza totale, comprendenti il contributo degli ingressi e della logica atta alle operazioni di codifica e decodifica.
 
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c||c|c|c|c|}
@@ -1924,9 +1922,9 @@ I transistor che definiscono la netlist del gate sono prelevati da una libreria 
 \\\\
 In particolare, la netlist descrive il seguente circuito.
 \\\\
-\textcolor{red}{IMMAGINE NETLIST}
+\centerline{\includegraphics[width=8cm]{./img/Lab_5/nand_netlist.jpg}}
 \\\\
-Le direttive di simulazione sono presenti all'interno del file \textbf{nandHS.sp}, nel quale è inoltre istanziato il circuito interessato. Sono definiti alimentazione, massa, carico e ingressi del circuito; di questi uno è costante, l'altro è definito da una serie di transizioni.
+Le direttive di simulazione sono presenti all'interno del file \textbf{nandHS.sp}, nel quale è inoltre istanziato il circuito interessato. Sono definiti alimentazione, massa, carico e ingressi del circuito; di questi ultimi uno è costante, l'altro è definito da una serie di transizioni.
 \\
 Sono presenti una serie di direttive atte alla misura di vari parametri temporali:
 \begin{itemize}
@@ -2003,7 +2001,7 @@ All'interno delle equazioni che modellizzano un transistor è infatti tenuto con
 Forse nel file dove ci sono tutte le dipendenze da vth c'è una variazione rispetto a W}
 \\\\
 \subsection{Caratterizzazione della porta NAND con carico variabile}
-L'obiettivo di questa sezione consiste nella caratterizzazione delle forme d'onda di tensioni e correnti di uscita della porta NAND high speed, nel caso di carico variabile. Si nota che alla descrizione del circuito sono aggiunti dei generatori di tensione denominati \textit{dummy}, che fungono da terminali per la misurazione della corrente attraverso V\textsubscript{dd}, GND e uscita.
+L'obiettivo di questa sezione consiste nella caratterizzazione delle forme d'onda di tensioni e correnti di uscita della porta NAND high speed, nel caso di carico variabile. Si nota che alla descrizione del circuito sono aggiunti dei generatori denominati \textit{dummy}, che fungono da terminali per la misurazione della corrente attraverso V\textsubscript{dd}, GND e uscita.
 \\\\
 Inizialmente sono state visualizzate le forme d'onda di tensioni e correnti, rappresentate nelle seguenti immagini.
 \\\\
@@ -2073,7 +2071,9 @@ Si nota come il carico capacitivo della porta non abbia alcun effetto sulla tens
 \section{Caratterizzazione di porte NAND aventi dimensioni differenti}
 L'obiettivo di questa sezione consiste nel comparare i parametri associati a porte NAND di dimensioni differenti, in particolare sono state considerate le porte descritte nei file \textbf{NANDHScharMaxLoad.sp} \textbf{NANDHSX8MaxLoad.sp}.
 \\
-Dal file \textbf{CMOS13.spi} è stato possibile osservare come le larghezze di canale dei transistor costituenti le due porte fossero differenti, in particolare le dimensioni degli NMOS crescono di un fattore 2 mentre per i PMOS tale fattore è circa pari a 2.65. Inoltre, è possibile notare come, nella definizione della porta X8, sia presente un maggior numero di transistor utilizzati.
+Dal file \textbf{CMOS13.spi} è stato possibile osservare come le larghezze di canale dei transistor costituenti le due porte fossero differenti, in particolare le dimensioni degli NMOS crescono di un fattore 2 mentre per i PMOS tale fattore è circa pari a 2.65. Inoltre, è possibile notare come, nella definizione della porta X8, sia presente un maggior numero di transistor utilizzati. Il circuito è riportato nlla seguente figura.
+\\\\
+\centerline{\includegraphics[width=8cm]{./img/Lab_5/X8.jpg}}
 \\\\
 Successivamente alla simulazione sono state analizzate le forme d'onda delle tensioni in uscita alle due porte rispetto alla transizione in ingresso.
 \\\\
