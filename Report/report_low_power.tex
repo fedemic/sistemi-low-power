@@ -2041,9 +2041,9 @@ Di seguito è riportato il grafico relativo all'andamento delle correnti e una t
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-Si nota come all'aumentare della capacità di carico si abbia un incremento dei ritardi temporali. Come conseguenza si ha infatti un progressivo incremento delle costanti di tempo per le varie transizioni. 
+Si nota come all'aumentare della capacità di carico si abbia un incremento \textcolor{blue}{non lineare} dei ritardi temporali. Come conseguenza si ha infatti un progressivo incremento delle costanti di tempo per le varie transizioni.
 \\\\
-Successivamente ad un fronte di salita sull'uscita, è possibile che non solo sia presente un contributo di corrente che scorre dall'alimentazione verso il carico, ma anche un contributo verso massa. Tale comportamento è inatteso secondo il comportamento ideale dei transistori. In realtà, in seguito ad una commutazione, vi è un breve intervallo di tempo durante il quale entrambi i dispositivi sono in conduzione, generando un contributo di corrente di corto circuito tra alimentazione e massa. Si fa presente che tali contributi apportano un incremento della potenza dinamica dissipata.
+Successivamente ad un fronte di salita sull'uscita, è possibile che non solo sia presente un contributo di corrente che scorre dall'alimentazione verso il carico, ma anche un contributo verso massa. Tale comportamento è inatteso per un transistore ideale. In realtà, in seguito ad una commutazione, vi è un breve intervallo di tempo durante il quale entrambi i dispositivi sono in conduzione, generando un contributo di corrente di corto circuito tra alimentazione e massa. Si fa presente che tali contributi apportano un incremento della potenza dinamica dissipata.
 \\
 Una situazione duale si presenta in corrispondenza di un fronte di discesa presente sull'uscita.
 \\\\
@@ -2074,6 +2074,8 @@ L'obiettivo di questa sezione consiste nel comparare i parametri associati a por
 Dal file \textbf{CMOS13.spi} è stato possibile osservare come le larghezze di canale dei transistor costituenti le due porte fossero differenti, in particolare le dimensioni degli NMOS crescono di un fattore 2 mentre per i PMOS tale fattore è circa pari a 2.65. Inoltre, è possibile notare come, nella definizione della porta X8, sia presente un maggior numero di transistor utilizzati. Il circuito è riportato nlla seguente figura.
 \\\\
 \centerline{\includegraphics[width=8cm]{./img/Lab_5/X8.jpg}}
+\\\\
+\textcolor{blue}{Si nota come, al fine di realizzare una cella più compatta, questa sia stata ottenuta attraverso la tecnica dei folded transistors.}
 \\\\
 Successivamente alla simulazione sono state analizzate le forme d'onda delle tensioni in uscita alle due porte rispetto alla transizione in ingresso.
 \\\\
@@ -2150,7 +2152,9 @@ Per avere una visione completa sulle differenze dell'implementazione delle due p
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-È possibile notare come la porta di dimensioni maggiori sia associata a consumi di potenza più elevati. Si osserva inoltre l'indipendenza della potenza dissipata rispetto al carico utilizzato in uscita. \textcolor{red}{spiegare il motivo FEDE: qui secondo enea basta confrontare le due porte}
+È possibile notare come la porta di dimensioni maggiori sia associata a consumi di potenza più elevati. Si osserva inoltre l'indipendenza della potenza dissipata rispetto al carico utilizzato in uscita. \textcolor{red}{spiegare il motivo FEDE: qui secondo enea basta confrontare le due porte
+\\
+SIMO: E' possibile notare come i contributi con carichi diversi siano uguali, ma Enea ha detto di concentrarci da un'altra parte.}
 \\\\
 Di seguito sono riportati i risultati relativi all'analisi delle tensioni di soglia.
 \\\\
@@ -2207,6 +2211,21 @@ Di seguito sono riportati i risultati relativi all'analisi delle tensioni di sog
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
+	\begin{tabular}{|c|c|}
+	\hline
+	 \multicolumn{2}{|c|}{NAND 8X} \\
+	\hline
+	Parametro & Tensione di soglia [V] \\
+	\hline
+	 V\textsubscript{tn0, tn2, tn5, tn7} & 0.319\\
+	\hline
+	 V\textsubscript{tn1, tn3, tn4, tn6} & 0.278 \\
+	\hline
+	V\textsubscript{tp6, tp7, tp6\_2, tp7\_2, tp6\_3, tp7\_3} & -0.242 \\
+	\hline
+	\end{tabular}
+\vspace{0.3cm}
+\\
 È possibile notare come, nel caso della NAND 8X, gli NMOS presentino tensioni di soglia differenti dovute alla disposizione in serie dei transistor.
 \\
 In particolare, tali valori presentano un incremento rispetto alla NAND standard. \textcolor{red}{Ciò è dovuto all'aumento delle dimensioni dei transistor
@@ -2286,7 +2305,9 @@ Di seguito sono riportati i valori di potenza totale dissipata stimata dal simul
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-\textcolor{red}{commento da inserire su confronto tra high speed e low power}
+\textcolor{red}{commento da inserire su confronto tra high speed e low power
+\\
+SIMO: Io metterei il rapporto tra fattore di aumento dei ritardi e fattore di riduzione della potenza. Poi si potrebbe fare anche un discorso sul fatto che se stiamo lavorando in un percorso critico non è conveniente rischiare di renderlo critico usando la porta low leakage}
 \\\\
 \begin{center}
 	\begin{tabular}{|c|c|}

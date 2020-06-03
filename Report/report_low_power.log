@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.18)  3 JUN 2020 22:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.10)  3 JUN 2020 23:18
 entering extended mode
 **./report_low_power.tex
 (report_low_power.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14>
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\book.cls"
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\book.cls"
 Document Class: book 2019/12/20 v1.4l Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\bk11.clo"
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\bk11.clo"
 File: bk11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 )
 \c@part=\count167
@@ -22,31 +22,37 @@ File: bk11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 \belowcaptionskip=\skip48
 \bibindent=\dimen134
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphicx.sty"
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.s
+ty"
 Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.sty
+"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphics.sty"
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.s
+ty"
 Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\graphics.cfg"
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graphi
+cs.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-def\pdftex.def"
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdftex
+.def"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen135
 \Gin@req@width=\dimen136
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/titlesec\titlesec.sty"
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/titlesec\titlesec.s
+ty"
 Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \ttl@box=\box45
 \beforetitleunit=\skip49
@@ -58,10 +64,11 @@ Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \titlewidthlast=\dimen140
 \titlewidthfirst=\dimen141
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\textcomp.sty"
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\textcomp.sty"
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/listings\listings.sty"
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.s
+ty"
 \lst@mode=\count176
 \lst@gtempboxa=\box46
 \lst@token=\toks16
@@ -75,21 +82,24 @@ Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 \lst@lineno=\count181
 \lst@maxwidth=\dimen145
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstmisc.sty"
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.st
+y"
 File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
 \c@lstnumber=\count182
 \lst@skipnumbers=\count183
 \lst@framebox=\box47
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/listings\listings.cfg"
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.c
+fg"
 File: listings.cfg 2019/09/10 1.8c listings configuration
 ))
 Package: listings 2019/09/10 1.8c (Carsten Heinz)
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg"
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\color.
+cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -103,24 +113,26 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty"
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty
+"
 Package: amsmath 2020/01/20 v2.17e AMS math features
 \@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amstext.sty"
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.sty
+"
 Package: amstext 2000/06/29 v2.01 AMS text
-
-("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty"
+ ("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty
+"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks17
 \ex@=\dimen146
 ))
-("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty"
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen147
-)
-("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty"
+) ("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.st
+y"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count184
@@ -161,10 +173,12 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 LaTeX Info: Redefining \[ on input line 2859.
 LaTeX Info: Redefining \] on input line 2860.
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amssymb.sty"
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amssymb.st
+y"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.sty"
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.s
+ty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
@@ -172,7 +186,8 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-("C:\Program Files\MiKTeX 2.9\tex/latex/booktabs\booktabs.sty"
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/booktabs\booktabs.s
+ty"
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen155
 \lightrulewidth=\dimen156
@@ -192,12 +207,14 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@lastruleclass=\count199
 \@thisrulewidth=\dimen167
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/chngcntr\chngcntr.sty"
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/chngcntr\chngcntr.s
+ty"
 Package: chngcntr 2018/04/09 v1.1a change counter resetting
 Package chngcntr Info: \counterwithout already defined.
 (chngcntr)             Quitting chngcntr on input line 21.
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/l3backend\l3backend-pdfmode.def"
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backend
+-pdfmode.def"
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count266
 \l__pdf_internal_box=\box50
@@ -224,7 +241,8 @@ LaTeX Font Info:    ... okay on input line 29.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
 
-("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pd
+f.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count267
 \scratchdimen=\dimen168
@@ -237,7 +255,9 @@ LaTeX Font Info:    ... okay on input line 29.
 \MPnumerator=\count271
 \makeMPintoPDFobject=\count272
 \everyMPtoPDFconversion=\toks23
-) ("C:\Program Files\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf-base.sty"
+)
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstop
+df-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
@@ -248,22 +268,22 @@ File: ./img/general/polito.png Graphic file (type png)
 <use ./img/general/polito.png>
 Package pdftex.def Info: ./img/general/polito.png  used on input line 34.
 (pdftex.def)             Requested size: 85.35826pt x 85.35973pt.
+ [1
 
-[1
 
-
-{C:/Users/Francy/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./img/gene
-ral/polito.png>] (report_low_power.toc
+{C:/Users/TONI/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./img/genera
+l/polito.png>] (report_low_power.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+[1
 
 ])
 \tf@toc=\write3
@@ -571,7 +591,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 515--529
 LaTeX Font Info:    Trying to load font information for OML+cmr on input line 1
 .
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\omlcmr.fd"
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omlcmr.fd"
 File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
@@ -1107,12 +1127,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 1084--1087
 (code/Lab_2/commands.txt
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 3
 .
- ("C:\Program Files\MiKTeX 2.9\tex/latex/base\omscmr.fd"
+
+("C:\Users\TONI\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 3.
-) [29]
+)
+[29]
 Chapter 3.
 <./img/Lab_3/circuito_clk_bug.png, id=164, 646.66594pt x 494.59781pt>
 File: ./img/Lab_3/circuito_clk_bug.png Graphic file (type png)
@@ -1917,120 +1939,124 @@ Underfull \hbox (badness 10000) in paragraph at lines 2044--2054
 
  []
 
-[61]
-<./img/Lab_5/X8.jpg, id=299, 1112.155pt x 951.555pt>
+<./img/Lab_5/X8.jpg, id=296, 1112.155pt x 951.555pt>
 File: ./img/Lab_5/X8.jpg Graphic file (type jpg)
 <use ./img/Lab_5/X8.jpg>
 Package pdftex.def Info: ./img/Lab_5/X8.jpg  used on input line 2076.
 (pdftex.def)             Requested size: 227.62204pt x 194.75061pt.
-<./img/Lab_5/waveform_4.png, id=300, 1363.0925pt x 592.2125pt>
+<./img/Lab_5/waveform_4.png, id=297, 1363.0925pt x 592.2125pt>
 File: ./img/Lab_5/waveform_4.png Graphic file (type png)
 <use ./img/Lab_5/waveform_4.png>
-Package pdftex.def Info: ./img/Lab_5/waveform_4.png  used on input line 2080.
+Package pdftex.def Info: ./img/Lab_5/waveform_4.png  used on input line 2082.
 (pdftex.def)             Requested size: 398.33858pt x 173.06557pt.
-<./img/Lab_5/waveform_5.png, id=301, 1363.0925pt x 592.2125pt>
+<./img/Lab_5/waveform_5.png, id=298, 1363.0925pt x 592.2125pt>
 File: ./img/Lab_5/waveform_5.png Graphic file (type png)
 <use ./img/Lab_5/waveform_5.png>
-Package pdftex.def Info: ./img/Lab_5/waveform_5.png  used on input line 2087.
+Package pdftex.def Info: ./img/Lab_5/waveform_5.png  used on input line 2089.
 (pdftex.def)             Requested size: 398.33858pt x 173.06557pt.
 
-Overfull \hbox (5.83453pt too wide) in paragraph at lines 2072--2093
+Overfull \hbox (5.83453pt too wide) in paragraph at lines 2072--2095
 \OT1/cmr/m/n/10.95 men-sioni dif-fer-enti, in par-ti-co-lare sono state con-sid
 -er-ate le porte de-scritte nei file \OT1/cmr/bx/n/10.95 NANDHSchar-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2072--2093
+Underfull \hbox (badness 10000) in paragraph at lines 2072--2095
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2072--2093
+Underfull \hbox (badness 10000) in paragraph at lines 2072--2095
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2072--2093
+Underfull \hbox (badness 10000) in paragraph at lines 2072--2095
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2072--2093
+Underfull \hbox (badness 10000) in paragraph at lines 2072--2095
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2072--2093
+Underfull \hbox (badness 10000) in paragraph at lines 2072--2095
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2072--2093
+Underfull \hbox (badness 10000) in paragraph at lines 2072--2095
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2072--2093
+Underfull \hbox (badness 10000) in paragraph at lines 2072--2095
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2072--2093
+Underfull \hbox (badness 10000) in paragraph at lines 2072--2095
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2072--2093
+Underfull \hbox (badness 10000) in paragraph at lines 2072--2095
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2072--2093
-
- []
-
-[62 <./img/Lab_5/X8.jpg> <./img/Lab_5/waveform_4.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 2111--2115
+Underfull \hbox (badness 10000) in paragraph at lines 2072--2095
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2111--2115
+Underfull \hbox (badness 10000) in paragraph at lines 2072--2095
+
+ []
+
+[61] [62 <./img/Lab_5/X8.jpg> <./img/Lab_5/waveform_4.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 2113--2117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2111--2115
+Underfull \hbox (badness 10000) in paragraph at lines 2113--2117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2113--2117
 
  []
 
 [63 <./img/Lab_5/waveform_5.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 2137--2141
+Underfull \hbox (badness 10000) in paragraph at lines 2139--2143
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2137--2141
+Underfull \hbox (badness 10000) in paragraph at lines 2139--2143
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2137--2141
+Underfull \hbox (badness 10000) in paragraph at lines 2139--2143
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2153--2157
+Underfull \hbox (badness 10000) in paragraph at lines 2155--2161
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2153--2157
+Underfull \hbox (badness 10000) in paragraph at lines 2155--2161
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2153--2157
+Underfull \hbox (badness 10000) in paragraph at lines 2155--2161
 
  []
 
@@ -2038,247 +2064,247 @@ Underfull \hbox (badness 10000) in paragraph at lines 2153--2157
 <./img/Lab_5/waveform_6.png, id=311, 978.65625pt x 431.6125pt>
 File: ./img/Lab_5/waveform_6.png Graphic file (type png)
 <use ./img/Lab_5/waveform_6.png>
-Package pdftex.def Info: ./img/Lab_5/waveform_6.png  used on input line 2220.
+Package pdftex.def Info: ./img/Lab_5/waveform_6.png  used on input line 2239.
 (pdftex.def)             Requested size: 398.33858pt x 175.67802pt.
 <./img/Lab_5/waveform_7.png, id=312, 978.65625pt x 431.6125pt>
 File: ./img/Lab_5/waveform_7.png Graphic file (type png)
 <use ./img/Lab_5/waveform_7.png>
-Package pdftex.def Info: ./img/Lab_5/waveform_7.png  used on input line 2222.
+Package pdftex.def Info: ./img/Lab_5/waveform_7.png  used on input line 2241.
 (pdftex.def)             Requested size: 398.33858pt x 175.67802pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2216--2229
+Underfull \hbox (badness 10000) in paragraph at lines 2235--2248
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2216--2229
+Underfull \hbox (badness 10000) in paragraph at lines 2235--2248
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2216--2229
+Underfull \hbox (badness 10000) in paragraph at lines 2235--2248
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2216--2229
+Underfull \hbox (badness 10000) in paragraph at lines 2235--2248
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2216--2229
+Underfull \hbox (badness 10000) in paragraph at lines 2235--2248
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2216--2229
+Underfull \hbox (badness 10000) in paragraph at lines 2235--2248
 
  []
 
 [65]
-Underfull \hbox (badness 10000) in paragraph at lines 2247--2251
+Underfull \hbox (badness 10000) in paragraph at lines 2266--2270
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2247--2251
+Underfull \hbox (badness 10000) in paragraph at lines 2266--2270
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2247--2251
+Underfull \hbox (badness 10000) in paragraph at lines 2266--2270
 
  []
 
 [66 <./img/Lab_5/waveform_6.png (PNG copy)> <./img/Lab_5/waveform_7.png (PNG co
 py)>]
-Underfull \hbox (badness 10000) in paragraph at lines 2273--2277
+Underfull \hbox (badness 10000) in paragraph at lines 2292--2296
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2273--2277
+Underfull \hbox (badness 10000) in paragraph at lines 2292--2296
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2289--2291
+Underfull \hbox (badness 10000) in paragraph at lines 2310--2312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2289--2291
+Underfull \hbox (badness 10000) in paragraph at lines 2310--2312
 
  []
 
 [67]
-Underfull \hbox (badness 10000) in paragraph at lines 2344--2347
+Underfull \hbox (badness 10000) in paragraph at lines 2365--2368
 
  []
 
 <./img/Lab_5/power_temp.png, id=323, 642.4pt x 481.8pt>
 File: ./img/Lab_5/power_temp.png Graphic file (type png)
 <use ./img/Lab_5/power_temp.png>
-Package pdftex.def Info: ./img/Lab_5/power_temp.png  used on input line 2356.
+Package pdftex.def Info: ./img/Lab_5/power_temp.png  used on input line 2377.
 (pdftex.def)             Requested size: 284.52756pt x 213.39682pt.
 <./img/Lab_5/vt_temp.png, id=324, 642.4pt x 481.8pt>
 File: ./img/Lab_5/vt_temp.png Graphic file (type png)
 <use ./img/Lab_5/vt_temp.png>
-Package pdftex.def Info: ./img/Lab_5/vt_temp.png  used on input line 2362.
+Package pdftex.def Info: ./img/Lab_5/vt_temp.png  used on input line 2383.
 (pdftex.def)             Requested size: 284.52756pt x 213.39682pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2348--2367
+Underfull \hbox (badness 10000) in paragraph at lines 2369--2388
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2348--2367
+Underfull \hbox (badness 10000) in paragraph at lines 2369--2388
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2348--2367
+Underfull \hbox (badness 10000) in paragraph at lines 2369--2388
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2348--2367
+Underfull \hbox (badness 10000) in paragraph at lines 2369--2388
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2348--2367
+Underfull \hbox (badness 10000) in paragraph at lines 2369--2388
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2348--2367
+Underfull \hbox (badness 10000) in paragraph at lines 2369--2388
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2348--2367
+Underfull \hbox (badness 10000) in paragraph at lines 2369--2388
 
  []
 
 [68]
-Underfull \hbox (badness 10000) in paragraph at lines 2368--2371
+Underfull \hbox (badness 10000) in paragraph at lines 2389--2392
 
  []
 
 [69 <./img/Lab_5/power_temp.png> <./img/Lab_5/vt_temp.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 2372--2373
+Underfull \hbox (badness 10000) in paragraph at lines 2393--2394
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2373--2374
+Underfull \hbox (badness 10000) in paragraph at lines 2394--2395
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2374--2375
+Underfull \hbox (badness 10000) in paragraph at lines 2395--2396
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2375--2376
+Underfull \hbox (badness 10000) in paragraph at lines 2396--2397
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2375--2376
+Underfull \hbox (badness 10000) in paragraph at lines 2396--2397
 
  []
 
 
-Overfull \hbox (13.01094pt too wide) in paragraph at lines 2377--2381
+Overfull \hbox (13.01094pt too wide) in paragraph at lines 2398--2402
 \OT1/cmr/m/n/10.95 Si nota come siano pre-senti due con-tributi di potenza: sta
 t-ica e di-nam-ica. Al fine dell'ottimizzazione
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2377--2381
+Underfull \hbox (badness 10000) in paragraph at lines 2398--2402
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2377--2381
+Underfull \hbox (badness 10000) in paragraph at lines 2398--2402
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2377--2381
+Underfull \hbox (badness 10000) in paragraph at lines 2398--2402
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2402--2410
+Underfull \hbox (badness 10000) in paragraph at lines 2423--2431
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2402--2410
+Underfull \hbox (badness 10000) in paragraph at lines 2423--2431
 
  []
 
 [70]
-Underfull \hbox (badness 10000) in paragraph at lines 2417--2427
+Underfull \hbox (badness 10000) in paragraph at lines 2438--2448
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2417--2427
+Underfull \hbox (badness 10000) in paragraph at lines 2438--2448
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2417--2427
+Underfull \hbox (badness 10000) in paragraph at lines 2438--2448
 
  []
 
 [71]
-Underfull \hbox (badness 10000) in paragraph at lines 2434--2447
+Underfull \hbox (badness 10000) in paragraph at lines 2455--2468
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2434--2447
+Underfull \hbox (badness 10000) in paragraph at lines 2455--2468
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2434--2447
+Underfull \hbox (badness 10000) in paragraph at lines 2455--2468
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2434--2447
+Underfull \hbox (badness 10000) in paragraph at lines 2455--2468
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2434--2447
+Underfull \hbox (badness 10000) in paragraph at lines 2455--2468
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2448--2467
+Underfull \hbox (badness 10000) in paragraph at lines 2469--2488
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2448--2467
+Underfull \hbox (badness 10000) in paragraph at lines 2469--2488
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2448--2467
+Underfull \hbox (badness 10000) in paragraph at lines 2469--2488
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2448--2467
+Underfull \hbox (badness 10000) in paragraph at lines 2469--2488
 
  []
 
@@ -2329,31 +2355,36 @@ Overfull \hbox (32.7825pt too wide) in paragraph at lines 40--41
 ) [76] (report_low_power.aux) ) 
 Here is how much of TeX's memory you used:
  5236 strings out of 481556
- 74469 string characters out of 2923631
+ 75925 string characters out of 2914337
  328427 words of memory out of 3000000
  20319 multiletter control sequences out of 15000+200000
  544839 words of font info for 70 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 31i,10n,37p,626b,1329s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Francy\AppData\Local\MiKTeX\2.9\fonts
-/pk/ljfour/jknappen/ec/dpi600\tcrm0900.pk> <C:\Users\Francy\AppData\Local\MiKTe
-X\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmsl10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-msy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on report_low_power.pdf (77 pages, 3693165 bytes).
+ 31i,10n,37p,604b,1329s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\TONI\AppData\Local\MiKTeX\2.9\fonts/p
+k/ljfour/jknappen/ec/dpi600\tcrm0900.pk> <C:\Users\TONI\AppData\Local\MiKTeX\2.
+9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/TONI/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/TONI/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Us
+ers/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8
+.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmex10.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmmi10.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/TONI/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/TONI/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/TONI/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Us
+ers/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17
+.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmr8.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmr9.pfb><C:/Users/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/TONI/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/TONI/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/TONI/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/User
+s/TONI/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.
+pfb>
+Output written on report_low_power.pdf (77 pages, 3694038 bytes).
 PDF statistics:
  421 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
