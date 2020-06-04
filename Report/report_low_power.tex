@@ -884,7 +884,7 @@ In particolare, è stata effettuata una simulazione di 2000 colpi di clock, che 
 \end{center}
 \vspace{0.3cm}  
 Le attività ottenute sono comparabili con quelle stimate in fase di progetto.  
-\\
+\newpage
 \section{Sintesi del VHDL} 
 In tale sezione è stata effettuata la sintesi della top level entity che comprende sia FSM sia datapath.
 \\
@@ -1996,10 +1996,6 @@ Come possibile notare dallo schematico rappresentato precedentemente, i due NMOS
 \\\\
 All'interno delle equazioni che modellizzano un transistor è infatti tenuto conto della variazione della tensione di soglia rispetto alla differenza di potenziale tra source e bulk (effetto body) e tra source e drain (DIBL). In particolare, tali tensioni sono differenti per transistor disposti in serie a causa della ripartizione di tensione tra questi.
 \\\\
-\textcolor{blue}{FEDE: possiamo togliere questa parte \\Si nota inoltre che le tensioni di soglia dei PMOS sono, in modulo, leggermente minori rispetto a quelle degli NMOS. A causa della differente mobilità tra elettroni e lacune, i PMOS devono avere dimensioni maggiori, di conseguenza la relativa capacità di gate risulterà maggiore. In particolare, incrementando tale capacità si ha una riduzione della tensione di soglia.
-\\\\
-Forse nel file dove ci sono tutte le dipendenze da vth c'è una variazione rispetto a W}
-\\\\
 \subsection{Caratterizzazione della porta NAND con carico variabile}
 L'obiettivo di questa sezione consiste nella caratterizzazione delle forme d'onda di tensioni e correnti di uscita della porta NAND high speed, nel caso di carico variabile. Si nota che alla descrizione del circuito sono aggiunti dei generatori denominati \textit{dummy}, che fungono da terminali per la misurazione della corrente attraverso V\textsubscript{dd}, GND e uscita.
 \\\\
@@ -2041,13 +2037,15 @@ Di seguito è riportato il grafico relativo all'andamento delle correnti e una t
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-Si nota come all'aumentare della capacità di carico si abbia un incremento \textcolor{blue}{non lineare} dei ritardi temporali. Come conseguenza si ha infatti un progressivo incremento delle costanti di tempo per le varie transizioni.
+Si nota come all'aumentare della capacità di carico si abbia un incremento non lineare dei ritardi temporali. Come conseguenza si ha infatti un progressivo incremento delle costanti di tempo per le varie transizioni.
 \\\\
 Successivamente ad un fronte di salita sull'uscita, è possibile che non solo sia presente un contributo di corrente che scorre dall'alimentazione verso il carico, ma anche un contributo verso massa. Tale comportamento è inatteso per un transistore ideale. In realtà, in seguito ad una commutazione, vi è un breve intervallo di tempo durante il quale entrambi i dispositivi sono in conduzione, generando un contributo di corrente di corto circuito tra alimentazione e massa. Si fa presente che tali contributi apportano un incremento della potenza dinamica dissipata.
 \\
 Una situazione duale si presenta in corrispondenza di un fronte di discesa presente sull'uscita.
 \\\\
 È possibile osservare come i picchi di corrente di corto circuito si riducano con la presenza di capacità di carico maggiori in uscita. Infatti, durante l'intervallo temporale in cui entrambi i MOS sono in conduzione, una capacità di uscita maggiore convoglia un contributo di corrente altrettanto maggiore verso il carico stesso.
+\\\\
+Analizzando il consumo totale di potenza al variare del carico, è stato possibile notare come quest'ultimo assumesse sempre un valore costante pari a 6.79 nW. Si ipotizzi che tale risultato sia dovuto ad una compensazione tra i vari contributi di potenza.
 \\\\
 Attraverso una analisi DC sono stati stimati i valori di tensione di soglia e, indipendentemente dalla capacità di carico, sono stati ottenuti i seguenti valori.
 \\\\
@@ -2073,15 +2071,12 @@ L'obiettivo di questa sezione consiste nel comparare i parametri associati a por
 \\
 Dal file \textbf{CMOS13.spi} è stato possibile osservare come le larghezze di canale dei transistor costituenti le due porte fossero differenti, in particolare le dimensioni degli NMOS crescono di un fattore 2 mentre per i PMOS tale fattore è circa pari a 2.65. Inoltre, è possibile notare come, nella definizione della porta X8, sia presente un maggior numero di transistor utilizzati. Il circuito è riportato nlla seguente figura.
 \\\\
-\centerline{\includegraphics[width=8cm]{./img/Lab_5/X8.jpg}}
-\\\\
-\textcolor{blue}{Si nota come, al fine di realizzare una cella più compatta, questa sia stata ottenuta attraverso la tecnica dei folded transistors.}
+\centerline{\includegraphics[width=12cm]{./img/Lab_5/X8.jpg}}
 \\\\
 Successivamente alla simulazione sono state analizzate le forme d'onda delle tensioni in uscita alle due porte rispetto alla transizione in ingresso.
 \\\\
 \centerline{\includegraphics[width=14cm]{./img/Lab_5/waveform_4.png}}
 \\\\
-\textcolor{red}{FEDE: forse ci sta indicare una legenda dei colori che rappresentano le diverse porte\\}
 Si nota come il comportamento delle due porte sia comparabile a fronte di un carico non elevato. Al contrario, la differenza dei ritardi di propagazione risulta significativa con carichi maggiori.
 \\\\
 L'andamento delle correnti è di seguito riportato.
@@ -2141,27 +2136,23 @@ Come atteso, un carico maggiore comporta correnti più elevate all'interno dei n
 Per avere una visione completa sulle differenze dell'implementazione delle due porte, sono di seguito riportati i consumi di potenza. 
 \\\\
 \begin{center}
-	\begin{tabular}{|c|c|c||c|c|}
+	\begin{tabular}{|c|c|c|}
 	\hline
-	& \multicolumn{2}{|c||}{NAND base} & \multicolumn{2}{|c|}{NAND 8X}\\
+	& NAND base & NAND 8X\\
 	\hline
-	Parametro & 0.006 fF & 60 fF & 0.006 fF & 60 fF \\
-	\hline
-	Potenza dissipata [nW] & 6.79 & 6.79 & 49.47 & 49.47\\
+	Potenza dissipata [nW] & 6.79 & 49.47\\
 	\hline
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-È possibile notare come la porta di dimensioni maggiori sia associata a consumi di potenza più elevati. Si osserva inoltre l'indipendenza della potenza dissipata rispetto al carico utilizzato in uscita. \textcolor{red}{spiegare il motivo FEDE: qui secondo enea basta confrontare le due porte
-\\
-SIMO: E' possibile notare come i contributi con carichi diversi siano uguali, ma Enea ha detto di concentrarci da un'altra parte.}
+È possibile notare come la porta di dimensioni maggiori sia associata a consumi di potenza più elevati. 
 \\\\
 Di seguito sono riportati i risultati relativi all'analisi delle tensioni di soglia.
 \\\\
 \begin{center}
 	\begin{tabular}{|c|c|}
 	\hline
-	 \multicolumn{2}{c}{NAND base} \\
+	 \multicolumn{2}{|c|}{NAND base} \\
 	\hline
 	Parametro & Tensione di soglia [V] \\
 	\hline
@@ -2176,43 +2167,6 @@ Di seguito sono riportati i risultati relativi all'analisi delle tensioni di sog
 	\end{tabular}	
 	\begin{tabular}{|c|c|}
 	\hline
-	 \multicolumn{2}{c}{NAND 8X} \\
-	\hline
-	Parametro & Tensione di soglia [V] \\
-	\hline
-	 V\textsubscript{tn0} & 0.319\\
-	\hline
-	 V\textsubscript{tn1} & 0.278 \\
-	 \hline
-	 V\textsubscript{tn2} & 0.319 \\
-	 \hline
-	 V\textsubscript{tn3} & 0.278 \\
-	 \hline
-	 V\textsubscript{tn4} & 0.278 \\
-	 \hline
-	 V\textsubscript{tn5} & 0.319 \\
-	 \hline
-	 V\textsubscript{tn6} & 0.278 \\
-	\hline
-	 V\textsubscript{tn7} & 0.319 \\
-	 \hline
-	V\textsubscript{tp6} & -0.242 \\
-	\hline
-	V\textsubscript{tp7} & -0.242 \\
-	\hline
-	V\textsubscript{tp6\_2} & -0.242 \\
-	\hline
-	V\textsubscript{tp7\_2} & -0.242 \\
-	\hline
-	V\textsubscript{tp6\_3} & -0.242 \\
-	\hline
-	V\textsubscript{tp7\_3} & -0.242 \\
-	\hline
-	\end{tabular}	
-\end{center}
-\vspace{0.3cm}
-	\begin{tabular}{|c|c|}
-	\hline
 	 \multicolumn{2}{|c|}{NAND 8X} \\
 	\hline
 	Parametro & Tensione di soglia [V] \\
@@ -2224,13 +2178,10 @@ Di seguito sono riportati i risultati relativi all'analisi delle tensioni di sog
 	V\textsubscript{tp6, tp7, tp6\_2, tp7\_2, tp6\_3, tp7\_3} & -0.242 \\
 	\hline
 	\end{tabular}
+\end{center}
 \vspace{0.3cm}
-\\
 È possibile notare come, nel caso della NAND 8X, gli NMOS presentino tensioni di soglia differenti dovute alla disposizione in serie dei transistor.
-\\
-In particolare, tali valori presentano un incremento rispetto alla NAND standard. \textcolor{red}{Ciò è dovuto all'aumento delle dimensioni dei transistor
-\\
-Dobbiamo capire se vt aumenta o diminuisce con le dimensioni, o se c'entra altro. Forse conviene fare anche uno schema di come è fatto questo circuito}
+\newpage
 \section{Caratterizzazione di porte NAND high speed e low leakage}
 Nelle sezioni precedenti è stato utilizzato un modello di NAND ottimizzato per ridurre i ritardi di propagazione. È interessante comparare tale tipo di gate con una porta analoga ottimizzata per ridurre il consumo dovuto al leakage.
 \\
@@ -2240,7 +2191,6 @@ Nelle sezioni precedenti è stato utilizzato un modello di NAND ottimizzato per 
 \\\\
 \centerline{\includegraphics[width=14cm]{./img/Lab_5/waveform_7.png}}
 \\\\
-\textcolor{red}{Fede: di nuovo legenda?}
 Osservando le forme d'onda, si nota come l'andamento sia analogo al caso high speed. Le differenze rispetto al caso precedente sono da ricercare nell'ampiezza dei picchi relativi alla corrente di corto circuito e nei differenti ritardi introdotti.
 \\\\
 Nella seguente tabella è riportata l'analisi delle principali metriche temporali.
@@ -2270,7 +2220,7 @@ Si passa ora all'analisi relativa alle correnti.
 \begin{center}
 	\begin{tabular}{|c|c|c||c|c|}
 	\hline
-	& \multicolumn{2}{c}{NAND base} & \multicolumn{2}{c}{NAND 8X}\\
+	& \multicolumn{2}{|c||}{NAND base} & \multicolumn{2}{|c|}{NAND 8X}\\
 	\hline
 	Parametro & 0.006 fF & 60 fF & 0.006 fF & 60 fF \\
 	\hline
@@ -2294,25 +2244,21 @@ Come atteso, i picchi di corrente nel caso della porta low leakage assumono valo
 Di seguito sono riportati i valori di potenza totale dissipata stimata dal simulatore.
 \\\\
 \begin{center}
-	\begin{tabular}{|c|c|c||c|c|}
+	\begin{tabular}{|c|c|c|}
 	\hline
-	& \multicolumn{2}{|c||}{NAND base} & \multicolumn{2}{|c|}{NAND 8X}\\
+	& NAND base & NAND 8X\\
 	\hline
-	Parametro & 0.006 fF & 60 fF & 0.006 fF & 60 fF \\
-	\hline
-	Potenza dissipata [nW] & 0.45 & 0.45 & 2.97 & 2.97\\
+	Potenza dissipata [nW] & 0.45 & 2.97\\
 	\hline
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-\textcolor{red}{commento da inserire su confronto tra high speed e low power
-\\
-SIMO: Io metterei il rapporto tra fattore di aumento dei ritardi e fattore di riduzione della potenza. Poi si potrebbe fare anche un discorso sul fatto che se stiamo lavorando in un percorso critico non è conveniente rischiare di renderlo critico usando la porta low leakage}
+Confrontando l'implementazione high speed con quella low power, è possibile notare come il fattore di riduzione della potenza sia circa 15, a fronte di un incremento dei ritardi di un fattore di 1.5. L'impiego di gate low leakage risulta conveniente qualora non fossero presenti vincoli stringenti sul timing del sistema.
 \\\\
 \begin{center}
 	\begin{tabular}{|c|c|}
 	\hline
-	 \multicolumn{2}{c}{NAND base} \\
+	 \multicolumn{2}{|c|}{NAND base} \\
 	\hline
 	Parametro & Tensione di soglia [V] \\
 	\hline
@@ -2327,44 +2273,21 @@ SIMO: Io metterei il rapporto tra fattore di aumento dei ritardi e fattore di ri
 	\end{tabular}	
 	\begin{tabular}{|c|c|}
 	\hline
-	 \multicolumn{2}{c}{NAND 8X} \\
+	 \multicolumn{2}{|c|}{NAND 8X} \\
 	\hline
 	Parametro & Tensione di soglia [V] \\
 	\hline
-	 V\textsubscript{tn0} & 0.419\\
+	 V\textsubscript{tn0, tn2, tn5, tn7} & 0.419\\
 	\hline
-	 V\textsubscript{tn1} & 0.386 \\
-	 \hline
-	 V\textsubscript{tn2} & 0.419 \\
-	 \hline
-	 V\textsubscript{tn3} & 0.386 \\
-	 \hline
-	 V\textsubscript{tn4} & 0.386 \\
-	 \hline
-	 V\textsubscript{tn5} & 0.419 \\
-	 \hline
-	 V\textsubscript{tn6} & 0.386 \\
+	 V\textsubscript{tn1, tn3, tn4, tn6} & 0.386 \\
 	\hline
-	 V\textsubscript{tn7} & 0.419 \\
-	 \hline
-	V\textsubscript{tp6} & -0.368 \\
+	V\textsubscript{tp6, tp7, tp6\_2, tp7\_2, tp6\_3, tp7\_3} & -0.368 \\
 	\hline
-	V\textsubscript{tp7} & -0.368 \\
-	\hline
-	V\textsubscript{tp6\_2} & -0.368 \\
-	\hline
-	V\textsubscript{tp7\_2} & -0.368 \\
-	\hline
-	V\textsubscript{tp6\_3} & -0.368 \\
-	\hline
-	V\textsubscript{tp7\_3} & -0.368 \\
-	\hline
-	\end{tabular}	
+	\end{tabular}
 \end{center}
 \vspace{0.3cm}
-Si nota come una tecnologia low leakage preveda la caratterizzazione di transistori con tensioni di soglia maggiori rispetto alla controparte high speed. La corrente di leakage, infatti, presenza una riduzione esponenziale rispetto alla tensione di soglia.
-\\\\
-\textcolor{red}{COMMENTO su confronto tra high speed e low power}
+Si nota come una tecnologia low leakage preveda la caratterizzazione di transistori con tensioni di soglia maggiori rispetto alla controparte high speed. La corrente di leakage, infatti, presenta una riduzione esponenziale rispetto alla tensione di soglia.
+\newpage
 \section{Dipendenza dalla temperatura}
 In questa sezione è proposta un'ultima analisi della dipendenza di una porta NAND nei confronti della temperatura. In particolare, è stato considerato il seguente vettore di temperature:
 \\\\
@@ -2385,6 +2308,7 @@ Allo stesso modo è stata analizzata la variazione delle tensioni di soglia al v
 \textcolor{red}{cambiare ylabel}
 \\
 Si nota una riduzione lineare in modulo delle tensioni di soglia sia degli NMOS sia dei PMOS. All'interno del range di variazione si nota su entrambe una riduzione di circa 150mV. Tale variazione si spiega a causa dell'effetto della temperatura sulla densità di portatori intrinseci, n\textsubscript{i}, la quale tende ad aumentare.
+\newpage
 \section{Caratterizzazione di una memoria low leakage}
 Lo scopo di questa sezione consiste nella scelta di un'architettura ottimale di una memoria al fine di ridurre i consumi di potenza.
 \\\\
@@ -2429,10 +2353,10 @@ Come primo accorgimento è possibile applicare, rispetto alla memoria di base, u
 Osservando il valore delle correnti di read/write dai datasheet forniti, è possibile notare come questi presentino una variazione poco significativa alla riduzione delle righe ma, al contrario, aumentano circa di un fattore 1.6 al raddoppiare del parallelismo. La potenza dinamica viene quindi ridotta di un fattore:
 \\
 \begin{itemize}
-\item F\textsubscript{new} = 0.5*F
-\item P\textsubscript{dyn new} = 0.5*1.6*P\textsubscript{dyn} = 0.8*P\textsubscript{dyn}
+\item F\textsubscript{new} = 0.5$\cdot$F
+\item P\textsubscript{dyn new} = 0.5$\cdot$1.6$\cdot$P\textsubscript{dyn} = 0.8$\cdot$P\textsubscript{dyn}
 \item P\textsubscript{s} = P\textsubscript{s}
-\item A\textsubscript{new} = 1.06*A
+\item A\textsubscript{new} = 1.06$\cdot$A
 \end{itemize}
 \vspace{0.3cm}
 Nonostante la potenza statica sia stata assunta trascurabile, è importante, ad ogni passo di ottimizzazione, osservare gli effetti che modifiche apportate hanno su questa. In questo caso è possibile notare come la potenza statica rimanga circa invariata.
@@ -2446,10 +2370,10 @@ Si osserva come la dimensione totale rimanga sempre invariata ma, in questo caso
 Anche in questo caso è necessario osservare come un dimezzamento del numero di righe porti ad una riduzione poco significativa, di circa 5\%, delle correnti di read/write.
 \\
 \begin{itemize}
-\item F\textsubscript{new 2} = 0.5*0.5*F = 0.25*F
-\item P\textsubscript{dyn new 2} = 0.5*0.8*P\textsubscript{dyn} = 0.4*P\textsubscript{dyn}
-\item P\textsubscript{s} = 1.5*P\textsubscript{s}
-\item A\textsubscript{new} = 1.3*1.06*A = 1.378*A
+\item F\textsubscript{new 2} = 0.5$\cdot$0.5$\cdot$F = 0.25$\cdot$F
+\item P\textsubscript{dyn new 2} = 0.5$\cdot$0.8$\cdot$P\textsubscript{dyn} = 0.4$\cdot$P\textsubscript{dyn}
+\item P\textsubscript{s} = 1.5$\cdot$P\textsubscript{s}
+\item A\textsubscript{new} = 1.3$\cdot$1.06$\cdot$A = 1.378$\cdot$A
 \end{itemize}
 \vspace{0.3cm}
 Utilizzando questa tecnica si ha però un incremento della potenza statica, in particolare di circa un fattore 1.5 rispetto al caso precedente. In tal caso, è necessario verificare se, dopo tale trasformazione, la potenza sia ancora trascurabile rispetto a quella dinamica; in caso affermativo si può procedere con un ulteriore step di parallelizzazione implementando quattro blocchi di memoria. Tale ottimizzazione si può ripetere fino al raggiungimento di un rapporto ottimale tra potenza statica e dinamica.
@@ -2460,7 +2384,7 @@ Un'ultima considerazione risiede nella scelta della profondità del multiplexer 
 \\\\
 In particolare, è stato notato come la profondità del multiplexer sia l'unico parametro che determina una variazione associata alle capacità dei pin di dato.
 \\\\
-\centerline{C\textsubscript{data new} = 0.07*C\textsubscript{data}}
+\centerline{C\textsubscript{data new} = 0.07$\cdot$C\textsubscript{data}}
 \\\\
 Un riduzione di tali capacità comporta un consumo di potenza dinamica inferiore nel pilotare i dati in ingresso alla memoria. Ciò va considerato in quanto linee di dato che presentano numerose commutazioni possono portare ad un consumo aggiuntivo nel caso di profondità del mux pari a 16.
 \\\\
@@ -2473,17 +2397,128 @@ Si nota come, partendo dalla memoria originale e osservando i datasheet forniti,
 Un'ottimizzazione possibile è relativa alla profondità del multiplexer. In questo contesto, un valore pari a 16 risulta essere più indicato in quanto, a costo di un incremento di potenza dinamica, vi è una riduzione del contributo statico.
 \\\\
 Poiché la frequenza di accesso non è elevata, sarebbe possibile ridurre il consumo statico imponendo una modalità di data retention tra un accesso e l'altro applicabile con una riduzione della tensione di alimentazione.
+\subsection{Esempio}
+Si ipotizza che la memoria da implementare abbia una frequenza di accesso in lettura e scrittura elevata, pari a 1 GHz.
+\\
+Inizialmente si considera l'implementazione 8192x16 con profondità del mux pari a 16.
 \\\\
-\textcolor{red}{AGGIUNGERE EVENTUALE ESEMPIO}
+\begin{center}
+	\begin{tabular}{|c|c|}
+	\hline
+	Righe & 8192\\
+	\hline
+	Parallelismo & 16\\
+	\hline
+	Multiplexer & 16\\
+	\hline
+	Area & 0.3906 mm$^2$\\
+	\hline
+	Potenza statica & 0.534 mW\\
+	\hline
+	Frequenza & 1 GHz\\
+	\hline
+	Potenza dinamica & 13.3 mW\\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+È possibile notare come il contributo di potenza dinamica sia preponderante.
+\\
+Si procede quindi raddoppiando il parallelismo delle word e dimezzando il numero di righe.
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|}
+	\hline
+	Righe & 4096\\
+	\hline
+	Parallelismo & 32\\
+	\hline
+	Multiplexer & 16\\
+	\hline
+	Area & 0.4137 mm$^2$\\
+	\hline
+	Potenza statica & 0.526 mW\\
+	\hline
+	Frequenza & 500 MHz\\
+	\hline
+	Potenza dinamica & 10.7 mW\\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Si applica successivamente la tecnica della parallelizzazione, aumentando quindi il numero di banchi impiegato.
+\begin{center}
+	\begin{tabular}{|c|c|}
+	\hline
+	Righe & 2048\\
+	\hline
+	Parallelismo & 32\\
+	\hline
+	Multiplexer & 16\\
+	\hline
+	Area & 0.5276 mm$^2$\\
+	\hline
+	Potenza statica & 0.77 mW\\
+	\hline
+	Frequenza & 250 MHz\\
+	\hline
+	Potenza dinamica & 5.075 mW\\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Si sceglie successivamente di passare ad una configurazione caratterizzata da un multiplexer di profondità pari a 4 anziché 16.
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|}
+	\hline
+	Righe & 2048\\
+	\hline
+	Parallelismo & 32\\
+	\hline
+	Multiplexer & 4\\
+	\hline
+	Area & 0.4683 mm$^2$\\
+	\hline
+	Potenza statica & 0.808 mW\\
+	\hline
+	Frequenza & 250 MHz\\
+	\hline
+	Potenza dinamica & 3.825 mW\\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Dal momento che il rapporto tra potenza statica e potenza dinamica non è ancora ottimale, si applica un ulteriore livello di parallelizzazione.
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|}
+	\hline
+	Righe & 1024\\
+	\hline
+	Parallelismo & 32\\
+	\hline
+	Multiplexer & 4\\
+	\hline
+	Area & 0.5472 mm$^2$\\
+	\hline
+	Potenza statica & 0.97 mW\\
+	\hline
+	Frequenza & 125 MHz\\
+	\hline
+	Potenza dinamica & 1.675 mW\\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Considerando il rapporto iniziale tra potenza statica e potenza dinamica, pari a 0.04, si è giunti ad un'architettura nella quale i due contributi sono confrontabili. In particolare, il rapporto precedentemente citato assume un valore pari a circa 0.58.
+\\
+Applicando ulteriori livelli di parallelizzazione si otterrebbe un contributo di potenza statica sempre maggiore.
+\\\\
+Infine, le modifiche apportate hanno avuto come conseguenza un incremento dell'area totale della memoria con un fattore pari a 1.4.
 \\\\
 \textcolor{red}{
-schema netlist base e 8x\\
-variazione vth tra nmos e pmos\\
-potenze uguali con carichi diversi (lasciare solo differenza base/8x?)\\
-riformulare tabelle tra base e 8x (tabelle lunghe)\\
-controllare completezza confronto high speed low power\\
-cambiare ylabel 5.4\\
-esempio memoria?
+cambiare ylabel 5.4
 }
 \chapter{Appendice A}
 \section{Laboratorio 2 - FSM}
