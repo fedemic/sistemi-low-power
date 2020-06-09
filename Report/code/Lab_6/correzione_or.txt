@@ -1,0 +1,9 @@
+DESCRIZIONE ORIGINALE
+
+co <= (a AND b) OR (ci OR a) OR (ci AND b);
+
+
+DESCRIZIONE CORRETTA
+
+co <= (a AND b) OR (ci AND a) OR (ci AND b);
+
