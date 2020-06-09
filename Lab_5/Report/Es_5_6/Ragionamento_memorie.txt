@@ -1,0 +1,96 @@
+Partiamo da un'implementazione di base della memoria di tipo 8192x16 con
+depth del mux di 16. Si identificano i parametri di base di tale blocco.
+
+	----------------------
+	Area				A 
+	----------------------
+	Potenza statica		Ps
+	----------------------
+	Potenza dinamica	Pd 
+	----------------------
+	Frequenza			Fr
+	----------------------
+	
+La potenza statica è proporzionale al contributo di standby, in quanto è il consumo
+che la memoria ha senza particolari operazioni di lettura e scrittura. Tale contributo
+rimane costante con la frequenza di funzionamento.
+La potenza dinamica al contrario ha una dipendenza dalla frequenza di funzionamento.
+Data questa dipendenza vi sono due casi estremi di ottimizzazione, uno in cui la
+frequenza di funzionamento elevata fa si che il contributo statico sia trascurabile,
+l'altro in cui una scarsa frequenza di accesso rende il contributo dinamico trascurabile
+rispetto a quello statico.
+
+CASO POTENZA STATICA TRASCURABILE
+
+In tal caso l'obiettivo principale consiste nella riduzione del contributo dinamico.
+Le metriche da osservare in questo caso sono le correnti di read/write delle varie
+implementazioni e la frequenza di funzionamento del circuito che agisce come fattore
+di scalamento lineare per il consumo dinamico.
+
+Come primo accorgimento si può pensare, rispetto alla memoria base, ad un raddioppio
+del parallelismo e un dimezzamento del numero di righe, ottenendo una memoria 4094x32.
+In questo modo le dimensioni della memoria rimangono intatte, ma sarà disponibile ad ogni 
+accesso un dato di un parallelismo doppio rispetto a prima, dunque il sistema può accedere ai 
+dati con un throughput uguale a prima dimezzando la frequenza di accesso. Osservando cosa accade
+alle correnti di read/write si può stimare che queste in particolare presentino una variazione poco
+significativa ad una riduzione delle righe ma, al contrario, aumentano di un fattore circa
+1.6 all'aumento del parallelismo.
+
+	Pd_actual = 0.5*1.6*Pd = 0.8*Pd
+	
+Nonostante la potenza statica sia stata stimata inizialmente come trascurabile è importante 
+ad ogni passo di ottimizzazione osservare gli effetti che l'architettura ha su di essa. In tal
+caso la potenza statica rimane all'incirca invariata, in quanto è stata applicata una 
+trasformazione contemporaneamente a parallelismo e numero di righe.
+
+Come secondo accorgimento per ridurre ulteriormente la potenza dinamica è possibile 
+utilizzare la tecnica della parallelizzazione, portando il design dell'architettura su
+più blocchi di memoria in grado di lavorare in parallelo. In tal caso partendo dal blocco 
+a cui si è arrivati di dimensioni 4096x32 è possibile implementare due blocchi di 
+dimensioni 2048x32. La dimensione totale resta sempre invariata ma in tal caso per avere
+lo stesso throughput sarà necessario compiere un accesso ad una memoria per volta, dimezzando
+quindi la frequenza di accesso a ciascuna. Anche in questo caso prima di trarre conclusioni
+sulla potenza dinamica è necessario osservare come un dimezzamento del numero di righe 
+influisce sulle correnti di read/write: anche in questo caso la riduzione percentuale è 
+poco significativa, dell'ordine di circa il 5%.
+
+	Pd_actual = 0.5*(0.8*Pd) = 0.4*Pd
+	
+Utilizzando questa tecnica si ha però un incremento della potenza statica, in particolare 
+di un fattore circa 1.5 rispetto al caso precedente. In tal caso è necessario verificare 
+se dopo tale trasformazione la potenza statica sia ancora trascurabile rispetto a quella
+dinamica. In caso affermativo di può procedere con un ulteriore step di parallelizzazione 
+implementando 4 blocchi di memoria. Si procede con questo approccio fino al raggiungimento 
+di un punto ideale.
+
+Un'ultima considerazione è nella scelta del multiplexer dei singoli blocchi che compongono
+la memoria, quello che si nota infatti è che usare una profondità del mux pari a 4 rispetto 
+al valore 16 iniziale può portare ad un ulteriore riduzione delle correnti di read/write di
+un fattore circa 1.3. Questo però al costo di un contributo di leakage maggiore, anche in 
+questo caso è necessario valutare i due contributi prima di confermare la variazione di 
+architettura apportata.
+
+Nel caso di parallelzzazione è possibile ridurre entrambi i contributi di potenza statica e 
+dinamica agendo sulla riduzione della tensione di alimentazione, con particolare attenzione 
+ai noise margin della memoria.
+
+CASO POTENZA DINAMICA TRASCURABILE
+
+L'obiettivo consiste nella riduzione del contributo statico, dipendente dalle dimensioni
+della memoria. In tal caso la metrica osservata è la corrente di standby, in quanto quantifica
+il consumo statico della memoria in caso questa non venga utilizzata.
+
+In questo contesto la tecnica di parallelizzazione precedentemente presa in considerazione 
+porterebbe ad un aumento della potenza statica. Partendo dalla scelta della profondità dei 
+multiplexer in questo caso la scelta di un valore pari a 16 è la più indicata.
+
+Chiaramente si avrebbe una forte riduzione del leakage nel caso di riduzione di dimensioni 
+della memoria, ma nel nostro contesto deve essere reso disponibile un certo numero di celle.
+Inoltre non è possibile applicare un raddoppio del numero di righe e un dimezzamento del 
+parallelismo poichè non è presente una memoria con tale caratterizzazione.
+
+Tra un accesso e l'altro sarebbe possibile imporre alla memoria una modalità di data retention
+se disponibile, andando a ridurre la tensione di alimentazione.
+
+
+	

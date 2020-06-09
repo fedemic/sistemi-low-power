@@ -22,7 +22,7 @@
 \titleformat{\chapter}[display]
 {\normalfont\bfseries}{}{0pt}{\Huge} % Rimuove le scritte Capitolo 1,2 ecc
 \newenvironment{listato}{\footnotesize} {\normalsize }
-\renewcommand{\arraystretch}{1.4} % modifica alteza delle celle in tabella
+\renewcommand{\arraystretch}{1.4} % modifica altezza delle celle in tabella
 
 
 % inizio del documento
@@ -56,16 +56,16 @@
 \tableofcontents % imposta l'indice in automatico
 \pagebreak % per passare direttamente alla prossima pagina
 
-\chapter{Power Estimation: probabilistic techniques}
+\chapter{Stima di potenza mediante tecniche probabilistiche}
 
 \section{Calcolo di probabilità e attività: porte logiche elementari}
 
-Il primo esercizio consiste nel valutare le probabilità e attività dell'uscita di 
+Il primo esercizio consiste nel valutare probabilità e attività dell'uscita di 
 quattro porte logiche elementari: NOT, AND, OR e XOR.
 \\\\
 \centerline{\includegraphics[width=12cm]{./img/Lab_1/Es_1/Porte.png}}
 \\\\
-Mentre la probabilità di uscita del gate è definita dalla funzione logica
+Mentre la probabilità dell'uscita del gate è definita dalla funzione logica
 stessa, la switching activity è valutata allo stesso modo per tutti i casi, 
 mediante la seguente formula:
 \\\\
@@ -89,8 +89,8 @@ ingressi equiprobabili e scorrelati.
 	$P(Y=1) = P(A=1) \cdot(1-P(B=1)) + P(B=1) \cdot(1-P(A=1)) = 0.5$ \\
 	$A(Y) = 0.5$ 
 \end{itemize} 
-Simulando il test bench fornito tramite ModelSim, è possibile ottenere un file 
-riportante il numero di commutazioni di ogni segnale del circuito durante il 
+Attraverso una simulazione ModelSim, è possibile ottenere un file 
+contenente il numero di commutazioni di ogni segnale del circuito durante il 
 tempo di simulazione.
 \\
 Il testbench fornito sfrutta un generatore di numeri casuali per generare gli 
@@ -151,9 +151,9 @@ i seguenti grafici.
 \\\\
 \centerline{\includegraphics[width=8cm]{./img/Lab_1/Es_1/Inverter.png}
             \includegraphics[width=8cm]{./img/Lab_1/Es_1/AND.png}}
-\centerline{\includegraphics[width=8cm]{./img/Lab_1/Es_1/XOR.png}
-            \includegraphics[width=8cm]{./img/Lab_1/Es_1/OR.png}}
-\vspace{0.5cm}
+\centerline{\includegraphics[width=8cm]{./img/Lab_1/Es_1/OR.png}
+            \includegraphics[width=8cm]{./img/Lab_1/Es_1/XOR.png}}
+\\\\
 Si osserva che, all'aumentare del tempo di simulazione, la stima 
 dell'attività risulta sempre più accurata. In particolare, 
 nel caso analizzato, si osserva che per un numero di cicli di clock 
@@ -168,10 +168,10 @@ Dalle tavole di verità di Half Adder e Full Adder si ottengono le seguenti funz
 	\centerline{Cout = A AND B}
 	\item \textbf{Full adder} \\
 	\centerline{S = A XOR B XOR Cin} \\
-	\centerline{Cout = A AND B AND Cin} \\
+	\centerline{Cout = (A AND B) OR (A AND Cin) OR (B AND Cin)}\\
 \end{itemize}
 Partendo dalle funzioni logiche che descrivono le uscite è stato possibile ricavare le probabilità
-associate alle uscite e le relative attività.
+associate ad esse e le relative attività.
 \begin{itemize}
 	\item \textbf{Half adder}\\
 	\begin{align*}
@@ -198,7 +198,8 @@ I risultati ottenuti sono riportati nella seguente tabella.
 \vspace{0.3cm}
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|}
-	\multicolumn{5}{c}{P(A) = P(B) = 0.5 }\\
+	\hline
+	\multicolumn{5}{|c|}{P(A) = P(B) = 0.5  }\\
 	\hline
 	  & P(S=1) & A(S) & P(Cout=1) & A(Cout) \\ 
 	\hline
@@ -213,13 +214,13 @@ Sfruttando i risultati ottenuti per il singolo full adder, è stato possibile ot
 \\\\\\
 \centerline{\includegraphics[width=15cm]{./img/Lab_1/Es_2/RCA_8_bit.png}}
 \\\\\\
-Per tale analisi sono stati considerati equiprobabili gli ingressi A e B mentre il carry in ingresso al primo full adder è stato fissato a 0.\\
+Per tale analisi sono stati considerati equiprobabili e scorrelati gli ingressi A e B mentre il carry in ingresso al primo full adder è stato fissato a 0.\\
 I risultati ottenuti sono riportati nella seguente tabella.
 \vspace{0.3cm}
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
 \hline
-\multicolumn{10}{c}{P(A) = P(B) = 0.5}\\
+\multicolumn{10}{|c|}{P(A) = P(B) = 0.5}\\
 \hline
  & S7 & S6 & S5 & S4 & S3 & S2 & S1 & S0 & Cout \\
 \hline
@@ -235,7 +236,7 @@ Variando le probabilità associate agli ingressi, in particolare considerando P(
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
 \hline
-\multicolumn{10}{c}{P(A) = 0.4 e P(B) = 0.6}\\
+\multicolumn{10}{|c|}{P(A) = 0.4 e P(B) = 0.6}\\
 \hline
  & S7 & S6 & S5 & S4 & S3 & S2 & S1 & S0 & Cout \\
 \hline
@@ -248,7 +249,7 @@ A(Y) & 0.4992 & 0.4998 & 0.4999 & 0.5 & 0.5 & 0.5 & 0.5 & 0.5 & 0.5 \\
 \vspace{0.3cm}
 È possibile notare come la probabilità delle varie uscite sia funzione delle probabilità degli ingressi.
 In particolare, la probabilità delle uscite relative alle somme aumenta. Si nota che ai bit relativi agli stadi iniziali sono associati valori che non si discostano molto dal caso di ingressi equiprobabili mentre i bit più significativi subiscono una variazione più marcata.\\\\
-Al fine di avere un riscontro sui dati stimati, sono state effettuate due simulazioni tramite ModelSim: in un primo caso è stato considerato un ritardo limitato alle uscite relative alle somme; successivamente è stato introdotto un ulteriore ritardo anche sul carry in uscita di ogni full adder.
+Al fine di avere un riscontro sui dati stimati, sono state effettuate due simulazioni tramite ModelSim: in un primo caso (Sim. 1) è stato considerato un ritardo limitato alle uscite relative alle somme; successivamente (Sim. 2) è stato introdotto un ulteriore ritardo anche sul carry in uscita di ogni full adder.
 Come descritto precedentemente, il file fornito da Modelsim riporta il numero di commutazioni dei segnali, di conseguenza l'attività è stata calcolata in modo analogo all'esercizio precedente.\\
 \vspace{0.3cm}
 \begin{center}
@@ -281,10 +282,12 @@ A(S) & 3.845 & 7.925\\
 \centerline{\includegraphics[width=15cm]{./img/Lab_1/Es_2/Glitch.png}}
 \vspace{0.3cm}
 È possibile notare, attraverso le waveforms, la presenza di commutazioni indesiderate nel secondo caso, rappresentato dal vettore di segnali s2.
+\\
+Sono di seguito riportati i risultati di un'ulteriore simulazione atta a mettere in luce le commutazioni spurie dei segnali di somma.
 \\\\
  \centerline{\includegraphics[width=15cm]{./img/Lab_1/Es_2/Glitch_worst_case.png}}
 \\\\
-\textcolor{blue}{In particolare, nell'immagine sopra riportata è possibile osservare come i bit relativi all'uscita di somma, a partire dal
+In particolare, nell'immagine sopra riportata è possibile osservare come i bit relativi all'uscita di somma, a partire dal
 quarto, presentino una continua commutazione fino al raggiungimento del valore logico corretto. La causa di tale comportamento è da ricercare
 nelle transizioni a cui gli ingressi sono stati sottoposti nella simulazione. Le due somme, calcolate una di seguito all'altra,
 sono le seguenti:
@@ -310,7 +313,7 @@ in considerazione i carry in ingresso agli stadi lasciati dal risultato della so
 In questo caso, la combinazione di carry lasciati dal calcolo precedente e la nuova operazione richiesta (somma 2) fanno si che il sommatore risulti in una condizione per cui, ad ogni colpo di clock, le uscite degli stadi successivi al secondo continueranno a commutare in modo alternato fino a che il carry introdotto dalla seconda operazione non raggiungerà il suddetto stadio, portando così
 il bit di somma ad un risultato finale. 
 \\\\
-Si può notare che i primi 3 bit della somma non sono affetti da tale fenomeno, questi infatti non sono soggetti alla propagazione di carry derivanti dalle due somme. È possibile ricostruire una situazione simile per questi primi bit, ponendo in ingresso un susseguirsi di due
+Si può notare che i primi 3 bit non sono affetti da tale fenomeno, questi infatti non sono soggetti alla propagazione di carry derivanti dalle due somme. È possibile ricostruire una situazione simile per questi primi bit, ponendo in ingresso un susseguirsi di due
 somme leggermente differenti dalle precedenti:
 \vspace{0.3cm}
 \begin{center}
@@ -332,19 +335,18 @@ Carry in & 01010100 & \\
 In tal modo il fenomeno di propagazione dei carry e delle commutazioni delle uscite di somma è esteso anche per i bit meno significativi. Di seguito è riportato un risultato della simulazione ottenuto ponendo tali valori in ingresso al sommatore.
 \\\\\\
 \centerline{\includegraphics[width=12cm]{./img/Lab_1/Es_2/Worst_case_nostro.png}}
-}
 \newpage
 \section{Sintesi e analisi di potenza di un RCA}
 È possibile effettuare una stima di potenza avanzata attraverso la piattaforma Synopsys. 
-Partendo infatti dalla descrizione VHDL del RCA fornito, il software è in grado di compiere una sintesi ottimizzata e valutare parametri del circuito basandosi su una libreria di celle caratterizzate dal punto di vista di area, consumi e ritardi.
+Partendo infatti dalla descrizione VHDL del RCA fornito, il software è in grado di compiere una sintesi ottimizzata e mappare il circuito su una libreria di celle caratterizzate dal punto di vista di area, consumi e ritardi.
 \\\\
-Per poter stimare la potenza dinamica è necessario conoscere la frequenza di lavoro del circuito, ottenuta valutando il percorso combinatorio con ritardo maggiore: è possibile valutare tale parametro del circuito attraverso un timing report.
+Per poter stimare la potenza dinamica è necessario conoscere la frequenza di lavoro del circuito, ottenuta valutando il percorso combinatorio con ritardo maggiore: è possibile ottenere tale parametro attraverso un timing report.
 Il ritardo massimo riportato è pari a 0.78ns, di conseguenza è stato scelto un periodo di clock pari a 1ns.\\
 Successivamente è possibile procedere con l'analisi relativa alla potenza.
 Il comando power report consente di ottenere una generica stima della potenza dissipata dal circuito, distinguendo tre contributi:
 \begin{itemize}
 \item \textbf{leakage}: consumo statico dovuto alle correnti di leakage dei dispositivi utilizzati
-\item \textbf{internal}: contributo alla potenza dinamica totale dovuto alla corrente di corto circuito
+\item \textbf{internal}: contributo di potenza dinamica dovuto al consumo interno delle celle utilizzate per la sintesi del circuito, comprende al suo interno il contributo di corrente di corto circuito
 \item \textbf{switching}: contributo alla potenza dinamica dovuto alle commutazioni dei nodi e alle relative cariche/scariche delle capacità
 \end{itemize}
 Nella seguente tabella è riportata la suddivisione dei tre contributi.
@@ -352,9 +354,9 @@ Nella seguente tabella è riportata la suddivisione dei tre contributi.
 \begin{center}
 	\begin{tabular}{|c|c|c|c|}
 	\hline
-	Internal Power & Switching Power & Leakage Power & Total Power \\ 
+	Switching Power & Internal Power & Leakage Power & Total Power \\ 
 	\hline
-	16.7429 uW & 9.7406 uW & 953.4833 nW & 27.4370 uW \\
+	9.7406 uW & 16.7429 uW & 953.4833 nW & 27.4370 uW \\
 	\hline
 	\end{tabular}
 \end{center}
@@ -388,10 +390,10 @@ L'apporto maggiore al consumo totale è dato dalla potenza dinamica, in particol
 	\end{tabular}
 \end{center}
 \vspace{0.3cm}
-Si nota come la suddivisione risulti simile per tutti i FA fatta eccezione per FA(8). In particolare si differenzia dagli altri per il consumo relativo alla potenza di switch. Si ipotizza che quest'ultima risulti inferiore rispetto agli altri full adder a causa del minor carico di uscita.
+Si nota come la suddivisione risulti simile per tutti i FA fatta eccezione per FA(8). In particolare quest'ultimo si differenzia dagli altri per il consumo relativo alla potenza di switch. Si ipotizza che quest'ultima risulti inferiore rispetto agli altri full adder a causa del minor carico di uscita.
 \\\\
 È inoltre possibile approfondire l'analisi di potenza considerando i contributi delle celle interne ai singoli moduli. In particolare, vengono messi in luce i contributi delle celle che compongono i singoli FA, sempre suddivisi nei tre contributi precedentemente descritti.
-Per comprendere l'origine del consumo inferiore del FA8, quest'ultimo è stato analizzato come cella ed è stato confrontato con FA1.
+Per comprendere l'origine del consumo inferiore del FA8, quest'ultimo è stato analizzato attraverso la direttiva cell ed è stato confrontato con FA1.
 Lo schema del circuito interno e i risultati ottenuti sono riportati di seguito.
 \\\\
 \includegraphics[width=15cm]{./img/Lab_1/Es_3/Full_adder.png}
@@ -473,21 +475,22 @@ Si nota come il nodo legato al carry in uscita presenti una capacità inferiore 
 Analizzando i vari FA con analisi di tipo net verbose si nota inoltre che i contributi di capacità relativi ai nodi della somma (S) siano trascurabili rispetto agli altri contributi.
 Di conseguenza si evince che il contributo di potenza relativo a tale nodo è di un ordine di grandezza inferiore rispetto agli altri.
 \\\\
-\textcolor{blue}{
-Da un report di tipo net verbose è inoltre possibile confrontare i valori di static probability e toggle rate \textcolor{blue}{dei nodi di uscita di} un FA derivanti dalla simulazione con le probabilità in uscita e le attività stimate precedentemente in modo teorico. 
+Da un report di tipo net verbose è inoltre possibile confrontare i valori di static probability e toggle rate dei nodi di uscita di un FA.
 \\
 Si nota come i valori di probabilità dei
-nodi di uscita, S e Cout, siano distribuiti attorno al valore 0.5, dunque confrontabili con il caso precedentemente considerato di ingressi equiprobabili. 
-\\
+nodi di uscita, S e Cout, siano distribuiti attorno al valore 0.5, dunque confrontabili con il caso teorico caratterizzato ingressi equiprobabili precedentemente analizzato.
+\\\\
 Il toggle rate rappresenta la frequenza media di commutazione associata al singolo nodo, che identifica, con il suo reciproco, il periodo medio
-con cui tale nodo presenta una commutazione: attraverso tale valore è possibile stimare la switching activity dei nodi di somma e dei carry in uscita. In tal caso, poichè il periodo di clock è pari a 1ns, il valore di toggle rate riportato coincide con la switching activity del segnale. E' possibile notare come i valori simulati si distanzino da quelli teorici, in quanto all'interno del metodo probabilistico non viene tenuta in considerazione la correlazione spaziale e temporale tra diversi segnali. Tale fatto mette in luce, di conseguenza, le limitazioni che l'utilizzo di un modello probabilistico comporta.}
-\newpage
-\textcolor{blue}{CONFRONTO VERBOSE RCA
+con cui tale nodo presenta una commutazione: attraverso tale valore è possibile stimare la switching activity dei nodi di somma e dei carry in uscita.
 \\
-E' stato richiesto inoltre un power report di tipo net verbose relativo all'intero RCA. Si può osservare come i contributi capacitivi relativi
+In tal caso, poichè il periodo di clock è pari a 1ns, il valore di toggle rate riportato coincide con la switching activity del segnale.
+\\\\
+È possibile notare come i valori simulati si distanzino da quelli teorici, in quanto all'interno del metodo probabilistico non viene tenuta in considerazione la correlazione spaziale e temporale tra diversi segnali. Tale fatto mette in luce, di conseguenza, le limitazioni che l'utilizzo di un modello probabilistico comporta.
+\\\\
+È stato richiesto inoltre un power report di tipo net verbose relativo all'intero RCA. Si osserva come i contributi capacitivi relativi
 ai nodi delle uscite di somma siano significativamente inferiori rispetto ai contributi dei nodi relativi ai carry tra uno stadio e quello successivo.
 Anche in questo caso la motivazione è dovuta al carico capacitivo inferiore delle uscite di somma, che non risultano collegate ad ulteriori
-blocchi. Tuttavia, osservando i contributi totali riportati dall'analisi di tipo verbose, è possibile osservare una differenza tra questi e 
+blocchi. Tuttavia, osservando i contributi di potenza riportati dall'analisi di tipo verbose, è possibile osservare una differenza tra questi e 
 quelli presenti nel power report precedentemente richiesto. 
 \\
 \begin{center}
@@ -503,11 +506,10 @@ quelli presenti nel power report precedentemente richiesto.
 \end{center}
 \vspace{0.3cm}
 I contributi riportati dall'analisi di tipo net verbose risultano proporzionalmente inferiori. La possibile causa di ciò è da attribuirsi al tipo
-di analisi effettuata da Synopsys: in particolare la keyword -net utilizzata ha richiesto uno studio della potenza relativo ai nodi interni
-dell'architettura dell'RCA, presenti tra i vari FA connessi. In tale analisi i contributi dei nodi interni ai FA stessi sono stati
+di analisi effettuata da Synopsys: in particolare la keyword \textbf{-net} utilizzata ha richiesto uno studio della potenza relativo ai nodi interni
+dell'architettura dell'RCA, presenti tra i vari FA connessi. In tale analisi i contributi delle celle stesse e dei nodi interni ai FA sono stati
 tralasciati. Al contrario un'analisi di tipo power report fornisce un risultato completo comprendendo all'interno l'analisi di tutti i nodi dei
 blocchi che compongono l'architettura.
-}
 \newpage
 \section{MUX: generazione e propagazione di glitch}
 L'obiettivo di questo esercizio è lo studio delle conseguenze 
@@ -538,10 +540,10 @@ Tuttavia, si ipotizza che, a causa del ritardo di propagazione introdotto dall'
 inverter, vi sia un intervallo temporale in cui i nodi interni X e Z 
 assumono entrambi un valore logico basso, portando quindi l'uscita Y a 0. Tale comportamento atteso è mostrato nella seguente figura.
 \\\\
-\centerline{\includegraphics[width=7cm]{./img/Lab_1/Es_4/Mux_plot.png}}
+\centerline{\includegraphics[width=10cm]{./img/Lab_1/Es_4/Mux_plot.png}}
 \\\\
-Per mezzo di una simulazione ModelSim è stato possibile osservare
-attraverso le waveforms il comportamento reale dei segnali. Il risultato
+Per mezzo di una simulazione ModelSim è stato possibile osservare,
+attraverso le waveforms, il comportamento reale dei segnali. Il risultato
 di tale simulazione è riportato nella seguente immagine.\\
 \\\\
 \centerline{\includegraphics[width=7cm]{./img/Lab_1/Es_4/Glitch.png}}
@@ -551,7 +553,7 @@ il glitch causato dall'inverter. Tale comportamento è in linea con
 quanto atteso.
 \\\\
 Al fine di analizzare altre possibili combinazioni degli ingressi
-che possano generare un glitch in uscita è stata realizzata una 
+che possano generare un glitch in uscita, è stata realizzata una 
 mappa di Karnaugh rappresentante la funzione logica del multiplexer.
 \\\\
 \centerline{\includegraphics[width=8cm]{./img/Lab_1/Es_4/Mappa_K_coperta.png}}
@@ -569,8 +571,8 @@ Tale ragionamento porta alla conclusione che l'unica combinazione in grado
 di causare un glitch in uscita sia quella presa in analisi.
 \\\\\
 Essendo i glitch associati a commutazioni di nodi, questi portano un 
-contributo aggiuntivo al consumo totale di potenza dinamica. In particolare
-l'energia sprecata durante queste commutazioni spurie è la somma dei consumi
+contributo aggiuntivo al consumo totale di potenza dinamica. In particolare,
+l'energia spesa durante queste commutazioni spurie è la somma dei consumi
 durante le due transizioni del segnale. Ciascuna delle due contribuisce all'energia secondo la seguente equazione:
 \\\\
 \centerline{$E = C \cdot V^{2}$}
@@ -588,13 +590,13 @@ dato da:
 \\\\
 \newpage
 \section{Calcolo di probabilità e attività: contatore sincrono}
-Nella prima parte di questo esercizio è stato analizzato il timing del blocco 
+Nella prima parte di questa sezione è stato analizzato il timing del blocco 
 rappresentato nella figura seguente.
 \\\\
 \centerline{\includegraphics[width=3cm]{./img/Lab_1/Es_5/Sync_FA.png}
 			\includegraphics[width=7cm]{./img/Lab_1/Es_5/Half_add_contatore.png}}
 \\\\
-In particolare è stato possibile stabilire il suo comportamento atteso. 
+In particolare, è stato possibile stabilire il suo comportamento atteso. 
 Quando il segnale B0 è asserito, l'uscita S presenta una commutazione 
 per ogni fronte sensibile del clock. Al contrario, quando B0 non è attivo, 
 l'uscita non presenta alcuna commutazione.
@@ -612,7 +614,8 @@ enable è attivo si ottiene il seguente timing.
 \\\\
 Dalle considerazioni fatte in precedenza è possibile stimare il numero
 di commutazioni delle 8 uscite e del terminal count durante 
-un intero ciclo di conta. Inoltre, nella tabella seguente sono stati
+un intero ciclo di conta.
+\\\\Nella tabella seguente sono inoltre stati
 aggiunti i dati ottenuti tramite power report, ottenuto attraverso 
 una simulazione ModelSim. Il clock utilizzato per la simulazione ha un periodo
 di 2ns.
@@ -649,13 +652,13 @@ confrontabili, tuttavia è presente una leggera differenza, pari
 a 1 o 2 colpi di clock, dovuta al fatto che è stato scelto un 
 tempo di simulazione leggermente superiore al tempo di conta 
 totale.
-\\
-\textcolor{blue}{Riguardo al segnale di OVFL, il risultato simulato
+\\\\
+Riguardo al segnale di OVFL, il risultato simulato
 è distante da quello atteso, in quanto il segnale presenta un numero di commutazioni
-decisamente maggiore. Tale segnale, al contrario di quelli di uscita della somma (rappresentanti il conteggio), non 
+decisamente maggiore. Tale segnale, al contrario delle uscite di somma rappresentanti il conteggio, non 
 presenta un elemento sequenziale che lo interfacci con l'esterno. Per tale motivo
 sono ben visibili tutte le commutazioni spurie del segnale stesso, dovute ai ritardi
-di propagazione definiti all'interno dei vari stati del contatore.}
+di propagazione definiti all'interno dei vari stati del contatore.
 \\\\
 Dalla simulazione è stato inoltre possibile osservare l'andamento 
 delle waveforms delle uscite, riportato nella figura sottostante.
@@ -733,7 +736,7 @@ comportamenti simili legati al carry in uscita anche per gli altri blocchi.
 Tale vettore di carry presenta infatti un'attività complessiva maggiore 
 rispetto a quella stimata nel caso senza ritardi.
 \\\\
-Nella simulazione precedentemente effettuata i ritardi sono stati
+Nella simulazione precedentemente effettuata, i ritardi sono stati
 modellizzati in modo tale da presentare un valore significativamente
 inferiore rispetto al periodo di clock.
 \\\\
@@ -741,7 +744,7 @@ inferiore rispetto al periodo di clock.
             Ritardo\textunderscore somma = 0.2ns \\
             Ritardo\textunderscore carry = 0.2ns $}
 \\\\
-Si nota che in questo caso il periodo di clock è 
+Si nota che, in questo caso, il periodo di clock è 
 sufficientemente elevato per garantire un corretto funzionamento 
 del contatore: la propagazione del carry out può avvenire correttamente
 in tutti gli stadi.
@@ -759,26 +762,14 @@ Tale errore è dovuto alla mancata completa propagazione del carry in tutti
 gli stadi, infatti il clock campiona le uscite dei flip-flops prima che tutti
 gli stadi abbiano raggiunto un valore stabile. 
 \\\\
-\textcolor{blue}{La presenza di glitch all'interno del contatore in analisi comporta
+La presenza di glitch all'interno del contatore in analisi comporta
 un incremento dei consumi rispetto al caso ideale. Una possibile soluzione, che potrebbe
 essere adottata per garantire un numero inferiore di commutazioni spurie modificando il VHDL, è legata
 all'aumento del ritardo coinvolto nel calcolo della somma per i singoli HA. 
 Se tale tempo fosse infatti maggiore o uguale del massimo tempo di propagazione 
 del carry attraverso tutti gli stadi, le uscite SUM non presenterebbero più un elevato numero di glitch.
-\\\\
-FORSE CI STAREBBE VERIFICARE CON UNA SIMULAZIONE E NEL CASO METTERE I RISULTATI}
-\\\\
-\textcolor{red}{COSE DA FARE: \\
-                 - Capire il toggle rate nel verbose (ESW)IPOTESI FATTE  \\
-                 - Capire l'incongruenza del verbose RCA FATTO \\
-                 - Spiegare il worst case del sommatore FATTO \\
-                 - Fare mappa di Karnaugh FATTO \\
-                 - Plot segnali MUX (fatto da noi) FATTO \\
-                 - Plot dei segnali del blocchetto contatore e dei primi bit del contatore (fatto da noi) FATTO\\
-                 - Completare le tabelle FATTO\\
-                - Revisione grafica FATTO }  
 \newpage
-\chapter{FSM Assignment and VHDL Synthesis}    
+\chapter{Ottimizzazione FSM e sintesi VHDL}    
 \section{FSM State Assignment}
 \subsection{Progetto}
 L'obiettivo del progetto è la definizione di una macchina  a stati al fine di realizzare un algoritmo di somma tra 6 input, utilizzando il datapath in figura seguente e scegliendo l'ordine con cui collegare i diversi ingressi ai multiplexer.
@@ -867,11 +858,11 @@ Si è notato che tali funzioni logiche presentano un'implementazione semplice co
 È possibile notare che le funzioni logiche presentano implicanti in comune, semplificando maggiormente la logica necessaria.
 \\
 \subsection{Descrizione VHDL e simulazione Modelsim}
-La macchina a stati precedentemente definita è stata descritta attraverso il VHDL, specificando in particolare la codifica degli stati progettata.
+La macchina a stati precedentemente definita è stata descritta in VHDL, specificando in particolare la codifica degli stati progettata.
+\\
+Il codice implementato è riportato nell'Appendice A alla sezione \textit{Laboratorio 2 - FSM}.
 \\\\
-\textcolor{red}{DOBBIAMO METTERE IL VHDL? fare eventuale appendice}
-\\\\
-Al fine della simulazione, datapath e FSM sono stati inclusi in un'unica entity per ottenere il Processing Element complessivo. È stato dunque realizzato un testbench per verificare il corretto susseguirsi degli stati e le relative transizioni dei segnali.
+Al fine della simulazione, datapath e FSM sono stati inclusi in un'unica entity per ottenere il Processing Element complessivo. È stato dunque realizzato un testbench (riportato nell' Appendice A alla sezione \textit{Laboratorio 2 - FSM}) per verificare il corretto susseguirsi degli stati e le relative transizioni dei segnali.
 In particolare, è stata effettuata una simulazione di 2000 colpi di clock, che ha fornito i seguenti risultati attraverso un power report.
 \\
 \begin{center}
@@ -893,7 +884,7 @@ In particolare, è stata effettuata una simulazione di 2000 colpi di clock, che 
 \end{center}
 \vspace{0.3cm}  
 Le attività ottenute sono comparabili con quelle stimate in fase di progetto.  
-\\
+\newpage
 \section{Sintesi del VHDL} 
 In tale sezione è stata effettuata la sintesi della top level entity che comprende sia FSM sia datapath.
 \\
@@ -904,10 +895,10 @@ Successivamente è stato generato un clock di periodo pari a 10 ns.
 \centerline{\textbf{create\_clock -name "CLK" -period 10 {CLK}} }
 \\\\
 È stata verificata la presenza del clock generato attraverso il comando \textbf{report\_clock}.
-\\
-Successivamente è stata effettuata la sintesi attraverso la direttiva \textbf{compile -exact map}.
 \\\\
-In seguito è stato possibile visualizzare, in modo gerarchico, la mappatura del circuito con la libreria scelta. Nell'immagine seguente, in particolare, è riportato lo schematico della macchina a stati.
+Successivamente è stata effettuata la sintesi attraverso la direttiva \textbf{compile -exact map}.
+\\
+Dunque è stato possibile visualizzare, in modo gerarchico, la mappatura del circuito con la libreria scelta. Nell'immagine seguente, in particolare, è riportato lo schematico della macchina a stati.
 \\\\
 \centerline{\includegraphics[width=15cm]{./img/Lab_2/FSM_Schematic.png}}
 \\\\ 
@@ -917,7 +908,7 @@ Sono stati effettuati una serie di report inizialmente sulla top level entity pe
 \\
 In primo luogo è stata ottenuta una stima dell'area delle celle utilizzate nella sintesi, attraverso il comando \textbf{report\_area}.
 \\\\
-\centerline{Total cell area = 295.53 um2}
+\centerline{Total cell area = 295.53 um$^2$}
 \\\\
 Successivamente, al fine di valutare lo slack, sono stati analizzati i 10 percorsi combinatori con ritardi maggiori.
 \\\\
@@ -971,7 +962,7 @@ Sono stati ottenuti dati aggiuntivi relativi al consumo di potenza dei singoli m
 \vspace{0.3cm}  
 Il consumo della macchina a stati rappresenta una percentuale ridotta rispetto al valore totale.
 \\
-Al fine di approfondire lo studio relativo ai nodi interni del circuito, è stata realizzata un'analisi di tipo \textbf{-net}. In particolare sono riportati i risultati relativi ai nodi dei segnali di selezione dei multiplexer.
+Al fine di approfondire lo studio relativo ai nodi interni del circuito, è stata realizzata un'analisi di tipo \textbf{-net}. In particolare sono riportati i risultati relativi ai nodi dei segnali di selezione dei multiplexer, che costituicono il contributo preponderante.
 \\
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|}
@@ -989,9 +980,9 @@ Al fine di approfondire lo studio relativo ai nodi interni del circuito, è stat
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-Il periodo medio di variazione dei selettori, ottenibile dal toggle rate, è confrontabile con le variazioni medie che avvengono su tali segnali in un ciclo di esecuzione. È importante tenere in considerazione la possibile presenza di commutazioni non previste a causa dell'attivazione del segnale di reset durante la simulazione, il quale è caratterizzato da una probabilità non nulla di commutazione.
+Il periodo medio di variazione dei selettori, ottenibile dal toggle rate, è confrontabile con le variazioni medie che avvengono su tali segnali in un ciclo di esecuzione. È importante tenere in considerazione la possibile presenza di commutazioni non previste a causa dell'attivazione del segnale di reset durante la simulazione, il quale è caratterizzato da una probabilità non nulla di commutazione. Per ottenere una stima realistica sarebbe necessario infatti caratterizzare le attività dei nodi con risultati legati al comportamento reale del circuito.
 \\\\
-È possibile imporre dei vincoli sui vari parametri coinvolti nel processo di sintesi. In particolare, è stato generato un segnale di clock alla massima frequenza consentita dal circuito. La stima di tale frequenza è stata effettuata a partire dall'analisi del critical path precedentemente riportato.
+È possibile imporre dei vincoli sui vari parametri coinvolti nel processo di sintesi. In particolare, è stato generato un segnale di clock alla massima frequenza consentita dal circuito. La stima di tale frequenza è stata effettuata a partire dall'analisi del critical path precedentemente riportata.
 \\
 \begin{center}
 	\begin{tabular}{|c|c|}
@@ -1024,16 +1015,16 @@ Dal momento che la potenza dissipata è funzione della frequenza di lavoro, è s
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm} 
-A seguito di un incremento della frequenza di un fattore di circa 5, la potenza è aumentata proporzionalmente.
+A seguito di un incremento della frequenza di un fattore di circa 5, la potenza è aumentata proporzionalmente. In particolare si riscontra come risultato la proporzionalità tra frequenza e consumo di potenza dinamico.
 \\\\
-\textcolor{red}{È inoltre possibile imporre un vincolo sul contributo totale di potenza dinamica, attraverso la direttiva
+È inoltre possibile imporre un vincolo sul contributo totale di potenza dinamica, attraverso la direttiva:
 \\\\
 \centerline{\textbf{set\_max\_dynamic\_power}}
 \\\\
 Tale valore è stato fissato a 40 uW, leggermente inferiore rispetto alla potenza dinamica ottenuta nelle prime simulazioni.
 \\
 In particolare, è stato considerato il clock di partenza di periodo pari a 10 ns.
-Di seguito sono riportati i risultati ottenuti.}
+Di seguito sono riportati i risultati ottenuti.
 \\
 \begin{center}
 	\begin{tabular}{|c|c|c|}
@@ -1049,11 +1040,11 @@ Di seguito sono riportati i risultati ottenuti.}
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}  
-\textcolor{red}{I risultati ottenuti dalla sintesi non risultano in linea con quanto atteso, infatti è registrato un aumento del consumo di potenza dinamica.
+I risultati ottenuti dalla sintesi non risultano in linea con quanto atteso, infatti è registrato un aumento del consumo di potenza dinamica.
 \\
-Si ipotizza che il consumo di potenza dinamica ottenuto nella prima sintesi fosse già prossimo al minimo globale.}
+Si ipotizza che il consumo di potenza dinamica ottenuto nella prima sintesi fosse già prossimo al minimo globale.
 \\\\
-Successivamente è stata effettuata un'analisi più dettagliata della FSM accedendovi tramite la direttiva\textbf{ current\_instance FSM}.\\
+Successivamente, è stata effettuata un'analisi più dettagliata della FSM accedendovi tramite la direttiva\textbf{ current\_instance FSM}.\\
 Attraverso il comando \textbf{report\_fsm} è stato possibile verificare la corretta implementazione della codifica progettata.
 \\\\
 È possibile risalire alla suddivisione del consumo della potenza dinamica all'interno delle celle che costituiscono la FSM attraverso un'analisi di potenza di tipo \textbf{-cell}. In particolare, nella seguente tabella vengono riportati i tre contributi maggiori relativi al consumo di potenza dinamica.
@@ -1071,7 +1062,7 @@ Attraverso il comando \textbf{report\_fsm} è stato possibile verificare la corr
 \end{center}
 \vspace{0.3cm}
 Si nota che tali contributi sono relativi alle variabili di stato, che presentano numerose commutazioni durante l'esecuzione dell'algoritmo.
-\\
+\\\\
 Uno studio più approfondito sulla switching power relativa ai nodi interni è ottenuta tramite un'analisi di tipo \textbf{-net}. In particolare, nella seguente tabella, sono riportati i dati relativi ai segnali di uscita della FSM, ovvero i segnali di selezione dei multiplexer.
 \\
 \begin{center}
@@ -1090,9 +1081,9 @@ Uno studio più approfondito sulla switching power relativa ai nodi interni è o
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-È possibile notare che tali valori coincidono con quelli ottenuti precedentemente durante l'analisi -net della top level entity. Il contributo maggiore del consumo è dovuto alle capacità di carico dei nodi in analisi, che assumono  valori significativi rispetto agli altri nodi. Questo è il principale motivo per cui tali segnali contribuiscono maggiormente, data la parità di toggle rate.
+È possibile notare che tali valori coincidono con quelli ottenuti precedentemente durante l'analisi -net della top level entity. Il contributo maggiore del consumo è dovuto alle capacità di carico dei nodi in analisi, che assumono  valori significativi rispetto agli altri nodi. Questo è il principale motivo per cui tali segnali contribuiscono maggiormente, considerando che il toggle rate risulta confrontabile.
 \\\\
-Per ragioni di praticità, tali sintesi sono state effettuate raggruppando i comandi e le direttive in uno script in modo darendere il processo automatico. Di seguito è riportato uno degli script utilizzati.
+Per ragioni di praticità, tali sintesi sono state effettuate raggruppando i comandi e le direttive in uno script in modo da rendere il processo automatico. Di seguito è riportato uno degli script utilizzati.
 \begin{center}
 \begin{listato}
 	\centerline{\lstinputlisting{./code/Lab_2/commands.txt}}
@@ -1121,7 +1112,7 @@ Come possibile notare dalla seguente figura, al primo fronte attivo di clock suc
 \\\\
 Ciò accade poiché il simulatore, in assenza di informazioni sui ritardi, deve comunque simulare il circuito mantenendo una causalità nella propagazione dei segnali all'interno degli elementi descritti.
 \\
-Come conseguenza, l'informazione relativa al clock, a causa della presenza di una porta AND, è riportata all'ingresso del secondo flip-flop uno step simuazione dopo rispetto al primo. Tale comportamento è deleterio in quanto altera il timing previsto del circuito.
+Come conseguenza, l'informazione relativa al clock, a causa della presenza di una porta AND, è riportata all'ingresso del secondo flip-flop uno step di simulazione dopo rispetto al primo. Tale comportamento è deleterio in quanto altera il timing previsto del circuito.
 \\\\
 Per assicurare il corretto funzionamento del circuito, è sufficiente indicare la presenza di un ritardo CK $\rightarrow$ Q per entrambi i flip-flop. A tale scopo è stato modificato il file \textbf{fd.vhd}.
 \begin{center}
@@ -1165,7 +1156,7 @@ Successivamente alla generazione di un clock di periodo pari a 5 ns, è stato ef
 \begin{center}
 	\begin{tabular}{|c|c|c|c|}
 	\hline
-	\multicolumn{4}{c}{Power report - no clock gating, statistica di default} \\
+	\multicolumn{4}{|c|}{Power report - no clock gating, statistica di default} \\
 	\hline
 	Internal power [uW] & Net switching power [uW] & Leakage power [uW] & Total power [uW] \\
 	\hline
@@ -1203,7 +1194,7 @@ Tali valori non sono realistici rispetto ai segnali presi in considerazione.
 \begin{center}
 	\begin{tabular}{|c|c|c|c|}
 	\hline
-	\multicolumn{4}{c}{Power report - no clock gating, reset modificato}\\
+	\multicolumn{4}{|c|}{Power report - no clock gating, reset modificato}\\
 	\hline
 	Internal power [uW] & Net switching power [uW] & Leakage power [uW] & Total power [uW] \\
 	\hline
@@ -1217,7 +1208,7 @@ In seguito, impostando le statistiche relative ai segnali INCA e INCB con static
 \begin{center}
 	\begin{tabular}{|c|c|c|c|}
 	\hline
-	\multicolumn{4}{c}{Power report - no clock gating, reset e ingressi modificati}\\
+	\multicolumn{4}{|c|}{Power report - no clock gating, reset e ingressi modificati}\\
 	\hline
 	Internal power [uW] & Net switching power [uW] & Leakage power [uW] & Total power [uW] \\
 	\hline
@@ -1239,13 +1230,13 @@ Per ottenere il numero totale di celle utilizzato dal sintetizzatore, è stata r
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-Attraverso una particolare descrizione VHDL, è possibile notificare al sintetizzatore la possibilità di implementare la tecnica del clock gating, che può essere richiesta nella fase di sintesi attraverso la direttiva \textbf{-gate\_clock}.
+Attraverso una particolare descrizione VHDL, è possibile notificare al sintetizzatore la possibilità di implementare, attraverso opportune celle, la tecnica del clock gating, che può essere richiesta nella fase di sintesi attraverso la direttiva \textbf{-gate\_clock}.
 Utilizzando sempre un clock di periodo 5 ns, sono stati ottenuti i seguenti risultati, includendo sempre i contributi dovuti ai nodi di ingresso.       
 \\
 \begin{center}
 	\begin{tabular}{|c|c|c|c|}
 	\hline
-	\multicolumn{4}{c}{Power report - clock gating, statistiche di default}\\
+	\multicolumn{4}{|c|}{Power report - clock gating, statistiche di default}\\
 	\hline
 	Internal power [uW] & Net switching power [uW] & Leakage power [uW] & Total power [uW] \\
 	\hline
@@ -1260,7 +1251,7 @@ Successivamente, come effettuato in precedenza, sono state modificate le statist
 \begin{center}
 	\begin{tabular}{|c|c|c|c|}
 	\hline
-	\multicolumn{4}{c}{Power report - clock gating, reset e ingressi modificati}\\
+	\multicolumn{4}{|c|}{Power report - clock gating, reset e ingressi modificati}\\
 	\hline
 	Internal power [uW] & Net switching power [uW] & Leakage power [uW] & Total power [uW] \\
 	\hline
@@ -1291,19 +1282,19 @@ Si nota la presenza di due strutture aggiuntive che controllano il clock in ingr
 \\\\
 \centerline{\includegraphics[width=10cm]{./img/Lab_3/clock_gating_implementation.png}}
 \\\\       
-Si nota che non è presente nessuna struttura adibita al clock gating sul registro in uscita. Infatti, dalla descrizione VHDL, il sintetizzatore non è in grado di riconoscere la possibilità di applicare il clock gating. A tal proposito, il codice è stato modificato al fine di includere questa opzione.
+Si nota che non è presente alcuna struttura adibita al clock gating sul registro in uscita; infatti, dalla descrizione VHDL, il sintetizzatore non è in grado di riconoscere la possibilità di applicare il clock gating. A tal proposito, il codice è stato modificato al fine di includere questa opzione.
 \begin{center}
 \begin{listato}
 	\centerline{\lstinputlisting{./code/Lab_3/clock_gating_output.vhd}}
 \end{listato}
 \end{center}
-In particolare, è stato notato che all'interno del process per la descrizione dell'architettura, l'aggiornamento dei registri REG\_A e REG\_B avviene successivamente a due condizioni di if relative al valore di INCA e INCB. Si ipotizza che tramite tale descrizione il sintetizzatore sia in grado di applicare il clock gating. Di conseguenza, tale sintassi è stata adottata anche per descrivere l'aggiornamento del registro in uscita, il quale deve essere aggiornato solo quando almeno un segnale di incremento viene asserito.
+In particolare, è stato notato che all'interno del process per la descrizione dell'architettura, l'aggiornamento dei registri REG\_A e REG\_B avviene successivamente a due condizioni di if relative al valore di INCA e INCB. Si ipotizza che, tramite tale descrizione, il sintetizzatore sia in grado di applicare il clock gating. Di conseguenza, tale sintassi è stata adottata anche per descrivere l'aggiornamento del registro in uscita, il quale deve essere aggiornato solo quando almeno un segnale di incremento viene asserito.
 \\\\
 Nelle seguenti tabelle sono riportati i risultati relativi ai consumi.      
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|}
 	\hline
-	\multicolumn{3}{c}{Power report - statistiche di default}\\
+	\multicolumn{3}{|c|}{Power report - statistiche di default}\\
 	\hline
 	& No clock gating & Clock gating \\
 	\hline
@@ -1321,7 +1312,7 @@ Nelle seguenti tabelle sono riportati i risultati relativi ai consumi.
 \begin{center}
 	\begin{tabular}{|c|c|c|}
 	\hline
-	\multicolumn{3}{c}{Power report - reset modificato}\\
+	\multicolumn{3}{|c|}{Power report - reset modificato}\\
 	\hline
 	& No clock gating & Clock gating \\
 	\hline
@@ -1339,7 +1330,7 @@ Nelle seguenti tabelle sono riportati i risultati relativi ai consumi.
 \begin{center}
 	\begin{tabular}{|c|c|c|}
 	\hline
-	\multicolumn{3}{c}{Power report - reset e ingressi modificati}\\
+	\multicolumn{3}{|c|}{Power report - reset e ingressi modificati}\\
 	\hline
 	& No clock gating & Clock gating \\
 	\hline
@@ -1354,14 +1345,14 @@ Nelle seguenti tabelle sono riportati i risultati relativi ai consumi.
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}          
-Si nota che il clock gating porta ad una riduzione generale della potenza, come già verificato in precedenza. Tuttavia, applicando il clock gating, la potenza di leakage presenta una riduzione: si ipotizza che tale comportamento sia correlato ad una riduzione delle celle utilizzate.
+Si nota che il clock gating porta ad una riduzione generale della potenza, che risulta più marcata se si considerano statistiche realistiche degli input e del seganle di reset, come già verificato in precedenza. Tuttavia, applicando tale tecnica, la potenza di leakage presenta una riduzione: si ipotizza che tale comportamento inatteso sia correlato ad una riduzione delle celle utilizzate.
 \\
 Per verificare ciò è stato effettuato un report di tipo \textbf{-cell}.
 \\
 \begin{center}
 	\begin{tabular}{|c|c|c|}
 	\hline
-	\multicolumn{3}{c}{Cell report - reset e ingressi modificati}\\
+	\multicolumn{3}{|c|}{Cell report - reset e ingressi modificati}\\
 	\hline
 	& No clock gating & Clock gating \\
 	\hline
@@ -1379,11 +1370,11 @@ Si ipotizza che, a causa della modifica apportata al file VHDL, il sintetizzator
 Il numero di celle risulta comunque maggiore rispetto al caso in cui il clock gating viene applicato solamente ai registri REG\_A e REG\_B.
 \\
 \subsection{Simulazione di consumi tramite back-annotation}
-Al fine di ottenere una stima più accurata del consumo di potenza del circuito preso in considerazione, è necessario avere valutazione più realistica dell'attività dei singoli nodi del circuito sintetizzato. A tale scopo è possibile effettuare una simulazione back-annotated, generando post-sintesi un file contenente la descrizione della netlist del circuito.
+Al fine di ottenere una stima più accurata del consumo di potenza del circuito preso in considerazione, è necessario avere una valutazione più realistica dell'attività dei singoli nodi del circuito sintetizzato. A tale scopo è possibile effettuare una simulazione back-annotated, generando post-sintesi un file SDF contenente la descrizione della netlist del circuito.
 \\
-L'ambiente di simulazione ModelSim è in grado, partendo dal file di cui sopra, di svolgere diverse simulazioni atte a caratterizzare l'attività dei nodi in questione. Tali risultati vengono riportati in un apposito file che, successivamente ad una conversione, può essere letto dal CAD di sintesi.
+L'ambiente di simulazione ModelSim è in grado, partendo dal file di cui sopra, di svolgere diverse simulazioni atte a caratterizzare l'attività dei nodi in questione. Tali risultati vengono riportati in un apposito file VCD che, successivamente ad una conversione in un file SAIF, può essere letto dal CAD di sintesi.
 \\
-Attraverso le informazioni ottenute, si è in grado di simulare più realisticamente il comportamento del circuito in termini di potenza.
+Attraverso le informazioni ottenute, si è in grado di simulare più realisticamente il comportamento del circuito in termini di potenza. Sono riportati di seguito i risultati.
 \\\\
 \begin{center}
 	\begin{tabular}{|c|c|c|c|}
@@ -1419,6 +1410,7 @@ Si ipotizza che i consumi elevati siano dovuti al quasi continuo incremento del 
 Al fine di ridurre il consumo di potenza dinamica di un generico circuito che presenta un datapath delimitato da barriere di registri, è possibile applicare una serie di soluzioni architetturali.
 \\\\
 In particolare, è preso in considerazione il medesimo circuito usato nei punti precedenti, il quale è stato caratterizzato dal punto di vista di ritardo, potenza e area.
+Le condizioni di funzionamento standard consistono in V\textsubscript{dd} = 1V e f\textsubscript{clk} = 5MHz.
 \begin{itemize}
 \item percorso critico = reg + inc + comp + mux = 140 ns
 \item frequenza massima = 7.14MHz
@@ -1430,13 +1422,13 @@ In particolare, è preso in considerazione il medesimo circuito usato nei punti 
 \\\\
 \centerline{\includegraphics[width=10cm]{./img/Lab_3/datapath_parallelo.jpg}}
 \\\\
-In particolare, duplicando il datapath e inserendo un opportuno multiplexer, è possibile far lavorare i componenti a metà della frequenza originale, mantenendo comunque lo stesso throughput in uscita del circuito originale. Data l'espressione per valutare il consumo di potenza dinamica:
+In particolare, duplicando il datapath e inserendo un opportuno multiplexer, è possibile far lavorare i componenti a metà della frequenza originale, mantenendo comunque lo stesso throughput in uscita del circuito di partenza. Data l'espressione per valutare il consumo di potenza dinamica:
 \\\\
 \centerline{P = C\textsubscript{eff} V\textsubscript{dd}$^2$ f\textsubscript{clk}}
 \\\\
 è possibile notare come, in questo caso, il dimezzamento della frequenza di funzionamento sia compensato dal raddoppio della capacità totale.
 \\
-Tuttavia, si nota che i componenti hanno il doppio del tempo a disposizione per completare le loro operazioni, pertanto è possibile ridurre la tensione di alimentazione al fine di aumentare il ritardo di propagazione in questi ultimi, rispettando comunque il limite imposto dal percorso critico.
+Tuttavia, i componenti hanno il doppio del tempo a disposizione per completare le loro operazioni, pertanto è possibile ridurre la tensione di alimentazione al fine di aumentare il ritardo di propagazione in questi ultimi, rispettando comunque il limite imposto dal percorso critico.
 \\\\
 Dal momento che la tensione di alimentazione contribuisce in modo quadratico al consumo di potenza, quest'ultima risulterà ridotta di un fattore u$^2$, dove u rappresenta il fattore di riduzione di V\textsubscript{dd}.
 \\\\
@@ -1478,11 +1470,11 @@ Come atteso, si nota che un aumento dei ritardi dei singoli componenti corrispon
 \item area = 2$\cdot$(3 reg + 2 inc + comp + mux) + mux = 3611 um$^2$
 \end{itemize}
 \vspace{0.3cm}
-Si può notare che la potenza è stata ridotta di un fattore 3.71 a fronte di un raddoppio dell'area. In particolare, è possbile osservare l'effetto dell'overhead del mux in uscita nella valutazione del percorso critico, che risulta maggiore.
+Si può notare che la potenza è stata ridotta di un fattore 3.71 a fronte di un raddoppio dell'area. In particolare, è possibile osservare l'effetto dell'overhead del mux in uscita nella valutazione del percorso critico, che risulta maggiore.
 \\\\
 Un'altra tecnica a livello architetturale applicabile in questo contesto è la pipeline. L'inserimento di registri all'interno del percorso combinatorio permette di ridurre il percorso critico, mantenendo comunque un throughput elevato.
 \\
-Riducendo il percorso critico si potrebbe lavorare ad una frequenza maggiore rispetto alla frequenza nominale, tuttavia si decide di mantenere la stessa frequenza del circuito originale, avendo quindi la possibilità di incrementare i ritardi attraverso una riduzione di V\textsubscript{dd}.
+Riducendo il percorso critico si potrebbe lavorare ad una frequenza maggiore rispetto alla frequenza nominale, tuttavia si decide di mantenere lo stesso throughput del circuito originale, avendo quindi la possibilità di incrementare i ritardi attraverso una riduzione di V\textsubscript{dd}.
 \\\\
 In questo caso si è deciso di isolare, attraverso due barriere di registri, il comparatore, essendo il componente che presenta il maggior ritardo di propagazione. Di conseguenza è stato ottenuto il seguente datapath.
 \\\\
@@ -1531,15 +1523,19 @@ Di conseguenza, la tecnica migliore dipende fortemente dal contesto di progetto:
 \\\\
 Per confronto si è cercato il minimo consumo di potenza applicando solamente la tecnica della parallelizzazione, con parallelismo 2.  In seguito alla riduzione di V\textsubscript{dd}, il minimo consumo di potenza dinamica ottenibile è pari a 1.85 uW, scegliendo u = 0.4, consumo comparabile a quello ottenuto con la tecnica di pipeline.
 \\
-Per raggiungere un'ulteriore riduzione dei consumi, è necessario introdurre un terzo livello di parallelismo: in questo caso è possibile selezionare u = 0.37, ottenendo quindi un consumo di potenza pari a 1.58 uW.
+Per raggiungere un'ulteriore riduzione dei consumi, è necessario introdurre un terzo livello di parallelizzazione: in questo caso è possibile selezionare u = 0.37, ottenendo quindi un consumo di potenza pari a 1.58 uW.
 \\\\
 Partendo dalla soluzione parallelizzata, sono stati ricercati possibili miglioramenti unendo le due tecniche. Il grafico seguente mostra il prodotto potenza ritardo in funzione del fattore u, considerando la presenza di pipeline e di un parallelismo pari a 2.
 \\\\
 \centerline{\includegraphics[width=12cm]{./img/Lab_3/prodotto_potenza_ritardo.png}}
 \\\\
 Si evince che sarebbe possibile utilizzare un fattore di scalamento della tensione di alimentazione inferiore a 0.37, tuttavia riducendolo vi è un'inversione di tendenza della curva mostrata. Ciò significa che per valori di u al di sotto del punto di minimo, il guadagno in termini di potenza risparmiata è poco significativo rispetto ai ritardi introdotti.
+\\
+Nonostante l'uso contemporaneo delle due tecniche, l'uso di 3 livelli di sola parallelizzazione risulta la scelta migliore dal punto di vista della sola riduzione dei consumi dinamici.
 \\\\
 Si fa presente che l'analisi effettuata è relativa alla sola potenza dinamica, infatti una riduzione significativa di V\textsubscript{dd} comporta l'utilizzo di transistor caratterizzati da una tensione di soglia minore, aumentando il contributo di corrente di leakage.
+\\\\
+Inoltre, la parallelizzazione comporta un overhead elevato in termini di elementi utilizzati, che ha come diretta conseguenza un incremento della potenza di leakage complessiva. Ne consegue che la valutazione della scelta dell'architettura che ottimizza la potenza complessiva debba essere fatta in funzione di contributi sia statici sia dinamici.
 \subsection{Il problema della coerenza}
 Applicando la tecnica della parallelizzazione all struttura di base, è possibile notare che la coerenza dei dati in uscita non è assicurata.
 \\
@@ -1555,18 +1551,10 @@ Si nota che il comportamento è inatteso in quanto non vi è coerenza tra i regi
 \\\\
 Una possibile soluzione potrebbe essere l'impiego di due soli registri REG\_A e REG\_B condivisi da entrambe le strutture in parallelo e scritti ad una frequenza doppia.
 
-\textcolor{red}{
-\begin{itemize}
-\item schema clock gating FATTO
-\item datapath parallelizzazione FATTO
-\item datapath pipeline FATTO
-\item forme d'onda FATTO
-\end{itemize}}
-
 \chapter{Bus encoding}
 \section{Introduzione alle tecniche utilizzate}
 Lo scopo di questa esercitazione è testare diverse codifiche utilizzate per ridurre le commutazioni sui bus. È fondamentale, in un contesto low power, prestare attenzione ai consumi relativi alle interconnessioni, in quanto ad esse è associata una capacità significativa.
-\\
+\\\\
 In particolare, sono state testate le seguenti tecniche:
 \begin{itemize}
 \item \textbf{Bus normale}
@@ -1578,7 +1566,7 @@ Il valore logico sull'interconnesione è invertito se la distanza di Hamming ris
 Tale codifica è idonea alla trasmissione dei dati, in quanto la statistica di questi è casuale rispetto a quella di indirizzi e controlli.
 \item \textbf{Transition based}
 \\
-L'informazione è codificata non in un livello logico ma in una transizione della linea, che avviene quando il dato assume un valore pari a 1. Si nota che tale codifica non è ridondante dal momento che non sono necessari ulteriori segnali.
+L'informazione è codificata non attraverso un livello logico ma con una transizione della linea, che avviene quando il dato assume un valore pari a 1. Si nota che tale codifica non è ridondante dal momento che non sono necessari ulteriori segnali.
 \\
 I circuiti di codifica e decodifica fanno uso di porte XOR e flip flop per memorizzare il valore precedente, che viene comparato con quello attuale. Si nota che, in trasmissione, un valore di A pari a 1 porta alla commutazione del bus rispetto al valore assunto precedentemente. In ricezione, invece, quando è identificata una transizione sul bus, confrontando il valore attuale con quello precedente, l'uscita C assume un valore logico alto.
 \\\\
@@ -1601,10 +1589,6 @@ Per tale motivo è necessario implementare un incrementatore al ricevitore per g
 \\
 In caso di salto, quest'ultimo viene segnalato cambiando l'indirizzo inviato sul bus e negando il segnale seq.
 Si nota quindi che tale tecnica è ridondante.
-\\
-\textcolor{red}{block scheme}
-\\\\
-\centerline{\includegraphics[width=12cm]{./img/Lab_4/tran_based.png}}
 \\\\
 Basandosi sul principio di funzionamento sopra descritto, è stata realizzata la seguente descrizione VHDL.
 \begin{center}
@@ -1614,11 +1598,11 @@ Basandosi sul principio di funzionamento sopra descritto, è stata realizzata la
 \end{center}
 \end{itemize}
 \section{Simulazione}
-Sulla piattaforma ModelSim è possibile, attraverso un testbench, ottenere una stima dell'attività relativa alle diverse tecniche di codifica implementate.
+Attraverso la piattaforma ModelSim è possibile, tramite un testbench, ottenere una stima dell'attività relativa alle diverse tecniche di codifica implementate.
 \\
 Dal momento che alcune codifiche sono più appropriate al trattamento di dati o indirizzi, vi è la possibilità di generare sequenze di informazioni con opportune distribuzioni statistiche.
 \\\\
-All'interno del file \textbf{tb\_encdec.v} è possibile, attraverso due direttive, scegliere la statistica dei segnali da simulare opportunamente generata tramite due process. In particolare, si nota come il process relativo ai dati prelevi questi ultimi dal file \textbf{rdin.txt} dove è presente una sequenza pseudo-random di valori rappresentati su 8 bit.
+All'interno del file \textbf{tb\_encdec.v} è possibile, attraverso due direttive, scegliere la statistica dei segnali da simulare, opportunamente generata tramite due process. In particolare, si nota come il process relativo ai dati prelevi questi ultimi dal file \textbf{rdin.txt} dove è presente una sequenza pseudo-random di valori rappresentati su 8 bit.
 \\\\
 Al contrario, il process atto alla generazione degli indirizzi, procede in sequenza fino al raggiungimento dell'indirizzo 63, successivamente al quale simula un salto prelevando l'indirizzo successivo dal file di cui sopra.
 \\
@@ -1627,7 +1611,7 @@ Tutte le tecniche di codifica sono state simulate sia con dati che con indirizzi
 \begin{center}
 	\begin{tabular}{|c|c|c||c|c|}
 	\hline
-	& \multicolumn{2}{c}{Address} & \multicolumn{2}{c}{Data}\\
+	& \multicolumn{2}{|c||}{Address} & \multicolumn{2}{|c|}{Data}\\
 	\hline
 	Nodo & Tc & E\textsubscript{sw} & Tc & E\textsubscript{sw} \\
 	\hline
@@ -1657,7 +1641,7 @@ Come atteso, la statistica relativa ai dati presenta attività maggiori e confro
 \begin{center}
 	\begin{tabular}{|c|c|c||c|c|}
 	\hline
-	& \multicolumn{2}{c}{Address} & \multicolumn{2}{c}{Data}\\
+	& \multicolumn{2}{|c||}{Address} & \multicolumn{2}{|c|}{Data}\\
 	\hline
 	Nodo & Tc & E\textsubscript{sw} & Tc & E\textsubscript{sw} \\
 	\hline
@@ -1687,7 +1671,7 @@ Come atteso, in assenza di codifica, l'attività del bus rispecchia quella dell'
 \begin{center}
 	\begin{tabular}{|c|c|c||c|c|}
 	\hline
-	& \multicolumn{2}{c}{Address} & \multicolumn{2}{c}{Data}\\
+	& \multicolumn{2}{|c||}{Address} & \multicolumn{2}{|c|}{Data}\\
 	\hline
 	Nodo & Tc & E\textsubscript{sw} & Tc & E\textsubscript{sw} \\
 	\hline
@@ -1714,14 +1698,14 @@ Come atteso, in assenza di codifica, l'attività del bus rispecchia quella dell'
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-Come atteso, osservando i valori totali, è possibile notare come sia presente una significativa riduzione delle commutazioni per quanto riguarda i dati rispetto al bus normal. Al contrario, le attività degli indirizzi risultano conforntabili.
+Come atteso, osservando i valori totali, è possibile notare come sia presente una significativa riduzione delle commutazioni per quanto riguarda i dati rispetto al bus normal. Al contrario, le attività degli indirizzi risultano confrontabili.
 \\
 La riduzione delle commutazioni è tanto più marcata quante più transizioni con una distanza di Hamming maggiore di 4 sono presenti nei dati; attraverso uno script Matlab è stata stimata la percentuale di tali transizioni sul totale, che risulta pari a circa il 36\%.
 \subsection{Transition based}
 \begin{center}
 	\begin{tabular}{|c|c|c||c|c|}
 	\hline
-	& \multicolumn{2}{c}{Address} & \multicolumn{2}{c}{Data}\\
+	& \multicolumn{2}{|c||}{Address} & \multicolumn{2}{|c|}{Data}\\
 	\hline
 	Nodo & Tc & E\textsubscript{sw} & Tc & E\textsubscript{sw} \\
 	\hline
@@ -1753,7 +1737,7 @@ Per quanto riguarda i dati, è atteso un miglioramento nel caso in cui la probab
 \begin{center}
 	\begin{tabular}{|c|c|c||c|c|}
 	\hline
-	& \multicolumn{2}{c}{Address} & \multicolumn{2}{c}{Data}\\
+	& \multicolumn{2}{|c||}{Address} & \multicolumn{2}{|c|}{Data}\\
 	\hline
 	Nodo & Tc & E\textsubscript{sw} & Tc & E\textsubscript{sw} \\
 	\hline
@@ -1778,12 +1762,12 @@ Per quanto riguarda i dati, è atteso un miglioramento nel caso in cui la probab
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-Come atteso, tale codifica non ha benefici sulla codifica dei dati ma presenta notevoli miglioramenti per quanto riguarda gli indirizzi. L'attività totale degli indirizzi risulta infatti dimezzata rispetto al caso bus normal.
+Come atteso, tale codifica non ha benefici nel trattare la trasmissione di dati, ma presenta notevoli miglioramenti per quanto riguarda gli indirizzi. L'attività totale degli indirizzi risulta infatti dimezzata rispetto al caso bus normal.
 \subsection{T0}
 \begin{center}
 	\begin{tabular}{|c|c|c||c|c|}
 	\hline
-	& \multicolumn{2}{c}{Address} & \multicolumn{2}{c}{Data}\\
+	& \multicolumn{2}{|c||}{Address} & \multicolumn{2}{|c|}{Data}\\
 	\hline
 	Nodo & Tc & E\textsubscript{sw} & Tc & E\textsubscript{sw} \\
 	\hline
@@ -1819,12 +1803,12 @@ Lo scopo di questa sezione è l'analisi del consumo di potenza relativo alle var
 \\\\
 L'intero processo è basato su un insieme di script forniti che descrivono la sequenza delle operazioni da svolgere, coinvolgendo i tool ModelSim e Synopsys. L'analisi è inoltre effettuata considerando diversi carichi capacitivi per le linee di interconnessione.
 \\\\
-Inizialmente sono stati valutati i contributi di potenza relativi alle sole linee di bus B, riportati nella seguente tabella.
+Inizialmente sono stati valutati, per ogni codifica, i contributi di potenza relativi alle sole linee di bus B, riportati nella seguente tabella.
 \\\\
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c||c|c|c|c|}
 	\hline
-	Power [uW] & \multicolumn{4}{c}{Address} & \multicolumn{4}{c}{Data}\\
+	Power [uW] & \multicolumn{4}{|c||}{Address} & \multicolumn{4}{|c|}{Data}\\
 	\hline
 	 & 1fF & 10fF & 50fF & 100fF & 1fF & 10fF & 50fF & 100fF \\
 	\hline
@@ -1843,18 +1827,18 @@ Inizialmente sono stati valutati i contributi di potenza relativi alle sole line
 \vspace{0.3cm}
 Osservando tali risultati si nota come vi sia un miglioramento teorico dei consumi utilizzando tutte le codifiche fatta eccezione della TRAN-BASED. La causa di tale eccezione è da ricercare nella distribuzione dei dati generati: questi presentano infatti un numero di 1 elevato.
 \\\\
-Si nota come l'applicazione della codifica BUSINV riduca la potenza dissipata sia per dati che per indirizzi: in quest'ultimo caso i benefici sono particolarmente marcati nel caso di salti frequenti.
+Si nota come l'applicazione della codifica BUSINV riduca la potenza dissipata sia per dati che per indirizzi: in quest'ultimo caso i benefici sono particolarmente marcati nel caso di salti frequenti con distanza di Hamming maggiore di N/2.
 \\\\
-La codifica GRAY introduce notevoli miglioramenti nella trasmissione degli indirizzi, si nota infatti che il consumo di potenza è dimezzato rispetto al caso del BUSNORM. Per quanto riguarda i dati non si notano riduzioni nel consumo di potenza.
+La codifica GRAY introduce notevoli miglioramenti nella trasmissione degli indirizzi, si nota infatti che il consumo di potenza è dimezzato rispetto al caso BUSNORM. Per quanto riguarda i dati non si notano riduzioni nel consumo di potenza.
 \\\\
 È possibile osservare come la riduzione di potenza dovuta alla codifica T0 sia particolarmente significativa per gli indirizzi. Questo risultato mette in luce la sequenzialità degli indirizzi di test nella simulazione.
 \\\\
-Nella seguente tabella sono invece riportati i risultati relativi al consumo di potenza totale, considerando anche il contributo degli ingressi per le varie codifiche implementate.
-\\\\
+Nella seguente tabella sono invece riportati i risultati relativi al consumo di potenza totale, comprendenti il contributo degli ingressi e della logica atta alle operazioni di codifica e decodifica.
+
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c||c|c|c|c|}
 	\hline
-	Power [uW] & \multicolumn{4}{c}{Address} & \multicolumn{4}{c}{Data}\\
+	Power [uW] & \multicolumn{4}{|c||}{Address} & \multicolumn{4}{|c|}{Data}\\
 	\hline
 	 & 1fF & 10fF & 50fF & 100fF & 1fF & 10fF & 50fF & 100fF \\
 	\hline
@@ -1873,13 +1857,13 @@ Nella seguente tabella sono invece riportati i risultati relativi al consumo di 
 \vspace{0.3cm}
 È possibile, per ogni implementazione, notare un incremento della potenza dissipata in seguito ad un aumento della capacità di carico del bus.
 \\
-Si nota come le diverse codifiche dissipino una potenza di leakage differente. In particolare, quest'ultima è legata alla complessità della logica necessaria all'implementazione della tecnica di encoding. Di conseguenza, è stato notato che la codifica T0 presenta il consumo di potenza statica maggiore a causa della presenza di un elevato numero di gate rispetto alle altre codifiche.
+I report ottenuti mostrano come le diverse codifiche dissipino una potenza di leakage differente. In particolare, quest'ultima è legata alla complessità della logica necessaria all'implementazione della tecnica di encoding. Di conseguenza, è stato notato che la codifica T0 presenta il consumo di potenza statica maggiore a causa della presenza di un elevato numero di gate rispetto alle altre codifiche.
 \\\\
-Osservando i dati relativi alla tecnica BUSINV, si nota come non vi sia alcun miglioramento netto né per dati né per indirizzi. Utilizzando tale codifica è atteso un miglioramento per i consumi relativi alla trasmissione dei dati, ciò non avviene poiché la distribuzione dei dati presenta un numero non elevato di transizioni con distanza di Hamming maggiore di $\frac{N}{2}$. Di conseguenza, l'aggiunta della logica di codifica e decodifica non ha un contributo trascurabile.
+Osservando i dati relativi alla tecnica BUSINV, si nota come non vi è alcun miglioramento netto né per dati né per indirizzi. Utilizzando tale codifica è atteso un miglioramento per i consumi relativi alla trasmissione dei dati, ciò non avviene poiché la distribuzione di questi non presenta un numero elevato di transizioni con distanza di Hamming maggiore di $\frac{N}{2}$. Di conseguenza, l'aggiunta della logica di codifica e decodifica non ha un contributo trascurabile.
 \\\\
 Anche per la codifica TRANSITION-BASED non è rilevato alcun miglioramento. Il motivo principale è sempre da ricercare nella distribuzione dei dati. Questi infatti presentano un numero di 1 significativo, generando una quantità elevata di transizioni.
 \\\\
-Per quanto la codifica GRAY, è possibile notare un miglioramento riguardante la trasmissione di indirizzi. Tale miglioramento risulta sempre più evidente al crescere della capacità di carico del bus: più questa è elevata più il consumo relativo alla logica di codifica e decodifica diventa trascurabile.
+Per quanto la codifica GRAY, è possibile notare un miglioramento riguardante la trasmissione di indirizzi. Tale miglioramento risulta sempre più marcato al crescere della capacità di carico del bus: più questa è elevata, più il consumo relativo alla logica di codifica e decodifica diventa trascurabile.
 \\\\
 Relativamente alla codifica T0 è possibile notare come, simulando gli indirizzi, il consumo rimanga circa costante. Tale comportamento è dovuto al basso numero di commutazioni che la codifica permette di effettuare sui bus, portando quindi in secondo piano il peso delle capacità di carico. Nonostante ciò, l'overhead dovuto alla logica aggiunta, ha un contributo non trascurabile nei contesti analizzati. È implicito che tale codifica non sia particolarmente adatta alla trasmissione dei dati.
 \\\\
@@ -1888,7 +1872,7 @@ In generale, nella scelta di una codifica ottimale è importante tenere in consi
 \section{Approfondimenti}
 Al fine di approfondire il funzionamento per le codifiche BUSINV e TRAN-BASED, è stato modificato il file contenente la sequenza di dati utilizzati nella simulazione, in particolare è stata variata la statistica di questi.
 \subsection{Bus invert}
-Attraverso il seguente script Matlab, è stata generata una sequenza di dati in modo tale che tra un dato ed il successivo sia presente una distanza di Hamming pari ad almeno 7 bit. Tale approfondimento è stato svolto solo per la statistica relativa ai dati essendo il BUSINV adatto alla trasmissione di questi.
+Attraverso il seguente script Matlab, è stata generata una sequenza di dati in modo tale che tra un dato ed il successivo fosse presente una distanza di Hamming pari ad almeno 7 bit. Tale approfondimento è stato svolto solo per la statistica relativa ai dati essendo il BUSINV adatto alla trasmissione di questi.
 \begin{center}
 \begin{listato}
 	\centerline{\lstinputlisting{./code/Lab_4/bus_inv_approfondimento.txt}}
@@ -1927,21 +1911,16 @@ Il seguente script Matlab genera una sequenza di dati in modo tale che la quanti
 \end{center}
 \vspace{0.3cm}
 Anche in questo caso è possibile osservare un miglioramento, anche se poco marcato, del consumo in potenza quando è associato un carico di almeno 100 fF sul bus.
-\\\\
-\textcolor{red}{T0 quando si risolve N/A}
-\\\\
-\textcolor{red}{Tabella switching power bus B e confronto con il totale
-\\
-analisi power dinamica e leakage separatamente}
 \chapter{Leakage}
 \section{Caratterizzazione di una NAND high speed}
-L'obiettivo di questa prima parte consiste nella caratterizzazione dell'andamento delle correnti all'interno di una porta NAND in logica CMOS, la cui descrizione è contenuta allinterno del file \textbf{CMOS013.spi}.
-I transistor che definiscono la netlist del gate sono prelevati da una libreria contenente modelli di MOS high speed e low leakage. Tali modelli sono particolarmente complessi dal momento che prendono in considerazione un elevato numero di parametri che influenzano il comportamento del dispositivo.
+L'obiettivo di questa prima sezione consiste nella caratterizzazione delle metriche di ritardo temporale di una porta NAND in logica CMOS, la cui descrizione è contenuta all'interno del file \textbf{CMOS013.spi}.
+I transistor che definiscono la netlist del gate sono prelevati da una libreria contenente modelli di MOS high speed e low leakage. Tali modelli sono particolarmente complessi, dal momento che prendono in considerazione la dipendenza da numerosi parametri in grado di influenzare il comportamento del dispositivo.
 \\\\
 In particolare, la netlist descrive il seguente circuito.
-\textcolor{red}{IMMAGINE NETLIST}
 \\\\
-Le direttive di simulazione sono presenti all'interno del file \textbf{nandHS.sp}, all'interno del quale è istanziato il circuito interessato. Sono definiti alimentazione, massa, carico e ingressi del circuito; di questi uno è costante, l'altro è definito da una serie di transizioni.
+\centerline{\includegraphics[width=8cm]{./img/Lab_5/nand_netlist.jpg}}
+\\\\
+Le direttive di simulazione sono presenti all'interno del file \textbf{nandHS.sp}, nel quale è inoltre istanziato il circuito interessato. Sono definiti alimentazione, massa, carico e ingressi del circuito; di questi ultimi uno è costante, l'altro è definito da una serie di transizioni.
 \\
 Sono presenti una serie di direttive atte alla misura di vari parametri temporali:
 \begin{itemize}
@@ -1961,7 +1940,7 @@ Successivamente è stata lanciata la simulazione relativa all'analisi del transi
 \\\\
 \centerline{Total power dissipation: 6.79 nW}
 \\\\
-In seguito è stata effettuata un'analisi delle forme d'onda attraverso il comando:
+In seguito è stata effettuata un'analisi più approfondita osservando le forme d'onda attraverso il comando:
 \\\\
 \centerline{\textbf{ezwave}}
 \\\\
@@ -2009,20 +1988,20 @@ I risultati ottenuti sono riportanti nella seguente tabella.
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-Come possibile notare dallo schematico rappresentato precedentemente, i due NMOS sono disposti in serie. Ciò ha come conseguenza il fatto che le loro tensioni di soglia assumano valori differenti, al contratio i due PMOS, disposti in parallelo, presentano la medesima soglia.
+Come possibile notare dallo schematico rappresentato precedentemente, i due NMOS sono disposti in serie. Ciò ha come conseguenza il fatto che le loro tensioni di soglia assumano valori differenti, al contrario i due PMOS, disposti in parallelo, presentano la medesima soglia.
 \\\\
-All'interno di un modello di un transistor è tenuto conto della variazione della tensione di soglia rispetto alla differenza di potenziale tra source e bulk (effetto body) e tra source e drain (DIBL). In particolare, tali tensioni sono differenti per transistor disposti in serie a causa della ripartizione di tensione tra questi.
-\\\\
-\textcolor{blue}{Si nota inoltre che le tensioni di soglia dei PMOS sono, in modulo, leggermente minori rispetto a quelle degli NMOS. A causa della differente mobilità tra elettroni e lacune, i PMOS devono avere dimensioni maggiori, di conseguenza la relativa capacità di gate risulterà maggiore. In particolare, incrementando tale capacità si ha una riduzione della tensione di soglia.}
+All'interno delle equazioni che modellizzano un transistor è infatti tenuto conto della variazione della tensione di soglia rispetto alla differenza di potenziale tra source e bulk (effetto body) e tra source e drain (DIBL). In particolare, tali tensioni sono differenti per transistor disposti in serie a causa della ripartizione di tensione tra questi.
 \\\\
 \subsection{Caratterizzazione della porta NAND con carico variabile}
-L'obiettivo di questa sezione è consiste nella caratterizzazione delle forme d'onda di tensioni e correnti di uscita della porta NAND high speed nel caso di carico variabile. Si nota che alla descrizione del circuito sono aggiunti dei generatori di tensione denominati \textit{dummy}, che fungono da terminali per la misurazione della corrente attraverso V\textsubscript{dd}, GND e uscita.
+L'obiettivo di questa sezione consiste nella caratterizzazione delle forme d'onda di tensioni e correnti di uscita della porta NAND high speed, nel caso di carico variabile. Si nota che alla descrizione del circuito sono aggiunti dei generatori denominati \textit{dummy}, che fungono da terminali per la misurazione della corrente attraverso V\textsubscript{dd}, GND e uscita.
 \\\\
 Inizialmente sono state visualizzate le forme d'onda di tensioni e correnti, rappresentate nelle seguenti immagini.
 \\\\
 \centerline{\includegraphics[width=14cm]{./img/Lab_5/waveform_2.png}}
 \\\\
 È possibile notare come, a fronte della medesima variazione in ingresso, l'uscita presenti ritardi di propagazione differenti in funzione del carico.
+\\
+Di seguito è riportato il grafico relativo all'andamento delle correnti e una tabella contenente le stime ottenute per i parametri sotto analisi.
 \\\\
 \centerline{\includegraphics[width=14cm]{./img/Lab_5/waveform_3.png}}
 \\\\
@@ -2054,13 +2033,15 @@ Inizialmente sono state visualizzate le forme d'onda di tensioni e correnti, rap
 	\end{tabular}	
 \end{center}
 \vspace{0.3cm}
-Si nota come all'aumentare della capacità di carico si abbia un incremento dei parametri temporali. Come conseguenza si ha infatti un progressivo incremento delle costanti di tempo per le varie transizioni. 
+Si nota come all'aumentare della capacità di carico si abbia un incremento non lineare dei ritardi temporali. Come conseguenza si ha infatti un progressivo incremento delle costanti di tempo per le varie transizioni.
 \\\\
-Successivamente ad un fronte di salita sull'uscita, è possibile che non solo è presente un contributo di corrente che scorre dall'alimentazione verso il carico, ma anche un contributo verso massa. Tale comportamento è inatteso secondo il comportamento ideale dei transistori. In realtà, in seguito ad una commutazione, vi è un breve intervallo di tempo durante il quale entrambi i dispositivi sono in conduzione, generando un contributo di corrente di corto circuito tra alimentazione e massa. Tale contributo è ben visibile anche osservando i valori riportati in tabella. Si fa presente che tali contributi apportino un incremento della potenza dinamica dissipata.
+Successivamente ad un fronte di salita sull'uscita, è possibile che non solo sia presente un contributo di corrente che scorre dall'alimentazione verso il carico, ma anche un contributo verso massa. Tale comportamento è inatteso per un transistore ideale. In realtà, in seguito ad una commutazione, vi è un breve intervallo di tempo durante il quale entrambi i dispositivi sono in conduzione, generando un contributo di corrente di corto circuito tra alimentazione e massa. Si fa presente che tali contributi apportano un incremento della potenza dinamica dissipata.
 \\
-Una situazione duale si presenta in corrispondenza di un fronte di discesa dell'uscita.
+Una situazione duale si presenta in corrispondenza di un fronte di discesa presente sull'uscita.
 \\\\
 È possibile osservare come i picchi di corrente di corto circuito si riducano con la presenza di capacità di carico maggiori in uscita. Infatti, durante l'intervallo temporale in cui entrambi i MOS sono in conduzione, una capacità di uscita maggiore convoglia un contributo di corrente altrettanto maggiore verso il carico stesso.
+\\\\
+Analizzando il consumo totale di potenza al variare del carico, è stato possibile notare come quest'ultimo assumesse sempre un valore costante pari a 6.79 nW. Si ipotizzi che tale risultato sia dovuto ad una compensazione tra i vari contributi di potenza.
 \\\\
 Attraverso una analisi DC sono stati stimati i valori di tensione di soglia e, indipendentemente dalla capacità di carico, sono stati ottenuti i seguenti valori.
 \\\\
@@ -2081,6 +2062,483 @@ Attraverso una analisi DC sono stati stimati i valori di tensione di soglia e, i
 \end{center}
 \vspace{0.3cm}
 Si nota come il carico capacitivo della porta non abbia alcun effetto sulla tensione di soglia dei transistori.
+\section{Caratterizzazione di porte NAND aventi dimensioni differenti}
+L'obiettivo di questa sezione consiste nel comparare i parametri associati a porte NAND di dimensioni differenti, in particolare sono state considerate le porte descritte nei file \textbf{NANDHScharMaxLoad.sp} \textbf{NANDHSX8MaxLoad.sp}.
+\\
+Dal file \textbf{CMOS13.spi} è stato possibile osservare come le larghezze di canale dei transistor costituenti le due porte fossero differenti, in particolare le dimensioni degli NMOS crescono di un fattore 2 mentre per i PMOS tale fattore è circa pari a 2.65. Inoltre, è possibile notare come, nella definizione della porta X8, sia presente un maggior numero di transistor utilizzati. Il circuito è riportato nlla seguente figura.
+\\\\
+\centerline{\includegraphics[width=12cm]{./img/Lab_5/X8.jpg}}
+\\\\
+Successivamente alla simulazione sono state analizzate le forme d'onda delle tensioni in uscita alle due porte rispetto alla transizione in ingresso.
+\\\\
+\centerline{\includegraphics[width=14cm]{./img/Lab_5/waveform_4.png}}
+\\\\
+Si nota come il comportamento delle due porte sia comparabile a fronte di un carico non elevato. Al contrario, la differenza dei ritardi di propagazione risulta significativa con carichi maggiori.
+\\\\
+L'andamento delle correnti è di seguito riportato.
+\\\\
+\centerline{\includegraphics[width=14cm]{./img/Lab_5/waveform_5.png}}
+\\\\
+È possibile notare come la porta di dimensioni maggiori sia in grado di pilotare carichi con correnti maggiori, riducendo quindi il ritardo in caso di carichi significativi. Tuttavia, è anche visibile come l'effetto della corrente di corto circuito sia più marcato rispetto alla NAND base.
+\\\\
+Nella seguente tabella sono riportati i ritardi di propagazione ottenuti tramite simulazione.
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|c||c|c|}
+	\hline
+	& \multicolumn{2}{|c||}{NAND base} & \multicolumn{2}{|c|}{NAND 8X}\\
+	\hline
+	Parametro & 0.006 fF & 60 fF & 0.006 fF & 60 fF \\
+	\hline
+	rise time [ps] & 67.8 & 425 & 62.3 & 113.4\\
+	\hline
+	 fall time [ps] & 69 & 342 & 63.8 & 107 \\
+	\hline
+	delay HL [ps] & 20.9 & 204 & 17.5 & 57.4  \\
+	\hline
+	delay LH [ps] & 38.4 & 237 & 31.4 & 72.3 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+I ritardi riportati in tabella rispecchiano in modo numerico le stime effettuate sul grafico in precedenza.
+\\\\
+Nella seguente tabella sono riportati i contributi di correnti massime attraverso i nodi di GND, V\textsubscript{dd} ed il carico.
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|c||c|c|}
+	\hline
+	& \multicolumn{2}{|c||}{NAND base} & \multicolumn{2}{|c|}{NAND 8X}\\
+	\hline
+	Parametro & 0.006 fF & 60 fF & 0.006 fF & 60 fF \\
+	\hline
+	max current GND f [uA] & 77.2 & 245 & 637 & 1069 \\
+	\hline
+	max current GND r [uA] & 45.7 & 10.9 & 379 & 265 \\
+	\hline
+	max current V\textsubscript{dd} f [uA] & -47.6 & -9.47 & -553 & -259 \\
+	\hline
+	max current V\textsubscript{dd} r [uA] & -70.5 & -215 & -410 & -929  \\
+	\hline
+	max current OUT f [uA] & -1.5 & -237 & -1.71 & -812 \\
+	\hline
+	max current OUT r [uA] & 1.36 & 206 & 1.55 & 727 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Come atteso, un carico maggiore comporta correnti più elevate all'interno dei nodi. Si nota come sia sconveniente l'impiego di una NAND 8X con carico ridotto, dal momento che non vi sono significativi miglioramenti nei ritardi a fronte di correnti maggiori all'interno del circuito.
+\\\\
+Per avere una visione completa sulle differenze dell'implementazione delle due porte, sono di seguito riportati i consumi di potenza. 
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+	\hline
+	& NAND base & NAND 8X\\
+	\hline
+	Potenza dissipata [nW] & 6.79 & 49.47\\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+È possibile notare come la porta di dimensioni maggiori sia associata a consumi di potenza più elevati. 
+\\\\
+Di seguito sono riportati i risultati relativi all'analisi delle tensioni di soglia.
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|}
+	\hline
+	 \multicolumn{2}{|c|}{NAND base} \\
+	\hline
+	Parametro & Tensione di soglia [V] \\
+	\hline
+	 V\textsubscript{tn0} & 0.314\\
+	\hline
+	 V\textsubscript{tn1} & 0.272 \\
+	\hline
+	V\textsubscript{tp0} & -0.247 \\
+	\hline
+	V\textsubscript{tp1} & -0.247 \\
+	\hline
+	\end{tabular}	
+	\begin{tabular}{|c|c|}
+	\hline
+	 \multicolumn{2}{|c|}{NAND 8X} \\
+	\hline
+	Parametro & Tensione di soglia [V] \\
+	\hline
+	 V\textsubscript{tn0, tn2, tn5, tn7} & 0.319\\
+	\hline
+	 V\textsubscript{tn1, tn3, tn4, tn6} & 0.278 \\
+	\hline
+	V\textsubscript{tp6, tp7, tp6\_2, tp7\_2, tp6\_3, tp7\_3} & -0.242 \\
+	\hline
+	\end{tabular}
+\end{center}
+\vspace{0.3cm}
+È possibile notare come, nel caso della NAND 8X, gli NMOS presentino tensioni di soglia differenti dovute alla disposizione in serie dei transistor.
+\newpage
+\section{Caratterizzazione di porte NAND high speed e low leakage}
+Nelle sezioni precedenti è stato utilizzato un modello di NAND ottimizzato per ridurre i ritardi di propagazione. È interessante comparare tale tipo di gate con una porta analoga ottimizzata per ridurre il consumo dovuto al leakage.
+\\
+È stata effettuata un'analisi dei risultati di simulazione analoga a quella svolta nella sezione precedente, considerando anche in questo caso porte aventi dimensioni differenti.
+\\\\
+\centerline{\includegraphics[width=14cm]{./img/Lab_5/waveform_6.png}}
+\\\\
+\centerline{\includegraphics[width=14cm]{./img/Lab_5/waveform_7.png}}
+\\\\
+Osservando le forme d'onda, si nota come l'andamento sia analogo al caso high speed. Le differenze rispetto al caso precedente sono da ricercare nell'ampiezza dei picchi relativi alla corrente di corto circuito e nei differenti ritardi introdotti.
+\\\\
+Nella seguente tabella è riportata l'analisi delle principali metriche temporali.
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|c||c|c|}
+	\hline
+	& \multicolumn{2}{|c||}{NAND base} & \multicolumn{2}{|c|}{NAND 8X}\\
+	\hline
+	Parametro & 0.006 fF & 60 fF & 0.006 fF & 60 fF \\
+	\hline
+	rise time [ps] & 72 & 592 & 63 & 138\\
+	\hline
+	 fall time [ps] & 63 & 406 & 57 & 112 \\
+	\hline
+	delay HL [ps] & 32 & 258 & 27 & 78  \\
+	\hline
+	delay LH [ps] & 53 & 331 & 45 & 103 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+In generale, vi è un incremento dei ritardi nel caso low leakage rispetto a quello high speed. Rimane circa invariato il rapporto di aumento di ritardo dovuto all'incremento di capacità di carico.
+\\\\
+Si passa ora all'analisi relativa alle correnti.
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|c||c|c|}
+	\hline
+	& \multicolumn{2}{|c||}{NAND base} & \multicolumn{2}{|c|}{NAND 8X}\\
+	\hline
+	Parametro & 0.006 fF & 60 fF & 0.006 fF & 60 fF \\
+	\hline
+	max current GND f [uA] & 52 & 194 & 404 & 867 \\
+	\hline
+	max current GND r [uA] & 17 & 3.63 & 133 & 68.3 \\
+	\hline
+	max current V\textsubscript{dd} f [uA] & -20 & -2.48 & -166 & -70 \\
+	\hline
+	max current V\textsubscript{dd} r [uA] & -42 & -152 & -303 & -684  \\
+	\hline
+	max current OUT f [uA] & -1.3 & -187 & -1.52 & -688 \\
+	\hline
+	max current OUT r [uA] & 1.1 & 145 & 1.2 & 543 \\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Come atteso, i picchi di corrente nel caso della porta low leakage assumono valori inferiori rispetto al caso high speed.
+\\
+Di seguito sono riportati i valori di potenza totale dissipata stimata dal simulatore.
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+	\hline
+	& NAND base & NAND 8X\\
+	\hline
+	Potenza dissipata [nW] & 0.45 & 2.97\\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Confrontando l'implementazione high speed con quella low power, è possibile notare come il fattore di riduzione della potenza sia circa 15, a fronte di un incremento dei ritardi di un fattore di 1.5. L'impiego di gate low leakage risulta conveniente qualora non fossero presenti vincoli stringenti sul timing del sistema.
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|}
+	\hline
+	 \multicolumn{2}{|c|}{NAND base} \\
+	\hline
+	Parametro & Tensione di soglia [V] \\
+	\hline
+	 V\textsubscript{tn0} & 0.413\\
+	\hline
+	 V\textsubscript{tn1} & 0.381 \\
+	\hline
+	V\textsubscript{tp0} & -0.367 \\
+	\hline
+	V\textsubscript{tp1} & -0.367 \\
+	\hline
+	\end{tabular}	
+	\begin{tabular}{|c|c|}
+	\hline
+	 \multicolumn{2}{|c|}{NAND 8X} \\
+	\hline
+	Parametro & Tensione di soglia [V] \\
+	\hline
+	 V\textsubscript{tn0, tn2, tn5, tn7} & 0.419\\
+	\hline
+	 V\textsubscript{tn1, tn3, tn4, tn6} & 0.386 \\
+	\hline
+	V\textsubscript{tp6, tp7, tp6\_2, tp7\_2, tp6\_3, tp7\_3} & -0.368 \\
+	\hline
+	\end{tabular}
+\end{center}
+\vspace{0.3cm}
+Si nota come una tecnologia low leakage preveda la caratterizzazione di transistori con tensioni di soglia maggiori rispetto alla controparte high speed. La corrente di leakage, infatti, presenta una riduzione esponenziale rispetto alla tensione di soglia.
+\newpage
+\section{Dipendenza dalla temperatura}
+In questa sezione è proposta un'ultima analisi della dipendenza di una porta NAND nei confronti della temperatura. In particolare, è stato considerato il seguente vettore di temperature:
+\\\\
+\centerline{-40°C  0°C   40°C   80°C   120°C   150°C   180°C}
+\\\\
+Per semplicità, tali simulazioni sono state svolte considerando un'unica capacità di carico di valore 0.06 fF.
+\\
+Attingendo dai risultati della simulazione, i valori di potenza totale al variare della temperatura sono stati prelevati e rappresentati graficamente.
+\\\\
+\centerline{\includegraphics[width=10cm]{./img/Lab_5/power_temp.png}}
+\\\\
+Il grafico mette in luce una dipendenza esponenziale della potenza dalla temperatura. In particolare, all'interno del range analizzato, è possibile osservare una variazione di potenza pari a circa un ordine di grandezza. Si nota come, data la dipendenza esponenziale, l'effetto risulti limitato al di sotto di una temperatura pari a 50°C.
+\\\\
+Allo stesso modo è stata analizzata la variazione delle tensioni di soglia al variare della temperatura. 
+\\\\
+\centerline{\includegraphics[width=10cm]{./img/Lab_5/vt_temp.png}}
+\\\\
+\textcolor{red}{cambiare ylabel}
+\\
+Si nota una riduzione lineare in modulo delle tensioni di soglia sia degli NMOS sia dei PMOS. All'interno del range di variazione si nota su entrambe una riduzione di circa 150mV. Tale variazione si spiega a causa dell'effetto della temperatura sulla densità di portatori intrinseci, n\textsubscript{i}, la quale tende ad aumentare.
+\newpage
+\section{Caratterizzazione di una memoria low leakage}
+Lo scopo di questa sezione consiste nella scelta di un'architettura ottimale di una memoria al fine di ridurre i consumi di potenza.
+\\\\
+A tale scopo, sono stati analizzati i datasheet di un gruppo di memorie caratterizzate da dimensioni, parallelismo e multiplexer di interfacciamento differenti. In particolare, le principali metriche di interesse sono:
+\begin{itemize}
+\item \textbf{Area}: è possibile ottenere una stima di tale parametro considerando i dati relativi a larghezza e altezza della memoria\\
+\item \textbf{Capacità dei pin}: è necessario considerare tali capacità per tenere conto dei consumi relativi all'interfacciamento della memoria con circuiti esterni. Importanti contributi sono le capacità di indirizzi, dati e clock\\
+\item \textbf{Corrente di lettura e scrittura}: sono le principali metriche per la stima della potenza dinamica, è importante notare la dipendenza di tali parametri dalla frequenza di funzionamento\\
+\item \textbf{Corrente stand by}: è il principale parametro per la stima della potenza statica in un contesto in cui non viene effettuato alcun accesso alla memoria, pertanto è un parametro indipendente dalla frequenza di funzionamento\\\\
+\end{itemize}
+Si nota come siano presenti due contributi di potenza: statica e dinamica. Al fine dell'ottimizzazione è importante considerare il contesto in cui la memoria lavora, considerando anche il pattern e la frequenza di accesso ai dati richiesti dal sistema. Per tale motivo, l'ottimizzazione è stata effettuata per due diverse ipotesi, ognuna delle quali con il fine di ridurre un contributo di potenza.
+\\\\
+Si ipotizza di partire da un'implementazione definita dalle seguenti caratteristiche:
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|}
+	\hline
+	Righe & 8192\\
+	\hline
+	Parallelismo & 16\\
+	\hline
+	Multiplexer & 16\\
+	\hline
+	Area & A\\
+	\hline
+	Potenza statica & P\textsubscript{s}\\
+	\hline
+	Frequenza & F\\
+	\hline
+	Potenza dinamica & P\textsubscript{dyn}\\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+\subsection{Ottimizzazione P\textsubscript{dyn}}
+La prima ipotesi consiste nel considerare la memoria che deve garantire bassi consumi con accessi frequenti, tali che il contributo di potenza statica sia inizialmente trascurabile. In questo caso è importante minimizzare il contributo di potenza dinamica, in quanto la memoria si troverà raramente in stand by.
+\\\\
+Le metriche da osservare per la riduzione del contributo di potenza dinamica sono le correnti di read/write e la frequenza di accesso che agisce come fattore di scalamento lineare per tale consumo.
+\\
+Come primo accorgimento è possibile applicare, rispetto alla memoria di base, un raddoppio del parallelismo e un dimezzamento del numero di righe, ottenendo una memoria 4096x32. In tal modo le dimensioni della memoria rimangono inalterate, ma sarà disponibile accedere ad un dato di parallelismo doppio rispetto al caso precedente; dunque è possibile mantenere il throughput originale dimezzando la frequenza di accesso.
+\\
+Osservando il valore delle correnti di read/write dai datasheet forniti, è possibile notare come questi presentino una variazione poco significativa alla riduzione delle righe ma, al contrario, aumentano circa di un fattore 1.6 al raddoppiare del parallelismo. La potenza dinamica viene quindi ridotta di un fattore:
+\\
+\begin{itemize}
+\item F\textsubscript{new} = 0.5$\cdot$F
+\item P\textsubscript{dyn new} = 0.5$\cdot$1.6$\cdot$P\textsubscript{dyn} = 0.8$\cdot$P\textsubscript{dyn}
+\item P\textsubscript{s} = P\textsubscript{s}
+\item A\textsubscript{new} = 1.06$\cdot$A
+\end{itemize}
+\vspace{0.3cm}
+Nonostante la potenza statica sia stata assunta trascurabile, è importante, ad ogni passo di ottimizzazione, osservare gli effetti che modifiche apportate hanno su questa. In questo caso è possibile notare come la potenza statica rimanga circa invariata.
+\\
+Inoltre, è possibile notare come tale ottimizzazione comporti un leggero aumento di area.
+\\\\\
+Un secondo accorgimento per ridurre la potenza dinamica è la tecnica della parallelizzazione: l'obiettivo è portare il design dell'architettura su più blocchi di memoria in grado di lavorare in parallelo. Partendo dal blocco precedentemente ricavato, di dimensioni 4096x32, è possibile implementare due blocchi di dimensioni 2048x32.
+\\\\
+Si osserva come la dimensione totale rimanga sempre invariata ma, in questo caso, per mantenere lo stesso throughput di partenza è possibile compiere accessi alternativamente alle due memorie, dimezzando quindi la frequenza di accesso a ciascuna di esse. Tale ottimizzazione è possibile sotto l'assunzione di dati opportunamente organizzati per accessi interleaved.
+\\
+Anche in questo caso è necessario osservare come un dimezzamento del numero di righe porti ad una riduzione poco significativa, di circa 5\%, delle correnti di read/write.
+\\
+\begin{itemize}
+\item F\textsubscript{new 2} = 0.5$\cdot$0.5$\cdot$F = 0.25$\cdot$F
+\item P\textsubscript{dyn new 2} = 0.5$\cdot$0.8$\cdot$P\textsubscript{dyn} = 0.4$\cdot$P\textsubscript{dyn}
+\item P\textsubscript{s} = 1.5$\cdot$P\textsubscript{s}
+\item A\textsubscript{new} = 1.3$\cdot$1.06$\cdot$A = 1.378$\cdot$A
+\end{itemize}
+\vspace{0.3cm}
+Utilizzando questa tecnica si ha però un incremento della potenza statica, in particolare di circa un fattore 1.5 rispetto al caso precedente. In tal caso, è necessario verificare se, dopo tale trasformazione, la potenza sia ancora trascurabile rispetto a quella dinamica; in caso affermativo si può procedere con un ulteriore step di parallelizzazione implementando quattro blocchi di memoria. Tale ottimizzazione si può ripetere fino al raggiungimento di un rapporto ottimale tra potenza statica e dinamica.
+\\
+Si nota inoltre come ogni step di parallelizzazione porti ad un aumento dell'area occupata.
+\\\\
+Un'ultima considerazione risiede nella scelta della profondità del multiplexer dei singoli blocchi che compongono la memoria. Si nota infatti che utilizzare una profondità pari a 4, rispetto al valore iniziale di 16, può portare ad una riduzione ulteriore delle correnti di read/write di un fattore 1.3. Tale scelta comporta però un contributo di potenza statica maggiore: anche in questo caso è necessario confrontare i due contributi prima di confermare le ottimizzazioni apportate all'architettura.
+\\\\
+In particolare, è stato notato come la profondità del multiplexer sia l'unico parametro che determina una variazione associata alle capacità dei pin di dato.
+\\\\
+\centerline{C\textsubscript{data new} = 0.07$\cdot$C\textsubscript{data}}
+\\\\
+Un riduzione di tali capacità comporta un consumo di potenza dinamica inferiore nel pilotare i dati in ingresso alla memoria. Ciò va considerato in quanto linee di dato che presentano numerose commutazioni possono portare ad un consumo aggiuntivo nel caso di profondità del mux pari a 16.
+\\\\
+È possibile inoltre notare come, applicando la parallelizzazione, sia possibile ridurre entrambi i contributi di potenza statica e dinamica riducendo la tensione di alimentazione, con particolare attenzione all'effetto che questo ha sui margini di rumore della memoria stessa.
+\subsection{Ottimizzazione P\textsubscript{s}}
+È possibile ipotizzare di trovarsi in un contesto differente in cui la frequenza di accesso alla memoria non è elevata, comportando quindi un contributo di potenza dinamica trascurabile rispetto al contributo statico.
+\\\\
+Si nota come, partendo dalla memoria originale e osservando i datasheet forniti, un qualunque incremento di dimensioni o implementazione di blocchi multipli porterebbe ad un incremento del consumo di potenza statica.
+\\
+Un'ottimizzazione possibile è relativa alla profondità del multiplexer. In questo contesto, un valore pari a 16 risulta essere più indicato in quanto, a costo di un incremento di potenza dinamica, vi è una riduzione del contributo statico.
+\\\\
+Poiché la frequenza di accesso non è elevata, sarebbe possibile ridurre il consumo statico imponendo una modalità di data retention tra un accesso e l'altro applicabile con una riduzione della tensione di alimentazione.
+\subsection{Esempio}
+Si ipotizza che la memoria da implementare abbia una frequenza di accesso in lettura e scrittura elevata, pari a 1 GHz.
+\\
+Inizialmente si considera l'implementazione 8192x16 con profondità del mux pari a 16.
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|}
+	\hline
+	Righe & 8192\\
+	\hline
+	Parallelismo & 16\\
+	\hline
+	Multiplexer & 16\\
+	\hline
+	Area & 0.3906 mm$^2$\\
+	\hline
+	Potenza statica & 0.534 mW\\
+	\hline
+	Frequenza & 1 GHz\\
+	\hline
+	Potenza dinamica & 13.3 mW\\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+È possibile notare come il contributo di potenza dinamica sia preponderante.
+\\
+Si procede quindi raddoppiando il parallelismo delle word e dimezzando il numero di righe.
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|}
+	\hline
+	Righe & 4096\\
+	\hline
+	Parallelismo & 32\\
+	\hline
+	Multiplexer & 16\\
+	\hline
+	Area & 0.4137 mm$^2$\\
+	\hline
+	Potenza statica & 0.526 mW\\
+	\hline
+	Frequenza & 500 MHz\\
+	\hline
+	Potenza dinamica & 10.7 mW\\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Si applica successivamente la tecnica della parallelizzazione, aumentando quindi il numero di banchi impiegato.
+\begin{center}
+	\begin{tabular}{|c|c|}
+	\hline
+	Righe & 2048\\
+	\hline
+	Parallelismo & 32\\
+	\hline
+	Multiplexer & 16\\
+	\hline
+	Area & 0.5276 mm$^2$\\
+	\hline
+	Potenza statica & 0.77 mW\\
+	\hline
+	Frequenza & 250 MHz\\
+	\hline
+	Potenza dinamica & 5.075 mW\\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Si sceglie successivamente di passare ad una configurazione caratterizzata da un multiplexer di profondità pari a 4 anziché 16.
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|}
+	\hline
+	Righe & 2048\\
+	\hline
+	Parallelismo & 32\\
+	\hline
+	Multiplexer & 4\\
+	\hline
+	Area & 0.4683 mm$^2$\\
+	\hline
+	Potenza statica & 0.808 mW\\
+	\hline
+	Frequenza & 250 MHz\\
+	\hline
+	Potenza dinamica & 3.825 mW\\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Dal momento che il rapporto tra potenza statica e potenza dinamica non è ancora ottimale, si applica un ulteriore livello di parallelizzazione.
+\\\\
+\begin{center}
+	\begin{tabular}{|c|c|}
+	\hline
+	Righe & 1024\\
+	\hline
+	Parallelismo & 32\\
+	\hline
+	Multiplexer & 4\\
+	\hline
+	Area & 0.5472 mm$^2$\\
+	\hline
+	Potenza statica & 0.97 mW\\
+	\hline
+	Frequenza & 125 MHz\\
+	\hline
+	Potenza dinamica & 1.675 mW\\
+	\hline
+	\end{tabular}	
+\end{center}
+\vspace{0.3cm}
+Considerando il rapporto iniziale tra potenza statica e potenza dinamica, pari a 0.04, si è giunti ad un'architettura nella quale i due contributi sono confrontabili. In particolare, il rapporto precedentemente citato assume un valore pari a circa 0.58.
+\\
+Applicando ulteriori livelli di parallelizzazione si otterrebbe un contributo di potenza statica sempre maggiore.
+\\\\
+Infine, le modifiche apportate hanno avuto come conseguenza un incremento dell'area totale della memoria con un fattore pari a 1.4.
+\\\\
+\textcolor{red}{
+cambiare ylabel 5.4
+}
+\chapter{Appendice A}
+\section{Laboratorio 2 - FSM}
+\begin{itemize}
+\item FSM
+\begin{center}
+\begin{listato}
+	\centerline{\lstinputlisting{./code/Lab_2/fsm1_parte1.txt}}
+\end{listato}
+\end{center}
+\newpage
+\begin{center}
+\begin{listato}
+	\centerline{\lstinputlisting{./code/Lab_2/fsm1_parte2.txt}}
+\end{listato}
+\end{center}
+\newpage
+\item Testbench
+\begin{center}
+\begin{listato}
+	\centerline{\lstinputlisting{./code/Lab_2/tb_fsm1.txt}}
+\end{listato}
+\end{center}
+\end{itemize}
 
 
 

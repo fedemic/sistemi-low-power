@@ -1,0 +1,78 @@
+TOTAL MEMORY NEEDED = 8196*16 = 131072 bits
+
+	Noi potremmo usare la memoria 8196x16, ma probabilmente non è la più
+	conveniente dal punto di vista della potenza. Si potrebbe pensare ad 
+	una struttura con banchi più piccoli.
+
+	Parametri in gioco
+
+	- Numero di righe
+	- Parallelismo
+	- Depth del mux
+	
+----------------------------------------------------------------------------------------------------------------
+ANALISI NUMERO DI RIGHE
+
+	A parità di parallelismo e depth del mux accade che:
+
+	POTENZA
+
+		- Corrente Read/Write: variazione poco significativa, aumenta leggermente.
+		- Peak Current: uguale.
+		- Standby Current: circa 1.5-1.7 volte maggiore passando da un numero di righe a quello successivo, 
+	      cresce leggermente andando in alto.
+	
+	AREA
+	
+		- Aumenta di un fattore circa 1.6-1.7 passando da un numero di righe a quello successivo.
+	
+	CAPACITA' PIN
+	
+		- Nessuna delle capacità presenta variazione con il numero di righe.
+	
+----------------------------------------------------------------------------------------------------------------
+ANALISI PARALLELISMO 
+
+	A parità di depth del mux e di numero di righe accade che:
+	
+	POTENZA
+
+		- Corrente Read/Write: circa 1.3-1.6 volte maggiore passando da un parallelismo a quello successivo, il fattore
+		  moltiplicativo aumenta leggermente considerando il parallelismo maggiore.
+		- Peak Current: aumenta di un fattore 1.3-1.6, il fattore
+		  moltiplicativo aumenta leggermente considerando il parallelismo maggiore.
+		- Standby Current: aumenta di un fattore 1.1-1.5, il fattore moltiplicativo aumenta considerando il numero di righe.
+		
+	AREA 
+	
+		- Aumenta di un fattore 1.24-1.8 passando da un parallelismo a quello successivo, il fattore aumenta all'aumentare 
+		  del numero di righe. Considerando lo stesso numero di righe si ha sempre la stessa altezza, aumenta infatti la larghezza.
+		  
+	CAPACITA' PIN
+	
+		- Nessuna delle capacità presenta variazione con il numero di righe.
+		
+----------------------------------------------------------------------------------------------------------------		
+ANALISI DEPTH MUX
+
+	A parità di paralellismo e di numero di righe accade che:
+	
+		POTENZA
+			
+			- Corrente Read/Write: circa 1.1 volte maggiore passando da 4 a 16.
+			- Peak Current: circa costante.
+			- Standby Current: Si riduce di un fattore 1.4-2.4 passando da 4 a 16, il fattore aumenta aumentando il numero di righe.
+			
+		AREA 
+		
+			- L'area si riduce di un fattore circa 1.1-1.7, il fattore di riduzione è maggiore tanto più 
+			  la memoria è grande (perchè ci guadagni di più).
+			  
+		CAPACITA' PIN
+		
+			- Rimangono tutte invariate a parte la capacità dei dati in ingresso, che è maggiore con depth maggiore.
+			  In particolare l'aumento è circa di un fattore 12-14.
+	
+	
+
+	
