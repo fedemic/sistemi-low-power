@@ -1,0 +1,286 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/lp20.9/Desktop/low_power_2020/Lab_6/ese6
+T_opt
+!s110 1591684895
+VkUN[oEBXfJcg5i@F8h7gF2
+Z1 04 3 4 work top fast 0
+=1-000ae431a4f1-5edf2f1f-24b03-6e1a
+o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;10.7c;67
+R0
+vadder_n_test
+Z4 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+Z5 !s110 1591687867
+!i10b 1
+!s100 WJM4a;i]R?ZRTFhd]ZMhN1
+Ikdd3z@5ZEgZ@aYe5f=38=1
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+!s105 adder_n_test_sv_unit
+S1
+R0
+w1591687828
+8adder_n_test.sv
+Fadder_n_test.sv
+L0 6
+Z7 OL;L;10.7c;67
+r1
+!s85 0
+31
+Z8 !s108 1591687867.000000
+Z9 !s107 adder_n_test.sv|top_n.sv|
+Z10 !s90 -reportprogress|300|+define+RCA_VH_ADDER|top_n.sv|adder_n_test.sv|
+!i113 0
+Z11 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z12 !s92 +define+RCA_VH_ADDER -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vadder_test
+R4
+Z13 !s110 1591685914
+!i10b 1
+!s100 z2^n^TalGUKoVbB<j1YEg2
+IPNFkkIcL[[@MSDBQSbW[k2
+R6
+!s105 adder_test_sv_unit
+S1
+R0
+Z14 w1591623898
+8adder_test.sv
+Fadder_test.sv
+L0 6
+R7
+r1
+!s85 0
+31
+Z15 !s108 1591685914.000000
+Z16 !s107 adder_test.sv|top.sv|
+Z17 !s90 -reportprogress|300|+define+GATE_VH_ADDER|top.sv|adder_test.sv|
+!i113 0
+R11
+Z18 !s92 +define+GATE_VH_ADDER -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vgate2_adder
+R4
+!s110 1591684894
+!i10b 1
+!s100 =z?AYYA6UJQ9m53keE;7@3
+IKZ1;bZeC7fYo9SmfPKE_02
+R6
+!s105 gate2_adder_sv_unit
+S1
+R0
+R14
+8gate2_adder.sv
+Fgate2_adder.sv
+L0 5
+R7
+r1
+!s85 0
+31
+!s108 1591684894.000000
+!s107 gate2_adder.sv|adder_test.sv|top.sv|
+!s90 -reportprogress|300|-f|run_gate2.f|
+!i113 0
+R11
+!s92 +define+GATE2_ADDER -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vgate_adder
+R4
+!s110 1591684577
+!i10b 1
+!s100 a:8[^oic`kOo2cefgIz1;3
+IFLMaZkKOm5WF_kOO^In0]0
+R6
+!s105 gate_adder_sv_unit
+S1
+R0
+R14
+8gate_adder.sv
+Fgate_adder.sv
+L0 5
+R7
+r1
+!s85 0
+31
+!s108 1591684577.000000
+!s107 gate_adder.sv|adder_test.sv|top.sv|
+!s90 -reportprogress|300|-f|run_gate.f|
+!i113 0
+R11
+!s92 +define+GATE_ADDER -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+Egate_vh_adder
+Z19 w1591685799
+Z20 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z21 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+R0
+Z22 8gate_vh_adder.vhd
+Z23 Fgate_vh_adder.vhd
+l0
+L8
+Vh:iXoBD0nGJb?[<8i3H9i1
+!s100 m5]>nMZN2l_Yn2G<j2zM@2
+Z24 OL;C;10.7c;67
+32
+Z25 !s110 1591687859
+!i10b 1
+Z26 !s108 1591687859.000000
+Z27 !s90 -reportprogress|300|gate_vh_adder.vhd|
+Z28 !s107 gate_vh_adder.vhd|
+!i113 0
+Z29 tExplicit 1 CvgOpt 0
+Abehv
+R20
+R21
+DEx4 work 13 gate_vh_adder 0 22 h:iXoBD0nGJb?[<8i3H9i1
+l18
+L17
+VA3lhDIElDBTCjC11E198A0
+!s100 ESb2nS9:bfYHFf1^b<1ic3
+R24
+32
+R25
+!i10b 1
+R26
+R27
+R28
+!i113 0
+R29
+Erca_vh_adder
+Z30 w1591687833
+R20
+R21
+R0
+Z31 8rca_vh_adder.vhd
+Z32 Frca_vh_adder.vhd
+l0
+L4
+V[Eg<6NI9SCL]giaX9Aa_P1
+!s100 l]mS]Bz;A4U8BNNC68QYl0
+R24
+32
+Z33 !s110 1591687863
+!i10b 1
+Z34 !s108 1591687862.000000
+Z35 !s90 -reportprogress|300|rca_vh_adder.vhd|
+Z36 !s107 rca_vh_adder.vhd|
+!i113 0
+R29
+Abehv
+R20
+R21
+DEx4 work 12 rca_vh_adder 0 22 [Eg<6NI9SCL]giaX9Aa_P1
+l27
+L14
+VZg1G:FJHIzId2Wk08oBlj2
+!s100 Y7WKY[5WZHe[bh8Xn_aAA1
+R24
+32
+R33
+!i10b 1
+R34
+R35
+R36
+!i113 0
+R29
+vrtl_adder
+R4
+!s110 1591684321
+!i10b 1
+!s100 k2@H[:4<c?4>6MId_0Jii1
+IoTa=4E2_fiLNFPSBR3ez;0
+R6
+!s105 rtl_adder_sv_unit
+S1
+R0
+w1591623899
+8rtl_adder.sv
+Frtl_adder.sv
+L0 5
+R7
+r1
+!s85 0
+31
+!s108 1591684321.000000
+!s107 rtl_adder.sv|adder_test.sv|top.sv|
+!s90 -reportprogress|300|-f|run_rtl.f|
+!i113 0
+R11
+!s92 +define+RTL_ADDER -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vtop
+R4
+R13
+!i10b 1
+!s100 3i6T3Yh;fgB`LoeCYUN:`0
+ITl[T4IQXP96zocFW6CWJJ3
+R6
+!s105 top_sv_unit
+S1
+R0
+w1591685361
+8top.sv
+Ftop.sv
+L0 7
+R7
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 0
+R11
+R18
+R2
+vtop_n
+R4
+R5
+!i10b 1
+!s100 f^?5N_kN4XFefWzmZ?:5n1
+I35md2e9<ia@KCL3Y3M_P@2
+R6
+!s105 top_n_sv_unit
+S1
+R0
+w1591687412
+8top_n.sv
+Ftop_n.sv
+L0 7
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R12
+R2
+Ttop_n_opt
+!s110 1591687871
+Vo7=aMijz4E;:NY?F9g7;50
+04 5 4 work top_n fast 0
+Z37 o+acc
+R2
+ntop_n_opt
+R3
+Ttop_opt
+!s110 1591685923
+VEF[c?dPU?gFaPJ6z=TEE13
+R1
+R37
+R2
+ntop_opt
+R3
+R0

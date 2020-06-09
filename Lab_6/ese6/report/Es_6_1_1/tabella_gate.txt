@@ -1,0 +1,17 @@
+# vsim -voptargs="+acc" top 
+# Start time: 08:36:17 on Jun 09,2020
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.top(fast)
+# Loading work.adder_test(fast)
+# Loading work.gate_adder(fast)
+# At    0.00 ns: 	 a=0  b=0  ci=0  sum=x  co=x
+# At    2.00 ns: 	 a=0  b=0  ci=0  sum=0  co=0
+# At   10.00 ns: 	 a=1  b=0  ci=0  sum=0  co=0
+# At   12.00 ns: 	 a=1  b=0  ci=0  sum=1  co=0
+# At   20.00 ns: 	 a=1  b=1  ci=0  sum=1  co=0
+# At   22.00 ns: 	 a=1  b=1  ci=0  sum=0  co=1
+# At   30.00 ns: 	 a=1  b=1  ci=1  sum=0  co=1
+# At   32.00 ns: 	 a=1  b=1  ci=1  sum=1  co=1
+# ** Note: $stop    : adder_test.sv(19)
+#    Time: 40 ns  Iteration: 0  Instance: /top/test
