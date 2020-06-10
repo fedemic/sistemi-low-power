@@ -2520,9 +2520,9 @@ cambiare ylabel 5.4
 \chapter{Verifica tramite System Verilog}
 \section{Simulazione e debug di un Full Adder}
 Attraverso il System Verilog è possibile definire descrizioni, a livello RTL o gate, di circuiti digitali e fornire opportune simulazioni e conseguente verifica del funzionamento.\\ 
-In particolare in tale sezione è trattata la simulazione di un full adder descritto in modi differenti in tre file, rtl\_adder.sv, gate\_adder.sv e gate2\_adder.sv.\\
-All'interno di opportuni file .f sono inserite le direttive per compilare i file necessari e macro per scegliere tra differenti implementazioni dello stesso circuito.\\
-Il testbench fornito, adder\_test.sv, consente di generare opportuni ingressi e controllare le uscite del DUT.\\
+In particolare, in tale sezione è trattata la simulazione di un full adder descritto in modi differenti in tre file, \textbf{rtl\_adder.sv}, \textbf{gate\_adder.sv} e \textbf{gate2\_adder.sv}.\\
+All'interno di file .f sono inserite le direttive per compilare i file di descrizione necessari e le macro per scegliere tra diverse implementazioni dello stesso circuito.\\\\
+Il testbench fornito, \textbf{adder\_test.sv}, consente di generare opportuni ingressi e controllare le uscite del DUT.\\
 Inizilamente è stata simulata la descrizione rtl dell'adder. La simulazione ha prodotto tali risultati
 \begin{center}
 \begin{listato}
@@ -2530,11 +2530,11 @@ Inizilamente è stata simulata la descrizione rtl dell'adder. La simulazione ha 
 \end{listato}
 \end{center}
 Da tali risultati è possibile verificare il corretto funzionamento dell'istanza.\\
-Ciò è verificabile anche attraverso la rappresentazione delle forme d'onda dei segnali coinvolti, utilizzando il file run\_rtl.do.\\
+Ciò è verificabile anche attraverso la rappresentazione delle forme d'onda dei segnali coinvolti, utilizzando il file \textbf{run\_rtl.do}.\\
 \\\\
 \centerline{\includegraphics[width=13cm]{./img/Lab_6/wave_rtl.png}}
-\\\\
-Successivamente sono state testate anche le istanze a livello gate. Di seguito sono riportati i risultati relativi al file gate\_adder.sv.\\
+\\\\\\\\\\\\
+Successivamente sono state testate anche le istanze a livello gate. Di seguito sono riportati i risultati relativi al file \textbf{gate\_adder.sv}.\\
 \begin{center}
 \begin{listato}
 	\centerline{\lstinputlisting{./code/Lab_6/Tabella_gate.txt}}
@@ -2543,9 +2543,9 @@ Successivamente sono state testate anche le istanze a livello gate. Di seguito s
 \vspace{0.3cm}
 \centerline{\includegraphics[width=13cm]{./img/Lab_6/wave_gate.png}}
 \vspace{0.3cm}
-Si nota che anche in questo caso il comportamento dell'adder risulta corretto, tuttavia è presente un ritardo di propagazione delle uscite ben visibile dalla rappresentazione nelle forme d'onda. E' possibile inoltre notare il ritardo di tali variazioni in tabella in quanto, a fronte della variazione degli ingressi, si ha una variazione dell'uscita dopo un intervallo di 2 ns.\\
+Si nota che, sebbene anche in questo caso il comportamento dell'adder risulti corretto, è presente un ritardo di propagazione delle uscite ben visibile dalla rappresentazione nelle forme d'onda. È possibile inoltre notare il ritardo di tali variazioni anche dalla tabella sopra riportata in quanto, a fronte della variazione degli ingressi, si ha una variazione dell'uscita dopo un intervallo di 2ns.\\
 Tale ipotesi è stata confermata analizzando la descrizione verilog del circuito, che comprende l'inserimento di due direttive di ritardo.\\\\
-E' stato infine simulato in modo analogo il file gate2\_adder.sv, ottenendo i seguenti risultati.
+È stato infine simulato in modo analogo il file \textbf{gate2\_adder.sv}, ottenendo i seguenti risultati.
 \begin{center}
 \begin{listato}
 	\centerline{\lstinputlisting{./code/Lab_6/Tabella_gate2.txt}}
@@ -2563,7 +2563,7 @@ In questo caso non è verificato il corretto funzionamento del circuito. La caus
 \vspace{0.3cm}
 In seguito alle modifiche apportate, il comportamento risulta corretto.
 \\\\
-E' possibile utilizzare testbench in System Verilog per simulare descrizioni di circuiti in VHDL. E' stato necessario aggiungere all'interno del file adder\_test.sv un'opportuna direttiva al fine di includere la possibilità di testare l'istanza descritta in VHDL. 
+È inoltre possibile utilizzare testbench in System Verilog per simulare descrizioni di circuiti in VHDL. Per fare ciò è necessario aggiungere all'interno del file \textbf{adder\_test.sv} un'opportuna direttiva avente il fine di includere la possibilità di testare l'istanza descritta in VHDL. 
 Dalla simulazione è possibile osservare un comportamento inatteso da parte dell'adder.
 \begin{center}
 \begin{listato}
@@ -2571,7 +2571,7 @@ Dalla simulazione è possibile osservare un comportamento inatteso da parte dell
 \end{listato}
 \end{center}
 \vspace{0.3cm}
-E' stata dunque apportata la seguente modifica al file VHDL, a seguito della quale il funzionamento è risultato corretto.
+È stata dunque apportata la seguente modifica al file VHDL, a seguito della quale il funzionamento è risultato corretto.
 \begin{center}
 \begin{listato}
 	\centerline{\lstinputlisting{./code/Lab_6/Correzione_or.txt}}
@@ -2580,9 +2580,15 @@ E' stata dunque apportata la seguente modifica al file VHDL, a seguito della qua
 \vspace{0.3cm}
 \newpage
 \section{Verifica automatica di un N-bit adder}
-A partire dalla descrizione del singolo full adder, è possibile realizzare un ripple carry adder con parallelismo parametrico, riportato in appendice A.\\L'obiettivo è testare questa nuova istanza utilizzando 100 differenti ingressi. All'interno del file adder\_n\_test.sv è presente un'opportuna funzione in grado di generare ingressi con una statistica random. Inoltre è presente un task che implementa una verifica automatica dei risultati in uscita al sommatore.\\
+A partire dalla descrizione del singolo full adder, è possibile realizzare un ripple carry adder con parallelismo parametrico.
+\\
+Il codice sviluppato è riportato in appendice A.
+\\\\
+L'obiettivo di questa sezione consiste nel testare questa nuova istanza utilizzando 100 differenti ingressi.
+\\
+All'interno del file \textbf{adder\_n\_test.sv} è presente un'opportuna funzione in grado di generare ingressi con una statistica random. Inoltre, è presente una task che implementa una verifica automatica dei risultati in uscita al sommatore.\\\\
 Nonostante il DUT sia puramente combinatorio, è necessaria la generazione di un clock al fine di temporizzare la simulazione. 
-Impostando un parallelismo pari a 16 bit, sono stati ottenuti i seguenti risultati.
+Impostando un parallelismo pari a 16 bit, sono stati ottenuti i seguenti risultati che mostrano un corretto funzionamento del blocco logico.
 \begin{center}
 \begin{listato}
 	\centerline{\lstinputlisting{./code/Lab_6/Tabella_rca.txt}}
