@@ -18,7 +18,7 @@ endmodule
 
 DESCRIZIONE CORRETTA
 
-module gate_adder
+module gate2_adder
 (input  wire a, b, ci,
  output wire sum, co);
   timeunit 1ns; timeprecision 1ns;

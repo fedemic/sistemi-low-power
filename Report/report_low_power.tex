@@ -473,7 +473,7 @@ La differenza nel consumo di potenza di switching è individuata nella cella U2,
 \end{center}
 \vspace{0.3cm}
 Si nota come il nodo legato al carry in uscita presenti una capacità inferiore per FA8. Ciò conferma l'ipotesi legata al carico inferiore.
-\\
+\\\\
 Analizzando i vari FA con analisi di tipo net verbose si nota inoltre che i contributi di capacità relativi ai nodi della somma (S) siano trascurabili rispetto agli altri contributi.
 Di conseguenza si evince che il contributo di potenza relativo a tale nodo è di un ordine di grandezza inferiore rispetto agli altri.
 \\\\
@@ -2299,10 +2299,8 @@ Il grafico mette in luce una dipendenza esponenziale della potenza dalla tempera
 \\\\
 Allo stesso modo è stata analizzata la variazione delle tensioni di soglia al variare della temperatura. 
 \\\\
-\centerline{\includegraphics[width=10cm]{./img/Lab_5/vt_temp.png}}
+\centerline{\includegraphics[width=10cm]{./img/Lab_5/vt_temp1.png}}
 \\\\
-\textcolor{red}{cambiare ylabel}
-\\
 Si nota una riduzione lineare in modulo delle tensioni di soglia sia degli NMOS sia dei PMOS. All'interno del range di variazione si nota su entrambe una riduzione di circa 150mV. Tale variazione si spiega a causa dell'effetto della temperatura sulla densità di portatori intrinseci, n\textsubscript{i}, la quale tende ad aumentare.
 \newpage
 \section{Caratterizzazione di una memoria low leakage}
@@ -2512,15 +2510,11 @@ Considerando il rapporto iniziale tra potenza statica e potenza dinamica, pari a
 Applicando ulteriori livelli di parallelizzazione si otterrebbe un contributo di potenza statica sempre maggiore.
 \\\\
 Infine, le modifiche apportate hanno avuto come conseguenza un incremento dell'area totale della memoria con un fattore pari a 1.4.
-\\\\
-\textcolor{red}{
-cambiare ylabel 5.4
-}
-\
+\\
 \chapter{Verifica tramite System Verilog}
 \section{Simulazione e debug di un Full Adder}
 Attraverso il System Verilog è possibile definire descrizioni, a livello RTL o gate, di circuiti digitali e fornire opportune simulazioni e conseguente verifica del funzionamento.\\ 
-\textcolor{blue}{SIMO: Il System Verilog consente di lavorare su due importanti fronti della progettazione di un circuito digitale: il design a livello RTL e la verifica.}
+Il System Verilog consente di lavorare su due importanti fronti della progettazione di un circuito digitale: il design a livello RTL e la verifica.
 In particolare, in tale sezione è trattata la simulazione di un full adder, descritto in modi differenti in tre file, \textbf{rtl\_adder.sv}, \textbf{gate\_adder.sv} e \textbf{gate2\_adder.sv}. Ci troviamo quindi all'interno di un contesto di verifica di un circuito già definito.\\
 All'interno di file con estensione .f sono inserite le direttive per compilare i file di descrizione necessari e le macro per scegliere tra diverse implementazioni dello stesso circuito.\\\\
 Il testbench fornito, \textbf{adder\_test.sv}, consente di generare opportuni ingressi e controllare le uscite del DUT.\\
@@ -2534,7 +2528,7 @@ Osservando le combinazioni di ingressi e uscite è possibile verificare il corre
 Tale verifica può anche essere ottenuta attraverso la rappresentazione delle forme d'onda dei segnali coinvolti, utilizzando il file \textbf{run\_rtl.do}.\\
 \\\\
 \centerline{\includegraphics[width=13cm]{./img/Lab_6/wave_rtl.png}}
-\\\\\\\\\\\\
+\\\\\\
 Successivamente sono state testate anche le istanze a livello gate. Di seguito sono riportati i risultati relativi al file \textbf{gate\_adder.sv}.\\
 \begin{center}
 \begin{listato}
